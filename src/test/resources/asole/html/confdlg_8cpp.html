@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>My Project: confdlg.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.4 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a>  </div>
+  <div class="headertitle">
+<div class="title">confdlg.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="stdafx_8h_source.html">stdafx.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="resource_8h_source.html">resource.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="confval_8h_source.html">confval.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="ipframe_8h_source.html">ipframe.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="mainfrm_8h_source.html">mainfrm.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="asoledoc_8h_source.html">asoledoc.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="confdlg_8h_source.html">confdlg.h</a>&quot;</code><br/>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a21fd1efaf089bf455e63b0ed10033136"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="confdlg_8cpp.html#a21fd1efaf089bf455e63b0ed10033136">dlgitem</a>(i)&#160;&#160;&#160;::GetDlgItem(GetSafeHwnd(), i)</td></tr>
+<tr class="separator:a21fd1efaf089bf455e63b0ed10033136"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a492ceec60cab1067f82dd6986b33dc56"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="confdlg_8cpp.html#a492ceec60cab1067f82dd6986b33dc56">limitText</a>(i, n)&#160;&#160;&#160;::SendMessage(<a class="el" href="confdlg_8cpp.html#a21fd1efaf089bf455e63b0ed10033136">dlgitem</a>(i), EM_LIMITTEXT, n, 0);</td></tr>
+<tr class="separator:a492ceec60cab1067f82dd6986b33dc56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc2bfdeb30b3e09a395811a1512f5691"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="confdlg_8cpp.html#afc2bfdeb30b3e09a395811a1512f5691">checked</a>(i)&#160;&#160;&#160;(IsDlgButtonChecked(i) != BST_UNCHECKED)</td></tr>
+<tr class="separator:afc2bfdeb30b3e09a395811a1512f5691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fadc2a7f09779cb347ce5e851bc54a3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="confdlg_8cpp.html#a0fadc2a7f09779cb347ce5e851bc54a3">checkit</a>(i, y)&#160;&#160;&#160;CheckDlgButton(i, (y) ? BST_CHECKED : BST_UNCHECKED)</td></tr>
+<tr class="separator:a0fadc2a7f09779cb347ce5e851bc54a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a775d4c50a4c146313601972fbaa138f0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="confdlg_8cpp.html#a775d4c50a4c146313601972fbaa138f0">enableit</a>(i, y)&#160;&#160;&#160;<a class="el" href="stdafx_8h.html#a0c5fabf49a462bb8a8772a21d59633e5">enableCtl</a>(GetSafeHwnd(), i, y)</td></tr>
+<tr class="separator:a775d4c50a4c146313601972fbaa138f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac38dd99ef6c9138f66e8a7ea1416be05"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="confdlg_8cpp.html#ac38dd99ef6c9138f66e8a7ea1416be05">showit</a>(i, y)&#160;&#160;&#160;::ShowWindow(<a class="el" href="confdlg_8cpp.html#a21fd1efaf089bf455e63b0ed10033136">dlgitem</a>(i), (y) ? SW_SHOW : SW_HIDE)</td></tr>
+<tr class="separator:ac38dd99ef6c9138f66e8a7ea1416be05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9275ec299e58abecc77b040fc4214468"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="confdlg_8cpp.html#a9275ec299e58abecc77b040fc4214468">MY_TIMER_ID</a>&#160;&#160;&#160;(12321)</td></tr>
+<tr class="separator:a9275ec299e58abecc77b040fc4214468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義</h2>
+<a class="anchor" id="afc2bfdeb30b3e09a395811a1512f5691"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define checked</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">i)</td><td></td>
+          <td>&#160;&#160;&#160;(IsDlgButtonChecked(i) != BST_UNCHECKED)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0fadc2a7f09779cb347ce5e851bc54a3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define checkit</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">i, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;CheckDlgButton(i, (y) ? BST_CHECKED : BST_UNCHECKED)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a21fd1efaf089bf455e63b0ed10033136"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define dlgitem</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">i)</td><td></td>
+          <td>&#160;&#160;&#160;::GetDlgItem(GetSafeHwnd(), i)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a775d4c50a4c146313601972fbaa138f0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define enableit</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">i, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="stdafx_8h.html#a0c5fabf49a462bb8a8772a21d59633e5">enableCtl</a>(GetSafeHwnd(), i, y)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a492ceec60cab1067f82dd6986b33dc56"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define limitText</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">i, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;::SendMessage(<a class="el" href="confdlg_8cpp.html#a21fd1efaf089bf455e63b0ed10033136">dlgitem</a>(i), EM_LIMITTEXT, n, 0);</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9275ec299e58abecc77b040fc4214468"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MY_TIMER_ID&#160;&#160;&#160;(12321)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac38dd99ef6c9138f66e8a7ea1416be05"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define showit</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">i, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;::ShowWindow(<a class="el" href="confdlg_8cpp.html#a21fd1efaf089bf455e63b0ed10033136">dlgitem</a>(i), (y) ? SW_SHOW : SW_HIDE)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+My Projectに対してThu May 23 2013 13:56:03に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_remove_operation_command_8h" kind="file">
+    <compoundname>RemoveOperationCommand.h</compoundname>
+    <includes local="no">Foundation/Foundation.h</includes>
+    <includes refid="_modify_command_8h" local="yes">ModifyCommand.h</includes>
+    <includedby refid="_edit_class_controller_8m" local="yes">Classes/EditClassController.m</includedby>
+    <includedby refid="_remove_operation_command_8m" local="yes">Classes/RemoveOperationCommand.m</includedby>
+    <incdepgraph>
+      <node id="1871">
+        <label>ModifyCommand.h</label>
+        <link refid="_modify_command_8h"/>
+        <childnode refid="1870" relation="include">
+        </childnode>
+        <childnode refid="1872" relation="include">
+        </childnode>
+        <childnode refid="1873" relation="include">
+        </childnode>
+      </node>
+      <node id="1873">
+        <label>ViewElement.h</label>
+        <link refid="_view_element_8h"/>
+        <childnode refid="1874" relation="include">
+        </childnode>
+      </node>
+      <node id="1874">
+        <label>UIKit/UIKit.h</label>
+      </node>
+      <node id="1869">
+        <label>Classes/RemoveOperationCommand.h</label>
+        <link refid="RemoveOperationCommand.h"/>
+        <childnode refid="1870" relation="include">
+        </childnode>
+        <childnode refid="1871" relation="include">
+        </childnode>
+      </node>
+      <node id="1870">
+        <label>Foundation/Foundation.h</label>
+      </node>
+      <node id="1872">
+        <label>Command.h</label>
+        <link refid="_command_8h"/>
+        <childnode refid="1870" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1875">
+        <label>Classes/RemoveOperationCommand.h</label>
+        <link refid="RemoveOperationCommand.h"/>
+        <childnode refid="1876" relation="include">
+        </childnode>
+        <childnode refid="1877" relation="include">
+        </childnode>
+      </node>
+      <node id="1877">
+        <label>Classes/RemoveOperationCommand.m</label>
+        <link refid="_remove_operation_command_8m"/>
+      </node>
+      <node id="1876">
+        <label>Classes/EditClassController.m</label>
+        <link refid="_edit_class_controller_8m"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="interface_remove_operation_command" prot="public">RemoveOperationCommand</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>RemoveOperationCommand.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>UmlPad</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>梅田<sp/>政利<sp/>on<sp/>10/06/28.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>2010<sp/>Change<sp/>Vision.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;Foundation/Foundation.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_modify_command_8h" kindref="compound">ModifyCommand.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_class_view_element" kindref="compound">ClassViewElement</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="interface_remove_operation_command" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_remove_operation_command" kindref="compound">RemoveOperationCommand</ref><sp/>:<sp/><ref refid="interface_modify_command" kindref="compound">ModifyCommand</ref><sp/>{</highlight></codeline>
+<codeline lineno="15" refid="interface_remove_operation_command_1a148319bb8d14c585bb76cbf332d4357d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>NSUInteger<sp/><ref refid="interface_remove_operation_command_1a148319bb8d14c585bb76cbf332d4357d" kindref="member">index</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(nonatomic)<sp/>NSUInteger<sp/>index;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">-<sp/>(void)removeOperation:(<ref refid="interface_class_view_element" kindref="compound">ClassViewElement</ref><sp/>*)ve<sp/>atIndex:(NSUInteger)atIndex;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">-<sp/>(void)insertOperation:(<ref refid="interface_class_view_element" kindref="compound">ClassViewElement</ref><sp/>*)ve<sp/>name:(NSString<sp/>*)name<sp/>atIndex:(NSUInteger)atIndex;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/RemoveOperationCommand.h"/>
+  </compounddef>
+</doxygen>

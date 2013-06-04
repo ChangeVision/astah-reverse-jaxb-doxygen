@@ -1,0 +1,2364 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_language_model" kind="class" prot="public">
+    <compoundname>tesseract::LanguageModel</compoundname>
+    <includes refid="language__model_8h" local="no">language_model.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1a21861bc8d1d02cf8ea67f2b64136459e" prot="public" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float tesseract::LanguageModel::kInitialPainPointPriorityAdjustment</definition>
+        <argsstring></argsstring>
+        <name>kInitialPainPointPriorityAdjustment</name>
+        <initializer>= 5.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="267" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1a12daeb85f9376498fb478497ef501dc4" prot="public" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float tesseract::LanguageModel::kDefaultPainPointPriorityAdjustment</definition>
+        <argsstring></argsstring>
+        <name>kDefaultPainPointPriorityAdjustment</name>
+        <initializer>= 2.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="268" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1ac514086c0819ead38b9eb304f9e401f3" prot="public" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float tesseract::LanguageModel::kBestChoicePainPointPriorityAdjustment</definition>
+        <argsstring></argsstring>
+        <name>kBestChoicePainPointPriorityAdjustment</name>
+        <initializer>= 0.5f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="269" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1a6a7d7189f9cbdebc127c70b018a36010" prot="public" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float tesseract::LanguageModel::kCriticalPainPointPriorityAdjustment</definition>
+        <argsstring></argsstring>
+        <name>kCriticalPainPointPriorityAdjustment</name>
+        <initializer>= 0.1f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="270" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1a94f3c78f8a231538513e4a47387072fc" prot="public" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float tesseract::LanguageModel::kMaxAvgNgramCost</definition>
+        <argsstring></argsstring>
+        <name>kMaxAvgNgramCost</name>
+        <initializer>= 25.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="274" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1aded535788a84e534bc8511f2dc1a2b44" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::LanguageModel::kMinFixedLengthDawgLength</definition>
+        <argsstring></argsstring>
+        <name>kMinFixedLengthDawgLength</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="278" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1a2b5a3fcb550fc71a4f969f1a25d8dc8c" prot="public" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float tesseract::LanguageModel::kLooseMaxCharWhRatio</definition>
+        <argsstring></argsstring>
+        <name>kLooseMaxCharWhRatio</name>
+        <initializer>= 2.5f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="282" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1a2ceab7e561b052612fbaefab123cdb37" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="namespacetesseract_1a87cc64ed462a40c9c210a8bab7cb9b87" kindref="member">LanguageModelFlagsType</ref></type>
+        <definition>const LanguageModelFlagsType tesseract::LanguageModel::kSmallestRatingFlag</definition>
+        <argsstring></argsstring>
+        <name>kSmallestRatingFlag</name>
+        <initializer>= 0x1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="286" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1a632d464aad707355a3f8f8964ca8a4a9" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="namespacetesseract_1a87cc64ed462a40c9c210a8bab7cb9b87" kindref="member">LanguageModelFlagsType</ref></type>
+        <definition>const LanguageModelFlagsType tesseract::LanguageModel::kLowerCaseFlag</definition>
+        <argsstring></argsstring>
+        <name>kLowerCaseFlag</name>
+        <initializer>= 0x2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="287" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1ac41f6462a9bf12d7183db9e90a3099a4" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="namespacetesseract_1a87cc64ed462a40c9c210a8bab7cb9b87" kindref="member">LanguageModelFlagsType</ref></type>
+        <definition>const LanguageModelFlagsType tesseract::LanguageModel::kUpperCaseFlag</definition>
+        <argsstring></argsstring>
+        <name>kUpperCaseFlag</name>
+        <initializer>= 0x4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="288" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1a2b7db0b0d16bdb023052658aeec5ba4d" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="namespacetesseract_1a87cc64ed462a40c9c210a8bab7cb9b87" kindref="member">LanguageModelFlagsType</ref></type>
+        <definition>const LanguageModelFlagsType tesseract::LanguageModel::kConsistentFlag</definition>
+        <argsstring></argsstring>
+        <name>kConsistentFlag</name>
+        <initializer>= 0x8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="289" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1ae54fd4fa2b7a2d8d9a2e94ba737a6e1c" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="namespacetesseract_1a87cc64ed462a40c9c210a8bab7cb9b87" kindref="member">LanguageModelFlagsType</ref></type>
+        <definition>const LanguageModelFlagsType tesseract::LanguageModel::kDawgFlag</definition>
+        <argsstring></argsstring>
+        <name>kDawgFlag</name>
+        <initializer>= 0x10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="290" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1aedbb1c14c827624692f38d407cec89e1" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="namespacetesseract_1a87cc64ed462a40c9c210a8bab7cb9b87" kindref="member">LanguageModelFlagsType</ref></type>
+        <definition>const LanguageModelFlagsType tesseract::LanguageModel::kNgramFlag</definition>
+        <argsstring></argsstring>
+        <name>kNgramFlag</name>
+        <initializer>= 0x20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="291" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1a9eb9553ebf01e05ba3b07d2aacc083c5" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="namespacetesseract_1a87cc64ed462a40c9c210a8bab7cb9b87" kindref="member">LanguageModelFlagsType</ref></type>
+        <definition>const LanguageModelFlagsType tesseract::LanguageModel::kJustClassifiedFlag</definition>
+        <argsstring></argsstring>
+        <name>kJustClassifiedFlag</name>
+        <initializer>= 0x80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="292" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1aa6d25aa709ba6ef4751d481f810e64f7" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="namespacetesseract_1a87cc64ed462a40c9c210a8bab7cb9b87" kindref="member">LanguageModelFlagsType</ref></type>
+        <definition>const LanguageModelFlagsType tesseract::LanguageModel::kAllChangedFlag</definition>
+        <argsstring></argsstring>
+        <name>kAllChangedFlag</name>
+        <initializer>= 0xff</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="293" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="293" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1ab0495d098cbeb02d2cbf8318f72db6e7" prot="protected" static="no" mutable="no">
+        <type><ref refid="structtesseract_1_1_dawg_args" kindref="compound">DawgArgs</ref> *</type>
+        <definition>DawgArgs* tesseract::LanguageModel::dawg_args_</definition>
+        <argsstring></argsstring>
+        <name>dawg_args_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="793" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="793" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1aed42c03dd8277f48a39ce957ade1af29" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; bool * &gt;</type>
+        <definition>GenericVector&lt;bool *&gt; tesseract::LanguageModel::updated_flags_</definition>
+        <argsstring></argsstring>
+        <name>updated_flags_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="796" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="796" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1a97f70b05e97cec59b6f24cbd6870d4e7" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float tesseract::LanguageModel::rating_cert_scale_</definition>
+        <argsstring></argsstring>
+        <name>rating_cert_scale_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="798" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="798" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1adda83343e5c77980f11a8e28b90ce778" prot="protected" static="no" mutable="no">
+        <type>const <ref refid="class_unicity_table" kindref="compound">UnicityTable</ref>&lt; <ref refid="structtesseract_1_1_font_info" kindref="compound">FontInfo</ref> &gt; *</type>
+        <definition>const UnicityTable&lt;FontInfo&gt;* tesseract::LanguageModel::fontinfo_table_</definition>
+        <argsstring></argsstring>
+        <name>fontinfo_table_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="803" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="803" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1ab8d88b6237e566212b22b0eb6ba19a3b" prot="protected" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_dict" kindref="compound">Dict</ref> *</type>
+        <definition>Dict* tesseract::LanguageModel::dict_</definition>
+        <argsstring></argsstring>
+        <name>dict_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="807" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="807" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1a4d0169b5188cb51117d47f4db3f7c3cf" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool tesseract::LanguageModel::fixed_pitch_</definition>
+        <argsstring></argsstring>
+        <name>fixed_pitch_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="814" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="814" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1a7dfeeea5f65081a408757d18115a466c" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float tesseract::LanguageModel::max_char_wh_ratio_</definition>
+        <argsstring></argsstring>
+        <name>max_char_wh_ratio_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="817" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="817" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1a1eeb6e0ec00c1b3bd5824423da13c408" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_s_t_r_i_n_g" kindref="compound">STRING</ref></type>
+        <definition>STRING tesseract::LanguageModel::prev_word_str_</definition>
+        <argsstring></argsstring>
+        <name>prev_word_str_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="824" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="824" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1a52a5540ea4de4f4b830dbcbb220d6bff" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::LanguageModel::prev_word_unichar_step_len_</definition>
+        <argsstring></argsstring>
+        <name>prev_word_unichar_step_len_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="825" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="825" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1aa0c0a2d75dc7ad34d415dfd1ce4c78db" prot="protected" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_dawg_info_vector" kindref="compound">DawgInfoVector</ref> *</type>
+        <definition>DawgInfoVector* tesseract::LanguageModel::beginning_active_dawgs_</definition>
+        <argsstring></argsstring>
+        <name>beginning_active_dawgs_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="827" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="827" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1a999bff7a1dc40fc5d978483beabf38f0" prot="protected" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_dawg_info_vector" kindref="compound">DawgInfoVector</ref> *</type>
+        <definition>DawgInfoVector* tesseract::LanguageModel::beginning_constraints_</definition>
+        <argsstring></argsstring>
+        <name>beginning_constraints_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="828" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="828" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1a9e231341003ff9d57c7b42c9d4b8d50c" prot="protected" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_dawg_info_vector" kindref="compound">DawgInfoVector</ref> *</type>
+        <definition>DawgInfoVector* tesseract::LanguageModel::fixed_length_beginning_active_dawgs_</definition>
+        <argsstring></argsstring>
+        <name>fixed_length_beginning_active_dawgs_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="829" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="829" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1a01294a13200b648e2f76f124561da35e" prot="protected" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_dawg_info_vector" kindref="compound">DawgInfoVector</ref> *</type>
+        <definition>DawgInfoVector* tesseract::LanguageModel::empty_dawg_info_vec_</definition>
+        <argsstring></argsstring>
+        <name>empty_dawg_info_vec_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="830" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="830" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1a218fc3518d9057bb876a182328837caa" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float tesseract::LanguageModel::max_penalty_adjust_</definition>
+        <argsstring></argsstring>
+        <name>max_penalty_adjust_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="832" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="832" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1aee3c5c64657d9e77db9f2645ca1d29fd" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool tesseract::LanguageModel::acceptable_choice_found_</definition>
+        <argsstring></argsstring>
+        <name>acceptable_choice_found_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="844" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="844" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_language_model_1a9440f91674a19de8d91894e0c99b1dd6" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool tesseract::LanguageModel::correct_segmentation_explored_</definition>
+        <argsstring></argsstring>
+        <name>correct_segmentation_explored_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="846" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="846" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1af68acd65ef84e197eef48131bfc6e9e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::LanguageModel</definition>
+        <argsstring>(const UnicityTable&lt; FontInfo &gt; *fontinfo_table, Dict *dict)</argsstring>
+        <name>LanguageModel</name>
+        <param>
+          <type>const <ref refid="class_unicity_table" kindref="compound">UnicityTable</ref>&lt; <ref refid="structtesseract_1_1_font_info" kindref="compound">FontInfo</ref> &gt; *</type>
+          <declname>fontinfo_table</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_dict" kindref="compound">Dict</ref> *</type>
+          <declname>dict</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="295" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="43" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a99f684d6e3d47fadd09dc2e92e194c7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::~LanguageModel</definition>
+        <argsstring>()</argsstring>
+        <name>~LanguageModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="296" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="131" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1ae34907eacffd1bf06ec639cc5cd8fa53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LanguageModel::InitForWord</definition>
+        <argsstring>(const WERD_CHOICE *prev_word, bool fixed_pitch, float best_choice_cert, float max_char_wh_ratio, float rating_cert_scale, HEAP *pain_points, CHUNKS_RECORD *chunks_record, BlamerBundle *blamer_bundle, bool debug_blamer)</argsstring>
+        <name>InitForWord</name>
+        <param>
+          <type>const <ref refid="class_w_e_r_d___c_h_o_i_c_e" kindref="compound">WERD_CHOICE</ref> *</type>
+          <declname>prev_word</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>fixed_pitch</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>best_choice_cert</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_char_wh_ratio</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rating_cert_scale</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_h_e_a_p" kindref="compound">HEAP</ref> *</type>
+          <declname>pain_points</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_c_h_u_n_k_s___r_e_c_o_r_d" kindref="compound">CHUNKS_RECORD</ref> *</type>
+          <declname>chunks_record</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_blamer_bundle" kindref="compound">BlamerBundle</ref> *</type>
+          <declname>blamer_bundle</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>debug_blamer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="300" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="141" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1abb338f9a344adee6b70d0d3a4b84324c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LanguageModel::CleanUp</definition>
+        <argsstring>()</argsstring>
+        <name>CleanUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="307" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="273" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a5d438b4a1df7926373f81851ad8ee0de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LanguageModel::DeleteState</definition>
+        <argsstring>(BLOB_CHOICE_LIST *choices)</argsstring>
+        <name>DeleteState</name>
+        <param>
+          <type>BLOB_CHOICE_LIST *</type>
+          <declname>choices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="310" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="280" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a6e71e759889a7f6b33088a273208fbf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacetesseract_1a87cc64ed462a40c9c210a8bab7cb9b87" kindref="member">LanguageModelFlagsType</ref></type>
+        <definition>LanguageModelFlagsType tesseract::LanguageModel::UpdateState</definition>
+        <argsstring>(LanguageModelFlagsType changed, int curr_col, int curr_row, BLOB_CHOICE_LIST *curr_list, BLOB_CHOICE_LIST *parent_list, HEAP *pain_points, BestPathByColumn *best_path_by_column[], CHUNKS_RECORD *chunks_record, BestChoiceBundle *best_choice_bundle, BlamerBundle *blamer_bundle)</argsstring>
+        <name>UpdateState</name>
+        <param>
+          <type><ref refid="namespacetesseract_1a87cc64ed462a40c9c210a8bab7cb9b87" kindref="member">LanguageModelFlagsType</ref></type>
+          <declname>changed</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>curr_col</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>curr_row</declname>
+        </param>
+        <param>
+          <type>BLOB_CHOICE_LIST *</type>
+          <declname>curr_list</declname>
+        </param>
+        <param>
+          <type>BLOB_CHOICE_LIST *</type>
+          <declname>parent_list</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_h_e_a_p" kindref="compound">HEAP</ref> *</type>
+          <declname>pain_points</declname>
+        </param>
+        <param>
+          <type><ref refid="structtesseract_1_1_best_path_by_column" kindref="compound">BestPathByColumn</ref> *</type>
+          <declname>best_path_by_column</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="struct_c_h_u_n_k_s___r_e_c_o_r_d" kindref="compound">CHUNKS_RECORD</ref> *</type>
+          <declname>chunks_record</declname>
+        </param>
+        <param>
+          <type><ref refid="structtesseract_1_1_best_choice_bundle" kindref="compound">BestChoiceBundle</ref> *</type>
+          <declname>best_choice_bundle</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_blamer_bundle" kindref="compound">BlamerBundle</ref> *</type>
+          <declname>blamer_bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="328" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="292" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a880383cfa71735ada29162492dcb1ed2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LanguageModel::GenerateNgramModelPainPointsFromColumn</definition>
+        <argsstring>(int col, int row, HEAP *pain_points, CHUNKS_RECORD *chunks_record)</argsstring>
+        <name>GenerateNgramModelPainPointsFromColumn</name>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_h_e_a_p" kindref="compound">HEAP</ref> *</type>
+          <declname>pain_points</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_c_h_u_n_k_s___r_e_c_o_r_d" kindref="compound">CHUNKS_RECORD</ref> *</type>
+          <declname>chunks_record</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="349" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="1604" bodyend="1666"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1ac54bd170cc3184d2dc5ffc3b78383443" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LanguageModel::GenerateProblematicPathPainPointsFromColumn</definition>
+        <argsstring>(int col, int row, float best_choice_cert, HEAP *pain_points, BestPathByColumn *best_path_by_column[], CHUNKS_RECORD *chunks_record)</argsstring>
+        <name>GenerateProblematicPathPainPointsFromColumn</name>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>best_choice_cert</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_h_e_a_p" kindref="compound">HEAP</ref> *</type>
+          <declname>pain_points</declname>
+        </param>
+        <param>
+          <type><ref refid="structtesseract_1_1_best_path_by_column" kindref="compound">BestPathByColumn</ref> *</type>
+          <declname>best_path_by_column</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="struct_c_h_u_n_k_s___r_e_c_o_r_d" kindref="compound">CHUNKS_RECORD</ref> *</type>
+          <declname>chunks_record</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="358" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="1668" bodyend="1750"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1ac679885b93a64ab878e97d77c5b043ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LanguageModel::GeneratePainPointsFromColumn</definition>
+        <argsstring>(int col, const GenericVector&lt; int &gt; &amp;non_empty_rows, float best_choice_cert, HEAP *pain_points, BestPathByColumn *best_path_by_column[], CHUNKS_RECORD *chunks_record)</argsstring>
+        <name>GeneratePainPointsFromColumn</name>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; int &gt; &amp;</type>
+          <declname>non_empty_rows</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>best_choice_cert</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_h_e_a_p" kindref="compound">HEAP</ref> *</type>
+          <declname>pain_points</declname>
+        </param>
+        <param>
+          <type><ref refid="structtesseract_1_1_best_path_by_column" kindref="compound">BestPathByColumn</ref> *</type>
+          <declname>best_path_by_column</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="struct_c_h_u_n_k_s___r_e_c_o_r_d" kindref="compound">CHUNKS_RECORD</ref> *</type>
+          <declname>chunks_record</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="368" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="1581" bodyend="1602"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a9ffdb916d868e062f46ed91801b10e48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LanguageModel::GeneratePainPointsFromBestChoice</definition>
+        <argsstring>(HEAP *pain_points, CHUNKS_RECORD *chunks_record, BestChoiceBundle *best_choice_bundle)</argsstring>
+        <name>GeneratePainPointsFromBestChoice</name>
+        <param>
+          <type><ref refid="struct_h_e_a_p" kindref="compound">HEAP</ref> *</type>
+          <declname>pain_points</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_c_h_u_n_k_s___r_e_c_o_r_d" kindref="compound">CHUNKS_RECORD</ref> *</type>
+          <declname>chunks_record</declname>
+        </param>
+        <param>
+          <type><ref refid="structtesseract_1_1_best_choice_bundle" kindref="compound">BestChoiceBundle</ref> *</type>
+          <declname>best_choice_bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="380" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="1752" bodyend="1921"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a112225abbc5018ab9b7c15b1363dce1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::LanguageModel::GeneratePainPoint</definition>
+        <argsstring>(int col, int row, bool ok_to_extend, float priority_adjustment, float worst_piece_cert, bool fragmented, float best_choice_cert, float max_char_wh_ratio, BLOB_CHOICE *parent_b, ViterbiStateEntry *parent_vse, CHUNKS_RECORD *chunks_record, HEAP *pain_points)</argsstring>
+        <name>GeneratePainPoint</name>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ok_to_extend</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>priority_adjustment</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>worst_piece_cert</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>fragmented</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>best_choice_cert</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_char_wh_ratio</declname>
+        </param>
+        <param>
+          <type><ref refid="class_b_l_o_b___c_h_o_i_c_e" kindref="compound">BLOB_CHOICE</ref> *</type>
+          <declname>parent_b</declname>
+        </param>
+        <param>
+          <type><ref refid="structtesseract_1_1_viterbi_state_entry" kindref="compound">ViterbiStateEntry</ref> *</type>
+          <declname>parent_vse</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_c_h_u_n_k_s___r_e_c_o_r_d" kindref="compound">CHUNKS_RECORD</ref> *</type>
+          <declname>chunks_record</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_h_e_a_p" kindref="compound">HEAP</ref> *</type>
+          <declname>pain_points</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="395" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="1923" bodyend="2003"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a3a6f034012a45448a018bd4042138f74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::LanguageModel::AcceptableChoiceFound</definition>
+        <argsstring>()</argsstring>
+        <name>AcceptableChoiceFound</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="407" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="407" bodyend="407"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1ac89838ae8a119ee1dd68e8da286d3de2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LanguageModel::GetWorstPieceCertainty</definition>
+        <argsstring>(int col, int row, MATRIX *ratings, float *cert, bool *fragmented)</argsstring>
+        <name>GetWorstPieceCertainty</name>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type><ref refid="class_m_a_t_r_i_x" kindref="compound">MATRIX</ref> *</type>
+          <declname>ratings</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>cert</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>fragmented</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="413" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="413" bodyend="424"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1ae820072705cf3b347e496145a6ba7b8a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float tesseract::LanguageModel::ComputeOutlineLength</definition>
+        <argsstring>(BLOB_CHOICE *b)</argsstring>
+        <name>ComputeOutlineLength</name>
+        <param>
+          <type><ref refid="class_b_l_o_b___c_h_o_i_c_e" kindref="compound">BLOB_CHOICE</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="434" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="434" bodyend="436"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1aaf5e62c9b6c2097323835d0b384c69a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::INT_VAR_H</definition>
+        <argsstring>(language_model_debug_level, 0,&quot;Language model debug level&quot;)</argsstring>
+        <name>INT_VAR_H</name>
+        <param>
+          <type>language_model_debug_level</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>&quot;Language model debug level&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="738" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1af79088391ec80597f43e361c34bc7abb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::BOOL_VAR_H</definition>
+        <argsstring>(language_model_ngram_on, false,&quot;Turn on/off the use of character ngram model&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>language_model_ngram_on</type>
+        </param>
+        <param>
+          <type>false</type>
+        </param>
+        <param>
+          <type>&quot;Turn on/off the use of <ref refid="mfoutline_8h_1a2a4b69f9a2827dc98bc4cbc233118865afa40ef3af4fea0001b535318130960b2" kindref="member">character</ref> ngram model&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="739" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a86e5d01f51d3252ad658ba982c419a65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::INT_VAR_H</definition>
+        <argsstring>(language_model_ngram_order, 8,&quot;Maximum order of the character ngram model&quot;)</argsstring>
+        <name>INT_VAR_H</name>
+        <param>
+          <type>language_model_ngram_order</type>
+        </param>
+        <param>
+          <type>8</type>
+        </param>
+        <param>
+          <type>&quot;Maximum order of the <ref refid="mfoutline_8h_1a2a4b69f9a2827dc98bc4cbc233118865afa40ef3af4fea0001b535318130960b2" kindref="member">character</ref> ngram model&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="741" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1ae0c975856f8c753611e2ff38c7ffffea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::INT_VAR_H</definition>
+        <argsstring>(language_model_viterbi_list_max_num_prunable, 10,&quot;Maximum number of prunable (those for which PrunablePath() is true)&quot;&quot;entries in each viterbi list recorded in BLOB_CHOICEs&quot;)</argsstring>
+        <name>INT_VAR_H</name>
+        <param>
+          <type>language_model_viterbi_list_max_num_prunable</type>
+        </param>
+        <param>
+          <type>10</type>
+        </param>
+        <param>
+          <type>&quot;Maximum number of prunable (those for which <ref refid="classtesseract_1_1_language_model_1a94e330401f968c32c4796deaa8c4eb2d" kindref="member">PrunablePath</ref>() is true)&quot;&quot;entries in each viterbi list recorded in BLOB_CHOICEs&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="743" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a4120db3b6e79eebf7d2f878db502e425" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::INT_VAR_H</definition>
+        <argsstring>(language_model_viterbi_list_max_size, 500,&quot;Maximum size of viterbi lists recorded in BLOB_CHOICEs&quot;)</argsstring>
+        <name>INT_VAR_H</name>
+        <param>
+          <type>language_model_viterbi_list_max_size</type>
+        </param>
+        <param>
+          <type>500</type>
+        </param>
+        <param>
+          <type>&quot;Maximum size of viterbi lists recorded in BLOB_CHOICEs&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="746" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1ac578b52439bdab92fbd3e6cb08ed9c92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::double_VAR_H</definition>
+        <argsstring>(language_model_ngram_small_prob, 0.000001,&quot;To avoid overly small denominators use this as the floor&quot;&quot; of the probability returned by the ngram model&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>language_model_ngram_small_prob</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>000001</declname>
+        </param>
+        <param>
+          <type>&quot;To avoid overly small denominators use this as the floor&quot;&quot; of the probability returned by the ngram model&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="748" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1aebdea59b1649e76d6079dcd02a454f95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::double_VAR_H</definition>
+        <argsstring>(language_model_ngram_nonmatch_score,-40.0,&quot;Average classifier score of a non-matching unichar&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>language_model_ngram_nonmatch_score</type>
+        </param>
+        <param>
+          <type>-40.</type>
+          <declname>0</declname>
+        </param>
+        <param>
+          <type>&quot;Average classifier score of a non-matching unichar&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="751" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a34d1954d39960554b771e7ded34532ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::BOOL_VAR_H</definition>
+        <argsstring>(language_model_ngram_use_only_first_uft8_step, false,&quot;Use only the first UTF8 step of the given string&quot;&quot; when computing log probabilities&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>language_model_ngram_use_only_first_uft8_step</type>
+        </param>
+        <param>
+          <type>false</type>
+        </param>
+        <param>
+          <type>&quot;Use only the first UTF8 step of the given string&quot;&quot; when computing log probabilities&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="753" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1ad9753b31778545d42097724870c713ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::double_VAR_H</definition>
+        <argsstring>(language_model_ngram_scale_factor, 0.03,&quot;Strength of the character ngram model relative to the&quot;&quot; character classifier &quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>language_model_ngram_scale_factor</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>03</declname>
+        </param>
+        <param>
+          <type>&quot;Strength of the <ref refid="mfoutline_8h_1a2a4b69f9a2827dc98bc4cbc233118865afa40ef3af4fea0001b535318130960b2" kindref="member">character</ref> ngram model relative to the&quot;&quot; <ref refid="mfoutline_8h_1a2a4b69f9a2827dc98bc4cbc233118865afa40ef3af4fea0001b535318130960b2" kindref="member">character</ref> classifier &quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="756" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1ae832af4b6926d59739cfe844c0a9f662" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::BOOL_VAR_H</definition>
+        <argsstring>(language_model_ngram_space_delimited_language, true,&quot;Words are delimited by space&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>language_model_ngram_space_delimited_language</type>
+        </param>
+        <param>
+          <type>true</type>
+        </param>
+        <param>
+          <type>&quot;Words are delimited by space&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="759" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a6dc40b56e2b6bd3f8ea37c4ef781d43e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::INT_VAR_H</definition>
+        <argsstring>(language_model_min_compound_length, 3,&quot;Minimum length of compound words&quot;)</argsstring>
+        <name>INT_VAR_H</name>
+        <param>
+          <type>language_model_min_compound_length</type>
+        </param>
+        <param>
+          <type>3</type>
+        </param>
+        <param>
+          <type>&quot;Minimum length of compound words&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="762" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1aad0e28a6e9aa38c616b35baaaf1885db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::INT_VAR_H</definition>
+        <argsstring>(language_model_fixed_length_choices_depth, 3,&quot;Depth of blob choice lists to explore&quot;&quot; when fixed length dawgs are on&quot;)</argsstring>
+        <name>INT_VAR_H</name>
+        <param>
+          <type>language_model_fixed_length_choices_depth</type>
+        </param>
+        <param>
+          <type>3</type>
+        </param>
+        <param>
+          <type>&quot;Depth of blob choice lists to explore&quot;&quot; when fixed length dawgs are on&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="764" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a6c2e66a1b896096baf95061bf6cef893" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::double_VAR_H</definition>
+        <argsstring>(language_model_penalty_non_freq_dict_word, 0.1,&quot;Penalty for words not in the frequent word dictionary&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>language_model_penalty_non_freq_dict_word</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>1</declname>
+        </param>
+        <param>
+          <type>&quot;Penalty for words not in the frequent word dictionary&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="768" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a2e4d6bbf82028f282710a98502189107" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::double_VAR_H</definition>
+        <argsstring>(language_model_penalty_non_dict_word, 0.15,&quot;Penalty for non-dictionary words&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>language_model_penalty_non_dict_word</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>15</declname>
+        </param>
+        <param>
+          <type>&quot;Penalty for non-dictionary words&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="770" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a6ff94696f78d78acab988b9149629164" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::double_VAR_H</definition>
+        <argsstring>(language_model_penalty_punc, 0.2,&quot;Penalty for inconsistent punctuation&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>language_model_penalty_punc</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>2</declname>
+        </param>
+        <param>
+          <type>&quot;Penalty for inconsistent punctuation&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="772" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1add3ac65fe7b3e9006f9938d4bbb46088" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::double_VAR_H</definition>
+        <argsstring>(language_model_penalty_case, 0.1,&quot;Penalty for inconsistent case&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>language_model_penalty_case</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>1</declname>
+        </param>
+        <param>
+          <type>&quot;Penalty for inconsistent case&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="774" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1aa5aa12bdafcf91cd0897c3bf073967b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::double_VAR_H</definition>
+        <argsstring>(language_model_penalty_script, 0.5,&quot;Penalty for inconsistent script&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>language_model_penalty_script</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>5</declname>
+        </param>
+        <param>
+          <type>&quot;Penalty for inconsistent script&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="776" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a1841084427161525ed7df507403a1a57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::double_VAR_H</definition>
+        <argsstring>(language_model_penalty_chartype, 0.3,&quot;Penalty for inconsistent character type&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>language_model_penalty_chartype</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>3</declname>
+        </param>
+        <param>
+          <type>&quot;Penalty for inconsistent <ref refid="mfoutline_8h_1a2a4b69f9a2827dc98bc4cbc233118865afa40ef3af4fea0001b535318130960b2" kindref="member">character</ref> type&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="778" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1aadcf4d5562ca24f04f47e40dba700636" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::double_VAR_H</definition>
+        <argsstring>(language_model_penalty_font, 0.00,&quot;Penalty for inconsistent font&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>language_model_penalty_font</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>00</declname>
+        </param>
+        <param>
+          <type>&quot;Penalty for inconsistent font&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="780" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1ac263117de92bb246ace4890dd5ac5d12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::double_VAR_H</definition>
+        <argsstring>(language_model_penalty_spacing, 0.05,&quot;Penalty for inconsistent spacing&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>language_model_penalty_spacing</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>05</declname>
+        </param>
+        <param>
+          <type>&quot;Penalty for inconsistent spacing&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="782" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1ad06d3a7aefcaa7f241395af9d4b53d65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::double_VAR_H</definition>
+        <argsstring>(language_model_penalty_increment, 0.01,&quot;Penalty increment&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>language_model_penalty_increment</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>01</declname>
+        </param>
+        <param>
+          <type>&quot;Penalty increment&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="784" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a523d84ddc1fcb93525d385b9bc06b126" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::LanguageModel::BOOL_VAR_H</definition>
+        <argsstring>(language_model_use_sigmoidal_certainty, false,&quot;Use sigmoidal score for certainty&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>language_model_use_sigmoidal_certainty</type>
+        </param>
+        <param>
+          <type>false</type>
+        </param>
+        <param>
+          <type>&quot;Use sigmoidal score for certainty&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="785" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1ad62708b20a5660fc70c98aaaa1407351" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float tesseract::LanguageModel::CertaintyScore</definition>
+        <argsstring>(float cert)</argsstring>
+        <name>CertaintyScore</name>
+        <param>
+          <type>float</type>
+          <declname>cert</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="440" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="440" bodyend="450"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1abe9fdc3e12da7a4158dbfeb4d0c02b11" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::LanguageModel::NonAlphaOrDigitMiddle</definition>
+        <argsstring>(int col, int row, int dimension, UNICHAR_ID unichar_id)</argsstring>
+        <name>NonAlphaOrDigitMiddle</name>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dimension</declname>
+        </param>
+        <param>
+          <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+          <declname>unichar_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="452" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="452" bodyend="457"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1ab06c525990667669c562559d4d7e50e4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::LanguageModel::IsFragment</definition>
+        <argsstring>(BLOB_CHOICE *b)</argsstring>
+        <name>IsFragment</name>
+        <param>
+          <type><ref refid="class_b_l_o_b___c_h_o_i_c_e" kindref="compound">BLOB_CHOICE</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="459" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="459" bodyend="461"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a6b2114d30b6f9d75a0c69ea2a08b873b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::LanguageModel::IsHan</definition>
+        <argsstring>(int script_id)</argsstring>
+        <name>IsHan</name>
+        <param>
+          <type>int</type>
+          <declname>script_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="463" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="463" bodyend="467"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a004b3ce3c3fecd02c55c0441dca660b5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LanguageModel::GetPieceCertainty</definition>
+        <argsstring>(BLOB_CHOICE_LIST *blist, float *cert, bool *fragmented)</argsstring>
+        <name>GetPieceCertainty</name>
+        <param>
+          <type>BLOB_CHOICE_LIST *</type>
+          <declname>blist</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>cert</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>fragmented</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="472" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="472" bodyend="483"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a2cbf75be87744e712363831e96b87858" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float tesseract::LanguageModel::ComputeAdjustment</definition>
+        <argsstring>(int num_problems, float penalty)</argsstring>
+        <name>ComputeAdjustment</name>
+        <param>
+          <type>int</type>
+          <declname>num_problems</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>penalty</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="485" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="485" bodyend="490"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a8ad6c36003d1e5105e25d4f125ba44fc" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float tesseract::LanguageModel::ComputeConsistencyAdjustment</definition>
+        <argsstring>(const LanguageModelDawgInfo *dawg_info, const LanguageModelConsistencyInfo &amp;consistency_info)</argsstring>
+        <name>ComputeConsistencyAdjustment</name>
+        <param>
+          <type>const <ref refid="structtesseract_1_1_language_model_dawg_info" kindref="compound">LanguageModelDawgInfo</ref> *</type>
+          <declname>dawg_info</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtesseract_1_1_language_model_consistency_info" kindref="compound">LanguageModelConsistencyInfo</ref> &amp;</type>
+          <declname>consistency_info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="496" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="496" bodyend="515"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a2f3114462424bbe1572095da37955b84" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float tesseract::LanguageModel::ComputeConsistencyAdjustedRatingsSum</definition>
+        <argsstring>(float ratings_sum, const LanguageModelDawgInfo *dawg_info, const LanguageModelConsistencyInfo &amp;consistency_info)</argsstring>
+        <name>ComputeConsistencyAdjustedRatingsSum</name>
+        <param>
+          <type>float</type>
+          <declname>ratings_sum</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtesseract_1_1_language_model_dawg_info" kindref="compound">LanguageModelDawgInfo</ref> *</type>
+          <declname>dawg_info</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtesseract_1_1_language_model_consistency_info" kindref="compound">LanguageModelConsistencyInfo</ref> &amp;</type>
+          <declname>consistency_info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="518" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="518" bodyend="524"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a16f5fb35f49c158debf290e1d6df3669" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float tesseract::LanguageModel::ComputeAdjustedPathCost</definition>
+        <argsstring>(float ratings_sum, int length, float dawg_score, const LanguageModelDawgInfo *dawg_info, const LanguageModelNgramInfo *ngram_info, const LanguageModelConsistencyInfo &amp;consistency_info, const AssociateStats &amp;associate_stats, ViterbiStateEntry *parent_vse)</argsstring>
+        <name>ComputeAdjustedPathCost</name>
+        <param>
+          <type>float</type>
+          <declname>ratings_sum</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dawg_score</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtesseract_1_1_language_model_dawg_info" kindref="compound">LanguageModelDawgInfo</ref> *</type>
+          <declname>dawg_info</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtesseract_1_1_language_model_ngram_info" kindref="compound">LanguageModelNgramInfo</ref> *</type>
+          <declname>ngram_info</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtesseract_1_1_language_model_consistency_info" kindref="compound">LanguageModelConsistencyInfo</ref> &amp;</type>
+          <declname>consistency_info</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtesseract_1_1_associate_stats" kindref="compound">AssociateStats</ref> &amp;</type>
+          <declname>associate_stats</declname>
+        </param>
+        <param>
+          <type><ref refid="structtesseract_1_1_viterbi_state_entry" kindref="compound">ViterbiStateEntry</ref> *</type>
+          <declname>parent_vse</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="529" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="1152" bodyend="1182"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1abd6f8374433282f19ed9f16a814747a2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::LanguageModel::ProblematicPath</definition>
+        <argsstring>(const ViterbiStateEntry &amp;vse, UNICHAR_ID unichar_id, bool word_end)</argsstring>
+        <name>ProblematicPath</name>
+        <param>
+          <type>const <ref refid="structtesseract_1_1_viterbi_state_entry" kindref="compound">ViterbiStateEntry</ref> &amp;</type>
+          <declname>vse</declname>
+        </param>
+        <param>
+          <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+          <declname>unichar_id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>word_end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="541" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="381" bodyend="424"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a1c3bfccbef3bc9019b7cc24ec7ab059a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LanguageModel::GetTopChoiceLowerUpper</definition>
+        <argsstring>(LanguageModelFlagsType changed, BLOB_CHOICE_LIST *curr_list, BLOB_CHOICE **first_lower, BLOB_CHOICE **first_upper)</argsstring>
+        <name>GetTopChoiceLowerUpper</name>
+        <param>
+          <type><ref refid="namespacetesseract_1a87cc64ed462a40c9c210a8bab7cb9b87" kindref="member">LanguageModelFlagsType</ref></type>
+          <declname>changed</declname>
+        </param>
+        <param>
+          <type>BLOB_CHOICE_LIST *</type>
+          <declname>curr_list</declname>
+        </param>
+        <param>
+          <type><ref refid="class_b_l_o_b___c_h_o_i_c_e" kindref="compound">BLOB_CHOICE</ref> **</type>
+          <declname>first_lower</declname>
+        </param>
+        <param>
+          <type><ref refid="class_b_l_o_b___c_h_o_i_c_e" kindref="compound">BLOB_CHOICE</ref> **</type>
+          <declname>first_upper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="546" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="426" bodyend="448"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a37caf9b4870012ac2d0de8c18fc475a3" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacetesseract_1a87cc64ed462a40c9c210a8bab7cb9b87" kindref="member">LanguageModelFlagsType</ref></type>
+        <definition>LanguageModelFlagsType tesseract::LanguageModel::AddViterbiStateEntry</definition>
+        <argsstring>(LanguageModelFlagsType top_choice_flags, float denom, bool word_end, int curr_col, int curr_row, BLOB_CHOICE *b, BLOB_CHOICE *parent_b, ViterbiStateEntry *parent_vse, HEAP *pain_points, BestPathByColumn *best_path_by_column[], CHUNKS_RECORD *chunks_record, BestChoiceBundle *best_choice_bundle, BlamerBundle *blamer_bundle)</argsstring>
+        <name>AddViterbiStateEntry</name>
+        <param>
+          <type><ref refid="namespacetesseract_1a87cc64ed462a40c9c210a8bab7cb9b87" kindref="member">LanguageModelFlagsType</ref></type>
+          <declname>top_choice_flags</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>denom</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>word_end</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>curr_col</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>curr_row</declname>
+        </param>
+        <param>
+          <type><ref refid="class_b_l_o_b___c_h_o_i_c_e" kindref="compound">BLOB_CHOICE</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="class_b_l_o_b___c_h_o_i_c_e" kindref="compound">BLOB_CHOICE</ref> *</type>
+          <declname>parent_b</declname>
+        </param>
+        <param>
+          <type><ref refid="structtesseract_1_1_viterbi_state_entry" kindref="compound">ViterbiStateEntry</ref> *</type>
+          <declname>parent_vse</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_h_e_a_p" kindref="compound">HEAP</ref> *</type>
+          <declname>pain_points</declname>
+        </param>
+        <param>
+          <type><ref refid="structtesseract_1_1_best_path_by_column" kindref="compound">BestPathByColumn</ref> *</type>
+          <declname>best_path_by_column</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="struct_c_h_u_n_k_s___r_e_c_o_r_d" kindref="compound">CHUNKS_RECORD</ref> *</type>
+          <declname>chunks_record</declname>
+        </param>
+        <param>
+          <type><ref refid="structtesseract_1_1_best_choice_bundle" kindref="compound">BestChoiceBundle</ref> *</type>
+          <declname>best_choice_bundle</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_blamer_bundle" kindref="compound">BlamerBundle</ref> *</type>
+          <declname>blamer_bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="557" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="450" bodyend="667"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a55b8b1ce014eaa9df1734a1cca9d6b5f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LanguageModel::PrintViterbiStateEntry</definition>
+        <argsstring>(const char *msg, ViterbiStateEntry *vse, BLOB_CHOICE *b, CHUNKS_RECORD *chunks_record)</argsstring>
+        <name>PrintViterbiStateEntry</name>
+        <param>
+          <type>const char *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type><ref refid="structtesseract_1_1_viterbi_state_entry" kindref="compound">ViterbiStateEntry</ref> *</type>
+          <declname>vse</declname>
+        </param>
+        <param>
+          <type><ref refid="class_b_l_o_b___c_h_o_i_c_e" kindref="compound">BLOB_CHOICE</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_c_h_u_n_k_s___r_e_c_o_r_d" kindref="compound">CHUNKS_RECORD</ref> *</type>
+          <declname>chunks_record</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="572" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="669" bodyend="703"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1ad466db4a445d5772735bf26d0094fe25" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LanguageModel::GenerateTopChoiceInfo</definition>
+        <argsstring>(float ratings_sum, const LanguageModelDawgInfo *dawg_info, const LanguageModelConsistencyInfo &amp;consistency_info, const ViterbiStateEntry *parent_vse, BLOB_CHOICE *b, LanguageModelFlagsType *top_choice_flags, LanguageModelFlagsType *changed)</argsstring>
+        <name>GenerateTopChoiceInfo</name>
+        <param>
+          <type>float</type>
+          <declname>ratings_sum</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtesseract_1_1_language_model_dawg_info" kindref="compound">LanguageModelDawgInfo</ref> *</type>
+          <declname>dawg_info</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtesseract_1_1_language_model_consistency_info" kindref="compound">LanguageModelConsistencyInfo</ref> &amp;</type>
+          <declname>consistency_info</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtesseract_1_1_viterbi_state_entry" kindref="compound">ViterbiStateEntry</ref> *</type>
+          <declname>parent_vse</declname>
+        </param>
+        <param>
+          <type><ref refid="class_b_l_o_b___c_h_o_i_c_e" kindref="compound">BLOB_CHOICE</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1a87cc64ed462a40c9c210a8bab7cb9b87" kindref="member">LanguageModelFlagsType</ref> *</type>
+          <declname>top_choice_flags</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1a87cc64ed462a40c9c210a8bab7cb9b87" kindref="member">LanguageModelFlagsType</ref> *</type>
+          <declname>changed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="582" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="705" bodyend="738"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1afdbbaac8e9cfabc629ffa1c857f3521b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structtesseract_1_1_language_model_dawg_info" kindref="compound">LanguageModelDawgInfo</ref> *</type>
+        <definition>LanguageModelDawgInfo * tesseract::LanguageModel::GenerateDawgInfo</definition>
+        <argsstring>(bool word_end, int script_id, int curr_col, int curr_row, const BLOB_CHOICE &amp;b, const ViterbiStateEntry *parent_vse, LanguageModelFlagsType *changed)</argsstring>
+        <name>GenerateDawgInfo</name>
+        <param>
+          <type>bool</type>
+          <declname>word_end</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>script_id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>curr_col</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>curr_row</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_b_l_o_b___c_h_o_i_c_e" kindref="compound">BLOB_CHOICE</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtesseract_1_1_viterbi_state_entry" kindref="compound">ViterbiStateEntry</ref> *</type>
+          <declname>parent_vse</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1a87cc64ed462a40c9c210a8bab7cb9b87" kindref="member">LanguageModelFlagsType</ref> *</type>
+          <declname>changed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="596" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="740" bodyend="842"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1ad586fa622fb8f4f1121c6a47dc393e3f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structtesseract_1_1_language_model_ngram_info" kindref="compound">LanguageModelNgramInfo</ref> *</type>
+        <definition>LanguageModelNgramInfo * tesseract::LanguageModel::GenerateNgramInfo</definition>
+        <argsstring>(const char *unichar, float certainty, float denom, int curr_col, int curr_row, const ViterbiStateEntry *parent_vse, BLOB_CHOICE *parent_b, LanguageModelFlagsType *changed)</argsstring>
+        <name>GenerateNgramInfo</name>
+        <param>
+          <type>const char *</type>
+          <declname>unichar</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>certainty</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>denom</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>curr_col</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>curr_row</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtesseract_1_1_viterbi_state_entry" kindref="compound">ViterbiStateEntry</ref> *</type>
+          <declname>parent_vse</declname>
+        </param>
+        <param>
+          <type><ref refid="class_b_l_o_b___c_h_o_i_c_e" kindref="compound">BLOB_CHOICE</ref> *</type>
+          <declname>parent_b</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1a87cc64ed462a40c9c210a8bab7cb9b87" kindref="member">LanguageModelFlagsType</ref> *</type>
+          <declname>changed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="609" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="844" bodyend="903"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a4825ba908be2ed7c21f007bc6f21d970" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float tesseract::LanguageModel::ComputeNgramCost</definition>
+        <argsstring>(const char *unichar, float certainty, float denom, const char *context, int *unichar_step_len, bool *found_small_prob, float *ngram_prob)</argsstring>
+        <name>ComputeNgramCost</name>
+        <param>
+          <type>const char *</type>
+          <declname>unichar</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>certainty</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>denom</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>unichar_step_len</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>found_small_prob</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>ngram_prob</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="623" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="905" bodyend="960"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a933e234efec8a32e922023ad8811b469" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float tesseract::LanguageModel::ComputeDenom</definition>
+        <argsstring>(BLOB_CHOICE_LIST *curr_list)</argsstring>
+        <name>ComputeDenom</name>
+        <param>
+          <type>BLOB_CHOICE_LIST *</type>
+          <declname>curr_list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="629" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="962" bodyend="981"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1aa62897048f719baec3647583efe3f3b5" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LanguageModel::FillConsistencyInfo</definition>
+        <argsstring>(int curr_col, bool word_end, BLOB_CHOICE *b, ViterbiStateEntry *parent_vse, BLOB_CHOICE *parent_b, CHUNKS_RECORD *chunks_record, LanguageModelConsistencyInfo *consistency_info)</argsstring>
+        <name>FillConsistencyInfo</name>
+        <param>
+          <type>int</type>
+          <declname>curr_col</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>word_end</declname>
+        </param>
+        <param>
+          <type><ref refid="class_b_l_o_b___c_h_o_i_c_e" kindref="compound">BLOB_CHOICE</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="structtesseract_1_1_viterbi_state_entry" kindref="compound">ViterbiStateEntry</ref> *</type>
+          <declname>parent_vse</declname>
+        </param>
+        <param>
+          <type><ref refid="class_b_l_o_b___c_h_o_i_c_e" kindref="compound">BLOB_CHOICE</ref> *</type>
+          <declname>parent_b</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_c_h_u_n_k_s___r_e_c_o_r_d" kindref="compound">CHUNKS_RECORD</ref> *</type>
+          <declname>chunks_record</declname>
+        </param>
+        <param>
+          <type><ref refid="structtesseract_1_1_language_model_consistency_info" kindref="compound">LanguageModelConsistencyInfo</ref> *</type>
+          <declname>consistency_info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="633" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="983" bodyend="1150"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a83d19454ed46250da17a5bef2b5daef4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LanguageModel::UpdateBestChoice</definition>
+        <argsstring>(BLOB_CHOICE *b, ViterbiStateEntry *vse, HEAP *pain_points, CHUNKS_RECORD *chunks_record, BestChoiceBundle *best_choice_bundle, BlamerBundle *blamer_bundle)</argsstring>
+        <name>UpdateBestChoice</name>
+        <param>
+          <type><ref refid="class_b_l_o_b___c_h_o_i_c_e" kindref="compound">BLOB_CHOICE</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="structtesseract_1_1_viterbi_state_entry" kindref="compound">ViterbiStateEntry</ref> *</type>
+          <declname>vse</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_h_e_a_p" kindref="compound">HEAP</ref> *</type>
+          <declname>pain_points</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_c_h_u_n_k_s___r_e_c_o_r_d" kindref="compound">CHUNKS_RECORD</ref> *</type>
+          <declname>chunks_record</declname>
+        </param>
+        <param>
+          <type><ref refid="structtesseract_1_1_best_choice_bundle" kindref="compound">BestChoiceBundle</ref> *</type>
+          <declname>best_choice_bundle</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_blamer_bundle" kindref="compound">BlamerBundle</ref> *</type>
+          <declname>blamer_bundle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="646" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="1184" bodyend="1328"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1af1bb185436ec41c1d438f4e412a2ff62" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LanguageModel::ExtractRawFeaturesFromPath</definition>
+        <argsstring>(const ViterbiStateEntry &amp;vse, float *features)</argsstring>
+        <name>ExtractRawFeaturesFromPath</name>
+        <param>
+          <type>const <ref refid="structtesseract_1_1_viterbi_state_entry" kindref="compound">ViterbiStateEntry</ref> &amp;</type>
+          <declname>vse</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>features</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="656" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="1330" bodyend="1373"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1abf249d9c9dd9bf8b03a760452382a852" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_w_e_r_d___c_h_o_i_c_e" kindref="compound">WERD_CHOICE</ref> *</type>
+        <definition>WERD_CHOICE * tesseract::LanguageModel::ConstructWord</definition>
+        <argsstring>(BLOB_CHOICE *b, ViterbiStateEntry *vse, CHUNKS_RECORD *chunks_record, BLOB_CHOICE_LIST_VECTOR *best_char_choices, float certainties[], float *dawg_score, STATE *state, BlamerBundle *blamer_bundle, bool *truth_path)</argsstring>
+        <name>ConstructWord</name>
+        <param>
+          <type><ref refid="class_b_l_o_b___c_h_o_i_c_e" kindref="compound">BLOB_CHOICE</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="structtesseract_1_1_viterbi_state_entry" kindref="compound">ViterbiStateEntry</ref> *</type>
+          <declname>vse</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_c_h_u_n_k_s___r_e_c_o_r_d" kindref="compound">CHUNKS_RECORD</ref> *</type>
+          <declname>chunks_record</declname>
+        </param>
+        <param>
+          <type><ref refid="ratngs_8h_1a78a6d74d56415802d31e350314b23e65" kindref="member">BLOB_CHOICE_LIST_VECTOR</ref> *</type>
+          <declname>best_char_choices</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>certainties</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dawg_score</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_s_t_a_t_e" kindref="compound">STATE</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_blamer_bundle" kindref="compound">BlamerBundle</ref> *</type>
+          <declname>blamer_bundle</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>truth_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="666" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="1375" bodyend="1525"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a97c4ba24b11a813605d90355ada07f58" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LanguageModel::UpdateCoveredByFixedLengthDawgs</definition>
+        <argsstring>(const DawgInfoVector &amp;active_dawgs, int word_index, int word_length, int *skip, int *covered, float *dawg_score, bool *dawg_score_done)</argsstring>
+        <name>UpdateCoveredByFixedLengthDawgs</name>
+        <param>
+          <type>const <ref refid="classtesseract_1_1_dawg_info_vector" kindref="compound">DawgInfoVector</ref> &amp;</type>
+          <declname>active_dawgs</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>word_index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>word_length</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>skip</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>covered</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>dawg_score</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>dawg_score_done</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="692" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.cpp" bodystart="1527" bodyend="1579"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a574aad791ea26694751f0bf691d77315" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LanguageModel::ComputeAssociateStats</definition>
+        <argsstring>(int col, int row, float max_char_wh_ratio, ViterbiStateEntry *parent_vse, CHUNKS_RECORD *chunks_record, AssociateStats *associate_stats)</argsstring>
+        <name>ComputeAssociateStats</name>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>max_char_wh_ratio</declname>
+        </param>
+        <param>
+          <type><ref refid="structtesseract_1_1_viterbi_state_entry" kindref="compound">ViterbiStateEntry</ref> *</type>
+          <declname>parent_vse</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_c_h_u_n_k_s___r_e_c_o_r_d" kindref="compound">CHUNKS_RECORD</ref> *</type>
+          <declname>chunks_record</declname>
+        </param>
+        <param>
+          <type><ref refid="structtesseract_1_1_associate_stats" kindref="compound">AssociateStats</ref> *</type>
+          <declname>associate_stats</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="699" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="699" bodyend="711"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a94e330401f968c32c4796deaa8c4eb2d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::LanguageModel::PrunablePath</definition>
+        <argsstring>(LanguageModelFlagsType top_choice_flags, const LanguageModelDawgInfo *dawg_info)</argsstring>
+        <name>PrunablePath</name>
+        <param>
+          <type><ref refid="namespacetesseract_1a87cc64ed462a40c9c210a8bab7cb9b87" kindref="member">LanguageModelFlagsType</ref></type>
+          <declname>top_choice_flags</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtesseract_1_1_language_model_dawg_info" kindref="compound">LanguageModelDawgInfo</ref> *</type>
+          <declname>dawg_info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="719" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="719" bodyend="728"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_language_model_1a4b5ee45528f0c3b57efbe2ad661681c2" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::LanguageModel::AcceptablePath</definition>
+        <argsstring>(const ViterbiStateEntry &amp;vse)</argsstring>
+        <name>AcceptablePath</name>
+        <param>
+          <type>const <ref refid="structtesseract_1_1_viterbi_state_entry" kindref="compound">ViterbiStateEntry</ref> &amp;</type>
+          <declname>vse</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="731" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="731" bodyend="734"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1258">
+        <label>STRING</label>
+        <link refid="class_s_t_r_i_n_g"/>
+      </node>
+      <node id="1266">
+        <label>TessResultCallback2&lt; bool, bool *const &amp;, bool *const &amp; &gt;</label>
+        <link refid="class_tess_result_callback2"/>
+      </node>
+      <node id="1257">
+        <label>tesseract::Dict</label>
+        <link refid="classtesseract_1_1_dict"/>
+      </node>
+      <node id="1265">
+        <label>GenericVector&lt; bool * &gt;</label>
+        <link refid="class_generic_vector"/>
+        <childnode refid="1266" relation="usage">
+          <edgelabel>compare_cb_</edgelabel>
+        </childnode>
+        <childnode refid="1267" relation="usage">
+          <edgelabel>clear_cb_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1259">
+        <label>tesseract::DawgInfoVector</label>
+        <link refid="classtesseract_1_1_dawg_info_vector"/>
+        <childnode refid="1260" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1267">
+        <label>TessCallback1&lt; bool * &gt;</label>
+        <link refid="class_tess_callback1"/>
+      </node>
+      <node id="1261">
+        <label>tesseract::DawgInfo</label>
+        <link refid="structtesseract_1_1_dawg_info"/>
+      </node>
+      <node id="1264">
+        <label>tesseract::DawgArgs</label>
+        <link refid="structtesseract_1_1_dawg_args"/>
+        <childnode refid="1259" relation="usage">
+          <edgelabel>updated_active_dawgs</edgelabel>
+          <edgelabel>constraints</edgelabel>
+          <edgelabel>updated_constraints</edgelabel>
+          <edgelabel>active_dawgs</edgelabel>
+        </childnode>
+      </node>
+      <node id="1256">
+        <label>tesseract::LanguageModel</label>
+        <link refid="classtesseract_1_1_language_model"/>
+        <childnode refid="1257" relation="usage">
+          <edgelabel>dict_</edgelabel>
+        </childnode>
+        <childnode refid="1258" relation="usage">
+          <edgelabel>prev_word_str_</edgelabel>
+        </childnode>
+        <childnode refid="1259" relation="usage">
+          <edgelabel>fixed_length_beginning_active_dawgs_</edgelabel>
+          <edgelabel>empty_dawg_info_vec_</edgelabel>
+          <edgelabel>beginning_active_dawgs_</edgelabel>
+          <edgelabel>beginning_constraints_</edgelabel>
+        </childnode>
+        <childnode refid="1264" relation="usage">
+          <edgelabel>dawg_args_</edgelabel>
+        </childnode>
+        <childnode refid="1265" relation="usage">
+          <edgelabel>updated_flags_</edgelabel>
+        </childnode>
+        <childnode refid="1268" relation="usage">
+          <edgelabel>fontinfo_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1263">
+        <label>TessResultCallback2&lt; bool, DawgInfoconst &amp;, DawgInfoconst &amp; &gt;</label>
+        <link refid="class_tess_result_callback2"/>
+      </node>
+      <node id="1260">
+        <label>GenericVector&lt; DawgInfo &gt;</label>
+        <link refid="class_generic_vector"/>
+        <childnode refid="1261" relation="usage">
+          <edgelabel>data_</edgelabel>
+        </childnode>
+        <childnode refid="1262" relation="usage">
+          <edgelabel>clear_cb_</edgelabel>
+        </childnode>
+        <childnode refid="1263" relation="usage">
+          <edgelabel>compare_cb_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1262">
+        <label>TessCallback1&lt; DawgInfo &gt;</label>
+        <link refid="class_tess_callback1"/>
+      </node>
+      <node id="1268">
+        <label>UnicityTable&lt; tesseract::FontInfo &gt;</label>
+        <link refid="class_unicity_table"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="264" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="264" bodyend="848"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_language_model_1aee3c5c64657d9e77db9f2645ca1d29fd" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>acceptable_choice_found_</name></member>
+      <member refid="classtesseract_1_1_language_model_1a3a6f034012a45448a018bd4042138f74" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>AcceptableChoiceFound</name></member>
+      <member refid="classtesseract_1_1_language_model_1a4b5ee45528f0c3b57efbe2ad661681c2" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>AcceptablePath</name></member>
+      <member refid="classtesseract_1_1_language_model_1a37caf9b4870012ac2d0de8c18fc475a3" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>AddViterbiStateEntry</name></member>
+      <member refid="classtesseract_1_1_language_model_1aa0c0a2d75dc7ad34d415dfd1ce4c78db" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>beginning_active_dawgs_</name></member>
+      <member refid="classtesseract_1_1_language_model_1a999bff7a1dc40fc5d978483beabf38f0" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>beginning_constraints_</name></member>
+      <member refid="classtesseract_1_1_language_model_1af79088391ec80597f43e361c34bc7abb" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1a34d1954d39960554b771e7ded34532ea" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1ae832af4b6926d59739cfe844c0a9f662" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1a523d84ddc1fcb93525d385b9bc06b126" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1ad62708b20a5660fc70c98aaaa1407351" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>CertaintyScore</name></member>
+      <member refid="classtesseract_1_1_language_model_1abb338f9a344adee6b70d0d3a4b84324c" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>CleanUp</name></member>
+      <member refid="classtesseract_1_1_language_model_1a16f5fb35f49c158debf290e1d6df3669" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>ComputeAdjustedPathCost</name></member>
+      <member refid="classtesseract_1_1_language_model_1a2cbf75be87744e712363831e96b87858" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>ComputeAdjustment</name></member>
+      <member refid="classtesseract_1_1_language_model_1a574aad791ea26694751f0bf691d77315" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>ComputeAssociateStats</name></member>
+      <member refid="classtesseract_1_1_language_model_1a2f3114462424bbe1572095da37955b84" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>ComputeConsistencyAdjustedRatingsSum</name></member>
+      <member refid="classtesseract_1_1_language_model_1a8ad6c36003d1e5105e25d4f125ba44fc" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>ComputeConsistencyAdjustment</name></member>
+      <member refid="classtesseract_1_1_language_model_1a933e234efec8a32e922023ad8811b469" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>ComputeDenom</name></member>
+      <member refid="classtesseract_1_1_language_model_1a4825ba908be2ed7c21f007bc6f21d970" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>ComputeNgramCost</name></member>
+      <member refid="classtesseract_1_1_language_model_1ae820072705cf3b347e496145a6ba7b8a" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>ComputeOutlineLength</name></member>
+      <member refid="classtesseract_1_1_language_model_1abf249d9c9dd9bf8b03a760452382a852" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>ConstructWord</name></member>
+      <member refid="classtesseract_1_1_language_model_1a9440f91674a19de8d91894e0c99b1dd6" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>correct_segmentation_explored_</name></member>
+      <member refid="classtesseract_1_1_language_model_1ab0495d098cbeb02d2cbf8318f72db6e7" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>dawg_args_</name></member>
+      <member refid="classtesseract_1_1_language_model_1a5d438b4a1df7926373f81851ad8ee0de" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>DeleteState</name></member>
+      <member refid="classtesseract_1_1_language_model_1ab8d88b6237e566212b22b0eb6ba19a3b" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>dict_</name></member>
+      <member refid="classtesseract_1_1_language_model_1ac578b52439bdab92fbd3e6cb08ed9c92" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1aebdea59b1649e76d6079dcd02a454f95" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1ad9753b31778545d42097724870c713ff" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1a6c2e66a1b896096baf95061bf6cef893" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1a2e4d6bbf82028f282710a98502189107" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1a6ff94696f78d78acab988b9149629164" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1add3ac65fe7b3e9006f9938d4bbb46088" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1aa5aa12bdafcf91cd0897c3bf073967b0" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1a1841084427161525ed7df507403a1a57" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1aadcf4d5562ca24f04f47e40dba700636" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1ac263117de92bb246ace4890dd5ac5d12" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1ad06d3a7aefcaa7f241395af9d4b53d65" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1a01294a13200b648e2f76f124561da35e" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>empty_dawg_info_vec_</name></member>
+      <member refid="classtesseract_1_1_language_model_1af1bb185436ec41c1d438f4e412a2ff62" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>ExtractRawFeaturesFromPath</name></member>
+      <member refid="classtesseract_1_1_language_model_1aa62897048f719baec3647583efe3f3b5" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>FillConsistencyInfo</name></member>
+      <member refid="classtesseract_1_1_language_model_1a9e231341003ff9d57c7b42c9d4b8d50c" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>fixed_length_beginning_active_dawgs_</name></member>
+      <member refid="classtesseract_1_1_language_model_1a4d0169b5188cb51117d47f4db3f7c3cf" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>fixed_pitch_</name></member>
+      <member refid="classtesseract_1_1_language_model_1adda83343e5c77980f11a8e28b90ce778" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>fontinfo_table_</name></member>
+      <member refid="classtesseract_1_1_language_model_1afdbbaac8e9cfabc629ffa1c857f3521b" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>GenerateDawgInfo</name></member>
+      <member refid="classtesseract_1_1_language_model_1ad586fa622fb8f4f1121c6a47dc393e3f" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>GenerateNgramInfo</name></member>
+      <member refid="classtesseract_1_1_language_model_1a880383cfa71735ada29162492dcb1ed2" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>GenerateNgramModelPainPointsFromColumn</name></member>
+      <member refid="classtesseract_1_1_language_model_1a112225abbc5018ab9b7c15b1363dce1a" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>GeneratePainPoint</name></member>
+      <member refid="classtesseract_1_1_language_model_1a9ffdb916d868e062f46ed91801b10e48" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>GeneratePainPointsFromBestChoice</name></member>
+      <member refid="classtesseract_1_1_language_model_1ac679885b93a64ab878e97d77c5b043ce" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>GeneratePainPointsFromColumn</name></member>
+      <member refid="classtesseract_1_1_language_model_1ac54bd170cc3184d2dc5ffc3b78383443" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>GenerateProblematicPathPainPointsFromColumn</name></member>
+      <member refid="classtesseract_1_1_language_model_1ad466db4a445d5772735bf26d0094fe25" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>GenerateTopChoiceInfo</name></member>
+      <member refid="classtesseract_1_1_language_model_1a004b3ce3c3fecd02c55c0441dca660b5" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>GetPieceCertainty</name></member>
+      <member refid="classtesseract_1_1_language_model_1a1c3bfccbef3bc9019b7cc24ec7ab059a" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>GetTopChoiceLowerUpper</name></member>
+      <member refid="classtesseract_1_1_language_model_1ac89838ae8a119ee1dd68e8da286d3de2" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>GetWorstPieceCertainty</name></member>
+      <member refid="classtesseract_1_1_language_model_1ae34907eacffd1bf06ec639cc5cd8fa53" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>InitForWord</name></member>
+      <member refid="classtesseract_1_1_language_model_1aaf5e62c9b6c2097323835d0b384c69a0" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>INT_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1a86e5d01f51d3252ad658ba982c419a65" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>INT_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1ae0c975856f8c753611e2ff38c7ffffea" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>INT_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1a4120db3b6e79eebf7d2f878db502e425" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>INT_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1a6dc40b56e2b6bd3f8ea37c4ef781d43e" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>INT_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1aad0e28a6e9aa38c616b35baaaf1885db" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>INT_VAR_H</name></member>
+      <member refid="classtesseract_1_1_language_model_1ab06c525990667669c562559d4d7e50e4" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>IsFragment</name></member>
+      <member refid="classtesseract_1_1_language_model_1a6b2114d30b6f9d75a0c69ea2a08b873b" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>IsHan</name></member>
+      <member refid="classtesseract_1_1_language_model_1aa6d25aa709ba6ef4751d481f810e64f7" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>kAllChangedFlag</name></member>
+      <member refid="classtesseract_1_1_language_model_1ac514086c0819ead38b9eb304f9e401f3" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>kBestChoicePainPointPriorityAdjustment</name></member>
+      <member refid="classtesseract_1_1_language_model_1a2b7db0b0d16bdb023052658aeec5ba4d" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>kConsistentFlag</name></member>
+      <member refid="classtesseract_1_1_language_model_1a6a7d7189f9cbdebc127c70b018a36010" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>kCriticalPainPointPriorityAdjustment</name></member>
+      <member refid="classtesseract_1_1_language_model_1ae54fd4fa2b7a2d8d9a2e94ba737a6e1c" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>kDawgFlag</name></member>
+      <member refid="classtesseract_1_1_language_model_1a12daeb85f9376498fb478497ef501dc4" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>kDefaultPainPointPriorityAdjustment</name></member>
+      <member refid="classtesseract_1_1_language_model_1a21861bc8d1d02cf8ea67f2b64136459e" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>kInitialPainPointPriorityAdjustment</name></member>
+      <member refid="classtesseract_1_1_language_model_1a9eb9553ebf01e05ba3b07d2aacc083c5" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>kJustClassifiedFlag</name></member>
+      <member refid="classtesseract_1_1_language_model_1a2b5a3fcb550fc71a4f969f1a25d8dc8c" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>kLooseMaxCharWhRatio</name></member>
+      <member refid="classtesseract_1_1_language_model_1a632d464aad707355a3f8f8964ca8a4a9" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>kLowerCaseFlag</name></member>
+      <member refid="classtesseract_1_1_language_model_1a94f3c78f8a231538513e4a47387072fc" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>kMaxAvgNgramCost</name></member>
+      <member refid="classtesseract_1_1_language_model_1aded535788a84e534bc8511f2dc1a2b44" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>kMinFixedLengthDawgLength</name></member>
+      <member refid="classtesseract_1_1_language_model_1aedbb1c14c827624692f38d407cec89e1" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>kNgramFlag</name></member>
+      <member refid="classtesseract_1_1_language_model_1a2ceab7e561b052612fbaefab123cdb37" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>kSmallestRatingFlag</name></member>
+      <member refid="classtesseract_1_1_language_model_1ac41f6462a9bf12d7183db9e90a3099a4" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>kUpperCaseFlag</name></member>
+      <member refid="classtesseract_1_1_language_model_1af68acd65ef84e197eef48131bfc6e9e1" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>LanguageModel</name></member>
+      <member refid="classtesseract_1_1_language_model_1a7dfeeea5f65081a408757d18115a466c" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>max_char_wh_ratio_</name></member>
+      <member refid="classtesseract_1_1_language_model_1a218fc3518d9057bb876a182328837caa" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>max_penalty_adjust_</name></member>
+      <member refid="classtesseract_1_1_language_model_1abe9fdc3e12da7a4158dbfeb4d0c02b11" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>NonAlphaOrDigitMiddle</name></member>
+      <member refid="classtesseract_1_1_language_model_1a1eeb6e0ec00c1b3bd5824423da13c408" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>prev_word_str_</name></member>
+      <member refid="classtesseract_1_1_language_model_1a52a5540ea4de4f4b830dbcbb220d6bff" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>prev_word_unichar_step_len_</name></member>
+      <member refid="classtesseract_1_1_language_model_1a55b8b1ce014eaa9df1734a1cca9d6b5f" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>PrintViterbiStateEntry</name></member>
+      <member refid="classtesseract_1_1_language_model_1abd6f8374433282f19ed9f16a814747a2" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>ProblematicPath</name></member>
+      <member refid="classtesseract_1_1_language_model_1a94e330401f968c32c4796deaa8c4eb2d" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>PrunablePath</name></member>
+      <member refid="classtesseract_1_1_language_model_1a97f70b05e97cec59b6f24cbd6870d4e7" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>rating_cert_scale_</name></member>
+      <member refid="classtesseract_1_1_language_model_1a83d19454ed46250da17a5bef2b5daef4" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>UpdateBestChoice</name></member>
+      <member refid="classtesseract_1_1_language_model_1a97c4ba24b11a813605d90355ada07f58" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>UpdateCoveredByFixedLengthDawgs</name></member>
+      <member refid="classtesseract_1_1_language_model_1aed42c03dd8277f48a39ce957ade1af29" prot="protected" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>updated_flags_</name></member>
+      <member refid="classtesseract_1_1_language_model_1a6e71e759889a7f6b33088a273208fbf9" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>UpdateState</name></member>
+      <member refid="classtesseract_1_1_language_model_1a99f684d6e3d47fadd09dc2e92e194c7f" prot="public" virt="non-virtual"><scope>tesseract::LanguageModel</scope><name>~LanguageModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

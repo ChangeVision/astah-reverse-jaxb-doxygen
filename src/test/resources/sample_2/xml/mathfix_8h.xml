@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="mathfix_8h" kind="file">
+    <compoundname>mathfix.h</compoundname>
+    <includes local="no">math.h</includes>
+    <includes local="no">float.h</includes>
+    <incdepgraph>
+      <node id="42313">
+        <label>float.h</label>
+      </node>
+      <node id="42311">
+        <label>vs2008/port/mathfix.h</label>
+        <link refid="mathfix.h"/>
+        <childnode refid="42312" relation="include">
+        </childnode>
+        <childnode refid="42313" relation="include">
+        </childnode>
+      </node>
+      <node id="42312">
+        <label>math.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="mathfix_8h_1aab021ef273d807b6c9e11946cf0a3c1c" prot="public" static="no">
+        <name>VS2008_INCLUDE_MATHFIXT_H_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/vs2008/port/mathfix.h" line="22" column="9" bodyfile="/Users/makoto/Desktop/trunk/vs2008/port/mathfix.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mathfix_8h_1a2e1baae9134e580910322362dc23290e" prot="public" static="no">
+        <name>isnan</name>
+        <param><defname>x</defname></param>
+        <initializer>_isnan(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/vs2008/port/mathfix.h" line="30" column="9" bodyfile="/Users/makoto/Desktop/trunk/vs2008/port/mathfix.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mathfix_8h_1a2a266c767456556e5c0da234b602b18b" prot="public" static="no">
+        <name>isinf</name>
+        <param><defname>x</defname></param>
+        <initializer>(!_finite(x))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/vs2008/port/mathfix.h" line="31" column="9" bodyfile="/Users/makoto/Desktop/trunk/vs2008/port/mathfix.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="mathfix_8h_1ac705d35734004d67c12286b1ab39f420" prot="public" static="no">
+        <name>fmax</name>
+        <initializer>max</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/vs2008/port/mathfix.h" line="32" column="9" bodyfile="/Users/makoto/Desktop/trunk/vs2008/port/mathfix.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="mathfix_8h_1ab07a4da26d604273a929cc442fadcedc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float roundf</definition>
+        <argsstring>(float num)</argsstring>
+        <name>roundf</name>
+        <param>
+          <type>float</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/vs2008/port/mathfix.h" line="33" column="1" bodyfile="/Users/makoto/Desktop/trunk/vs2008/port/mathfix.h" bodystart="33" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mathfix.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Description:<sp/>Implement<sp/>missing<sp/>math<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/><sp/><sp/><sp/><sp/><sp/>zdenop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created:<sp/><sp/><sp/><sp/><sp/>Fri<sp/>Feb<sp/>03<sp/>06:45:06<sp/>CET<sp/>2012</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(C)<sp/>Copyright<sp/>2012,<sp/>Google<sp/>Inc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VS2008_INCLUDE_MATHFIX_H_</highlight></codeline>
+<codeline lineno="22" refid="mathfix_8h_1aab021ef273d807b6c9e11946cf0a3c1c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>VS2008_INCLUDE_MATHFIXT_H_</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_MSC_VER</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#error<sp/>&quot;Use<sp/>this<sp/>header<sp/>only<sp/>with<sp/>Microsoft<sp/>Visual<sp/>C++<sp/>compilers!&quot;</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;float.h&gt;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>_isnan(),<sp/>_finite()<sp/>on<sp/>VC++</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="mathfix_8h_1a2e1baae9134e580910322362dc23290e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>isnan(x)<sp/>_isnan(x)</highlight></codeline>
+<codeline lineno="31" refid="mathfix_8h_1a2a266c767456556e5c0da234b602b18b" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>isinf(x)<sp/>(!_finite(x))</highlight></codeline>
+<codeline lineno="32" refid="mathfix_8h_1ac705d35734004d67c12286b1ab39f420" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>fmax<sp/>max<sp/>//VC++<sp/>does<sp/>not<sp/>implement<sp/>all<sp/>the<sp/>provisions<sp/>of<sp/>C99<sp/>Standard</highlight></codeline>
+<codeline lineno="33" refid="mathfix_8h_1ab07a4da26d604273a929cc442fadcedc" refkind="member"><highlight class="preprocessor"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="mathfix_8h_1ab07a4da26d604273a929cc442fadcedc" kindref="member">roundf</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>num)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>num<sp/>&gt;<sp/>0<sp/>?<sp/>floorf(num<sp/>+<sp/>0.5<ref refid="imgscale_8cpp_1a469169df397b589e709dc744f1346831" kindref="member">f</ref>)<sp/>:<sp/>ceilf(num<sp/>-<sp/>0.5<ref refid="imgscale_8cpp_1a469169df397b589e709dc744f1346831" kindref="member">f</ref>);<sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>VS2008_INCLUDE_MATHFIXT_H_</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/vs2008/port/mathfix.h"/>
+  </compounddef>
+</doxygen>

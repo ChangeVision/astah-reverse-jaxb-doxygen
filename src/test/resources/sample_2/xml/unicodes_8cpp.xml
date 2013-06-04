@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="unicodes_8cpp" kind="file">
+    <compoundname>unicodes.cpp</compoundname>
+    <includes refid="unicodes_8h" local="yes">unicodes.h</includes>
+    <includes refid="host_8h" local="yes">host.h</includes>
+    <incdepgraph>
+      <node id="22781">
+        <label>unicodes.h</label>
+        <link refid="unicodes_8h"/>
+      </node>
+      <node id="22780">
+        <label>ccutil/unicodes.cpp</label>
+        <link refid="unicodes.cpp"/>
+        <childnode refid="22781" relation="include">
+        </childnode>
+        <childnode refid="22782" relation="include">
+        </childnode>
+      </node>
+      <node id="22783">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="22784" relation="include">
+        </childnode>
+      </node>
+      <node id="22784">
+        <label>limits.h</label>
+      </node>
+      <node id="22782">
+        <label>host.h</label>
+        <link refid="host_8h"/>
+        <childnode refid="22783" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacetesseract">tesseract</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unicodes.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Description:<sp/>Unicode<sp/>related<sp/>machinery</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Author:<sp/><sp/><sp/><sp/><sp/><sp/>David<sp/>Eger</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Created:<sp/><sp/><sp/><sp/><sp/>Wed<sp/>Jun<sp/>15<sp/>16:37:50<sp/>PST<sp/>2011</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>(C)<sp/>Copyright<sp/>2011,<sp/>Google,<sp/>Inc.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>**<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>**<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>**<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>**<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>**<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>**<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>**<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>**<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>**<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="unicodes_8h" kindref="compound">unicodes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="host_8h" kindref="compound">host.h</ref>&quot;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetesseract-c__api-demo_1afed58feacb84df2de88bdd613cfdba6d" kindref="member">tesseract</ref><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="namespacetesseract_1a8760587e4a172eabdec26d5820dfa8b9" kindref="member">kUTF8LineSeparator</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\u2028&quot;</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>&quot;\xe2\x80\xa8&quot;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="namespacetesseract_1aedb372736a48e98b9ea9075cdc65cc12" kindref="member">kUTF8ParagraphSeparator</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\u2029&quot;</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>&quot;\xe2\x80\xa9&quot;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="namespacetesseract_1aa393f17e77d059739f005ada9a805c69" kindref="member">kLRM</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\u200E&quot;</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>Left-to-Right<sp/>Mark</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="namespacetesseract_1a8aa0e462f167f686ef463b5a5b266f04" kindref="member">kRLM</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\u200F&quot;</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>Right-to-Left<sp/>Mark</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="namespacetesseract_1a20de3eb1fcacc29addf5c6903e743cfe" kindref="member">kRLE</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\u202A&quot;</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>Right-to-Left<sp/>Embedding</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="namespacetesseract_1a94431ee0c0b62532a711669a890a6d9c" kindref="member">kPDF</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\u202C&quot;</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>Pop<sp/>Directional<sp/>Formatting</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="namespacetesseract_1aa1505ec49e73744b09f67e0a8390a103" kindref="member">kHyphenLikeUTF8</ref>[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;-&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ASCII<sp/>hyphen-minus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;\u05BE&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="comment">//<sp/>word<sp/>hyphen<sp/>in<sp/>hybrew</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;\u2010&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="comment">//<sp/>hyphen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;\u2011&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="comment">//<sp/>non-breaking<sp/>hyphen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;\u2012&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>hyphen<sp/>the<sp/>same<sp/>width<sp/>as<sp/>digits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;\u2013&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="comment">//<sp/>en<sp/>dash</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;\u2014&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="comment">//<sp/>em<sp/>dash</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;\u2015&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="comment">//<sp/>horizontal<sp/>bar</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;\u2212&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="comment">//<sp/>arithmetic<sp/>minus<sp/>sign</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;\uFE58&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="comment">//<sp/>small<sp/>em<sp/>dash</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;\uFE63&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="comment">//<sp/>small<sp/>hyphen-minus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;\uFF0D&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="comment">//<sp/>fullwidth<sp/>hyphen-minus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><ref refid="host_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>end<sp/>of<sp/>our<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="namespacetesseract_1a0e977b84de723eee3cf551283b1d1ed1" kindref="member">kApostropheLikeUTF8</ref>[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;&apos;&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ASCII<sp/>apostrophe</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;`&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ASCII<sp/>backtick</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;\u2018&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="comment">//<sp/>opening<sp/>single<sp/>quote</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;\u2019&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="comment">//<sp/>closing<sp/>single<sp/>quote</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&quot;\u2032&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="comment">//<sp/>mathematical<sp/>prime<sp/>mark</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><ref refid="host_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>end<sp/>of<sp/>our<sp/>list.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/ccutil/unicodes.cpp"/>
+  </compounddef>
+</doxygen>

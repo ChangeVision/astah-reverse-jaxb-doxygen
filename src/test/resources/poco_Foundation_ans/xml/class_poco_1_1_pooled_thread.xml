@@ -1,0 +1,349 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="class_poco_1_1_pooled_thread" kind="class" prot="public">
+    <compoundname>Poco::PooledThread</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Runnable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_poco_1_1_pooled_thread_1adc023e765466181c1c842e09b032dfb7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>volatile bool Poco::PooledThread::_idle</definition>
+        <argsstring></argsstring>
+        <name>_idle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" line="70" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_poco_1_1_pooled_thread_1a46bc1e62b63282543b906a90b7400482" prot="private" static="no" mutable="no">
+        <type>std::time_t</type>
+        <definition>volatile std::time_t Poco::PooledThread::_idleTime</definition>
+        <argsstring></argsstring>
+        <name>_idleTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" line="71" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_poco_1_1_pooled_thread_1a8f81f5116bf26a117c7168f454f7465c" prot="private" static="no" mutable="no">
+        <type>Runnable *</type>
+        <definition>Runnable* Poco::PooledThread::_pTarget</definition>
+        <argsstring></argsstring>
+        <name>_pTarget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" line="72" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_poco_1_1_pooled_thread_1a9af16331f927d70d4627234a83c0ef38" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Poco::PooledThread::_name</definition>
+        <argsstring></argsstring>
+        <name>_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" line="73" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_poco_1_1_pooled_thread_1a570ed886ebb977b55be37d45e55e6106" prot="private" static="no" mutable="no">
+        <type>Thread</type>
+        <definition>Thread Poco::PooledThread::_thread</definition>
+        <argsstring></argsstring>
+        <name>_thread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" line="74" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_poco_1_1_pooled_thread_1a70f92dc3b6546988908489bbfadd1d6e" prot="private" static="no" mutable="no">
+        <type>Event</type>
+        <definition>Event Poco::PooledThread::_targetReady</definition>
+        <argsstring></argsstring>
+        <name>_targetReady</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" line="75" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_poco_1_1_pooled_thread_1ad3ad6b95cbbe0407ffebaea8b6cdb093" prot="private" static="no" mutable="no">
+        <type>Event</type>
+        <definition>Event Poco::PooledThread::_targetCompleted</definition>
+        <argsstring></argsstring>
+        <name>_targetCompleted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" line="76" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_poco_1_1_pooled_thread_1a6f473ac005d9bf1591b13e59f2608118" prot="private" static="no" mutable="no">
+        <type>Event</type>
+        <definition>Event Poco::PooledThread::_started</definition>
+        <argsstring></argsstring>
+        <name>_started</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" line="77" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_poco_1_1_pooled_thread_1a2e69c51594b910e473328adc72a636c6" prot="private" static="no" mutable="no">
+        <type>FastMutex</type>
+        <definition>FastMutex Poco::PooledThread::_mutex</definition>
+        <argsstring></argsstring>
+        <name>_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" line="78" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_poco_1_1_pooled_thread_1a20da33d3e25e622ce86ffd7f1459481f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Poco::PooledThread::PooledThread</definition>
+        <argsstring>(const std::string &amp;name, int stackSize=0)</argsstring>
+        <name>PooledThread</name>
+        <param>
+          <type><ref refid="zconf_8h_1a2c212835823e3c54a8ab6d95c652660e" kindref="member">const</ref> std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>stackSize</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" line="56" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" bodystart="82" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_pooled_thread_1a90e684150673083a1da2aea3ad0e011a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Poco::PooledThread::~PooledThread</definition>
+        <argsstring>()</argsstring>
+        <name>~PooledThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" line="57" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" bodystart="100" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_pooled_thread_1a4b67c02faed01d2e0dfabf59eeca37d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Poco::PooledThread::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" line="59" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" bodystart="105" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_pooled_thread_1ab4b0c42b59eaaef165e92d342761e1c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Poco::PooledThread::start</definition>
+        <argsstring>(Thread::Priority priority, Runnable &amp;target)</argsstring>
+        <name>start</name>
+        <param>
+          <type>Thread::Priority</type>
+          <declname>priority</declname>
+        </param>
+        <param>
+          <type>Runnable &amp;</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" line="60" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" bodystart="112" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_pooled_thread_1a04cab0e767aeccb487a50c11b4081e3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Poco::PooledThread::start</definition>
+        <argsstring>(Thread::Priority priority, Runnable &amp;target, const std::string &amp;name)</argsstring>
+        <name>start</name>
+        <param>
+          <type>Thread::Priority</type>
+          <declname>priority</declname>
+        </param>
+        <param>
+          <type>Runnable &amp;</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type><ref refid="zconf_8h_1a2c212835823e3c54a8ab6d95c652660e" kindref="member">const</ref> std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" line="61" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" bodystart="124" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_pooled_thread_1a459681bf37ecfa064288d98eac41d8fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Poco::PooledThread::idle</definition>
+        <argsstring>()</argsstring>
+        <name>idle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" line="62" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" bodystart="149" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_pooled_thread_1a56f0022635616c14e1a21591b27201c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Poco::PooledThread::idleTime</definition>
+        <argsstring>()</argsstring>
+        <name>idleTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" line="63" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" bodystart="155" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_pooled_thread_1a0f6801b2c157aea66a9ab516a689fcf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Poco::PooledThread::join</definition>
+        <argsstring>()</argsstring>
+        <name>join</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" line="64" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" bodystart="167" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_pooled_thread_1a42ec91d135e196a0096068f5df4908a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Poco::PooledThread::activate</definition>
+        <argsstring>()</argsstring>
+        <name>activate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" line="65" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" bodystart="177" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_pooled_thread_1affed9bf2038a846f5b8a4eb08a2210da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Poco::PooledThread::release</definition>
+        <argsstring>()</argsstring>
+        <name>release</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" line="66" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" bodystart="187" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_pooled_thread_1a7766b20e1ade8d6fa8cfcfacad833411" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Poco::PooledThread::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" line="67" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" bodystart="203" bodyend="248"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="62">
+        <label>Poco::PooledThread</label>
+        <link refid="class_poco_1_1_pooled_thread"/>
+        <childnode refid="63" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>Runnable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="64">
+        <label>Poco::PooledThread</label>
+        <link refid="class_poco_1_1_pooled_thread"/>
+        <childnode refid="65" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>Runnable</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" line="54" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/ThreadPool.cpp" bodystart="53" bodyend="79"/>
+    <listofallmembers>
+      <member refid="class_poco_1_1_pooled_thread_1adc023e765466181c1c842e09b032dfb7" prot="private" virt="non-virtual"><scope>Poco::PooledThread</scope><name>_idle</name></member>
+      <member refid="class_poco_1_1_pooled_thread_1a46bc1e62b63282543b906a90b7400482" prot="private" virt="non-virtual"><scope>Poco::PooledThread</scope><name>_idleTime</name></member>
+      <member refid="class_poco_1_1_pooled_thread_1a2e69c51594b910e473328adc72a636c6" prot="private" virt="non-virtual"><scope>Poco::PooledThread</scope><name>_mutex</name></member>
+      <member refid="class_poco_1_1_pooled_thread_1a9af16331f927d70d4627234a83c0ef38" prot="private" virt="non-virtual"><scope>Poco::PooledThread</scope><name>_name</name></member>
+      <member refid="class_poco_1_1_pooled_thread_1a8f81f5116bf26a117c7168f454f7465c" prot="private" virt="non-virtual"><scope>Poco::PooledThread</scope><name>_pTarget</name></member>
+      <member refid="class_poco_1_1_pooled_thread_1a6f473ac005d9bf1591b13e59f2608118" prot="private" virt="non-virtual"><scope>Poco::PooledThread</scope><name>_started</name></member>
+      <member refid="class_poco_1_1_pooled_thread_1ad3ad6b95cbbe0407ffebaea8b6cdb093" prot="private" virt="non-virtual"><scope>Poco::PooledThread</scope><name>_targetCompleted</name></member>
+      <member refid="class_poco_1_1_pooled_thread_1a70f92dc3b6546988908489bbfadd1d6e" prot="private" virt="non-virtual"><scope>Poco::PooledThread</scope><name>_targetReady</name></member>
+      <member refid="class_poco_1_1_pooled_thread_1a570ed886ebb977b55be37d45e55e6106" prot="private" virt="non-virtual"><scope>Poco::PooledThread</scope><name>_thread</name></member>
+      <member refid="class_poco_1_1_pooled_thread_1a42ec91d135e196a0096068f5df4908a4" prot="public" virt="non-virtual"><scope>Poco::PooledThread</scope><name>activate</name></member>
+      <member refid="class_poco_1_1_pooled_thread_1a459681bf37ecfa064288d98eac41d8fe" prot="public" virt="non-virtual"><scope>Poco::PooledThread</scope><name>idle</name></member>
+      <member refid="class_poco_1_1_pooled_thread_1a56f0022635616c14e1a21591b27201c1" prot="public" virt="non-virtual"><scope>Poco::PooledThread</scope><name>idleTime</name></member>
+      <member refid="class_poco_1_1_pooled_thread_1a0f6801b2c157aea66a9ab516a689fcf5" prot="public" virt="non-virtual"><scope>Poco::PooledThread</scope><name>join</name></member>
+      <member refid="class_poco_1_1_pooled_thread_1a20da33d3e25e622ce86ffd7f1459481f" prot="public" virt="non-virtual"><scope>Poco::PooledThread</scope><name>PooledThread</name></member>
+      <member refid="class_poco_1_1_pooled_thread_1affed9bf2038a846f5b8a4eb08a2210da" prot="public" virt="non-virtual"><scope>Poco::PooledThread</scope><name>release</name></member>
+      <member refid="class_poco_1_1_pooled_thread_1a7766b20e1ade8d6fa8cfcfacad833411" prot="public" virt="non-virtual"><scope>Poco::PooledThread</scope><name>run</name></member>
+      <member refid="class_poco_1_1_pooled_thread_1a4b67c02faed01d2e0dfabf59eeca37d0" prot="public" virt="non-virtual"><scope>Poco::PooledThread</scope><name>start</name></member>
+      <member refid="class_poco_1_1_pooled_thread_1ab4b0c42b59eaaef165e92d342761e1c4" prot="public" virt="non-virtual"><scope>Poco::PooledThread</scope><name>start</name></member>
+      <member refid="class_poco_1_1_pooled_thread_1a04cab0e767aeccb487a50c11b4081e3f" prot="public" virt="non-virtual"><scope>Poco::PooledThread</scope><name>start</name></member>
+      <member refid="class_poco_1_1_pooled_thread_1a90e684150673083a1da2aea3ad0e011a" prot="public" virt="non-virtual"><scope>Poco::PooledThread</scope><name>~PooledThread</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

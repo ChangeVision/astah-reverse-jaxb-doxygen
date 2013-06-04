@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="interface_move_command" kind="class" prot="public">
+    <compoundname>MoveCommand</compoundname>
+    <basecompoundref refid="interface_modify_command" prot="public" virt="non-virtual">ModifyCommand</basecompoundref>
+    <includes refid="_move_command_8h" local="no">MoveCommand.h</includes>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_move_command_1a9fe095bf2ff12336affbe5cd1ce82e5d" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="assign">
+        <type>CGPoint</type>
+        <definition>CGPoint MoveCommand::from</definition>
+        <argsstring></argsstring>
+        <name>from</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/MoveCommand.h" line="13" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/MoveCommand.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_move_command_1a699117d940224feddbec913bc61941a2" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="assign">
+        <type>CGPoint</type>
+        <definition>CGPoint MoveCommand::to</definition>
+        <argsstring></argsstring>
+        <name>to</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/MoveCommand.h" line="14" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/MoveCommand.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_move_command_1a846a4ee9e43e7f7d3ec1cfd6ec824827" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MoveCommand::move:from:to:</definition>
+        <argsstring>(ViewElement *ve,[from] CGPoint fromPoint,[to] CGPoint toPoint)</argsstring>
+        <name>move:from:to:</name>
+        <param>
+          <type><ref refid="interface_view_element" kindref="compound">ViewElement</ref> *</type>
+          <declname>ve</declname>
+        </param>
+        <param>
+          <attributes>[from]</attributes>
+          <type>CGPoint</type>
+          <declname>fromPoint</declname>
+        </param>
+        <param>
+          <attributes>[to]</attributes>
+          <type>CGPoint</type>
+          <declname>toPoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/MoveCommand.h" line="18" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/MoveCommand.m" bodystart="22" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="584">
+        <label>Command</label>
+        <link refid="interface_command"/>
+        <childnode refid="585" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="582">
+        <label>MoveCommand</label>
+        <link refid="interface_move_command"/>
+        <childnode refid="583" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="583">
+        <label>ModifyCommand</label>
+        <link refid="interface_modify_command"/>
+        <childnode refid="584" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="585">
+        <label>NSObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="588">
+        <label>Command</label>
+        <link refid="interface_command"/>
+        <childnode refid="589" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="586">
+        <label>MoveCommand</label>
+        <link refid="interface_move_command"/>
+        <childnode refid="587" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="587">
+        <label>ModifyCommand</label>
+        <link refid="interface_modify_command"/>
+        <childnode refid="588" relation="public-inheritance">
+        </childnode>
+        <childnode refid="590" relation="usage">
+          <edgelabel>viewElement</edgelabel>
+        </childnode>
+      </node>
+      <node id="591">
+        <label>UIView</label>
+      </node>
+      <node id="589">
+        <label>NSObject</label>
+      </node>
+      <node id="590">
+        <label>ViewElement</label>
+        <link refid="interface_view_element"/>
+        <childnode refid="591" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/MoveCommand.h" line="12" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/MoveCommand.h" bodystart="12" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_command_1abc8574913684044b0f1a9f810b4e969b" prot="public" virt="virtual"><scope>MoveCommand</scope><name>execute</name></member>
+      <member refid="interface_move_command_1a9fe095bf2ff12336affbe5cd1ce82e5d" prot="protected" virt="non-virtual"><scope>MoveCommand</scope><name>from</name></member>
+      <member refid="interface_move_command_1a9fe095bf2ff12336affbe5cd1ce82e5d" prot="public" virt="non-virtual"><scope>MoveCommand</scope><name>from</name></member>
+      <member refid="interface_move_command_1a846a4ee9e43e7f7d3ec1cfd6ec824827" prot="public" virt="virtual"><scope>MoveCommand</scope><name>move:from:to:</name></member>
+      <member refid="interface_command_1af1632585781ac0d7bb90df5c195c25bd" prot="protected" virt="non-virtual"><scope>MoveCommand</scope><name>result</name></member>
+      <member refid="interface_command_1af1632585781ac0d7bb90df5c195c25bd" prot="public" virt="non-virtual"><scope>MoveCommand</scope><name>result</name></member>
+      <member refid="interface_move_command_1a699117d940224feddbec913bc61941a2" prot="protected" virt="non-virtual"><scope>MoveCommand</scope><name>to</name></member>
+      <member refid="interface_move_command_1a699117d940224feddbec913bc61941a2" prot="public" virt="non-virtual"><scope>MoveCommand</scope><name>to</name></member>
+      <member refid="interface_modify_command_1af97d75e6751a231edb491ea1ec712aa1" prot="protected" virt="non-virtual"><scope>MoveCommand</scope><name>viewElement</name></member>
+      <member refid="interface_modify_command_1af97d75e6751a231edb491ea1ec712aa1" prot="public" virt="non-virtual"><scope>MoveCommand</scope><name>viewElement</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

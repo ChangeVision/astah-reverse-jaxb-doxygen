@@ -1,0 +1,623 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_shiro_rekha_splitter" kind="class" prot="public">
+    <compoundname>tesseract::ShiroRekhaSplitter</compoundname>
+    <includes refid="devanagari__processing_8h" local="no">devanagari_processing.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classtesseract_1_1_shiro_rekha_splitter_1ab44f3b6e26668478841a5b8c45332601" prot="public" static="no">
+        <name>SplitStrategy</name>
+        <enumvalue id="classtesseract_1_1_shiro_rekha_splitter_1ab44f3b6e26668478841a5b8c45332601a1ca815839c8e78def404b329ba79697a" prot="public">
+          <name>NO_SPLIT</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtesseract_1_1_shiro_rekha_splitter_1ab44f3b6e26668478841a5b8c45332601abb20813b04f412bb19593e228c343503" prot="public">
+          <name>MINIMAL_SPLIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtesseract_1_1_shiro_rekha_splitter_1ab44f3b6e26668478841a5b8c45332601a8835ad2cdb469808d2aa1d4c8546426c" prot="public">
+          <name>MAXIMAL_SPLIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="68" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="68" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_shiro_rekha_splitter_1ac973904ee08ed3d33aa15afc9dc2a903" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::ShiroRekhaSplitter::kUnspecifiedXheight</definition>
+        <argsstring></argsstring>
+        <name>kUnspecifiedXheight</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="103" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_shiro_rekha_splitter_1a5b8bf32495c50dfc23432ca8ba155cdd" prot="private" static="no" mutable="no">
+        <type>Pix *</type>
+        <definition>Pix* tesseract::ShiroRekhaSplitter::orig_pix_</definition>
+        <argsstring></argsstring>
+        <name>orig_pix_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="192" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_shiro_rekha_splitter_1aa56dde55ce86473a12d7f83e46e88f36" prot="private" static="no" mutable="no">
+        <type>Pix *</type>
+        <definition>Pix* tesseract::ShiroRekhaSplitter::splitted_image_</definition>
+        <argsstring></argsstring>
+        <name>splitted_image_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="193" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_shiro_rekha_splitter_1a579d2406e54165ae95956cbf5f13f7bd" prot="private" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_shiro_rekha_splitter_1ab44f3b6e26668478841a5b8c45332601" kindref="member">SplitStrategy</ref></type>
+        <definition>SplitStrategy tesseract::ShiroRekhaSplitter::pageseg_split_strategy_</definition>
+        <argsstring></argsstring>
+        <name>pageseg_split_strategy_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="195" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_shiro_rekha_splitter_1ad1bda974a61b412e0f8abb4523127869" prot="private" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_shiro_rekha_splitter_1ab44f3b6e26668478841a5b8c45332601" kindref="member">SplitStrategy</ref></type>
+        <definition>SplitStrategy tesseract::ShiroRekhaSplitter::ocr_split_strategy_</definition>
+        <argsstring></argsstring>
+        <name>ocr_split_strategy_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="196" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_shiro_rekha_splitter_1afcd14026731f84dc281baf5c839e89d2" prot="private" static="no" mutable="no">
+        <type>Pix *</type>
+        <definition>Pix* tesseract::ShiroRekhaSplitter::debug_image_</definition>
+        <argsstring></argsstring>
+        <name>debug_image_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="197" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_shiro_rekha_splitter_1aae1b75e2892a0108ec2e0a88f184602e" prot="private" static="no" mutable="no">
+        <type>BLOCK_LIST *</type>
+        <definition>BLOCK_LIST* tesseract::ShiroRekhaSplitter::segmentation_block_list_</definition>
+        <argsstring></argsstring>
+        <name>segmentation_block_list_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="199" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_shiro_rekha_splitter_1af8b8a3d3c783dc07f7e392bbd85ee3e8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::ShiroRekhaSplitter::global_xheight_</definition>
+        <argsstring></argsstring>
+        <name>global_xheight_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="200" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_shiro_rekha_splitter_1a8930adf258073d5a9c593ccd3a87df02" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool tesseract::ShiroRekhaSplitter::perform_close_</definition>
+        <argsstring></argsstring>
+        <name>perform_close_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="201" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1a09814382ca566884157cceab9076fff2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::ShiroRekhaSplitter::ShiroRekhaSplitter</definition>
+        <argsstring>()</argsstring>
+        <name>ShiroRekhaSplitter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="74" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.cpp" bodystart="37" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1a018fa239787df6051031ac4627e442cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>tesseract::ShiroRekhaSplitter::~ShiroRekhaSplitter</definition>
+        <argsstring>()</argsstring>
+        <name>~ShiroRekhaSplitter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="75" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.cpp" bodystart="48" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1a28e6f7d06927c5742be73589cb3eefcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::ShiroRekhaSplitter::Split</definition>
+        <argsstring>(bool split_for_pageseg)</argsstring>
+        <name>Split</name>
+        <param>
+          <type>bool</type>
+          <declname>split_for_pageseg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="81" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.cpp" bodystart="81" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1a8bfcc88be2d166b396f760d10ae29f18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ShiroRekhaSplitter::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="84" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.cpp" bodystart="52" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1a90146104b2c9a136fdd873036cb95230" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ShiroRekhaSplitter::RefreshSegmentationWithNewBlobs</definition>
+        <argsstring>(C_BLOB_LIST *new_blobs)</argsstring>
+        <name>RefreshSegmentationWithNewBlobs</name>
+        <param>
+          <type>C_BLOB_LIST *</type>
+          <declname>new_blobs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="89" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.cpp" bodystart="355" bodyend="398"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1a229080f42f90343d63344f6929aa5d92" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::ShiroRekhaSplitter::HasDifferentSplitStrategies</definition>
+        <argsstring>() const </argsstring>
+        <name>HasDifferentSplitStrategies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="92" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="92" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1aacd88c63b5a9baa3895a58f33d2a7acd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ShiroRekhaSplitter::set_segmentation_block_list</definition>
+        <argsstring>(BLOCK_LIST *block_list)</argsstring>
+        <name>set_segmentation_block_list</name>
+        <param>
+          <type>BLOCK_LIST *</type>
+          <declname>block_list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="99" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="99" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1a4a033b1bcb655e0d91c725ed01724363" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ShiroRekhaSplitter::set_global_xheight</definition>
+        <argsstring>(int xheight)</argsstring>
+        <name>set_global_xheight</name>
+        <param>
+          <type>int</type>
+          <declname>xheight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="105" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="105" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1a831a7f055639bd4f53e9f08c7e08668c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ShiroRekhaSplitter::set_perform_close</definition>
+        <argsstring>(bool perform)</argsstring>
+        <name>set_perform_close</name>
+        <param>
+          <type>bool</type>
+          <declname>perform</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="109" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="109" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1a7a6b17e8a21495616114a4e66b6887d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Pix *</type>
+        <definition>Pix* tesseract::ShiroRekhaSplitter::splitted_image</definition>
+        <argsstring>()</argsstring>
+        <name>splitted_image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="116" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="116" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1aef511d3502b7ea23cde356ef6454f064" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ShiroRekhaSplitter::set_orig_pix</definition>
+        <argsstring>(Pix *pix)</argsstring>
+        <name>set_orig_pix</name>
+        <param>
+          <type>Pix *</type>
+          <declname>pix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="121" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.cpp" bodystart="69" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1ad4eb1fbd0c2d2cdc9a9645a5c9a8a873" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Pix *</type>
+        <definition>Pix* tesseract::ShiroRekhaSplitter::orig_pix</definition>
+        <argsstring>()</argsstring>
+        <name>orig_pix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="125" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="125" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1aacb26796a046bf732715e0345e877d5f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtesseract_1_1_shiro_rekha_splitter_1ab44f3b6e26668478841a5b8c45332601" kindref="member">SplitStrategy</ref></type>
+        <definition>SplitStrategy tesseract::ShiroRekhaSplitter::ocr_split_strategy</definition>
+        <argsstring>() const </argsstring>
+        <name>ocr_split_strategy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="129" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="129" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1af44bb8fab378ac431093b9f4f130cdd0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ShiroRekhaSplitter::set_ocr_split_strategy</definition>
+        <argsstring>(SplitStrategy strategy)</argsstring>
+        <name>set_ocr_split_strategy</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_shiro_rekha_splitter_1ab44f3b6e26668478841a5b8c45332601" kindref="member">SplitStrategy</ref></type>
+          <declname>strategy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="133" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="133" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1aa7bfde52e79bf593dd45e5caca76338e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtesseract_1_1_shiro_rekha_splitter_1ab44f3b6e26668478841a5b8c45332601" kindref="member">SplitStrategy</ref></type>
+        <definition>SplitStrategy tesseract::ShiroRekhaSplitter::pageseg_split_strategy</definition>
+        <argsstring>() const </argsstring>
+        <name>pageseg_split_strategy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="137" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="137" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1a0642f05ce987bf3ee444d48c643a5483" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ShiroRekhaSplitter::set_pageseg_split_strategy</definition>
+        <argsstring>(SplitStrategy strategy)</argsstring>
+        <name>set_pageseg_split_strategy</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_shiro_rekha_splitter_1ab44f3b6e26668478841a5b8c45332601" kindref="member">SplitStrategy</ref></type>
+          <declname>strategy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="141" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="141" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1a7674add82837279c8e74a0522b6837fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>BLOCK_LIST *</type>
+        <definition>BLOCK_LIST* tesseract::ShiroRekhaSplitter::segmentation_block_list</definition>
+        <argsstring>()</argsstring>
+        <name>segmentation_block_list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="145" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="145" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1ac60692d8c95f1ed1505adbd2554ece53" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ShiroRekhaSplitter::DumpDebugImage</definition>
+        <argsstring>(const char *filename) const </argsstring>
+        <name>DumpDebugImage</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="150" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.cpp" bodystart="64" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1a99f3f8f96a8b7bfe08ce2b19c8052a6c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::ShiroRekhaSplitter::GetModeHeight</definition>
+        <argsstring>(Pix *pix)</argsstring>
+        <name>GetModeHeight</name>
+        <param>
+          <type>Pix *</type>
+          <declname>pix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="155" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.cpp" bodystart="409" bodyend="422"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1a818ae2946b69fc24d35732a06822f4ee" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ShiroRekhaSplitter::PerformClose</definition>
+        <argsstring>(Pix *pix, int xheight_estimate)</argsstring>
+        <name>PerformClose</name>
+        <param>
+          <type>Pix *</type>
+          <declname>pix</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>xheight_estimate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="160" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.cpp" bodystart="170" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1ab42a9db4bb3275aef5f79910e0f93988" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ShiroRekhaSplitter::GetShiroRekhaYExtents</definition>
+        <argsstring>(Pix *word_pix, int *shirorekha_top, int *shirorekha_bottom, int *shirorekha_ylevel)</argsstring>
+        <name>GetShiroRekhaYExtents</name>
+        <param>
+          <type>Pix *</type>
+          <declname>word_pix</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>shirorekha_top</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>shirorekha_bottom</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>shirorekha_ylevel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="187" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.cpp" bodystart="426" bodyend="450"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1a563864132bb395ab9eebb32a97938538" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::ShiroRekhaSplitter::GetXheightForCC</definition>
+        <argsstring>(Box *cc_bbox)</argsstring>
+        <name>GetXheightForCC</name>
+        <param>
+          <type>Box *</type>
+          <declname>cc_bbox</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="165" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.cpp" bodystart="176" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1a84f18626517a640d53a04a2e07cfe35b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ShiroRekhaSplitter::SplitWordShiroRekha</definition>
+        <argsstring>(SplitStrategy split_strategy, Pix *pix, int xheight, int word_left, int word_top, Boxa *regions_to_clear)</argsstring>
+        <name>SplitWordShiroRekha</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_shiro_rekha_splitter_1ab44f3b6e26668478841a5b8c45332601" kindref="member">SplitStrategy</ref></type>
+          <declname>split_strategy</declname>
+        </param>
+        <param>
+          <type>Pix *</type>
+          <declname>pix</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>xheight</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>word_left</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>word_top</declname>
+        </param>
+        <param>
+          <type>Boxa *</type>
+          <declname>regions_to_clear</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="174" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.cpp" bodystart="234" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_shiro_rekha_splitter_1a67b27e2d8520635f180df48b6eebbfbf" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Box *</type>
+        <definition>Box * tesseract::ShiroRekhaSplitter::GetBoxForTBOX</definition>
+        <argsstring>(const TBOX &amp;tbox) const </argsstring>
+        <name>GetBoxForTBOX</name>
+        <param>
+          <type>const <ref refid="class_t_b_o_x" kindref="compound">TBOX</ref> &amp;</type>
+          <declname>tbox</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="183" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.cpp" bodystart="402" bodyend="405"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" line="66" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/devanagari_processing.h" bodystart="66" bodyend="203"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1a8bfcc88be2d166b396f760d10ae29f18" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>Clear</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1afcd14026731f84dc281baf5c839e89d2" prot="private" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>debug_image_</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1ac60692d8c95f1ed1505adbd2554ece53" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>DumpDebugImage</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1a67b27e2d8520635f180df48b6eebbfbf" prot="private" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>GetBoxForTBOX</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1a99f3f8f96a8b7bfe08ce2b19c8052a6c" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>GetModeHeight</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1ab42a9db4bb3275aef5f79910e0f93988" prot="private" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>GetShiroRekhaYExtents</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1a563864132bb395ab9eebb32a97938538" prot="private" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>GetXheightForCC</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1af8b8a3d3c783dc07f7e392bbd85ee3e8" prot="private" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>global_xheight_</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1a229080f42f90343d63344f6929aa5d92" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>HasDifferentSplitStrategies</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1ac973904ee08ed3d33aa15afc9dc2a903" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>kUnspecifiedXheight</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1ab44f3b6e26668478841a5b8c45332601a8835ad2cdb469808d2aa1d4c8546426c" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>MAXIMAL_SPLIT</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1ab44f3b6e26668478841a5b8c45332601abb20813b04f412bb19593e228c343503" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>MINIMAL_SPLIT</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1ab44f3b6e26668478841a5b8c45332601a1ca815839c8e78def404b329ba79697a" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>NO_SPLIT</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1aacb26796a046bf732715e0345e877d5f" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>ocr_split_strategy</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1ad1bda974a61b412e0f8abb4523127869" prot="private" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>ocr_split_strategy_</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1ad4eb1fbd0c2d2cdc9a9645a5c9a8a873" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>orig_pix</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1a5b8bf32495c50dfc23432ca8ba155cdd" prot="private" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>orig_pix_</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1aa7bfde52e79bf593dd45e5caca76338e" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>pageseg_split_strategy</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1a579d2406e54165ae95956cbf5f13f7bd" prot="private" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>pageseg_split_strategy_</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1a8930adf258073d5a9c593ccd3a87df02" prot="private" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>perform_close_</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1a818ae2946b69fc24d35732a06822f4ee" prot="private" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>PerformClose</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1a90146104b2c9a136fdd873036cb95230" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>RefreshSegmentationWithNewBlobs</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1a7674add82837279c8e74a0522b6837fd" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>segmentation_block_list</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1aae1b75e2892a0108ec2e0a88f184602e" prot="private" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>segmentation_block_list_</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1a4a033b1bcb655e0d91c725ed01724363" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>set_global_xheight</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1af44bb8fab378ac431093b9f4f130cdd0" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>set_ocr_split_strategy</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1aef511d3502b7ea23cde356ef6454f064" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>set_orig_pix</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1a0642f05ce987bf3ee444d48c643a5483" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>set_pageseg_split_strategy</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1a831a7f055639bd4f53e9f08c7e08668c" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>set_perform_close</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1aacd88c63b5a9baa3895a58f33d2a7acd" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>set_segmentation_block_list</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1a09814382ca566884157cceab9076fff2" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>ShiroRekhaSplitter</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1a28e6f7d06927c5742be73589cb3eefcf" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>Split</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1ab44f3b6e26668478841a5b8c45332601" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>SplitStrategy</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1a7a6b17e8a21495616114a4e66b6887d4" prot="public" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>splitted_image</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1aa56dde55ce86473a12d7f83e46e88f36" prot="private" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>splitted_image_</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1a84f18626517a640d53a04a2e07cfe35b" prot="private" virt="non-virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>SplitWordShiroRekha</name></member>
+      <member refid="classtesseract_1_1_shiro_rekha_splitter_1a018fa239787df6051031ac4627e442cb" prot="public" virt="virtual"><scope>tesseract::ShiroRekhaSplitter</scope><name>~ShiroRekhaSplitter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

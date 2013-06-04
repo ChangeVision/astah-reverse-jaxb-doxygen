@@ -1,0 +1,991 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="class_generic_vector" kind="class" prot="public">
+    <compoundname>GenericVector</compoundname>
+    <derivedcompoundref refid="class_generic_vector_eq_eq" prot="public" virt="non-virtual">GenericVectorEqEq&lt; T &gt;</derivedcompoundref>
+    <includes refid="baseapi_8h" local="no">baseapi.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_generic_vector_1a17604861454b13965d7e2cb8c0c5b59a" prot="protected" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int GenericVector&lt; T &gt;::kDefaultVectorSize</definition>
+        <argsstring></argsstring>
+        <name>kDefaultVectorSize</name>
+        <initializer>= 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="273" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_generic_vector_1ae7cf6cba62f831b6d56c7d03e9eff3bc" prot="protected" static="no" mutable="no">
+        <type><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref></type>
+        <definition>inT32 GenericVector&lt; T &gt;::size_used_</definition>
+        <argsstring></argsstring>
+        <name>size_used_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="274" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_generic_vector_1a651ead7f279fb6ed4bfb683989d573de" prot="protected" static="no" mutable="no">
+        <type><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref></type>
+        <definition>inT32 GenericVector&lt; T &gt;::size_reserved_</definition>
+        <argsstring></argsstring>
+        <name>size_reserved_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="275" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_generic_vector_1ab88657a46d06c175dcfc76c0fcdaac7d" prot="protected" static="no" mutable="no">
+        <type>T *</type>
+        <definition>T* GenericVector&lt; T &gt;::data_</definition>
+        <argsstring></argsstring>
+        <name>data_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="276" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_generic_vector_1a57a833bdcc07a53e9a7b57d07cac2131" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_tess_callback1" kindref="compound">TessCallback1</ref>&lt; T &gt; *</type>
+        <definition>TessCallback1&lt;T&gt;* GenericVector&lt; T &gt;::clear_cb_</definition>
+        <argsstring></argsstring>
+        <name>clear_cb_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="277" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_generic_vector_1acd69761952fb39cbe7d7b43a6b06a432" prot="protected" static="no" mutable="yes">
+        <type><ref refid="class_tess_result_callback2" kindref="compound">TessResultCallback2</ref>&lt; bool, T const &amp;, T const &amp; &gt; *</type>
+        <definition>TessResultCallback2&lt;bool, T const &amp;, T const &amp;&gt;* GenericVector&lt; T &gt;::compare_cb_</definition>
+        <argsstring></argsstring>
+        <name>compare_cb_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="279" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_generic_vector_1a60d42eebf02708482a8b506edd417990" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GenericVector&lt; T &gt;::GenericVector</definition>
+        <argsstring>()</argsstring>
+        <name>GenericVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="37" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a23c207b5077ea514bc5ec813649140d1" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GenericVector&lt; T &gt;::GenericVector</definition>
+        <argsstring>(int size)</argsstring>
+        <name>GenericVector</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="38" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a2b61cd1cd756770518f5ac30f817a9bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GenericVector&lt; T &gt;::GenericVector</definition>
+        <argsstring>(const GenericVector &amp;other)</argsstring>
+        <name>GenericVector</name>
+        <param>
+          <type>const <ref refid="class_generic_vector" kindref="compound">GenericVector</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="41" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1af73fadcdb08f0a12a5615f2bcf6fa6a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; T &gt; &amp;</type>
+        <definition>GenericVector&lt; T &gt; &amp; GenericVector&lt; T &gt;::operator+=</definition>
+        <argsstring>(const GenericVector &amp;other)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="class_generic_vector" kindref="compound">GenericVector</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="45" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="620" bodyend="626"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1af6fd5b3891b276c10add96f9411bec05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; T &gt; &amp;</type>
+        <definition>GenericVector&lt; T &gt; &amp; GenericVector&lt; T &gt;::operator=</definition>
+        <argsstring>(const GenericVector &amp;other)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_generic_vector" kindref="compound">GenericVector</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="46" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="629" bodyend="633"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a49840c8743a063b87839baef7e19b968" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>GenericVector&lt; T &gt;::~GenericVector</definition>
+        <argsstring>()</argsstring>
+        <name>~GenericVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="48" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="471" bodyend="473"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1aa225ea3fc9374961482bc804028317eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericVector&lt; T &gt;::reserve</definition>
+        <argsstring>(int size)</argsstring>
+        <name>reserve</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="51" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="478" bodyend="487"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1af0214c8c21da9eb57dfebc78611d0cd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericVector&lt; T &gt;::double_the_size</definition>
+        <argsstring>()</argsstring>
+        <name>double_the_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="53" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="490" bodyend="497"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a6751521fd3eb461d81fc83ef93a0def3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericVector&lt; T &gt;::init_to_size</definition>
+        <argsstring>(int size, T t)</argsstring>
+        <name>init_to_size</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="56" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="501" bodyend="506"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a111b51dd0bf1324cfb69ef70703d8e70" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int GenericVector&lt; T &gt;::size</definition>
+        <argsstring>() const </argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="59" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a690cd403343d371ed7763fdaf3ed71d2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int GenericVector&lt; T &gt;::length</definition>
+        <argsstring>() const </argsstring>
+        <name>length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="63" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="63" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1afb0d8c52a603b6aa965d63bbf06a27dd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GenericVector&lt; T &gt;::empty</definition>
+        <argsstring>() const </argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="68" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a33070cfea2a16a20c6b30bbcfecd8ecc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T &amp;</type>
+        <definition>T &amp; GenericVector&lt; T &gt;::get</definition>
+        <argsstring>(int index) const </argsstring>
+        <name>get</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="73" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="511" bodyend="514"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a6e6d6497a6f7dd999b6d591c15354167" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T &amp;</type>
+        <definition>T &amp; GenericVector&lt; T &gt;::back</definition>
+        <argsstring>() const </argsstring>
+        <name>back</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="74" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="522" bodyend="525"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1af6a96287d98d4b6581cad4d4bb27e5aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T &amp;</type>
+        <definition>T &amp; GenericVector&lt; T &gt;::operator[]</definition>
+        <argsstring>(int index) const </argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="75" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="517" bodyend="519"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a0a62e2c80254bad72fb8aa37fed3af33" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GenericVector&lt; T &gt;::get_index</definition>
+        <argsstring>(T object) const </argsstring>
+        <name>get_index</name>
+        <param>
+          <type>T</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="80" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="568" bodyend="575"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a135efb0c3d9bb58fa7538f137567c9c5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GenericVector&lt; T &gt;::contains</definition>
+        <argsstring>(T object) const </argsstring>
+        <name>contains</name>
+        <param>
+          <type>T</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="83" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="579" bodyend="581"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1aa7a4692f87d6418d782c3261ed11a952" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T GenericVector&lt; T &gt;::contains_index</definition>
+        <argsstring>(int index) const </argsstring>
+        <name>contains_index</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="86" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="562" bodyend="564"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a0dc89fe2a365b04a61017f9d78c1a303" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GenericVector&lt; T &gt;::push_back</definition>
+        <argsstring>(T object)</argsstring>
+        <name>push_back</name>
+        <param>
+          <type>T</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="89" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="585" bodyend="592"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1acc7df2256174b32632e4d5b6c8d05d29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericVector&lt; T &gt;::operator+=</definition>
+        <argsstring>(T t)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>T</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="90" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="615" bodyend="617"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a393f9f8dcc55ad759a5c7fbdc4840a89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GenericVector&lt; T &gt;::push_back_new</definition>
+        <argsstring>(T object)</argsstring>
+        <name>push_back_new</name>
+        <param>
+          <type>T</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="94" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="595" bodyend="600"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1ae08e7cece0097ad356b5e565cbb2cf0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GenericVector&lt; T &gt;::push_front</definition>
+        <argsstring>(T object)</argsstring>
+        <name>push_front</name>
+        <param>
+          <type>T</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="98" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="604" bodyend="612"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a067b7833ee66238b7b5e230404525fcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericVector&lt; T &gt;::set</definition>
+        <argsstring>(T t, int index)</argsstring>
+        <name>set</name>
+        <param>
+          <type>T</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="101" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="529" bodyend="532"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a57ca5259541548a97bcfd4d0925a27ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericVector&lt; T &gt;::insert</definition>
+        <argsstring>(T t, int index)</argsstring>
+        <name>insert</name>
+        <param>
+          <type>T</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="104" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="538" bodyend="547"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a3fd37a240a42f1c3052e8d28614d3702" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GenericVector&lt; T &gt;::remove</definition>
+        <argsstring>(int index)</argsstring>
+        <name>remove</name>
+        <reimplementedby refid="classtesseract_1_1_pointer_vector_1a36e300beddeffc06af243e2b278e8f70">remove</reimplementedby>
+        <reimplementedby refid="classtesseract_1_1_pointer_vector_1a36e300beddeffc06af243e2b278e8f70">remove</reimplementedby>
+        <reimplementedby refid="classtesseract_1_1_pointer_vector_1a36e300beddeffc06af243e2b278e8f70">remove</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="108" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="552" bodyend="558"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1af1793745c45178626c9afe48c7a1e140" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void GenericVector&lt; T &gt;::truncate</definition>
+        <argsstring>(int size)</argsstring>
+        <name>truncate</name>
+        <reimplementedby refid="classtesseract_1_1_pointer_vector_1aa38ca98856fb4ca4d521786a77e2b4ce">truncate</reimplementedby>
+        <reimplementedby refid="classtesseract_1_1_pointer_vector_1aa38ca98856fb4ca4d521786a77e2b4ce">truncate</reimplementedby>
+        <reimplementedby refid="classtesseract_1_1_pointer_vector_1aa38ca98856fb4ca4d521786a77e2b4ce">truncate</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="112" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1af2bbca5b3258035a333b62679835a253" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericVector&lt; T &gt;::set_clear_callback</definition>
+        <argsstring>(TessCallback1&lt; T &gt; *cb)</argsstring>
+        <name>set_clear_callback</name>
+        <param>
+          <type><ref refid="class_tess_callback1" kindref="compound">TessCallback1</ref>&lt; T &gt; *</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="119" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="638" bodyend="640"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a5fb7cbde5178b72ff3637e8c91e739b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericVector&lt; T &gt;::set_compare_callback</definition>
+        <argsstring>(TessResultCallback2&lt; bool, T const &amp;, T const &amp; &gt; *cb)</argsstring>
+        <name>set_compare_callback</name>
+        <param>
+          <type><ref refid="class_tess_result_callback2" kindref="compound">TessResultCallback2</ref>&lt; bool, T const &amp;, T const &amp; &gt; *</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="123" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="645" bodyend="647"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a9cdbff49b186574b83e43afba606fdd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GenericVector&lt; T &gt;::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <reimplementedby refid="classtesseract_1_1_dawg_info_vector_1ae6b547bc520864c0b291530cb00d4ca5">clear</reimplementedby>
+        <reimplementedby refid="classtesseract_1_1_pointer_vector_1adf340a1a717d01c8109bdcf22218eeec">clear</reimplementedby>
+        <reimplementedby refid="classtesseract_1_1_pointer_vector_1adf340a1a717d01c8109bdcf22218eeec">clear</reimplementedby>
+        <reimplementedby refid="classtesseract_1_1_pointer_vector_1adf340a1a717d01c8109bdcf22218eeec">clear</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="129" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="651" bodyend="669"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a98f62dccd75224a60437c2761bd215cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericVector&lt; T &gt;::delete_data_pointers</definition>
+        <argsstring>()</argsstring>
+        <name>delete_data_pointers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="132" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="672" bodyend="677"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1abae057ce589be25aae9b80958f84e34c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericVector&lt; T &gt;::move</definition>
+        <argsstring>(GenericVector&lt; T &gt; *from)</argsstring>
+        <name>move</name>
+        <param>
+          <type><ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; T &gt; *</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="137" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="788" bodyend="800"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a9fa53a15945a79e1dbfc7aad3d5875e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GenericVector&lt; T &gt;::write</definition>
+        <argsstring>(FILE *f, TessResultCallback2&lt; bool, FILE *, T const &amp; &gt; *cb) const </argsstring>
+        <name>write</name>
+        <param>
+          <type>FILE *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="class_tess_result_callback2" kindref="compound">TessResultCallback2</ref>&lt; bool, FILE *, T const &amp; &gt; *</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="146" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="681" bodyend="697"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1aa0efce3eef59f7b96d7058f114c49387" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GenericVector&lt; T &gt;::read</definition>
+        <argsstring>(FILE *f, TessResultCallback3&lt; bool, FILE *, T *, bool &gt; *cb, bool swap)</argsstring>
+        <name>read</name>
+        <param>
+          <type>FILE *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="class_tess_result_callback3" kindref="compound">TessResultCallback3</ref>&lt; bool, FILE *, T *, bool &gt; *</type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>swap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="147" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="700" bodyend="725"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a51aeec27092537323abc7174af1c16ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool GenericVector&lt; T &gt;::Serialize</definition>
+        <argsstring>(FILE *fp) const </argsstring>
+        <name>Serialize</name>
+        <reimplementedby refid="classtesseract_1_1_pointer_vector_1aea7ac16752260e06f7c996343b17d876">Serialize</reimplementedby>
+        <reimplementedby refid="classtesseract_1_1_pointer_vector_1aea7ac16752260e06f7c996343b17d876">Serialize</reimplementedby>
+        <reimplementedby refid="classtesseract_1_1_pointer_vector_1aea7ac16752260e06f7c996343b17d876">Serialize</reimplementedby>
+        <param>
+          <type>FILE *</type>
+          <declname>fp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="150" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="730" bodyend="734"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1aa4f5b1bc0d044fbd1fc77363b798c39c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool GenericVector&lt; T &gt;::DeSerialize</definition>
+        <argsstring>(bool swap, FILE *fp)</argsstring>
+        <name>DeSerialize</name>
+        <reimplementedby refid="classtesseract_1_1_pointer_vector_1af324f722c7188f7ffc6ae3ff5eecd95a">DeSerialize</reimplementedby>
+        <reimplementedby refid="classtesseract_1_1_pointer_vector_1af324f722c7188f7ffc6ae3ff5eecd95a">DeSerialize</reimplementedby>
+        <reimplementedby refid="classtesseract_1_1_pointer_vector_1af324f722c7188f7ffc6ae3ff5eecd95a">DeSerialize</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>swap</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>fp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="155" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="741" bodyend="753"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a42e50cf68bb453fc11de039ca2ed81c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GenericVector&lt; T &gt;::SerializeClasses</definition>
+        <argsstring>(FILE *fp) const </argsstring>
+        <name>SerializeClasses</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="159" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="759" bodyend="765"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a698ebd328d22f1edc114053ca2eba48e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GenericVector&lt; T &gt;::DeSerializeClasses</definition>
+        <argsstring>(bool swap, FILE *fp)</argsstring>
+        <name>DeSerializeClasses</name>
+        <param>
+          <type>bool</type>
+          <declname>swap</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>fp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="165" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="773" bodyend="783"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a999bbd8ff336c81fe1198ea714c7936d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericVector&lt; T &gt;::sort</definition>
+        <argsstring>()</argsstring>
+        <name>sort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="184" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="803" bodyend="805"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a461142d4ff7c61f22119552b7c0b2755" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericVector&lt; T &gt;::sort</definition>
+        <argsstring>(int(*comparator)(const void *, const void *))</argsstring>
+        <name>sort</name>
+        <param>
+          <type>int(*)(const void *, const void *)</type>
+          <declname>comparator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="190" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="190" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a56b47b53976101ce26410fea5be3cdd2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool GenericVector&lt; T &gt;::bool_binary_search</definition>
+        <argsstring>(const T &amp;target) const </argsstring>
+        <name>bool_binary_search</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="197" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="197" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a2eaa0df35abb2c00571bb1d6e5d73377" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int GenericVector&lt; T &gt;::binary_search</definition>
+        <argsstring>(const T &amp;target) const </argsstring>
+        <name>binary_search</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="209" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="209" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a8cb22ff55d6dd125d93cd03fd73bf8ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericVector&lt; T &gt;::compact_sorted</definition>
+        <argsstring>()</argsstring>
+        <name>compact_sorted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="225" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="225" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1a080f7786e007523bcaa3f69913a82882" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericVector&lt; T &gt;::compact</definition>
+        <argsstring>(TessResultCallback1&lt; bool, int &gt; *delete_cb)</argsstring>
+        <name>compact</name>
+        <param>
+          <type><ref refid="class_tess_result_callback1" kindref="compound">TessResultCallback1</ref>&lt; bool, int &gt; *</type>
+          <declname>delete_cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="242" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="242" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="class_generic_vector_1aea840b1a4c4275a944c46e0f09d2851f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T GenericVector&lt; T &gt;::dot_product</definition>
+        <argsstring>(const GenericVector&lt; T &gt; &amp;other) const </argsstring>
+        <name>dot_product</name>
+        <param>
+          <type>const <ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; T &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="258" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="258" bodyend="263"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_generic_vector_1a85308b8287bcb7924d64175cbc681f89" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T *</type>
+        <definition>static T* GenericVector&lt; T &gt;::double_the_size_memcpy</definition>
+        <argsstring>(int current_size, T *data)</argsstring>
+        <name>double_the_size_memcpy</name>
+        <param>
+          <type>int</type>
+          <declname>current_size</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="172" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="172" bodyend="177"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_generic_vector_1a5b010723588fe15f303e4f3474d8479e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GenericVector&lt; T &gt;::init</definition>
+        <argsstring>(int size)</argsstring>
+        <name>init</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" line="268" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/genericvector.h" bodystart="461" bodyend="468"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1108">
+        <label>GenericVectorEqEq&lt; T &gt;</label>
+        <link refid="class_generic_vector_eq_eq"/>
+        <childnode refid="1107" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1107">
+        <label>GenericVector&lt; T &gt;</label>
+        <link refid="class_generic_vector"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1112">
+        <label>T</label>
+      </node>
+      <node id="1111">
+        <label>TessCallback1&lt; T &gt;</label>
+        <link refid="class_tess_callback1"/>
+      </node>
+      <node id="1109">
+        <label>GenericVector&lt; T &gt;</label>
+        <link refid="class_generic_vector"/>
+        <childnode refid="1110" relation="usage">
+          <edgelabel>compare_cb_</edgelabel>
+        </childnode>
+        <childnode refid="1111" relation="usage">
+          <edgelabel>clear_cb_</edgelabel>
+        </childnode>
+        <childnode refid="1112" relation="usage">
+          <edgelabel>data_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1110">
+        <label>TessResultCallback2&lt; bool, T const &amp;, T const &amp; &gt;</label>
+        <link refid="class_tess_result_callback2"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="36" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.h" bodystart="36" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="class_generic_vector_1a6e6d6497a6f7dd999b6d591c15354167" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>back</name></member>
+      <member refid="class_generic_vector_1a2eaa0df35abb2c00571bb1d6e5d73377" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>binary_search</name></member>
+      <member refid="class_generic_vector_1a56b47b53976101ce26410fea5be3cdd2" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>bool_binary_search</name></member>
+      <member refid="class_generic_vector_1a9cdbff49b186574b83e43afba606fdd9" prot="public" virt="virtual"><scope>GenericVector</scope><name>clear</name></member>
+      <member refid="class_generic_vector_1a57a833bdcc07a53e9a7b57d07cac2131" prot="protected" virt="non-virtual"><scope>GenericVector</scope><name>clear_cb_</name></member>
+      <member refid="class_generic_vector_1a080f7786e007523bcaa3f69913a82882" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>compact</name></member>
+      <member refid="class_generic_vector_1a8cb22ff55d6dd125d93cd03fd73bf8ad" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>compact_sorted</name></member>
+      <member refid="class_generic_vector_1acd69761952fb39cbe7d7b43a6b06a432" prot="protected" virt="non-virtual"><scope>GenericVector</scope><name>compare_cb_</name></member>
+      <member refid="class_generic_vector_1a135efb0c3d9bb58fa7538f137567c9c5" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>contains</name></member>
+      <member refid="class_generic_vector_1aa7a4692f87d6418d782c3261ed11a952" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>contains_index</name></member>
+      <member refid="class_generic_vector_1ab88657a46d06c175dcfc76c0fcdaac7d" prot="protected" virt="non-virtual"><scope>GenericVector</scope><name>data_</name></member>
+      <member refid="class_generic_vector_1a98f62dccd75224a60437c2761bd215cd" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>delete_data_pointers</name></member>
+      <member refid="class_generic_vector_1aa4f5b1bc0d044fbd1fc77363b798c39c" prot="public" virt="virtual"><scope>GenericVector</scope><name>DeSerialize</name></member>
+      <member refid="class_generic_vector_1a698ebd328d22f1edc114053ca2eba48e" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>DeSerializeClasses</name></member>
+      <member refid="class_generic_vector_1aea840b1a4c4275a944c46e0f09d2851f" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>dot_product</name></member>
+      <member refid="class_generic_vector_1af0214c8c21da9eb57dfebc78611d0cd6" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>double_the_size</name></member>
+      <member refid="class_generic_vector_1a85308b8287bcb7924d64175cbc681f89" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>double_the_size_memcpy</name></member>
+      <member refid="class_generic_vector_1afb0d8c52a603b6aa965d63bbf06a27dd" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>empty</name></member>
+      <member refid="class_generic_vector_1a60d42eebf02708482a8b506edd417990" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>GenericVector</name></member>
+      <member refid="class_generic_vector_1a23c207b5077ea514bc5ec813649140d1" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>GenericVector</name></member>
+      <member refid="class_generic_vector_1a2b61cd1cd756770518f5ac30f817a9bf" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>GenericVector</name></member>
+      <member refid="class_generic_vector_1a33070cfea2a16a20c6b30bbcfecd8ecc" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>get</name></member>
+      <member refid="class_generic_vector_1a0a62e2c80254bad72fb8aa37fed3af33" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>get_index</name></member>
+      <member refid="class_generic_vector_1a5b010723588fe15f303e4f3474d8479e" prot="protected" virt="non-virtual"><scope>GenericVector</scope><name>init</name></member>
+      <member refid="class_generic_vector_1a6751521fd3eb461d81fc83ef93a0def3" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>init_to_size</name></member>
+      <member refid="class_generic_vector_1a57ca5259541548a97bcfd4d0925a27ff" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>insert</name></member>
+      <member refid="class_generic_vector_1a17604861454b13965d7e2cb8c0c5b59a" prot="protected" virt="non-virtual"><scope>GenericVector</scope><name>kDefaultVectorSize</name></member>
+      <member refid="class_generic_vector_1a690cd403343d371ed7763fdaf3ed71d2" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>length</name></member>
+      <member refid="class_generic_vector_1abae057ce589be25aae9b80958f84e34c" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>move</name></member>
+      <member refid="class_generic_vector_1af73fadcdb08f0a12a5615f2bcf6fa6a8" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>operator+=</name></member>
+      <member refid="class_generic_vector_1acc7df2256174b32632e4d5b6c8d05d29" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>operator+=</name></member>
+      <member refid="class_generic_vector_1af6fd5b3891b276c10add96f9411bec05" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>operator=</name></member>
+      <member refid="class_generic_vector_1af6a96287d98d4b6581cad4d4bb27e5aa" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>operator[]</name></member>
+      <member refid="class_generic_vector_1a0dc89fe2a365b04a61017f9d78c1a303" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>push_back</name></member>
+      <member refid="class_generic_vector_1a393f9f8dcc55ad759a5c7fbdc4840a89" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>push_back_new</name></member>
+      <member refid="class_generic_vector_1ae08e7cece0097ad356b5e565cbb2cf0b" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>push_front</name></member>
+      <member refid="class_generic_vector_1aa0efce3eef59f7b96d7058f114c49387" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>read</name></member>
+      <member refid="class_generic_vector_1a3fd37a240a42f1c3052e8d28614d3702" prot="public" virt="virtual"><scope>GenericVector</scope><name>remove</name></member>
+      <member refid="class_generic_vector_1aa225ea3fc9374961482bc804028317eb" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>reserve</name></member>
+      <member refid="class_generic_vector_1a51aeec27092537323abc7174af1c16ef" prot="public" virt="virtual"><scope>GenericVector</scope><name>Serialize</name></member>
+      <member refid="class_generic_vector_1a42e50cf68bb453fc11de039ca2ed81c8" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>SerializeClasses</name></member>
+      <member refid="class_generic_vector_1a067b7833ee66238b7b5e230404525fcb" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>set</name></member>
+      <member refid="class_generic_vector_1af2bbca5b3258035a333b62679835a253" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>set_clear_callback</name></member>
+      <member refid="class_generic_vector_1a5fb7cbde5178b72ff3637e8c91e739b7" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>set_compare_callback</name></member>
+      <member refid="class_generic_vector_1a111b51dd0bf1324cfb69ef70703d8e70" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>size</name></member>
+      <member refid="class_generic_vector_1a651ead7f279fb6ed4bfb683989d573de" prot="protected" virt="non-virtual"><scope>GenericVector</scope><name>size_reserved_</name></member>
+      <member refid="class_generic_vector_1ae7cf6cba62f831b6d56c7d03e9eff3bc" prot="protected" virt="non-virtual"><scope>GenericVector</scope><name>size_used_</name></member>
+      <member refid="class_generic_vector_1a999bbd8ff336c81fe1198ea714c7936d" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>sort</name></member>
+      <member refid="class_generic_vector_1a461142d4ff7c61f22119552b7c0b2755" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>sort</name></member>
+      <member refid="class_generic_vector_1af1793745c45178626c9afe48c7a1e140" prot="public" virt="virtual"><scope>GenericVector</scope><name>truncate</name></member>
+      <member refid="class_generic_vector_1a9fa53a15945a79e1dbfc7aad3d5875e9" prot="public" virt="non-virtual"><scope>GenericVector</scope><name>write</name></member>
+      <member refid="class_generic_vector_1a49840c8743a063b87839baef7e19b968" prot="public" virt="virtual"><scope>GenericVector</scope><name>~GenericVector</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

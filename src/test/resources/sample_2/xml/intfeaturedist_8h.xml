@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="intfeaturedist_8h" kind="file">
+    <compoundname>intfeaturedist.h</compoundname>
+    <includes refid="genericvector_8h" local="yes">genericvector.h</includes>
+    <includedby refid="intfeaturedist_8cpp" local="yes">classify/intfeaturedist.cpp</includedby>
+    <includedby refid="trainingsampleset_8cpp" local="yes">classify/trainingsampleset.cpp</includedby>
+    <incdepgraph>
+      <node id="24856">
+        <label>ndminx.h</label>
+        <link refid="ndminx_8h"/>
+      </node>
+      <node id="24848">
+        <label>stdlib.h</label>
+      </node>
+      <node id="24851">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="24852" relation="include">
+        </childnode>
+      </node>
+      <node id="24853">
+        <label>errcode.h</label>
+        <link refid="errcode_8h"/>
+        <childnode refid="24850" relation="include">
+        </childnode>
+      </node>
+      <node id="24852">
+        <label>limits.h</label>
+      </node>
+      <node id="24855">
+        <label>string.h</label>
+      </node>
+      <node id="24849">
+        <label>tesscallback.h</label>
+        <link refid="tesscallback_8h"/>
+        <childnode refid="24850" relation="include">
+        </childnode>
+      </node>
+      <node id="24846">
+        <label>genericvector.h</label>
+        <link refid="genericvector_8h"/>
+        <childnode refid="24847" relation="include">
+        </childnode>
+        <childnode refid="24848" relation="include">
+        </childnode>
+        <childnode refid="24849" relation="include">
+        </childnode>
+        <childnode refid="24853" relation="include">
+        </childnode>
+        <childnode refid="24854" relation="include">
+        </childnode>
+        <childnode refid="24856" relation="include">
+        </childnode>
+      </node>
+      <node id="24845">
+        <label>classify/intfeaturedist.h</label>
+        <link refid="intfeaturedist.h"/>
+        <childnode refid="24846" relation="include">
+        </childnode>
+      </node>
+      <node id="24850">
+        <label>host.h</label>
+        <link refid="host_8h"/>
+        <childnode refid="24851" relation="include">
+        </childnode>
+      </node>
+      <node id="24847">
+        <label>stdio.h</label>
+      </node>
+      <node id="24854">
+        <label>helpers.h</label>
+        <link refid="helpers_8h"/>
+        <childnode refid="24847" relation="include">
+        </childnode>
+        <childnode refid="24855" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="24858">
+        <label>classify/intfeaturedist.cpp</label>
+        <link refid="intfeaturedist_8cpp"/>
+      </node>
+      <node id="24859">
+        <label>classify/trainingsampleset.cpp</label>
+        <link refid="trainingsampleset_8cpp"/>
+      </node>
+      <node id="24857">
+        <label>classify/intfeaturedist.h</label>
+        <link refid="intfeaturedist.h"/>
+        <childnode refid="24858" relation="include">
+        </childnode>
+        <childnode refid="24859" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtesseract_1_1_int_feature_dist" prot="public">tesseract::IntFeatureDist</innerclass>
+    <innernamespace refid="namespacetesseract">tesseract</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2011<sp/>Google<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>rays@google.com<sp/>(Ray<sp/>Smith)</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight><highlight class="comment">//<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intfeaturedist.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Description:<sp/>Fast<sp/>set-difference-based<sp/>feature<sp/>distance<sp/>calculator.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created:<sp/><sp/><sp/><sp/><sp/>Thu<sp/>Sep<sp/>01<sp/>12:14:30<sp/>PDT<sp/>2011</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TESSERACT_CLASSIFY_INTFEATUREDIST_H_</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TESSERACT_CLASSIFY_INTFEATUREDIST_H_</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="genericvector_8h" kindref="compound">genericvector.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetesseract-c__api-demo_1afed58feacb84df2de88bdd613cfdba6d" kindref="member">tesseract</ref><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">IntFeatureMap;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Feature<sp/>distance<sp/>calculator<sp/>designed<sp/>to<sp/>provide<sp/>a<sp/>fast<sp/>distance<sp/>calculation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>based<sp/>on<sp/>set<sp/>difference<sp/>between<sp/>a<sp/>given<sp/>feature<sp/>set<sp/>and<sp/>many<sp/>other<sp/>feature</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>sets<sp/>in<sp/>turn.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Representation<sp/>of<sp/>a<sp/>feature<sp/>set<sp/>as<sp/>an<sp/>array<sp/>of<sp/>bools<sp/>that<sp/>are<sp/>sparsely</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>true,<sp/>and<sp/>companion<sp/>arrays<sp/>that<sp/>allow<sp/>fast<sp/>feature<sp/>set<sp/>distance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>calculations<sp/>with<sp/>allowance<sp/>of<sp/>offsets<sp/>in<sp/>position.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Init<sp/>is<sp/>expensive,<sp/>so<sp/>for<sp/>greatest<sp/>efficiency,<sp/>to<sp/>re-initialize<sp/>for<sp/>a<sp/>new</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>feature<sp/>set,<sp/>use<sp/>Set(...,<sp/>false)<sp/>on<sp/>the<sp/>SAME<sp/>feature<sp/>set<sp/>as<sp/>was<sp/>used<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>setup<sp/>with<sp/>Set(...,<sp/>true),<sp/>to<sp/>return<sp/>to<sp/>its<sp/>initialized<sp/>state<sp/>before</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>reuse<sp/>with<sp/>Set(...,<sp/>true)<sp/>on<sp/>a<sp/>new<sp/>feature<sp/>set.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classtesseract_1_1_int_feature_dist" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtesseract_1_1_int_feature_dist" kindref="compound">IntFeatureDist</ref><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_int_feature_dist_1a37ccde2ed9866ff8405218388758d61a" kindref="member">IntFeatureDist</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_int_feature_dist_1a43fdddb44a0a46067926c7036a983a1e" kindref="member">~IntFeatureDist</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>the<sp/>bool<sp/>array<sp/>to<sp/>the<sp/>given<sp/>size<sp/>of<sp/>feature<sp/>space.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>feature_map<sp/>is<sp/>just<sp/>borrowed,<sp/>and<sp/>must<sp/>exist<sp/>for<sp/>the<sp/>entire</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>lifetime<sp/>of<sp/>the<sp/>IntFeatureDist.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_int_feature_dist_1ac455ebc0bb3c38597a368519a06d8bae" kindref="member">Init</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_int_feature_map" kindref="compound">IntFeatureMap</ref>*<sp/>feature_map);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Setup<sp/>the<sp/>map<sp/>for<sp/>the<sp/>given<sp/>indexed_features<sp/>that<sp/>have<sp/>been<sp/>indexed<sp/>by</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>feature_map.<sp/>After<sp/>use,<sp/>use<sp/>Set(...,<sp/>false)<sp/>to<sp/>reset<sp/>to<sp/>the<sp/>initial<sp/>state</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>as<sp/>this<sp/>is<sp/>faster<sp/>than<sp/>calling<sp/>Init<sp/>for<sp/>sparse<sp/>spaces.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_int_feature_dist_1ad06a9d5e512345ba58942d4b9fcfdd88" kindref="member">Set</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_generic_vector" kindref="compound">GenericVector&lt;int&gt;</ref>&amp;<sp/>indexed_features,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>canonical_count,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Compute<sp/>the<sp/>distance<sp/>between<sp/>the<sp/>given<sp/>feature<sp/>vector<sp/>and<sp/>the<sp/>last</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>feature<sp/>vector.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_int_feature_dist_1ae9e18970c99df4646691f92641453d4d" kindref="member">FeatureDistance</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_generic_vector" kindref="compound">GenericVector&lt;int&gt;</ref>&amp;<sp/>features)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_int_feature_dist_1ae37c94972dec97dcae90ae7576b951ad" kindref="member">DebugFeatureDistance</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_generic_vector" kindref="compound">GenericVector&lt;int&gt;</ref>&amp;<sp/>features)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>all<sp/>data.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Clear();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Size<sp/>of<sp/>the<sp/>indexed<sp/>feature<sp/>space.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size_;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Total<sp/>weight<sp/>of<sp/>features<sp/>currently<sp/>stored<sp/>in<sp/>the<sp/>maps.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>total_feature_weight_;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>IntFeatureMap<sp/>given<sp/>at<sp/>Init<sp/>to<sp/>find<sp/>offset<sp/>features.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_int_feature_map" kindref="compound">IntFeatureMap</ref>*<sp/>feature_map_;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Array<sp/>of<sp/>bools<sp/>indicating<sp/>presence<sp/>of<sp/>a<sp/>feature.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>features_;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Array<sp/>indicating<sp/>the<sp/>presence<sp/>of<sp/>a<sp/>feature<sp/>offset<sp/>by<sp/>one<sp/>unit.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>features_delta_one_;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Array<sp/>indicating<sp/>the<sp/>presence<sp/>of<sp/>a<sp/>feature<sp/>offset<sp/>by<sp/>two<sp/>units.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>features_delta_two_;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>tesseract</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>TESSERACT_CLASSIFY_INTFEATUREDIST_H_</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/classify/intfeaturedist.h"/>
+  </compounddef>
+</doxygen>

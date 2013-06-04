@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>My Project: src/msvc6/testrunner/TestRunnerDlg.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.4 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_160ca355bc0c1b9b707bdc17a072703c.html">msvc6</a></li><li class="navelem"><a class="el" href="dir_ea05cf39121f9fa04750d7742262a3f6.html">testrunner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TestRunnerDlg.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_test_runner_dlg_8h.html">説明を見る。</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#if !defined(AFX_TESTRUNNERDLG_H)</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define AFX_TESTRUNNERDLG_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#if _MSC_VER &gt;= 1000</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif // _MSC_VER &gt;= 1000</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="comment">// TestRunnerDlg.h : header file</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/* Refer to MSDN documentation:</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">   mk:@MSITStore:h:¥DevStudio¥MSDN¥98VSa¥1036¥vcmfc.chm::/html/_mfcnotes_tn033.htm#_mfcnotes_how_to_write_an_mfc_extension_dll</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">   to know how to write and use MFC extension DLL</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">   Can be found in the index with &quot;mfc extension&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">   =&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">   Using:</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">   - your application must link  Multithreaded MFC DLL</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">   - memory allocation is done using the same heap</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">   - you must define the symbol _AFX_DLL</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">   Building:</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">   - you must define the symbol _AFX_DLL and _AFX_EXT</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// Define the folowing symbol to subclass TestRunnerDlg</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#ifndef CPPUNIT_SUBCLASSING_TESTRUNNERDLG_BUILD</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="testrunner_2resource_8h.html">resource.h</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define IDD_DIALOG_TESTRUNNER 0</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;cppunit/TestSuite.h&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;cppunit/Exception.h&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;cppunit/TestResult.h&gt;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;cppunit/TestListener.h&gt;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;cppunit/TestResultCollector.h&gt;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_active_test_8h.html">ActiveTest.h</a>&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_ms_dev_caller_list_ctrl_8h.html">MsDevCallerListCtrl.h</a>&quot;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="msvc6_2testrunner_2_test_runner_model_8h.html">TestRunnerModel.h</a>&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="cdx_c_dynamic_dialog_8h.html">DynamicWindow/cdxCDynamicDialog.h</a>&quot;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">class </span><a class="code" href="class_progress_bar.html">ProgressBar</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">class </span><a class="code" href="class_test_runner_model.html">TestRunnerModel</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">// TestRunnerDlg dialog</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html">   49</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_test_runner_dlg.html">TestRunnerDlg</a> : <span class="keyword">public</span> <a class="code" href="classcdx_c_dynamic_dialog.html">cdxCDynamicDialog</a>,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                      <span class="keyword">public</span> CPPUNIT_NS::TestListener</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="class_test_runner_dlg.html#a1c8ff5e8f47eb011d3363666722de4d4">TestRunnerDlg</a>( <a class="code" href="class_test_runner_model.html">TestRunnerModel</a> *<a class="code" href="class_test_runner_dlg.html#a6e1fbdb43053d7b831bd996dc4de0ad0">model</a>,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keywordtype">int</span> nDialogResourceId,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                CWnd* pParent = NULL);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="class_test_runner_dlg.html#a1c8ff5e8f47eb011d3363666722de4d4">TestRunnerDlg</a>( <a class="code" href="class_test_runner_model.html">TestRunnerModel</a> *model,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keyword">const</span> TCHAR* szDialogResourceId = NULL,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                CWnd* pParent = NULL);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="class_test_runner_dlg.html#a13e1e9a4db9361c70b4e0ad866e3577a">‾TestRunnerDlg</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="comment">// overrided from TestListener;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a242540817497d352f0932f2895c7e43e">startTest</a>( CPPUNIT_NS::Test *test );</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a1ff1cba1544d51d2f5cd53ea9fd8786e">addFailure</a>( <span class="keyword">const</span> CPPUNIT_NS::TestFailure &amp;failure );</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a29a8fb178cf1ee9f4a1ed75db7567e26">endTest</a>( CPPUNIT_NS::Test *test );</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="comment">// IDD is not use, it is just there for the wizard.</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="comment">//{{AFX_DATA(TestRunnerDlg)</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#acdaba97edb566ab4e0522aee3201092b">   68</a></span>&#160;    CEdit   <a class="code" href="class_test_runner_dlg.html#acdaba97edb566ab4e0522aee3201092b">m_details</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#a0a11f175b805fda35a5bef4bd40b806a">   69</a></span>&#160;  <a class="code" href="class_ms_dev_caller_list_ctrl.html">MsDevCallerListCtrl</a> <a class="code" href="class_test_runner_dlg.html#a0a11f175b805fda35a5bef4bd40b806a">m_listCtrl</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#a284fb79a58913f46d4a1d5bd1c1b7a38">   70</a></span>&#160;  CButton <a class="code" href="class_test_runner_dlg.html#a284fb79a58913f46d4a1d5bd1c1b7a38">m_buttonClose</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#a50d05f1875b9cc4aa539e45301f8c8f4">   71</a></span>&#160;  CButton <a class="code" href="class_test_runner_dlg.html#a50d05f1875b9cc4aa539e45301f8c8f4">m_buttonStop</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#a24cffe139b423fde2a5bc7480d29b271">   72</a></span>&#160;  CButton <a class="code" href="class_test_runner_dlg.html#a24cffe139b423fde2a5bc7480d29b271">m_buttonRun</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#aaa78c62d9671c9de2d74bbca01792cf8">   73</a></span>&#160;  CButton <a class="code" href="class_test_runner_dlg.html#aaa78c62d9671c9de2d74bbca01792cf8">m_buttonBrowse</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#a697061c28015226cb67a94a6804e3b8e">   74</a></span>&#160;  BOOL <a class="code" href="class_test_runner_dlg.html#a697061c28015226cb67a94a6804e3b8e">m_bAutorunAtStartup</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">//}}AFX_DATA</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="comment">//{{AFX_VIRTUAL(TestRunnerDlg)</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keyword">virtual</span> BOOL <a class="code" href="class_test_runner_dlg.html#a31a999095d8f5a937b6ca29ea3b08882">PreTranslateMessage</a>(MSG* pMsg);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a7fb999c970c8355dd5d4c20c1d012e81">DoDataExchange</a>(CDataExchange* pDX);    <span class="comment">// DDX/DDV support</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="comment">//}}AFX_VIRTUAL</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="comment">//{{AFX_MSG(TestRunnerDlg)</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keyword">virtual</span> BOOL <a class="code" href="class_test_runner_dlg.html#a8d94121ccc2f479b1a41a9724d9e1423">OnInitDialog</a>();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  afx_msg <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a30b8c255bb218a590f31ad65fd2cf787">OnRun</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  afx_msg <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#aabda8c67f88fcd3d3294f7fc430fd915">OnStop</a>();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#ab327ef57751c085b242a9db60f071ec1">OnOK</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  afx_msg <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a664e3fffecbd1a4350a151680cdb078f">OnBrowseTest</a>();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  afx_msg <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a76022a09defeb98fb4c91af6fcbb0b1e">OnQuitApplication</a>();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  afx_msg <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a79a7758e0876423f82e1a9fa21cc4a5f">OnClose</a>();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    afx_msg <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a75dad8882711c8e2798517624eb572c1">OnSize</a>(UINT nType, <span class="keywordtype">int</span> cx, <span class="keywordtype">int</span> cy);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    afx_msg <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a2801d6dab02d16e841517dc93a3d17e6">OnSelectedFailureChange</a>(NMHDR* pNMHDR, LRESULT* pResult);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    afx_msg <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a510b1c037d91ad24bf6e1a9dc4251eff">OnSelectTestInHistoryCombo</a>();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">//}}AFX_MSG</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <a class="code" href="classcdx_c_dynamic_dialog.html#a3e8f71847aa7bbe19233ebf285549906">DECLARE_MESSAGE_MAP</a>()</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#a1ab72581036aa7794590ff546e2cb68f">  100</a></span>&#160;  typedef std::vector&lt;CPPUNIT_NS::Test *&gt; <a class="code" href="class_test_runner_dlg.html#a1ab72581036aa7794590ff546e2cb68f">Tests</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#a49951e2f37b31a2cfa86938a57c1a56a">  101</a></span>&#160;  <a class="code" href="class_progress_bar.html">ProgressBar</a> *<a class="code" href="class_test_runner_dlg.html#a49951e2f37b31a2cfa86938a57c1a56a">m_testsProgress</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#a9267ad5bb86e258e43e9da0edeef106b">  102</a></span>&#160;  CPPUNIT_NS::Test *<a class="code" href="class_test_runner_dlg.html#a9267ad5bb86e258e43e9da0edeef106b">m_selectedTest</a>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#a239d4e3df5ba406db3d2c973f7860b23">  103</a></span>&#160;  <a class="code" href="class_active_test.html">ActiveTest</a> *<a class="code" href="class_test_runner_dlg.html#a239d4e3df5ba406db3d2c973f7860b23">m_activeTest</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#a74ec4056ab784d14ea84fe64d547aa4a">  104</a></span>&#160;  CPPUNIT_NS::TestResult *<a class="code" href="class_test_runner_dlg.html#a74ec4056ab784d14ea84fe64d547aa4a">m_testObserver</a>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#a39158a72c89e3fd58ec0cee3a58612ff">  105</a></span>&#160;  CPPUNIT_NS::TestResultCollector *<a class="code" href="class_test_runner_dlg.html#a39158a72c89e3fd58ec0cee3a58612ff">m_result</a>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#aa481d53964cb0af4c5b5585fe0700f8e">  106</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="class_test_runner_dlg.html#aa481d53964cb0af4c5b5585fe0700f8e">m_testsRun</a>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#ac2a4d6b195179e70ca00267af1e6a593">  107</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="class_test_runner_dlg.html#ac2a4d6b195179e70ca00267af1e6a593">m_errors</a>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#a3a8203958756107cc72ac26c810418ec">  108</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="class_test_runner_dlg.html#a3a8203958756107cc72ac26c810418ec">m_failures</a>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#a47a2f4c82f52235b432b003833bccb2e">  109</a></span>&#160;  DWORD <a class="code" href="class_test_runner_dlg.html#a47a2f4c82f52235b432b003833bccb2e">m_testStartTime</a>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#a099ba53f2e76b5e92f156ee11f471b52">  110</a></span>&#160;  DWORD <a class="code" href="class_test_runner_dlg.html#a099ba53f2e76b5e92f156ee11f471b52">m_testEndTime</a>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#afab22b13b42942a71616936ac4243a0b">  111</a></span>&#160;  static const CString <a class="code" href="class_test_runner_dlg.html#afab22b13b42942a71616936ac4243a0b">ms_cppunitKey</a>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#a2fc6368672be3e86609b089554f1473e">  112</a></span>&#160;  HACCEL <a class="code" href="class_test_runner_dlg.html#a2fc6368672be3e86609b089554f1473e">m_hAccelerator</a>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#a24285b85522ba6137232e2cb8618677b">  113</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="class_test_runner_dlg.html#a24285b85522ba6137232e2cb8618677b">m_bIsRunning</a>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#ac5be804f9ee1d0e259d1b701a4ea70ed">  114</a></span>&#160;  <a class="code" href="class_test_runner_model.html">TestRunnerModel</a> *<a class="code" href="class_test_runner_dlg.html#ac5be804f9ee1d0e259d1b701a4ea70ed">m_model</a>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#af00ad458fae2cdab2a938ec14149c35c">  115</a></span>&#160;  CImageList <a class="code" href="class_test_runner_dlg.html#af00ad458fae2cdab2a938ec14149c35c">m_errorListBitmap</a>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#a1debd490530748ce4cd5bb8f32b5e6eb">  116</a></span>&#160;  CFont <a class="code" href="class_test_runner_dlg.html#a1debd490530748ce4cd5bb8f32b5e6eb">m_fixedSizeFont</a>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#aebdb967f6046a75dccc9dcf83a5acd01">  118</a></span>&#160;  enum <a class="code" href="class_test_runner_dlg.html#aebdb967f6046a75dccc9dcf83a5acd01">ErrorTypeBitmaps</a></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  {</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#aebdb967f6046a75dccc9dcf83a5acd01a33fd747dec4c251c0becd05851e25462">  120</a></span>&#160;    <a class="code" href="class_test_runner_dlg.html#aebdb967f6046a75dccc9dcf83a5acd01a33fd747dec4c251c0becd05851e25462">errorTypeFailure</a> =0,</div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="code" href="class_test_runner_dlg.html#aebdb967f6046a75dccc9dcf83a5acd01ab48db16c442f075e9e08db8f761f51ab">  121</a></span>&#160;    <a class="code" href="class_test_runner_dlg.html#aebdb967f6046a75dccc9dcf83a5acd01ab48db16c442f075e9e08db8f761f51ab">errorTypeError</a></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  };</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a7d6c545b09cfb5a04b1f7e76228f10df">addListEntry</a>( <span class="keyword">const</span> CPPUNIT_NS::TestFailure &amp;failure );</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a3eec0d7bf685d10c7f9750a69bae2c0c">beIdle</a>();</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a84a48f468a333488a22cb0c0c67269d7">beRunning</a>();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a8d99591468acea3cb3117499833019d8">beRunDisabled</a>();</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a4e8fb39fbbe24c81b3c7d8c3409acb2b">reset</a>();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a7ebd752eb34a84b79e883de00e4a8cfb">freeState</a>();</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a1d28474f28291d2b0c08ecbb68d27271">updateCountsDisplay</a>();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a08fdb113e4ff8f90d9844ffe6193a107">setupHistoryCombo</a>();</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  CPPUNIT_NS::Test *<a class="code" href="class_test_runner_dlg.html#a54807113449d7c20bb1446abca61979a">findTestByName</a>( std::string name ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  CPPUNIT_NS::Test *<a class="code" href="class_test_runner_dlg.html#afdaaab6227e66371db1ac82d87bb9ab4">findTestByNameFor</a>( <span class="keyword">const</span> std::string &amp;name, </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                                    CPPUNIT_NS::Test *test ) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a3fdb8ba53d886a4612a8e27cabb767a4">addNewTestToHistory</a>( CPPUNIT_NS::Test *test );</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a30b4da8ce5aa908630d5cc3fd94d6efd">addTestToHistoryCombo</a>( CPPUNIT_NS::Test *test, </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                              <span class="keywordtype">int</span> idx =-1 );</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a79d31e391a61b8303e23825cc07171d1">removeTestFromHistory</a>( CPPUNIT_NS::Test *test );</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  CComboBox *<a class="code" href="class_test_runner_dlg.html#a9e5bbaf58b3bfeb71161898d8d0dbf4b">getHistoryCombo</a>();</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a7d4d47123dddf4c6ed48f66aea982876">updateSelectedItem</a>();</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a5e3e18332d017164cb1967fb1883349d">saveHistory</a>();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a469839f3ad0e96bccced378ba71585be">loadSettings</a>();</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a3ce3646fc3ac88cebc7f3aab637e4656">saveSettings</a>();</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <a class="code" href="class_test_runner_model.html">TestRunnerModel</a> &amp;<a class="code" href="class_test_runner_dlg.html#a6e1fbdb43053d7b831bd996dc4de0ad0">model</a>();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a3150bbfc508ab4654ccba13cd57ae653">updateHistoryCombo</a>();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#ab0334c9551dbaea9364b8219ef807256">displayFailureDetailsFor</a>( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> failureIndex );</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  CRect <a class="code" href="class_test_runner_dlg.html#a6a37bdbdf685aa2de98ecc5969824d53">getItemWindowRect</a>( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> itemId );</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  CRect <a class="code" href="class_test_runner_dlg.html#a60dc05c4c2593e6dbcd49974b49f1671">getItemClientRect</a>( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> itemId );</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="comment">//CRect getDialogBounds();</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a051bdb46dd8714ae6b69523fc7697c5e">initializeLayout</a>();</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a432d37b8852bf526091b0c01bb9a8974">updateListColumnSize</a>();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_test_runner_dlg.html#a71a54fb9ecd80269013e386b3cda69ea">initializeFixedSizeFont</a>();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <a class="code" href="struct_test_runner_model_1_1_settings.html">TestRunnerModel::Settings</a> m_settings;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keywordtype">void</span> TestRunnerDlg::init(<a class="code" href="class_test_runner_model.html">TestRunnerModel</a> *model);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;};</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="comment">//{{AFX_INSERT_LOCATION}}</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment">// Microsoft Developer Studio will insert additional declarations immediately before the previous line.</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor">#endif // !defined(AFX_TESTRUNNERDLG_H)</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+My Projectに対してThu May 23 2013 16:14:58に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

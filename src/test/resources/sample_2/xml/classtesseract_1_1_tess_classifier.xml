@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_tess_classifier" kind="class" prot="public">
+    <compoundname>tesseract::TessClassifier</compoundname>
+    <basecompoundref refid="classtesseract_1_1_shape_classifier" prot="public" virt="non-virtual">tesseract::ShapeClassifier</basecompoundref>
+    <includes refid="tessclassifier_8h" local="no">tessclassifier.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_tess_classifier_1acc91e31286a8128204cb1f9fa3993990" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool tesseract::TessClassifier::pruner_only_</definition>
+        <argsstring></argsstring>
+        <name>pruner_only_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/classify/tessclassifier.h" line="53" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/tessclassifier.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tess_classifier_1ad08127130a69ec57ee6796e3069b2831" prot="private" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_classify" kindref="compound">tesseract::Classify</ref> *</type>
+        <definition>tesseract::Classify* tesseract::TessClassifier::classify_</definition>
+        <argsstring></argsstring>
+        <name>classify_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/classify/tessclassifier.h" line="55" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/tessclassifier.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_tess_classifier_1a136f93886e941ec3ca91862b0017c502" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::TessClassifier::TessClassifier</definition>
+        <argsstring>(bool pruner_only, tesseract::Classify *classify)</argsstring>
+        <name>TessClassifier</name>
+        <param>
+          <type>bool</type>
+          <declname>pruner_only</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_classify" kindref="compound">tesseract::Classify</ref> *</type>
+          <declname>classify</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/classify/tessclassifier.h" line="38" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/tessclassifier.h" bodystart="38" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tess_classifier_1a823c6f710c5845dd9bb08e8efd73bf1a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual tesseract::TessClassifier::~TessClassifier</definition>
+        <argsstring>()</argsstring>
+        <name>~TessClassifier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/classify/tessclassifier.h" line="40" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/tessclassifier.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tess_classifier_1a02826754d240b58ac9cbbaad69b1a1fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int tesseract::TessClassifier::ClassifySample</definition>
+        <argsstring>(const TrainingSample &amp;sample, Pix *page_pix, int debug, int keep_this, GenericVector&lt; ShapeRating &gt; *results)</argsstring>
+        <name>ClassifySample</name>
+        <reimplements refid="classtesseract_1_1_shape_classifier_1a96f89853d2ffe4bcf82c2ce818bf849f">ClassifySample</reimplements>
+        <param>
+          <type>const <ref refid="classtesseract_1_1_training_sample" kindref="compound">TrainingSample</ref> &amp;</type>
+          <declname>sample</declname>
+        </param>
+        <param>
+          <type>Pix *</type>
+          <declname>page_pix</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>debug</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>keep_this</declname>
+        </param>
+        <param>
+          <type><ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; <ref refid="structtesseract_1_1_shape_rating" kindref="compound">ShapeRating</ref> &gt; *</type>
+          <declname>results</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/classify/tessclassifier.h" line="44" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/tessclassifier.cpp" bodystart="31" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tess_classifier_1a5afc5fa9f61af8d6fdecb1edd225c033" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="classtesseract_1_1_shape_table" kindref="compound">ShapeTable</ref> *</type>
+        <definition>const ShapeTable * tesseract::TessClassifier::GetShapeTable</definition>
+        <argsstring>() const </argsstring>
+        <name>GetShapeTable</name>
+        <reimplements refid="classtesseract_1_1_shape_classifier_1ab5e612b18003a7c0ceae685ea1fe8571">GetShapeTable</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/classify/tessclassifier.h" line="48" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/tessclassifier.cpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2169">
+        <label>tesseract::TessClassifier</label>
+        <link refid="classtesseract_1_1_tess_classifier"/>
+        <childnode refid="2170" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2170">
+        <label>tesseract::ShapeClassifier</label>
+        <link refid="classtesseract_1_1_shape_classifier"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2171">
+        <label>tesseract::TessClassifier</label>
+        <link refid="classtesseract_1_1_tess_classifier"/>
+        <childnode refid="2172" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2172">
+        <label>tesseract::ShapeClassifier</label>
+        <link refid="classtesseract_1_1_shape_classifier"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/classify/tessclassifier.h" line="36" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/tessclassifier.h" bodystart="36" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_tess_classifier_1ad08127130a69ec57ee6796e3069b2831" prot="private" virt="non-virtual"><scope>tesseract::TessClassifier</scope><name>classify_</name></member>
+      <member refid="classtesseract_1_1_tess_classifier_1a02826754d240b58ac9cbbaad69b1a1fd" prot="public" virt="virtual"><scope>tesseract::TessClassifier</scope><name>ClassifySample</name></member>
+      <member refid="classtesseract_1_1_tess_classifier_1a5afc5fa9f61af8d6fdecb1edd225c033" prot="public" virt="virtual"><scope>tesseract::TessClassifier</scope><name>GetShapeTable</name></member>
+      <member refid="classtesseract_1_1_tess_classifier_1acc91e31286a8128204cb1f9fa3993990" prot="private" virt="non-virtual"><scope>tesseract::TessClassifier</scope><name>pruner_only_</name></member>
+      <member refid="classtesseract_1_1_tess_classifier_1a136f93886e941ec3ca91862b0017c502" prot="public" virt="non-virtual"><scope>tesseract::TessClassifier</scope><name>TessClassifier</name></member>
+      <member refid="classtesseract_1_1_shape_classifier_1a8beb57719279f6b67f426dcccb6231b7" prot="public" virt="virtual"><scope>tesseract::TessClassifier</scope><name>~ShapeClassifier</name></member>
+      <member refid="classtesseract_1_1_tess_classifier_1a823c6f710c5845dd9bb08e8efd73bf1a" prot="public" virt="virtual"><scope>tesseract::TessClassifier</scope><name>~TessClassifier</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,472 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="_d_a_s_h_rep_decoder_8cpp" kind="file">
+    <compoundname>DASHRepDecoder.cpp</compoundname>
+    <includes local="yes">prlog.h</includes>
+    <includes local="yes">VideoUtils.h</includes>
+    <includes local="yes">SegmentBase.h</includes>
+    <includes local="yes">MediaDecoderStateMachine.h</includes>
+    <includes local="yes">DASHReader.h</includes>
+    <includes local="yes">MediaResource.h</includes>
+    <includes local="yes">DASHRepDecoder.h</includes>
+    <incdepgraph>
+      <node id="136">
+        <label>DASHRepDecoder.h</label>
+      </node>
+      <node id="135">
+        <label>MediaResource.h</label>
+      </node>
+      <node id="131">
+        <label>VideoUtils.h</label>
+      </node>
+      <node id="133">
+        <label>MediaDecoderStateMachine.h</label>
+      </node>
+      <node id="132">
+        <label>SegmentBase.h</label>
+      </node>
+      <node id="134">
+        <label>DASHReader.h</label>
+      </node>
+      <node id="130">
+        <label>prlog.h</label>
+      </node>
+      <node id="129">
+        <label>C:/tools/mozilla-release/content/media/dash/DASHRepDecoder.cpp</label>
+        <link refid="DASHRepDecoder.cpp"/>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacemozilla">mozilla</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_d_a_s_h_rep_decoder_8cpp_1ad285b8d43b6e90320e33e7438e3e171b" prot="public" static="no">
+        <name>LOG</name>
+        <param><defname>msg</defname></param>
+        <param><defname>...</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/dash/DASHRepDecoder.cpp" line="32" bodyfile="C:/tools/mozilla-release/content/media/dash/DASHRepDecoder.cpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_d_a_s_h_rep_decoder_8cpp_1ab25a77e7e48124e7060c8ef6ba96819e" prot="public" static="no">
+        <name>LOG1</name>
+        <param><defname>msg</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/dash/DASHRepDecoder.cpp" line="33" bodyfile="C:/tools/mozilla-release/content/media/dash/DASHRepDecoder.cpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>Mode:<sp/>C++;<sp/>tab-width:<sp/>2;<sp/>indent-tabs-mode:<sp/>nil;<sp/>c-basic-offset:<sp/>2<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>vim:set<sp/>ts=2<sp/>sw=2<sp/>sts=2<sp/>et<sp/>cindent:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>Is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this<sp/>file,</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>DASH<sp/>-<sp/>Dynamic<sp/>Adaptive<sp/>Streaming<sp/>over<sp/>HTTP</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>DASH<sp/>is<sp/>an<sp/>adaptive<sp/>bitrate<sp/>streaming<sp/>technology<sp/>where<sp/>a<sp/>multimedia<sp/>file<sp/>is</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>partitioned<sp/>into<sp/>one<sp/>or<sp/>more<sp/>segments<sp/>and<sp/>delivered<sp/>to<sp/>a<sp/>client<sp/>using<sp/>HTTP.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>see<sp/>DASHDecoder.cpp<sp/>for<sp/>info<sp/>on<sp/>DASH<sp/>interaction<sp/>with<sp/>the<sp/>media<sp/>engine.*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;prlog.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;VideoUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SegmentBase.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;MediaDecoderStateMachine.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;DASHReader.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;MediaResource.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;DASHRepDecoder.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">mozilla<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>PR_LOGGING</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>PRLogModuleInfo*<sp/>gMediaDecoderLog;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LOG(msg,<sp/>...)<sp/>PR_LOG(gMediaDecoderLog,<sp/>PR_LOG_DEBUG,<sp/>\</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;%p<sp/>[DASHRepDecoder]<sp/>&quot;<sp/>msg,<sp/>this,<sp/>__VA_ARGS__))</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>LOG1(msg)<sp/>PR_LOG(gMediaDecoderLog,<sp/>PR_LOG_DEBUG,<sp/>\</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&quot;%p<sp/>[DASHRepDecoder]<sp/>&quot;<sp/>msg,<sp/>this))</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>LOG(msg,<sp/>...)</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>LOG1(msg)</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">MediaDecoderStateMachine*</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">DASHRepDecoder::CreateStateMachine()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>NS_ASSERTION(NS_IsMainThread(),<sp/></highlight><highlight class="stringliteral">&quot;Should<sp/>be<sp/>on<sp/>main<sp/>thread.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Do<sp/>not<sp/>create;<sp/>just<sp/>return<sp/>current<sp/>state<sp/>machine.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mDecoderStateMachine;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">nsresult</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">DASHRepDecoder::SetStateMachine(MediaDecoderStateMachine*<sp/>aSM)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>NS_ASSERTION(NS_IsMainThread(),<sp/></highlight><highlight class="stringliteral">&quot;Should<sp/>be<sp/>on<sp/>main<sp/>thread.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>mDecoderStateMachine<sp/>=<sp/>aSM;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS_OK;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">DASHRepDecoder::SetResource(MediaResource*<sp/>aResource)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>NS_ASSERTION(NS_IsMainThread(),<sp/></highlight><highlight class="stringliteral">&quot;Should<sp/>be<sp/>on<sp/>main<sp/>thread.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>mResource<sp/>=<sp/>aResource;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">DASHRepDecoder::SetMPDRepresentation(Representation<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*<sp/>aRep)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>NS_ASSERTION(NS_IsMainThread(),<sp/></highlight><highlight class="stringliteral">&quot;Should<sp/>be<sp/>on<sp/>main<sp/>thread.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>mMPDRepresentation<sp/>=<sp/>aRep;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">DASHRepDecoder::SetReader(WebMReader*<sp/>aReader)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>NS_ASSERTION(NS_IsMainThread(),<sp/></highlight><highlight class="stringliteral">&quot;Should<sp/>be<sp/>on<sp/>main<sp/>thread.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>mReader<sp/>=<sp/>aReader;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">nsresult</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">DASHRepDecoder::Load(MediaResource*<sp/>aResource,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nsIStreamListener**<sp/>aListener,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MediaDecoder*<sp/>aCloneDonor)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>NS_ASSERTION(NS_IsMainThread(),<sp/></highlight><highlight class="stringliteral">&quot;Should<sp/>be<sp/>on<sp/>main<sp/>thread.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>NS_ENSURE_TRUE(mMPDRepresentation,<sp/>NS_ERROR_NOT_INITIALIZED);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>init<sp/>range<sp/>and<sp/>index<sp/>range<sp/>from<sp/>MPD.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>SegmentBase<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*<sp/>segmentBase<sp/>=<sp/>mMPDRepresentation-&gt;GetSegmentBase();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>NS_ENSURE_TRUE(segmentBase,<sp/>NS_ERROR_NULL_POINTER);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>and<sp/>set<sp/>init<sp/>range.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>segmentBase-&gt;GetInitRange(&amp;mInitByteRange.mStart,<sp/>&amp;mInitByteRange.mEnd);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>NS_ENSURE_TRUE(!mInitByteRange.IsNull(),<sp/>NS_ERROR_NOT_INITIALIZED);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>mReader-&gt;SetInitByteRange(mInitByteRange);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>and<sp/>set<sp/>index<sp/>range.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>segmentBase-&gt;GetIndexRange(&amp;mIndexByteRange.mStart,<sp/>&amp;mIndexByteRange.mEnd);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>NS_ENSURE_TRUE(!mIndexByteRange.IsNull(),<sp/>NS_ERROR_NOT_INITIALIZED);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>mReader-&gt;SetIndexByteRange(mIndexByteRange);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Determine<sp/>byte<sp/>range<sp/>to<sp/>Open.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>small<sp/>deltas<sp/>between<sp/>init<sp/>and<sp/>index<sp/>ranges,<sp/>we<sp/>need<sp/>to<sp/>bundle<sp/>the<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>range<sp/>requests<sp/>together<sp/>in<sp/>order<sp/>to<sp/>deal<sp/>with<sp/>|MediaCache|&apos;s<sp/>control<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>seeking<sp/>(see<sp/>|MediaCache|::|Update|).<sp/>|MediaCache|<sp/>will<sp/>not<sp/>initiate<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>|ChannelMediaResource|::|CacheClientSeek|<sp/>for<sp/>the<sp/>INDEX<sp/>byte<sp/>range<sp/>if<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>delta<sp/>between<sp/>it<sp/>and<sp/>the<sp/>INIT<sp/>byte<sp/>ranges<sp/>is<sp/>less<sp/>than</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>|SEEK_VS_READ_THRESHOLD|.<sp/>To<sp/>get<sp/>around<sp/>this,<sp/>request<sp/>all<sp/>metadata<sp/>bytes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>now<sp/>so<sp/>|MediaCache|<sp/>can<sp/>assume<sp/>the<sp/>bytes<sp/>are<sp/>en<sp/>route.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>int64_t<sp/>delta<sp/>=<sp/>NS_MAX(mIndexByteRange.mStart,<sp/>mInitByteRange.mStart)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>NS_MIN(mIndexByteRange.mEnd,<sp/>mInitByteRange.mEnd);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>MediaByteRange<sp/>byteRange;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(delta<sp/>&lt;=<sp/>SEEK_VS_READ_THRESHOLD)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>byteRange.mStart<sp/>=<sp/>NS_MIN(mIndexByteRange.mStart,<sp/>mInitByteRange.mStart);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>byteRange.mEnd<sp/>=<sp/>NS_MAX(mIndexByteRange.mEnd,<sp/>mInitByteRange.mEnd);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Loading<sp/>everything<sp/>in<sp/>one<sp/>chunk<sp/>.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>mMetadataChunkCount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>byteRange<sp/>=<sp/>mInitByteRange;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Loading<sp/>in<sp/>two<sp/>chunks:<sp/>init<sp/>and<sp/>index.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>mMetadataChunkCount<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>mCurrentByteRange<sp/>=<sp/>byteRange;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mResource-&gt;OpenByteRange(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>byteRange);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">DASHRepDecoder::NotifyDownloadEnded(nsresult<sp/>aStatus)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>NS_ASSERTION(NS_IsMainThread(),<sp/></highlight><highlight class="stringliteral">&quot;Should<sp/>be<sp/>on<sp/>main<sp/>thread.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mMainDecoder)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG(</highlight><highlight class="stringliteral">&quot;Error!<sp/>Main<sp/>Decoder<sp/>is<sp/>reported<sp/>as<sp/>null:<sp/>mMainDecoder<sp/>[%p]&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mMainDecoder.get());</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>DecodeError();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(NS_SUCCEEDED(aStatus))<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Decrement<sp/>counter<sp/>as<sp/>metadata<sp/>chunks<sp/>are<sp/>downloaded.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Note:<sp/>Reader<sp/>gets<sp/>next<sp/>chunk<sp/>download<sp/>via<sp/>|ChannelMediaResource|:|Seek|.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mMetadataChunkCount<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LOG(</highlight><highlight class="stringliteral">&quot;Metadata<sp/>chunk<sp/>[%d]<sp/>downloaded:<sp/>range<sp/>requested<sp/>[%d<sp/>-<sp/>%d]&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mMetadataChunkCount,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mCurrentByteRange.mStart,<sp/>mCurrentByteRange.mEnd);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>mMetadataChunkCount--;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Notify<sp/>main<sp/>decoder<sp/>that<sp/>a<sp/>DATA<sp/>byte<sp/>range<sp/>is<sp/>downloaded.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LOG(</highlight><highlight class="stringliteral">&quot;Byte<sp/>range<sp/>downloaded:<sp/>status<sp/>[%x]<sp/>range<sp/>requested<sp/>[%d<sp/>-<sp/>%d]&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aStatus,<sp/>mCurrentByteRange.mStart,<sp/>mCurrentByteRange.mEnd);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>mMainDecoder-&gt;NotifyDownloadEnded(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>aStatus,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mCurrentByteRange);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(aStatus<sp/>==<sp/>NS_BINDING_ABORTED)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG(</highlight><highlight class="stringliteral">&quot;MPD<sp/>download<sp/>has<sp/>been<sp/>cancelled<sp/>by<sp/>the<sp/>user:<sp/>aStatus<sp/>[%x].&quot;</highlight><highlight class="normal">,<sp/>aStatus);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mMainDecoder)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>mMainDecoder-&gt;LoadAborted();</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(aStatus<sp/>!=<sp/>NS_BASE_STREAM_CLOSED)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG(</highlight><highlight class="stringliteral">&quot;Network<sp/>error<sp/>trying<sp/>to<sp/>download<sp/>MPD:<sp/>aStatus<sp/>[%x].&quot;</highlight><highlight class="normal">,<sp/>aStatus);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>NetworkError();</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal">DASHRepDecoder::OnReadMetadataCompleted()</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>NS_ASSERTION(OnDecodeThread(),<sp/></highlight><highlight class="stringliteral">&quot;Should<sp/>be<sp/>on<sp/>decode<sp/>thread.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>LOG1(</highlight><highlight class="stringliteral">&quot;Metadata<sp/>has<sp/>been<sp/>read.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>nsCOMPtr&lt;nsIRunnable&gt;<sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal"><sp/>=</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>NS_NewRunnableMethod(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>&amp;DASHRepDecoder::LoadNextByteRange);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/>nsresult<sp/>rv<sp/>=<sp/>NS_DispatchToMainThread(event,<sp/>NS_DISPATCH_NORMAL);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(NS_FAILED(rv))<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG(</highlight><highlight class="stringliteral">&quot;Error<sp/>dispatching<sp/>parse<sp/>event<sp/>to<sp/>main<sp/>thread:<sp/>rv[%x]&quot;</highlight><highlight class="normal">,<sp/>rv);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>DecodeError();</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal">DASHRepDecoder::LoadNextByteRange()</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/>NS_ASSERTION(NS_IsMainThread(),<sp/></highlight><highlight class="stringliteral">&quot;Should<sp/>be<sp/>on<sp/>main<sp/>thread.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mResource)<sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG1(</highlight><highlight class="stringliteral">&quot;Error:<sp/>resource<sp/>is<sp/>reported<sp/>as<sp/>null!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>DecodeError();</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Populate<sp/>the<sp/>array<sp/>of<sp/>subsegment<sp/>byte<sp/>ranges<sp/>if<sp/>it&apos;s<sp/>empty.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/>nsresult<sp/>rv;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mByteRanges.IsEmpty())<sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mReader)<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LOG1(</highlight><highlight class="stringliteral">&quot;Error:<sp/>mReader<sp/>should<sp/>not<sp/>be<sp/>null!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>DecodeError();</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>rv<sp/>=<sp/>mReader-&gt;GetIndexByteRanges(mByteRanges);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>empty,<sp/>just<sp/>fail.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(NS_FAILED(rv)<sp/>||<sp/>mByteRanges.IsEmpty())<sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LOG1(</highlight><highlight class="stringliteral">&quot;Error<sp/>getting<sp/>list<sp/>of<sp/>subsegment<sp/>byte<sp/>ranges.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>DecodeError();</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>byte<sp/>range<sp/>for<sp/>subsegment.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mSubsegmentIdx<sp/>&lt;<sp/>mByteRanges.Length())<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>mCurrentByteRange<sp/>=<sp/>mByteRanges[mSubsegmentIdx];</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>mCurrentByteRange.Clear();</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG(</highlight><highlight class="stringliteral">&quot;End<sp/>of<sp/>subsegments:<sp/>index<sp/>[%d]<sp/>out<sp/>of<sp/>range.&quot;</highlight><highlight class="normal">,<sp/>mSubsegmentIdx);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Open<sp/>byte<sp/>range<sp/>corresponding<sp/>to<sp/>subsegment.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/>rv<sp/>=<sp/>mResource-&gt;OpenByteRange(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>mCurrentByteRange);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(NS_FAILED(rv))<sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG(</highlight><highlight class="stringliteral">&quot;Error<sp/>opening<sp/>byte<sp/>range<sp/>[%d<sp/>-<sp/>%d]:<sp/>rv<sp/>[%x].&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mCurrentByteRange.mStart,<sp/>mCurrentByteRange.mEnd,<sp/>rv);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>NetworkError();</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Increment<sp/>subsegment<sp/>index<sp/>for<sp/>next<sp/>load.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/>mSubsegmentIdx++;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal">nsresult</highlight></codeline>
+<codeline lineno="224"><highlight class="normal">DASHRepDecoder::GetByteRangeForSeek(int64_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>aOffset,</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MediaByteRange&amp;<sp/>aByteRange)</highlight></codeline>
+<codeline lineno="226"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/>NS_ASSERTION(NS_IsMainThread(),<sp/></highlight><highlight class="stringliteral">&quot;Should<sp/>be<sp/>on<sp/>main<sp/>thread.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>data<sp/>ranges,<sp/>if<sp/>available.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>mByteRanges.Length();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>NS_ENSURE_FALSE(mByteRanges[i].IsNull(),<sp/>NS_ERROR_NOT_INITIALIZED);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mByteRanges[i].mStart<sp/>&lt;=<sp/>aOffset<sp/>&amp;&amp;<sp/>aOffset<sp/>&lt;=<sp/>mByteRanges[i].mEnd)<sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>mCurrentByteRange<sp/>=<sp/>aByteRange<sp/>=<sp/>mByteRanges[i];</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>mSubsegmentIdx<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS_OK;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>metadata<sp/>ranges;<sp/>init<sp/>range.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mInitByteRange.mStart<sp/>&lt;=<sp/>aOffset<sp/>&amp;&amp;<sp/>aOffset<sp/>&lt;=<sp/>mInitByteRange.mEnd)<sp/>{</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>mCurrentByteRange<sp/>=<sp/>aByteRange<sp/>=<sp/>mInitByteRange;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>mSubsegmentIdx<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS_OK;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>...<sp/>index<sp/>range.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mIndexByteRange.mStart<sp/>&lt;=<sp/>aOffset<sp/>&amp;&amp;<sp/>aOffset<sp/>&lt;=<sp/>mIndexByteRange.mEnd)<sp/>{</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>mCurrentByteRange<sp/>=<sp/>aByteRange<sp/>=<sp/>mIndexByteRange;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>mSubsegmentIdx<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS_OK;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/>aByteRange.Clear();</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mByteRanges.IsEmpty())<sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Assume<sp/>mByteRanges<sp/>will<sp/>be<sp/>populated<sp/>after<sp/>metadata<sp/>is<sp/>read.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG(</highlight><highlight class="stringliteral">&quot;Can&apos;t<sp/>get<sp/>range<sp/>for<sp/>offset<sp/>[%d].&quot;</highlight><highlight class="normal">,<sp/>aOffset);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS_ERROR_NOT_AVAILABLE;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cannot<sp/>seek<sp/>to<sp/>an<sp/>unknown<sp/>offset.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>XXX<sp/>Revisit<sp/>this<sp/>for<sp/>dynamic<sp/>MPD<sp/>profiles<sp/>if<sp/>MPD<sp/>is<sp/>regularly<sp/>updated.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>LOG(</highlight><highlight class="stringliteral">&quot;Error!<sp/>Offset<sp/>[%d]<sp/>is<sp/>in<sp/>an<sp/>unknown<sp/>range!&quot;</highlight><highlight class="normal">,<sp/>aOffset);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS_ERROR_ILLEGAL_VALUE;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal">DASHRepDecoder::NetworkError()</highlight></codeline>
+<codeline lineno="266"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/>NS_ASSERTION(NS_IsMainThread(),<sp/></highlight><highlight class="stringliteral">&quot;Should<sp/>be<sp/>on<sp/>main<sp/>thread.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mMainDecoder)<sp/>{<sp/>mMainDecoder-&gt;NetworkError();<sp/>}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal">DASHRepDecoder::SetDuration(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>aDuration)</highlight></codeline>
+<codeline lineno="273"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/>NS_ASSERTION(NS_IsMainThread(),<sp/></highlight><highlight class="stringliteral">&quot;Should<sp/>be<sp/>on<sp/>main<sp/>thread.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mMainDecoder)<sp/>{<sp/>mMainDecoder-&gt;SetDuration(aDuration);<sp/>}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal">DASHRepDecoder::SetInfinite(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>aInfinite)</highlight></codeline>
+<codeline lineno="280"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/>NS_ASSERTION(NS_IsMainThread(),<sp/></highlight><highlight class="stringliteral">&quot;Should<sp/>be<sp/>on<sp/>main<sp/>thread.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mMainDecoder)<sp/>{<sp/>mMainDecoder-&gt;SetInfinite(aInfinite);<sp/>}</highlight></codeline>
+<codeline lineno="283"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal">DASHRepDecoder::SetSeekable(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>aSeekable)</highlight></codeline>
+<codeline lineno="287"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/>NS_ASSERTION(NS_IsMainThread(),<sp/></highlight><highlight class="stringliteral">&quot;Should<sp/>be<sp/>on<sp/>main<sp/>thread.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mMainDecoder)<sp/>{<sp/>mMainDecoder-&gt;SetSeekable(aSeekable);<sp/>}</highlight></codeline>
+<codeline lineno="290"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal">DASHRepDecoder::Progress(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>aTimer)</highlight></codeline>
+<codeline lineno="294"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mMainDecoder)<sp/>{<sp/>mMainDecoder-&gt;Progress(aTimer);<sp/>}</highlight></codeline>
+<codeline lineno="296"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal">DASHRepDecoder::NotifyDataArrived(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>aBuffer,</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>aLength,</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>aOffset)</highlight></codeline>
+<codeline lineno="302"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/>NS_ASSERTION(NS_IsMainThread(),<sp/></highlight><highlight class="stringliteral">&quot;Should<sp/>be<sp/>on<sp/>main<sp/>thread.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/>LOG(</highlight><highlight class="stringliteral">&quot;Data<sp/>bytes<sp/>[%d<sp/>-<sp/>%d]<sp/>arrived<sp/>via<sp/>buffer<sp/>[%p].&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>aOffset,<sp/>aOffset+aLength,<sp/>aBuffer);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Notify<sp/>reader<sp/>directly,<sp/>since<sp/>call<sp/>to<sp/>|MediaDecoderStateMachine|::</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>|NotifyDataArrived|<sp/>will<sp/>go<sp/>to<sp/>|DASHReader|::|NotifyDataArrived|,<sp/>which</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>has<sp/>no<sp/>way<sp/>to<sp/>forward<sp/>the<sp/>notification<sp/>to<sp/>the<sp/>correct<sp/>sub-reader.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mReader)<sp/>{</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>mReader-&gt;NotifyDataArrived(aBuffer,<sp/>aLength,<sp/>aOffset);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Forward<sp/>to<sp/>main<sp/>decoder<sp/>which<sp/>will<sp/>notify<sp/>state<sp/>machine.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mMainDecoder)<sp/>{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>mMainDecoder-&gt;NotifyDataArrived(aBuffer,<sp/>aLength,<sp/>aOffset);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="317"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal">DASHRepDecoder::NotifyBytesDownloaded()</highlight></codeline>
+<codeline lineno="321"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/>NS_ASSERTION(NS_IsMainThread(),<sp/></highlight><highlight class="stringliteral">&quot;Should<sp/>be<sp/>on<sp/>main<sp/>thread.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mMainDecoder)<sp/>{<sp/>mMainDecoder-&gt;NotifyBytesDownloaded();<sp/>}</highlight></codeline>
+<codeline lineno="324"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal">DASHRepDecoder::NotifySuspendedStatusChanged()</highlight></codeline>
+<codeline lineno="328"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/>NS_ASSERTION(NS_IsMainThread(),<sp/></highlight><highlight class="stringliteral">&quot;Should<sp/>be<sp/>on<sp/>main<sp/>thread.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mMainDecoder)<sp/>{<sp/>mMainDecoder-&gt;NotifySuspendedStatusChanged();<sp/>}</highlight></codeline>
+<codeline lineno="331"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal">DASHRepDecoder::OnStateMachineThread()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="335"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(mMainDecoder<sp/>?<sp/>mMainDecoder-&gt;OnStateMachineThread()<sp/>:<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="337"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal">DASHRepDecoder::OnDecodeThread()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="341"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(mMainDecoder<sp/>?<sp/>mMainDecoder-&gt;OnDecodeThread()<sp/>:<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal">ReentrantMonitor&amp;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal">DASHRepDecoder::GetReentrantMonitor()</highlight></codeline>
+<codeline lineno="347"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mMainDecoder-&gt;GetReentrantMonitor();</highlight></codeline>
+<codeline lineno="349"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal">mozilla::layers::ImageContainer*</highlight></codeline>
+<codeline lineno="352"><highlight class="normal">DASHRepDecoder::GetImageContainer()</highlight></codeline>
+<codeline lineno="353"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/>NS_ASSERTION(mMainDecoder<sp/>&amp;&amp;<sp/>mMainDecoder-&gt;OnDecodeThread(),</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Should<sp/>be<sp/>on<sp/>decode<sp/>thread.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(mMainDecoder<sp/>?<sp/>mMainDecoder-&gt;GetImageContainer()<sp/>:<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="357"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal">DASHRepDecoder::DecodeError()</highlight></codeline>
+<codeline lineno="361"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(NS_IsMainThread())<sp/>{</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/>MediaDecoder::DecodeError();</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/>nsCOMPtr&lt;nsIRunnable&gt;<sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal"><sp/>=</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>NS_NewRunnableMethod(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>&amp;MediaDecoder::DecodeError);</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/>nsresult<sp/>rv<sp/>=<sp/>NS_DispatchToMainThread(event,<sp/>NS_DISPATCH_NORMAL);</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(NS_FAILED(rv))<sp/>{</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LOG(</highlight><highlight class="stringliteral">&quot;Error<sp/>dispatching<sp/>DecodeError<sp/>event<sp/>to<sp/>main<sp/>thread:<sp/>rv[%x]&quot;</highlight><highlight class="normal">,<sp/>rv);</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="372"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal">DASHRepDecoder::ReleaseStateMachine()</highlight></codeline>
+<codeline lineno="376"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/>NS_ASSERTION(NS_IsMainThread(),<sp/></highlight><highlight class="stringliteral">&quot;Must<sp/>be<sp/>on<sp/>main<sp/>thread.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Since<sp/>state<sp/>machine<sp/>owns<sp/>mReader,<sp/>remove<sp/>reference<sp/>to<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/>mReader<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/>MediaDecoder::ReleaseStateMachine();</highlight></codeline>
+<codeline lineno="383"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>mozilla</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/tools/mozilla-release/content/media/dash/DASHRepDecoder.cpp"/>
+  </compounddef>
+</doxygen>

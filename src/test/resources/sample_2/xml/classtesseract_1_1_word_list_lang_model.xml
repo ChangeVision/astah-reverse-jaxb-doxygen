@@ -1,0 +1,423 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_word_list_lang_model" kind="class" prot="public">
+    <compoundname>tesseract::WordListLangModel</compoundname>
+    <basecompoundref refid="classtesseract_1_1_lang_model" prot="public" virt="non-virtual">tesseract::LangModel</basecompoundref>
+    <includes refid="word__list__lang__model_8h" local="no">word_list_lang_model.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_word_list_lang_model_1ac96915a27d20aa56617efc4f2eee7783" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::WordListLangModel::kMaxEdge</definition>
+        <argsstring></argsstring>
+        <name>kMaxEdge</name>
+        <initializer>= 512</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" line="71" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_word_list_lang_model_1a048da2008fae87395014153578c623f8" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::WordListLangModel::kMaxDawgEdges</definition>
+        <argsstring></argsstring>
+        <name>kMaxDawgEdges</name>
+        <initializer>= 20000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" line="72" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_word_list_lang_model_1ad1ad6c66ef97fc9572b0c928e317ce30" prot="private" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_cube_reco_context" kindref="compound">CubeRecoContext</ref> *</type>
+        <definition>CubeRecoContext* tesseract::WordListLangModel::cntxt_</definition>
+        <argsstring></argsstring>
+        <name>cntxt_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" line="74" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_word_list_lang_model_1adb4ea4c4711a7503b59b4a80af65241c" prot="private" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_trie" kindref="compound">Trie</ref> *</type>
+        <definition>Trie* tesseract::WordListLangModel::dawg_</definition>
+        <argsstring></argsstring>
+        <name>dawg_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" line="75" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_word_list_lang_model_1ae23ed6d5ff71e12dfe986d81876e24c9" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool tesseract::WordListLangModel::init_</definition>
+        <argsstring></argsstring>
+        <name>init_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" line="76" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_word_list_lang_model_1a555aa61eb20325586260257dce8605ed" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::WordListLangModel::WordListLangModel</definition>
+        <argsstring>(CubeRecoContext *cntxt)</argsstring>
+        <name>WordListLangModel</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_cube_reco_context" kindref="compound">CubeRecoContext</ref> *</type>
+          <declname>cntxt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" line="41" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.cpp" bodystart="29" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_word_list_lang_model_1ac844e1a86d6899330c722dc6983f5cd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::WordListLangModel::~WordListLangModel</definition>
+        <argsstring>()</argsstring>
+        <name>~WordListLangModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" line="42" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.cpp" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_word_list_lang_model_1a773e0620380b5416098db0b86dce5ad8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classtesseract_1_1_lang_mod_edge" kindref="compound">LangModEdge</ref> *</type>
+        <definition>LangModEdge * tesseract::WordListLangModel::Root</definition>
+        <argsstring>()</argsstring>
+        <name>Root</name>
+        <reimplements refid="classtesseract_1_1_lang_model_1a46178bf09d08aa9c8048adb0a8561b75">Root</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" line="44" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.cpp" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_word_list_lang_model_1abe363ed3ef497bbbbf7a985d8f07be2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classtesseract_1_1_lang_mod_edge" kindref="compound">LangModEdge</ref> **</type>
+        <definition>LangModEdge ** tesseract::WordListLangModel::GetEdges</definition>
+        <argsstring>(CharAltList *alt_list, LangModEdge *edge, int *edge_cnt)</argsstring>
+        <name>GetEdges</name>
+        <reimplements refid="classtesseract_1_1_lang_model_1a61071a0736427f808d7134aeeb456701">GetEdges</reimplements>
+        <param>
+          <type><ref refid="classtesseract_1_1_char_alt_list" kindref="compound">CharAltList</ref> *</type>
+          <declname>alt_list</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_lang_mod_edge" kindref="compound">LangModEdge</ref> *</type>
+          <declname>edge</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>edge_cnt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" line="46" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.cpp" bodystart="71" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_word_list_lang_model_1a3466190b26c1ecf2c0ddaf5cc39fe203" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::WordListLangModel::IsValidSequence</definition>
+        <argsstring>(const char_32 *sequence, bool eow_flag, LangModEdge **edges)</argsstring>
+        <name>IsValidSequence</name>
+        <reimplements refid="classtesseract_1_1_lang_model_1a8b2edb01fa6b82d7a0eba6fb28717494">IsValidSequence</reimplements>
+        <param>
+          <type>const <ref refid="namespacetesseract_1aea2c6172b0ca77907e29cd018595b425" kindref="member">char_32</ref> *</type>
+          <declname>sequence</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>eow_flag</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_lang_mod_edge" kindref="compound">LangModEdge</ref> **</type>
+          <declname>edges</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" line="53" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.cpp" bodystart="114" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_word_list_lang_model_1abc0adc44077a4e1ed691bcd8b478cfb6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::WordListLangModel::IsLeadingPunc</definition>
+        <argsstring>(char_32 ch)</argsstring>
+        <name>IsLeadingPunc</name>
+        <reimplements refid="classtesseract_1_1_lang_model_1ade13ad9a3c3f6bb19a1071aa20bffb4b">IsLeadingPunc</reimplements>
+        <param>
+          <type><ref refid="namespacetesseract_1aea2c6172b0ca77907e29cd018595b425" kindref="member">char_32</ref></type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" line="56" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_word_list_lang_model_1a5afdc764c2aeca6646beb04a1a511bf5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::WordListLangModel::IsTrailingPunc</definition>
+        <argsstring>(char_32 ch)</argsstring>
+        <name>IsTrailingPunc</name>
+        <reimplements refid="classtesseract_1_1_lang_model_1a0235bd607e1d0cd00082661e0b71d495">IsTrailingPunc</reimplements>
+        <param>
+          <type><ref refid="namespacetesseract_1aea2c6172b0ca77907e29cd018595b425" kindref="member">char_32</ref></type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" line="57" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_word_list_lang_model_1a43bb8e1972be27eac8870df64720b77b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::WordListLangModel::IsDigit</definition>
+        <argsstring>(char_32 ch)</argsstring>
+        <name>IsDigit</name>
+        <reimplements refid="classtesseract_1_1_lang_model_1aae119709c73d00d731c65588be763a1d">IsDigit</reimplements>
+        <param>
+          <type><ref refid="namespacetesseract_1aea2c6172b0ca77907e29cd018595b425" kindref="member">char_32</ref></type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" line="58" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_word_list_lang_model_1a924a9ca1a4d5ad4ac51e62bf8f17e340" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::WordListLangModel::AddString</definition>
+        <argsstring>(const char *char_ptr)</argsstring>
+        <name>AddString</name>
+        <param>
+          <type>const char *</type>
+          <declname>char_ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" line="60" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.cpp" bodystart="167" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_word_list_lang_model_1a377a15d1f95c5766bc1af48180491d66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::WordListLangModel::AddString32</definition>
+        <argsstring>(const char_32 *char_32_ptr)</argsstring>
+        <name>AddString32</name>
+        <param>
+          <type>const <ref refid="namespacetesseract_1aea2c6172b0ca77907e29cd018595b425" kindref="member">char_32</ref> *</type>
+          <declname>char_32_ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" line="62" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.cpp" bodystart="181" bodyend="204"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classtesseract_1_1_word_list_lang_model_1adbcf8c78ef7738a6ec26521a7057a5e6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::WordListLangModel::WordVariants</definition>
+        <argsstring>(const CharSet &amp;char_set, const UNICHARSET *uchset, string_32 str32, vector&lt; WERD_CHOICE * &gt; *word_variants)</argsstring>
+        <name>WordVariants</name>
+        <param>
+          <type>const <ref refid="classtesseract_1_1_char_set" kindref="compound">CharSet</ref> &amp;</type>
+          <declname>char_set</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_u_n_i_c_h_a_r_s_e_t" kindref="compound">UNICHARSET</ref> *</type>
+          <declname>uchset</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1a5e51e225e3ac13c918ed9f77715fa041" kindref="member">string_32</ref></type>
+          <declname>str32</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="class_w_e_r_d___c_h_o_i_c_e" kindref="compound">WERD_CHOICE</ref> * &gt; *</type>
+          <declname>word_variants</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" line="66" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.cpp" bodystart="154" bodyend="164"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtesseract_1_1_word_list_lang_model_1a43cd28b72063072063c6e2a622c6c6b2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::WordListLangModel::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" line="78" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.cpp" bodystart="49" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_word_list_lang_model_1a14ab69022b9a0d3d314ddd803056a510" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::WordListLangModel::Cleanup</definition>
+        <argsstring>()</argsstring>
+        <name>Cleanup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" line="80" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.cpp" bodystart="40" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classtesseract_1_1_word_list_lang_model_1ac5a10515dee2d97e61bcc83fc9fe2b19" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::WordListLangModel::WordVariants</definition>
+        <argsstring>(const CharSet &amp;char_set, string_32 prefix_str32, WERD_CHOICE *word_so_far, string_32 str32, vector&lt; WERD_CHOICE * &gt; *word_variants)</argsstring>
+        <name>WordVariants</name>
+        <param>
+          <type>const <ref refid="classtesseract_1_1_char_set" kindref="compound">CharSet</ref> &amp;</type>
+          <declname>char_set</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1a5e51e225e3ac13c918ed9f77715fa041" kindref="member">string_32</ref></type>
+          <declname>prefix_str32</declname>
+        </param>
+        <param>
+          <type><ref refid="class_w_e_r_d___c_h_o_i_c_e" kindref="compound">WERD_CHOICE</ref> *</type>
+          <declname>word_so_far</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1a5e51e225e3ac13c918ed9f77715fa041" kindref="member">string_32</ref></type>
+          <declname>str32</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="class_w_e_r_d___c_h_o_i_c_e" kindref="compound">WERD_CHOICE</ref> * &gt; *</type>
+          <declname>word_variants</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" line="82" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.cpp" bodystart="120" bodyend="149"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2507">
+        <label>tesseract::LangModel</label>
+        <link refid="classtesseract_1_1_lang_model"/>
+      </node>
+      <node id="2506">
+        <label>tesseract::WordListLangModel</label>
+        <link refid="classtesseract_1_1_word_list_lang_model"/>
+        <childnode refid="2507" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2509">
+        <label>tesseract::LangModel</label>
+        <link refid="classtesseract_1_1_lang_model"/>
+      </node>
+      <node id="2508">
+        <label>tesseract::WordListLangModel</label>
+        <link refid="classtesseract_1_1_word_list_lang_model"/>
+        <childnode refid="2509" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" line="39" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/word_list_lang_model.h" bodystart="39" bodyend="87"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_word_list_lang_model_1a924a9ca1a4d5ad4ac51e62bf8f17e340" prot="public" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>AddString</name></member>
+      <member refid="classtesseract_1_1_word_list_lang_model_1a377a15d1f95c5766bc1af48180491d66" prot="public" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>AddString32</name></member>
+      <member refid="classtesseract_1_1_word_list_lang_model_1a14ab69022b9a0d3d314ddd803056a510" prot="private" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>Cleanup</name></member>
+      <member refid="classtesseract_1_1_word_list_lang_model_1ad1ad6c66ef97fc9572b0c928e317ce30" prot="private" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>cntxt_</name></member>
+      <member refid="classtesseract_1_1_word_list_lang_model_1adb4ea4c4711a7503b59b4a80af65241c" prot="private" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>dawg_</name></member>
+      <member refid="classtesseract_1_1_word_list_lang_model_1abe363ed3ef497bbbbf7a985d8f07be2f" prot="public" virt="virtual"><scope>tesseract::WordListLangModel</scope><name>GetEdges</name></member>
+      <member refid="classtesseract_1_1_word_list_lang_model_1a43cd28b72063072063c6e2a622c6c6b2" prot="private" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>Init</name></member>
+      <member refid="classtesseract_1_1_word_list_lang_model_1ae23ed6d5ff71e12dfe986d81876e24c9" prot="private" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>init_</name></member>
+      <member refid="classtesseract_1_1_word_list_lang_model_1a43bb8e1972be27eac8870df64720b77b" prot="public" virt="virtual"><scope>tesseract::WordListLangModel</scope><name>IsDigit</name></member>
+      <member refid="classtesseract_1_1_word_list_lang_model_1abc0adc44077a4e1ed691bcd8b478cfb6" prot="public" virt="virtual"><scope>tesseract::WordListLangModel</scope><name>IsLeadingPunc</name></member>
+      <member refid="classtesseract_1_1_word_list_lang_model_1a5afdc764c2aeca6646beb04a1a511bf5" prot="public" virt="virtual"><scope>tesseract::WordListLangModel</scope><name>IsTrailingPunc</name></member>
+      <member refid="classtesseract_1_1_word_list_lang_model_1a3466190b26c1ecf2c0ddaf5cc39fe203" prot="public" virt="virtual"><scope>tesseract::WordListLangModel</scope><name>IsValidSequence</name></member>
+      <member refid="classtesseract_1_1_word_list_lang_model_1a048da2008fae87395014153578c623f8" prot="private" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>kMaxDawgEdges</name></member>
+      <member refid="classtesseract_1_1_word_list_lang_model_1ac96915a27d20aa56617efc4f2eee7783" prot="private" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>kMaxEdge</name></member>
+      <member refid="classtesseract_1_1_lang_model_1abf2f207148aa4563bedc41dbd650bc10" prot="public" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>LangModel</name></member>
+      <member refid="classtesseract_1_1_lang_model_1a99ff66ba44ba88d7b5e47ef779b4844d" prot="public" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>Numeric</name></member>
+      <member refid="classtesseract_1_1_lang_model_1a877e0ae377a2c2b3b2950b497ff1b772" prot="protected" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>numeric_enabled_</name></member>
+      <member refid="classtesseract_1_1_lang_model_1adf7be83dc2b85f86e126ca31ddf7e744" prot="public" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>OOD</name></member>
+      <member refid="classtesseract_1_1_lang_model_1aafdf3a806f6fe7ffbe75d257ecbede56" prot="protected" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>ood_enabled_</name></member>
+      <member refid="classtesseract_1_1_lang_model_1a3a8c70497813e15dbfc42f9990952b19" prot="public" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>Punc</name></member>
+      <member refid="classtesseract_1_1_lang_model_1a70621f842de37a67dd00e7c5a2d97877" prot="protected" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>punc_enabled_</name></member>
+      <member refid="classtesseract_1_1_word_list_lang_model_1a773e0620380b5416098db0b86dce5ad8" prot="public" virt="virtual"><scope>tesseract::WordListLangModel</scope><name>Root</name></member>
+      <member refid="classtesseract_1_1_lang_model_1a7612159b5eca3fd43eedfa9f68d3b79c" prot="public" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>SetNumeric</name></member>
+      <member refid="classtesseract_1_1_lang_model_1a6c4a21482e846de85722a7208240da66" prot="public" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>SetOOD</name></member>
+      <member refid="classtesseract_1_1_lang_model_1ab467aec7089e513e1e891828c7f9b4d3" prot="public" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>SetPunc</name></member>
+      <member refid="classtesseract_1_1_lang_model_1af2d51a52e748886fca42fa6b6f3d2b78" prot="public" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>SetWordList</name></member>
+      <member refid="classtesseract_1_1_lang_model_1aa62a12331a5be9099c7744b74eddeff2" prot="protected" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>word_list_enabled_</name></member>
+      <member refid="classtesseract_1_1_lang_model_1abd7c96a934e736cd3487f6340a1d4433" prot="public" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>WordList</name></member>
+      <member refid="classtesseract_1_1_word_list_lang_model_1a555aa61eb20325586260257dce8605ed" prot="public" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>WordListLangModel</name></member>
+      <member refid="classtesseract_1_1_word_list_lang_model_1adbcf8c78ef7738a6ec26521a7057a5e6" prot="public" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>WordVariants</name></member>
+      <member refid="classtesseract_1_1_word_list_lang_model_1ac5a10515dee2d97e61bcc83fc9fe2b19" prot="private" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>WordVariants</name></member>
+      <member refid="classtesseract_1_1_lang_model_1afff28be0aa6c2451e8a0e32e7c88331f" prot="public" virt="virtual"><scope>tesseract::WordListLangModel</scope><name>~LangModel</name></member>
+      <member refid="classtesseract_1_1_word_list_lang_model_1ac844e1a86d6899330c722dc6983f5cd8" prot="public" virt="non-virtual"><scope>tesseract::WordListLangModel</scope><name>~WordListLangModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

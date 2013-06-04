@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_test_result_decorator_8h" kind="file">
+    <compoundname>TestResultDecorator.h</compoundname>
+    <includes local="yes">TestResult.h</includes>
+    <includedby refid="_synchronized_test_result_8h" local="yes">src/msvc6/testrunner/SynchronizedTestResult.h</includedby>
+    <incdepgraph>
+      <node id="1107">
+        <label>src/msvc6/testrunner/TestResultDecorator.h</label>
+        <link refid="TestResultDecorator.h"/>
+        <childnode refid="1108" relation="include">
+        </childnode>
+      </node>
+      <node id="1108">
+        <label>TestResult.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1110">
+        <label>src/msvc6/testrunner/SynchronizedTestResult.h</label>
+        <link refid="_synchronized_test_result_8h"/>
+      </node>
+      <node id="1109">
+        <label>src/msvc6/testrunner/TestResultDecorator.h</label>
+        <link refid="TestResultDecorator.h"/>
+        <childnode refid="1110" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_test_result_decorator" prot="public">TestResultDecorator</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CPP_UNIT_TESTRESULTDECORATOR_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CPP_UNIT_TESTRESULTDECORATOR_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TestResult.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="class_test_result_decorator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_test_result_decorator" kindref="compound">TestResultDecorator</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_result_decorator_1ad6cc88d83fff20691d6dddd947b49001" kindref="member">TestResultDecorator</ref><sp/>(TestResult<sp/>*result);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_result_decorator_1ae65ec697d07218b95c86db733a936e85" kindref="member">‾TestResultDecorator</ref><sp/>();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_result_decorator_1adf006a2a46fa80b6eb678ca2e3d79e96" kindref="member">shouldStop</ref><sp/><sp/>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_result_decorator_1abd6eae48a8963aca6b0da355dfbaba83" kindref="member">addError</ref><sp/><sp/><sp/><sp/>(Test<sp/>*test,<sp/>CppUnitException<sp/>*e);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_result_decorator_1a26dd53a1e35c64ad63dd6b8c8384b763" kindref="member">addFailure</ref><sp/><sp/>(Test<sp/>*test,<sp/>CppUnitException<sp/>*e);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_result_decorator_1a8c5d58e7793f3ef4a63a2da828202750" kindref="member">startTest</ref><sp/><sp/><sp/>(Test<sp/>*test);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_result_decorator_1a28e9fc30a2fc0ac0f0a55fe149e6c425" kindref="member">endTest</ref><sp/><sp/><sp/><sp/><sp/>(Test<sp/>*test);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_result_decorator_1ab94403932b2dc1a90fd84b30a7f5f6ea" kindref="member">runTests</ref><sp/><sp/><sp/><sp/>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_result_decorator_1aae03615c4b72a5721de5758984f85d0a" kindref="member">testErrors</ref><sp/><sp/>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_result_decorator_1a8377ba89ef027e71bc71a4b14c945a90" kindref="member">testFailures</ref><sp/>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_result_decorator_1a08d6b21754b79741bfd63e569c52d25b" kindref="member">wasSuccessful</ref><sp/>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_result_decorator_1a78bba6a5c926e99b66ef403932dc506b" kindref="member">stop</ref><sp/>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;TestFailure<sp/>*&gt;&amp;<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_result_decorator_1a5cacfc1a463094923ed1d85b0c6bfca7" kindref="member">errors</ref><sp/>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;TestFailure<sp/>*&gt;&amp;<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_result_decorator_1a5312059bc110d2503b24aef4d3095fc9" kindref="member">failures</ref><sp/>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28" refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>TestResult<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_test_result_decorator_1ad6cc88d83fff20691d6dddd947b49001" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1ad6cc88d83fff20691d6dddd947b49001" kindref="member">TestResultDecorator::TestResultDecorator</ref><sp/>(TestResult<sp/>*result)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">:<sp/>m_result<sp/>(result)<sp/>{}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_test_result_decorator_1ae65ec697d07218b95c86db733a936e85" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1ae65ec697d07218b95c86db733a936e85" kindref="member">TestResultDecorator::‾TestResultDecorator</ref><sp/>()</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Returns<sp/>whether<sp/>the<sp/>test<sp/>should<sp/>stop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_test_result_decorator_1adf006a2a46fa80b6eb678ca2e3d79e96" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1adf006a2a46fa80b6eb678ca2e3d79e96" kindref="member">TestResultDecorator::shouldStop</ref><sp/>()</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;shouldStop<sp/>();<sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Adds<sp/>an<sp/>error<sp/>to<sp/>the<sp/>list<sp/>of<sp/>errors.<sp/>The<sp/>passed<sp/>in<sp/>exception</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>caused<sp/>the<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="class_test_result_decorator_1abd6eae48a8963aca6b0da355dfbaba83" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1abd6eae48a8963aca6b0da355dfbaba83" kindref="member">TestResultDecorator::addError</ref><sp/>(Test<sp/>*test,<sp/>CppUnitException<sp/>*e)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{<sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;addError<sp/>(test,<sp/>e);<sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Adds<sp/>a<sp/>failure<sp/>to<sp/>the<sp/>list<sp/>of<sp/>failures.<sp/>The<sp/>passed<sp/>in<sp/>exception</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>caused<sp/>the<sp/>failure.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="class_test_result_decorator_1a26dd53a1e35c64ad63dd6b8c8384b763" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1a26dd53a1e35c64ad63dd6b8c8384b763" kindref="member">TestResultDecorator::addFailure</ref><sp/>(Test<sp/>*test,<sp/>CppUnitException<sp/>*e)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{<sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;addFailure<sp/>(test,<sp/>e);<sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Informs<sp/>the<sp/>result<sp/>that<sp/>a<sp/>test<sp/>will<sp/>be<sp/>started.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="class_test_result_decorator_1a8c5d58e7793f3ef4a63a2da828202750" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1a8c5d58e7793f3ef4a63a2da828202750" kindref="member">TestResultDecorator::startTest</ref><sp/>(Test<sp/>*test)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{<sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;startTest<sp/>(test);<sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Informs<sp/>the<sp/>result<sp/>that<sp/>a<sp/>test<sp/>was<sp/>completed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="class_test_result_decorator_1a28e9fc30a2fc0ac0f0a55fe149e6c425" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1a28e9fc30a2fc0ac0f0a55fe149e6c425" kindref="member">TestResultDecorator::endTest</ref><sp/>(Test<sp/>*test)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{<sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;endTest<sp/>(test);<sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Gets<sp/>the<sp/>number<sp/>of<sp/>run<sp/>tests.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_test_result_decorator_1ab94403932b2dc1a90fd84b30a7f5f6ea" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1ab94403932b2dc1a90fd84b30a7f5f6ea" kindref="member">TestResultDecorator::runTests</ref><sp/>()</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;runTests<sp/>();<sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Gets<sp/>the<sp/>number<sp/>of<sp/>detected<sp/>errors.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="class_test_result_decorator_1aae03615c4b72a5721de5758984f85d0a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1aae03615c4b72a5721de5758984f85d0a" kindref="member">TestResultDecorator::testErrors</ref><sp/>()</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;testErrors<sp/>();<sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Gets<sp/>the<sp/>number<sp/>of<sp/>detected<sp/>failures.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="class_test_result_decorator_1a8377ba89ef027e71bc71a4b14c945a90" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1a8377ba89ef027e71bc71a4b14c945a90" kindref="member">TestResultDecorator::testFailures</ref><sp/>()</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;testFailures<sp/>();<sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Returns<sp/>whether<sp/>the<sp/>entire<sp/>test<sp/>was<sp/>successful<sp/>or<sp/>not.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="class_test_result_decorator_1a08d6b21754b79741bfd63e569c52d25b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1a08d6b21754b79741bfd63e569c52d25b" kindref="member">TestResultDecorator::wasSuccessful</ref><sp/>()</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;wasSuccessful<sp/>();<sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Marks<sp/>that<sp/>the<sp/>test<sp/>run<sp/>should<sp/>stop.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="class_test_result_decorator_1a78bba6a5c926e99b66ef403932dc506b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1a78bba6a5c926e99b66ef403932dc506b" kindref="member">TestResultDecorator::stop</ref><sp/>()</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">{<sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;stop<sp/>();<sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Returns<sp/>a<sp/>vector<sp/>of<sp/>the<sp/>errors.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="class_test_result_decorator_1a5cacfc1a463094923ed1d85b0c6bfca7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>vector&lt;TestFailure<sp/>*&gt;&amp;<sp/><ref refid="class_test_result_decorator_1a5cacfc1a463094923ed1d85b0c6bfca7" kindref="member">TestResultDecorator::errors</ref><sp/>()</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;errors<sp/>();<sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Returns<sp/>a<sp/>vector<sp/>of<sp/>the<sp/>failures.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="class_test_result_decorator_1a5312059bc110d2503b24aef4d3095fc9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>vector&lt;TestFailure<sp/>*&gt;&amp;<sp/><ref refid="class_test_result_decorator_1a5312059bc110d2503b24aef4d3095fc9" kindref="member">TestResultDecorator::failures</ref><sp/>()</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;failures<sp/>();<sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="101"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestResultDecorator.h"/>
+  </compounddef>
+</doxygen>

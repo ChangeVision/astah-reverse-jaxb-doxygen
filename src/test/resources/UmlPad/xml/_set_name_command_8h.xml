@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_set_name_command_8h" kind="file">
+    <compoundname>SetNameCommand.h</compoundname>
+    <includes local="no">Foundation/Foundation.h</includes>
+    <includes refid="_modify_command_8h" local="yes">ModifyCommand.h</includes>
+    <includedby refid="_edit_class_controller_8m" local="yes">Classes/EditClassController.m</includedby>
+    <includedby refid="_edit_text_pop_over_controller_8m" local="yes">Classes/EditTextPopOverController.m</includedby>
+    <includedby refid="_set_name_command_8m" local="yes">Classes/SetNameCommand.m</includedby>
+    <incdepgraph>
+      <node id="2076">
+        <label>ModifyCommand.h</label>
+        <link refid="_modify_command_8h"/>
+        <childnode refid="2075" relation="include">
+        </childnode>
+        <childnode refid="2077" relation="include">
+        </childnode>
+        <childnode refid="2078" relation="include">
+        </childnode>
+      </node>
+      <node id="2078">
+        <label>ViewElement.h</label>
+        <link refid="_view_element_8h"/>
+        <childnode refid="2079" relation="include">
+        </childnode>
+      </node>
+      <node id="2079">
+        <label>UIKit/UIKit.h</label>
+      </node>
+      <node id="2074">
+        <label>Classes/SetNameCommand.h</label>
+        <link refid="SetNameCommand.h"/>
+        <childnode refid="2075" relation="include">
+        </childnode>
+        <childnode refid="2076" relation="include">
+        </childnode>
+      </node>
+      <node id="2075">
+        <label>Foundation/Foundation.h</label>
+      </node>
+      <node id="2077">
+        <label>Command.h</label>
+        <link refid="_command_8h"/>
+        <childnode refid="2075" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2080">
+        <label>Classes/SetNameCommand.h</label>
+        <link refid="SetNameCommand.h"/>
+        <childnode refid="2081" relation="include">
+        </childnode>
+        <childnode refid="2082" relation="include">
+        </childnode>
+        <childnode refid="2083" relation="include">
+        </childnode>
+      </node>
+      <node id="2083">
+        <label>Classes/SetNameCommand.m</label>
+        <link refid="_set_name_command_8m"/>
+      </node>
+      <node id="2081">
+        <label>Classes/EditClassController.m</label>
+        <link refid="_edit_class_controller_8m"/>
+      </node>
+      <node id="2082">
+        <label>Classes/EditTextPopOverController.m</label>
+        <link refid="_edit_text_pop_over_controller_8m"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="interface_set_name_command" prot="public">SetNameCommand</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>SetNameCommand.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>UmlPad</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>梅田<sp/>政利<sp/>on<sp/>10/06/17.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>2010<sp/>Change<sp/>Vision.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;Foundation/Foundation.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_modify_command_8h" kindref="compound">ModifyCommand.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_view_element" kindref="compound">ViewElement</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="interface_set_name_command" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_set_name_command" kindref="compound">SetNameCommand</ref><sp/>:<sp/><ref refid="interface_modify_command" kindref="compound">ModifyCommand</ref><sp/>{</highlight></codeline>
+<codeline lineno="15" refid="interface_set_name_command_1ad7b101836141257e2adfb1a1a4a5f539" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>NSString<sp/>*<ref refid="interface_set_name_command_1ad7b101836141257e2adfb1a1a4a5f539" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(nonatomic,<sp/>retain)<sp/>NSString<sp/>*name;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">-<sp/>(void)setName:(<ref refid="interface_view_element" kindref="compound">ViewElement</ref><sp/>*)ve<sp/>name:(NSString<sp/>*)newName;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/SetNameCommand.h"/>
+  </compounddef>
+</doxygen>

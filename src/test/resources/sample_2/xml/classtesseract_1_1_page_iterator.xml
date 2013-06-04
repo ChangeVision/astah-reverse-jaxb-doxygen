@@ -1,0 +1,1219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_page_iterator" kind="class" prot="public">
+    <compoundname>tesseract::PageIterator</compoundname>
+    <derivedcompoundref refid="classtesseract_1_1_l_t_r_result_iterator" prot="public" virt="non-virtual">tesseract::LTRResultIterator</derivedcompoundref>
+    <includes refid="pageiterator_8h" local="no">pageiterator.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_page_iterator_1a480fee3b9cf81df1745ab671c5f28788" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_p_a_g_e___r_e_s" kindref="compound">PAGE_RES</ref> *</type>
+        <definition>PAGE_RES* tesseract::PageIterator::page_res_</definition>
+        <argsstring></argsstring>
+        <name>page_res_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to the page_res owned by the API. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="293" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" bodystart="293" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_page_iterator_1acca34c1adcf494eca7dfefe74258f991" prot="protected" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref> *</type>
+        <definition>Tesseract* tesseract::PageIterator::tesseract_</definition>
+        <argsstring></argsstring>
+        <name>tesseract_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to the <ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref> object owned by the API. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="295" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_page_iterator_1a42df7b8e352be1e5a140787109419f93" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_p_a_g_e___r_e_s___i_t" kindref="compound">PAGE_RES_IT</ref> *</type>
+        <definition>PAGE_RES_IT* tesseract::PageIterator::it_</definition>
+        <argsstring></argsstring>
+        <name>it_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The iterator to the page_res_. Owned by this <ref refid="classtesseract_1_1_result_iterator" kindref="compound">ResultIterator</ref>. A pointer just to avoid dragging in <ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref> includes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="300" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_page_iterator_1a409db505129bcd894cbe20b77f7663bb" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_w_e_r_d" kindref="compound">WERD</ref> *</type>
+        <definition>WERD* tesseract::PageIterator::word_</definition>
+        <argsstring></argsstring>
+        <name>word_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current input <ref refid="class_w_e_r_d" kindref="compound">WERD</ref> being iterated. If there is an output from OCR, then word_ is NULL. Owned by the API </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="305" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_page_iterator_1a5bcc04bef9fefefc856440bcfe15d9ab" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::PageIterator::word_length_</definition>
+        <argsstring></argsstring>
+        <name>word_length_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The length of the current word_. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="307" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_page_iterator_1a98d81a4da55f06637a0db60ac33cc814" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::PageIterator::blob_index_</definition>
+        <argsstring></argsstring>
+        <name>blob_index_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current blob index within the word. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="309" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_page_iterator_1a4ea0a38b584bbc0047792ebe6b0294ce" prot="protected" static="no" mutable="no">
+        <type>C_BLOB_IT *</type>
+        <definition>C_BLOB_IT* tesseract::PageIterator::cblob_it_</definition>
+        <argsstring></argsstring>
+        <name>cblob_it_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Iterator to the blobs within the word. If NULL, then we are iterating OCR results in the box_word. Owned by this <ref refid="classtesseract_1_1_result_iterator" kindref="compound">ResultIterator</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="315" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" bodystart="315" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_page_iterator_1ae72a89d863ac231b9cfbab4c6004ad3d" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::PageIterator::scale_</definition>
+        <argsstring></argsstring>
+        <name>scale_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parameters saved from the Thresholder. Needed to rebuild coordinates. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="317" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_page_iterator_1a43f0c51fac0f0e60139487d5868812a3" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::PageIterator::scaled_yres_</definition>
+        <argsstring></argsstring>
+        <name>scaled_yres_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="318" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_page_iterator_1a2e33ff0e1d949366720fe29a7203f57e" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::PageIterator::rect_left_</definition>
+        <argsstring></argsstring>
+        <name>rect_left_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="319" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" bodystart="319" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_page_iterator_1a7c33ac80eda9144c2b857963457ace9c" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::PageIterator::rect_top_</definition>
+        <argsstring></argsstring>
+        <name>rect_top_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="320" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_page_iterator_1aa8eba0c6367dd6349fe903ac7c3860a4" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::PageIterator::rect_width_</definition>
+        <argsstring></argsstring>
+        <name>rect_width_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="321" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_page_iterator_1a66e96ed36eeed8b9da723c397910f9e9" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::PageIterator::rect_height_</definition>
+        <argsstring></argsstring>
+        <name>rect_height_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="322" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" bodystart="322" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1ad9f7980a1c4b008c90bb860d5aa82f48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::PageIterator::PageIterator</definition>
+        <argsstring>(PAGE_RES *page_res, Tesseract *tesseract, int scale, int scaled_yres, int rect_left, int rect_top, int rect_width, int rect_height)</argsstring>
+        <name>PageIterator</name>
+        <param>
+          <type><ref refid="class_p_a_g_e___r_e_s" kindref="compound">PAGE_RES</ref> *</type>
+          <declname>page_res</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref> *</type>
+          <declname>tesseract</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>scaled_yres</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rect_left</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rect_top</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rect_width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rect_height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>page_res and tesseract come directly from the BaseAPI. The rectangle parameters are copied indirectly from the Thresholder, via the BaseAPI. They represent the coordinates of some rectangle in an original image (in top-left-origin coordinates) and therefore the top-left needs to be added to any output boxes in order to specify coordinates in the original image. See <ref refid="group___advanced_a_p_i_1ga284228c7e9d18bbbd3984d44e252d625" kindref="member">TessBaseAPI::SetRectangle</ref>. The scale and scaled_yres are in case the Thresholder scaled the image rectangle prior to thresholding. Any coordinates in tesseract&apos;s image must be divided by scale before adding (rect_left, rect_top). The scaled_yres indicates the effective resolution of the binary image that tesseract has been given by the Thresholder. After the constructor, Begin has already been called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="67" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="29" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1acc314df15e768cffeef57957038e3bf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>tesseract::PageIterator::~PageIterator</definition>
+        <argsstring>()</argsstring>
+        <name>~PageIterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="71" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1a578df2b00868be69cad7b8237400fb38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::PageIterator::PageIterator</definition>
+        <argsstring>(const PageIterator &amp;src)</argsstring>
+        <name>PageIterator</name>
+        <param>
+          <type>const <ref refid="classtesseract_1_1_page_iterator" kindref="compound">PageIterator</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Page/ResultIterators may be copied! This makes it possible to iterate over all the objects at a lower level, while maintaining an iterator to objects at a higher level. These constructors DO NOT CALL Begin, so iterations will continue from the location of src.</para><para>PageIterators may be copied! This makes it possible to iterate over all the objects at a lower level, while maintaining an iterator to objects at a higher level. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="79" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="52" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1a8c00d22a9b005df7b9d00e91e54f6c07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classtesseract_1_1_page_iterator" kindref="compound">PageIterator</ref> &amp;</type>
+        <definition>const PageIterator &amp; tesseract::PageIterator::operator=</definition>
+        <argsstring>(const PageIterator &amp;src)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classtesseract_1_1_page_iterator" kindref="compound">PageIterator</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="80" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="63" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1a482f7760a270137905bebb530df2ef46" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::PageIterator::PositionedAtSameWord</definition>
+        <argsstring>(const PAGE_RES_IT *other) const </argsstring>
+        <name>PositionedAtSameWord</name>
+        <param>
+          <type>const <ref refid="class_p_a_g_e___r_e_s___i_t" kindref="compound">PAGE_RES_IT</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Are we positioned at the same location as other? </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="83" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="78" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1a5cc369eb577150a3a677f9c342ce1240" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void tesseract::PageIterator::Begin</definition>
+        <argsstring>()</argsstring>
+        <name>Begin</name>
+        <reimplementedby refid="classtesseract_1_1_result_iterator_1a36e6fd5587628440bb19b84648645676">Begin</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Moves the iterator to point to the start of the page to begin an iteration.</para><para>Resets the iterator to point to the start of the page. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="91" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="86" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1a7da35cf3d398285ff9d0d0bcc277c9af" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void tesseract::PageIterator::RestartParagraph</definition>
+        <argsstring>()</argsstring>
+        <name>RestartParagraph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Moves the iterator to the beginning of the paragraph. This class implements this functionality by moving it to the zero indexed blob of the first (leftmost) word on the first row of the paragraph. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="98" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="91" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1a16925fbe4a6264cda66fc901d74e1c8b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::PageIterator::IsWithinFirstTextlineOfParagraph</definition>
+        <argsstring>() const </argsstring>
+        <name>IsWithinFirstTextlineOfParagraph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return whether this iterator points anywhere in the first textline of a paragraph. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="104" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="104" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1a2df743d478df34f1a239cf9675f82be0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void tesseract::PageIterator::RestartRow</definition>
+        <argsstring>()</argsstring>
+        <name>RestartRow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Moves the iterator to the beginning of the text line. This class implements this functionality by moving it to the zero indexed blob of the first (leftmost) word of the row. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="111" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="110" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1a415ea7c61e24868bc67e676184be0bb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::PageIterator::Next</definition>
+        <argsstring>(PageIteratorLevel level)</argsstring>
+        <name>Next</name>
+        <reimplementedby refid="classtesseract_1_1_result_iterator_1abd8987e2387f1945b53cf23f99b663e1">Next</reimplementedby>
+        <param>
+          <type><ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Moves to the start of the next object at the given level in the page hierarchy, and returns false if the end of the page was reached. NOTE that RIL_SYMBOL will skip non-text blocks, but all other PageIteratorLevel level values will visit each non-text block once. Think of non text blocks as containing a single para, with a single line, with a single imaginary word. Calls to Next with different levels may be freely intermixed. This function iterates words in right-to-left scripts correctly, if the appropriate language has been loaded into <ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref>.</para><para>Moves to the start of the next object at the given level in the page hierarchy, and returns false if the end of the page was reached. NOTE (CHANGED!) that ALL PageIteratorLevel level values will visit each non-text block at least once. Think of non text blocks as containing a single para, with at least one line, with a single imaginary word, containing a single symbol. The bounding boxes mark out any polygonal nature of the block, and PTIsTextType(BLockType()) is false for non-text blocks. Calls to Next with different levels may be freely intermixed. This function iterates words in right-to-left scripts correctly, if the appropriate language has been loaded into <ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="124" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="128" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1ad822e0b706ebba5c8ea55505438b4dee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::PageIterator::IsAtBeginningOf</definition>
+        <argsstring>(PageIteratorLevel level) const </argsstring>
+        <name>IsAtBeginningOf</name>
+        <reimplementedby refid="classtesseract_1_1_result_iterator_1a983b601204f2fee0428213c4fca779e1">IsAtBeginningOf</reimplementedby>
+        <param>
+          <type><ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true if the iterator is at the start of an object at the given level.</para><para>For instance, suppose an iterator it is pointed to the first symbol of the first word of the third line of the second paragraph of the first block in a page, then: it.IsAtBeginningOf(RIL_BLOCK) = false it.IsAtBeginningOf(RIL_PARA) = false it.IsAtBeginningOf(RIL_TEXTLINE) = true it.IsAtBeginningOf(RIL_WORD) = true it.IsAtBeginningOf(RIL_SYMBOL) = true</para><para>Returns true if the iterator is at the start of an object at the given level. Possible uses include determining if a call to Next(RIL_WORD) moved to the start of a RIL_PARA. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="139" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="166" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1af9db4780e93dd192f7cee28f11476cce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::PageIterator::IsAtFinalElement</definition>
+        <argsstring>(PageIteratorLevel level, PageIteratorLevel element) const </argsstring>
+        <name>IsAtFinalElement</name>
+        <reimplementedby refid="classtesseract_1_1_result_iterator_1a4ba47a7d01d3bc7f0fbf777605f8297d">IsAtFinalElement</reimplementedby>
+        <param>
+          <type><ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref></type>
+          <declname>element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether the iterator is positioned at the last element in a given level. (e.g. the last word in a line, the last line in a block) <verbatim>Here&apos;s some two-paragraph example
+</verbatim> text. It starts off innocuously enough but quickly turns bizarre. The author inserts a cornucopia of words to guard against confused references.</para><para>Now take an iterator it pointed to the start of &quot;bizarre.&quot; it.IsAtFinalElement(RIL_PARA, RIL_SYMBOL) = false it.IsAtFinalElement(RIL_PARA, RIL_WORD) = true it.IsAtFinalElement(RIL_BLOCK, RIL_WORD) = false</para><para>Returns whether the iterator is positioned at the last element in a given level. (e.g. the last word in a line, the last line in a block) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="157" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="190" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1a81ff358816d9532f550ee3620d7eb18a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::PageIterator::Cmp</definition>
+        <argsstring>(const PageIterator &amp;other) const </argsstring>
+        <name>Cmp</name>
+        <param>
+          <type>const <ref refid="classtesseract_1_1_page_iterator" kindref="compound">PageIterator</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether this iterator is positioned before other: -1 equal to other: 0 after other: 1 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="166" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="216" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1a38f6d7da2a9b9ef8983286383729fa73" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::PageIterator::BoundingBox</definition>
+        <argsstring>(PageIteratorLevel level, int *left, int *top, int *right, int *bottom) const </argsstring>
+        <name>BoundingBox</name>
+        <param>
+          <type><ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>top</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>right</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>bottom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the bounding rectangle of the current object at the given level. See comment on coordinate system above. Returns false if there is no such object at the current position. The returned bounding box is guaranteed to match the size and position of the image returned by GetBinaryImage, but may clip foreground pixels from a grey image. The padding argument to GetImage can be used to expand the image to include more foreground pixels. See GetImage below.</para><para>Returns the bounding rectangle of the current object at the given level in coordinates of the original image. See comment on coordinate system above. Returns false if there is no such object at the current position. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="190" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="303" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1a2351fffe02706e3cd35b97cb89e6242d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::PageIterator::BoundingBoxInternal</definition>
+        <argsstring>(PageIteratorLevel level, int *left, int *top, int *right, int *bottom) const </argsstring>
+        <name>BoundingBoxInternal</name>
+        <param>
+          <type><ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>top</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>right</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>bottom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the bounding rectangle of the object in a coordinate system of the working image rectangle having its origin at (rect_left_, rect_top_) with respect to the original image and is scaled by a factor scale_.</para><para>Returns the bounding rectangle of the current object at the given level in the coordinates of the working image that is pix_binary(). See comment on coordinate system above. Returns false if there is no such object at the current position. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="197" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="246" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1ae1d2f1725fabeafb6e235ccb482d47d6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::PageIterator::Empty</definition>
+        <argsstring>(PageIteratorLevel level) const </argsstring>
+        <name>Empty</name>
+        <param>
+          <type><ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether there is no object of a given level.</para><para>Return that there is no such object at a given level. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="201" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="321" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1a26c0bc6c991feaf5615f2941b13d0977" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="publictypes_8h_1a03566528a98c079dafeebf00502f2b60" kindref="member">PolyBlockType</ref></type>
+        <definition>PolyBlockType tesseract::PageIterator::BlockType</definition>
+        <argsstring>() const </argsstring>
+        <name>BlockType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the type of the current block. See <ref refid="apitypes_8h" kindref="compound">apitypes.h</ref> for PolyBlockType. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="207" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="330" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1ad8fb0c95849e23f3c67ab1e765e50ae8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Pix *</type>
+        <definition>Pix * tesseract::PageIterator::GetBinaryImage</definition>
+        <argsstring>(PageIteratorLevel level) const </argsstring>
+        <name>GetBinaryImage</name>
+        <param>
+          <type><ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a binary image of the current object at the given level. The position and size match the return from BoundingBoxInternal, and so this could be upscaled with respect to the original input image. Use pixDestroy to delete the image after use.</para><para>Returns a binary image of the current object at the given level. The position and size match the return from BoundingBoxInternal, and so this could be upscaled with respect to the original input image. Use pixDestroy to delete the image after use. The following methods are used to generate the images: RIL_BLOCK: mask the page image with the block polygon. RIL_TEXTLINE: Clip the rectangle of the line box from the page image. TODO(rays) fix this to generate and use a line polygon. RIL_WORD: Clip the rectangle of the word box from the page image. RIL_SYMBOL: Render the symbol outline to an image for cblobs (prior to recognition) or the bounding box otherwise. A reconstruction of the original image (using xor to check for double representation) should be reasonably accurate, apart from removed noise, at the block level. Below the block level, the reconstruction will be missing images and line separators. At the symbol level, kerned characters will be invade the bounding box if rendered after recognition, making an xor reconstruction inaccurate, but an or construction better. Before recognition, symbol-level reconstruction should be good, even with xor, since the images come from the connected components. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="215" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="360" bodyend="399"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1ae2a030573b6488da77f8e7c4d7bc89ab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Pix *</type>
+        <definition>Pix * tesseract::PageIterator::GetImage</definition>
+        <argsstring>(PageIteratorLevel level, int padding, int *left, int *top) const </argsstring>
+        <name>GetImage</name>
+        <param>
+          <type><ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>padding</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>top</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns an image of the current object at the given level in greyscale if available in the input. To guarantee a binary image use BinaryImage. NOTE that in order to give the best possible image, the bounds are expanded slightly over the binary connected component, by the supplied padding, so the top-left position of the returned image is returned in (left,top). These will most likely not match the coordinates returned by BoundingBox. Use pixDestroy to delete the image after use. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="227" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="411" bodyend="441"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1a7a9cd753bf6a74e5fd953a93930c242f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::PageIterator::Baseline</definition>
+        <argsstring>(PageIteratorLevel level, int *x1, int *y1, int *x2, int *y2) const </argsstring>
+        <name>Baseline</name>
+        <param>
+          <type><ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>y2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the baseline of the current object at the given level. The baseline is the line that passes through (x1, y1) and (x2, y2). WARNING: with vertical text, baselines may be vertical! Returns false if there is no baseline at the current position.</para><para>Returns the baseline of the current object at the given level. The baseline is the line that passes through (x1, y1) and (x2, y2). WARNING: with vertical text, baselines may be vertical! </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="236" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="448" bodyend="468"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1a4e7bfaa12388753931a788ef688cc958" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::PageIterator::Orientation</definition>
+        <argsstring>(tesseract::Orientation *orientation, tesseract::WritingDirection *writing_direction, tesseract::TextlineOrder *textline_order, float *deskew_angle) const </argsstring>
+        <name>Orientation</name>
+        <param>
+          <type><ref refid="namespacetesseract_1a76ce0248fd3ba576ca053e9bb82e492f" kindref="member">tesseract::Orientation</ref> *</type>
+          <declname>orientation</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1acac5bfbc6e9f8ca26f42ea3bad95d84e" kindref="member">tesseract::WritingDirection</ref> *</type>
+          <declname>writing_direction</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1a28b14f9ab9d686fb45e130abc15c1781" kindref="member">tesseract::TextlineOrder</ref> *</type>
+          <declname>textline_order</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>deskew_angle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns orientation for the block the iterator points to. orientation, writing_direction, textline_order: see <ref refid="publictypes_8h" kindref="compound">publictypes.h</ref> deskew_angle: after rotating the block so the text orientation is upright, how many radians does one have to rotate the block anti-clockwise for it to be level? -Pi/4 &lt;= deskew_angle &lt;= Pi/4 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="247" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="470" bodyend="514"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1a49778d4f782c34d1f466623a6b454a24" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::PageIterator::ParagraphInfo</definition>
+        <argsstring>(tesseract::ParagraphJustification *justification, bool *is_list_item, bool *is_crown, int *first_line_indent) const </argsstring>
+        <name>ParagraphInfo</name>
+        <param>
+          <type><ref refid="namespacetesseract_1a550970d1662b3ac5830c6a28dba676b1" kindref="member">tesseract::ParagraphJustification</ref> *</type>
+          <declname>justification</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>is_list_item</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>is_crown</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>first_line_indent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns information about the current paragraph, if available.</para><para>justification - LEFT if ragged right, or fully justified and script is left-to-right. RIGHT if ragged left, or fully justified and script is right-to-left. unknown if it looks like source code or we have very few lines. is_list_item - true if we believe this is a member of an ordered or unordered list. is_crown - true if the first line of the paragraph is aligned with the other lines of the paragraph even though subsequent paragraphs have first line indents. This typically indicates that this is the continuation of a previous paragraph or that it is the very first paragraph in the chapter. first_line_indent - For LEFT aligned paragraphs, the first text line of paragraphs of this kind are indented this many pixels from the left edge of the rest of the paragraph. for RIGHT aligned paragraphs, the first text line of paragraphs of this kind are indented this many pixels from the right edge of the rest of the paragraph. NOTE 1: This value may be negative. NOTE 2: if *is_crown == true, the first line of this paragraph is actually flush, and first_line_indent is set to the &quot;common&quot; first_line_indent for subsequent paragraphs in this block of text. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="280" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="516" bodyend="530"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classtesseract_1_1_page_iterator_1a9075e98e75619ca5e1270a0a6eb2c352" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="platform_8h_1aefcd819eeed9085ef0eeeff0f4cac64f" kindref="member">TESS_LOCAL</ref> void</type>
+        <definition>void tesseract::PageIterator::BeginWord</definition>
+        <argsstring>(int offset)</argsstring>
+        <name>BeginWord</name>
+        <param>
+          <type>int</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets up the internal data for iterating the blobs of a new word, then moves the iterator to the given offset. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="290" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.cpp" bodystart="536" bodyend="575"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class to iterate over tesseract page structure, providing access to all levels of the page hierarchy, without including any tesseract headers or having to handle any tesseract structures. WARNING! This class points to data held within the <ref refid="classtesseract_1_1_tess_base_a_p_i" kindref="compound">TessBaseAPI</ref> class, and therefore can only be used while the <ref refid="classtesseract_1_1_tess_base_a_p_i" kindref="compound">TessBaseAPI</ref> class still exists and has not been subjected to a call of Init, SetImage, Recognize, Clear, End DetectOS, or anything else that changes the internal <ref refid="class_p_a_g_e___r_e_s" kindref="compound">PAGE_RES</ref>. See <ref refid="apitypes_8h" kindref="compound">apitypes.h</ref> for the definition of PageIteratorLevel. See also <ref refid="classtesseract_1_1_result_iterator" kindref="compound">ResultIterator</ref>, derived from <ref refid="classtesseract_1_1_page_iterator" kindref="compound">PageIterator</ref>, which adds in the ability to access OCR output with text-specific methods. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1509">
+        <label>tesseract::ResultIterator</label>
+        <link refid="classtesseract_1_1_result_iterator"/>
+        <childnode refid="1508" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1507">
+        <label>tesseract::PageIterator</label>
+        <link refid="classtesseract_1_1_page_iterator"/>
+      </node>
+      <node id="1510">
+        <label>tesseract::MutableIterator</label>
+        <link refid="classtesseract_1_1_mutable_iterator"/>
+        <childnode refid="1509" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1508">
+        <label>tesseract::LTRResultIterator</label>
+        <link refid="classtesseract_1_1_l_t_r_result_iterator"/>
+        <childnode refid="1507" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1513">
+        <label>tesseract::Wordrec</label>
+        <link refid="classtesseract_1_1_wordrec"/>
+        <childnode refid="1514" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1549" relation="usage">
+          <edgelabel>prev_word_best_choice_</edgelabel>
+        </childnode>
+        <childnode refid="1550" relation="usage">
+          <edgelabel>last_segmentation</edgelabel>
+        </childnode>
+        <childnode refid="1551" relation="usage">
+          <edgelabel>blob_match_table</edgelabel>
+        </childnode>
+        <childnode refid="1552" relation="usage">
+          <edgelabel>language_model_</edgelabel>
+        </childnode>
+        <childnode refid="1563" relation="usage">
+          <edgelabel>blame_reasons_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1532">
+        <label>list_rec</label>
+        <link refid="structlist__rec"/>
+        <childnode refid="1532" relation="usage">
+          <edgelabel>node</edgelabel>
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+      <node id="1566">
+        <label>WERD</label>
+        <link refid="class_w_e_r_d"/>
+        <childnode refid="1567" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1531">
+        <label>TEMP_CONFIG_STRUCT</label>
+        <link refid="struct_t_e_m_p___c_o_n_f_i_g___s_t_r_u_c_t"/>
+        <childnode refid="1532" relation="usage">
+          <edgelabel>ContextsSeen</edgelabel>
+        </childnode>
+      </node>
+      <node id="1520">
+        <label>STRING</label>
+        <link refid="class_s_t_r_i_n_g"/>
+      </node>
+      <node id="1561">
+        <label>TessResultCallback2&lt; bool, bool *const &amp;, bool *const &amp; &gt;</label>
+        <link refid="class_tess_result_callback2"/>
+      </node>
+      <node id="1570">
+        <label>GenericVector&lt; STRING &gt;</label>
+        <link refid="class_generic_vector"/>
+        <childnode refid="1520" relation="usage">
+          <edgelabel>data_</edgelabel>
+        </childnode>
+        <childnode refid="1571" relation="usage">
+          <edgelabel>clear_cb_</edgelabel>
+        </childnode>
+        <childnode refid="1572" relation="usage">
+          <edgelabel>compare_cb_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1538">
+        <label>NORM_PROTOS</label>
+        <link refid="struct_n_o_r_m___p_r_o_t_o_s"/>
+        <childnode refid="1532" relation="usage">
+          <edgelabel>Protos</edgelabel>
+        </childnode>
+        <childnode refid="1539" relation="usage">
+          <edgelabel>ParamDesc</edgelabel>
+        </childnode>
+      </node>
+      <node id="1530">
+        <label>PERM_CONFIG_STRUCT</label>
+        <link refid="struct_p_e_r_m___c_o_n_f_i_g___s_t_r_u_c_t"/>
+      </node>
+      <node id="1553">
+        <label>tesseract::Dict</label>
+        <link refid="classtesseract_1_1_dict"/>
+      </node>
+      <node id="1568">
+        <label>PAGE_RES_IT</label>
+        <link refid="class_p_a_g_e___r_e_s___i_t"/>
+        <childnode refid="1569" relation="usage">
+          <edgelabel>page_res</edgelabel>
+        </childnode>
+      </node>
+      <node id="1546">
+        <label>FEATURE_STRUCT</label>
+        <link refid="struct_f_e_a_t_u_r_e___s_t_r_u_c_t"/>
+        <childnode refid="1547" relation="usage">
+          <edgelabel>Type</edgelabel>
+        </childnode>
+      </node>
+      <node id="1541">
+        <label>tesseract::ShapeTable</label>
+        <link refid="classtesseract_1_1_shape_table"/>
+      </node>
+      <node id="1517">
+        <label>tesseract::CCUtil</label>
+        <link refid="classtesseract_1_1_c_c_util"/>
+        <childnode refid="1518" relation="usage">
+          <edgelabel>use_definite_ambigs_for_classifier</edgelabel>
+          <edgelabel>use_ambigs_for_adaption</edgelabel>
+        </childnode>
+        <childnode refid="1520" relation="usage">
+          <edgelabel>directory</edgelabel>
+          <edgelabel>language_data_path_prefix</edgelabel>
+          <edgelabel>imagebasename</edgelabel>
+          <edgelabel>datadir</edgelabel>
+          <edgelabel>imagefile</edgelabel>
+          <edgelabel>lang</edgelabel>
+        </childnode>
+        <childnode refid="1521" relation="usage">
+          <edgelabel>unicharset</edgelabel>
+        </childnode>
+        <childnode refid="1522" relation="usage">
+          <edgelabel>tessdata_manager</edgelabel>
+        </childnode>
+        <childnode refid="1523" relation="usage">
+          <edgelabel>m_data_sub_dir</edgelabel>
+        </childnode>
+        <childnode refid="1524" relation="usage">
+          <edgelabel>unichar_ambigs</edgelabel>
+        </childnode>
+        <childnode refid="1525" relation="usage">
+          <edgelabel>ambigs_debug_level</edgelabel>
+        </childnode>
+      </node>
+      <node id="1547">
+        <label>FEATURE_DESC_STRUCT</label>
+        <link refid="struct_f_e_a_t_u_r_e___d_e_s_c___s_t_r_u_c_t"/>
+        <childnode refid="1539" relation="usage">
+          <edgelabel>ParamDesc</edgelabel>
+        </childnode>
+      </node>
+      <node id="1560">
+        <label>GenericVector&lt; bool * &gt;</label>
+        <link refid="class_generic_vector"/>
+        <childnode refid="1561" relation="usage">
+          <edgelabel>compare_cb_</edgelabel>
+        </childnode>
+        <childnode refid="1562" relation="usage">
+          <edgelabel>clear_cb_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1550">
+        <label>EVALUATION_RECORD</label>
+        <link refid="struct_e_v_a_l_u_a_t_i_o_n___r_e_c_o_r_d"/>
+      </node>
+      <node id="1522">
+        <label>tesseract::TessdataManager</label>
+        <link refid="classtesseract_1_1_tessdata_manager"/>
+      </node>
+      <node id="1549">
+        <label>WERD_CHOICE</label>
+        <link refid="class_w_e_r_d___c_h_o_i_c_e"/>
+      </node>
+      <node id="1535">
+        <label>PROTO_SET_STRUCT</label>
+        <link refid="struct_p_r_o_t_o___s_e_t___s_t_r_u_c_t"/>
+        <childnode refid="1536" relation="usage">
+          <edgelabel>Protos</edgelabel>
+        </childnode>
+      </node>
+      <node id="1545">
+        <label>FEATURE_SET_STRUCT</label>
+        <link refid="struct_f_e_a_t_u_r_e___s_e_t___s_t_r_u_c_t"/>
+        <childnode refid="1546" relation="usage">
+          <edgelabel>Features</edgelabel>
+        </childnode>
+      </node>
+      <node id="1515">
+        <label>tesseract::CCStruct</label>
+        <link refid="classtesseract_1_1_c_c_struct"/>
+        <childnode refid="1516" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1526" relation="usage">
+          <edgelabel>image_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1554">
+        <label>tesseract::DawgInfoVector</label>
+        <link refid="classtesseract_1_1_dawg_info_vector"/>
+        <childnode refid="1555" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1562">
+        <label>TessCallback1&lt; bool * &gt;</label>
+        <link refid="class_tess_callback1"/>
+      </node>
+      <node id="1571">
+        <label>TessCallback1&lt; STRING &gt;</label>
+        <link refid="class_tess_callback1"/>
+      </node>
+      <node id="1564">
+        <label>TessResultCallback2&lt; bool, intconst &amp;, intconst &amp; &gt;</label>
+        <link refid="class_tess_result_callback2"/>
+      </node>
+      <node id="1556">
+        <label>tesseract::DawgInfo</label>
+        <link refid="structtesseract_1_1_dawg_info"/>
+      </node>
+      <node id="1511">
+        <label>tesseract::PageIterator</label>
+        <link refid="classtesseract_1_1_page_iterator"/>
+        <childnode refid="1512" relation="usage">
+          <edgelabel>tesseract_</edgelabel>
+        </childnode>
+        <childnode refid="1566" relation="usage">
+          <edgelabel>word_</edgelabel>
+        </childnode>
+        <childnode refid="1568" relation="usage">
+          <edgelabel>it_</edgelabel>
+        </childnode>
+        <childnode refid="1569" relation="usage">
+          <edgelabel>page_res_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1544">
+        <label>FEATURE_EXT_STRUCT</label>
+        <link refid="struct_f_e_a_t_u_r_e___e_x_t___s_t_r_u_c_t"/>
+        <childnode refid="1545" relation="usage">
+          <edgelabel>Extractor</edgelabel>
+        </childnode>
+      </node>
+      <node id="1559">
+        <label>tesseract::DawgArgs</label>
+        <link refid="structtesseract_1_1_dawg_args"/>
+        <childnode refid="1554" relation="usage">
+          <edgelabel>updated_active_dawgs</edgelabel>
+          <edgelabel>constraints</edgelabel>
+          <edgelabel>updated_constraints</edgelabel>
+          <edgelabel>active_dawgs</edgelabel>
+        </childnode>
+      </node>
+      <node id="1565">
+        <label>TessCallback1&lt; int &gt;</label>
+        <link refid="class_tess_callback1"/>
+      </node>
+      <node id="1543">
+        <label>FEATURE_DEFS_STRUCT</label>
+        <link refid="struct_f_e_a_t_u_r_e___d_e_f_s___s_t_r_u_c_t"/>
+        <childnode refid="1544" relation="usage">
+          <edgelabel>FeatureExtractors</edgelabel>
+        </childnode>
+        <childnode refid="1547" relation="usage">
+          <edgelabel>FeatureDesc</edgelabel>
+        </childnode>
+      </node>
+      <node id="1552">
+        <label>tesseract::LanguageModel</label>
+        <link refid="classtesseract_1_1_language_model"/>
+        <childnode refid="1553" relation="usage">
+          <edgelabel>dict_</edgelabel>
+        </childnode>
+        <childnode refid="1520" relation="usage">
+          <edgelabel>prev_word_str_</edgelabel>
+        </childnode>
+        <childnode refid="1554" relation="usage">
+          <edgelabel>fixed_length_beginning_active_dawgs_</edgelabel>
+          <edgelabel>empty_dawg_info_vec_</edgelabel>
+          <edgelabel>beginning_active_dawgs_</edgelabel>
+          <edgelabel>beginning_constraints_</edgelabel>
+        </childnode>
+        <childnode refid="1559" relation="usage">
+          <edgelabel>dawg_args_</edgelabel>
+        </childnode>
+        <childnode refid="1560" relation="usage">
+          <edgelabel>updated_flags_</edgelabel>
+        </childnode>
+        <childnode refid="1542" relation="usage">
+          <edgelabel>fontinfo_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1519">
+        <label>tesseract::Param</label>
+        <link refid="classtesseract_1_1_param"/>
+      </node>
+      <node id="1516">
+        <label>tesseract::CUtil</label>
+        <link refid="classtesseract_1_1_c_util"/>
+        <childnode refid="1517" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1514">
+        <label>tesseract::Classify</label>
+        <link refid="classtesseract_1_1_classify"/>
+        <childnode refid="1515" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1527" relation="usage">
+          <edgelabel>AdaptedTemplates</edgelabel>
+        </childnode>
+        <childnode refid="1533" relation="usage">
+          <edgelabel>PreTrainedTemplates</edgelabel>
+        </childnode>
+        <childnode refid="1538" relation="usage">
+          <edgelabel>NormProtos</edgelabel>
+        </childnode>
+        <childnode refid="1540" relation="usage">
+          <edgelabel>fontset_table_</edgelabel>
+        </childnode>
+        <childnode refid="1541" relation="usage">
+          <edgelabel>shape_table_</edgelabel>
+        </childnode>
+        <childnode refid="1542" relation="usage">
+          <edgelabel>fontinfo_table_</edgelabel>
+        </childnode>
+        <childnode refid="1543" relation="usage">
+          <edgelabel>feature_defs_</edgelabel>
+        </childnode>
+        <childnode refid="1548" relation="usage">
+          <edgelabel>im_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1539">
+        <label>PARAM_DESC</label>
+        <link refid="struct_p_a_r_a_m___d_e_s_c"/>
+      </node>
+      <node id="1567">
+        <label>ELIST2_LINK</label>
+        <link refid="class_e_l_i_s_t2___l_i_n_k"/>
+      </node>
+      <node id="1558">
+        <label>TessResultCallback2&lt; bool, DawgInfoconst &amp;, DawgInfoconst &amp; &gt;</label>
+        <link refid="class_tess_result_callback2"/>
+      </node>
+      <node id="1536">
+        <label>INT_PROTO_STRUCT</label>
+        <link refid="struct_i_n_t___p_r_o_t_o___s_t_r_u_c_t"/>
+      </node>
+      <node id="1527">
+        <label>ADAPT_TEMPLATES_STRUCT</label>
+        <link refid="struct_a_d_a_p_t___t_e_m_p_l_a_t_e_s___s_t_r_u_c_t"/>
+        <childnode refid="1528" relation="usage">
+          <edgelabel>Class</edgelabel>
+        </childnode>
+        <childnode refid="1533" relation="usage">
+          <edgelabel>Templates</edgelabel>
+        </childnode>
+      </node>
+      <node id="1555">
+        <label>GenericVector&lt; DawgInfo &gt;</label>
+        <link refid="class_generic_vector"/>
+        <childnode refid="1556" relation="usage">
+          <edgelabel>data_</edgelabel>
+        </childnode>
+        <childnode refid="1557" relation="usage">
+          <edgelabel>clear_cb_</edgelabel>
+        </childnode>
+        <childnode refid="1558" relation="usage">
+          <edgelabel>compare_cb_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1524">
+        <label>tesseract::UnicharAmbigs</label>
+        <link refid="classtesseract_1_1_unichar_ambigs"/>
+      </node>
+      <node id="1523">
+        <label>tesseract::StringParam</label>
+        <link refid="classtesseract_1_1_string_param"/>
+        <childnode refid="1519" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1557">
+        <label>TessCallback1&lt; DawgInfo &gt;</label>
+        <link refid="class_tess_callback1"/>
+      </node>
+      <node id="1533">
+        <label>INT_TEMPLATES_STRUCT</label>
+        <link refid="struct_i_n_t___t_e_m_p_l_a_t_e_s___s_t_r_u_c_t"/>
+        <childnode refid="1534" relation="usage">
+          <edgelabel>Class</edgelabel>
+        </childnode>
+        <childnode refid="1537" relation="usage">
+          <edgelabel>ClassPruners</edgelabel>
+        </childnode>
+      </node>
+      <node id="1512">
+        <label>tesseract::Tesseract</label>
+        <link refid="classtesseract_1_1_tesseract"/>
+        <childnode refid="1513" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1521">
+        <label>UNICHARSET</label>
+        <link refid="class_u_n_i_c_h_a_r_s_e_t"/>
+      </node>
+      <node id="1518">
+        <label>tesseract::BoolParam</label>
+        <link refid="classtesseract_1_1_bool_param"/>
+        <childnode refid="1519" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1563">
+        <label>GenericVector&lt; int &gt;</label>
+        <link refid="class_generic_vector"/>
+        <childnode refid="1564" relation="usage">
+          <edgelabel>compare_cb_</edgelabel>
+        </childnode>
+        <childnode refid="1565" relation="usage">
+          <edgelabel>clear_cb_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1525">
+        <label>tesseract::IntParam</label>
+        <link refid="classtesseract_1_1_int_param"/>
+        <childnode refid="1519" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1528">
+        <label>ADAPT_CLASS_STRUCT</label>
+        <link refid="struct_a_d_a_p_t___c_l_a_s_s___s_t_r_u_c_t"/>
+        <childnode refid="1529" relation="usage">
+          <edgelabel>Config</edgelabel>
+        </childnode>
+        <childnode refid="1532" relation="usage">
+          <edgelabel>TempProtos</edgelabel>
+        </childnode>
+      </node>
+      <node id="1551">
+        <label>tesseract::BlobMatchTable</label>
+        <link refid="classtesseract_1_1_blob_match_table"/>
+      </node>
+      <node id="1529">
+        <label>ADAPTED_CONFIG</label>
+        <link refid="union_a_d_a_p_t_e_d___c_o_n_f_i_g"/>
+        <childnode refid="1530" relation="usage">
+          <edgelabel>Perm</edgelabel>
+        </childnode>
+        <childnode refid="1531" relation="usage">
+          <edgelabel>Temp</edgelabel>
+        </childnode>
+      </node>
+      <node id="1526">
+        <label>tesseract::Image</label>
+        <link refid="classtesseract_1_1_image"/>
+      </node>
+      <node id="1542">
+        <label>UnicityTable&lt; tesseract::FontInfo &gt;</label>
+        <link refid="class_unicity_table"/>
+      </node>
+      <node id="1572">
+        <label>TessResultCallback2&lt; bool, STRINGconst &amp;, STRINGconst &amp; &gt;</label>
+        <link refid="class_tess_result_callback2"/>
+      </node>
+      <node id="1534">
+        <label>INT_CLASS_STRUCT</label>
+        <link refid="struct_i_n_t___c_l_a_s_s___s_t_r_u_c_t"/>
+        <childnode refid="1535" relation="usage">
+          <edgelabel>ProtoSets</edgelabel>
+        </childnode>
+      </node>
+      <node id="1569">
+        <label>PAGE_RES</label>
+        <link refid="class_p_a_g_e___r_e_s"/>
+        <childnode refid="1549" relation="usage">
+          <edgelabel>prev_word_best_choice</edgelabel>
+        </childnode>
+        <childnode refid="1570" relation="usage">
+          <edgelabel>misadaption_log</edgelabel>
+        </childnode>
+        <childnode refid="1563" relation="usage">
+          <edgelabel>blame_reasons</edgelabel>
+        </childnode>
+      </node>
+      <node id="1537">
+        <label>CLASS_PRUNER_STRUCT</label>
+        <link refid="struct_c_l_a_s_s___p_r_u_n_e_r___s_t_r_u_c_t"/>
+      </node>
+      <node id="1548">
+        <label>IntegerMatcher</label>
+        <link refid="class_integer_matcher"/>
+      </node>
+      <node id="1540">
+        <label>UnicityTable&lt; tesseract::FontSet &gt;</label>
+        <link refid="class_unicity_table"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" line="51" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h" bodystart="51" bodyend="323"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_page_iterator_1a7a9cd753bf6a74e5fd953a93930c242f" prot="public" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>Baseline</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a5cc369eb577150a3a677f9c342ce1240" prot="public" virt="virtual"><scope>tesseract::PageIterator</scope><name>Begin</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a9075e98e75619ca5e1270a0a6eb2c352" prot="protected" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>BeginWord</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a98d81a4da55f06637a0db60ac33cc814" prot="protected" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>blob_index_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a26c0bc6c991feaf5615f2941b13d0977" prot="public" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>BlockType</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a38f6d7da2a9b9ef8983286383729fa73" prot="public" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>BoundingBox</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a2351fffe02706e3cd35b97cb89e6242d" prot="public" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>BoundingBoxInternal</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a4ea0a38b584bbc0047792ebe6b0294ce" prot="protected" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>cblob_it_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a81ff358816d9532f550ee3620d7eb18a" prot="public" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>Cmp</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1ae1d2f1725fabeafb6e235ccb482d47d6" prot="public" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>Empty</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1ad8fb0c95849e23f3c67ab1e765e50ae8" prot="public" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>GetBinaryImage</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1ae2a030573b6488da77f8e7c4d7bc89ab" prot="public" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>GetImage</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1ad822e0b706ebba5c8ea55505438b4dee" prot="public" virt="virtual"><scope>tesseract::PageIterator</scope><name>IsAtBeginningOf</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1af9db4780e93dd192f7cee28f11476cce" prot="public" virt="virtual"><scope>tesseract::PageIterator</scope><name>IsAtFinalElement</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a16925fbe4a6264cda66fc901d74e1c8b" prot="public" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>IsWithinFirstTextlineOfParagraph</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a42df7b8e352be1e5a140787109419f93" prot="protected" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>it_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a415ea7c61e24868bc67e676184be0bb9" prot="public" virt="virtual"><scope>tesseract::PageIterator</scope><name>Next</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a8c00d22a9b005df7b9d00e91e54f6c07" prot="public" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>operator=</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a4e7bfaa12388753931a788ef688cc958" prot="public" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>Orientation</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a480fee3b9cf81df1745ab671c5f28788" prot="protected" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>page_res_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1ad9f7980a1c4b008c90bb860d5aa82f48" prot="public" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>PageIterator</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a578df2b00868be69cad7b8237400fb38" prot="public" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>PageIterator</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a49778d4f782c34d1f466623a6b454a24" prot="public" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>ParagraphInfo</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a482f7760a270137905bebb530df2ef46" prot="public" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>PositionedAtSameWord</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a66e96ed36eeed8b9da723c397910f9e9" prot="protected" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>rect_height_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a2e33ff0e1d949366720fe29a7203f57e" prot="protected" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>rect_left_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a7c33ac80eda9144c2b857963457ace9c" prot="protected" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>rect_top_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1aa8eba0c6367dd6349fe903ac7c3860a4" prot="protected" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>rect_width_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a7da35cf3d398285ff9d0d0bcc277c9af" prot="public" virt="virtual"><scope>tesseract::PageIterator</scope><name>RestartParagraph</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a2df743d478df34f1a239cf9675f82be0" prot="public" virt="virtual"><scope>tesseract::PageIterator</scope><name>RestartRow</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1ae72a89d863ac231b9cfbab4c6004ad3d" prot="protected" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>scale_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a43f0c51fac0f0e60139487d5868812a3" prot="protected" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>scaled_yres_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1acca34c1adcf494eca7dfefe74258f991" prot="protected" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>tesseract_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a409db505129bcd894cbe20b77f7663bb" prot="protected" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>word_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a5bcc04bef9fefefc856440bcfe15d9ab" prot="protected" virt="non-virtual"><scope>tesseract::PageIterator</scope><name>word_length_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1acc314df15e768cffeef57957038e3bf5" prot="public" virt="virtual"><scope>tesseract::PageIterator</scope><name>~PageIterator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

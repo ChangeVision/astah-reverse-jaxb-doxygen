@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="hashfn_8h" kind="file">
+    <compoundname>hashfn.h</compoundname>
+    <includes refid="host_8h" local="yes">host.h</includes>
+    <includedby refid="hashfn_8cpp" local="yes">ccutil/hashfn.cpp</includedby>
+    <incdepgraph>
+      <node id="16279">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="16280" relation="include">
+        </childnode>
+      </node>
+      <node id="16277">
+        <label>ccutil/hashfn.h</label>
+        <link refid="hashfn.h"/>
+        <childnode refid="16278" relation="include">
+        </childnode>
+      </node>
+      <node id="16280">
+        <label>limits.h</label>
+      </node>
+      <node id="16278">
+        <label>host.h</label>
+        <link refid="host_8h"/>
+        <childnode refid="16279" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="16282">
+        <label>ccutil/hashfn.cpp</label>
+        <link refid="hashfn_8cpp"/>
+      </node>
+      <node id="16281">
+        <label>ccutil/hashfn.h</label>
+        <link refid="hashfn.h"/>
+        <childnode refid="16282" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="hashfn_8h_1aac1011e548789d4541824e884c1206d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref></type>
+        <definition>inT32 hash</definition>
+        <argsstring>(inT32 bits, void *key, inT32 keysize)</argsstring>
+        <name>hash</name>
+        <param>
+          <type><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref></type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref></type>
+          <declname>keysize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/hashfn.h" line="25" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/hashfn.cpp" bodystart="30" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hashfn.h<sp/><sp/>(Formerly<sp/>hash.h)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Description:<sp/>Simple<sp/>hash<sp/>function.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Author:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ray<sp/>Smith</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Created:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Thu<sp/>Jan<sp/>16<sp/>11:47:59<sp/>GMT<sp/>1992</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>(C)<sp/>Copyright<sp/>1992,<sp/>Hewlett-Packard<sp/>Ltd.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>**<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>**<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>**<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>**<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>**<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>**<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>**<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>**<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>**<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HASHFN_H</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HASHFN_H</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<ref refid="host_8h" kindref="compound">host.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/><ref refid="hashfn_8cpp_1aac1011e548789d4541824e884c1206d2" kindref="member">hash</ref>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//hash<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/>bits,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//bits<sp/>in<sp/>hash<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*key,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//key<sp/>to<sp/>hash</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/>keysize<sp/><sp/></highlight><highlight class="comment">//size<sp/>of<sp/>key</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/ccutil/hashfn.h"/>
+  </compounddef>
+</doxygen>

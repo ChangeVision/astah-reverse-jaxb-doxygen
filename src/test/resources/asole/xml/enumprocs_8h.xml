@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="enumprocs_8h" kind="file">
+    <compoundname>enumprocs.h</compoundname>
+    <includedby refid="astahman_8cpp" local="yes">astahman.cpp</includedby>
+    <includedby refid="enumprocs_8cpp" local="yes">enumprocs.cpp</includedby>
+    <invincdepgraph>
+      <node id="206">
+        <label>astahman.cpp</label>
+        <link refid="astahman_8cpp"/>
+      </node>
+      <node id="205">
+        <label>enumprocs.h</label>
+        <link refid="enumprocs.h"/>
+        <childnode refid="206" relation="include">
+        </childnode>
+        <childnode refid="207" relation="include">
+        </childnode>
+      </node>
+      <node id="207">
+        <label>enumprocs.cpp</label>
+        <link refid="enumprocs_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="enumprocs_8h_1a4f9aa8899be61a0306f4193208d9f35e" prot="public" static="no">
+        <type>BOOL(CALLBACK *</type>
+        <definition>typedef BOOL(CALLBACK * PROCENUMPROC)(DWORD, WORD, LPCTSTR, LPARAM)</definition>
+        <argsstring>)(DWORD, WORD, LPCTSTR, LPARAM)</argsstring>
+        <name>PROCENUMPROC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.h" line="11" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="enumprocs_8h_1a88e0660582ec5e0750a5dcc074307f6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL WINAPI</type>
+        <definition>BOOL WINAPI EnumProcs</definition>
+        <argsstring>(PROCENUMPROC peproc, LPARAM lparam)</argsstring>
+        <name>EnumProcs</name>
+        <param>
+          <type><ref refid="enumprocs_8h_1a4f9aa8899be61a0306f4193208d9f35e" kindref="member">PROCENUMPROC</ref></type>
+          <declname>peproc</declname>
+        </param>
+        <param>
+          <type>LPARAM</type>
+          <declname>lparam</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The EnumProcs function takes a pointer to a callback function that will be called once per process with the process filename and process ID.</para><para>lpProc <ndash/> Address of callback routine.</para><para>lParam <ndash/> A user-defined LPARAM value to be passed to the callback routine.</para><para>Callback function definition: BOOL CALLBACK Proc(DWORD dw, WORD w, LPCSTR lpstr, LPARAM lParam);</para><para><ulink url="http://support.microsoft.com/kb/175030/ja">http://support.microsoft.com/kb/175030/ja</ulink> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.h" line="13" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" bodystart="407" bodyend="435"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Change<sp/>Vision<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//#pragma<sp/>comment(exestr,<sp/>&quot;%Z%%Y%%M%<sp/>%I%<sp/>20%E%<sp/>%U%&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ENUMPROCS_H</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ENUMPROCS_H</highlight></codeline>
+<codeline lineno="8"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="enumprocs_8h_1a4f9aa8899be61a0306f4193208d9f35e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BOOL<sp/>(CALLBACK<sp/>*<ref refid="enumprocs_8h_1a4f9aa8899be61a0306f4193208d9f35e" kindref="member">PROCENUMPROC</ref>)(DWORD,<sp/>WORD,<sp/>LPCTSTR,<sp/>LPARAM);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">BOOL<sp/>WINAPI<sp/><ref refid="enumprocs_8cpp_1a88e0660582ec5e0750a5dcc074307f6f" kindref="member">EnumProcs</ref>(<ref refid="enumprocs_8h_1a4f9aa8899be61a0306f4193208d9f35e" kindref="member">PROCENUMPROC</ref><sp/>peproc,<sp/>LPARAM<sp/>lparam);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.h"/>
+  </compounddef>
+</doxygen>

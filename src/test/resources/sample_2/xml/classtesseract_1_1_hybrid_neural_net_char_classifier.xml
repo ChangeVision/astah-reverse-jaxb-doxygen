@@ -1,0 +1,389 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_hybrid_neural_net_char_classifier" kind="class" prot="public">
+    <compoundname>tesseract::HybridNeuralNetCharClassifier</compoundname>
+    <basecompoundref refid="classtesseract_1_1_char_classifier" prot="public" virt="non-virtual">tesseract::CharClassifier</basecompoundref>
+    <includes refid="hybrid__neural__net__classifier_8h" local="no">hybrid_neural_net_classifier.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_hybrid_neural_net_char_classifier_1aa5e7b2528de639a34638ed6e47ca5382" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classtesseract_1_1_neural_net" kindref="compound">tesseract::NeuralNet</ref> * &gt;</type>
+        <definition>vector&lt;tesseract::NeuralNet *&gt; tesseract::HybridNeuralNetCharClassifier::nets_</definition>
+        <argsstring></argsstring>
+        <name>nets_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" line="66" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_hybrid_neural_net_char_classifier_1a45c01ef3ea7225199328daad3e74beb1" prot="private" static="no" mutable="no">
+        <type>vector&lt; float &gt;</type>
+        <definition>vector&lt;float&gt; tesseract::HybridNeuralNetCharClassifier::net_wgts_</definition>
+        <argsstring></argsstring>
+        <name>net_wgts_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" line="67" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_hybrid_neural_net_char_classifier_1af59b62ad60f51014e6b2ee4f34be828f" prot="private" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* tesseract::HybridNeuralNetCharClassifier::net_input_</definition>
+        <argsstring></argsstring>
+        <name>net_input_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" line="70" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_hybrid_neural_net_char_classifier_1a4f6f6263f144b361e8ed2d60a8523cc8" prot="private" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* tesseract::HybridNeuralNetCharClassifier::net_output_</definition>
+        <argsstring></argsstring>
+        <name>net_output_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" line="71" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_hybrid_neural_net_char_classifier_1a6aa8970f515e25fe73f78d6090ca429a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::HybridNeuralNetCharClassifier::HybridNeuralNetCharClassifier</definition>
+        <argsstring>(CharSet *char_set, TuningParams *params, FeatureBase *feat_extract)</argsstring>
+        <name>HybridNeuralNetCharClassifier</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_char_set" kindref="compound">CharSet</ref> *</type>
+          <declname>char_set</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_tuning_params" kindref="compound">TuningParams</ref> *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_feature_base" kindref="compound">FeatureBase</ref> *</type>
+          <declname>feat_extract</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" line="43" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.cpp" bodystart="39" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_hybrid_neural_net_char_classifier_1a31fa85b80a1d3c9b848f5f6c07116668" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>tesseract::HybridNeuralNetCharClassifier::~HybridNeuralNetCharClassifier</definition>
+        <argsstring>()</argsstring>
+        <name>~HybridNeuralNetCharClassifier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" line="45" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.cpp" bodystart="48" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_hybrid_neural_net_char_classifier_1a6e125be18d21d23d7a29afd4a4f28cd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::HybridNeuralNetCharClassifier::Train</definition>
+        <argsstring>(CharSamp *char_samp, int ClassID)</argsstring>
+        <name>Train</name>
+        <reimplements refid="classtesseract_1_1_char_classifier_1a3ee7b00c9999051a92426b6de0bc7e5d">Train</reimplements>
+        <param>
+          <type><ref refid="classtesseract_1_1_char_samp" kindref="compound">CharSamp</ref> *</type>
+          <declname>char_samp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ClassID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" line="49" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.cpp" bodystart="70" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_hybrid_neural_net_char_classifier_1a478d8fc444aeaa8dec5ec4e97022815c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::HybridNeuralNetCharClassifier::SetLearnParam</definition>
+        <argsstring>(char *var_name, float val)</argsstring>
+        <name>SetLearnParam</name>
+        <reimplements refid="classtesseract_1_1_char_classifier_1ab2c1ff04d245d64d7900afefae9ef842">SetLearnParam</reimplements>
+        <param>
+          <type>char *</type>
+          <declname>var_name</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" line="53" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.cpp" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_hybrid_neural_net_char_classifier_1a19971a87d8827525263c7aac31218a91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::HybridNeuralNetCharClassifier::SetNet</definition>
+        <argsstring>(tesseract::NeuralNet *net)</argsstring>
+        <name>SetNet</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_neural_net" kindref="compound">tesseract::NeuralNet</ref> *</type>
+          <declname>net</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" line="55" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.cpp" bodystart="212" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_hybrid_neural_net_char_classifier_1a3b175fef9547b38b35fd032c3fbf0262" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classtesseract_1_1_char_alt_list" kindref="compound">CharAltList</ref> *</type>
+        <definition>CharAltList * tesseract::HybridNeuralNetCharClassifier::Classify</definition>
+        <argsstring>(CharSamp *char_samp)</argsstring>
+        <name>Classify</name>
+        <reimplements refid="classtesseract_1_1_char_classifier_1ae133c2172d9bc6ae1726ae9a436755f1">Classify</reimplements>
+        <param>
+          <type><ref refid="classtesseract_1_1_char_samp" kindref="compound">CharSamp</ref> *</type>
+          <declname>char_samp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" line="59" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.cpp" bodystart="189" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_hybrid_neural_net_char_classifier_1a4e1a28c102ef21d438cff5416b8da991" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int tesseract::HybridNeuralNetCharClassifier::CharCost</definition>
+        <argsstring>(CharSamp *char_samp)</argsstring>
+        <name>CharCost</name>
+        <reimplements refid="classtesseract_1_1_char_classifier_1aa447f4775f256d36dab382f1bbb7b56c">CharCost</reimplements>
+        <param>
+          <type><ref refid="classtesseract_1_1_char_samp" kindref="compound">CharSamp</ref> *</type>
+          <declname>char_samp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" line="62" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.cpp" bodystart="177" bodyend="185"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtesseract_1_1_hybrid_neural_net_char_classifier_1a4a7d0a4d574b08c689d7d2dd681be415" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::HybridNeuralNetCharClassifier::Init</definition>
+        <argsstring>(const string &amp;data_file_path, const string &amp;lang, LangModel *lang_mod)</argsstring>
+        <name>Init</name>
+        <reimplements refid="classtesseract_1_1_char_classifier_1a64532c78a06560da1fb9ed7d54d9309f">Init</reimplements>
+        <param>
+          <type>const string &amp;</type>
+          <declname>data_file_path</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>lang</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_lang_model" kindref="compound">LangModel</ref> *</type>
+          <declname>lang_mod</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" line="74" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.cpp" bodystart="283" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_hybrid_neural_net_char_classifier_1a150cfbf7778d8001da2f4135b9803afc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::HybridNeuralNetCharClassifier::LoadNets</definition>
+        <argsstring>(const string &amp;data_file_path, const string &amp;lang)</argsstring>
+        <name>LoadNets</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>data_file_path</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>lang</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" line="77" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.cpp" bodystart="309" bodyend="368"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_hybrid_neural_net_char_classifier_1ab984b9d3da8fa7c633187b265404435b" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::HybridNeuralNetCharClassifier::LoadFoldingSets</definition>
+        <argsstring>(const string &amp;data_file_path, const string &amp;lang, LangModel *lang_mod)</argsstring>
+        <name>LoadFoldingSets</name>
+        <reimplements refid="classtesseract_1_1_char_classifier_1ada1bba5a3763258805be98302083eb8e">LoadFoldingSets</reimplements>
+        <param>
+          <type>const string &amp;</type>
+          <declname>data_file_path</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>lang</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_lang_model" kindref="compound">LangModel</ref> *</type>
+          <declname>lang_mod</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" line="81" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.cpp" bodystart="218" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_hybrid_neural_net_char_classifier_1a612919f081352b38b61a891bb9afead0" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void tesseract::HybridNeuralNetCharClassifier::Fold</definition>
+        <argsstring>()</argsstring>
+        <name>Fold</name>
+        <reimplements refid="classtesseract_1_1_char_classifier_1a38059a0e194a7e1ab1099f15bb0c4a87">Fold</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" line="85" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.cpp" bodystart="83" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_hybrid_neural_net_char_classifier_1a208ebed5389f2295b91cef74a9e6ae86" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::HybridNeuralNetCharClassifier::RunNets</definition>
+        <argsstring>(CharSamp *char_samp)</argsstring>
+        <name>RunNets</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_char_samp" kindref="compound">CharSamp</ref> *</type>
+          <declname>char_samp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" line="87" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.cpp" bodystart="132" bodyend="174"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1155">
+        <label>tesseract::HybridNeuralNetCharClassifier</label>
+        <link refid="classtesseract_1_1_hybrid_neural_net_char_classifier"/>
+        <childnode refid="1156" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1156">
+        <label>tesseract::CharClassifier</label>
+        <link refid="classtesseract_1_1_char_classifier"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1157">
+        <label>tesseract::HybridNeuralNetCharClassifier</label>
+        <link refid="classtesseract_1_1_hybrid_neural_net_char_classifier"/>
+        <childnode refid="1158" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1159">
+        <label>tesseract::TuningParams</label>
+        <link refid="classtesseract_1_1_tuning_params"/>
+      </node>
+      <node id="1158">
+        <label>tesseract::CharClassifier</label>
+        <link refid="classtesseract_1_1_char_classifier"/>
+        <childnode refid="1159" relation="usage">
+          <edgelabel>params_</edgelabel>
+        </childnode>
+        <childnode refid="1160" relation="usage">
+          <edgelabel>feat_extract_</edgelabel>
+        </childnode>
+        <childnode refid="1161" relation="usage">
+          <edgelabel>char_set_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1161">
+        <label>tesseract::CharSet</label>
+        <link refid="classtesseract_1_1_char_set"/>
+      </node>
+      <node id="1160">
+        <label>tesseract::FeatureBase</label>
+        <link refid="classtesseract_1_1_feature_base"/>
+        <childnode refid="1159" relation="usage">
+          <edgelabel>params_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" line="41" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/hybrid_neural_net_classifier.h" bodystart="41" bodyend="88"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_char_classifier_1aaabb1acf1d7ebcd2b66e1f9796cc49dc" prot="protected" virt="non-virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>case_sensitive_</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1ac985e2cf1310211262590b0952ab2fa9" prot="public" virt="non-virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>CaseSensitive</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1afbe25062436573d4a3b8c9e9936f6013" prot="protected" virt="non-virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>char_set_</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1a08c3672c2062828c840d830c7a16639b" prot="public" virt="non-virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>CharClassifier</name></member>
+      <member refid="classtesseract_1_1_hybrid_neural_net_char_classifier_1a4e1a28c102ef21d438cff5416b8da991" prot="public" virt="virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>CharCost</name></member>
+      <member refid="classtesseract_1_1_hybrid_neural_net_char_classifier_1a3b175fef9547b38b35fd032c3fbf0262" prot="public" virt="virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>Classify</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1ab8e30443f3f9a1d1e9ca5640608a47a8" prot="protected" virt="non-virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>feat_extract_</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1ae68e84dfd759cb08e82d2cee97abd3b2" prot="public" virt="non-virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>FeatureExtractor</name></member>
+      <member refid="classtesseract_1_1_hybrid_neural_net_char_classifier_1a612919f081352b38b61a891bb9afead0" prot="private" virt="virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>Fold</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1aa00adf41e98123f259e463b037908db7" prot="protected" virt="non-virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>fold_set_cnt_</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1a883ce8cb0ee930611abcd061153a3be2" prot="protected" virt="non-virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>fold_set_len_</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1ad7acb8330f63320bb636c66d31b815dc" prot="protected" virt="non-virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>fold_sets_</name></member>
+      <member refid="classtesseract_1_1_hybrid_neural_net_char_classifier_1a6aa8970f515e25fe73f78d6090ca429a" prot="public" virt="non-virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>HybridNeuralNetCharClassifier</name></member>
+      <member refid="classtesseract_1_1_hybrid_neural_net_char_classifier_1a4a7d0a4d574b08c689d7d2dd681be415" prot="private" virt="virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>Init</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1ac5b9df929e2570650b263f0a1504125b" prot="protected" virt="non-virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>init_</name></member>
+      <member refid="classtesseract_1_1_hybrid_neural_net_char_classifier_1ab984b9d3da8fa7c633187b265404435b" prot="private" virt="virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>LoadFoldingSets</name></member>
+      <member refid="classtesseract_1_1_hybrid_neural_net_char_classifier_1a150cfbf7778d8001da2f4135b9803afc" prot="private" virt="non-virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>LoadNets</name></member>
+      <member refid="classtesseract_1_1_hybrid_neural_net_char_classifier_1af59b62ad60f51014e6b2ee4f34be828f" prot="private" virt="non-virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>net_input_</name></member>
+      <member refid="classtesseract_1_1_hybrid_neural_net_char_classifier_1a4f6f6263f144b361e8ed2d60a8523cc8" prot="private" virt="non-virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>net_output_</name></member>
+      <member refid="classtesseract_1_1_hybrid_neural_net_char_classifier_1a45c01ef3ea7225199328daad3e74beb1" prot="private" virt="non-virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>net_wgts_</name></member>
+      <member refid="classtesseract_1_1_hybrid_neural_net_char_classifier_1aa5e7b2528de639a34638ed6e47ca5382" prot="private" virt="non-virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>nets_</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1af2e7491d921d252957ae0ea4cdaf9aff" prot="protected" virt="non-virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>params_</name></member>
+      <member refid="classtesseract_1_1_hybrid_neural_net_char_classifier_1a208ebed5389f2295b91cef74a9e6ae86" prot="private" virt="non-virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>RunNets</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1a5480d01debdf57b4d2d2189c2c499e2d" prot="public" virt="non-virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>SetCaseSensitive</name></member>
+      <member refid="classtesseract_1_1_hybrid_neural_net_char_classifier_1a478d8fc444aeaa8dec5ec4e97022815c" prot="public" virt="virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>SetLearnParam</name></member>
+      <member refid="classtesseract_1_1_hybrid_neural_net_char_classifier_1a19971a87d8827525263c7aac31218a91" prot="public" virt="non-virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>SetNet</name></member>
+      <member refid="classtesseract_1_1_hybrid_neural_net_char_classifier_1a6e125be18d21d23d7a29afd4a4f28cd3" prot="public" virt="virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>Train</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1afac874bedbc52b288b5e064bed170dce" prot="public" virt="virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>~CharClassifier</name></member>
+      <member refid="classtesseract_1_1_hybrid_neural_net_char_classifier_1a31fa85b80a1d3c9b848f5f6c07116668" prot="public" virt="virtual"><scope>tesseract::HybridNeuralNetCharClassifier</scope><name>~HybridNeuralNetCharClassifier</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

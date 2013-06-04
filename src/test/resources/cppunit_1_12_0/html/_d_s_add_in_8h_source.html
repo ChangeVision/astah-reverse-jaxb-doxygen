@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>My Project: src/msvc6/DSPlugIn/DSAddIn.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.4 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_160ca355bc0c1b9b707bdc17a072703c.html">msvc6</a></li><li class="navelem"><a class="el" href="dir_d821fa0bbcc935623ac91942e847ae05.html">DSPlugIn</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DSAddIn.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_d_s_add_in_8h.html">説明を見る。</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// DSAddIn.h : header file</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#if !defined(AFX_DSADDIN_H__3F8385DE_5079_4944_A01B_236F76A0E901__INCLUDED_)</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define AFX_DSADDIN_H__3F8385DE_5079_4944_A01B_236F76A0E901__INCLUDED_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;ToAddToDistribution/TestRunnerDSPluginVC6.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_c_o_m_helper_8h.html">COMHelper.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// {F193CE54-716C-41CB-80B2-FA74CA3EE2AC}</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// DEFINE_GUID(CLSID_DSAddIn,</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// 0xf193ce54, 0x716c, 0x41cb, 0x80, 0xb2, 0xfa, 0x74, 0xca, 0x3e, 0xe2, 0xac);</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// CDSAddIn</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="class_c_d_s_add_in.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_d_s_add_in.html">CDSAddIn</a> : </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span> CComObjectRoot,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span> CComCoClass&lt;CDSAddIn, &amp;CLSID_DSAddIn&gt;,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span> IDSAddIn,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">public</span> <a class="code" href="interface_i_test_runner_d_s_plugin.html">ITestRunnerDSPlugin</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  DECLARE_REGISTRY_RESOURCEID( <a class="code" href="_d_s_plug_in_2resource_8h.html#a7513d70e05827848a8847ed8b3667ae5">IDR_DSADDIN</a>)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="class_c_d_s_add_in.html#aee64291a9ab2325da86ec5cf7b7ba1f2">   27</a></span>&#160;  <a class="code" href="class_c_d_s_add_in.html">CDSAddIn</a>(): <a class="code" href="class_c_d_s_add_in.html#ad6b6c0e07bae03d76a33a9ac688dbc86">classRegistrationId_</a>( 0) {}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="class_c_d_s_add_in.html#afb8ec4260123e65f3e92a28e35ece50f">‾CDSAddIn</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    BEGIN_COM_MAP(<a class="code" href="class_c_d_s_add_in.html">CDSAddIn</a>)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        COM_INTERFACE_ENTRY(IDSAddIn)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    COM_INTERFACE_ENTRY(<a class="code" href="interface_i_test_runner_d_s_plugin.html">ITestRunnerDSPlugin</a>)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    END_COM_MAP()</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    DECLARE_NOT_AGGREGATABLE(<a class="code" href="class_c_d_s_add_in.html">CDSAddIn</a>)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  DECLARE_CLASSFACTORY_SINGLETON( <a class="code" href="class_c_d_s_add_in.html">CDSAddIn</a>)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// IDSAddIns</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;public:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    STDMETHOD( <a class="code" href="class_c_d_s_add_in.html#a878e3a8e7935da609c0453018ec29346">OnConnection</a>)(THIS_ IApplication* pApp, VARIANT_BOOL bFirstTime,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">long</span> dwCookie, VARIANT_BOOL* <a class="code" href="class_c_d_s_add_in.html#a878e3a8e7935da609c0453018ec29346">OnConnection</a>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    STDMETHOD( <a class="code" href="class_c_d_s_add_in.html#aa506a5f5e757592eb473aec67e794a61">OnDisconnection</a>)(THIS_ VARIANT_BOOL bLastTime);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">// ITestRunnerDSPlugin</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  STDMETHOD( <a class="code" href="class_c_d_s_add_in.html#a9234c086246d7df1fbefdbcd4763980a">goToLineInSourceCode</a>)( BSTR fileName, <span class="keywordtype">int</span> lineNumber);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;protected:</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="class_c_d_s_add_in.html#ab3ac166e5c09c0dc6dc9c0d14a90e3e9">   49</a></span>&#160;  CComPtr&lt; IApplication&gt; <a class="code" href="class_c_d_s_add_in.html#ab3ac166e5c09c0dc6dc9c0d14a90e3e9">pIApp_</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="class_c_d_s_add_in.html#ad6b6c0e07bae03d76a33a9ac688dbc86">   50</a></span>&#160;  DWORD <a class="code" href="class_c_d_s_add_in.html#ad6b6c0e07bae03d76a33a9ac688dbc86">classRegistrationId_</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="class_c_d_s_add_in.html#a3d378d9ac8625f3000f958a83d374044">   51</a></span>&#160;    DWORD <a class="code" href="class_c_d_s_add_in.html#a3d378d9ac8625f3000f958a83d374044">m_dwCookie</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="class_c_d_s_add_in.html#ad7d7ea70a50372c54cf1b38a9716fce5">   53</a></span>&#160;  static COMUtility::COMExceptionThrower <a class="code" href="class_c_d_s_add_in.html#ad7d7ea70a50372c54cf1b38a9716fce5">cex_</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//{{AFX_INSERT_LOCATION}}</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">// Microsoft Visual C++ will insert additional declarations immediately before the previous line.</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif // !defined(AFX_DSADDIN_H__3F8385DE_5079_4944_A01B_236F76A0E901__INCLUDED)</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+My Projectに対してThu May 23 2013 16:14:58に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

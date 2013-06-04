@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="sortflts_8h" kind="file">
+    <compoundname>sortflts.h</compoundname>
+    <includes refid="elst_8h" local="yes">elst.h</includes>
+    <includes refid="notdll_8h" local="yes">notdll.h</includes>
+    <includedby refid="makerow_8cpp" local="yes">textord/makerow.cpp</includedby>
+    <includedby refid="sortflts_8cpp" local="yes">textord/sortflts.cpp</includedby>
+    <incdepgraph>
+      <node id="39181">
+        <label>stdlib.h</label>
+      </node>
+      <node id="39178">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="39179" relation="include">
+        </childnode>
+      </node>
+      <node id="39180">
+        <label>serialis.h</label>
+        <link refid="serialis_8h"/>
+        <childnode refid="39181" relation="include">
+        </childnode>
+        <childnode refid="39182" relation="include">
+        </childnode>
+        <childnode refid="39176" relation="include">
+        </childnode>
+        <childnode refid="39183" relation="include">
+        </childnode>
+        <childnode refid="39185" relation="include">
+        </childnode>
+        <childnode refid="39186" relation="include">
+        </childnode>
+      </node>
+      <node id="39184">
+        <label>stddef.h</label>
+      </node>
+      <node id="39185">
+        <label>errcode.h</label>
+        <link refid="errcode_8h"/>
+        <childnode refid="39177" relation="include">
+        </childnode>
+      </node>
+      <node id="39174">
+        <label>textord/sortflts.h</label>
+        <link refid="sortflts.h"/>
+        <childnode refid="39175" relation="include">
+        </childnode>
+        <childnode refid="39188" relation="include">
+        </childnode>
+      </node>
+      <node id="39179">
+        <label>limits.h</label>
+      </node>
+      <node id="39182">
+        <label>string.h</label>
+      </node>
+      <node id="39186">
+        <label>fileerr.h</label>
+        <link refid="fileerr_8h"/>
+        <childnode refid="39185" relation="include">
+        </childnode>
+      </node>
+      <node id="39187">
+        <label>lsterr.h</label>
+        <link refid="lsterr_8h"/>
+        <childnode refid="39185" relation="include">
+        </childnode>
+      </node>
+      <node id="39183">
+        <label>memry.h</label>
+        <link refid="memry_8h"/>
+        <childnode refid="39184" relation="include">
+        </childnode>
+        <childnode refid="39177" relation="include">
+        </childnode>
+      </node>
+      <node id="39175">
+        <label>elst.h</label>
+        <link refid="elst_8h"/>
+        <childnode refid="39176" relation="include">
+        </childnode>
+        <childnode refid="39177" relation="include">
+        </childnode>
+        <childnode refid="39180" relation="include">
+        </childnode>
+        <childnode refid="39187" relation="include">
+        </childnode>
+      </node>
+      <node id="39188">
+        <label>notdll.h</label>
+        <link refid="notdll_8h"/>
+      </node>
+      <node id="39177">
+        <label>host.h</label>
+        <link refid="host_8h"/>
+        <childnode refid="39178" relation="include">
+        </childnode>
+      </node>
+      <node id="39176">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="39191">
+        <label>textord/sortflts.cpp</label>
+        <link refid="sortflts_8cpp"/>
+      </node>
+      <node id="39190">
+        <label>textord/makerow.cpp</label>
+        <link refid="makerow_8cpp"/>
+      </node>
+      <node id="39189">
+        <label>textord/sortflts.h</label>
+        <link refid="sortflts.h"/>
+        <childnode refid="39190" relation="include">
+        </childnode>
+        <childnode refid="39191" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_s_o_r_t_e_d___f_l_o_a_t" prot="public">SORTED_FLOAT</innerclass>
+    <innerclass refid="class_s_o_r_t_e_d___f_l_o_a_t_s" prot="public">SORTED_FLOATS</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sortflts.h<sp/><sp/>(Formerly<sp/>sfloats.h)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Description:<sp/>Code<sp/>to<sp/>maintain<sp/>a<sp/>sorted<sp/>list<sp/>of<sp/>floats.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Author:<sp/><sp/><sp/><sp/><sp/><sp/>Ray<sp/>Smith</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Created:<sp/><sp/><sp/><sp/><sp/>Mon<sp/>Oct<sp/><sp/>4<sp/>16:15:40<sp/>BST<sp/>1993</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>(C)<sp/>Copyright<sp/>1993,<sp/>Hewlett-Packard<sp/>Ltd.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>**<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>**<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>**<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>**<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>**<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>**<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>**<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>**<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>**<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SORTFLTS_H</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SORTFLTS_H</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<ref refid="elst_8h" kindref="compound">elst.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<ref refid="notdll_8h" kindref="compound">notdll.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<ref refid="notdll_8h" kindref="compound">notdll.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_s_o_r_t_e_d___f_l_o_a_t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_o_r_t_e_d___f_l_o_a_t" kindref="compound">SORTED_FLOAT</ref>:</highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_e_l_i_s_t___l_i_n_k" kindref="compound">ELIST_LINK</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29" refid="class_s_o_r_t_e_d___f_l_o_a_t_1aef8186f49aebf966706617113b8082b5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_o_r_t_e_d___f_l_o_a_t_s" kindref="compound">SORTED_FLOATS</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32" refid="class_s_o_r_t_e_d___f_l_o_a_t_1ad4ec73946f401564e67a397894536ea8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_o_r_t_e_d___f_l_o_a_t_1ad4ec73946f401564e67a397894536ea8" kindref="member">SORTED_FLOAT</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//empty<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_s_o_r_t_e_d___f_l_o_a_t_1a02e1f65fd6d2b3321534e5bb8349d723" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_o_r_t_e_d___f_l_o_a_t_1a02e1f65fd6d2b3321534e5bb8349d723" kindref="member">SORTED_FLOAT</ref>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//create<sp/>one</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value,<sp/><sp/></highlight><highlight class="comment">//value<sp/>of<sp/>entry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/>key)<sp/>{<sp/><sp/></highlight><highlight class="comment">//reference</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>entry<sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>address<sp/>=<sp/>key;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>entry;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//value<sp/>of<sp/>float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/>address;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//key</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><ref refid="elst_8h_1a6cf5144252ef24ea7bb5e0da1e698a0b" kindref="member">ELISTIZEH</ref><sp/>(<ref refid="class_s_o_r_t_e_d___f_l_o_a_t" kindref="compound">SORTED_FLOAT</ref>)</highlight></codeline>
+<codeline lineno="46" refid="class_s_o_r_t_e_d___f_l_o_a_t_s" refkind="compound"><highlight class="normal">class<sp/><ref refid="class_s_o_r_t_e_d___f_l_o_a_t_s" kindref="compound">SORTED_FLOATS</ref></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50" refid="class_s_o_r_t_e_d___f_l_o_a_t_s_1a52d5a06d8a65848360c545608f78e6a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_o_r_t_e_d___f_l_o_a_t_s_1a52d5a06d8a65848360c545608f78e6a9" kindref="member">SORTED_FLOATS</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>it.set_to_list<sp/>(&amp;list);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_o_r_t_e_d___f_l_o_a_t_s_1a6cbf6fb925d7bbb3478cb2c52ff43d2e" kindref="member">add</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/>key);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">remove</highlight><highlight class="normal">(<ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/>key);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_s_o_r_t_e_d___f_l_o_a_t_s_1a3cc23edceb0f05c83beb38d87d04f313" kindref="member">operator[] </ref>(<ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/>index);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>SORTED_FLOAT_LIST<sp/>list;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//list<sp/>of<sp/>floats</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>SORTED_FLOAT_IT<sp/>it;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//iterator<sp/>built-in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/textord/sortflts.h"/>
+  </compounddef>
+</doxygen>

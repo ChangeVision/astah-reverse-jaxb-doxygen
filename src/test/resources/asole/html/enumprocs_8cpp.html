@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>My Project: enumprocs.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.4 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">構成</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#typedef-members">型定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">enumprocs.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="stdafx_8h_source.html">stdafx.h</a>&quot;</code><br/>
+<code>#include &lt;tlhelp32.h&gt;</code><br/>
+<code>#include &lt;vdmdbg.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="enumprocs_8h_source.html">enumprocs.h</a>&quot;</code><br/>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+構成</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvdminfo__t.html">vdminfo_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:af548bbc8d66de8833a1ceb50724c2e05"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumprocs_8cpp.html#af548bbc8d66de8833a1ceb50724c2e05">XBUF_NCS</a>&#160;&#160;&#160;(MAX_PATH + 16)</td></tr>
+<tr class="separator:af548bbc8d66de8833a1ceb50724c2e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c4b77b351e9f5878c586059b399bb37"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumprocs_8cpp.html#a8c4b77b351e9f5878c586059b399bb37">PIDBUF_SZ_MAX</a>&#160;&#160;&#160;(1024 * 1024 * sizeof(*pids))</td></tr>
+<tr class="separator:a8c4b77b351e9f5878c586059b399bb37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:a833f22302d41d358e65bf647af1d8407"><td class="memItemLeft" align="right" valign="top">typedef HANDLE(WINAPI *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumprocs_8cpp.html#a833f22302d41d358e65bf647af1d8407">CreateToolhelp32Snapshot_t</a> )(DWORD, DWORD)</td></tr>
+<tr class="separator:a833f22302d41d358e65bf647af1d8407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9be168bffc8dc61d74ca266b9664b453"><td class="memItemLeft" align="right" valign="top">typedef BOOL(WINAPI *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumprocs_8cpp.html#a9be168bffc8dc61d74ca266b9664b453">Process32First_t</a> )(HANDLE, LPPROCESSENTRY32)</td></tr>
+<tr class="separator:a9be168bffc8dc61d74ca266b9664b453"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d59510b28ccc76d08b0108fb47dfd4f"><td class="memItemLeft" align="right" valign="top">typedef BOOL(WINAPI *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumprocs_8cpp.html#a7d59510b28ccc76d08b0108fb47dfd4f">Process32Next_t</a> )(HANDLE, LPPROCESSENTRY32)</td></tr>
+<tr class="separator:a7d59510b28ccc76d08b0108fb47dfd4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3326b620d40a70eee7de8e54e1f8fd4"><td class="memItemLeft" align="right" valign="top">typedef BOOL(WINAPI *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumprocs_8cpp.html#ab3326b620d40a70eee7de8e54e1f8fd4">Module32First_t</a> )(HANDLE, LPMODULEENTRY32)</td></tr>
+<tr class="separator:ab3326b620d40a70eee7de8e54e1f8fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bbfbc57f57b14123bb2451f6fcbb0ee"><td class="memItemLeft" align="right" valign="top">typedef BOOL(WINAPI *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumprocs_8cpp.html#a1bbfbc57f57b14123bb2451f6fcbb0ee">Module32Next_t</a> )(HANDLE, LPMODULEENTRY32)</td></tr>
+<tr class="separator:a1bbfbc57f57b14123bb2451f6fcbb0ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa77f11585f39023cc9f9c44ffa3fa993"><td class="memItemLeft" align="right" valign="top">typedef BOOL(WINAPI *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumprocs_8cpp.html#aa77f11585f39023cc9f9c44ffa3fa993">EnumProcesses_t</a> )(DWORD *, DWORD, DWORD *)</td></tr>
+<tr class="separator:aa77f11585f39023cc9f9c44ffa3fa993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64d6344741db1aa3ad54cf3853732a95"><td class="memItemLeft" align="right" valign="top">typedef BOOL(WINAPI *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumprocs_8cpp.html#a64d6344741db1aa3ad54cf3853732a95">EnumProcessModules_t</a> )(HANDLE, HMODULE *, DWORD, LPDWORD)</td></tr>
+<tr class="separator:a64d6344741db1aa3ad54cf3853732a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2360e90c4545a5a9d41f104f95dc0e59"><td class="memItemLeft" align="right" valign="top">typedef DWORD(WINAPI *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumprocs_8cpp.html#a2360e90c4545a5a9d41f104f95dc0e59">GetModuleBaseName_t</a> )(HANDLE, HMODULE, LPTSTR, DWORD)</td></tr>
+<tr class="separator:a2360e90c4545a5a9d41f104f95dc0e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d1ce1c34ddf8e7aeccbd4a846688e4f"><td class="memItemLeft" align="right" valign="top">typedef INT(WINAPI *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumprocs_8cpp.html#a6d1ce1c34ddf8e7aeccbd4a846688e4f">VDMEnumTaskWOWEx_t</a> )(DWORD, TASKENUMPROCEX, LPARAM)</td></tr>
+<tr class="separator:a6d1ce1c34ddf8e7aeccbd4a846688e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a88e0660582ec5e0750a5dcc074307f6f"><td class="memItemLeft" align="right" valign="top">BOOL WINAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumprocs_8cpp.html#a88e0660582ec5e0750a5dcc074307f6f">EnumProcs</a> (<a class="el" href="enumprocs_8h.html#a4f9aa8899be61a0306f4193208d9f35e">PROCENUMPROC</a> peproc, LPARAM lparam)</td></tr>
+<tr class="separator:a88e0660582ec5e0750a5dcc074307f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義</h2>
+<a class="anchor" id="a8c4b77b351e9f5878c586059b399bb37"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIDBUF_SZ_MAX&#160;&#160;&#160;(1024 * 1024 * sizeof(*pids))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af548bbc8d66de8833a1ceb50724c2e05"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define XBUF_NCS&#160;&#160;&#160;(MAX_PATH + 16)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">型定義</h2>
+<a class="anchor" id="a833f22302d41d358e65bf647af1d8407"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef HANDLE(WINAPI * CreateToolhelp32Snapshot_t)(DWORD, DWORD)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa77f11585f39023cc9f9c44ffa3fa993"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef BOOL(WINAPI * EnumProcesses_t)(DWORD *, DWORD, DWORD *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a64d6344741db1aa3ad54cf3853732a95"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef BOOL(WINAPI * EnumProcessModules_t)(HANDLE, HMODULE *, DWORD, LPDWORD)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a2360e90c4545a5a9d41f104f95dc0e59"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef DWORD(WINAPI * GetModuleBaseName_t)(HANDLE, HMODULE, LPTSTR, DWORD)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab3326b620d40a70eee7de8e54e1f8fd4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef BOOL(WINAPI * Module32First_t)(HANDLE, LPMODULEENTRY32)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1bbfbc57f57b14123bb2451f6fcbb0ee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef BOOL(WINAPI * Module32Next_t)(HANDLE, LPMODULEENTRY32)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9be168bffc8dc61d74ca266b9664b453"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef BOOL(WINAPI * Process32First_t)(HANDLE, LPPROCESSENTRY32)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7d59510b28ccc76d08b0108fb47dfd4f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef BOOL(WINAPI * Process32Next_t)(HANDLE, LPPROCESSENTRY32)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6d1ce1c34ddf8e7aeccbd4a846688e4f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef INT(WINAPI * VDMEnumTaskWOWEx_t)(DWORD, TASKENUMPROCEX, LPARAM)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数</h2>
+<a class="anchor" id="a88e0660582ec5e0750a5dcc074307f6f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL WINAPI EnumProcs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="enumprocs_8h.html#a4f9aa8899be61a0306f4193208d9f35e">PROCENUMPROC</a>&#160;</td>
+          <td class="paramname"><em>peproc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lparam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The EnumProcs function takes a pointer to a callback function that will be called once per process with the process filename and process ID.</p>
+<p>lpProc &ndash; Address of callback routine.</p>
+<p>lParam &ndash; A user-defined LPARAM value to be passed to the callback routine.</p>
+<p>Callback function definition: BOOL CALLBACK Proc(DWORD dw, WORD w, LPCSTR lpstr, LPARAM lParam);</p>
+<p><a href="http://support.microsoft.com/kb/175030/ja">http://support.microsoft.com/kb/175030/ja</a> </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+My Projectに対してThu May 23 2013 13:56:03に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

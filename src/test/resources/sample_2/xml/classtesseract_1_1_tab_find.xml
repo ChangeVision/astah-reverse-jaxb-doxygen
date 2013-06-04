@@ -1,0 +1,1491 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_tab_find" kind="class" prot="public">
+    <compoundname>tesseract::TabFind</compoundname>
+    <basecompoundref refid="classtesseract_1_1_aligned_blob" prot="public" virt="non-virtual">tesseract::AlignedBlob</basecompoundref>
+    <derivedcompoundref refid="classtesseract_1_1_column_finder" prot="public" virt="non-virtual">tesseract::ColumnFinder</derivedcompoundref>
+    <includes refid="tabfind_8h" local="no">tabfind.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_tab_find_1aaf22419909b2bf63cb0401285696860a" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_i_c_o_o_r_d" kindref="compound">ICOORD</ref></type>
+        <definition>ICOORD tesseract::TabFind::vertical_skew_</definition>
+        <argsstring></argsstring>
+        <name>vertical_skew_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="359" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.h" bodystart="359" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tab_find_1a6faf609de59b4e4fd6baf0c3f19efbaf" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::TabFind::resolution_</definition>
+        <argsstring></argsstring>
+        <name>resolution_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="360" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.h" bodystart="360" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_tab_find_1ae60501cfcbf73a95d553f8f3298640a2" prot="private" static="no" mutable="no">
+        <type><ref refid="class_i_c_o_o_r_d" kindref="compound">ICOORD</ref></type>
+        <definition>ICOORD tesseract::TabFind::image_origin_</definition>
+        <argsstring></argsstring>
+        <name>image_origin_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="362" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.h" bodystart="362" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tab_find_1a6db818da7afab708f292237e2bacc9d2" prot="private" static="no" mutable="no">
+        <type>TabVector_LIST</type>
+        <definition>TabVector_LIST tesseract::TabFind::vectors_</definition>
+        <argsstring></argsstring>
+        <name>vectors_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="363" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.h" bodystart="363" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tab_find_1a19f32e8c0bd3909d096666de92a971d1" prot="private" static="no" mutable="no">
+        <type>TabVector_IT</type>
+        <definition>TabVector_IT tesseract::TabFind::v_it_</definition>
+        <argsstring></argsstring>
+        <name>v_it_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="364" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.h" bodystart="364" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tab_find_1a60621419d2e25b855238e99decea7315" prot="private" static="no" mutable="no">
+        <type>TabVector_LIST</type>
+        <definition>TabVector_LIST tesseract::TabFind::dead_vectors_</definition>
+        <argsstring></argsstring>
+        <name>dead_vectors_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="365" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.h" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tab_find_1ad3be775d2bb9a1e7bf3af32f05ccea82" prot="private" static="no" mutable="no">
+        <type>ICOORDELT_LIST</type>
+        <definition>ICOORDELT_LIST tesseract::TabFind::column_widths_</definition>
+        <argsstring></argsstring>
+        <name>column_widths_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="366" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.h" bodystart="366" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tab_find_1aa1005513be4d6d24178e5b72dcb20afd" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetesseract_1add06f170e88dcbac90a80ff20c42cc0a" kindref="member">WidthCallback</ref> *</type>
+        <definition>WidthCallback* tesseract::TabFind::width_cb_</definition>
+        <argsstring></argsstring>
+        <name>width_cb_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback to test an int for being a common width. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="368" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.h" bodystart="368" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tab_find_1a8957c3c1ef493d02fa791b30ceb0ec8a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; <ref refid="class_b_l_o_b_n_b_o_x" kindref="compound">BLOBNBOX</ref> * &gt;</type>
+        <definition>GenericVector&lt;BLOBNBOX*&gt; tesseract::TabFind::left_tab_boxes_</definition>
+        <argsstring></argsstring>
+        <name>left_tab_boxes_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="370" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.h" bodystart="370" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tab_find_1ad9fbc9623e3edfb5e3dbf581f0a75be5" prot="private" static="no" mutable="no">
+        <type><ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; <ref refid="class_b_l_o_b_n_b_o_x" kindref="compound">BLOBNBOX</ref> * &gt;</type>
+        <definition>GenericVector&lt;BLOBNBOX*&gt; tesseract::TabFind::right_tab_boxes_</definition>
+        <argsstring></argsstring>
+        <name>right_tab_boxes_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="371" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.h" bodystart="371" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1aa276c6c246bbde8c13131c2b3f41a454" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::TabFind::TabFind</definition>
+        <argsstring>(int gridsize, const ICOORD &amp;bleft, const ICOORD &amp;tright, TabVector_LIST *vlines, int vertical_x, int vertical_y, int resolution)</argsstring>
+        <name>TabFind</name>
+        <param>
+          <type>int</type>
+          <declname>gridsize</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_i_c_o_o_r_d" kindref="compound">ICOORD</ref> &amp;</type>
+          <declname>bleft</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_i_c_o_o_r_d" kindref="compound">ICOORD</ref> &amp;</type>
+          <declname>tright</declname>
+        </param>
+        <param>
+          <type>TabVector_LIST *</type>
+          <declname>vlines</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>vertical_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>vertical_y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>resolution</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="64" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="89" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a3144fdb911531f09dd8e63c7e8fa5bf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>tesseract::TabFind::~TabFind</definition>
+        <argsstring>()</argsstring>
+        <name>~TabFind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="67" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="102" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a3e55aec0e623b421d2d309cafc1ccfd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::InsertBlobsToGrid</definition>
+        <argsstring>(bool h_spread, bool v_spread, BLOBNBOX_LIST *blobs, BBGrid&lt; BLOBNBOX, BLOBNBOX_CLIST, BLOBNBOX_C_IT &gt; *grid)</argsstring>
+        <name>InsertBlobsToGrid</name>
+        <param>
+          <type>bool</type>
+          <declname>h_spread</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>v_spread</declname>
+        </param>
+        <param>
+          <type>BLOBNBOX_LIST *</type>
+          <declname>blobs</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_b_b_grid" kindref="compound">BBGrid</ref>&lt; <ref refid="class_b_l_o_b_n_b_o_x" kindref="compound">BLOBNBOX</ref>, BLOBNBOX_CLIST, BLOBNBOX_C_IT &gt; *</type>
+          <declname>grid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Insert a list of blobs into the given grid (not necessarily this). See InsertBlob for the other arguments. It would seem to make more sense to swap this and grid, but this way around allows grid to not be derived from <ref refid="classtesseract_1_1_tab_find" kindref="compound">TabFind</ref>, eg a <ref refid="classtesseract_1_1_col_partition_grid" kindref="compound">ColPartitionGrid</ref>, while the grid that provides the tab stops(this) has to be derived from <ref refid="classtesseract_1_1_tab_find" kindref="compound">TabFind</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="77" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="116" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1aa77b0f7e1c861df33171a855249abd15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TabFind::InsertBlob</definition>
+        <argsstring>(bool h_spread, bool v_spread, BLOBNBOX *blob, BBGrid&lt; BLOBNBOX, BLOBNBOX_CLIST, BLOBNBOX_C_IT &gt; *grid)</argsstring>
+        <name>InsertBlob</name>
+        <param>
+          <type>bool</type>
+          <declname>h_spread</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>v_spread</declname>
+        </param>
+        <param>
+          <type><ref refid="class_b_l_o_b_n_b_o_x" kindref="compound">BLOBNBOX</ref> *</type>
+          <declname>blob</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_b_b_grid" kindref="compound">BBGrid</ref>&lt; <ref refid="class_b_l_o_b_n_b_o_x" kindref="compound">BLOBNBOX</ref>, BLOBNBOX_CLIST, BLOBNBOX_C_IT &gt; *</type>
+          <declname>grid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Insert a single blob into the given grid (not necessarily this). If h_spread, then all cells covered horizontally by the box are used, otherwise, just the bottom-left. Similarly for v_spread. A side effect is that the left and right rule edges of the blob are set according to the tab vectors in this (not grid). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="88" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="143" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a933d26eedcaa45e623f33559cbe69aa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::SetBlockRuleEdges</definition>
+        <argsstring>(TO_BLOCK *block)</argsstring>
+        <name>SetBlockRuleEdges</name>
+        <param>
+          <type><ref refid="class_t_o___b_l_o_c_k" kindref="compound">TO_BLOCK</ref> *</type>
+          <declname>block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="91" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="158" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1aca8c033dbef8b7065be5a5957e83dcf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::SetBlobRuleEdges</definition>
+        <argsstring>(BLOBNBOX_LIST *blobs)</argsstring>
+        <name>SetBlobRuleEdges</name>
+        <param>
+          <type>BLOBNBOX_LIST *</type>
+          <declname>blobs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="94" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="167" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1add7dc17782aaf4446009abdb7329c79f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::TabFind::GutterWidth</definition>
+        <argsstring>(int bottom_y, int top_y, const TabVector &amp;v, bool ignore_unmergeables, int max_gutter_width, int *required_shift)</argsstring>
+        <name>GutterWidth</name>
+        <param>
+          <type>int</type>
+          <declname>bottom_y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>top_y</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classtesseract_1_1_tab_vector" kindref="compound">TabVector</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ignore_unmergeables</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_gutter_width</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>required_shift</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="103" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="186" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a7c81fe52db828b81284f1e143a2d7e51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::GutterWidthAndNeighbourGap</definition>
+        <argsstring>(int tab_x, int mean_height, int max_gutter, bool left, BLOBNBOX *bbox, int *gutter_width, int *neighbour_gap)</argsstring>
+        <name>GutterWidthAndNeighbourGap</name>
+        <param>
+          <type>int</type>
+          <declname>tab_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mean_height</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_gutter</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="class_b_l_o_b_n_b_o_x" kindref="compound">BLOBNBOX</ref> *</type>
+          <declname>bbox</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>gutter_width</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>neighbour_gap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Find the gutter width and distance to inner neighbour for the given blob. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="109" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="233" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a62697b39018c4952755c7a299d977554" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::TabFind::RightEdgeForBox</definition>
+        <argsstring>(const TBOX &amp;box, bool crossing, bool extended)</argsstring>
+        <name>RightEdgeForBox</name>
+        <param>
+          <type>const <ref refid="class_t_b_o_x" kindref="compound">TBOX</ref> &amp;</type>
+          <declname>box</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>crossing</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>extended</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the x-coord that corresponds to the right edge for the given box. If there is a rule line to the right that vertically overlaps it, then return the x-coord of the rule line, otherwise return the right edge of the page. For details see RightTabForBox below. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="120" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="306" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a50f94d2d706772a878806ba9647e7727" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::TabFind::LeftEdgeForBox</definition>
+        <argsstring>(const TBOX &amp;box, bool crossing, bool extended)</argsstring>
+        <name>LeftEdgeForBox</name>
+        <param>
+          <type>const <ref refid="class_t_b_o_x" kindref="compound">TBOX</ref> &amp;</type>
+          <declname>box</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>crossing</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>extended</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>As RightEdgeForBox, but finds the left Edge instead. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="124" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="311" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1adac7971311bbdade2aa87ebb0691a408" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtesseract_1_1_tab_vector" kindref="compound">TabVector</ref> *</type>
+        <definition>TabVector * tesseract::TabFind::RightTabForBox</definition>
+        <argsstring>(const TBOX &amp;box, bool crossing, bool extended)</argsstring>
+        <name>RightTabForBox</name>
+        <param>
+          <type>const <ref refid="class_t_b_o_x" kindref="compound">TBOX</ref> &amp;</type>
+          <declname>box</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>crossing</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>extended</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the <ref refid="classtesseract_1_1_tab_vector" kindref="compound">TabVector</ref> that corresponds to the right edge for the given box. If there is a <ref refid="classtesseract_1_1_tab_vector" kindref="compound">TabVector</ref> to the right that vertically overlaps it, then return it, otherwise return NULL. Note that Right and Left refer to the position of the <ref refid="classtesseract_1_1_tab_vector" kindref="compound">TabVector</ref>, not its type, ie RightTabForBox returns the nearest <ref refid="classtesseract_1_1_tab_vector" kindref="compound">TabVector</ref> to the right of the box, regardless of its type. If a <ref refid="classtesseract_1_1_tab_vector" kindref="compound">TabVector</ref> crosses right through the box (as opposed to grazing one edge or missing entirely), then crossing false will ignore such a line. Crossing true will return the line for BOTH left and right edges. If extended is true, then TabVectors are considered to extend to their extended_start/end_y, otherwise, just the startpt_ and endpt_. These functions make use of an internal iterator to the vectors_ list for speed when used repeatedly on neighbouring boxes. The caveat is that the iterator must be updated whenever the list is modified. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="142" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="329" bodyend="370"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1aedfe0f86dd7916bf5c6dfc2e2b4dbe22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtesseract_1_1_tab_vector" kindref="compound">TabVector</ref> *</type>
+        <definition>TabVector * tesseract::TabFind::LeftTabForBox</definition>
+        <argsstring>(const TBOX &amp;box, bool crossing, bool extended)</argsstring>
+        <name>LeftTabForBox</name>
+        <param>
+          <type>const <ref refid="class_t_b_o_x" kindref="compound">TBOX</ref> &amp;</type>
+          <declname>box</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>crossing</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>extended</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>As RightTabForBox, but finds the left <ref refid="classtesseract_1_1_tab_vector" kindref="compound">TabVector</ref> instead. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="146" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="373" bodyend="415"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a5446d04d773f5bd16c35f24bf06f15bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TabFind::CommonWidth</definition>
+        <argsstring>(int width)</argsstring>
+        <name>CommonWidth</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return true if the given width is close to one of the common widths in column_widths_. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="152" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="419" bodyend="428"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a580534816073eb4327fbe24611499a5c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacetesseract_1add06f170e88dcbac90a80ff20c42cc0a" kindref="member">WidthCallback</ref> *</type>
+        <definition>WidthCallback* tesseract::TabFind::WidthCB</definition>
+        <argsstring>()</argsstring>
+        <name>WidthCB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return a callback for testing CommonWidth. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="167" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.h" bodystart="167" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1abd2f6921aa546135c38150769d90b1c2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_i_c_o_o_r_d" kindref="compound">ICOORD</ref> &amp;</type>
+        <definition>const ICOORD&amp; tesseract::TabFind::image_origin</definition>
+        <argsstring>() const </argsstring>
+        <name>image_origin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the coords at which to draw the image backdrop. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="174" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.h" bodystart="174" bodyend="176"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a386ab5331aecfd3bf73b9dfdc5d23b57" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TabFind::DifferentSizes</definition>
+        <argsstring>(int size1, int size2)</argsstring>
+        <name>DifferentSizes</name>
+        <param>
+          <type>int</type>
+          <declname>size1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return true if the sizes are more than a factor of 2 different. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="157" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="432" bodyend="434"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a924f574abbd5ef84e96bb3cffc6fe4b4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TabFind::VeryDifferentSizes</definition>
+        <argsstring>(int size1, int size2)</argsstring>
+        <name>VeryDifferentSizes</name>
+        <param>
+          <type>int</type>
+          <declname>size1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return true if the sizes are more than a factor of 5 different. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="162" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="438" bodyend="440"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1ade2d40b2271270a44dea05bc5082e255" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TabVector_LIST *</type>
+        <definition>TabVector_LIST* tesseract::TabFind::vectors</definition>
+        <argsstring>()</argsstring>
+        <name>vectors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Accessors </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="182" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.h" bodystart="182" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a581a15f13fe384bf67f8d403531566fe" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TabVector_LIST *</type>
+        <definition>TabVector_LIST* tesseract::TabFind::dead_vectors</definition>
+        <argsstring>()</argsstring>
+        <name>dead_vectors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="185" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.h" bodystart="185" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a558d35cc39d58e0a30138438c2af2fab" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TabFind::FindTabVectors</definition>
+        <argsstring>(TabVector_LIST *hlines, BLOBNBOX_LIST *image_blobs, TO_BLOCK *block, int min_gutter_width, ColPartitionGrid *part_grid, FCOORD *deskew, FCOORD *reskew)</argsstring>
+        <name>FindTabVectors</name>
+        <param>
+          <type>TabVector_LIST *</type>
+          <declname>hlines</declname>
+        </param>
+        <param>
+          <type>BLOBNBOX_LIST *</type>
+          <declname>image_blobs</declname>
+        </param>
+        <param>
+          <type><ref refid="class_t_o___b_l_o_c_k" kindref="compound">TO_BLOCK</ref> *</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_gutter_width</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_col_partition_grid" kindref="compound">ColPartitionGrid</ref> *</type>
+          <declname>part_grid</declname>
+        </param>
+        <param>
+          <type><ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref> *</type>
+          <declname>deskew</declname>
+        </param>
+        <param>
+          <type><ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref> *</type>
+          <declname>reskew</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Top-level function to find TabVectors in an input page block. Returns false if the detected skew angle is impossible. Applies the detected skew angle to deskew the tabs, blobs and part_grid. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="194" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="447" bodyend="476"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a55483b344fcfd80beece6b81772fdbd2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::DontFindTabVectors</definition>
+        <argsstring>(BLOBNBOX_LIST *image_blobs, TO_BLOCK *block, FCOORD *deskew, FCOORD *reskew)</argsstring>
+        <name>DontFindTabVectors</name>
+        <param>
+          <type>BLOBNBOX_LIST *</type>
+          <declname>image_blobs</declname>
+        </param>
+        <param>
+          <type><ref refid="class_t_o___b_l_o_c_k" kindref="compound">TO_BLOCK</ref> *</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type><ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref> *</type>
+          <declname>deskew</declname>
+        </param>
+        <param>
+          <type><ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref> *</type>
+          <declname>reskew</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="202" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="480" bodyend="488"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a7e49edde7f5fdadc93ee731676e9f860" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::TidyBlobs</definition>
+        <argsstring>(TO_BLOCK *block)</argsstring>
+        <name>TidyBlobs</name>
+        <param>
+          <type><ref refid="class_t_o___b_l_o_c_k" kindref="compound">TO_BLOCK</ref> *</type>
+          <declname>block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="208" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="493" bodyend="515"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a93467dba57d848ab70ece1046582aa94" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::SetupTabSearch</definition>
+        <argsstring>(int x, int y, int *min_key, int *max_key)</argsstring>
+        <name>SetupTabSearch</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>min_key</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>max_key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="211" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="518" bodyend="523"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1afae5bc37f0ba24f67e7b75bc44039cd4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_scroll_view" kindref="compound">ScrollView</ref> *</type>
+        <definition>ScrollView * tesseract::TabFind::DisplayTabVectors</definition>
+        <argsstring>(ScrollView *tab_win)</argsstring>
+        <name>DisplayTabVectors</name>
+        <param>
+          <type><ref refid="class_scroll_view" kindref="compound">ScrollView</ref> *</type>
+          <declname>tab_win</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Display the tab vectors found in this grid. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="216" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="525" bodyend="536"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a0e13b8acb7aefd346628fd4c88f82d47" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_scroll_view" kindref="compound">ScrollView</ref> *</type>
+        <definition>ScrollView * tesseract::TabFind::FindInitialTabVectors</definition>
+        <argsstring>(BLOBNBOX_LIST *image_blobs, int min_gutter_width, TO_BLOCK *block)</argsstring>
+        <name>FindInitialTabVectors</name>
+        <param>
+          <type>BLOBNBOX_LIST *</type>
+          <declname>image_blobs</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_gutter_width</declname>
+        </param>
+        <param>
+          <type><ref refid="class_t_o___b_l_o_c_k" kindref="compound">TO_BLOCK</ref> *</type>
+          <declname>block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="223" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="542" bodyend="563"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a4dd9c8e6a4a4b669b143a8b209ab4e3d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::ResetForVerticalText</definition>
+        <argsstring>(const FCOORD &amp;rotate, const FCOORD &amp;rerotate, TabVector_LIST *horizontal_lines, int *min_gutter_width)</argsstring>
+        <name>ResetForVerticalText</name>
+        <param>
+          <type>const <ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref> &amp;</type>
+          <declname>rotate</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref> &amp;</type>
+          <declname>rerotate</declname>
+        </param>
+        <param>
+          <type>TabVector_LIST *</type>
+          <declname>horizontal_lines</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>min_gutter_width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="233" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="1329" bodyend="1370"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1af6d774ed654a3708b6941707eaa357e7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="239" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="1374" bodyend="1381"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a7796b29f26b5411d648a546567251352" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::ReflectInYAxis</definition>
+        <argsstring>()</argsstring>
+        <name>ReflectInYAxis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="243" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="1385" bodyend="1406"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a284f867e74a35ec3513f29a03bf46157" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::RotateBlobList</definition>
+        <argsstring>(const FCOORD &amp;rotation, BLOBNBOX_LIST *blobs)</argsstring>
+        <name>RotateBlobList</name>
+        <param>
+          <type>const <ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref> &amp;</type>
+          <declname>rotation</declname>
+        </param>
+        <param>
+          <type>BLOBNBOX_LIST *</type>
+          <declname>blobs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="227" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="1259" bodyend="1264"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a5a94c9d37eb56b73f01f3485fd583c49" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_scroll_view" kindref="compound">ScrollView</ref> *</type>
+        <definition>ScrollView * tesseract::TabFind::FindTabBoxes</definition>
+        <argsstring>(int min_gutter_width)</argsstring>
+        <name>FindTabBoxes</name>
+        <param>
+          <type>int</type>
+          <declname>min_gutter_width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="248" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="585" bodyend="618"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1ab236c410726997cd87ff67af41f8d19b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TabFind::TestBoxForTabs</definition>
+        <argsstring>(BLOBNBOX *bbox, int min_gutter_width)</argsstring>
+        <name>TestBoxForTabs</name>
+        <param>
+          <type><ref refid="class_b_l_o_b_n_b_o_x" kindref="compound">BLOBNBOX</ref> *</type>
+          <declname>bbox</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_gutter_width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="252" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="620" bodyend="792"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a97ca47ef6065f20d96d0ec490d35dfe3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TabFind::ConfirmRaggedLeft</definition>
+        <argsstring>(BLOBNBOX *bbox, int min_gutter)</argsstring>
+        <name>ConfirmRaggedLeft</name>
+        <param>
+          <type><ref refid="class_b_l_o_b_n_b_o_x" kindref="compound">BLOBNBOX</ref> *</type>
+          <declname>bbox</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_gutter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="256" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="796" bodyend="801"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a308480cb92c82a5de10ca5c2a5d5e1d6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TabFind::ConfirmRaggedRight</definition>
+        <argsstring>(BLOBNBOX *bbox, int min_gutter)</argsstring>
+        <name>ConfirmRaggedRight</name>
+        <param>
+          <type><ref refid="class_b_l_o_b_n_b_o_x" kindref="compound">BLOBNBOX</ref> *</type>
+          <declname>bbox</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_gutter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="259" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="805" bodyend="810"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a8a91a5531c090642834c57c7c182a814" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TabFind::NothingYOverlapsInBox</definition>
+        <argsstring>(const TBOX &amp;search_box, const TBOX &amp;target_box)</argsstring>
+        <name>NothingYOverlapsInBox</name>
+        <param>
+          <type>const <ref refid="class_t_b_o_x" kindref="compound">TBOX</ref> &amp;</type>
+          <declname>search_box</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_t_b_o_x" kindref="compound">TBOX</ref> &amp;</type>
+          <declname>target_box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="262" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="814" bodyend="825"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1ae6047aba5ac8a15e2bd0eaf4aa883377" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::FindAllTabVectors</definition>
+        <argsstring>(int min_gutter_width)</argsstring>
+        <name>FindAllTabVectors</name>
+        <param>
+          <type>int</type>
+          <declname>min_gutter_width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="266" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="827" bodyend="880"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1af4ccd2c72114fb6d17613aa1ea6274a2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::TabFind::FindTabVectors</definition>
+        <argsstring>(int search_size_multiple, TabAlignment alignment, int min_gutter_width, TabVector_LIST *vectors, int *vertical_x, int *vertical_y)</argsstring>
+        <name>FindTabVectors</name>
+        <param>
+          <type>int</type>
+          <declname>search_size_multiple</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1a9661ffc0ba1d1cfbca95090649c79822" kindref="member">TabAlignment</ref></type>
+          <declname>alignment</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_gutter_width</declname>
+        </param>
+        <param>
+          <type>TabVector_LIST *</type>
+          <declname>vectors</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>vertical_x</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>vertical_y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="268" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="883" bodyend="906"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a6c56217870a91a80c6aac3a63131c8c7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtesseract_1_1_tab_vector" kindref="compound">TabVector</ref> *</type>
+        <definition>TabVector * tesseract::TabFind::FindTabVector</definition>
+        <argsstring>(int search_size_multiple, int min_gutter_width, TabAlignment alignment, BLOBNBOX *bbox, int *vertical_x, int *vertical_y)</argsstring>
+        <name>FindTabVector</name>
+        <param>
+          <type>int</type>
+          <declname>search_size_multiple</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>min_gutter_width</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1a9661ffc0ba1d1cfbca95090649c79822" kindref="member">TabAlignment</ref></type>
+          <declname>alignment</declname>
+        </param>
+        <param>
+          <type><ref refid="class_b_l_o_b_n_b_o_x" kindref="compound">BLOBNBOX</ref> *</type>
+          <declname>bbox</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>vertical_x</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>vertical_y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="280" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="915" bodyend="927"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a9c336cd8cb2b11f121e8b72300e6b73e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::SetVerticalSkewAndParellelize</definition>
+        <argsstring>(int vertical_x, int vertical_y)</argsstring>
+        <name>SetVerticalSkewAndParellelize</name>
+        <param>
+          <type>int</type>
+          <declname>vertical_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>vertical_y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="287" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="931" bodyend="944"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a4b0a17989fe6e2fc205a6920738b5a47" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::SortVectors</definition>
+        <argsstring>()</argsstring>
+        <name>SortVectors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="290" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="947" bodyend="950"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a06e8364d6e557129204008092e840725" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::EvaluateTabs</definition>
+        <argsstring>()</argsstring>
+        <name>EvaluateTabs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="293" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="953" bodyend="969"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a2dff6b9c3e8c6f0b12d3397ee55459cf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::ComputeColumnWidths</definition>
+        <argsstring>(ScrollView *tab_win, ColPartitionGrid *part_grid)</argsstring>
+        <name>ComputeColumnWidths</name>
+        <param>
+          <type><ref refid="class_scroll_view" kindref="compound">ScrollView</ref> *</type>
+          <declname>tab_win</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_col_partition_grid" kindref="compound">ColPartitionGrid</ref> *</type>
+          <declname>part_grid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="298" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="974" bodyend="993"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a8b11fc77d94b22aabc627caac6aa6507" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::ApplyPartitionsToColumnWidths</definition>
+        <argsstring>(ColPartitionGrid *part_grid, STATS *col_widths)</argsstring>
+        <name>ApplyPartitionsToColumnWidths</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_col_partition_grid" kindref="compound">ColPartitionGrid</ref> *</type>
+          <declname>part_grid</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_t_a_t_s" kindref="compound">STATS</ref> *</type>
+          <declname>col_widths</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="302" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="996" bodyend="1027"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a60c88d88d22e118e1a5476b1b9780860" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::MakeColumnWidths</definition>
+        <argsstring>(int col_widths_size, STATS *col_widths)</argsstring>
+        <name>MakeColumnWidths</name>
+        <param>
+          <type>int</type>
+          <declname>col_widths_size</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_t_a_t_s" kindref="compound">STATS</ref> *</type>
+          <declname>col_widths</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="308" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="1032" bodyend="1064"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1acc5a74ac860c2d0897ce2284f91a314d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::MarkVerticalText</definition>
+        <argsstring>()</argsstring>
+        <name>MarkVerticalText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="311" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="1068" bodyend="1081"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a039ec1ec2656ff206e2a36b2c78e6dc0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::TabFind::FindMedianGutterWidth</definition>
+        <argsstring>(TabVector_LIST *tab_vectors)</argsstring>
+        <name>FindMedianGutterWidth</name>
+        <param>
+          <type>TabVector_LIST *</type>
+          <declname>tab_vectors</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="316" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="1083" bodyend="1104"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1acb67e17f0d256aa6b160274c7f6c9062" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_b_l_o_b_n_b_o_x" kindref="compound">BLOBNBOX</ref> *</type>
+        <definition>BLOBNBOX * tesseract::TabFind::AdjacentBlob</definition>
+        <argsstring>(const BLOBNBOX *bbox, bool look_left, bool ignore_images, double min_overlap_fraction, int gap_limit, int top_y, int bottom_y)</argsstring>
+        <name>AdjacentBlob</name>
+        <param>
+          <type>const <ref refid="class_b_l_o_b_n_b_o_x" kindref="compound">BLOBNBOX</ref> *</type>
+          <declname>bbox</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>look_left</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ignore_images</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>min_overlap_fraction</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>gap_limit</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>top_y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bottom_y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="323" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="1111" bodyend="1185"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1acae838ef44c8d43d54dd0e82f167995c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::AddPartnerVector</definition>
+        <argsstring>(BLOBNBOX *left_blob, BLOBNBOX *right_blob, TabVector *left, TabVector *right)</argsstring>
+        <name>AddPartnerVector</name>
+        <param>
+          <type><ref refid="class_b_l_o_b_n_b_o_x" kindref="compound">BLOBNBOX</ref> *</type>
+          <declname>left_blob</declname>
+        </param>
+        <param>
+          <type><ref refid="class_b_l_o_b_n_b_o_x" kindref="compound">BLOBNBOX</ref> *</type>
+          <declname>right_blob</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_tab_vector" kindref="compound">TabVector</ref> *</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_tab_vector" kindref="compound">TabVector</ref> *</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="332" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="1191" bodyend="1237"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a6f86f704752596be1a862b1f59bf26e4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::CleanupTabs</definition>
+        <argsstring>()</argsstring>
+        <name>CleanupTabs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove separators and unused tabs from the main vectors_ list to the dead_vectors_ list. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="339" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="1241" bodyend="1256"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a9a9d3eef8edc52e84a530901fb6e19d1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TabFind::Deskew</definition>
+        <argsstring>(TabVector_LIST *hlines, BLOBNBOX_LIST *image_blobs, TO_BLOCK *block, FCOORD *deskew, FCOORD *reskew)</argsstring>
+        <name>Deskew</name>
+        <param>
+          <type>TabVector_LIST *</type>
+          <declname>hlines</declname>
+        </param>
+        <param>
+          <type>BLOBNBOX_LIST *</type>
+          <declname>image_blobs</declname>
+        </param>
+        <param>
+          <type><ref refid="class_t_o___b_l_o_c_k" kindref="compound">TO_BLOCK</ref> *</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type><ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref> *</type>
+          <declname>deskew</declname>
+        </param>
+        <param>
+          <type><ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref> *</type>
+          <declname>reskew</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deskew the tab vectors and blobs, computing the rotation and resetting the storked vertical_skew_. The deskew inverse is returned in reskew. Returns false if the detected skew angle is impossible. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="346" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="1268" bodyend="1324"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a16c40f79a6c9abd18a43d37930db40aa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::ComputeDeskewVectors</definition>
+        <argsstring>(FCOORD *deskew, FCOORD *reskew)</argsstring>
+        <name>ComputeDeskewVectors</name>
+        <param>
+          <type><ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref> *</type>
+          <declname>deskew</declname>
+        </param>
+        <param>
+          <type><ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref> *</type>
+          <declname>reskew</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="350" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="1409" bodyend="1416"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tab_find_1a83cad0b9f0362808f422ddc9d5eef731" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TabFind::ApplyTabConstraints</definition>
+        <argsstring>()</argsstring>
+        <name>ApplyTabConstraints</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute and apply constraints to the end positions of TabVectors so that where possible partners end at the same y coordinate. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="356" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.cpp" bodystart="1420" bodyend="1457"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classtesseract_1_1_tab_find" kindref="compound">TabFind</ref> class contains code to find tab-stops and maintain the vectors_ list of tab vectors. Also provides an interface to find neighbouring blobs in the grid of BLOBNBOXes that is used by multiple subclasses. Searching is a complex operation because of the need to enforce rule/separator lines, and tabstop boundaries, (when available), so as the holder of the list of TabVectors this class provides the functions. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2015">
+        <label>tesseract::TabFind</label>
+        <link refid="classtesseract_1_1_tab_find"/>
+        <childnode refid="2016" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2017">
+        <label>tesseract::BlobGrid</label>
+        <link refid="classtesseract_1_1_blob_grid"/>
+        <childnode refid="2018" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2018">
+        <label>tesseract::BBGrid&lt; BLOBNBOX, BLOBNBOX_CLIST, BLOBNBOX_C_IT &gt;</label>
+        <link refid="classtesseract_1_1_b_b_grid"/>
+        <childnode refid="2019" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2020">
+        <label>tesseract::ColumnFinder</label>
+        <link refid="classtesseract_1_1_column_finder"/>
+        <childnode refid="2015" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2016">
+        <label>tesseract::AlignedBlob</label>
+        <link refid="classtesseract_1_1_aligned_blob"/>
+        <childnode refid="2017" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2019">
+        <label>tesseract::GridBase</label>
+        <link refid="classtesseract_1_1_grid_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2026">
+        <label>ICOORD</label>
+        <link refid="class_i_c_o_o_r_d"/>
+      </node>
+      <node id="2021">
+        <label>tesseract::TabFind</label>
+        <link refid="classtesseract_1_1_tab_find"/>
+        <childnode refid="2022" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2026" relation="usage">
+          <edgelabel>vertical_skew_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2023">
+        <label>tesseract::BlobGrid</label>
+        <link refid="classtesseract_1_1_blob_grid"/>
+        <childnode refid="2024" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2024">
+        <label>tesseract::BBGrid&lt; BLOBNBOX, BLOBNBOX_CLIST, BLOBNBOX_C_IT &gt;</label>
+        <link refid="classtesseract_1_1_b_b_grid"/>
+        <childnode refid="2025" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2022">
+        <label>tesseract::AlignedBlob</label>
+        <link refid="classtesseract_1_1_aligned_blob"/>
+        <childnode refid="2023" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2025">
+        <label>tesseract::GridBase</label>
+        <link refid="classtesseract_1_1_grid_base"/>
+        <childnode refid="2026" relation="usage">
+          <edgelabel>tright_</edgelabel>
+          <edgelabel>bleft_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/textord/tabfind.h" line="62" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tabfind.h" bodystart="62" bodyend="372"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_tab_find_1acae838ef44c8d43d54dd0e82f167995c" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>AddPartnerVector</name></member>
+      <member refid="classtesseract_1_1_tab_find_1acb67e17f0d256aa6b160274c7f6c9062" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>AdjacentBlob</name></member>
+      <member refid="classtesseract_1_1_aligned_blob_1a055f4537191b2fbbd69c8f1629237372" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>AlignedBlob</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a8b11fc77d94b22aabc627caac6aa6507" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>ApplyPartitionsToColumnWidths</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a83cad0b9f0362808f422ddc9d5eef731" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>ApplyTabConstraints</name></member>
+      <member refid="classtesseract_1_1_b_b_grid_1a19df7a0ef4d8204b5d6fa36765011114" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>AssertNoDuplicates</name></member>
+      <member refid="classtesseract_1_1_b_b_grid_1a433d978224467a5842ab3126dd0ba903" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>BBGrid</name></member>
+      <member refid="classtesseract_1_1_b_b_grid_1aed2c82e5d0aa5c92137aae623a79f5ec" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>BBGrid</name></member>
+      <member refid="classtesseract_1_1_grid_base_1ad20b2cb8eb2bf52871d5260c04949cce" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>bleft</name></member>
+      <member refid="classtesseract_1_1_grid_base_1a5f09e93ec22c3f7a245eb6611309d8d6" prot="protected" virt="non-virtual"><scope>tesseract::TabFind</scope><name>bleft_</name></member>
+      <member refid="classtesseract_1_1_blob_grid_1a86754acb30620ac8308d7e178f7618bd" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>BlobGrid</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a6f86f704752596be1a862b1f59bf26e4" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>CleanupTabs</name></member>
+      <member refid="classtesseract_1_1_b_b_grid_1a0b373075bdfda41719d6fb9a64bcfee0" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>Clear</name></member>
+      <member refid="classtesseract_1_1_b_b_grid_1aa3f84b8f684c71394335a5a4f17c90be" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>ClearGridData</name></member>
+      <member refid="classtesseract_1_1_grid_base_1a6349387c9d98fae34cf247b12cdc5a00" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>ClipGridCoords</name></member>
+      <member refid="classtesseract_1_1_tab_find_1ad3be775d2bb9a1e7bf3af32f05ccea82" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>column_widths_</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a5446d04d773f5bd16c35f24bf06f15bb" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>CommonWidth</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a2dff6b9c3e8c6f0b12d3397ee55459cf" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>ComputeColumnWidths</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a16c40f79a6c9abd18a43d37930db40aa" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>ComputeDeskewVectors</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a97ca47ef6065f20d96d0ec490d35dfe3" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>ConfirmRaggedLeft</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a308480cb92c82a5de10ca5c2a5d5e1d6" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>ConfirmRaggedRight</name></member>
+      <member refid="classtesseract_1_1_b_b_grid_1a48e846646c932192133cdcdac274c94d" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>CountCellElements</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a581a15f13fe384bf67f8d403531566fe" prot="protected" virt="non-virtual"><scope>tesseract::TabFind</scope><name>dead_vectors</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a60621419d2e25b855238e99decea7315" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>dead_vectors_</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a9a9d3eef8edc52e84a530901fb6e19d1" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>Deskew</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a386ab5331aecfd3bf73b9dfdc5d23b57" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>DifferentSizes</name></member>
+      <member refid="classtesseract_1_1_b_b_grid_1a01e56b692125ef3220a23695e2c4821f" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>DisplayBoxes</name></member>
+      <member refid="classtesseract_1_1_aligned_blob_1ae8e6c33de7a8a40bbb66c312ab9cc899" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>DisplayTabs</name></member>
+      <member refid="classtesseract_1_1_tab_find_1afae5bc37f0ba24f67e7b75bc44039cd4" prot="protected" virt="non-virtual"><scope>tesseract::TabFind</scope><name>DisplayTabVectors</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a55483b344fcfd80beece6b81772fdbd2" prot="protected" virt="non-virtual"><scope>tesseract::TabFind</scope><name>DontFindTabVectors</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a06e8364d6e557129204008092e840725" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>EvaluateTabs</name></member>
+      <member refid="classtesseract_1_1_tab_find_1ae6047aba5ac8a15e2bd0eaf4aa883377" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>FindAllTabVectors</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a0e13b8acb7aefd346628fd4c88f82d47" prot="protected" virt="non-virtual"><scope>tesseract::TabFind</scope><name>FindInitialTabVectors</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a039ec1ec2656ff206e2a36b2c78e6dc0" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>FindMedianGutterWidth</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a5a94c9d37eb56b73f01f3485fd583c49" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>FindTabBoxes</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a6c56217870a91a80c6aac3a63131c8c7" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>FindTabVector</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a558d35cc39d58e0a30138438c2af2fab" prot="protected" virt="non-virtual"><scope>tesseract::TabFind</scope><name>FindTabVectors</name></member>
+      <member refid="classtesseract_1_1_tab_find_1af4ccd2c72114fb6d17613aa1ea6274a2" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>FindTabVectors</name></member>
+      <member refid="classtesseract_1_1_aligned_blob_1ae8acdd97fe77a8af9b71a9078e324e3c" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>FindVerticalAlignment</name></member>
+      <member refid="classtesseract_1_1_b_b_grid_1ae58f8b18fce79b681e5f480dd2ea00e4" prot="protected" virt="non-virtual"><scope>tesseract::TabFind</scope><name>grid_</name></member>
+      <member refid="classtesseract_1_1_grid_base_1ac1ea91a905041f0fa896bec740903a77" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>GridBase</name></member>
+      <member refid="classtesseract_1_1_grid_base_1a52bfcebedaa848425b8e2d228df559b6" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>GridBase</name></member>
+      <member refid="classtesseract_1_1_grid_base_1adcda3a0efeed2a95fc777fc7127898a6" prot="protected" virt="non-virtual"><scope>tesseract::TabFind</scope><name>gridbuckets_</name></member>
+      <member refid="classtesseract_1_1_grid_base_1a9cb158bba184d657c51257b98eea9f8f" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>GridCoords</name></member>
+      <member refid="classtesseract_1_1_grid_base_1a07e6b230c150180d009ef1f317e642f2" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>gridheight</name></member>
+      <member refid="classtesseract_1_1_grid_base_1ae70ca33c0676a296720fea5ddc0aa5cc" prot="protected" virt="non-virtual"><scope>tesseract::TabFind</scope><name>gridheight_</name></member>
+      <member refid="classtesseract_1_1_grid_base_1afff2cee730084711205977b5fcb4901e" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>gridsize</name></member>
+      <member refid="classtesseract_1_1_grid_base_1a0758dd90d5ce47e504a4148f4cda33f3" prot="protected" virt="non-virtual"><scope>tesseract::TabFind</scope><name>gridsize_</name></member>
+      <member refid="classtesseract_1_1_grid_base_1a0a38ea995b9d65f8b67d66d5501a5b80" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>gridwidth</name></member>
+      <member refid="classtesseract_1_1_grid_base_1a429c00f7b3ea66cfd63a75cfa2c1b43d" prot="protected" virt="non-virtual"><scope>tesseract::TabFind</scope><name>gridwidth_</name></member>
+      <member refid="classtesseract_1_1_tab_find_1add7dc17782aaf4446009abdb7329c79f" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>GutterWidth</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a7c81fe52db828b81284f1e143a2d7e51" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>GutterWidthAndNeighbourGap</name></member>
+      <member refid="classtesseract_1_1_b_b_grid_1aa3c72e54651cbf20ee185f8623a60335" prot="public" virt="virtual"><scope>tesseract::TabFind</scope><name>HandleClick</name></member>
+      <member refid="classtesseract_1_1_tab_find_1abd2f6921aa546135c38150769d90b1c2" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>image_origin</name></member>
+      <member refid="classtesseract_1_1_tab_find_1ae60501cfcbf73a95d553f8f3298640a2" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>image_origin_</name></member>
+      <member refid="classtesseract_1_1_aligned_blob_1a08f8b8760c2809ce385cfded3d9cabb6" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>IncrementDebugPix</name></member>
+      <member refid="classtesseract_1_1_b_b_grid_1a1d2990adf323d7910fbf87b6fc3a7415" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>Init</name></member>
+      <member refid="classtesseract_1_1_b_b_grid_1a7b379525e3d60c68e583352ae4b8a750" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>InsertBBox</name></member>
+      <member refid="classtesseract_1_1_tab_find_1aa77b0f7e1c861df33171a855249abd15" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>InsertBlob</name></member>
+      <member refid="classtesseract_1_1_blob_grid_1ae3e2254b403947fc9628221aa3cb5b26" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>InsertBlobList</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a3e55aec0e623b421d2d309cafc1ccfd4" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>InsertBlobsToGrid</name></member>
+      <member refid="classtesseract_1_1_b_b_grid_1a70a2666a2f5db0cf64dea637953b1412" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>InsertPixPtBBox</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a8957c3c1ef493d02fa791b30ceb0ec8a" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>left_tab_boxes_</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a50f94d2d706772a878806ba9647e7727" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>LeftEdgeForBox</name></member>
+      <member refid="classtesseract_1_1_tab_find_1aedfe0f86dd7916bf5c6dfc2e2b4dbe22" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>LeftTabForBox</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a60c88d88d22e118e1a5476b1b9780860" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>MakeColumnWidths</name></member>
+      <member refid="classtesseract_1_1_b_b_grid_1aa716f76c7f04f7112abfc10a3f8c63e0" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>MakeWindow</name></member>
+      <member refid="classtesseract_1_1_tab_find_1acc5a74ac860c2d0897ce2284f91a314d" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>MarkVerticalText</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a8a91a5531c090642834c57c7c182a814" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>NothingYOverlapsInBox</name></member>
+      <member refid="classtesseract_1_1_b_b_grid_1ab5924a2ebc0760856cbafde9df32fcd6" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>RectangleEmpty</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a7796b29f26b5411d648a546567251352" prot="protected" virt="non-virtual"><scope>tesseract::TabFind</scope><name>ReflectInYAxis</name></member>
+      <member refid="classtesseract_1_1_b_b_grid_1adc713153c1282d8727f85ee6d38d7d31" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>RemoveBBox</name></member>
+      <member refid="classtesseract_1_1_tab_find_1af6d774ed654a3708b6941707eaa357e7" prot="protected" virt="non-virtual"><scope>tesseract::TabFind</scope><name>Reset</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a4dd9c8e6a4a4b669b143a8b209ab4e3d" prot="protected" virt="non-virtual"><scope>tesseract::TabFind</scope><name>ResetForVerticalText</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a6faf609de59b4e4fd6baf0c3f19efbaf" prot="protected" virt="non-virtual"><scope>tesseract::TabFind</scope><name>resolution_</name></member>
+      <member refid="classtesseract_1_1_tab_find_1ad9fbc9623e3edfb5e3dbf581f0a75be5" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>right_tab_boxes_</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a62697b39018c4952755c7a299d977554" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>RightEdgeForBox</name></member>
+      <member refid="classtesseract_1_1_tab_find_1adac7971311bbdade2aa87ebb0691a408" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>RightTabForBox</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a284f867e74a35ec3513f29a03bf46157" prot="protected" virt="non-virtual"><scope>tesseract::TabFind</scope><name>RotateBlobList</name></member>
+      <member refid="classtesseract_1_1_tab_find_1aca8c033dbef8b7065be5a5957e83dcf8" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>SetBlobRuleEdges</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a933d26eedcaa45e623f33559cbe69aa6" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>SetBlockRuleEdges</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a93467dba57d848ab70ece1046582aa94" prot="protected" virt="non-virtual"><scope>tesseract::TabFind</scope><name>SetupTabSearch</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a9c336cd8cb2b11f121e8b72300e6b73e" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>SetVerticalSkewAndParellelize</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a4b0a17989fe6e2fc205a6920738b5a47" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>SortVectors</name></member>
+      <member refid="classtesseract_1_1_tab_find_1aa276c6c246bbde8c13131c2b3f41a454" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>TabFind</name></member>
+      <member refid="classtesseract_1_1_tab_find_1ab236c410726997cd87ff67af41f8d19b" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>TestBoxForTabs</name></member>
+      <member refid="classtesseract_1_1_aligned_blob_1a03ba43124d00badef61e1da6b06ffc2a" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>textord_debug_pix</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a7e49edde7f5fdadc93ee731676e9f860" prot="protected" virt="non-virtual"><scope>tesseract::TabFind</scope><name>TidyBlobs</name></member>
+      <member refid="classtesseract_1_1_grid_base_1aa94e147841b6a4fae0b28e7e872685a5" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>tright</name></member>
+      <member refid="classtesseract_1_1_grid_base_1ac348165d112922b3d956f924405012cd" prot="protected" virt="non-virtual"><scope>tesseract::TabFind</scope><name>tright_</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a19f32e8c0bd3909d096666de92a971d1" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>v_it_</name></member>
+      <member refid="classtesseract_1_1_tab_find_1ade2d40b2271270a44dea05bc5082e255" prot="protected" virt="non-virtual"><scope>tesseract::TabFind</scope><name>vectors</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a6db818da7afab708f292237e2bacc9d2" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>vectors_</name></member>
+      <member refid="classtesseract_1_1_tab_find_1aaf22419909b2bf63cb0401285696860a" prot="protected" virt="non-virtual"><scope>tesseract::TabFind</scope><name>vertical_skew_</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a924f574abbd5ef84e96bb3cffc6fe4b4" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>VeryDifferentSizes</name></member>
+      <member refid="classtesseract_1_1_tab_find_1aa1005513be4d6d24178e5b72dcb20afd" prot="private" virt="non-virtual"><scope>tesseract::TabFind</scope><name>width_cb_</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a580534816073eb4327fbe24611499a5c" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>WidthCB</name></member>
+      <member refid="classtesseract_1_1_aligned_blob_1a357ff9e1d9bac2b1d88fb0d335fa7f3e" prot="public" virt="non-virtual"><scope>tesseract::TabFind</scope><name>WithinTestRegion</name></member>
+      <member refid="classtesseract_1_1_aligned_blob_1aa695efbfce803437711ca69c165588c9" prot="public" virt="virtual"><scope>tesseract::TabFind</scope><name>~AlignedBlob</name></member>
+      <member refid="classtesseract_1_1_b_b_grid_1a70d6e4e5938d390162572615e0a9036a" prot="public" virt="virtual"><scope>tesseract::TabFind</scope><name>~BBGrid</name></member>
+      <member refid="classtesseract_1_1_blob_grid_1a70262f671ac05a8b72c71ba75d9a51de" prot="public" virt="virtual"><scope>tesseract::TabFind</scope><name>~BlobGrid</name></member>
+      <member refid="classtesseract_1_1_grid_base_1a7ee16480a8ca444d7847850ac0115813" prot="public" virt="virtual"><scope>tesseract::TabFind</scope><name>~GridBase</name></member>
+      <member refid="classtesseract_1_1_tab_find_1a3144fdb911531f09dd8e63c7e8fa5bf7" prot="public" virt="virtual"><scope>tesseract::TabFind</scope><name>~TabFind</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

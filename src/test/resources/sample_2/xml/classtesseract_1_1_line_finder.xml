@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_line_finder" kind="class" prot="public">
+    <compoundname>tesseract::LineFinder</compoundname>
+    <includes refid="linefind_8h" local="no">linefind.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classtesseract_1_1_line_finder_1a3a72521c00cb7725b2282b7b3cc6e6b9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LineFinder::FindAndRemoveLines</definition>
+        <argsstring>(int resolution, bool debug, Pix *pix, int *vertical_x, int *vertical_y, Pix **pix_music_mask, TabVector_LIST *v_lines, TabVector_LIST *h_lines)</argsstring>
+        <name>FindAndRemoveLines</name>
+        <param>
+          <type>int</type>
+          <declname>resolution</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>debug</declname>
+        </param>
+        <param>
+          <type>Pix *</type>
+          <declname>pix</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>vertical_x</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>vertical_y</declname>
+        </param>
+        <param>
+          <type>Pix **</type>
+          <declname>pix_music_mask</declname>
+        </param>
+        <param>
+          <type>TabVector_LIST *</type>
+          <declname>v_lines</declname>
+        </param>
+        <param>
+          <type>TabVector_LIST *</type>
+          <declname>h_lines</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Finds vertical and horizontal line objects in the given pix and removes them.</para><para>Uses the given resolution to determine size thresholds instead of any that may be present in the pix.</para><para>The output vertical_x and vertical_y contain a sum of the output vectors, thereby giving the mean vertical direction.</para><para>If pix_music_mask != NULL, and music is detected, a mask of the staves and anything that is connected (bars, notes etc.) will be returned in pix_music_mask, the mask subtracted from pix, and the lines will not appear in v_lines or h_lines.</para><para>The output vectors are owned by the list and Frozen (cannot refit) by having no boxes, as there is no need to refit or merge separator lines.</para><para>The detected lines are removed from the pix. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/linefind.h" line="61" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/linefind.cpp" bodystart="243" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_line_finder_1a9d00a88e3c4d6e1b9c7b28c3f6825b88" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LineFinder::ConvertBoxaToBlobs</definition>
+        <argsstring>(int image_width, int image_height, Boxa **boxes, C_BLOB_LIST *blobs)</argsstring>
+        <name>ConvertBoxaToBlobs</name>
+        <param>
+          <type>int</type>
+          <declname>image_width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>image_height</declname>
+        </param>
+        <param>
+          <type>Boxa **</type>
+          <declname>boxes</declname>
+        </param>
+        <param>
+          <type>C_BLOB_LIST *</type>
+          <declname>blobs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Converts the Boxa array to a list of <ref refid="class_c___b_l_o_b" kindref="compound">C_BLOB</ref>, getting rid of severely overlapping outlines and those that are children of a bigger one.</para><para>The output is a list of C_BLOBs that are owned by the list.</para><para>The C_OUTLINEs in the C_BLOBs contain no outline data - just empty bounding boxes. The Boxa is consumed and destroyed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/linefind.h" line="76" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/linefind.cpp" bodystart="321" bodyend="352"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classtesseract_1_1_line_finder_1a22bfd4a80d8fadfe6b4d397b62f4cf32" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LineFinder::FindAndRemoveVLines</definition>
+        <argsstring>(int resolution, Pix *pix_intersections, int *vertical_x, int *vertical_y, Pix **pix_vline, Pix *pix_non_vline, Pix *src_pix, TabVector_LIST *vectors)</argsstring>
+        <name>FindAndRemoveVLines</name>
+        <param>
+          <type>int</type>
+          <declname>resolution</declname>
+        </param>
+        <param>
+          <type>Pix *</type>
+          <declname>pix_intersections</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>vertical_x</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>vertical_y</declname>
+        </param>
+        <param>
+          <type>Pix **</type>
+          <declname>pix_vline</declname>
+        </param>
+        <param>
+          <type>Pix *</type>
+          <declname>pix_non_vline</declname>
+        </param>
+        <param>
+          <type>Pix *</type>
+          <declname>src_pix</declname>
+        </param>
+        <param>
+          <type>TabVector_LIST *</type>
+          <declname>vectors</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/linefind.h" line="88" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/linefind.cpp" bodystart="364" bodyend="388"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_line_finder_1aaeda7d51b87a396ffdef1bb2a1974fef" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LineFinder::FindAndRemoveHLines</definition>
+        <argsstring>(int resolution, Pix *pix_intersections, int vertical_x, int vertical_y, Pix **pix_hline, Pix *pix_non_hline, Pix *src_pix, TabVector_LIST *vectors)</argsstring>
+        <name>FindAndRemoveHLines</name>
+        <param>
+          <type>int</type>
+          <declname>resolution</declname>
+        </param>
+        <param>
+          <type>Pix *</type>
+          <declname>pix_intersections</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>vertical_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>vertical_y</declname>
+        </param>
+        <param>
+          <type>Pix **</type>
+          <declname>pix_hline</declname>
+        </param>
+        <param>
+          <type>Pix *</type>
+          <declname>pix_non_hline</declname>
+        </param>
+        <param>
+          <type>Pix *</type>
+          <declname>src_pix</declname>
+        </param>
+        <param>
+          <type>TabVector_LIST *</type>
+          <declname>vectors</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/linefind.h" line="103" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/linefind.cpp" bodystart="400" bodyend="431"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_line_finder_1a1308018f8aaf153f39d7abeb882f9651" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LineFinder::FindLineVectors</definition>
+        <argsstring>(const ICOORD &amp;bleft, const ICOORD &amp;tright, BLOBNBOX_LIST *line_bblobs, int *vertical_x, int *vertical_y, TabVector_LIST *vectors)</argsstring>
+        <name>FindLineVectors</name>
+        <param>
+          <type>const <ref refid="class_i_c_o_o_r_d" kindref="compound">ICOORD</ref> &amp;</type>
+          <declname>bleft</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_i_c_o_o_r_d" kindref="compound">ICOORD</ref> &amp;</type>
+          <declname>tright</declname>
+        </param>
+        <param>
+          <type>BLOBNBOX_LIST *</type>
+          <declname>line_bblobs</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>vertical_x</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>vertical_y</declname>
+        </param>
+        <param>
+          <type>TabVector_LIST *</type>
+          <declname>vectors</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/linefind.h" line="114" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/linefind.cpp" bodystart="438" bodyend="483"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_line_finder_1aa2aae2d7034f181a22301d2e877d03e7" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LineFinder::GetLineMasks</definition>
+        <argsstring>(int resolution, Pix *src_pix, Pix **pix_vline, Pix **pix_non_vline, Pix **pix_hline, Pix **pix_non_hline, Pix **pix_intersections, Pix **pix_music_mask, Pixa *pixa_display)</argsstring>
+        <name>GetLineMasks</name>
+        <param>
+          <type>int</type>
+          <declname>resolution</declname>
+        </param>
+        <param>
+          <type>Pix *</type>
+          <declname>src_pix</declname>
+        </param>
+        <param>
+          <type>Pix **</type>
+          <declname>pix_vline</declname>
+        </param>
+        <param>
+          <type>Pix **</type>
+          <declname>pix_non_vline</declname>
+        </param>
+        <param>
+          <type>Pix **</type>
+          <declname>pix_hline</declname>
+        </param>
+        <param>
+          <type>Pix **</type>
+          <declname>pix_non_hline</declname>
+        </param>
+        <param>
+          <type>Pix **</type>
+          <declname>pix_intersections</declname>
+        </param>
+        <param>
+          <type>Pix **</type>
+          <declname>pix_music_mask</declname>
+        </param>
+        <param>
+          <type>Pixa *</type>
+          <declname>pixa_display</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/linefind.h" line="132" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/linefind.cpp" bodystart="572" bodyend="684"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_line_finder_1a4b8e98cf1f8d63e491fb9d1208d8f9fc" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::LineFinder::GetLineBoxes</definition>
+        <argsstring>(bool horizontal_lines, Pix *pix_lines, Pix *pix_intersections, C_BLOB_LIST *line_cblobs, BLOBNBOX_LIST *line_bblobs)</argsstring>
+        <name>GetLineBoxes</name>
+        <param>
+          <type>bool</type>
+          <declname>horizontal_lines</declname>
+        </param>
+        <param>
+          <type>Pix *</type>
+          <declname>pix_lines</declname>
+        </param>
+        <param>
+          <type>Pix *</type>
+          <declname>pix_intersections</declname>
+        </param>
+        <param>
+          <type>C_BLOB_LIST *</type>
+          <declname>line_cblobs</declname>
+        </param>
+        <param>
+          <type>BLOBNBOX_LIST *</type>
+          <declname>line_bblobs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/linefind.h" line="141" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/linefind.cpp" bodystart="689" bodyend="745"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classtesseract_1_1_line_finder" kindref="compound">LineFinder</ref> class is a simple static function wrapper class that mainly exposes the FindVerticalLines function. </para>    </detaileddescription>
+    <location file="/Users/makoto/Desktop/trunk/textord/linefind.h" line="39" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/linefind.h" bodystart="39" bodyend="145"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_line_finder_1a9d00a88e3c4d6e1b9c7b28c3f6825b88" prot="public" virt="non-virtual"><scope>tesseract::LineFinder</scope><name>ConvertBoxaToBlobs</name></member>
+      <member refid="classtesseract_1_1_line_finder_1aaeda7d51b87a396ffdef1bb2a1974fef" prot="private" virt="non-virtual"><scope>tesseract::LineFinder</scope><name>FindAndRemoveHLines</name></member>
+      <member refid="classtesseract_1_1_line_finder_1a3a72521c00cb7725b2282b7b3cc6e6b9" prot="public" virt="non-virtual"><scope>tesseract::LineFinder</scope><name>FindAndRemoveLines</name></member>
+      <member refid="classtesseract_1_1_line_finder_1a22bfd4a80d8fadfe6b4d397b62f4cf32" prot="private" virt="non-virtual"><scope>tesseract::LineFinder</scope><name>FindAndRemoveVLines</name></member>
+      <member refid="classtesseract_1_1_line_finder_1a1308018f8aaf153f39d7abeb882f9651" prot="private" virt="non-virtual"><scope>tesseract::LineFinder</scope><name>FindLineVectors</name></member>
+      <member refid="classtesseract_1_1_line_finder_1a4b8e98cf1f8d63e491fb9d1208d8f9fc" prot="private" virt="non-virtual"><scope>tesseract::LineFinder</scope><name>GetLineBoxes</name></member>
+      <member refid="classtesseract_1_1_line_finder_1aa2aae2d7034f181a22301d2e877d03e7" prot="private" virt="non-virtual"><scope>tesseract::LineFinder</scope><name>GetLineMasks</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

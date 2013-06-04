@@ -1,0 +1,592 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="classmozilla_1_1_file_media_resource" kind="class" prot="public">
+    <compoundname>mozilla::FileMediaResource</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MediaResource</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmozilla_1_1_file_media_resource_1a975dff798e2f236103f8aede656476d5" prot="private" static="no" mutable="no">
+        <type>int64_t</type>
+        <definition>int64_t mozilla::FileMediaResource::mSize</definition>
+        <argsstring></argsstring>
+        <name>mSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1237" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_file_media_resource_1a5f25b6409be1d172ef9eecd3b89de0cf" prot="private" static="no" mutable="no">
+        <type>Mutex</type>
+        <definition>Mutex mozilla::FileMediaResource::mLock</definition>
+        <argsstring></argsstring>
+        <name>mLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1244" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_file_media_resource_1a0d9b0fbe8df6b5aa2127578222edcfbb" prot="private" static="no" mutable="no">
+        <type>nsCOMPtr&lt; nsISeekableStream &gt;</type>
+        <definition>nsCOMPtr&lt;nsISeekableStream&gt; mozilla::FileMediaResource::mSeekable</definition>
+        <argsstring></argsstring>
+        <name>mSeekable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1248" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_file_media_resource_1a76c1df5f7b94168a71570bfcdd441c15" prot="private" static="no" mutable="no">
+        <type>nsCOMPtr&lt; nsIInputStream &gt;</type>
+        <definition>nsCOMPtr&lt;nsIInputStream&gt; mozilla::FileMediaResource::mInput</definition>
+        <argsstring></argsstring>
+        <name>mInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1254" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_file_media_resource_1a7f52641c7880d72e32c8577c0d3d764a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool mozilla::FileMediaResource::mSizeInitialized</definition>
+        <argsstring></argsstring>
+        <name>mSizeInitialized</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1259" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1259" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1acc18afd4f78ed234823b2bff72027958" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mozilla::FileMediaResource::FileMediaResource</definition>
+        <argsstring>(MediaDecoder *aDecoder, nsIChannel *aChannel, nsIURI *aURI)</argsstring>
+        <name>FileMediaResource</name>
+        <param>
+          <type>MediaDecoder *</type>
+          <declname>aDecoder</declname>
+        </param>
+        <param>
+          <type>nsIChannel *</type>
+          <declname>aChannel</declname>
+        </param>
+        <param>
+          <type>nsIURI *</type>
+          <declname>aURI</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1158" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1157" bodyend="1159"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1a11aa866a54aa046626832af442a44518" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mozilla::FileMediaResource::~FileMediaResource</definition>
+        <argsstring>()</argsstring>
+        <name>~FileMediaResource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1161" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1160" bodyend="1162"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1ad8712271f4f17851b9ef0a6d0e6654be" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>nsresult</type>
+        <definition>nsresult mozilla::FileMediaResource::Open</definition>
+        <argsstring>(nsIStreamListener **aStreamListener)</argsstring>
+        <name>Open</name>
+        <param>
+          <type>nsIStreamListener **</type>
+          <declname>aStreamListener</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1165" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1316" bodyend="1367"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1a9a7df0e8357787407bf5d41d576100d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>nsresult</type>
+        <definition>nsresult mozilla::FileMediaResource::Close</definition>
+        <argsstring>()</argsstring>
+        <name>Close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1166" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1369" bodyend="1382"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1a027742a4ca54ad32d9b122fa3b075a21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void mozilla::FileMediaResource::Suspend</definition>
+        <argsstring>(bool aCloseImmediately)</argsstring>
+        <name>Suspend</name>
+        <param>
+          <type>bool</type>
+          <declname>aCloseImmediately</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1167" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1167" bodyend="1167"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1aadbc7364eea1e21997202faa4a71c691" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void mozilla::FileMediaResource::Resume</definition>
+        <argsstring>()</argsstring>
+        <name>Resume</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1168" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1168" bodyend="1168"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1aaebde978f0e07d879248851f95f68b07" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>already_AddRefed&lt; nsIPrincipal &gt;</type>
+        <definition>already_AddRefed&lt; nsIPrincipal &gt; mozilla::FileMediaResource::GetCurrentPrincipal</definition>
+        <argsstring>()</argsstring>
+        <name>GetCurrentPrincipal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1169" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1384" bodyend="1394"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1ada379f0bdbb000b2d3523a530c6360a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool mozilla::FileMediaResource::CanClone</definition>
+        <argsstring>()</argsstring>
+        <name>CanClone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1170" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1396" bodyend="1399"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1a2c4f6c7d6dd3de024d38307ff121e34f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>MediaResource *</type>
+        <definition>MediaResource * mozilla::FileMediaResource::CloneData</definition>
+        <argsstring>(MediaDecoder *aDecoder)</argsstring>
+        <name>CloneData</name>
+        <param>
+          <type>MediaDecoder *</type>
+          <declname>aDecoder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1171" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1401" bodyend="1425"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1aedaceaa2523dbc0d6d699a87d0ccebd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>nsresult</type>
+        <definition>nsresult mozilla::FileMediaResource::ReadFromCache</definition>
+        <argsstring>(char *aBuffer, int64_t aOffset, uint32_t aCount)</argsstring>
+        <name>ReadFromCache</name>
+        <param>
+          <type>char *</type>
+          <declname>aBuffer</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>aOffset</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>aCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1172" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1427" bodyend="1455"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1a4148306ac861bc7f6758c9f565222fbc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void mozilla::FileMediaResource::SetReadMode</definition>
+        <argsstring>(MediaCacheStream::ReadMode aMode)</argsstring>
+        <name>SetReadMode</name>
+        <param>
+          <type>MediaCacheStream::ReadMode</type>
+          <declname>aMode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1177" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1177" bodyend="1177"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1a270623f70b6b1c0cfe064a999e229597" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void mozilla::FileMediaResource::SetPlaybackRate</definition>
+        <argsstring>(uint32_t aBytesPerSecond)</argsstring>
+        <name>SetPlaybackRate</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>aBytesPerSecond</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1178" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1178" bodyend="1178"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1adb54ed695f712c798bb76098caebf354" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>nsresult</type>
+        <definition>nsresult mozilla::FileMediaResource::Read</definition>
+        <argsstring>(char *aBuffer, uint32_t aCount, uint32_t *aBytes)</argsstring>
+        <name>Read</name>
+        <param>
+          <type>char *</type>
+          <declname>aBuffer</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>aCount</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>aBytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1179" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1457" bodyend="1464"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1ab0f183539f74051d0b0cb9c85a0f0f17" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>nsresult</type>
+        <definition>nsresult mozilla::FileMediaResource::Seek</definition>
+        <argsstring>(int32_t aWhence, int64_t aOffset)</argsstring>
+        <name>Seek</name>
+        <param>
+          <type>int32_t</type>
+          <declname>aWhence</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>aOffset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1180" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1466" bodyend="1475"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1a77f6b114ff4cd36ed59c0f0e713ec7bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void mozilla::FileMediaResource::StartSeekingForMetadata</definition>
+        <argsstring>()</argsstring>
+        <name>StartSeekingForMetadata</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1181" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1181" bodyend="1181"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1a905828a611c87abc6d8b9d7701f73f16" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void mozilla::FileMediaResource::EndSeekingForMetadata</definition>
+        <argsstring>()</argsstring>
+        <name>EndSeekingForMetadata</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1182" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1182" bodyend="1182"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1a7c92a861ab925e19c2d74259c753e6cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int64_t</type>
+        <definition>int64_t mozilla::FileMediaResource::Tell</definition>
+        <argsstring>()</argsstring>
+        <name>Tell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1183" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1477" bodyend="1489"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1a77e95993ed1e48381e23e6b5165418bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void mozilla::FileMediaResource::Pin</definition>
+        <argsstring>()</argsstring>
+        <name>Pin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1186" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1186" bodyend="1186"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1a1ace9eb5c2bd382bf52d5e83d050fb59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void mozilla::FileMediaResource::Unpin</definition>
+        <argsstring>()</argsstring>
+        <name>Unpin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1187" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1187" bodyend="1187"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1a5a368812a80f3cc8f2e98f57d28c52f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>virtual double mozilla::FileMediaResource::GetDownloadRate</definition>
+        <argsstring>(bool *aIsReliable)</argsstring>
+        <name>GetDownloadRate</name>
+        <param>
+          <type>bool *</type>
+          <declname>aIsReliable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1189" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1188" bodyend="1193"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1acfd778f6ac26a9305d458242582e4b25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>int64_t</type>
+        <definition>virtual int64_t mozilla::FileMediaResource::GetLength</definition>
+        <argsstring>()</argsstring>
+        <name>GetLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1194" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1194" bodyend="1200"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1abbe836eff254cd0c674866f8d71298d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>int64_t</type>
+        <definition>virtual int64_t mozilla::FileMediaResource::GetNextCachedData</definition>
+        <argsstring>(int64_t aOffset)</argsstring>
+        <name>GetNextCachedData</name>
+        <param>
+          <type>int64_t</type>
+          <declname>aOffset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1202" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1201" bodyend="1209"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1ab5612652e2cf9b492e4560fdd82b75bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>int64_t</type>
+        <definition>virtual int64_t mozilla::FileMediaResource::GetCachedDataEnd</definition>
+        <argsstring>(int64_t aOffset)</argsstring>
+        <name>GetCachedDataEnd</name>
+        <param>
+          <type>int64_t</type>
+          <declname>aOffset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1210" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1210" bodyend="1217"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1a3f67ba7bc1ff18402fc3caaa273c713e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool mozilla::FileMediaResource::IsDataCachedToEndOfResource</definition>
+        <argsstring>(int64_t aOffset)</argsstring>
+        <name>IsDataCachedToEndOfResource</name>
+        <param>
+          <type>int64_t</type>
+          <declname>aOffset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1218" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1218" bodyend="1218"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1aa6f3b147c1ede012ec35a54fdfa97440" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool mozilla::FileMediaResource::IsSuspendedByCache</definition>
+        <argsstring>(MediaResource **aActiveResource)</argsstring>
+        <name>IsSuspendedByCache</name>
+        <param>
+          <type>MediaResource **</type>
+          <declname>aActiveResource</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1220" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1219" bodyend="1225"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1a92836fe5cf70b2eca5ed583197ffda98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool mozilla::FileMediaResource::IsSuspended</definition>
+        <argsstring>()</argsstring>
+        <name>IsSuspended</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1226" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1226" bodyend="1226"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1a2fdf8cffe5eadaf2d5798f32cf610d53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>nsresult</type>
+        <definition>nsresult mozilla::FileMediaResource::GetCachedRanges</definition>
+        <argsstring>(nsTArray&lt; MediaByteRange &gt; &amp;aRanges)</argsstring>
+        <name>GetCachedRanges</name>
+        <param>
+          <type>nsTArray&lt; MediaByteRange &gt; &amp;</type>
+          <declname>aRanges</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1228" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1302" bodyend="1314"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmozilla_1_1_file_media_resource_1ab5997bd466214be89851bee0cdb83b5c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::FileMediaResource::EnsureSizeInitialized</definition>
+        <argsstring>()</argsstring>
+        <name>EnsureSizeInitialized</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1233" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1284" bodyend="1300"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="18">
+        <label>mozilla::FileMediaResource</label>
+        <link refid="classmozilla_1_1_file_media_resource"/>
+        <childnode refid="19" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>MediaResource</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="20">
+        <label>mozilla::FileMediaResource</label>
+        <link refid="classmozilla_1_1_file_media_resource"/>
+        <childnode refid="21" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>MediaResource</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="1155" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="1155" bodyend="1260"/>
+    <listofallmembers>
+      <member refid="classmozilla_1_1_file_media_resource_1ada379f0bdbb000b2d3523a530c6360a5" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>CanClone</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1a2c4f6c7d6dd3de024d38307ff121e34f" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>CloneData</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1a9a7df0e8357787407bf5d41d576100d8" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>Close</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1a905828a611c87abc6d8b9d7701f73f16" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>EndSeekingForMetadata</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1ab5997bd466214be89851bee0cdb83b5c" prot="private" virt="non-virtual"><scope>mozilla::FileMediaResource</scope><name>EnsureSizeInitialized</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1acc18afd4f78ed234823b2bff72027958" prot="public" virt="non-virtual"><scope>mozilla::FileMediaResource</scope><name>FileMediaResource</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1ab5612652e2cf9b492e4560fdd82b75bd" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>GetCachedDataEnd</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1a2fdf8cffe5eadaf2d5798f32cf610d53" prot="public" virt="non-virtual"><scope>mozilla::FileMediaResource</scope><name>GetCachedRanges</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1aaebde978f0e07d879248851f95f68b07" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>GetCurrentPrincipal</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1a5a368812a80f3cc8f2e98f57d28c52f9" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>GetDownloadRate</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1acfd778f6ac26a9305d458242582e4b25" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>GetLength</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1abbe836eff254cd0c674866f8d71298d7" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>GetNextCachedData</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1a3f67ba7bc1ff18402fc3caaa273c713e" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>IsDataCachedToEndOfResource</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1a92836fe5cf70b2eca5ed583197ffda98" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>IsSuspended</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1aa6f3b147c1ede012ec35a54fdfa97440" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>IsSuspendedByCache</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1a76c1df5f7b94168a71570bfcdd441c15" prot="private" virt="non-virtual"><scope>mozilla::FileMediaResource</scope><name>mInput</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1a5f25b6409be1d172ef9eecd3b89de0cf" prot="private" virt="non-virtual"><scope>mozilla::FileMediaResource</scope><name>mLock</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1a0d9b0fbe8df6b5aa2127578222edcfbb" prot="private" virt="non-virtual"><scope>mozilla::FileMediaResource</scope><name>mSeekable</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1a975dff798e2f236103f8aede656476d5" prot="private" virt="non-virtual"><scope>mozilla::FileMediaResource</scope><name>mSize</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1a7f52641c7880d72e32c8577c0d3d764a" prot="private" virt="non-virtual"><scope>mozilla::FileMediaResource</scope><name>mSizeInitialized</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1ad8712271f4f17851b9ef0a6d0e6654be" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>Open</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1a77e95993ed1e48381e23e6b5165418bd" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>Pin</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1adb54ed695f712c798bb76098caebf354" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>Read</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1aedaceaa2523dbc0d6d699a87d0ccebd1" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>ReadFromCache</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1aadbc7364eea1e21997202faa4a71c691" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>Resume</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1ab0f183539f74051d0b0cb9c85a0f0f17" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>Seek</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1a270623f70b6b1c0cfe064a999e229597" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>SetPlaybackRate</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1a4148306ac861bc7f6758c9f565222fbc" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>SetReadMode</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1a77f6b114ff4cd36ed59c0f0e713ec7bc" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>StartSeekingForMetadata</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1a027742a4ca54ad32d9b122fa3b075a21" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>Suspend</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1a7c92a861ab925e19c2d74259c753e6cc" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>Tell</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1a1ace9eb5c2bd382bf52d5e83d050fb59" prot="public" virt="virtual"><scope>mozilla::FileMediaResource</scope><name>Unpin</name></member>
+      <member refid="classmozilla_1_1_file_media_resource_1a11aa866a54aa046626832af442a44518" prot="public" virt="non-virtual"><scope>mozilla::FileMediaResource</scope><name>~FileMediaResource</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

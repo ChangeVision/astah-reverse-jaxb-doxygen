@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="neuron_8cpp" kind="file">
+    <compoundname>neuron.cpp</compoundname>
+    <includes refid="neuron_8h" local="yes">neuron.h</includes>
+    <includes refid="input__file__buffer_8h" local="yes">input_file_buffer.h</includes>
+    <incdepgraph>
+      <node id="36342">
+        <label>neural_networks/runtime/neuron.cpp</label>
+        <link refid="neuron.cpp"/>
+        <childnode refid="36343" relation="include">
+        </childnode>
+        <childnode refid="36346" relation="include">
+        </childnode>
+      </node>
+      <node id="36343">
+        <label>neuron.h</label>
+        <link refid="neuron_8h"/>
+        <childnode refid="36344" relation="include">
+        </childnode>
+        <childnode refid="36345" relation="include">
+        </childnode>
+      </node>
+      <node id="36348">
+        <label>string</label>
+      </node>
+      <node id="36345">
+        <label>vector</label>
+      </node>
+      <node id="36344">
+        <label>math.h</label>
+      </node>
+      <node id="36347">
+        <label>stdio.h</label>
+      </node>
+      <node id="36346">
+        <label>input_file_buffer.h</label>
+        <link refid="input__file__buffer_8h"/>
+        <childnode refid="36347" relation="include">
+        </childnode>
+        <childnode refid="36348" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacetesseract">tesseract</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2008<sp/>Google<sp/>Inc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>ahmadab@google.com<sp/>(Ahmad<sp/>Abdulkader)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>neuron.cpp:<sp/>The<sp/>implementation<sp/>of<sp/>a<sp/>class<sp/>for<sp/>an<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>that<sp/>represents<sp/>a<sp/>single<sp/>neuron<sp/>in<sp/>a<sp/>neural<sp/>network</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="neuron_8h" kindref="compound">neuron.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="input__file__buffer_8h" kindref="compound">input_file_buffer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetesseract-c__api-demo_1afed58feacb84df2de88bdd613cfdba6d" kindref="member">tesseract</ref><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Instantiate<sp/>all<sp/>supported<sp/>templates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_neuron_1a2620b6621c27ccc5386978fabbc5d045" kindref="member">Neuron::ReadBinary</ref>(InputFileBuffer<sp/>*input_buffer);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>default<sp/>and<sp/>only<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><ref refid="classtesseract_1_1_neuron_1a7cad293101c8b65b5cc7330abd989cba" kindref="member">Neuron::Neuron</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_neuron_1aa7d2dbd60eb9b1658235231328d433f6" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>virtual<sp/>destructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><ref refid="classtesseract_1_1_neuron_1aabed977ad58b676ecbbe061065d66f51" kindref="member">Neuron::~Neuron</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Initializer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_neuron_1aa7d2dbd60eb9b1658235231328d433f6" kindref="member">Neuron::Init</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_neuron_1acf182e566805bb493276be54e8b07b5a" kindref="member">id_</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_neuron_1a2b109732594a4fd6240995520eb9a225" kindref="member">frwd_dirty_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_neuron_1a94802e87a7f08527f75cb9e051cc0605" kindref="member">fan_in_</ref>.clear();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_neuron_1ad56351b172a4616dceec90f5d7fe984b" kindref="member">fan_in_weights_</ref>.clear();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_neuron_1af5b3c2c30dea3732624df7e23b62f8df" kindref="member">activation_</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_neuron_1aecec05557a84adbe5ebc74714bae0d93" kindref="member">output_</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_neuron_1a51752dcc36486a7299eeb6ae3761fcd4" kindref="member">bias_</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_neuron_1a4373a2ce8c99d78cb25cd9e68bc6b106" kindref="member">node_type_</ref><sp/>=<sp/><ref refid="classtesseract_1_1_neuron_1aaca04e8e86b6305b6ef5cafa97a69ccca8a5c16f1c34dd4b835bcbedfdcd2a8b3" kindref="member">Unknown</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Computes<sp/>the<sp/>activation<sp/>and<sp/>output<sp/>of<sp/>the<sp/>neuron<sp/>if<sp/>not<sp/>fresh</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>by<sp/>pulling<sp/>the<sp/>outputs<sp/>of<sp/>all<sp/>fan-in<sp/>neurons</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_neuron_1aacf58b3d21f61bf84e2815931f869464" kindref="member">Neuron::FeedForward</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classtesseract_1_1_neuron_1a2b109732594a4fd6240995520eb9a225" kindref="member">frwd_dirty_</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>nothing<sp/>to<sp/>do<sp/>for<sp/>input<sp/>nodes:<sp/>just<sp/>pass<sp/>the<sp/>input<sp/>to<sp/>the<sp/>o/p</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>otherwise,<sp/>pull<sp/>the<sp/>output<sp/>of<sp/>all<sp/>fan-in<sp/>neurons</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classtesseract_1_1_neuron_1a4373a2ce8c99d78cb25cd9e68bc6b106" kindref="member">node_type_</ref><sp/>!=<sp/><ref refid="classtesseract_1_1_neuron_1aaca04e8e86b6305b6ef5cafa97a69cccabf08baf29ab216392a1f0ad5c439d220" kindref="member">Input</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_neuron_1a640f3c1af33401c7b7da18ccd49ee68e" kindref="member">fan_in_cnt</ref><sp/>=<sp/><ref refid="classtesseract_1_1_neuron_1a94802e87a7f08527f75cb9e051cc0605" kindref="member">fan_in_</ref>.size();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sum<sp/>out<sp/>the<sp/>activation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtesseract_1_1_neuron_1af5b3c2c30dea3732624df7e23b62f8df" kindref="member">activation_</ref><sp/>=<sp/>-<ref refid="classtesseract_1_1_neuron_1a51752dcc36486a7299eeb6ae3761fcd4" kindref="member">bias_</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>in<sp/>=<sp/>0;<sp/>in<sp/>&lt;<sp/><ref refid="classtesseract_1_1_neuron_1a640f3c1af33401c7b7da18ccd49ee68e" kindref="member">fan_in_cnt</ref>;<sp/>in++)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classtesseract_1_1_neuron_1a94802e87a7f08527f75cb9e051cc0605" kindref="member">fan_in_</ref>[in]-&gt;<ref refid="classtesseract_1_1_neuron_1a2b109732594a4fd6240995520eb9a225" kindref="member">frwd_dirty_</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtesseract_1_1_neuron_1a94802e87a7f08527f75cb9e051cc0605" kindref="member">fan_in_</ref>[in]-&gt;FeedForward();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtesseract_1_1_neuron_1af5b3c2c30dea3732624df7e23b62f8df" kindref="member">activation_</ref><sp/>+=<sp/>((*(<ref refid="classtesseract_1_1_neuron_1ad56351b172a4616dceec90f5d7fe984b" kindref="member">fan_in_weights_</ref>[in]))<sp/>*<sp/><ref refid="classtesseract_1_1_neuron_1a94802e87a7f08527f75cb9e051cc0605" kindref="member">fan_in_</ref>[in]-&gt;output_);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sigmoid<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtesseract_1_1_neuron_1aecec05557a84adbe5ebc74714bae0d93" kindref="member">output_</ref><sp/>=<sp/><ref refid="classtesseract_1_1_neuron_1a6b38598355a4ebd977f20f0582db3d49" kindref="member">Sigmoid</ref>(<ref refid="classtesseract_1_1_neuron_1af5b3c2c30dea3732624df7e23b62f8df" kindref="member">activation_</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_neuron_1a2b109732594a4fd6240995520eb9a225" kindref="member">frwd_dirty_</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//<sp/>set<sp/>the<sp/>type<sp/>of<sp/>the<sp/>neuron</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_neuron_1af4e0f355208188f9d6017166153d18f9" kindref="member">Neuron::set_node_type</ref>(NeuronTypes<sp/>Type)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_neuron_1a4373a2ce8c99d78cb25cd9e68bc6b106" kindref="member">node_type_</ref><sp/>=<sp/>Type;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Adds<sp/>new<sp/>connections<sp/>*to*<sp/>this<sp/>neuron<sp/>*From*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">//<sp/>a<sp/>target<sp/>neuron<sp/>using<sp/>specfied<sp/>params</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Note<sp/>that<sp/>what<sp/>is<sp/>actually<sp/>copied<sp/>in<sp/>this<sp/>function<sp/>are<sp/>pointers<sp/>to<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">//<sp/>specified<sp/>Neurons<sp/>and<sp/>weights<sp/>and<sp/>not<sp/>the<sp/>actualt<sp/>values.<sp/>This<sp/>is<sp/>by</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//<sp/>design<sp/>to<sp/>centralize<sp/>the<sp/>alloction<sp/>of<sp/>neurons<sp/>and<sp/>weights<sp/>and<sp/>so</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//<sp/>increase<sp/>the<sp/>locality<sp/>of<sp/>reference<sp/>and<sp/>improve<sp/>cache-hits<sp/>resulting</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">//<sp/>in<sp/>a<sp/>faster<sp/>net.<sp/>This<sp/>technique<sp/>resulted<sp/>in<sp/>a<sp/>2X-10X<sp/>speedup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(depending<sp/>on<sp/>network<sp/>size<sp/>and<sp/>processor)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_neuron_1a7363a0f331c6b0d493b05280fd9dab46" kindref="member">Neuron::AddFromConnection</ref>(Neuron<sp/>*neurons,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*wts_offset,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>from_cnt)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>in<sp/>=<sp/>0;<sp/>in<sp/>&lt;<sp/>from_cnt;<sp/>in++)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtesseract_1_1_neuron_1a94802e87a7f08527f75cb9e051cc0605" kindref="member">fan_in_</ref>.push_back(neurons<sp/>+<sp/>in);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtesseract_1_1_neuron_1ad56351b172a4616dceec90f5d7fe984b" kindref="member">fan_in_weights_</ref>.push_back(wts_offset<sp/>+<sp/>in);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">//<sp/>fast<sp/>computation<sp/>of<sp/>sigmoid<sp/>function<sp/>using<sp/>a<sp/>lookup<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">//<sp/>defined<sp/>in<sp/>sigmoid_table.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_neuron_1a6b38598355a4ebd977f20f0582db3d49" kindref="member">Neuron::Sigmoid</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>activation)<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(activation<sp/>&lt;=<sp/>-10.0<ref refid="imgscale_8cpp_1a469169df397b589e709dc744f1346831" kindref="member">f</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0f;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(activation<sp/>&gt;=<sp/>10.0<ref refid="imgscale_8cpp_1a469169df397b589e709dc744f1346831" kindref="member">f</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1.0f;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_neuron_1a3e21eafa1a7015d1a14a321621e724aa" kindref="member">kSigmoidTable</ref>[</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(100<sp/>*<sp/>(activation<sp/>+<sp/>10.0))];</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.cpp"/>
+  </compounddef>
+</doxygen>

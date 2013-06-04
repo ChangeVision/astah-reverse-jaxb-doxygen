@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="mystream_8h" kind="file">
+    <compoundname>mystream.h</compoundname>
+    <includedby refid="asoledoc_8cpp" local="yes">asoledoc.cpp</includedby>
+    <includedby refid="mystream_8cpp" local="yes">mystream.cpp</includedby>
+    <invincdepgraph>
+      <node id="281">
+        <label>mystream.cpp</label>
+        <link refid="mystream_8cpp"/>
+      </node>
+      <node id="279">
+        <label>mystream.h</label>
+        <link refid="mystream.h"/>
+        <childnode refid="280" relation="include">
+        </childnode>
+        <childnode refid="281" relation="include">
+        </childnode>
+      </node>
+      <node id="280">
+        <label>asoledoc.cpp</label>
+        <link refid="asoledoc_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_c_my_stream" prot="public">CMyStream</innerclass>
+    <innerclass refid="class_c_my_stream_1_1lockit" prot="protected">CMyStream::lockit</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Change<sp/>Vision<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//#pragma<sp/>comment(exestr,<sp/>&quot;%Z%%Y%%M%<sp/>%I%<sp/>20%E%<sp/>%U%&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MYSTREAM_H</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MYSTREAM_H</highlight></codeline>
+<codeline lineno="8"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_c_my_stream" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_my_stream" kindref="compound">CMyStream</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>IStream<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13" refid="class_c_my_stream_1_1lockit" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_my_stream_1_1lockit" kindref="compound">lockit</ref><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15" refid="class_c_my_stream_1_1lockit_1adcec10b87c114c655f17aad0b7ab2ab5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LONG<sp/><sp/><sp/><sp/>*<ref refid="class_c_my_stream_1_1lockit_1adcec10b87c114c655f17aad0b7ab2ab5" kindref="member">lockword</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_my_stream_1_1lockit_1aeab219b65ae0edcaa1a4c6dbd9fb0600" kindref="member">‾lockit</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_my_stream_1_1lockit_1a5026cdb074272bf8b285e791d6b4516f" kindref="member">lockit</ref>(<ref refid="class_c_my_stream" kindref="compound">CMyStream</ref><sp/>*);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21" refid="class_c_my_stream_1a381f0ed34380fec651a0f162ff83a546" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>LONG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_my_stream_1a381f0ed34380fec651a0f162ff83a546" kindref="member">ms_lockword</ref>;</highlight></codeline>
+<codeline lineno="22" refid="class_c_my_stream_1ae3771aa6438e317fb21ebd024cf56300" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>LONG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_my_stream_1ae3771aa6438e317fb21ebd024cf56300" kindref="member">ms_refc</ref>;</highlight></codeline>
+<codeline lineno="23" refid="class_c_my_stream_1a8d145b308c4ad34b26005199de201dd5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_my_stream_1a8d145b308c4ad34b26005199de201dd5" kindref="member">ms_autofree</ref>;</highlight></codeline>
+<codeline lineno="24" refid="class_c_my_stream_1a0c4399b612e36b340f1263c0224e1d58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="class_c_my_stream_1a0c4399b612e36b340f1263c0224e1d58" kindref="member">ms_mbuf</ref>;</highlight></codeline>
+<codeline lineno="25" refid="class_c_my_stream_1a062872c07e5bda2615f799e3b8b70a19" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ULONG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_my_stream_1a062872c07e5bda2615f799e3b8b70a19" kindref="member">ms_mlen</ref>;</highlight></codeline>
+<codeline lineno="26" refid="class_c_my_stream_1a015de3221a956f28fc1b5cf75231bab3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ULONGLONG<sp/><sp/><sp/><ref refid="class_c_my_stream_1a015de3221a956f28fc1b5cf75231bab3" kindref="member">ms_seek</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>IUnknown</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>HRESULT<sp/>STDMETHODCALLTYPE<sp/><ref refid="class_c_my_stream_1ac8c51a93c45b5fd396a7488fc741b92c" kindref="member">QueryInterface</ref>(REFIID,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>ULONG<sp/>STDMETHODCALLTYPE<sp/><ref refid="class_c_my_stream_1ae2345e0fc4a10c921926935f3c4e9191" kindref="member">AddRef</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>ULONG<sp/>STDMETHODCALLTYPE<sp/><ref refid="class_c_my_stream_1a92efba04a2cdc8fc4381f12681e2945e" kindref="member">Release</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ISequentialStream<sp/>Interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>HRESULT<sp/>STDMETHODCALLTYPE<sp/><ref refid="class_c_my_stream_1aacdaa1a27e4e92b9510b38137b585950" kindref="member">Read</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/>ULONG,<sp/>ULONG<sp/>*);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>HRESULT<sp/>STDMETHODCALLTYPE<sp/><ref refid="class_c_my_stream_1a742ad64d337e852b88efe35a4f276921" kindref="member">Write</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*,<sp/>ULONG,<sp/>ULONG<sp/>*);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>IStream<sp/>Interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>HRESULT<sp/>STDMETHODCALLTYPE<sp/><ref refid="class_c_my_stream_1a4f9d19cdbdac2b54c014db536ecaa818" kindref="member">Seek</ref>(LARGE_INTEGER,<sp/>DWORD,<sp/>ULARGE_INTEGER<sp/>*);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>HRESULT<sp/>STDMETHODCALLTYPE<sp/><ref refid="class_c_my_stream_1ad20ad0d63bfc6ee81c4f3eda33365159" kindref="member">SetSize</ref>(ULARGE_INTEGER);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>HRESULT<sp/>STDMETHODCALLTYPE<sp/><ref refid="class_c_my_stream_1a07bf3b84244f5780c9af7630494d2f88" kindref="member">CopyTo</ref>(IStream<sp/>*,<sp/>ULARGE_INTEGER,<sp/>ULARGE_INTEGER<sp/>*,<sp/>ULARGE_INTEGER<sp/>*);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>HRESULT<sp/>STDMETHODCALLTYPE<sp/><ref refid="class_c_my_stream_1af6ebc67ddc0b0abc7224da2ca3bc443d" kindref="member">Commit</ref>(DWORD);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>HRESULT<sp/>STDMETHODCALLTYPE<sp/><ref refid="class_c_my_stream_1a2dcadd6fafe3c4f646aa75556525b43c" kindref="member">Revert</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>HRESULT<sp/>STDMETHODCALLTYPE<sp/><ref refid="class_c_my_stream_1a5a3fa68f4984ddcd5919503efb92eade" kindref="member">LockRegion</ref>(ULARGE_INTEGER,<sp/>ULARGE_INTEGER,<sp/>DWORD);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>HRESULT<sp/>STDMETHODCALLTYPE<sp/><ref refid="class_c_my_stream_1a761798f7cd4020e1b6554c1b5c1e5351" kindref="member">UnlockRegion</ref>(ULARGE_INTEGER,<sp/>ULARGE_INTEGER,<sp/>DWORD);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>HRESULT<sp/>STDMETHODCALLTYPE<sp/><ref refid="class_c_my_stream_1a5c4e6f253855b8de99fd9c39c974fc1c" kindref="member">Stat</ref>(STATSTG<sp/>*,<sp/>DWORD);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>HRESULT<sp/>STDMETHODCALLTYPE<sp/><ref refid="class_c_my_stream_1a52b21757d6e1da3a522fffa0538a5430" kindref="member">Clone</ref>(IStream<sp/>**);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_my_stream_1aa454db1d01f492d4d2b8d5f8db06e06d" kindref="member">invalidate</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_c_my_stream_1ab869a86688a852acee99f01fa81544f9" kindref="member">‾CMyStream</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_my_stream_1a0aafa9f3b78fbec2e455c26db26dd1d3" kindref="member">CMyStream</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*mbuf,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mlen,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>autofree<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_c_my_stream" kindref="compound">CMyStream</ref><sp/>*<ref refid="class_c_my_stream_1a9e741f271071976e1fbcf2d780723da0" kindref="member">newOne</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*mbuf,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mlen,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>autofree<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_c_my_stream" kindref="compound">CMyStream</ref><sp/>*<ref refid="class_c_my_stream_1ac6a3b0c5e48a742cb62f6d6953d88dc2" kindref="member">newByFile</ref>(LPCTSTR<sp/>fpath);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h"/>
+  </compounddef>
+</doxygen>

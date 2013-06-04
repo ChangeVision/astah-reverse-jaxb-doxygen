@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_command_line_parser_8cpp" kind="file">
+    <compoundname>CommandLineParser.cpp</compoundname>
+    <includes refid="_command_line_parser_8h" local="yes">CommandLineParser.h</includes>
+    <incdepgraph>
+      <node id="271">
+        <label>src/DllPlugInTester/CommandLineParser.cpp</label>
+        <link refid="CommandLineParser.cpp"/>
+        <childnode refid="272" relation="include">
+        </childnode>
+      </node>
+      <node id="277">
+        <label>stdexcept</label>
+      </node>
+      <node id="276">
+        <label>string</label>
+      </node>
+      <node id="274">
+        <label>cppunit/portability/CppUnitDeque.h</label>
+      </node>
+      <node id="273">
+        <label>cppunit/Portability.h</label>
+      </node>
+      <node id="272">
+        <label>CommandLineParser.h</label>
+        <link refid="_command_line_parser_8h"/>
+        <childnode refid="273" relation="include">
+        </childnode>
+        <childnode refid="274" relation="include">
+        </childnode>
+        <childnode refid="275" relation="include">
+        </childnode>
+        <childnode refid="276" relation="include">
+        </childnode>
+        <childnode refid="277" relation="include">
+        </childnode>
+      </node>
+      <node id="275">
+        <label>cppunit/plugin/PlugInParameters.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_command_line_parser_8h" kindref="compound">CommandLineParser.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><ref refid="class_command_line_parser_1a6b8d2efcb57117a3b13912ba68413eaf" kindref="member">CommandLineParser::CommandLineParser</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[]<sp/>)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>m_currentArgument(<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>m_useCompiler(<sp/>false<sp/>)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>m_useXml(<sp/>false<sp/>)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>m_briefProgress(<sp/>false<sp/>)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>m_noProgress(<sp/>false<sp/>)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>m_useText(<sp/>false<sp/>)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>m_useCout(<sp/>false<sp/>)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>m_waitBeforeExit(<sp/>false<sp/>)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=1;<sp/>index<sp/>&lt;<sp/>argc;<sp/>++index<sp/>)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>argument(<sp/>argv[index<sp/>]<sp/>);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>m_arguments.push_back(<sp/>argument<sp/>);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><ref refid="class_command_line_parser_1a2b67e5d5459148b05b6d79bfab300407" kindref="member" tooltip="Destructor. ">CommandLineParser::‾CommandLineParser</ref>()</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><ref refid="class_command_line_parser_1aa02f4b6148e34f610f519b8cc767466b" kindref="member">CommandLineParser::parse</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_command_line_parser_1a230da16bf5428c68ff7c4abeb1f8e1fe" kindref="member">hasNextArgument</ref>()<sp/>)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_command_line_parser_1ab22dd7a66065a5f7cb98342b93b4678c" kindref="member">getNextOption</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_command_line_parser_1a1db60643dd0b207ef92f81638b1ca9e1" kindref="member">isOption</ref>(<sp/></highlight><highlight class="stringliteral">&quot;c&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;compiler&quot;</highlight><highlight class="normal"><sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_command_line_parser_1a5c230ddfbf08dc4027d800fcc698291f" kindref="member">m_useCompiler</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_command_line_parser_1a1db60643dd0b207ef92f81638b1ca9e1" kindref="member">isOption</ref>(<sp/></highlight><highlight class="stringliteral">&quot;x&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;xml&quot;</highlight><highlight class="normal"><sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_command_line_parser_1a8243894c1d3084642cf07f6451a5afad" kindref="member">m_useXml</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_command_line_parser_1ad39adc5a70f67b3c7e5ba5408fa0b64a" kindref="member">m_xmlFileName</ref><sp/>=<sp/><ref refid="class_command_line_parser_1a0eb12b545ffa27bdf583ef0f25fcd0c0" kindref="member">getNextOptionalParameter</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_command_line_parser_1a1db60643dd0b207ef92f81638b1ca9e1" kindref="member">isOption</ref>(<sp/></highlight><highlight class="stringliteral">&quot;s&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;xsl&quot;</highlight><highlight class="normal"><sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_command_line_parser_1ab9918f4d40b3d69d71eadd88b32f33a1" kindref="member">m_xsl</ref><sp/>=<sp/><ref refid="class_command_line_parser_1ab752c0837cb9aca24cea1ad0d07f5267" kindref="member">getNextParameter</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_command_line_parser_1a1db60643dd0b207ef92f81638b1ca9e1" kindref="member">isOption</ref>(<sp/></highlight><highlight class="stringliteral">&quot;e&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;encoding&quot;</highlight><highlight class="normal"><sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_command_line_parser_1a732e1087cd898f93f1d1d9030c6b821c" kindref="member">m_encoding</ref><sp/>=<sp/><ref refid="class_command_line_parser_1ab752c0837cb9aca24cea1ad0d07f5267" kindref="member">getNextParameter</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_command_line_parser_1a1db60643dd0b207ef92f81638b1ca9e1" kindref="member">isOption</ref>(<sp/></highlight><highlight class="stringliteral">&quot;b&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;brief-progress&quot;</highlight><highlight class="normal"><sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_command_line_parser_1a51b0fb5f74a01864106092b5d6fbe259" kindref="member">m_briefProgress</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_command_line_parser_1a1db60643dd0b207ef92f81638b1ca9e1" kindref="member">isOption</ref>(<sp/></highlight><highlight class="stringliteral">&quot;n&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;no-progress&quot;</highlight><highlight class="normal"><sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_command_line_parser_1adb6c3285a324b8ac36e5be771db717b6" kindref="member">m_noProgress</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_command_line_parser_1a1db60643dd0b207ef92f81638b1ca9e1" kindref="member">isOption</ref>(<sp/></highlight><highlight class="stringliteral">&quot;t&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;text&quot;</highlight><highlight class="normal"><sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_command_line_parser_1a1df776f8248bd60ace2f0f4253adee45" kindref="member">m_useText</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_command_line_parser_1a1db60643dd0b207ef92f81638b1ca9e1" kindref="member">isOption</ref>(<sp/></highlight><highlight class="stringliteral">&quot;o&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;cout&quot;</highlight><highlight class="normal"><sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_command_line_parser_1ae1fe668ffe523e2f1ccd2ef8253934f5" kindref="member">m_useCout</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_command_line_parser_1a1db60643dd0b207ef92f81638b1ca9e1" kindref="member">isOption</ref>(<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;wait&quot;</highlight><highlight class="normal"><sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_command_line_parser_1a848a5fdae50a9804c3bc135a6d374411" kindref="member">m_waitBeforeExit</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="class_command_line_parser_1a1edb2e8b4d81a08bd98c685fc539f34a" kindref="member">m_option</ref>.empty()<sp/>)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_command_line_parser_1a7ccb7828a40379f3e853e273d922edd4" kindref="member">fail</ref>(<sp/></highlight><highlight class="stringliteral">&quot;Unknown<sp/>option&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_command_line_parser_1a230da16bf5428c68ff7c4abeb1f8e1fe" kindref="member">hasNextArgument</ref>()<sp/>)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_command_line_parser_1a26699efe70ad77fc887b45d3e1177a06" kindref="member">readNonOptionCommands</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><ref refid="class_command_line_parser_1a26699efe70ad77fc887b45d3e1177a06" kindref="member">CommandLineParser::readNonOptionCommands</ref>()</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_command_line_parser_1a68c7732344dad3f1c5d2d5e6e01824d6" kindref="member">argumentStartsWith</ref>(<sp/></highlight><highlight class="stringliteral">&quot;:&quot;</highlight><highlight class="normal"><sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_command_line_parser_1a52e994dce7ca8404b7ce855879541e09" kindref="member">m_testPath</ref><sp/>=<sp/><ref refid="class_command_line_parser_1a26b1bb09863fcf3b0a294e8b4e2992ec" kindref="member">getNextArgument</ref>().substr(<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_command_line_plug_in_info" kindref="compound">CommandLinePlugInInfo</ref><sp/>plugIn;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>indexParameter<sp/>=<sp/><ref refid="class_command_line_parser_1a147100ef506374fa5eadaf42ad60ac4c" kindref="member">getCurrentArgument</ref>().find(<sp/></highlight><highlight class="charliteral">&apos;=&apos;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>indexParameter<sp/>&lt;<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>plugIn.<ref refid="struct_command_line_plug_in_info_1ac05b9082e2a3fae6a64485dfd9bc38fb" kindref="member">m_fileName</ref><sp/>=<sp/><ref refid="class_command_line_parser_1a147100ef506374fa5eadaf42ad60ac4c" kindref="member">getCurrentArgument</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>plugIn.<ref refid="struct_command_line_plug_in_info_1ac05b9082e2a3fae6a64485dfd9bc38fb" kindref="member">m_fileName</ref><sp/>=<sp/><ref refid="class_command_line_parser_1a147100ef506374fa5eadaf42ad60ac4c" kindref="member">getCurrentArgument</ref>().substr(<sp/>0,<sp/>indexParameter<sp/>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>parameters<sp/>=<sp/><ref refid="class_command_line_parser_1a147100ef506374fa5eadaf42ad60ac4c" kindref="member">getCurrentArgument</ref>().substr(<sp/>indexParameter<sp/>+1<sp/>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>plugIn.<ref refid="struct_command_line_plug_in_info_1aee5c0f5f768b95b49f7f49f120acc34c" kindref="member">m_parameters</ref><sp/>=<sp/>CPPUNIT_NS::PlugInParameters(<sp/>parameters<sp/>);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_command_line_parser_1a89bca4541526efcfa7a0f54b118dd925" kindref="member">m_plugIns</ref>.push_back(<sp/>plugIn<sp/>);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_command_line_parser_1a26b1bb09863fcf3b0a294e8b4e2992ec" kindref="member">getNextArgument</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><ref refid="class_command_line_parser_1a230da16bf5428c68ff7c4abeb1f8e1fe" kindref="member">CommandLineParser::hasNextArgument</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="90"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1abe9bec69a0fb60219ebbaf3328273cff" kindref="member">m_currentArgument</ref><sp/>&lt;<sp/><ref refid="class_command_line_parser_1adc8aa6ed6175da46d6b602ddef9b30b9" kindref="member">m_arguments</ref>.size();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">std::string<sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><ref refid="class_command_line_parser_1a26b1bb09863fcf3b0a294e8b4e2992ec" kindref="member">CommandLineParser::getNextArgument</ref>()</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_command_line_parser_1a230da16bf5428c68ff7c4abeb1f8e1fe" kindref="member">hasNextArgument</ref>()<sp/>)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1adc8aa6ed6175da46d6b602ddef9b30b9" kindref="member">m_arguments</ref>[<sp/><ref refid="class_command_line_parser_1abe9bec69a0fb60219ebbaf3328273cff" kindref="member">m_currentArgument</ref>++<sp/>];</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal">std::string<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><ref refid="class_command_line_parser_1a147100ef506374fa5eadaf42ad60ac4c" kindref="member">CommandLineParser::getCurrentArgument</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="106"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_command_line_parser_1abe9bec69a0fb60219ebbaf3328273cff" kindref="member">m_currentArgument</ref><sp/>&lt;<sp/><ref refid="class_command_line_parser_1adc8aa6ed6175da46d6b602ddef9b30b9" kindref="member">m_arguments</ref>.size()<sp/>)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1adc8aa6ed6175da46d6b602ddef9b30b9" kindref="member">m_arguments</ref>[<sp/><ref refid="class_command_line_parser_1abe9bec69a0fb60219ebbaf3328273cff" kindref="member">m_currentArgument</ref><sp/>];</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><ref refid="class_command_line_parser_1a68c7732344dad3f1c5d2d5e6e01824d6" kindref="member">CommandLineParser::argumentStartsWith</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;expected<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="115"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a147100ef506374fa5eadaf42ad60ac4c" kindref="member">getCurrentArgument</ref>().substr(<sp/>0,<sp/>expected.length()<sp/>)<sp/>==<sp/>expected;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><ref refid="class_command_line_parser_1ab22dd7a66065a5f7cb98342b93b4678c" kindref="member">CommandLineParser::getNextOption</ref>()</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_command_line_parser_1a68c7732344dad3f1c5d2d5e6e01824d6" kindref="member">argumentStartsWith</ref>(<sp/></highlight><highlight class="stringliteral">&quot;-&quot;</highlight><highlight class="normal"><sp/>)<sp/><sp/>||<sp/><sp/><ref refid="class_command_line_parser_1a68c7732344dad3f1c5d2d5e6e01824d6" kindref="member">argumentStartsWith</ref>(<sp/></highlight><highlight class="stringliteral">&quot;--&quot;</highlight><highlight class="normal"><sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_command_line_parser_1a1edb2e8b4d81a08bd98c685fc539f34a" kindref="member">m_option</ref><sp/>=<sp/><ref refid="class_command_line_parser_1a26b1bb09863fcf3b0a294e8b4e2992ec" kindref="member">getNextArgument</ref>();</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_command_line_parser_1a1edb2e8b4d81a08bd98c685fc539f34a" kindref="member">m_option</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><ref refid="class_command_line_parser_1a1db60643dd0b207ef92f81638b1ca9e1" kindref="member">CommandLineParser::isOption</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;shortName,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;longName<sp/>)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="class_command_line_parser_1a1edb2e8b4d81a08bd98c685fc539f34a" kindref="member">m_option</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&quot;-&quot;</highlight><highlight class="normal"><sp/>+<sp/>shortName)<sp/><sp/>||</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<ref refid="class_command_line_parser_1a1edb2e8b4d81a08bd98c685fc539f34a" kindref="member">m_option</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&quot;--&quot;</highlight><highlight class="normal"><sp/>+<sp/>longName);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal">std::string<sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><ref refid="class_command_line_parser_1ab752c0837cb9aca24cea1ad0d07f5267" kindref="member">CommandLineParser::getNextParameter</ref>()</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="class_command_line_parser_1a230da16bf5428c68ff7c4abeb1f8e1fe" kindref="member">hasNextArgument</ref>()<sp/>)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_command_line_parser_1a7ccb7828a40379f3e853e273d922edd4" kindref="member">fail</ref>(<sp/></highlight><highlight class="stringliteral">&quot;missing<sp/>parameter&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a26b1bb09863fcf3b0a294e8b4e2992ec" kindref="member">getNextArgument</ref>();</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal">std::string</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><ref refid="class_command_line_parser_1a0eb12b545ffa27bdf583ef0f25fcd0c0" kindref="member">CommandLineParser::getNextOptionalParameter</ref>()</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_command_line_parser_1a68c7732344dad3f1c5d2d5e6e01824d6" kindref="member">argumentStartsWith</ref>(<sp/></highlight><highlight class="stringliteral">&quot;-&quot;</highlight><highlight class="normal"><sp/>)<sp/><sp/>||<sp/><sp/><ref refid="class_command_line_parser_1a68c7732344dad3f1c5d2d5e6e01824d6" kindref="member">argumentStartsWith</ref>(<sp/></highlight><highlight class="stringliteral">&quot;:&quot;</highlight><highlight class="normal"><sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a26b1bb09863fcf3b0a294e8b4e2992ec" kindref="member">getNextArgument</ref>();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><ref refid="class_command_line_parser_1a7ccb7828a40379f3e853e273d922edd4" kindref="member">CommandLineParser::fail</ref>(<sp/>std::string<sp/>message<sp/>)</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_exception" kindref="compound">CommandLineParserException</ref>(<sp/></highlight><highlight class="stringliteral">&quot;while<sp/>parsing<sp/>option<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_command_line_parser_1a1edb2e8b4d81a08bd98c685fc539f34a" kindref="member">m_option</ref>+</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;,¥n&quot;</highlight><highlight class="normal"><sp/>+<sp/>message<sp/>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><ref refid="class_command_line_parser_1a7d65e758e9c915df46f078d060bec656" kindref="member">CommandLineParser::useCompilerOutputter</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="167"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a5c230ddfbf08dc4027d800fcc698291f" kindref="member">m_useCompiler</ref>;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><ref refid="class_command_line_parser_1ad0189bb7baad5df4e75a3de9203c7e70" kindref="member">CommandLineParser::useXmlOutputter</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="174"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a8243894c1d3084642cf07f6451a5afad" kindref="member">m_useXml</ref>;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal">std::string<sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><ref refid="class_command_line_parser_1aad5d67fad84eedae721dca9e534450c5" kindref="member">CommandLineParser::getXmlFileName</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="181"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1ad39adc5a70f67b3c7e5ba5408fa0b64a" kindref="member">m_xmlFileName</ref>;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal">std::string<sp/></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><ref refid="class_command_line_parser_1a523bf80f1b5dee1684dab2116a4b8c50" kindref="member">CommandLineParser::getXmlStyleSheet</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="188"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1ab9918f4d40b3d69d71eadd88b32f33a1" kindref="member">m_xsl</ref>;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal">std::string<sp/></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><ref refid="class_command_line_parser_1a4ceb49b811f14f663120a55e81987ff5" kindref="member">CommandLineParser::getEncoding</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="195"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a732e1087cd898f93f1d1d9030c6b821c" kindref="member">m_encoding</ref>;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><ref refid="class_command_line_parser_1a04aee4c12208e60a940e2953add713a0" kindref="member">CommandLineParser::useBriefTestProgress</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="202"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a51b0fb5f74a01864106092b5d6fbe259" kindref="member">m_briefProgress</ref>;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><ref refid="class_command_line_parser_1aa673745a7c478581d7f2c8ea4dabbed6" kindref="member">CommandLineParser::noTestProgress</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="209"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1adb6c3285a324b8ac36e5be771db717b6" kindref="member">m_noProgress</ref>;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><ref refid="class_command_line_parser_1a48495a436701ff716951113e43a4c1f4" kindref="member">CommandLineParser::useTextOutputter</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="216"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a1df776f8248bd60ace2f0f4253adee45" kindref="member">m_useText</ref>;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><ref refid="class_command_line_parser_1a87c99b161d6d2f7f113fb7b2b46eded8" kindref="member">CommandLineParser::useCoutStream</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="223"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1ae1fe668ffe523e2f1ccd2ef8253934f5" kindref="member">m_useCout</ref>;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><ref refid="class_command_line_parser_1a4ae3b589fc5e1e96d5c97f1d4969e68a" kindref="member">CommandLineParser::waitBeforeExit</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="230"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a848a5fdae50a9804c3bc135a6d374411" kindref="member">m_waitBeforeExit</ref>;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><ref refid="class_command_line_parser_1a2f9d527a0243e662e7a01a7e7f145972" kindref="member">CommandLineParser::getPlugInCount</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="237"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a89bca4541526efcfa7a0f54b118dd925" kindref="member">m_plugIns</ref>.size();<sp/></highlight></codeline>
+<codeline lineno="239"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><ref refid="struct_command_line_plug_in_info" kindref="compound">CommandLinePlugInInfo</ref><sp/></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><ref refid="class_command_line_parser_1aabfdaac5203d2e82623aa349a62a1d1f" kindref="member">CommandLineParser::getPlugInAt</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="243"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a89bca4541526efcfa7a0f54b118dd925" kindref="member">m_plugIns</ref>[<sp/>index<sp/>];</highlight></codeline>
+<codeline lineno="245"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal">std::string<sp/></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><ref refid="class_command_line_parser_1ae21a92ddf5770ef275e8e8e27604cf5a" kindref="member">CommandLineParser::getTestPath</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="250"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a52e994dce7ca8404b7ce855879541e09" kindref="member">m_testPath</ref>;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/DllPlugInTester/CommandLineParser.cpp"/>
+  </compounddef>
+</doxygen>

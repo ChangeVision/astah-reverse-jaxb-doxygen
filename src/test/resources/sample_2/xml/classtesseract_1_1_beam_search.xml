@@ -1,0 +1,476 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_beam_search" kind="class" prot="public">
+    <compoundname>tesseract::BeamSearch</compoundname>
+    <includes refid="beam__search_8h" local="no">beam_search.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_beam_search_1ab07812b792ab1493cd2bc2c9c012b6bb" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::BeamSearch::kMaxSegPointCnt</definition>
+        <argsstring></argsstring>
+        <name>kMaxSegPointCnt</name>
+        <initializer>= 128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="87" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_beam_search_1ad2af7b4bdbfb144febee33dc0bf66667" prot="private" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_cube_reco_context" kindref="compound">CubeRecoContext</ref> *</type>
+        <definition>CubeRecoContext* tesseract::BeamSearch::cntxt_</definition>
+        <argsstring></argsstring>
+        <name>cntxt_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="90" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_beam_search_1acdec6bb3b40f55be71d5849e3612ab9d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::BeamSearch::seg_pt_cnt_</definition>
+        <argsstring></argsstring>
+        <name>seg_pt_cnt_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="92" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_beam_search_1ad28df336485174a4dee6c4de86958036" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::BeamSearch::col_cnt_</definition>
+        <argsstring></argsstring>
+        <name>col_cnt_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="95" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_beam_search_1ab79713ee45f03112124748fb7d62d9ad" prot="private" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_search_column" kindref="compound">SearchColumn</ref> **</type>
+        <definition>SearchColumn** tesseract::BeamSearch::col_</definition>
+        <argsstring></argsstring>
+        <name>col_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="97" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_beam_search_1aa938c6eb665a5bbec1a89945d1f8713a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool tesseract::BeamSearch::word_mode_</definition>
+        <argsstring></argsstring>
+        <name>word_mode_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="99" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_beam_search_1ad4c5be52c9a92b7b930b1d882c2a1a0c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::BeamSearch::best_presorted_node_idx_</definition>
+        <argsstring></argsstring>
+        <name>best_presorted_node_idx_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="101" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_beam_search_1a990eb3dcc8f14f2a17639caf93f840c1" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::BeamSearch::BeamSearch</definition>
+        <argsstring>(CubeRecoContext *cntxt, bool word_mode=true)</argsstring>
+        <name>BeamSearch</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_cube_reco_context" kindref="compound">CubeRecoContext</ref> *</type>
+          <declname>cntxt</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>word_mode</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="46" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.cpp" bodystart="27" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_beam_search_1a1ad5f964a4b335929d99ab5596595428" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::BeamSearch::~BeamSearch</definition>
+        <argsstring>()</argsstring>
+        <name>~BeamSearch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="47" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.cpp" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_beam_search_1adce6622c6d74ecae947f11aeac486ca0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtesseract_1_1_word_alt_list" kindref="compound">WordAltList</ref> *</type>
+        <definition>WordAltList * tesseract::BeamSearch::Search</definition>
+        <argsstring>(SearchObject *srch_obj, LangModel *lang_mod=NULL)</argsstring>
+        <name>Search</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_search_object" kindref="compound">SearchObject</ref> *</type>
+          <declname>srch_obj</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_lang_model" kindref="compound">LangModel</ref> *</type>
+          <declname>lang_mod</declname>
+          <defval><ref refid="host_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="50" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.cpp" bodystart="98" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_beam_search_1a57eea92e9a652a61a734f357104144d6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtesseract_1_1_search_node" kindref="compound">SearchNode</ref> *</type>
+        <definition>SearchNode * tesseract::BeamSearch::BestNode</definition>
+        <argsstring>() const </argsstring>
+        <name>BestNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="52" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.cpp" bodystart="286" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_beam_search_1a627bb3008dad38d1424d8af99fbe9261" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacetesseract_1aea2c6172b0ca77907e29cd018595b425" kindref="member">char_32</ref> *</type>
+        <definition>char_32 * tesseract::BeamSearch::Alt</definition>
+        <argsstring>(int alt) const </argsstring>
+        <name>Alt</name>
+        <param>
+          <type>int</type>
+          <declname>alt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="54" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.cpp" bodystart="298" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_beam_search_1ae3c9e6077238c37acd5ec27c6bf4fdc9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtesseract_1_1_char_samp" kindref="compound">CharSamp</ref> **</type>
+        <definition>CharSamp ** tesseract::BeamSearch::BackTrack</definition>
+        <argsstring>(SearchObject *srch_obj, int node_index, int *char_cnt, char_32 **str32, Boxa **char_boxes) const </argsstring>
+        <name>BackTrack</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_search_object" kindref="compound">SearchObject</ref> *</type>
+          <declname>srch_obj</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>node_index</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>char_cnt</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1aea2c6172b0ca77907e29cd018595b425" kindref="member">char_32</ref> **</type>
+          <declname>str32</declname>
+        </param>
+        <param>
+          <type>Boxa **</type>
+          <declname>char_boxes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="60" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.cpp" bodystart="328" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_beam_search_1ad80c824db2987b972d3742fd40d664c5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtesseract_1_1_char_samp" kindref="compound">CharSamp</ref> **</type>
+        <definition>CharSamp ** tesseract::BeamSearch::BackTrack</definition>
+        <argsstring>(SearchObject *srch_obj, SearchNode *node, int *char_cnt, char_32 **str32, Boxa **char_boxes) const </argsstring>
+        <name>BackTrack</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_search_object" kindref="compound">SearchObject</ref> *</type>
+          <declname>srch_obj</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_search_node" kindref="compound">SearchNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>char_cnt</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1aea2c6172b0ca77907e29cd018595b425" kindref="member">char_32</ref> **</type>
+          <declname>str32</declname>
+        </param>
+        <param>
+          <type>Boxa **</type>
+          <declname>char_boxes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="64" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.cpp" bodystart="352" bodyend="375"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_beam_search_1a8db9d114117e35964e67e2dedfaae253" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::BeamSearch::SizeCost</definition>
+        <argsstring>(SearchObject *srch_obj, SearchNode *node, char_32 **str32=NULL) const </argsstring>
+        <name>SizeCost</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_search_object" kindref="compound">SearchObject</ref> *</type>
+          <declname>srch_obj</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_search_node" kindref="compound">SearchNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1aea2c6172b0ca77907e29cd018595b425" kindref="member">char_32</ref> **</type>
+          <declname>str32</declname>
+          <defval><ref refid="host_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="68" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.cpp" bodystart="472" bodyend="486"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_beam_search_1a2d635a7c06465225c22392d5a2f82ffc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::BeamSearch::WordUnigramCost</definition>
+        <argsstring>(char_32 *str32, WordUnigrams *word_unigrams) const </argsstring>
+        <name>WordUnigramCost</name>
+        <param>
+          <type><ref refid="namespacetesseract_1aea2c6172b0ca77907e29cd018595b425" kindref="member">char_32</ref> *</type>
+          <declname>str32</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_word_unigrams" kindref="compound">WordUnigrams</ref> *</type>
+          <declname>word_unigrams</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_beam_search_1acb55bf11ed4d685593c189f0ffac8f79" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::BeamSearch::ColCnt</definition>
+        <argsstring>() const </argsstring>
+        <name>ColCnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="76" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.h" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_beam_search_1aaca2dc4ddb2857ffbbb84e69f8a0f789" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtesseract_1_1_search_column" kindref="compound">SearchColumn</ref> *</type>
+        <definition>SearchColumn * tesseract::BeamSearch::Column</definition>
+        <argsstring>(int col_idx) const </argsstring>
+        <name>Column</name>
+        <param>
+          <type>int</type>
+          <declname>col_idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="78" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.cpp" bodystart="279" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_beam_search_1a02c434058eeab3e63d825af28ea57dc4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::BeamSearch::BestPresortedNodeIndex</definition>
+        <argsstring>() const </argsstring>
+        <name>BestPresortedNodeIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="81" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.h" bodystart="81" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtesseract_1_1_beam_search_1a4cb3eea9776fc41ead7aa767af914112" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::BeamSearch::Cleanup</definition>
+        <argsstring>()</argsstring>
+        <name>Cleanup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="103" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.cpp" bodystart="36" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_beam_search_1af7388132df2b6dd08af033b3d1e23336" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtesseract_1_1_word_alt_list" kindref="compound">WordAltList</ref> *</type>
+        <definition>WordAltList * tesseract::BeamSearch::CreateWordAltList</definition>
+        <argsstring>(SearchObject *srch_obj)</argsstring>
+        <name>CreateWordAltList</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_search_object" kindref="compound">SearchObject</ref> *</type>
+          <declname>srch_obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="111" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.cpp" bodystart="220" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_beam_search_1a3d66e54fdca36c5997c1125a43a2f43c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::BeamSearch::CreateChildren</definition>
+        <argsstring>(SearchColumn *out_col, LangModel *lang_mod, SearchNode *parent_node, LangModEdge *lm_parent_edge, CharAltList *char_alt_list, int extra_cost)</argsstring>
+        <name>CreateChildren</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_search_column" kindref="compound">SearchColumn</ref> *</type>
+          <declname>out_col</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_lang_model" kindref="compound">LangModel</ref> *</type>
+          <declname>lang_mod</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_search_node" kindref="compound">SearchNode</ref> *</type>
+          <declname>parent_node</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_lang_mod_edge" kindref="compound">LangModEdge</ref> *</type>
+          <declname>lm_parent_edge</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_char_alt_list" kindref="compound">CharAltList</ref> *</type>
+          <declname>char_alt_list</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>extra_cost</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="114" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.cpp" bodystart="53" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_beam_search_1a9a7ed45ca14ac9382c5cd0e70aad1a46" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtesseract_1_1_char_samp" kindref="compound">CharSamp</ref> **</type>
+        <definition>CharSamp ** tesseract::BeamSearch::SplitByNode</definition>
+        <argsstring>(SearchObject *srch_obj, SearchNode *srch_node, int *char_cnt, Boxa **char_boxes) const </argsstring>
+        <name>SplitByNode</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_search_object" kindref="compound">SearchObject</ref> *</type>
+          <declname>srch_obj</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_search_node" kindref="compound">SearchNode</ref> *</type>
+          <declname>srch_node</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>char_cnt</declname>
+        </param>
+        <param>
+          <type>Boxa **</type>
+          <declname>char_boxes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="121" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.cpp" bodystart="380" bodyend="468"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/makoto/Desktop/trunk/cube/beam_search.h" line="44" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/beam_search.h" bodystart="44" bodyend="123"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_beam_search_1a627bb3008dad38d1424d8af99fbe9261" prot="public" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>Alt</name></member>
+      <member refid="classtesseract_1_1_beam_search_1ae3c9e6077238c37acd5ec27c6bf4fdc9" prot="public" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>BackTrack</name></member>
+      <member refid="classtesseract_1_1_beam_search_1ad80c824db2987b972d3742fd40d664c5" prot="public" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>BackTrack</name></member>
+      <member refid="classtesseract_1_1_beam_search_1a990eb3dcc8f14f2a17639caf93f840c1" prot="public" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>BeamSearch</name></member>
+      <member refid="classtesseract_1_1_beam_search_1ad4c5be52c9a92b7b930b1d882c2a1a0c" prot="private" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>best_presorted_node_idx_</name></member>
+      <member refid="classtesseract_1_1_beam_search_1a57eea92e9a652a61a734f357104144d6" prot="public" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>BestNode</name></member>
+      <member refid="classtesseract_1_1_beam_search_1a02c434058eeab3e63d825af28ea57dc4" prot="public" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>BestPresortedNodeIndex</name></member>
+      <member refid="classtesseract_1_1_beam_search_1a4cb3eea9776fc41ead7aa767af914112" prot="private" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>Cleanup</name></member>
+      <member refid="classtesseract_1_1_beam_search_1ad2af7b4bdbfb144febee33dc0bf66667" prot="private" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>cntxt_</name></member>
+      <member refid="classtesseract_1_1_beam_search_1ab79713ee45f03112124748fb7d62d9ad" prot="private" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>col_</name></member>
+      <member refid="classtesseract_1_1_beam_search_1ad28df336485174a4dee6c4de86958036" prot="private" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>col_cnt_</name></member>
+      <member refid="classtesseract_1_1_beam_search_1acb55bf11ed4d685593c189f0ffac8f79" prot="public" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>ColCnt</name></member>
+      <member refid="classtesseract_1_1_beam_search_1aaca2dc4ddb2857ffbbb84e69f8a0f789" prot="public" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>Column</name></member>
+      <member refid="classtesseract_1_1_beam_search_1a3d66e54fdca36c5997c1125a43a2f43c" prot="private" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>CreateChildren</name></member>
+      <member refid="classtesseract_1_1_beam_search_1af7388132df2b6dd08af033b3d1e23336" prot="private" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>CreateWordAltList</name></member>
+      <member refid="classtesseract_1_1_beam_search_1ab07812b792ab1493cd2bc2c9c012b6bb" prot="private" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>kMaxSegPointCnt</name></member>
+      <member refid="classtesseract_1_1_beam_search_1adce6622c6d74ecae947f11aeac486ca0" prot="public" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>Search</name></member>
+      <member refid="classtesseract_1_1_beam_search_1acdec6bb3b40f55be71d5849e3612ab9d" prot="private" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>seg_pt_cnt_</name></member>
+      <member refid="classtesseract_1_1_beam_search_1a8db9d114117e35964e67e2dedfaae253" prot="public" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>SizeCost</name></member>
+      <member refid="classtesseract_1_1_beam_search_1a9a7ed45ca14ac9382c5cd0e70aad1a46" prot="private" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>SplitByNode</name></member>
+      <member refid="classtesseract_1_1_beam_search_1aa938c6eb665a5bbec1a89945d1f8713a" prot="private" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>word_mode_</name></member>
+      <member refid="classtesseract_1_1_beam_search_1a2d635a7c06465225c22392d5a2f82ffc" prot="public" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>WordUnigramCost</name></member>
+      <member refid="classtesseract_1_1_beam_search_1a1ad5f964a4b335929d99ab5596595428" prot="public" virt="non-virtual"><scope>tesseract::BeamSearch</scope><name>~BeamSearch</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="interface_resize_command" kind="class" prot="public">
+    <compoundname>ResizeCommand</compoundname>
+    <basecompoundref refid="interface_modify_command" prot="public" virt="non-virtual">ModifyCommand</basecompoundref>
+    <includes refid="_resize_command_8h" local="no">ResizeCommand.h</includes>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_resize_command_1ae600f9e73eaaaaeb1c08fc91eef6b84a" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="assign">
+        <type>CGSize</type>
+        <definition>CGSize ResizeCommand::from</definition>
+        <argsstring></argsstring>
+        <name>from</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/ResizeCommand.h" line="15" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/ResizeCommand.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_resize_command_1af87e8ef79cfb552fc3e58578861ccd02" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="assign">
+        <type>CGSize</type>
+        <definition>CGSize ResizeCommand::to</definition>
+        <argsstring></argsstring>
+        <name>to</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/ResizeCommand.h" line="16" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/ResizeCommand.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_resize_command_1a35ea3defb789b200e005c6558dcdec56" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ResizeCommand::resize:from:to:</definition>
+        <argsstring>(BoundedViewElement *ve,[from] CGSize fromSize,[to] CGSize toSize)</argsstring>
+        <name>resize:from:to:</name>
+        <param>
+          <type><ref refid="interface_bounded_view_element" kindref="compound">BoundedViewElement</ref> *</type>
+          <declname>ve</declname>
+        </param>
+        <param>
+          <attributes>[from]</attributes>
+          <type>CGSize</type>
+          <declname>fromSize</declname>
+        </param>
+        <param>
+          <attributes>[to]</attributes>
+          <type>CGSize</type>
+          <declname>toSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/ResizeCommand.h" line="20" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/ResizeCommand.m" bodystart="23" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="717">
+        <label>Command</label>
+        <link refid="interface_command"/>
+        <childnode refid="718" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="715">
+        <label>ResizeCommand</label>
+        <link refid="interface_resize_command"/>
+        <childnode refid="716" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="716">
+        <label>ModifyCommand</label>
+        <link refid="interface_modify_command"/>
+        <childnode refid="717" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="718">
+        <label>NSObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="721">
+        <label>Command</label>
+        <link refid="interface_command"/>
+        <childnode refid="722" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="719">
+        <label>ResizeCommand</label>
+        <link refid="interface_resize_command"/>
+        <childnode refid="720" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="720">
+        <label>ModifyCommand</label>
+        <link refid="interface_modify_command"/>
+        <childnode refid="721" relation="public-inheritance">
+        </childnode>
+        <childnode refid="723" relation="usage">
+          <edgelabel>viewElement</edgelabel>
+        </childnode>
+      </node>
+      <node id="724">
+        <label>UIView</label>
+      </node>
+      <node id="722">
+        <label>NSObject</label>
+      </node>
+      <node id="723">
+        <label>ViewElement</label>
+        <link refid="interface_view_element"/>
+        <childnode refid="724" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/ResizeCommand.h" line="14" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/ResizeCommand.h" bodystart="14" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_command_1abc8574913684044b0f1a9f810b4e969b" prot="public" virt="virtual"><scope>ResizeCommand</scope><name>execute</name></member>
+      <member refid="interface_resize_command_1ae600f9e73eaaaaeb1c08fc91eef6b84a" prot="protected" virt="non-virtual"><scope>ResizeCommand</scope><name>from</name></member>
+      <member refid="interface_resize_command_1ae600f9e73eaaaaeb1c08fc91eef6b84a" prot="public" virt="non-virtual"><scope>ResizeCommand</scope><name>from</name></member>
+      <member refid="interface_resize_command_1a35ea3defb789b200e005c6558dcdec56" prot="public" virt="virtual"><scope>ResizeCommand</scope><name>resize:from:to:</name></member>
+      <member refid="interface_command_1af1632585781ac0d7bb90df5c195c25bd" prot="protected" virt="non-virtual"><scope>ResizeCommand</scope><name>result</name></member>
+      <member refid="interface_command_1af1632585781ac0d7bb90df5c195c25bd" prot="public" virt="non-virtual"><scope>ResizeCommand</scope><name>result</name></member>
+      <member refid="interface_resize_command_1af87e8ef79cfb552fc3e58578861ccd02" prot="protected" virt="non-virtual"><scope>ResizeCommand</scope><name>to</name></member>
+      <member refid="interface_resize_command_1af87e8ef79cfb552fc3e58578861ccd02" prot="public" virt="non-virtual"><scope>ResizeCommand</scope><name>to</name></member>
+      <member refid="interface_modify_command_1af97d75e6751a231edb491ea1ec712aa1" prot="protected" virt="non-virtual"><scope>ResizeCommand</scope><name>viewElement</name></member>
+      <member refid="interface_modify_command_1af97d75e6751a231edb491ea1ec712aa1" prot="public" virt="non-virtual"><scope>ResizeCommand</scope><name>viewElement</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

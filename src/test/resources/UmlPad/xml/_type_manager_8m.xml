@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_type_manager_8m" kind="file">
+    <compoundname>TypeManager.m</compoundname>
+    <includes refid="_type_manager_8h" local="yes">TypeManager.h</includes>
+    <includes refid="_view_element_8h" local="yes">ViewElement.h</includes>
+    <includes refid="_class_view_element_8h" local="yes">ClassViewElement.h</includes>
+    <includes refid="_diagram_view_8h" local="yes">DiagramView.h</includes>
+    <includes refid="_x_m_l_sentences_8h" local="yes">XMLSentences.h</includes>
+    <includes refid="_x_m_l_util_8h" local="yes">XMLUtil.h</includes>
+    <incdepgraph>
+      <node id="2357">
+        <label>BoundedViewElement.h</label>
+        <link refid="_bounded_view_element_8h"/>
+        <childnode refid="2355" relation="include">
+        </childnode>
+        <childnode refid="2354" relation="include">
+        </childnode>
+      </node>
+      <node id="2354">
+        <label>ViewElement.h</label>
+        <link refid="_view_element_8h"/>
+        <childnode refid="2355" relation="include">
+        </childnode>
+      </node>
+      <node id="2355">
+        <label>UIKit/UIKit.h</label>
+      </node>
+      <node id="2352">
+        <label>TypeManager.h</label>
+        <link refid="_type_manager_8h"/>
+        <childnode refid="2353" relation="include">
+        </childnode>
+      </node>
+      <node id="2351">
+        <label>Classes/TypeManager.m</label>
+        <link refid="TypeManager.m"/>
+        <childnode refid="2352" relation="include">
+        </childnode>
+        <childnode refid="2354" relation="include">
+        </childnode>
+        <childnode refid="2356" relation="include">
+        </childnode>
+        <childnode refid="2358" relation="include">
+        </childnode>
+        <childnode refid="2359" relation="include">
+        </childnode>
+        <childnode refid="2360" relation="include">
+        </childnode>
+      </node>
+      <node id="2359">
+        <label>XMLSentences.h</label>
+        <link refid="_x_m_l_sentences_8h"/>
+      </node>
+      <node id="2353">
+        <label>Foundation/Foundation.h</label>
+      </node>
+      <node id="2360">
+        <label>XMLUtil.h</label>
+        <link refid="_x_m_l_util_8h"/>
+        <childnode refid="2353" relation="include">
+        </childnode>
+      </node>
+      <node id="2358">
+        <label>DiagramView.h</label>
+        <link refid="_diagram_view_8h"/>
+        <childnode refid="2355" relation="include">
+        </childnode>
+      </node>
+      <node id="2356">
+        <label>ClassViewElement.h</label>
+        <link refid="_class_view_element_8h"/>
+        <childnode refid="2355" relation="include">
+        </childnode>
+        <childnode refid="2357" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>TypeManager.m</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>UmlPad</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>梅田<sp/>政利<sp/>on<sp/>10/11/19.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>2010<sp/>Change<sp/>Vision.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_type_manager_8h" kindref="compound">TypeManager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_view_element_8h" kindref="compound">ViewElement.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_class_view_element_8h" kindref="compound">ClassViewElement.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_diagram_view_8h" kindref="compound">DiagramView.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_x_m_l_sentences_8h" kindref="compound">XMLSentences.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_x_m_l_util_8h" kindref="compound">XMLUtil.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">@implementation<sp/></highlight><highlight class="normal"><ref refid="interface_type_manager" kindref="compound">TypeManager</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">@synthesize</highlight><highlight class="normal"><sp/><ref refid="interface_type_manager_1ad383b055d7379357299a99f1e3b0ef5b" kindref="member">diagramView</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">-<sp/>(id)init<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>=<sp/>[</highlight><highlight class="keyword">super</highlight><highlight class="normal"><sp/>init];</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_type_manager_1ac65e242fe83a161998aa3e9609cee13a" kindref="member">types</ref><sp/>=<sp/>[[NSMutableDictionary<sp/>alloc]<sp/>initWithCapacity:10];</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_type_manager_1af27d1c8e0c9b593cc2eb23703b2a6bba" kindref="member">primitives</ref><sp/>=<sp/>[[NSMutableDictionary<sp/>alloc]<sp/>initWithCapacity:10];</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">-<sp/>(bool)isPrimitive:(NSString<sp/>*)typeName<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;boolean&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;byte&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;char&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;double&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;float&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;int&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;long&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;short&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;void&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;long%20long&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;unsigned<sp/>long<sp/>long&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;wchar&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;octet&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;any&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;sequence&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;wstring&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;fixed&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;native&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;bool&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;decimal&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;object&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;sbyte&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;string&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;uint&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;ulong&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;ushort&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;signed%20char&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;unsigned%20char&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;unsigned%20short&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;short%20int&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;signed%20short%20int&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;unsigned%20short%20int&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;signed%20int&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;unsigned%20int&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;unsigned%20long&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;long%20int&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;signed%20long%20int&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;unsigned%20long%20int&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;long%20double&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([typeName<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;wchar_t&quot;</highlight><highlight class="normal">])<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NO;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">-<sp/>(NSString<sp/>*)getExistedTypeId:(NSString<sp/>*)typeName<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(UIView<sp/>*v<sp/>in<sp/><ref refid="interface_type_manager_1ad383b055d7379357299a99f1e3b0ef5b" kindref="member">diagramView</ref>.subviews)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([v<sp/>isKindOfClass:[<ref refid="interface_class_view_element" kindref="compound">ClassViewElement</ref><sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">]])<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ClassViewElement<sp/>*cView<sp/>=<sp/>(ClassViewElement<sp/>*)v;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSString<sp/>*cName<sp/>=<sp/>[<ref refid="interface_x_m_l_util" kindref="compound">XMLUtil</ref><sp/><ref refid="interface_x_m_l_util_1a77b577b0a789247f4b2969ede94e6c5a" kindref="member">getEscapedString</ref>:cView.name];</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([cName<sp/>isEqualToString:typeName])<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cView.<ref refid="interface_view_element_1a5ccd2c97220c49ea4b937e824b309b81" kindref="member">modelId</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>nil;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">-<sp/>(NSString<sp/>*)getTypeId:(NSString<sp/>*)typeName<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>NSString<sp/>*typeId<sp/>=<sp/>[types<sp/>objectForKey:typeName];</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(typeId)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>typeId;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>typeId<sp/>=<sp/>[primitives<sp/>objectForKey:typeName];</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(typeId)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>typeId;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>isPrimitive:typeName])<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSString<sp/>*newID<sp/>=<sp/>[<ref refid="interface_view_element" kindref="compound">ViewElement</ref><sp/><ref refid="interface_view_element_1ae4aadd114929497d3e41c283e50aff09" kindref="member">getNewUuid</ref>];</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[primitives<sp/>setObject:newID<sp/>forKey:typeName];</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>newID;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>typeId<sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>getExistedTypeId:typeName];</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(typeId)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>typeId;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>NSString<sp/>*newID<sp/>=<sp/>[<ref refid="interface_view_element" kindref="compound">ViewElement</ref><sp/><ref refid="interface_view_element_1ae4aadd114929497d3e41c283e50aff09" kindref="member">getNewUuid</ref>];</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>[types<sp/>setObject:newID<sp/>forKey:typeName];</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>newID;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">-<sp/>(NSString<sp/>*)<ref refid="interface_type_manager_1a9191021c6b62b0580de4b08e4f8eeae2" kindref="member">getUsingPrimitivesXML</ref><sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>NSString<sp/>*str<sp/>=<sp/></highlight><highlight class="stringliteral">@&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>NSEnumerator<sp/>*enumerator<sp/>=<sp/>[primitives<sp/>keyEnumerator];</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>key;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((key<sp/>=<sp/>[enumerator<sp/>nextObject]))<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSString<sp/>*modelId<sp/>=<sp/>[primitives<sp/>objectForKey:key];</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>=<sp/>[str<sp/>stringByAppendingFormat:PRIMITIVE_BODY,<sp/>modelId,<sp/>key];</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>str;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal">-<sp/>(NSString<sp/>*)<ref refid="interface_type_manager_1aa2d5726a15e51d7631eb1148f3d56a0e" kindref="member">getUsingClassesXML</ref><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>NSString<sp/>*str<sp/>=<sp/></highlight><highlight class="stringliteral">@&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>NSEnumerator<sp/>*enumerator<sp/>=<sp/>[types<sp/>keyEnumerator];</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>key;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((key<sp/>=<sp/>[enumerator<sp/>nextObject]))<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSString<sp/>*modelId<sp/>=<sp/>[types<sp/>objectForKey:key];</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>=<sp/>[str<sp/>stringByAppendingFormat:REFERENCED_TYPE,<sp/>modelId,<sp/>key];</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>str;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">-<sp/>(void)dealloc<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>[types<sp/>release];</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>[primitives<sp/>release];</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">super</highlight><highlight class="normal"><sp/>dealloc];</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/TypeManager.m"/>
+  </compounddef>
+</doxygen>

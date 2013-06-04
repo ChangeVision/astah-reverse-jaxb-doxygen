@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_attribute_parser_8m" kind="file">
+    <compoundname>AttributeParser.m</compoundname>
+    <includes refid="_attribute_parser_8h" local="yes">AttributeParser.h</includes>
+    <includes refid="_x_m_l_util_8h" local="yes">XMLUtil.h</includes>
+    <incdepgraph>
+      <node id="103">
+        <label>AttributeParser.h</label>
+        <link refid="_attribute_parser_8h"/>
+        <childnode refid="104" relation="include">
+        </childnode>
+      </node>
+      <node id="102">
+        <label>Classes/AttributeParser.m</label>
+        <link refid="AttributeParser.m"/>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>Foundation/Foundation.h</label>
+      </node>
+      <node id="105">
+        <label>XMLUtil.h</label>
+        <link refid="_x_m_l_util_8h"/>
+        <childnode refid="104" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>AttributeParser.m</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>UmlPad</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>梅田<sp/>政利<sp/>on<sp/>10/11/10.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>2010<sp/>Change<sp/>Vision.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_attribute_parser_8h" kindref="compound">AttributeParser.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_x_m_l_util_8h" kindref="compound">XMLUtil.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">@implementation<sp/></highlight><highlight class="normal"><ref refid="interface_attribute_parser" kindref="compound">AttributeParser</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">@synthesize</highlight><highlight class="normal"><sp/><ref refid="interface_attribute_parser_1a62c590a6ca2fd9cbad61a1ad8da9e79a" kindref="member">valid</ref>,<sp/><ref refid="interface_attribute_parser_1aacb97d8d493b98f2015e25371c1fbd67" kindref="member">visibility</ref>,<sp/><ref refid="interface_attribute_parser_1afffb6aca971db81606d851443adaf660" kindref="member">name</ref>,<sp/><ref refid="interface_attribute_parser_1a86f885476c60f7c19e05961005d1844d" kindref="member">type</ref>,<sp/><ref refid="interface_attribute_parser_1aacdd3217a6ff4afffacf31fbf23a5d7a" kindref="member">typeModifier</ref>,<sp/><ref refid="interface_attribute_parser_1a7a4f9be58dbfd3ff8dd80a06a8db492a" kindref="member">showType</ref>,<sp/><ref refid="interface_attribute_parser_1a37d5ec080a7817b768cc8adb9e9a8a62" kindref="member">stereotypes</ref>,<sp/><ref refid="interface_attribute_parser_1afe7c32e99e05f07a8d1329b59e428e8c" kindref="member">constraints</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">-<sp/>(void)<ref refid="interface_attribute_parser_1ada026fa7d7042a668507d1e6d928706b" kindref="member">toString</ref><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>NSLog(</highlight><highlight class="stringliteral">@&quot;valid=%d&quot;</highlight><highlight class="normal">,<sp/><ref refid="interface_attribute_parser_1a62c590a6ca2fd9cbad61a1ad8da9e79a" kindref="member">valid</ref>);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="interface_attribute_parser_1a62c590a6ca2fd9cbad61a1ad8da9e79a" kindref="member">valid</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>NSLog(</highlight><highlight class="stringliteral">@&quot;visibility=%@&quot;</highlight><highlight class="normal">,<sp/><ref refid="interface_attribute_parser_1aacb97d8d493b98f2015e25371c1fbd67" kindref="member">visibility</ref>);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>NSLog(</highlight><highlight class="stringliteral">@&quot;name=%@&quot;</highlight><highlight class="normal">,<sp/><ref refid="interface_attribute_parser_1afffb6aca971db81606d851443adaf660" kindref="member">name</ref>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>NSLog(</highlight><highlight class="stringliteral">@&quot;type=%@&quot;</highlight><highlight class="normal">,<sp/><ref refid="interface_attribute_parser_1a86f885476c60f7c19e05961005d1844d" kindref="member">type</ref>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>NSLog(</highlight><highlight class="stringliteral">@&quot;typeModifier=%@&quot;</highlight><highlight class="normal">,<sp/><ref refid="interface_attribute_parser_1aacdd3217a6ff4afffacf31fbf23a5d7a" kindref="member">typeModifier</ref>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>NSLog(</highlight><highlight class="stringliteral">@&quot;showType=%d&quot;</highlight><highlight class="normal">,<sp/><ref refid="interface_attribute_parser_1a7a4f9be58dbfd3ff8dd80a06a8db492a" kindref="member">showType</ref>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(NSString<sp/>*st<sp/>in<sp/><ref refid="interface_attribute_parser_1a37d5ec080a7817b768cc8adb9e9a8a62" kindref="member">stereotypes</ref>)<sp/>NSLog(</highlight><highlight class="stringliteral">@&quot;stereotype=%@&quot;</highlight><highlight class="normal">,<sp/>st);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(NSString<sp/>*st<sp/>in<sp/><ref refid="interface_attribute_parser_1afe7c32e99e05f07a8d1329b59e428e8c" kindref="member">constraints</ref>)<sp/>NSLog(</highlight><highlight class="stringliteral">@&quot;constraint=%@&quot;</highlight><highlight class="normal">,<sp/>st);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">-<sp/>(void)parse:(NSString<sp/>*)str<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.valid<sp/>=<sp/>NO;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.visibility<sp/>=<sp/>nil;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.name<sp/>=<sp/>nil;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.type<sp/>=<sp/>nil;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.typeModifier<sp/>=<sp/>nil;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>[stereotypes<sp/>removeAllObjects];</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>[constraints<sp/>removeAllObjects];</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>NSCharacterSet<sp/>*whitespace<sp/>=<sp/>[NSCharacterSet<sp/>whitespaceCharacterSet];</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>NSCharacterSet<sp/>*whitespaceInv<sp/>=<sp/>[whitespace<sp/>invertedSet];</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>NSRange<sp/>range<sp/>=<sp/>[str<sp/>rangeOfCharacterFromSet:whitespaceInv];</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(range.location<sp/>==<sp/>NSNotFound)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>strLen<sp/>=<sp/>[str<sp/>length];</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>visibility</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>range.length<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>NSString<sp/>*c<sp/>=<sp/>[str<sp/>substringWithRange:range];</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([c<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;+&quot;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.visibility<sp/>=<sp/></highlight><highlight class="stringliteral">@&quot;public&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([c<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;#&quot;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.visibility<sp/>=<sp/></highlight><highlight class="stringliteral">@&quot;protected&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([c<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;~&quot;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.visibility<sp/>=<sp/></highlight><highlight class="stringliteral">@&quot;package&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([c<sp/>isEqualToString:</highlight><highlight class="stringliteral">@&quot;-&quot;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.visibility<sp/>=<sp/></highlight><highlight class="stringliteral">@&quot;private&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="interface_attribute_parser_1aacb97d8d493b98f2015e25371c1fbd67" kindref="member">visibility</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>range.location++;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.visibility<sp/>=<sp/></highlight><highlight class="stringliteral">@&quot;private&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>newLen<sp/>=<sp/>strLen<sp/>-<sp/>range.location;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(newLen<sp/>&lt;<sp/>1)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>range.length<sp/>=<sp/>newLen;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>stereotypes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;;)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>range<sp/>=<sp/>[str<sp/>rangeOfCharacterFromSet:whitespaceInv<sp/>options:0<sp/>range:range];</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(range.location<sp/>==<sp/>NSNotFound)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>このタイミングでないなら名前もない</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>range.length<sp/>=<sp/>strLen<sp/>-<sp/>range.location;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSRange<sp/>rangeL<sp/>=<sp/>[str<sp/>rangeOfString:@&quot;&lt;&lt;&quot;<sp/>options:0<sp/>range:range];</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rangeL.location<sp/>==<sp/>NSNotFound)<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rangeL.length<sp/>=<sp/>strLen<sp/>-<sp/>rangeL.location;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSRange<sp/>rangeR<sp/>=<sp/>[str<sp/>rangeOfString:@&quot;&gt;&gt;&quot;<sp/>options:0<sp/>range:rangeL];</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rangeR.location<sp/>==<sp/>NSNotFound)<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>対象範囲を&gt;&gt;の後にする</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>range.location<sp/>=<sp/>rangeR.location<sp/>+<sp/>2;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>range.length<sp/>=<sp/>strLen<sp/>-<sp/>range.location;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>stereoLoc<sp/>=<sp/>rangeL.location<sp/>+<sp/>2;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>stereoLen<sp/>=<sp/>rangeR.location<sp/>-<sp/>stereoLoc;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stereoLen<sp/>==<sp/>0)<sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stereotypes<sp/>==<sp/>nil)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stereotypes<sp/>=<sp/>[[NSMutableArray<sp/>alloc]<sp/>initWithCapacity:1];</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSString<sp/>*stereotype<sp/>=<sp/>[str<sp/>substringWithRange:NSMakeRange(stereoLoc,<sp/>stereoLen)];</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[stereotypes<sp/>addObject:[<ref refid="interface_x_m_l_util" kindref="compound">XMLUtil</ref><sp/><ref refid="interface_x_m_l_util_1a77b577b0a789247f4b2969ede94e6c5a" kindref="member">getEscapedString</ref>:stereotype]];</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>visibilityとstereotypeの前からサーチが終わり。サーチ後の残範囲はrange。</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>constraints</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;;)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSRange<sp/>rangeL<sp/>=<sp/>[str<sp/>rangeOfString:@&quot;{&quot;<sp/>options:NSBackwardsSearch<sp/>range:range];</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rangeL.location<sp/>==<sp/>NSNotFound)<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rangeL.length<sp/>=<sp/>(range.location<sp/>+<sp/>range.length)<sp/>-<sp/>rangeL.location;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSRange<sp/>rangeR<sp/>=<sp/>[str<sp/>rangeOfString:@&quot;}&quot;<sp/>options:NSBackwardsSearch<sp/>range:rangeL];</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rangeR.location<sp/>==<sp/>NSNotFound)<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>対象範囲を{の前にする</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>range.length<sp/>=<sp/>rangeL.location<sp/>-<sp/>range.location;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>constLoc<sp/>=<sp/>rangeL.location<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>constLen<sp/>=<sp/>rangeR.location<sp/>-<sp/>constLoc;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(constLen<sp/>==<sp/>0)<sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="interface_attribute_parser_1afe7c32e99e05f07a8d1329b59e428e8c" kindref="member">constraints</ref><sp/>==<sp/>nil)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_attribute_parser_1afe7c32e99e05f07a8d1329b59e428e8c" kindref="member">constraints</ref><sp/>=<sp/>[[NSMutableArray<sp/>alloc]<sp/>initWithCapacity:1];</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSString<sp/>*constraint<sp/>=<sp/>[str<sp/>substringWithRange:NSMakeRange(constLoc,<sp/>constLen)];</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[constraints<sp/>insertObject:[<ref refid="interface_x_m_l_util" kindref="compound">XMLUtil</ref><sp/><ref refid="interface_x_m_l_util_1a77b577b0a789247f4b2969ede94e6c5a" kindref="member">getEscapedString</ref>:constraint]<sp/>atIndex:0];</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>constraintの後ろからサーチが終わり。残った範囲がrange。</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>NSString<sp/>*nameAndType<sp/>=<sp/>[str<sp/>substringWithRange:range];</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>NSArray<sp/>*strs<sp/>=<sp/>[nameAndType<sp/>componentsSeparatedByString:@&quot;:&quot;];</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>NSString<sp/>*nameStr<sp/>=<sp/>[strs<sp/>objectAtIndex:0];</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>NSRange<sp/>nameEnd<sp/>=<sp/>[nameStr<sp/>rangeOfCharacterFromSet:whitespaceInv<sp/>options:NSBackwardsSearch];</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nameEnd.location<sp/>!=<sp/>NSNotFound)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nameStr<sp/>=<sp/>[nameStr<sp/>substringWithRange:NSMakeRange(0,<sp/>nameEnd.location<sp/>+<sp/>1)];</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.name<sp/>=<sp/>[<ref refid="interface_x_m_l_util" kindref="compound">XMLUtil</ref><sp/><ref refid="interface_x_m_l_util_1a77b577b0a789247f4b2969ede94e6c5a" kindref="member">getEscapedString</ref>:nameStr];</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([strs<sp/>count]<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.type<sp/>=<sp/></highlight><highlight class="stringliteral">@&quot;int&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.showType<sp/>=<sp/>NO;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSString<sp/>*typeStr<sp/>=<sp/>[strs<sp/>objectAtIndex:1];</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSRange<sp/>typeL<sp/>=<sp/>[typeStr<sp/>rangeOfCharacterFromSet:whitespaceInv];</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(typeL.location<sp/>==<sp/>NSNotFound)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.type<sp/>=<sp/></highlight><highlight class="stringliteral">@&quot;int&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.showType<sp/>=<sp/>NO;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSRange<sp/>typeR<sp/>=<sp/>[typeStr<sp/>rangeOfCharacterFromSet:whitespaceInv<sp/>options:NSBackwardsSearch];</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typeStr<sp/>=<sp/>[typeStr<sp/>substringWithRange:NSMakeRange(typeL.location,<sp/>typeR.location<sp/>-<sp/>typeL.location<sp/>+<sp/>1)];</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSCharacterSet<sp/>*modifierSet<sp/>=<sp/>[NSCharacterSet<sp/>characterSetWithCharactersInString:@&quot;&amp;*[&quot;];</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSRange<sp/>modifierRange<sp/>=<sp/>[typeStr<sp/>rangeOfCharacterFromSet:modifierSet];</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(modifierRange.location<sp/>!=<sp/>NSNotFound<sp/>&amp;&amp;<sp/>modifierRange.location<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.typeModifier<sp/>=<sp/>[<ref refid="interface_x_m_l_util" kindref="compound">XMLUtil</ref><sp/><ref refid="interface_x_m_l_util_1a77b577b0a789247f4b2969ede94e6c5a" kindref="member">getEscapedString</ref>:[typeStr<sp/>substringFromIndex:modifierRange.location]];</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typeStr<sp/>=<sp/>[typeStr<sp/>substringToIndex:modifierRange.location];</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typeR<sp/>=<sp/>[typeStr<sp/>rangeOfCharacterFromSet:whitespaceInv<sp/>options:NSBackwardsSearch];</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>typeStr<sp/>=<sp/>[typeStr<sp/>substringWithRange:NSMakeRange(0,<sp/>typeR.location<sp/>+<sp/>1)];</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.type<sp/>=<sp/>[<ref refid="interface_x_m_l_util" kindref="compound">XMLUtil</ref><sp/><ref refid="interface_x_m_l_util_1a77b577b0a789247f4b2969ede94e6c5a" kindref="member">getEscapedString</ref>:typeStr];</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.showType<sp/>=<sp/>YES;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.valid<sp/>=<sp/>YES;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal">-<sp/>(void)dealloc<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>[visibility<sp/>release];</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>[name<sp/>release];</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>[type<sp/>release];</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>[typeModifier<sp/>release];</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>[stereotypes<sp/>release];</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>[constraints<sp/>release];</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">super</highlight><highlight class="normal"><sp/>dealloc];</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/AttributeParser.m"/>
+  </compounddef>
+</doxygen>

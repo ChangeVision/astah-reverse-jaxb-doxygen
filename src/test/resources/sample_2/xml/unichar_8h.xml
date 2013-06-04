@@ -1,0 +1,3124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="unichar_8h" kind="file">
+    <compoundname>unichar.h</compoundname>
+    <includes local="no">memory.h</includes>
+    <includes local="no">string.h</includes>
+    <includedby refid="baseapi_8h" local="yes">api/baseapi.h</includedby>
+    <includedby refid="applybox_8cpp" local="yes">ccmain/applybox.cpp</includedby>
+    <includedby refid="equationdetect_8h" local="yes">ccmain/equationdetect.h</includedby>
+    <includedby refid="boxread_8cpp" local="yes">ccstruct/boxread.cpp</includedby>
+    <includedby refid="ratngs_8h" local="yes">ccstruct/ratngs.h</includedby>
+    <includedby refid="fontinfo_8h" local="yes">ccstruct/fontinfo.h</includedby>
+    <includedby refid="ambigs_8h" local="yes">ccutil/ambigs.h</includedby>
+    <includedby refid="unicharset_8h" local="yes">ccutil/unicharset.h</includedby>
+    <includedby refid="unicharmap_8h" local="yes">ccutil/unicharmap.h</includedby>
+    <includedby refid="unichar_8cpp" local="yes">ccutil/unichar.cpp</includedby>
+    <includedby refid="unicharmap_8cpp" local="yes">ccutil/unicharmap.cpp</includedby>
+    <includedby refid="unicharset_8cpp" local="yes">ccutil/unicharset.cpp</includedby>
+    <includedby refid="protos_8h" local="yes">classify/protos.h</includedby>
+    <includedby refid="cutoffs_8cpp" local="yes">classify/cutoffs.cpp</includedby>
+    <includedby refid="cube__utils_8cpp" local="yes">cube/cube_utils.cpp</includedby>
+    <includedby refid="tess__lang__mod__edge_8cpp" local="yes">cube/tess_lang_mod_edge.cpp</includedby>
+    <includedby refid="callcpp_8h" local="yes">cutil/callcpp.h</includedby>
+    <includedby refid="callcpp_8cpp" local="yes">cutil/callcpp.cpp</includedby>
+    <includedby refid="stopper_8h" local="yes">dict/stopper.h</includedby>
+    <includedby refid="matchdefs_8h" local="yes">dict/matchdefs.h</includedby>
+    <includedby refid="stopper_8cpp" local="yes">dict/stopper.cpp</includedby>
+    <includedby refid="cntraining_8cpp" local="yes">training/cntraining.cpp</includedby>
+    <includedby refid="unicharset__extractor_8cpp" local="yes">training/unicharset_extractor.cpp</includedby>
+    <incdepgraph>
+      <node id="21800">
+        <label>memory.h</label>
+      </node>
+      <node id="21801">
+        <label>string.h</label>
+      </node>
+      <node id="21799">
+        <label>ccutil/unichar.h</label>
+        <link refid="unichar.h"/>
+        <childnode refid="21800" relation="include">
+        </childnode>
+        <childnode refid="21801" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="21977">
+        <label>classify/intfeaturedist.cpp</label>
+        <link refid="intfeaturedist_8cpp"/>
+      </node>
+      <node id="21940">
+        <label>wordrec/matchtab.h</label>
+        <link refid="matchtab_8h"/>
+        <childnode refid="21863" relation="include">
+        </childnode>
+        <childnode refid="21941" relation="include">
+        </childnode>
+        <childnode refid="21870" relation="include">
+        </childnode>
+        <childnode refid="21872" relation="include">
+        </childnode>
+        <childnode refid="21873" relation="include">
+        </childnode>
+      </node>
+      <node id="21828">
+        <label>ccmain/cube_control.cpp</label>
+        <link refid="cube__control_8cpp"/>
+      </node>
+      <node id="21950">
+        <label>cutil/cutil_class.h</label>
+        <link refid="cutil__class_8h"/>
+        <childnode refid="21951" relation="include">
+        </childnode>
+        <childnode refid="22019" relation="include">
+        </childnode>
+      </node>
+      <node id="21849">
+        <label>ccmain/paragraphs.cpp</label>
+        <link refid="paragraphs_8cpp"/>
+      </node>
+      <node id="21910">
+        <label>classify/protos.cpp</label>
+        <link refid="protos_8cpp"/>
+      </node>
+      <node id="22023">
+        <label>ccmain/mutableiterator.h</label>
+        <link refid="mutableiterator_8h"/>
+        <childnode refid="21804" relation="include">
+        </childnode>
+        <childnode refid="21849" relation="include">
+        </childnode>
+      </node>
+      <node id="21848">
+        <label>ccmain/docqual.h</label>
+        <link refid="docqual_8h"/>
+        <childnode refid="21823" relation="include">
+        </childnode>
+        <childnode refid="21819" relation="include">
+        </childnode>
+        <childnode refid="21831" relation="include">
+        </childnode>
+        <childnode refid="21835" relation="include">
+        </childnode>
+        <childnode refid="21841" relation="include">
+        </childnode>
+      </node>
+      <node id="21957">
+        <label>textord/oldbasel.cpp</label>
+        <link refid="oldbasel_8cpp"/>
+      </node>
+      <node id="22085">
+        <label>wordrec/render.cpp</label>
+        <link refid="render_8cpp"/>
+      </node>
+      <node id="21820">
+        <label>ccmain/fixspace.cpp</label>
+        <link refid="fixspace_8cpp"/>
+      </node>
+      <node id="22055">
+        <label>cube/char_samp.cpp</label>
+        <link refid="char__samp_8cpp"/>
+      </node>
+      <node id="21996">
+        <label>wordrec/makechop.h</label>
+        <link refid="makechop_8h"/>
+        <childnode refid="21865" relation="include">
+        </childnode>
+        <childnode refid="21997" relation="include">
+        </childnode>
+      </node>
+      <node id="21927">
+        <label>dict/context.cpp</label>
+        <link refid="context_8cpp"/>
+      </node>
+      <node id="21886">
+        <label>classify/sampleiterator.cpp</label>
+        <link refid="sampleiterator_8cpp"/>
+      </node>
+      <node id="22068">
+        <label>cutil/globals.h</label>
+        <link refid="globals_8h"/>
+        <childnode refid="21804" relation="include">
+        </childnode>
+        <childnode refid="21819" relation="include">
+        </childnode>
+        <childnode refid="21831" relation="include">
+        </childnode>
+        <childnode refid="21820" relation="include">
+        </childnode>
+        <childnode refid="21835" relation="include">
+        </childnode>
+        <childnode refid="21841" relation="include">
+        </childnode>
+        <childnode refid="21826" relation="include">
+        </childnode>
+        <childnode refid="21814" relation="include">
+        </childnode>
+        <childnode refid="21844" relation="include">
+        </childnode>
+        <childnode refid="21901" relation="include">
+        </childnode>
+        <childnode refid="21859" relation="include">
+        </childnode>
+        <childnode refid="21903" relation="include">
+        </childnode>
+        <childnode refid="21905" relation="include">
+        </childnode>
+        <childnode refid="21906" relation="include">
+        </childnode>
+        <childnode refid="21908" relation="include">
+        </childnode>
+        <childnode refid="21910" relation="include">
+        </childnode>
+        <childnode refid="21931" relation="include">
+        </childnode>
+        <childnode refid="21932" relation="include">
+        </childnode>
+        <childnode refid="21883" relation="include">
+        </childnode>
+        <childnode refid="21861" relation="include">
+        </childnode>
+        <childnode refid="21865" relation="include">
+        </childnode>
+        <childnode refid="21872" relation="include">
+        </childnode>
+      </node>
+      <node id="21895">
+        <label>ccmain/tfacep.h</label>
+        <link refid="tfacep_8h"/>
+        <childnode refid="21819" relation="include">
+        </childnode>
+        <childnode refid="21831" relation="include">
+        </childnode>
+        <childnode refid="21835" relation="include">
+        </childnode>
+        <childnode refid="21841" relation="include">
+        </childnode>
+        <childnode refid="21821" relation="include">
+        </childnode>
+        <childnode refid="21826" relation="include">
+        </childnode>
+        <childnode refid="21844" relation="include">
+        </childnode>
+      </node>
+      <node id="21853">
+        <label>ccmain/werdit.cpp</label>
+        <link refid="werdit_8cpp"/>
+      </node>
+      <node id="21827">
+        <label>ccmain/tessedit.h</label>
+        <link refid="tessedit_8h"/>
+        <childnode refid="21826" relation="include">
+        </childnode>
+      </node>
+      <node id="21969">
+        <label>classify/mfx.cpp</label>
+        <link refid="mfx_8cpp"/>
+      </node>
+      <node id="21916">
+        <label>cube/tess_lang_mod_edge.h</label>
+        <link refid="tess__lang__mod__edge_8h"/>
+        <childnode refid="21917" relation="include">
+        </childnode>
+        <childnode refid="21924" relation="include">
+        </childnode>
+        <childnode refid="21925" relation="include">
+        </childnode>
+      </node>
+      <node id="21953">
+        <label>ccstruct/blobs.cpp</label>
+        <link refid="blobs_8cpp"/>
+      </node>
+      <node id="21998">
+        <label>ccstruct/split.cpp</label>
+        <link refid="split_8cpp"/>
+      </node>
+      <node id="21863">
+        <label>wordrec/wordrec.h</label>
+        <link refid="wordrec_8h"/>
+        <childnode refid="21823" relation="include">
+        </childnode>
+        <childnode refid="21861" relation="include">
+        </childnode>
+        <childnode refid="21864" relation="include">
+        </childnode>
+        <childnode refid="21865" relation="include">
+        </childnode>
+        <childnode refid="21866" relation="include">
+        </childnode>
+        <childnode refid="21867" relation="include">
+        </childnode>
+        <childnode refid="21868" relation="include">
+        </childnode>
+        <childnode refid="21869" relation="include">
+        </childnode>
+        <childnode refid="21870" relation="include">
+        </childnode>
+        <childnode refid="21871" relation="include">
+        </childnode>
+        <childnode refid="21872" relation="include">
+        </childnode>
+        <childnode refid="21873" relation="include">
+        </childnode>
+        <childnode refid="21874" relation="include">
+        </childnode>
+      </node>
+      <node id="22028">
+        <label>ccmain/cube_reco_context.h</label>
+        <link refid="cube__reco__context_8h"/>
+        <childnode refid="21828" relation="include">
+        </childnode>
+        <childnode refid="21829" relation="include">
+        </childnode>
+        <childnode refid="21830" relation="include">
+        </childnode>
+        <childnode refid="21845" relation="include">
+        </childnode>
+        <childnode refid="21814" relation="include">
+        </childnode>
+        <childnode refid="22029" relation="include">
+        </childnode>
+        <childnode refid="22030" relation="include">
+        </childnode>
+        <childnode refid="22034" relation="include">
+        </childnode>
+        <childnode refid="22031" relation="include">
+        </childnode>
+        <childnode refid="21917" relation="include">
+        </childnode>
+        <childnode refid="21916" relation="include">
+        </childnode>
+        <childnode refid="21920" relation="include">
+        </childnode>
+        <childnode refid="22035" relation="include">
+        </childnode>
+        <childnode refid="21919" relation="include">
+        </childnode>
+        <childnode refid="22037" relation="include">
+        </childnode>
+        <childnode refid="21924" relation="include">
+        </childnode>
+      </node>
+      <node id="21835">
+        <label>ccmain/output.cpp</label>
+        <link refid="output_8cpp"/>
+      </node>
+      <node id="22081">
+        <label>cutil/tessarray.cpp</label>
+        <link refid="tessarray_8cpp"/>
+      </node>
+      <node id="22079">
+        <label>cutil/emalloc.cpp</label>
+        <link refid="emalloc_8cpp"/>
+      </node>
+      <node id="21868">
+        <label>wordrec/heuristic.cpp</label>
+        <link refid="heuristic_8cpp"/>
+      </node>
+      <node id="22012">
+        <label>cutil/structures.h</label>
+        <link refid="structures_8h"/>
+        <childnode refid="21895" relation="include">
+        </childnode>
+        <childnode refid="21953" relation="include">
+        </childnode>
+        <childnode refid="21991" relation="include">
+        </childnode>
+        <childnode refid="21998" relation="include">
+        </childnode>
+        <childnode refid="22011" relation="include">
+        </childnode>
+        <childnode refid="22013" relation="include">
+        </childnode>
+        <childnode refid="22014" relation="include">
+        </childnode>
+        <childnode refid="21861" relation="include">
+        </childnode>
+        <childnode refid="21865" relation="include">
+        </childnode>
+        <childnode refid="21997" relation="include">
+        </childnode>
+        <childnode refid="22015" relation="include">
+        </childnode>
+      </node>
+      <node id="22043">
+        <label>cube/word_altlist.cpp</label>
+        <link refid="word__altlist_8cpp"/>
+      </node>
+      <node id="21823">
+        <label>ccmain/tesseractclass.h</label>
+        <link refid="tesseractclass_8h"/>
+        <childnode refid="21804" relation="include">
+        </childnode>
+        <childnode refid="21817" relation="include">
+        </childnode>
+        <childnode refid="21818" relation="include">
+        </childnode>
+        <childnode refid="21810" relation="include">
+        </childnode>
+        <childnode refid="21824" relation="include">
+        </childnode>
+        <childnode refid="21819" relation="include">
+        </childnode>
+        <childnode refid="21828" relation="include">
+        </childnode>
+        <childnode refid="21829" relation="include">
+        </childnode>
+        <childnode refid="21830" relation="include">
+        </childnode>
+        <childnode refid="21831" relation="include">
+        </childnode>
+        <childnode refid="21812" relation="include">
+        </childnode>
+        <childnode refid="21820" relation="include">
+        </childnode>
+        <childnode refid="21832" relation="include">
+        </childnode>
+        <childnode refid="21833" relation="include">
+        </childnode>
+        <childnode refid="21834" relation="include">
+        </childnode>
+        <childnode refid="21835" relation="include">
+        </childnode>
+        <childnode refid="21836" relation="include">
+        </childnode>
+        <childnode refid="21813" relation="include">
+        </childnode>
+        <childnode refid="21837" relation="include">
+        </childnode>
+        <childnode refid="21838" relation="include">
+        </childnode>
+        <childnode refid="21825" relation="include">
+        </childnode>
+        <childnode refid="21840" relation="include">
+        </childnode>
+        <childnode refid="21841" relation="include">
+        </childnode>
+        <childnode refid="21842" relation="include">
+        </childnode>
+        <childnode refid="21843" relation="include">
+        </childnode>
+        <childnode refid="21821" relation="include">
+        </childnode>
+        <childnode refid="21826" relation="include">
+        </childnode>
+        <childnode refid="21845" relation="include">
+        </childnode>
+        <childnode refid="21814" relation="include">
+        </childnode>
+        <childnode refid="21844" relation="include">
+        </childnode>
+        <childnode refid="21846" relation="include">
+        </childnode>
+        <childnode refid="21847" relation="include">
+        </childnode>
+        <childnode refid="21808" relation="include">
+        </childnode>
+      </node>
+      <node id="21831">
+        <label>ccmain/docqual.cpp</label>
+        <link refid="docqual_8cpp"/>
+      </node>
+      <node id="21900">
+        <label>classify/classify.h</label>
+        <link refid="classify_8h"/>
+        <childnode refid="21812" relation="include">
+        </childnode>
+        <childnode refid="21901" relation="include">
+        </childnode>
+        <childnode refid="21900" relation="include">
+        </childnode>
+        <childnode refid="21859" relation="include">
+        </childnode>
+        <childnode refid="21902" relation="include">
+        </childnode>
+        <childnode refid="21903" relation="include">
+        </childnode>
+        <childnode refid="21904" relation="include">
+        </childnode>
+        <childnode refid="21905" relation="include">
+        </childnode>
+        <childnode refid="21906" relation="include">
+        </childnode>
+        <childnode refid="21881" relation="include">
+        </childnode>
+        <childnode refid="21882" relation="include">
+        </childnode>
+        <childnode refid="21907" relation="include">
+        </childnode>
+        <childnode refid="21908" relation="include">
+        </childnode>
+        <childnode refid="21909" relation="include">
+        </childnode>
+        <childnode refid="21889" relation="include">
+        </childnode>
+        <childnode refid="21910" relation="include">
+        </childnode>
+        <childnode refid="21890" relation="include">
+        </childnode>
+        <childnode refid="21883" relation="include">
+        </childnode>
+        <childnode refid="21884" relation="include">
+        </childnode>
+        <childnode refid="21911" relation="include">
+        </childnode>
+        <childnode refid="21863" relation="include">
+        </childnode>
+      </node>
+      <node id="21834">
+        <label>ccmain/osdetect.cpp</label>
+        <link refid="osdetect_8cpp"/>
+      </node>
+      <node id="21987">
+        <label>cutil/cutil.cpp</label>
+        <link refid="cutil_8cpp"/>
+      </node>
+      <node id="21967">
+        <label>classify/intfeaturemap.cpp</label>
+        <link refid="intfeaturemap_8cpp"/>
+      </node>
+      <node id="21936">
+        <label>training/dawg2wordlist.cpp</label>
+        <link refid="dawg2wordlist_8cpp"/>
+      </node>
+      <node id="21911">
+        <label>training/wordlist2dawg.cpp</label>
+        <link refid="wordlist2dawg_8cpp"/>
+      </node>
+      <node id="21882">
+        <label>classify/mastertrainer.cpp</label>
+        <link refid="mastertrainer_8cpp"/>
+      </node>
+      <node id="21997">
+        <label>wordrec/makechop.cpp</label>
+        <link refid="makechop_8cpp"/>
+      </node>
+      <node id="21934">
+        <label>dict/trie.cpp</label>
+        <link refid="trie_8cpp"/>
+      </node>
+      <node id="21970">
+        <label>classify/normfeat.cpp</label>
+        <link refid="normfeat_8cpp"/>
+      </node>
+      <node id="21806">
+        <label>api/capi.cpp</label>
+        <link refid="capi_8cpp"/>
+      </node>
+      <node id="21818">
+        <label>ccmain/adaptions.cpp</label>
+        <link refid="adaptions_8cpp"/>
+      </node>
+      <node id="22014">
+        <label>dict/states.cpp</label>
+        <link refid="states_8cpp"/>
+      </node>
+      <node id="22072">
+        <label>ccutil/unichar.cpp</label>
+        <link refid="unichar_8cpp"/>
+      </node>
+      <node id="21912">
+        <label>classify/speckle.h</label>
+        <link refid="speckle_8h"/>
+        <childnode refid="21859" relation="include">
+        </childnode>
+        <childnode refid="21913" relation="include">
+        </childnode>
+      </node>
+      <node id="22045">
+        <label>cube/lang_model.h</label>
+        <link refid="lang__model_8h"/>
+        <childnode refid="22028" relation="include">
+        </childnode>
+        <childnode refid="22031" relation="include">
+        </childnode>
+        <childnode refid="22046" relation="include">
+        </childnode>
+        <childnode refid="22047" relation="include">
+        </childnode>
+        <childnode refid="22049" relation="include">
+        </childnode>
+        <childnode refid="22050" relation="include">
+        </childnode>
+        <childnode refid="21917" relation="include">
+        </childnode>
+        <childnode refid="21924" relation="include">
+        </childnode>
+        <childnode refid="22051" relation="include">
+        </childnode>
+      </node>
+      <node id="21829">
+        <label>ccmain/cube_reco_context.cpp</label>
+        <link refid="cube__reco__context_8cpp"/>
+      </node>
+      <node id="22032">
+        <label>cube/search_column.cpp</label>
+        <link refid="search__column_8cpp"/>
+      </node>
+      <node id="22013">
+        <label>cutil/structures.cpp</label>
+        <link refid="structures_8cpp"/>
+      </node>
+      <node id="21920">
+        <label>cube/cube_line_object.h</label>
+        <link refid="cube__line__object_8h"/>
+        <childnode refid="21921" relation="include">
+        </childnode>
+      </node>
+      <node id="21983">
+        <label>classify/cluster.h</label>
+        <link refid="cluster_8h"/>
+        <childnode refid="21892" relation="include">
+        </childnode>
+        <childnode refid="21984" relation="include">
+        </childnode>
+        <childnode refid="21881" relation="include">
+        </childnode>
+        <childnode refid="21978" relation="include">
+        </childnode>
+        <childnode refid="21979" relation="include">
+        </childnode>
+        <childnode refid="21883" relation="include">
+        </childnode>
+        <childnode refid="21981" relation="include">
+        </childnode>
+        <childnode refid="21980" relation="include">
+        </childnode>
+        <childnode refid="21884" relation="include">
+        </childnode>
+      </node>
+      <node id="21869">
+        <label>wordrec/outlines.cpp</label>
+        <link refid="outlines_8cpp"/>
+      </node>
+      <node id="21992">
+        <label>wordrec/gradechop.h</label>
+        <link refid="gradechop_8h"/>
+        <childnode refid="21863" relation="include">
+        </childnode>
+        <childnode refid="21866" relation="include">
+        </childnode>
+        <childnode refid="21867" relation="include">
+        </childnode>
+        <childnode refid="21872" relation="include">
+        </childnode>
+      </node>
+      <node id="22060">
+        <label>cube/feature_chebyshev.cpp</label>
+        <link refid="feature__chebyshev_8cpp"/>
+      </node>
+      <node id="21877">
+        <label>ccstruct/matrix.cpp</label>
+        <link refid="matrix_8cpp"/>
+      </node>
+      <node id="21833">
+        <label>ccmain/ltrresultiterator.cpp</label>
+        <link refid="ltrresultiterator_8cpp"/>
+      </node>
+      <node id="21856">
+        <label>ccmain/tesseract_cube_combiner.h</label>
+        <link refid="tesseract__cube__combiner_8h"/>
+        <childnode refid="21828" relation="include">
+        </childnode>
+        <childnode refid="21845" relation="include">
+        </childnode>
+        <childnode refid="21814" relation="include">
+        </childnode>
+      </node>
+      <node id="21968">
+        <label>classify/intfeaturespace.cpp</label>
+        <link refid="intfeaturespace_8cpp"/>
+      </node>
+      <node id="22078">
+        <label>cutil/bitvec.cpp</label>
+        <link refid="bitvec_8cpp"/>
+      </node>
+      <node id="22061">
+        <label>cube/feature_hybrid.cpp</label>
+        <link refid="feature__hybrid_8cpp"/>
+      </node>
+      <node id="22037">
+        <label>cube/cube_line_segmenter.h</label>
+        <link refid="cube__line__segmenter_8h"/>
+        <childnode refid="22038" relation="include">
+        </childnode>
+      </node>
+      <node id="21921">
+        <label>cube/cube_line_object.cpp</label>
+        <link refid="cube__line__object_8cpp"/>
+      </node>
+      <node id="21883">
+        <label>training/commontraining.cpp</label>
+        <link refid="commontraining_8cpp"/>
+      </node>
+      <node id="22019">
+        <label>cutil/cutil_class.cpp</label>
+        <link refid="cutil__class_8cpp"/>
+      </node>
+      <node id="21896">
+        <label>wordrec/associate.cpp</label>
+        <link refid="associate_8cpp"/>
+      </node>
+      <node id="21907">
+        <label>classify/mfoutline.cpp</label>
+        <link refid="mfoutline_8cpp"/>
+      </node>
+      <node id="21981">
+        <label>training/mergenf.h</label>
+        <link refid="mergenf_8h"/>
+        <childnode refid="21980" relation="include">
+        </childnode>
+        <childnode refid="21884" relation="include">
+        </childnode>
+      </node>
+      <node id="21946">
+        <label>ccutil/ccutil.h</label>
+        <link refid="ccutil_8h"/>
+        <childnode refid="21947" relation="include">
+        </childnode>
+        <childnode refid="21948" relation="include">
+        </childnode>
+        <childnode refid="21949" relation="include">
+        </childnode>
+        <childnode refid="21888" relation="include">
+        </childnode>
+        <childnode refid="21950" relation="include">
+        </childnode>
+        <childnode refid="21932" relation="include">
+        </childnode>
+        <childnode refid="21933" relation="include">
+        </childnode>
+        <childnode refid="21883" relation="include">
+        </childnode>
+      </node>
+      <node id="21891">
+        <label>classify/trainingsample.cpp</label>
+        <link refid="trainingsample_8cpp"/>
+      </node>
+      <node id="21958">
+        <label>textord/wordseg.h</label>
+        <link refid="wordseg_8h"/>
+        <childnode refid="21813" relation="include">
+        </childnode>
+        <childnode refid="21860" relation="include">
+        </childnode>
+        <childnode refid="21959" relation="include">
+        </childnode>
+        <childnode refid="21960" relation="include">
+        </childnode>
+        <childnode refid="21961" relation="include">
+        </childnode>
+      </node>
+      <node id="22066">
+        <label>cube/char_samp_set.cpp</label>
+        <link refid="char__samp__set_8cpp"/>
+      </node>
+      <node id="21832">
+        <label>ccmain/fixxht.cpp</label>
+        <link refid="fixxht_8cpp"/>
+      </node>
+      <node id="21914">
+        <label>cube/word_list_lang_model.cpp</label>
+        <link refid="word__list__lang__model_8cpp"/>
+      </node>
+      <node id="22065">
+        <label>cube/char_samp_set.h</label>
+        <link refid="char__samp__set_8h"/>
+        <childnode refid="22066" relation="include">
+        </childnode>
+      </node>
+      <node id="21947">
+        <label>ccutil/ccutil.cpp</label>
+        <link refid="ccutil_8cpp"/>
+      </node>
+      <node id="21865">
+        <label>wordrec/chopper.cpp</label>
+        <link refid="chopper_8cpp"/>
+      </node>
+      <node id="21902">
+        <label>classify/classify.cpp</label>
+        <link refid="classify_8cpp"/>
+      </node>
+      <node id="21846">
+        <label>cube/beam_search.cpp</label>
+        <link refid="beam__search_8cpp"/>
+      </node>
+      <node id="22022">
+        <label>ccmain/resultiterator.h</label>
+        <link refid="resultiterator_8h"/>
+        <childnode refid="21803" relation="include">
+        </childnode>
+        <childnode refid="21804" relation="include">
+        </childnode>
+        <childnode refid="21805" relation="include">
+        </childnode>
+        <childnode refid="22023" relation="include">
+        </childnode>
+        <childnode refid="21842" relation="include">
+        </childnode>
+      </node>
+      <node id="21904">
+        <label>classify/float2int.cpp</label>
+        <link refid="float2int_8cpp"/>
+      </node>
+      <node id="21960">
+        <label>textord/tordmain.cpp</label>
+        <link refid="tordmain_8cpp"/>
+      </node>
+      <node id="22052">
+        <label>cube/word_unigrams.cpp</label>
+        <link refid="word__unigrams_8cpp"/>
+      </node>
+      <node id="22007">
+        <label>classify/mf.cpp</label>
+        <link refid="mf_8cpp"/>
+      </node>
+      <node id="22011">
+        <label>cutil/oldlist.cpp</label>
+        <link refid="oldlist_8cpp"/>
+      </node>
+      <node id="21955">
+        <label>textord/makerow.cpp</label>
+        <link refid="makerow_8cpp"/>
+      </node>
+      <node id="21924">
+        <label>cube/word_list_lang_model.h</label>
+        <link refid="word__list__lang__model_8h"/>
+        <childnode refid="21922" relation="include">
+        </childnode>
+        <childnode refid="21914" relation="include">
+        </childnode>
+      </node>
+      <node id="22077">
+        <label>classify/flexfx.cpp</label>
+        <link refid="flexfx_8cpp"/>
+      </node>
+      <node id="21932">
+        <label>dict/permute.cpp</label>
+        <link refid="permute_8cpp"/>
+      </node>
+      <node id="21974">
+        <label>classify/shapetable.cpp</label>
+        <link refid="shapetable_8cpp"/>
+      </node>
+      <node id="21879">
+        <label>classify/errorcounter.cpp</label>
+        <link refid="errorcounter_8cpp"/>
+      </node>
+      <node id="21860">
+        <label>textord/textord.cpp</label>
+        <link refid="textord_8cpp"/>
+      </node>
+      <node id="21975">
+        <label>classify/intfeaturespace.h</label>
+        <link refid="intfeaturespace_8h"/>
+        <childnode refid="21976" relation="include">
+        </childnode>
+        <childnode refid="21967" relation="include">
+        </childnode>
+        <childnode refid="21968" relation="include">
+        </childnode>
+        <childnode refid="21881" relation="include">
+        </childnode>
+        <childnode refid="21974" relation="include">
+        </childnode>
+        <childnode refid="21887" relation="include">
+        </childnode>
+        <childnode refid="21883" relation="include">
+        </childnode>
+      </node>
+      <node id="21952">
+        <label>ccstruct/ccstruct.h</label>
+        <link refid="ccstruct_8h"/>
+        <childnode refid="21953" relation="include">
+        </childnode>
+        <childnode refid="21954" relation="include">
+        </childnode>
+        <childnode refid="21900" relation="include">
+        </childnode>
+        <childnode refid="21955" relation="include">
+        </childnode>
+        <childnode refid="21956" relation="include">
+        </childnode>
+        <childnode refid="21957" relation="include">
+        </childnode>
+        <childnode refid="21960" relation="include">
+        </childnode>
+      </node>
+      <node id="21803">
+        <label>api/baseapi.h</label>
+        <link refid="baseapi_8h"/>
+        <childnode refid="21804" relation="include">
+        </childnode>
+        <childnode refid="21805" relation="include">
+        </childnode>
+        <childnode refid="21807" relation="include">
+        </childnode>
+        <childnode refid="21808" relation="include">
+        </childnode>
+        <childnode refid="21809" relation="include">
+        </childnode>
+      </node>
+      <node id="22049">
+        <label>cube/conv_net_classifier.h</label>
+        <link refid="conv__net__classifier_8h"/>
+        <childnode refid="22048" relation="include">
+        </childnode>
+        <childnode refid="21918" relation="include">
+        </childnode>
+        <childnode refid="22035" relation="include">
+        </childnode>
+        <childnode refid="21923" relation="include">
+        </childnode>
+      </node>
+      <node id="21935">
+        <label>dict/trie.h</label>
+        <link refid="trie_8h"/>
+        <childnode refid="21914" relation="include">
+        </childnode>
+        <childnode refid="21926" relation="include">
+        </childnode>
+        <childnode refid="21932" relation="include">
+        </childnode>
+        <childnode refid="21934" relation="include">
+        </childnode>
+        <childnode refid="21936" relation="include">
+        </childnode>
+        <childnode refid="21911" relation="include">
+        </childnode>
+      </node>
+      <node id="21949">
+        <label>ccutil/tprintf.cpp</label>
+        <link refid="tprintf_8cpp"/>
+      </node>
+      <node id="21816">
+        <label>ccstruct/ratngs.h</label>
+        <link refid="ratngs_8h"/>
+        <childnode refid="21817" relation="include">
+        </childnode>
+        <childnode refid="21822" relation="include">
+        </childnode>
+        <childnode refid="21812" relation="include">
+        </childnode>
+        <childnode refid="21834" relation="include">
+        </childnode>
+        <childnode refid="21849" relation="include">
+        </childnode>
+        <childnode refid="21840" relation="include">
+        </childnode>
+        <childnode refid="21843" relation="include">
+        </childnode>
+        <childnode refid="21844" relation="include">
+        </childnode>
+        <childnode refid="21850" relation="include">
+        </childnode>
+        <childnode refid="21876" relation="include">
+        </childnode>
+        <childnode refid="21877" relation="include">
+        </childnode>
+        <childnode refid="21899" relation="include">
+        </childnode>
+        <childnode refid="21900" relation="include">
+        </childnode>
+        <childnode refid="21912" relation="include">
+        </childnode>
+        <childnode refid="21913" relation="include">
+        </childnode>
+        <childnode refid="21914" relation="include">
+        </childnode>
+        <childnode refid="21915" relation="include">
+        </childnode>
+        <childnode refid="21926" relation="include">
+        </childnode>
+        <childnode refid="21937" relation="include">
+        </childnode>
+        <childnode refid="21938" relation="include">
+        </childnode>
+        <childnode refid="21932" relation="include">
+        </childnode>
+        <childnode refid="21933" relation="include">
+        </childnode>
+        <childnode refid="21897" relation="include">
+        </childnode>
+        <childnode refid="21861" relation="include">
+        </childnode>
+        <childnode refid="21939" relation="include">
+        </childnode>
+        <childnode refid="21863" relation="include">
+        </childnode>
+        <childnode refid="21940" relation="include">
+        </childnode>
+        <childnode refid="21868" relation="include">
+        </childnode>
+        <childnode refid="21941" relation="include">
+        </childnode>
+        <childnode refid="21870" relation="include">
+        </childnode>
+        <childnode refid="21871" relation="include">
+        </childnode>
+      </node>
+      <node id="21909">
+        <label>classify/outfeat.cpp</label>
+        <link refid="outfeat_8cpp"/>
+      </node>
+      <node id="21961">
+        <label>textord/wordseg.cpp</label>
+        <link refid="wordseg_8cpp"/>
+      </node>
+      <node id="21841">
+        <label>ccmain/reject.cpp</label>
+        <link refid="reject_8cpp"/>
+      </node>
+      <node id="22059">
+        <label>cube/feature_bmp.cpp</label>
+        <link refid="feature__bmp_8cpp"/>
+      </node>
+      <node id="22029">
+        <label>cube/search_node.h</label>
+        <link refid="search__node_8h"/>
+        <childnode refid="22030" relation="include">
+        </childnode>
+        <childnode refid="22033" relation="include">
+        </childnode>
+      </node>
+      <node id="21873">
+        <label>wordrec/wordclass.cpp</label>
+        <link refid="wordclass_8cpp"/>
+      </node>
+      <node id="21804">
+        <label>api/baseapi.cpp</label>
+        <link refid="baseapi_8cpp"/>
+      </node>
+      <node id="22082">
+        <label>wordrec/render.h</label>
+        <link refid="render_8h"/>
+        <childnode refid="22083" relation="include">
+        </childnode>
+        <childnode refid="21865" relation="include">
+        </childnode>
+        <childnode refid="21997" relation="include">
+        </childnode>
+        <childnode refid="22000" relation="include">
+        </childnode>
+        <childnode refid="22085" relation="include">
+        </childnode>
+        <childnode refid="21873" relation="include">
+        </childnode>
+      </node>
+      <node id="22087">
+        <label>classify/cutoffs.h</label>
+        <link refid="cutoffs_8h"/>
+        <childnode refid="21971" relation="include">
+        </childnode>
+        <childnode refid="21903" relation="include">
+        </childnode>
+      </node>
+      <node id="22053">
+        <label>cube/char_altlist.cpp</label>
+        <link refid="char__altlist_8cpp"/>
+      </node>
+      <node id="22073">
+        <label>cutil/callcpp.h</label>
+        <link refid="callcpp_8h"/>
+        <childnode refid="21819" relation="include">
+        </childnode>
+        <childnode refid="21877" relation="include">
+        </childnode>
+        <childnode refid="21899" relation="include">
+        </childnode>
+        <childnode refid="21991" relation="include">
+        </childnode>
+        <childnode refid="21998" relation="include">
+        </childnode>
+        <childnode refid="21859" relation="include">
+        </childnode>
+        <childnode refid="22005" relation="include">
+        </childnode>
+        <childnode refid="21905" relation="include">
+        </childnode>
+        <childnode refid="22074" relation="include">
+        </childnode>
+        <childnode refid="21910" relation="include">
+        </childnode>
+        <childnode refid="22075" relation="include">
+        </childnode>
+        <childnode refid="22080" relation="include">
+        </childnode>
+        <childnode refid="21987" relation="include">
+        </childnode>
+        <childnode refid="22081" relation="include">
+        </childnode>
+        <childnode refid="21932" relation="include">
+        </childnode>
+        <childnode refid="22014" relation="include">
+        </childnode>
+        <childnode refid="21933" relation="include">
+        </childnode>
+        <childnode refid="21934" relation="include">
+        </childnode>
+        <childnode refid="21981" relation="include">
+        </childnode>
+        <childnode refid="22082" relation="include">
+        </childnode>
+        <childnode refid="21939" relation="include">
+        </childnode>
+        <childnode refid="21863" relation="include">
+        </childnode>
+        <childnode refid="21864" relation="include">
+        </childnode>
+        <childnode refid="21999" relation="include">
+        </childnode>
+        <childnode refid="21865" relation="include">
+        </childnode>
+        <childnode refid="22018" relation="include">
+        </childnode>
+        <childnode refid="21941" relation="include">
+        </childnode>
+        <childnode refid="22084" relation="include">
+        </childnode>
+        <childnode refid="21872" relation="include">
+        </childnode>
+        <childnode refid="21873" relation="include">
+        </childnode>
+      </node>
+      <node id="21837">
+        <label>ccmain/pagewalk.cpp</label>
+        <link refid="pagewalk_8cpp"/>
+      </node>
+      <node id="22042">
+        <label>cube/word_altlist.h</label>
+        <link refid="word__altlist_8h"/>
+        <childnode refid="21845" relation="include">
+        </childnode>
+        <childnode refid="22031" relation="include">
+        </childnode>
+        <childnode refid="21919" relation="include">
+        </childnode>
+        <childnode refid="22043" relation="include">
+        </childnode>
+      </node>
+      <node id="22056">
+        <label>cube/char_set.cpp</label>
+        <link refid="char__set_8cpp"/>
+      </node>
+      <node id="22057">
+        <label>cube/cube_tuning_params.cpp</label>
+        <link refid="cube__tuning__params_8cpp"/>
+      </node>
+      <node id="21819">
+        <label>ccmain/control.cpp</label>
+        <link refid="control_8cpp"/>
+      </node>
+      <node id="22086">
+        <label>dict/matchdefs.h</label>
+        <link refid="matchdefs_8h"/>
+        <childnode refid="21964" relation="include">
+        </childnode>
+        <childnode refid="22087" relation="include">
+        </childnode>
+        <childnode refid="22088" relation="include">
+        </childnode>
+        <childnode refid="22006" relation="include">
+        </childnode>
+        <childnode refid="21933" relation="include">
+        </childnode>
+      </node>
+      <node id="22009">
+        <label>cutil/listio.h</label>
+        <link refid="listio_8h"/>
+        <childnode refid="22010" relation="include">
+        </childnode>
+      </node>
+      <node id="22088">
+        <label>classify/normmatch.h</label>
+        <link refid="normmatch_8h"/>
+        <childnode refid="21859" relation="include">
+        </childnode>
+        <childnode refid="21904" relation="include">
+        </childnode>
+        <childnode refid="21908" relation="include">
+        </childnode>
+      </node>
+      <node id="22064">
+        <label>cube/char_bigrams.h</label>
+        <link refid="char__bigrams_8h"/>
+        <childnode refid="22028" relation="include">
+        </childnode>
+        <childnode refid="22054" relation="include">
+        </childnode>
+      </node>
+      <node id="21984">
+        <label>classify/clusttool.h</label>
+        <link refid="clusttool_8h"/>
+        <childnode refid="21985" relation="include">
+        </childnode>
+        <childnode refid="21907" relation="include">
+        </childnode>
+        <childnode refid="21969" relation="include">
+        </childnode>
+        <childnode refid="21908" relation="include">
+        </childnode>
+        <childnode refid="21979" relation="include">
+        </childnode>
+        <childnode refid="21883" relation="include">
+        </childnode>
+        <childnode refid="21980" relation="include">
+        </childnode>
+        <childnode refid="21884" relation="include">
+        </childnode>
+      </node>
+      <node id="22010">
+        <label>cutil/listio.cpp</label>
+        <link refid="listio_8cpp"/>
+      </node>
+      <node id="21928">
+        <label>dict/dawg.cpp</label>
+        <link refid="dawg_8cpp"/>
+      </node>
+      <node id="21874">
+        <label>wordrec/wordrec.cpp</label>
+        <link refid="wordrec_8cpp"/>
+      </node>
+      <node id="22024">
+        <label>ccmain/osdetect.h</label>
+        <link refid="osdetect_8h"/>
+        <childnode refid="21804" relation="include">
+        </childnode>
+        <childnode refid="21834" relation="include">
+        </childnode>
+        <childnode refid="21813" relation="include">
+        </childnode>
+      </node>
+      <node id="22080">
+        <label>cutil/callcpp.cpp</label>
+        <link refid="callcpp_8cpp"/>
+      </node>
+      <node id="22018">
+        <label>wordrec/closed.cpp</label>
+        <link refid="closed_8cpp"/>
+      </node>
+      <node id="22046">
+        <label>cube/classifier_base.h</label>
+        <link refid="classifier__base_8h"/>
+        <childnode refid="22028" relation="include">
+        </childnode>
+        <childnode refid="22047" relation="include">
+        </childnode>
+        <childnode refid="22049" relation="include">
+        </childnode>
+        <childnode refid="22050" relation="include">
+        </childnode>
+        <childnode refid="21918" relation="include">
+        </childnode>
+        <childnode refid="21923" relation="include">
+        </childnode>
+      </node>
+      <node id="21982">
+        <label>classify/kdtree.h</label>
+        <link refid="kdtree_8h"/>
+        <childnode refid="21983" relation="include">
+        </childnode>
+        <childnode refid="21986" relation="include">
+        </childnode>
+      </node>
+      <node id="21973">
+        <label>classify/shapetable.h</label>
+        <link refid="shapetable_8h"/>
+        <childnode refid="21859" relation="include">
+        </childnode>
+        <childnode refid="21878" relation="include">
+        </childnode>
+        <childnode refid="21902" relation="include">
+        </childnode>
+        <childnode refid="21879" relation="include">
+        </childnode>
+        <childnode refid="21880" relation="include">
+        </childnode>
+        <childnode refid="21905" relation="include">
+        </childnode>
+        <childnode refid="21906" relation="include">
+        </childnode>
+        <childnode refid="21881" relation="include">
+        </childnode>
+        <childnode refid="21882" relation="include">
+        </childnode>
+        <childnode refid="21886" relation="include">
+        </childnode>
+        <childnode refid="21974" relation="include">
+        </childnode>
+        <childnode refid="21891" relation="include">
+        </childnode>
+        <childnode refid="21887" relation="include">
+        </childnode>
+        <childnode refid="21883" relation="include">
+        </childnode>
+        <childnode refid="21884" relation="include">
+        </childnode>
+      </node>
+      <node id="22005">
+        <label>classify/blobclass.cpp</label>
+        <link refid="blobclass_8cpp"/>
+      </node>
+      <node id="21994">
+        <label>wordrec/chop.h</label>
+        <link refid="chop_8h"/>
+        <childnode refid="21895" relation="include">
+        </childnode>
+        <childnode refid="21826" relation="include">
+        </childnode>
+        <childnode refid="21993" relation="include">
+        </childnode>
+        <childnode refid="21864" relation="include">
+        </childnode>
+        <childnode refid="21995" relation="include">
+        </childnode>
+        <childnode refid="21996" relation="include">
+        </childnode>
+        <childnode refid="21867" relation="include">
+        </childnode>
+        <childnode refid="21872" relation="include">
+        </childnode>
+      </node>
+      <node id="21966">
+        <label>classify/intfx.h</label>
+        <link refid="intfx_8h"/>
+        <childnode refid="21900" relation="include">
+        </childnode>
+        <childnode refid="21859" relation="include">
+        </childnode>
+        <childnode refid="21878" relation="include">
+        </childnode>
+        <childnode refid="21967" relation="include">
+        </childnode>
+        <childnode refid="21968" relation="include">
+        </childnode>
+        <childnode refid="21888" relation="include">
+        </childnode>
+        <childnode refid="21881" relation="include">
+        </childnode>
+        <childnode refid="21969" relation="include">
+        </childnode>
+        <childnode refid="21970" relation="include">
+        </childnode>
+      </node>
+      <node id="21894">
+        <label>wordrec/associate.h</label>
+        <link refid="associate_8h"/>
+        <childnode refid="21895" relation="include">
+        </childnode>
+        <childnode refid="21896" relation="include">
+        </childnode>
+        <childnode refid="21861" relation="include">
+        </childnode>
+        <childnode refid="21897" relation="include">
+        </childnode>
+        <childnode refid="21863" relation="include">
+        </childnode>
+        <childnode refid="21862" relation="include">
+        </childnode>
+        <childnode refid="21865" relation="include">
+        </childnode>
+        <childnode refid="21868" relation="include">
+        </childnode>
+        <childnode refid="21871" relation="include">
+        </childnode>
+        <childnode refid="21873" relation="include">
+        </childnode>
+      </node>
+      <node id="21866">
+        <label>wordrec/findseam.cpp</label>
+        <link refid="findseam_8cpp"/>
+      </node>
+      <node id="21899">
+        <label>ccstruct/ratngs.cpp</label>
+        <link refid="ratngs_8cpp"/>
+      </node>
+      <node id="21836">
+        <label>ccmain/pageiterator.cpp</label>
+        <link refid="pageiterator_8cpp"/>
+      </node>
+      <node id="21941">
+        <label>wordrec/matchtab.cpp</label>
+        <link refid="matchtab_8cpp"/>
+      </node>
+      <node id="21813">
+        <label>ccmain/pagesegmain.cpp</label>
+        <link refid="pagesegmain_8cpp"/>
+      </node>
+      <node id="21908">
+        <label>classify/normmatch.cpp</label>
+        <link refid="normmatch_8cpp"/>
+      </node>
+      <node id="21943">
+        <label>ccstruct/fontinfo.cpp</label>
+        <link refid="fontinfo_8cpp"/>
+      </node>
+      <node id="21875">
+        <label>wordrec/language_model.cpp</label>
+        <link refid="language__model_8cpp"/>
+      </node>
+      <node id="21925">
+        <label>cube/tess_lang_mod_edge.cpp</label>
+        <link refid="tess__lang__mod__edge_8cpp"/>
+      </node>
+      <node id="21844">
+        <label>ccmain/tfacepp.cpp</label>
+        <link refid="tfacepp_8cpp"/>
+      </node>
+      <node id="21807">
+        <label>api/tesseractmain.cpp</label>
+        <link refid="tesseractmain_8cpp"/>
+      </node>
+      <node id="21903">
+        <label>classify/cutoffs.cpp</label>
+        <link refid="cutoffs_8cpp"/>
+      </node>
+      <node id="21857">
+        <label>ccstruct/boxword.cpp</label>
+        <link refid="boxword_8cpp"/>
+      </node>
+      <node id="21926">
+        <label>dict/dict.h</label>
+        <link refid="dict_8h"/>
+        <childnode refid="21829" relation="include">
+        </childnode>
+        <childnode refid="21900" relation="include">
+        </childnode>
+        <childnode refid="21859" relation="include">
+        </childnode>
+        <childnode refid="21917" relation="include">
+        </childnode>
+        <childnode refid="21847" relation="include">
+        </childnode>
+        <childnode refid="21927" relation="include">
+        </childnode>
+        <childnode refid="21928" relation="include">
+        </childnode>
+        <childnode refid="21929" relation="include">
+        </childnode>
+        <childnode refid="21930" relation="include">
+        </childnode>
+        <childnode refid="21931" relation="include">
+        </childnode>
+        <childnode refid="21932" relation="include">
+        </childnode>
+        <childnode refid="21933" relation="include">
+        </childnode>
+        <childnode refid="21934" relation="include">
+        </childnode>
+        <childnode refid="21808" relation="include">
+        </childnode>
+        <childnode refid="21911" relation="include">
+        </childnode>
+        <childnode refid="21861" relation="include">
+        </childnode>
+        <childnode refid="21863" relation="include">
+        </childnode>
+        <childnode refid="21862" relation="include">
+        </childnode>
+      </node>
+      <node id="22054">
+        <label>cube/char_bigrams.cpp</label>
+        <link refid="char__bigrams_8cpp"/>
+      </node>
+      <node id="21811">
+        <label>ccmain/equationdetect.h</label>
+        <link refid="equationdetect_8h"/>
+        <childnode refid="21804" relation="include">
+        </childnode>
+        <childnode refid="21812" relation="include">
+        </childnode>
+        <childnode refid="21813" relation="include">
+        </childnode>
+        <childnode refid="21814" relation="include">
+        </childnode>
+      </node>
+      <node id="21839">
+        <label>ccmain/paramsd.cpp</label>
+        <link refid="paramsd_8cpp"/>
+      </node>
+      <node id="22047">
+        <label>cube/classifier_factory.h</label>
+        <link refid="classifier__factory_8h"/>
+        <childnode refid="21829" relation="include">
+        </childnode>
+        <childnode refid="22048" relation="include">
+        </childnode>
+      </node>
+      <node id="21980">
+        <label>training/mergenf.cpp</label>
+        <link refid="mergenf_8cpp"/>
+      </node>
+      <node id="21890">
+        <label>classify/tessclassifier.cpp</label>
+        <link refid="tessclassifier_8cpp"/>
+      </node>
+      <node id="22083">
+        <label>wordrec/plotseg.h</label>
+        <link refid="plotseg_8h"/>
+        <childnode refid="21861" relation="include">
+        </childnode>
+        <childnode refid="21870" relation="include">
+        </childnode>
+        <childnode refid="22084" relation="include">
+        </childnode>
+      </node>
+      <node id="21810">
+        <label>ccmain/applybox.cpp</label>
+        <link refid="applybox_8cpp"/>
+      </node>
+      <node id="22050">
+        <label>cube/hybrid_neural_net_classifier.h</label>
+        <link refid="hybrid__neural__net__classifier_8h"/>
+        <childnode refid="22048" relation="include">
+        </childnode>
+        <childnode refid="21923" relation="include">
+        </childnode>
+      </node>
+      <node id="21976">
+        <label>classify/intfeaturemap.h</label>
+        <link refid="intfeaturemap_8h"/>
+        <childnode refid="21977" relation="include">
+        </childnode>
+        <childnode refid="21967" relation="include">
+        </childnode>
+        <childnode refid="21881" relation="include">
+        </childnode>
+        <childnode refid="21891" relation="include">
+        </childnode>
+        <childnode refid="21887" relation="include">
+        </childnode>
+      </node>
+      <node id="22071">
+        <label>ccutil/unicharmap.cpp</label>
+        <link refid="unicharmap_8cpp"/>
+      </node>
+      <node id="22017">
+        <label>cutil/oldheap.cpp</label>
+        <link refid="oldheap_8cpp"/>
+      </node>
+      <node id="22027">
+        <label>cube/char_set.h</label>
+        <link refid="char__set_8h"/>
+        <childnode refid="22028" relation="include">
+        </childnode>
+        <childnode refid="21830" relation="include">
+        </childnode>
+        <childnode refid="22039" relation="include">
+        </childnode>
+        <childnode refid="22063" relation="include">
+        </childnode>
+        <childnode refid="22044" relation="include">
+        </childnode>
+        <childnode refid="22045" relation="include">
+        </childnode>
+        <childnode refid="22064" relation="include">
+        </childnode>
+        <childnode refid="22065" relation="include">
+        </childnode>
+        <childnode refid="22056" relation="include">
+        </childnode>
+        <childnode refid="22046" relation="include">
+        </childnode>
+        <childnode refid="22049" relation="include">
+        </childnode>
+        <childnode refid="22050" relation="include">
+        </childnode>
+        <childnode refid="21918" relation="include">
+        </childnode>
+        <childnode refid="21916" relation="include">
+        </childnode>
+        <childnode refid="22058" relation="include">
+        </childnode>
+        <childnode refid="21923" relation="include">
+        </childnode>
+        <childnode refid="22067" relation="include">
+        </childnode>
+        <childnode refid="22051" relation="include">
+        </childnode>
+      </node>
+      <node id="21871">
+        <label>wordrec/segsearch.cpp</label>
+        <link refid="segsearch_8cpp"/>
+      </node>
+      <node id="21906">
+        <label>classify/intproto.cpp</label>
+        <link refid="intproto_8cpp"/>
+      </node>
+      <node id="21826">
+        <label>ccmain/tessedit.cpp</label>
+        <link refid="tessedit_8cpp"/>
+      </node>
+      <node id="21824">
+        <label>ccmain/pgedit.h</label>
+        <link refid="pgedit_8h"/>
+        <childnode refid="21804" relation="include">
+        </childnode>
+        <childnode refid="21819" relation="include">
+        </childnode>
+        <childnode refid="21825" relation="include">
+        </childnode>
+        <childnode refid="21826" relation="include">
+        </childnode>
+        <childnode refid="21827" relation="include">
+        </childnode>
+      </node>
+      <node id="21919">
+        <label>cube/cube_object.h</label>
+        <link refid="cube__object_8h"/>
+        <childnode refid="21828" relation="include">
+        </childnode>
+        <childnode refid="21830" relation="include">
+        </childnode>
+        <childnode refid="21845" relation="include">
+        </childnode>
+        <childnode refid="21920" relation="include">
+        </childnode>
+        <childnode refid="21922" relation="include">
+        </childnode>
+      </node>
+      <node id="21893">
+        <label>classify/errorcounter.h</label>
+        <link refid="errorcounter_8h"/>
+        <childnode refid="21879" relation="include">
+        </childnode>
+        <childnode refid="21882" relation="include">
+        </childnode>
+      </node>
+      <node id="22070">
+        <label>ccutil/unicharmap.h</label>
+        <link refid="unicharmap_8h"/>
+        <childnode refid="22020" relation="include">
+        </childnode>
+        <childnode refid="22071" relation="include">
+        </childnode>
+      </node>
+      <node id="21922">
+        <label>cube/cube_object.cpp</label>
+        <link refid="cube__object_8cpp"/>
+      </node>
+      <node id="21884">
+        <label>training/mftraining.cpp</label>
+        <link refid="mftraining_8cpp"/>
+      </node>
+      <node id="21979">
+        <label>training/cntraining.cpp</label>
+        <link refid="cntraining_8cpp"/>
+      </node>
+      <node id="21913">
+        <label>classify/speckle.cpp</label>
+        <link refid="speckle_8cpp"/>
+      </node>
+      <node id="21802">
+        <label>ccutil/unichar.h</label>
+        <link refid="unichar.h"/>
+        <childnode refid="21803" relation="include">
+        </childnode>
+        <childnode refid="21810" relation="include">
+        </childnode>
+        <childnode refid="21811" relation="include">
+        </childnode>
+        <childnode refid="21815" relation="include">
+        </childnode>
+        <childnode refid="21816" relation="include">
+        </childnode>
+        <childnode refid="21942" relation="include">
+        </childnode>
+        <childnode refid="21944" relation="include">
+        </childnode>
+        <childnode refid="22020" relation="include">
+        </childnode>
+        <childnode refid="22070" relation="include">
+        </childnode>
+        <childnode refid="22072" relation="include">
+        </childnode>
+        <childnode refid="22071" relation="include">
+        </childnode>
+        <childnode refid="22026" relation="include">
+        </childnode>
+        <childnode refid="21963" relation="include">
+        </childnode>
+        <childnode refid="21903" relation="include">
+        </childnode>
+        <childnode refid="22058" relation="include">
+        </childnode>
+        <childnode refid="21925" relation="include">
+        </childnode>
+        <childnode refid="22073" relation="include">
+        </childnode>
+        <childnode refid="22080" relation="include">
+        </childnode>
+        <childnode refid="21937" relation="include">
+        </childnode>
+        <childnode refid="22086" relation="include">
+        </childnode>
+        <childnode refid="21933" relation="include">
+        </childnode>
+        <childnode refid="21979" relation="include">
+        </childnode>
+        <childnode refid="22069" relation="include">
+        </childnode>
+      </node>
+      <node id="22062">
+        <label>cube/word_size_model.cpp</label>
+        <link refid="word__size__model_8cpp"/>
+      </node>
+      <node id="21951">
+        <label>cutil/cutil.h</label>
+        <link refid="cutil_8h"/>
+        <childnode refid="21840" relation="include">
+        </childnode>
+        <childnode refid="21952" relation="include">
+        </childnode>
+        <childnode refid="21953" relation="include">
+        </childnode>
+        <childnode refid="21963" relation="include">
+        </childnode>
+        <childnode refid="21982" relation="include">
+        </childnode>
+        <childnode refid="21987" relation="include">
+        </childnode>
+        <childnode refid="21988" relation="include">
+        </childnode>
+        <childnode refid="22016" relation="include">
+        </childnode>
+        <childnode refid="21935" relation="include">
+        </childnode>
+        <childnode refid="21928" relation="include">
+        </childnode>
+        <childnode refid="21931" relation="include">
+        </childnode>
+        <childnode refid="21898" relation="include">
+        </childnode>
+        <childnode refid="22018" relation="include">
+        </childnode>
+      </node>
+      <node id="22036">
+        <label>cube/cube_search_object.cpp</label>
+        <link refid="cube__search__object_8cpp"/>
+      </node>
+      <node id="22026">
+        <label>ccutil/unicharset.cpp</label>
+        <link refid="unicharset_8cpp"/>
+      </node>
+      <node id="21954">
+        <label>ccstruct/ccstruct.cpp</label>
+        <link refid="ccstruct_8cpp"/>
+      </node>
+      <node id="21852">
+        <label>ccmain/werdit.h</label>
+        <link refid="werdit_8h"/>
+        <childnode refid="21819" relation="include">
+        </childnode>
+        <childnode refid="21853" relation="include">
+        </childnode>
+      </node>
+      <node id="21845">
+        <label>ccmain/tesseract_cube_combiner.cpp</label>
+        <link refid="tesseract__cube__combiner_8cpp"/>
+      </node>
+      <node id="22025">
+        <label>ccstruct/normalis.cpp</label>
+        <link refid="normalis_8cpp"/>
+      </node>
+      <node id="21861">
+        <label>wordrec/bestfirst.cpp</label>
+        <link refid="bestfirst_8cpp"/>
+      </node>
+      <node id="22039">
+        <label>cube/cube_utils.h</label>
+        <link refid="cube__utils_8h"/>
+        <childnode refid="21845" relation="include">
+        </childnode>
+        <childnode refid="22040" relation="include">
+        </childnode>
+        <childnode refid="22031" relation="include">
+        </childnode>
+        <childnode refid="22054" relation="include">
+        </childnode>
+        <childnode refid="22055" relation="include">
+        </childnode>
+        <childnode refid="22056" relation="include">
+        </childnode>
+        <childnode refid="21918" relation="include">
+        </childnode>
+        <childnode refid="21916" relation="include">
+        </childnode>
+        <childnode refid="21922" relation="include">
+        </childnode>
+        <childnode refid="22036" relation="include">
+        </childnode>
+        <childnode refid="22057" relation="include">
+        </childnode>
+        <childnode refid="22058" relation="include">
+        </childnode>
+        <childnode refid="22059" relation="include">
+        </childnode>
+        <childnode refid="22060" relation="include">
+        </childnode>
+        <childnode refid="22061" relation="include">
+        </childnode>
+        <childnode refid="21923" relation="include">
+        </childnode>
+        <childnode refid="21847" relation="include">
+        </childnode>
+        <childnode refid="21914" relation="include">
+        </childnode>
+        <childnode refid="22062" relation="include">
+        </childnode>
+        <childnode refid="22052" relation="include">
+        </childnode>
+      </node>
+      <node id="22030">
+        <label>cube/search_column.h</label>
+        <link refid="search__column_8h"/>
+        <childnode refid="22031" relation="include">
+        </childnode>
+        <childnode refid="22032" relation="include">
+        </childnode>
+      </node>
+      <node id="21931">
+        <label>dict/permdawg.cpp</label>
+        <link refid="permdawg_8cpp"/>
+      </node>
+      <node id="21918">
+        <label>cube/conv_net_classifier.cpp</label>
+        <link refid="conv__net__classifier_8cpp"/>
+      </node>
+      <node id="21993">
+        <label>wordrec/findseam.h</label>
+        <link refid="findseam_8h"/>
+        <childnode refid="21863" relation="include">
+        </childnode>
+        <childnode refid="21865" relation="include">
+        </childnode>
+        <childnode refid="21866" relation="include">
+        </childnode>
+      </node>
+      <node id="21985">
+        <label>classify/clusttool.cpp</label>
+        <link refid="clusttool_8cpp"/>
+      </node>
+      <node id="21855">
+        <label>ccmain/output.h</label>
+        <link refid="output_8h"/>
+        <childnode refid="21804" relation="include">
+        </childnode>
+        <childnode refid="21819" relation="include">
+        </childnode>
+        <childnode refid="21835" relation="include">
+        </childnode>
+      </node>
+      <node id="22000">
+        <label>wordrec/plotedges.cpp</label>
+        <link refid="plotedges_8cpp"/>
+      </node>
+      <node id="21815">
+        <label>ccstruct/boxread.cpp</label>
+        <link refid="boxread_8cpp"/>
+      </node>
+      <node id="21945">
+        <label>ccutil/ambigs.cpp</label>
+        <link refid="ambigs_8cpp"/>
+      </node>
+      <node id="22033">
+        <label>cube/search_node.cpp</label>
+        <link refid="search__node_8cpp"/>
+      </node>
+      <node id="21901">
+        <label>classify/adaptive.cpp</label>
+        <link refid="adaptive_8cpp"/>
+      </node>
+      <node id="21995">
+        <label>wordrec/outlines.h</label>
+        <link refid="outlines_8h"/>
+        <childnode refid="21864" relation="include">
+        </childnode>
+        <childnode refid="21866" relation="include">
+        </childnode>
+        <childnode refid="21869" relation="include">
+        </childnode>
+      </node>
+      <node id="22076">
+        <label>classify/featdefs.cpp</label>
+        <link refid="featdefs_8cpp"/>
+      </node>
+      <node id="22031">
+        <label>cube/beam_search.h</label>
+        <link refid="beam__search_8h"/>
+        <childnode refid="21846" relation="include">
+        </childnode>
+        <childnode refid="21919" relation="include">
+        </childnode>
+      </node>
+      <node id="21867">
+        <label>wordrec/gradechop.cpp</label>
+        <link refid="gradechop_8cpp"/>
+      </node>
+      <node id="21897">
+        <label>wordrec/bestfirst.h</label>
+        <link refid="bestfirst_8h"/>
+        <childnode refid="21835" relation="include">
+        </childnode>
+        <childnode refid="21861" relation="include">
+        </childnode>
+        <childnode refid="21868" relation="include">
+        </childnode>
+        <childnode refid="21872" relation="include">
+        </childnode>
+      </node>
+      <node id="21888">
+        <label>classify/intfx.cpp</label>
+        <link refid="intfx_8cpp"/>
+      </node>
+      <node id="21972">
+        <label>classify/float2int.h</label>
+        <link refid="float2int_8h"/>
+        <childnode refid="21832" relation="include">
+        </childnode>
+        <childnode refid="21859" relation="include">
+        </childnode>
+        <childnode refid="21904" relation="include">
+        </childnode>
+        <childnode refid="21905" relation="include">
+        </childnode>
+      </node>
+      <node id="21887">
+        <label>classify/trainingsampleset.cpp</label>
+        <link refid="trainingsampleset_8cpp"/>
+      </node>
+      <node id="21808">
+        <label>training/ambiguous_words.cpp</label>
+        <link refid="ambiguous__words_8cpp"/>
+      </node>
+      <node id="21847">
+        <label>cube/tess_lang_model.cpp</label>
+        <link refid="tess__lang__model_8cpp"/>
+      </node>
+      <node id="22001">
+        <label>classify/mfoutline.h</label>
+        <link refid="mfoutline_8h"/>
+        <childnode refid="21821" relation="include">
+        </childnode>
+        <childnode refid="21964" relation="include">
+        </childnode>
+        <childnode refid="21859" relation="include">
+        </childnode>
+        <childnode refid="22002" relation="include">
+        </childnode>
+        <childnode refid="21902" relation="include">
+        </childnode>
+        <childnode refid="21904" relation="include">
+        </childnode>
+        <childnode refid="21906" relation="include">
+        </childnode>
+        <childnode refid="21907" relation="include">
+        </childnode>
+        <childnode refid="21969" relation="include">
+        </childnode>
+        <childnode refid="21970" relation="include">
+        </childnode>
+        <childnode refid="21909" relation="include">
+        </childnode>
+        <childnode refid="21889" relation="include">
+        </childnode>
+      </node>
+      <node id="22015">
+        <label>wordrec/olutil.cpp</label>
+        <link refid="olutil_8cpp"/>
+      </node>
+      <node id="21944">
+        <label>ccutil/ambigs.h</label>
+        <link refid="ambigs_8h"/>
+        <childnode refid="21945" relation="include">
+        </childnode>
+        <childnode refid="21946" relation="include">
+        </childnode>
+        <childnode refid="21859" relation="include">
+        </childnode>
+        <childnode refid="21926" relation="include">
+        </childnode>
+        <childnode refid="21933" relation="include">
+        </childnode>
+      </node>
+      <node id="21859">
+        <label>classify/adaptmatch.cpp</label>
+        <link refid="adaptmatch_8cpp"/>
+      </node>
+      <node id="21830">
+        <label>ccmain/cubeclassifier.cpp</label>
+        <link refid="cubeclassifier_8cpp"/>
+      </node>
+      <node id="22084">
+        <label>wordrec/plotseg.cpp</label>
+        <link refid="plotseg_8cpp"/>
+      </node>
+      <node id="22038">
+        <label>cube/cube_line_segmenter.cpp</label>
+        <link refid="cube__line__segmenter_8cpp"/>
+      </node>
+      <node id="21838">
+        <label>ccmain/paramsd.h</label>
+        <link refid="paramsd_8h"/>
+        <childnode refid="21804" relation="include">
+        </childnode>
+        <childnode refid="21839" relation="include">
+        </childnode>
+        <childnode refid="21825" relation="include">
+        </childnode>
+      </node>
+      <node id="21933">
+        <label>dict/stopper.cpp</label>
+        <link refid="stopper_8cpp"/>
+      </node>
+      <node id="21889">
+        <label>classify/picofeat.cpp</label>
+        <link refid="picofeat_8cpp"/>
+      </node>
+      <node id="21989">
+        <label>ccstruct/split.h</label>
+        <link refid="split_8h"/>
+        <childnode refid="21990" relation="include">
+        </childnode>
+        <childnode refid="21998" relation="include">
+        </childnode>
+        <childnode refid="21894" relation="include">
+        </childnode>
+        <childnode refid="21999" relation="include">
+        </childnode>
+        <childnode refid="22000" relation="include">
+        </childnode>
+      </node>
+      <node id="22074">
+        <label>classify/ocrfeatures.cpp</label>
+        <link refid="ocrfeatures_8cpp"/>
+      </node>
+      <node id="21880">
+        <label>classify/trainingsampleset.h</label>
+        <link refid="trainingsampleset_8h"/>
+        <childnode refid="21879" relation="include">
+        </childnode>
+        <childnode refid="21881" relation="include">
+        </childnode>
+        <childnode refid="21886" relation="include">
+        </childnode>
+        <childnode refid="21887" relation="include">
+        </childnode>
+      </node>
+      <node id="22021">
+        <label>ccmain/ltrresultiterator.h</label>
+        <link refid="ltrresultiterator_8h"/>
+        <childnode refid="21833" relation="include">
+        </childnode>
+        <childnode refid="22022" relation="include">
+        </childnode>
+      </node>
+      <node id="21805">
+        <label>api/capi.h</label>
+        <link refid="capi_8h"/>
+        <childnode refid="21806" relation="include">
+        </childnode>
+      </node>
+      <node id="21812">
+        <label>ccmain/equationdetect.cpp</label>
+        <link refid="equationdetect_8cpp"/>
+      </node>
+      <node id="21854">
+        <label>ccmain/fixspace.h</label>
+        <link refid="fixspace_8h"/>
+        <childnode refid="21819" relation="include">
+        </childnode>
+        <childnode refid="21820" relation="include">
+        </childnode>
+      </node>
+      <node id="22075">
+        <label>cutil/emalloc.h</label>
+        <link refid="emalloc_8h"/>
+        <childnode refid="21953" relation="include">
+        </childnode>
+        <childnode refid="21901" relation="include">
+        </childnode>
+        <childnode refid="21859" relation="include">
+        </childnode>
+        <childnode refid="21892" relation="include">
+        </childnode>
+        <childnode refid="21985" relation="include">
+        </childnode>
+        <childnode refid="22076" relation="include">
+        </childnode>
+        <childnode refid="22077" relation="include">
+        </childnode>
+        <childnode refid="21906" relation="include">
+        </childnode>
+        <childnode refid="21986" relation="include">
+        </childnode>
+        <childnode refid="22008" relation="include">
+        </childnode>
+        <childnode refid="21907" relation="include">
+        </childnode>
+        <childnode refid="21908" relation="include">
+        </childnode>
+        <childnode refid="22074" relation="include">
+        </childnode>
+        <childnode refid="21910" relation="include">
+        </childnode>
+        <childnode refid="22078" relation="include">
+        </childnode>
+        <childnode refid="22079" relation="include">
+        </childnode>
+        <childnode refid="22017" relation="include">
+        </childnode>
+        <childnode refid="21928" relation="include">
+        </childnode>
+        <childnode refid="21979" relation="include">
+        </childnode>
+        <childnode refid="21883" relation="include">
+        </childnode>
+        <childnode refid="21884" relation="include">
+        </childnode>
+        <childnode refid="21911" relation="include">
+        </childnode>
+      </node>
+      <node id="22063">
+        <label>cube/lang_mod_edge.h</label>
+        <link refid="lang__mod__edge_8h"/>
+        <childnode refid="22029" relation="include">
+        </childnode>
+        <childnode refid="22030" relation="include">
+        </childnode>
+        <childnode refid="22045" relation="include">
+        </childnode>
+        <childnode refid="21916" relation="include">
+        </childnode>
+      </node>
+      <node id="21988">
+        <label>cutil/oldlist.h</label>
+        <link refid="oldlist_8h"/>
+        <childnode refid="21895" relation="include">
+        </childnode>
+        <childnode refid="21834" relation="include">
+        </childnode>
+        <childnode refid="21989" relation="include">
+        </childnode>
+        <childnode refid="21965" relation="include">
+        </childnode>
+        <childnode refid="22001" relation="include">
+        </childnode>
+        <childnode refid="22004" relation="include">
+        </childnode>
+        <childnode refid="21983" relation="include">
+        </childnode>
+        <childnode refid="22006" relation="include">
+        </childnode>
+        <childnode refid="22009" relation="include">
+        </childnode>
+        <childnode refid="22011" relation="include">
+        </childnode>
+        <childnode refid="22012" relation="include">
+        </childnode>
+        <childnode refid="21926" relation="include">
+        </childnode>
+        <childnode refid="21978" relation="include">
+        </childnode>
+        <childnode refid="21979" relation="include">
+        </childnode>
+        <childnode refid="21883" relation="include">
+        </childnode>
+        <childnode refid="21980" relation="include">
+        </childnode>
+        <childnode refid="21884" relation="include">
+        </childnode>
+        <childnode refid="21999" relation="include">
+        </childnode>
+      </node>
+      <node id="21870">
+        <label>wordrec/pieces.cpp</label>
+        <link refid="pieces_8cpp"/>
+      </node>
+      <node id="21905">
+        <label>classify/intmatcher.cpp</label>
+        <link refid="intmatcher_8cpp"/>
+      </node>
+      <node id="21937">
+        <label>dict/stopper.h</label>
+        <link refid="stopper_8h"/>
+        <childnode refid="21818" relation="include">
+        </childnode>
+        <childnode refid="21895" relation="include">
+        </childnode>
+        <childnode refid="21840" relation="include">
+        </childnode>
+        <childnode refid="21826" relation="include">
+        </childnode>
+        <childnode refid="21926" relation="include">
+        </childnode>
+        <childnode refid="21931" relation="include">
+        </childnode>
+        <childnode refid="21932" relation="include">
+        </childnode>
+        <childnode refid="21933" relation="include">
+        </childnode>
+        <childnode refid="21897" relation="include">
+        </childnode>
+        <childnode refid="21861" relation="include">
+        </childnode>
+        <childnode refid="21898" relation="include">
+        </childnode>
+        <childnode refid="21865" relation="include">
+        </childnode>
+      </node>
+      <node id="22041">
+        <label>cube/altlist.cpp</label>
+        <link refid="altlist_8cpp"/>
+      </node>
+      <node id="21956">
+        <label>textord/textord.h</label>
+        <link refid="textord_8h"/>
+        <childnode refid="21823" relation="include">
+        </childnode>
+        <childnode refid="21834" relation="include">
+        </childnode>
+        <childnode refid="21813" relation="include">
+        </childnode>
+        <childnode refid="21955" relation="include">
+        </childnode>
+        <childnode refid="21957" relation="include">
+        </childnode>
+        <childnode refid="21860" relation="include">
+        </childnode>
+        <childnode refid="21958" relation="include">
+        </childnode>
+        <childnode refid="21960" relation="include">
+        </childnode>
+        <childnode refid="21962" relation="include">
+        </childnode>
+        <childnode refid="21961" relation="include">
+        </childnode>
+      </node>
+      <node id="21963">
+        <label>classify/protos.h</label>
+        <link refid="protos_8h"/>
+        <childnode refid="21964" relation="include">
+        </childnode>
+        <childnode refid="21910" relation="include">
+        </childnode>
+        <childnode refid="21981" relation="include">
+        </childnode>
+        <childnode refid="21980" relation="include">
+        </childnode>
+        <childnode refid="21884" relation="include">
+        </childnode>
+      </node>
+      <node id="22051">
+        <label>cube/word_unigrams.h</label>
+        <link refid="word__unigrams_8h"/>
+        <childnode refid="22028" relation="include">
+        </childnode>
+        <childnode refid="22052" relation="include">
+        </childnode>
+      </node>
+      <node id="22069">
+        <label>training/unicharset_extractor.cpp</label>
+        <link refid="unicharset__extractor_8cpp"/>
+      </node>
+      <node id="21850">
+        <label>ccstruct/pageres.h</label>
+        <link refid="pageres_8h"/>
+        <childnode refid="21804" relation="include">
+        </childnode>
+        <childnode refid="21822" relation="include">
+        </childnode>
+        <childnode refid="21851" relation="include">
+        </childnode>
+        <childnode refid="21810" relation="include">
+        </childnode>
+        <childnode refid="21852" relation="include">
+        </childnode>
+        <childnode refid="21854" relation="include">
+        </childnode>
+        <childnode refid="21855" relation="include">
+        </childnode>
+        <childnode refid="21856" relation="include">
+        </childnode>
+        <childnode refid="21833" relation="include">
+        </childnode>
+        <childnode refid="21836" relation="include">
+        </childnode>
+        <childnode refid="21837" relation="include">
+        </childnode>
+        <childnode refid="21849" relation="include">
+        </childnode>
+        <childnode refid="21825" relation="include">
+        </childnode>
+        <childnode refid="21842" relation="include">
+        </childnode>
+        <childnode refid="21826" relation="include">
+        </childnode>
+        <childnode refid="21857" relation="include">
+        </childnode>
+        <childnode refid="21858" relation="include">
+        </childnode>
+        <childnode refid="21859" relation="include">
+        </childnode>
+        <childnode refid="21860" relation="include">
+        </childnode>
+        <childnode refid="21861" relation="include">
+        </childnode>
+        <childnode refid="21862" relation="include">
+        </childnode>
+        <childnode refid="21865" relation="include">
+        </childnode>
+        <childnode refid="21872" relation="include">
+        </childnode>
+      </node>
+      <node id="21878">
+        <label>classify/trainingsample.h</label>
+        <link refid="trainingsample_8h"/>
+        <childnode refid="21830" relation="include">
+        </childnode>
+        <childnode refid="21859" relation="include">
+        </childnode>
+        <childnode refid="21879" relation="include">
+        </childnode>
+        <childnode refid="21880" relation="include">
+        </childnode>
+        <childnode refid="21888" relation="include">
+        </childnode>
+        <childnode refid="21881" relation="include">
+        </childnode>
+        <childnode refid="21889" relation="include">
+        </childnode>
+        <childnode refid="21886" relation="include">
+        </childnode>
+        <childnode refid="21890" relation="include">
+        </childnode>
+        <childnode refid="21891" relation="include">
+        </childnode>
+        <childnode refid="21887" relation="include">
+        </childnode>
+      </node>
+      <node id="21862">
+        <label>wordrec/language_model.h</label>
+        <link refid="language__model_8h"/>
+        <childnode refid="21863" relation="include">
+        </childnode>
+        <childnode refid="21875" relation="include">
+        </childnode>
+        <childnode refid="21871" relation="include">
+        </childnode>
+        <childnode refid="21874" relation="include">
+        </childnode>
+      </node>
+      <node id="21864">
+        <label>wordrec/chop.cpp</label>
+        <link refid="chop_8cpp"/>
+      </node>
+      <node id="22020">
+        <label>ccutil/unicharset.h</label>
+        <link refid="unicharset_8h"/>
+        <childnode refid="21810" relation="include">
+        </childnode>
+        <childnode refid="21830" relation="include">
+        </childnode>
+        <childnode refid="22021" relation="include">
+        </childnode>
+        <childnode refid="22024" relation="include">
+        </childnode>
+        <childnode refid="21849" relation="include">
+        </childnode>
+        <childnode refid="21842" relation="include">
+        </childnode>
+        <childnode refid="21816" relation="include">
+        </childnode>
+        <childnode refid="21876" relation="include">
+        </childnode>
+        <childnode refid="21877" relation="include">
+        </childnode>
+        <childnode refid="22025" relation="include">
+        </childnode>
+        <childnode refid="21899" relation="include">
+        </childnode>
+        <childnode refid="21944" relation="include">
+        </childnode>
+        <childnode refid="21946" relation="include">
+        </childnode>
+        <childnode refid="22026" relation="include">
+        </childnode>
+        <childnode refid="21964" relation="include">
+        </childnode>
+        <childnode refid="21878" relation="include">
+        </childnode>
+        <childnode refid="21859" relation="include">
+        </childnode>
+        <childnode refid="21881" relation="include">
+        </childnode>
+        <childnode refid="21908" relation="include">
+        </childnode>
+        <childnode refid="21974" relation="include">
+        </childnode>
+        <childnode refid="22027" relation="include">
+        </childnode>
+        <childnode refid="21847" relation="include">
+        </childnode>
+        <childnode refid="22068" relation="include">
+        </childnode>
+        <childnode refid="21926" relation="include">
+        </childnode>
+        <childnode refid="21938" relation="include">
+        </childnode>
+        <childnode refid="21927" relation="include">
+        </childnode>
+        <childnode refid="21932" relation="include">
+        </childnode>
+        <childnode refid="21936" relation="include">
+        </childnode>
+        <childnode refid="22069" relation="include">
+        </childnode>
+        <childnode refid="21911" relation="include">
+        </childnode>
+        <childnode refid="21861" relation="include">
+        </childnode>
+        <childnode refid="21865" relation="include">
+        </childnode>
+      </node>
+      <node id="22044">
+        <label>cube/char_altlist.h</label>
+        <link refid="char__altlist_8h"/>
+        <childnode refid="21830" relation="include">
+        </childnode>
+        <childnode refid="22034" relation="include">
+        </childnode>
+        <childnode refid="22045" relation="include">
+        </childnode>
+        <childnode refid="22053" relation="include">
+        </childnode>
+        <childnode refid="22046" relation="include">
+        </childnode>
+        <childnode refid="22049" relation="include">
+        </childnode>
+        <childnode refid="22050" relation="include">
+        </childnode>
+        <childnode refid="21917" relation="include">
+        </childnode>
+      </node>
+      <node id="21885">
+        <label>training/shapeclustering.cpp</label>
+        <link refid="shapeclustering_8cpp"/>
+      </node>
+      <node id="21814">
+        <label>ccmain/tesseractclass.cpp</label>
+        <link refid="tesseractclass_8cpp"/>
+      </node>
+      <node id="21990">
+        <label>ccstruct/seam.h</label>
+        <link refid="seam_8h"/>
+        <childnode refid="21850" relation="include">
+        </childnode>
+        <childnode refid="21991" relation="include">
+        </childnode>
+        <childnode refid="21894" relation="include">
+        </childnode>
+        <childnode refid="21897" relation="include">
+        </childnode>
+        <childnode refid="21992" relation="include">
+        </childnode>
+        <childnode refid="21863" relation="include">
+        </childnode>
+        <childnode refid="21993" relation="include">
+        </childnode>
+        <childnode refid="21994" relation="include">
+        </childnode>
+        <childnode refid="21898" relation="include">
+        </childnode>
+        <childnode refid="21865" relation="include">
+        </childnode>
+        <childnode refid="21866" relation="include">
+        </childnode>
+        <childnode refid="21868" relation="include">
+        </childnode>
+        <childnode refid="21870" relation="include">
+        </childnode>
+      </node>
+      <node id="21809">
+        <label>training/classifier_tester.cpp</label>
+        <link refid="classifier__tester_8cpp"/>
+      </node>
+      <node id="21822">
+        <label>ccmain/control.h</label>
+        <link refid="control_8h"/>
+        <childnode refid="21804" relation="include">
+        </childnode>
+        <childnode refid="21823" relation="include">
+        </childnode>
+        <childnode refid="21848" relation="include">
+        </childnode>
+        <childnode refid="21818" relation="include">
+        </childnode>
+        <childnode refid="21819" relation="include">
+        </childnode>
+        <childnode refid="21820" relation="include">
+        </childnode>
+        <childnode refid="21835" relation="include">
+        </childnode>
+        <childnode refid="21825" relation="include">
+        </childnode>
+        <childnode refid="21840" relation="include">
+        </childnode>
+        <childnode refid="21841" relation="include">
+        </childnode>
+        <childnode refid="21826" relation="include">
+        </childnode>
+      </node>
+      <node id="21821">
+        <label>ccmain/tessbox.cpp</label>
+        <link refid="tessbox_8cpp"/>
+      </node>
+      <node id="21842">
+        <label>ccmain/resultiterator.cpp</label>
+        <link refid="resultiterator_8cpp"/>
+      </node>
+      <node id="21929">
+        <label>dict/dict.cpp</label>
+        <link refid="dict_8cpp"/>
+      </node>
+      <node id="22008">
+        <label>classify/mfdefs.cpp</label>
+        <link refid="mfdefs_8cpp"/>
+      </node>
+      <node id="22016">
+        <label>cutil/oldheap.h</label>
+        <link refid="oldheap_8h"/>
+        <childnode refid="21892" relation="include">
+        </childnode>
+        <childnode refid="22017" relation="include">
+        </childnode>
+        <childnode refid="21897" relation="include">
+        </childnode>
+        <childnode refid="21862" relation="include">
+        </childnode>
+        <childnode refid="21863" relation="include">
+        </childnode>
+        <childnode refid="21993" relation="include">
+        </childnode>
+        <childnode refid="21994" relation="include">
+        </childnode>
+        <childnode refid="21871" relation="include">
+        </childnode>
+      </node>
+      <node id="21978">
+        <label>training/commontraining.h</label>
+        <link refid="commontraining_8h"/>
+        <childnode refid="21809" relation="include">
+        </childnode>
+        <childnode refid="21979" relation="include">
+        </childnode>
+        <childnode refid="21883" relation="include">
+        </childnode>
+        <childnode refid="21884" relation="include">
+        </childnode>
+        <childnode refid="21885" relation="include">
+        </childnode>
+      </node>
+      <node id="21915">
+        <label>dict/dawg.h</label>
+        <link refid="dawg_8h"/>
+        <childnode refid="21916" relation="include">
+        </childnode>
+        <childnode refid="21926" relation="include">
+        </childnode>
+        <childnode refid="21935" relation="include">
+        </childnode>
+        <childnode refid="21928" relation="include">
+        </childnode>
+        <childnode refid="21931" relation="include">
+        </childnode>
+        <childnode refid="21934" relation="include">
+        </childnode>
+        <childnode refid="21936" relation="include">
+        </childnode>
+        <childnode refid="21911" relation="include">
+        </childnode>
+        <childnode refid="21862" relation="include">
+        </childnode>
+        <childnode refid="21875" relation="include">
+        </childnode>
+      </node>
+      <node id="21942">
+        <label>ccstruct/fontinfo.h</label>
+        <link refid="fontinfo_8h"/>
+        <childnode refid="21834" relation="include">
+        </childnode>
+        <childnode refid="21943" relation="include">
+        </childnode>
+        <childnode refid="21900" relation="include">
+        </childnode>
+        <childnode refid="21902" relation="include">
+        </childnode>
+        <childnode refid="21879" relation="include">
+        </childnode>
+        <childnode refid="21906" relation="include">
+        </childnode>
+        <childnode refid="21881" relation="include">
+        </childnode>
+        <childnode refid="21887" relation="include">
+        </childnode>
+        <childnode refid="21883" relation="include">
+        </childnode>
+        <childnode refid="21884" relation="include">
+        </childnode>
+        <childnode refid="21862" relation="include">
+        </childnode>
+      </node>
+      <node id="21991">
+        <label>ccstruct/seam.cpp</label>
+        <link refid="seam_8cpp"/>
+      </node>
+      <node id="21965">
+        <label>classify/adaptive.h</label>
+        <link refid="adaptive_8h"/>
+        <childnode refid="21901" relation="include">
+        </childnode>
+        <childnode refid="21900" relation="include">
+        </childnode>
+      </node>
+      <node id="21999">
+        <label>wordrec/plotedges.h</label>
+        <link refid="plotedges_8h"/>
+        <childnode refid="21864" relation="include">
+        </childnode>
+        <childnode refid="21866" relation="include">
+        </childnode>
+        <childnode refid="22000" relation="include">
+        </childnode>
+      </node>
+      <node id="21971">
+        <label>classify/intmatcher.h</label>
+        <link refid="intmatcher_8h"/>
+        <childnode refid="21826" relation="include">
+        </childnode>
+        <childnode refid="21900" relation="include">
+        </childnode>
+        <childnode refid="21972" relation="include">
+        </childnode>
+        <childnode refid="21973" relation="include">
+        </childnode>
+        <childnode refid="21878" relation="include">
+        </childnode>
+        <childnode refid="21888" relation="include">
+        </childnode>
+        <childnode refid="21905" relation="include">
+        </childnode>
+        <childnode refid="21881" relation="include">
+        </childnode>
+      </node>
+      <node id="21872">
+        <label>wordrec/tface.cpp</label>
+        <link refid="tface_8cpp"/>
+      </node>
+      <node id="21930">
+        <label>dict/hyphen.cpp</label>
+        <link refid="hyphen_8cpp"/>
+      </node>
+      <node id="21817">
+        <label>ccmain/tessbox.h</label>
+        <link refid="tessbox_8h"/>
+        <childnode refid="21804" relation="include">
+        </childnode>
+        <childnode refid="21818" relation="include">
+        </childnode>
+        <childnode refid="21819" relation="include">
+        </childnode>
+        <childnode refid="21820" relation="include">
+        </childnode>
+        <childnode refid="21821" relation="include">
+        </childnode>
+      </node>
+      <node id="22035">
+        <label>cube/cube_search_object.h</label>
+        <link refid="cube__search__object_8h"/>
+        <childnode refid="21919" relation="include">
+        </childnode>
+        <childnode refid="22036" relation="include">
+        </childnode>
+      </node>
+      <node id="22067">
+        <label>cube/word_size_model.h</label>
+        <link refid="word__size__model_8h"/>
+        <childnode refid="22028" relation="include">
+        </childnode>
+        <childnode refid="22062" relation="include">
+        </childnode>
+      </node>
+      <node id="21959">
+        <label>textord/topitch.cpp</label>
+        <link refid="topitch_8cpp"/>
+      </node>
+      <node id="21939">
+        <label>wordrec/wordclass.h</label>
+        <link refid="wordclass_8h"/>
+        <childnode refid="21861" relation="include">
+        </childnode>
+        <childnode refid="21865" relation="include">
+        </childnode>
+        <childnode refid="21870" relation="include">
+        </childnode>
+        <childnode refid="21872" relation="include">
+        </childnode>
+        <childnode refid="21873" relation="include">
+        </childnode>
+      </node>
+      <node id="21843">
+        <label>ccmain/tfacepp.h</label>
+        <link refid="tfacepp_8h"/>
+        <childnode refid="21821" relation="include">
+        </childnode>
+        <childnode refid="21844" relation="include">
+        </childnode>
+      </node>
+      <node id="21851">
+        <label>ccmain/reject.h</label>
+        <link refid="reject_8h"/>
+        <childnode refid="21818" relation="include">
+        </childnode>
+        <childnode refid="21819" relation="include">
+        </childnode>
+        <childnode refid="21831" relation="include">
+        </childnode>
+        <childnode refid="21820" relation="include">
+        </childnode>
+        <childnode refid="21835" relation="include">
+        </childnode>
+        <childnode refid="21840" relation="include">
+        </childnode>
+        <childnode refid="21841" relation="include">
+        </childnode>
+        <childnode refid="21826" relation="include">
+        </childnode>
+        <childnode refid="21844" relation="include">
+        </childnode>
+      </node>
+      <node id="22003">
+        <label>classify/fxdefs.cpp</label>
+        <link refid="fxdefs_8cpp"/>
+      </node>
+      <node id="21892">
+        <label>classify/cluster.cpp</label>
+        <link refid="cluster_8cpp"/>
+      </node>
+      <node id="21917">
+        <label>cube/tess_lang_model.h</label>
+        <link refid="tess__lang__model_8h"/>
+        <childnode refid="21829" relation="include">
+        </childnode>
+        <childnode refid="21918" relation="include">
+        </childnode>
+        <childnode refid="21919" relation="include">
+        </childnode>
+        <childnode refid="21923" relation="include">
+        </childnode>
+        <childnode refid="21847" relation="include">
+        </childnode>
+      </node>
+      <node id="21948">
+        <label>ccutil/mainblk.cpp</label>
+        <link refid="mainblk_8cpp"/>
+      </node>
+      <node id="21825">
+        <label>ccmain/pgedit.cpp</label>
+        <link refid="pgedit_8cpp"/>
+      </node>
+      <node id="22006">
+        <label>classify/mfdefs.h</label>
+        <link refid="mfdefs_8h"/>
+        <childnode refid="22007" relation="include">
+        </childnode>
+        <childnode refid="22008" relation="include">
+        </childnode>
+        <childnode refid="21969" relation="include">
+        </childnode>
+      </node>
+      <node id="21876">
+        <label>ccstruct/matrix.h</label>
+        <link refid="matrix_8h"/>
+        <childnode refid="21877" relation="include">
+        </childnode>
+        <childnode refid="21878" relation="include">
+        </childnode>
+        <childnode refid="21892" relation="include">
+        </childnode>
+        <childnode refid="21893" relation="include">
+        </childnode>
+        <childnode refid="21880" relation="include">
+        </childnode>
+        <childnode refid="21894" relation="include">
+        </childnode>
+        <childnode refid="21862" relation="include">
+        </childnode>
+        <childnode refid="21863" relation="include">
+        </childnode>
+        <childnode refid="21898" relation="include">
+        </childnode>
+        <childnode refid="21875" relation="include">
+        </childnode>
+        <childnode refid="21870" relation="include">
+        </childnode>
+        <childnode refid="21871" relation="include">
+        </childnode>
+      </node>
+      <node id="21986">
+        <label>classify/kdtree.cpp</label>
+        <link refid="kdtree_8cpp"/>
+      </node>
+      <node id="21964">
+        <label>classify/intproto.h</label>
+        <link refid="intproto_8h"/>
+        <childnode refid="21965" relation="include">
+        </childnode>
+        <childnode refid="21966" relation="include">
+        </childnode>
+        <childnode refid="21971" relation="include">
+        </childnode>
+        <childnode refid="21859" relation="include">
+        </childnode>
+        <childnode refid="21902" relation="include">
+        </childnode>
+        <childnode refid="21975" relation="include">
+        </childnode>
+        <childnode refid="21976" relation="include">
+        </childnode>
+        <childnode refid="21905" relation="include">
+        </childnode>
+        <childnode refid="21906" relation="include">
+        </childnode>
+        <childnode refid="21978" relation="include">
+        </childnode>
+        <childnode refid="21980" relation="include">
+        </childnode>
+        <childnode refid="21884" relation="include">
+        </childnode>
+        <childnode refid="21862" relation="include">
+        </childnode>
+        <childnode refid="21875" relation="include">
+        </childnode>
+      </node>
+      <node id="21923">
+        <label>cube/hybrid_neural_net_classifier.cpp</label>
+        <link refid="hybrid__neural__net__classifier_8cpp"/>
+      </node>
+      <node id="22034">
+        <label>cube/search_object.h</label>
+        <link refid="search__object_8h"/>
+        <childnode refid="22031" relation="include">
+        </childnode>
+        <childnode refid="22035" relation="include">
+        </childnode>
+      </node>
+      <node id="21898">
+        <label>wordrec/chopper.h</label>
+        <link refid="chopper_8h"/>
+        <childnode refid="21810" relation="include">
+        </childnode>
+        <childnode refid="21865" relation="include">
+        </childnode>
+        <childnode refid="21872" relation="include">
+        </childnode>
+      </node>
+      <node id="22058">
+        <label>cube/cube_utils.cpp</label>
+        <link refid="cube__utils_8cpp"/>
+      </node>
+      <node id="22048">
+        <label>cube/classifier_factory.cpp</label>
+        <link refid="classifier__factory_8cpp"/>
+      </node>
+      <node id="21881">
+        <label>classify/mastertrainer.h</label>
+        <link refid="mastertrainer_8h"/>
+        <childnode refid="21882" relation="include">
+        </childnode>
+        <childnode refid="21809" relation="include">
+        </childnode>
+        <childnode refid="21883" relation="include">
+        </childnode>
+        <childnode refid="21884" relation="include">
+        </childnode>
+        <childnode refid="21885" relation="include">
+        </childnode>
+      </node>
+      <node id="21858">
+        <label>ccstruct/pageres.cpp</label>
+        <link refid="pageres_8cpp"/>
+      </node>
+      <node id="22040">
+        <label>cube/altlist.h</label>
+        <link refid="altlist_8h"/>
+        <childnode refid="22041" relation="include">
+        </childnode>
+        <childnode refid="22042" relation="include">
+        </childnode>
+        <childnode refid="22044" relation="include">
+        </childnode>
+      </node>
+      <node id="22002">
+        <label>classify/outfeat.h</label>
+        <link refid="outfeat_8h"/>
+        <childnode refid="21859" relation="include">
+        </childnode>
+        <childnode refid="22003" relation="include">
+        </childnode>
+        <childnode refid="21909" relation="include">
+        </childnode>
+      </node>
+      <node id="22004">
+        <label>classify/blobclass.h</label>
+        <link refid="blobclass_8h"/>
+        <childnode refid="21895" relation="include">
+        </childnode>
+        <childnode refid="21859" relation="include">
+        </childnode>
+        <childnode refid="22005" relation="include">
+        </childnode>
+      </node>
+      <node id="21938">
+        <label>dict/permute.h</label>
+        <link refid="permute_8h"/>
+        <childnode refid="21804" relation="include">
+        </childnode>
+        <childnode refid="21895" relation="include">
+        </childnode>
+        <childnode refid="21840" relation="include">
+        </childnode>
+        <childnode refid="21826" relation="include">
+        </childnode>
+        <childnode refid="21859" relation="include">
+        </childnode>
+        <childnode refid="21926" relation="include">
+        </childnode>
+        <childnode refid="21931" relation="include">
+        </childnode>
+        <childnode refid="21932" relation="include">
+        </childnode>
+        <childnode refid="21933" relation="include">
+        </childnode>
+        <childnode refid="21861" relation="include">
+        </childnode>
+        <childnode refid="21865" relation="include">
+        </childnode>
+        <childnode refid="21872" relation="include">
+        </childnode>
+        <childnode refid="21873" relation="include">
+        </childnode>
+      </node>
+      <node id="21962">
+        <label>textord/tospace.cpp</label>
+        <link refid="tospace_8cpp"/>
+      </node>
+      <node id="21840">
+        <label>ccmain/recogtraining.cpp</label>
+        <link refid="recogtraining_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_u_n_i_c_h_a_r" prot="public">UNICHAR</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="unichar_8h_1a902bc40c9d89802bc063afe30ce9e708" prot="public" static="no">
+        <name>UNICHAR_LEN</name>
+        <initializer>30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unichar.h" line="28" column="9" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unichar.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="unichar_8h_1abc3119a959ecd5cffc1d9b9d57479dba" prot="public" static="no">
+        <name>StrongScriptDirection</name>
+        <enumvalue id="unichar_8h_1abc3119a959ecd5cffc1d9b9d57479dbaaacc5ec7fd402a8806e78fba831045aae" prot="public">
+          <name>DIR_NEUTRAL</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="unichar_8h_1abc3119a959ecd5cffc1d9b9d57479dbaa5978cd698552a6106db1bf6528617317" prot="public">
+          <name>DIR_LEFT_TO_RIGHT</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="unichar_8h_1abc3119a959ecd5cffc1d9b9d57479dbaa3c6da23f98ab8ac48598c21583d9297e" prot="public">
+          <name>DIR_RIGHT_TO_LEFT</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="unichar_8h_1abc3119a959ecd5cffc1d9b9d57479dbaa252615b6d7ebef9293183f6e94488cc1" prot="public">
+          <name>DIR_MIX</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unichar.h" line="38" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unichar.h" bodystart="38" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" prot="public" static="no">
+        <type>int</type>
+        <definition>typedef int UNICHAR_ID</definition>
+        <argsstring></argsstring>
+        <name>UNICHAR_ID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unichar.h" line="31" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unichar.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="unichar_8h_1a85e1acc1dadf303c5651a31623ddd60c" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int INVALID_UNICHAR_ID</definition>
+        <argsstring></argsstring>
+        <name>INVALID_UNICHAR_ID</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unichar.h" line="34" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unichar.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unichar_8h_1a3002518c3c8a727fb350314a51dd6d0b" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char INVALID_UNICHAR[]</definition>
+        <argsstring>[]</argsstring>
+        <name>INVALID_UNICHAR</name>
+        <initializer>= &quot;__INVALID_UNICHAR__&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unichar.h" line="36" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unichar.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unichar.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Description:<sp/>Unicode<sp/>character/ligature<sp/>class.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/><sp/><sp/><sp/><sp/><sp/>Ray<sp/>Smith</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created:<sp/><sp/><sp/><sp/><sp/>Wed<sp/>Jun<sp/>28<sp/>17:05:01<sp/>PDT<sp/>2006</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(C)<sp/>Copyright<sp/>2006,<sp/>Google<sp/>Inc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TESSERACT_CCUTIL_UNICHAR_H__</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TESSERACT_CCUTIL_UNICHAR_H__</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Maximum<sp/>number<sp/>of<sp/>characters<sp/>that<sp/>can<sp/>be<sp/>stored<sp/>in<sp/>a<sp/>UNICHAR.<sp/>Must<sp/>be</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/>at<sp/>least<sp/>4.<sp/>Must<sp/>not<sp/>exceed<sp/>31<sp/>without<sp/>changing<sp/>the<sp/>coding<sp/>of<sp/>length.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="unichar_8h_1a902bc40c9d89802bc063afe30ce9e708" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UNICHAR_LEN<sp/>30</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>A<sp/>UNICHAR_ID<sp/>is<sp/>the<sp/>unique<sp/>id<sp/>of<sp/>a<sp/>unichar.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>A<sp/>variable<sp/>to<sp/>indicate<sp/>an<sp/>invalid<sp/>or<sp/>uninitialized<sp/>unichar<sp/>id.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>INVALID_UNICHAR_ID<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>A<sp/>special<sp/>unichar<sp/>that<sp/>corresponds<sp/>to<sp/>INVALID_UNICHAR_ID.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>INVALID_UNICHAR[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;__INVALID_UNICHAR__&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="unichar_8h_1abc3119a959ecd5cffc1d9b9d57479dba" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="unichar_8h_1abc3119a959ecd5cffc1d9b9d57479dba" kindref="member">StrongScriptDirection</ref><sp/>{</highlight></codeline>
+<codeline lineno="39" refid="unichar_8h_1abc3119a959ecd5cffc1d9b9d57479dbaaacc5ec7fd402a8806e78fba831045aae" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="unichar_8h_1abc3119a959ecd5cffc1d9b9d57479dbaaacc5ec7fd402a8806e78fba831045aae" kindref="member">DIR_NEUTRAL</ref><sp/>=<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Text<sp/>contains<sp/>only<sp/>neutral<sp/>characters.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="unichar_8h_1abc3119a959ecd5cffc1d9b9d57479dbaa5978cd698552a6106db1bf6528617317" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="unichar_8h_1abc3119a959ecd5cffc1d9b9d57479dbaa5978cd698552a6106db1bf6528617317" kindref="member">DIR_LEFT_TO_RIGHT</ref><sp/>=<sp/>1,<sp/><sp/></highlight><highlight class="comment">//<sp/>Text<sp/>contains<sp/>no<sp/>Right-to-Left<sp/>characters.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="unichar_8h_1abc3119a959ecd5cffc1d9b9d57479dbaa3c6da23f98ab8ac48598c21583d9297e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="unichar_8h_1abc3119a959ecd5cffc1d9b9d57479dbaa3c6da23f98ab8ac48598c21583d9297e" kindref="member">DIR_RIGHT_TO_LEFT</ref><sp/>=<sp/>2,<sp/><sp/></highlight><highlight class="comment">//<sp/>Text<sp/>contains<sp/>no<sp/>Left-to-Right<sp/>characters.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="unichar_8h_1abc3119a959ecd5cffc1d9b9d57479dbaa252615b6d7ebef9293183f6e94488cc1" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="unichar_8h_1abc3119a959ecd5cffc1d9b9d57479dbaa252615b6d7ebef9293183f6e94488cc1" kindref="member">DIR_MIX</ref><sp/>=<sp/>3,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Text<sp/>contains<sp/>a<sp/>mixture<sp/>of<sp/>left-to-right</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>right-to-left<sp/>characters.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>UNICHAR<sp/>class<sp/>holds<sp/>a<sp/>single<sp/>classification<sp/>result.<sp/>This<sp/>may<sp/>be</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/>a<sp/>single<sp/>Unicode<sp/>character<sp/>(stored<sp/>as<sp/>between<sp/>1<sp/>and<sp/>4<sp/>utf8<sp/>bytes)<sp/>or</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>multple<sp/>Unicode<sp/>characters<sp/>representing<sp/>the<sp/>NFKC<sp/>expansion<sp/>of<sp/>a<sp/>ligature</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/>such<sp/>as<sp/>fi,<sp/>ffl<sp/>etc.<sp/>These<sp/>are<sp/>also<sp/>stored<sp/>as<sp/>utf8.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_u_n_i_c_h_a_r" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_u_n_i_c_h_a_r" kindref="compound">UNICHAR</ref><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="52" refid="class_u_n_i_c_h_a_r_1a7fb65b084f53bcf45ba1cefd1eb88398" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_u_n_i_c_h_a_r_1a7fb65b084f53bcf45ba1cefd1eb88398" kindref="member">UNICHAR</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(chars,<sp/>0,<sp/><ref refid="unichar_8h_1a902bc40c9d89802bc063afe30ce9e708" kindref="member">UNICHAR_LEN</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Construct<sp/>from<sp/>a<sp/>utf8<sp/>string.<sp/>If<sp/>len&lt;0<sp/>then<sp/>the<sp/>string<sp/>is<sp/>null<sp/>terminated.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>the<sp/>string<sp/>is<sp/>too<sp/>long<sp/>to<sp/>fit<sp/>in<sp/>the<sp/>UNICHAR<sp/>then<sp/>it<sp/>takes<sp/>only<sp/>what</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>will<sp/>fit.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><ref refid="class_u_n_i_c_h_a_r_1a7fb65b084f53bcf45ba1cefd1eb88398" kindref="member">UNICHAR</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="class_u_n_i_c_h_a_r_1a06c2f8824d2f49385ca8cbcf5434e918" kindref="member">utf8_str</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Construct<sp/>from<sp/>a<sp/>single<sp/>UCS4<sp/>character.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_u_n_i_c_h_a_r_1a7fb65b084f53bcf45ba1cefd1eb88398" kindref="member">UNICHAR</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>unicode);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Default<sp/>copy<sp/>constructor<sp/>and<sp/>operator=<sp/>are<sp/>OK.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>first<sp/>character<sp/>as<sp/>UCS-4.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_u_n_i_c_h_a_r_1a59ffb904d7e604da0fea3fad1c63ee64" kindref="member">first_uni</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>length<sp/>of<sp/>the<sp/>UTF8<sp/>string.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="class_u_n_i_c_h_a_r_1a7726199d64a4f8afa0aa5c831bbcf155" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_u_n_i_c_h_a_r_1a7726199d64a4f8afa0aa5c831bbcf155" kindref="member">utf8_len</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len<sp/>=<sp/>chars[<ref refid="unichar_8h_1a902bc40c9d89802bc063afe30ce9e708" kindref="member">UNICHAR_LEN</ref><sp/>-<sp/>1];</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>len<sp/>&gt;=0<sp/>&amp;&amp;<sp/>len<sp/>&lt;<sp/><ref refid="unichar_8h_1a902bc40c9d89802bc063afe30ce9e708" kindref="member">UNICHAR_LEN</ref><sp/>?<sp/>len<sp/>:<sp/><ref refid="unichar_8h_1a902bc40c9d89802bc063afe30ce9e708" kindref="member">UNICHAR_LEN</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>a<sp/>UTF8<sp/>string,<sp/>but<sp/>NOT<sp/>NULL<sp/>terminated.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="class_u_n_i_c_h_a_r_1a53272d41ca98377c2342ed091b1a17be" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="class_u_n_i_c_h_a_r_1a53272d41ca98377c2342ed091b1a17be" kindref="member">utf8</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>chars;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>a<sp/>terminated<sp/>UTF8<sp/>string:<sp/>Must<sp/>delete[]<sp/>it<sp/>after<sp/>use.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="class_u_n_i_c_h_a_r_1a06c2f8824d2f49385ca8cbcf5434e918" kindref="member">utf8_str</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>number<sp/>of<sp/>bytes<sp/>in<sp/>the<sp/>first<sp/>character<sp/>of<sp/>the<sp/>given<sp/>utf8<sp/>string.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_u_n_i_c_h_a_r_1a8182a4663f6c1df9f097700f1009ab22" kindref="member">utf8_step</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="class_u_n_i_c_h_a_r_1a06c2f8824d2f49385ca8cbcf5434e918" kindref="member">utf8_str</ref>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>UTF-8<sp/>representation<sp/>of<sp/>1<sp/>or<sp/>more<sp/>Unicode<sp/>characters.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>last<sp/>element<sp/>(chars[UNICHAR_LEN<sp/>-<sp/>1])<sp/>is<sp/>a<sp/>length<sp/>if</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>its<sp/>value<sp/>&lt;<sp/>UNICHAR_LEN,<sp/>otherwise<sp/>it<sp/>is<sp/>a<sp/>genuine<sp/>character.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>chars[<ref refid="unichar_8h_1a902bc40c9d89802bc063afe30ce9e708" kindref="member">UNICHAR_LEN</ref>];</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>TESSERACT_CCUTIL_UNICHAR_H__</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/ccutil/unichar.h"/>
+  </compounddef>
+</doxygen>

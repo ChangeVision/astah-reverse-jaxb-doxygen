@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_move_mode_8h" kind="file">
+    <compoundname>MoveMode.h</compoundname>
+    <includes local="no">Foundation/Foundation.h</includes>
+    <includes refid="_mode_8h" local="yes">Mode.h</includes>
+    <includedby refid="_mode_manager_8h" local="yes">Classes/ModeManager.h</includedby>
+    <includedby refid="_move_mode_8m" local="yes">Classes/MoveMode.m</includedby>
+    <incdepgraph>
+      <node id="1644">
+        <label>Mode.h</label>
+        <link refid="_mode_8h"/>
+        <childnode refid="1643" relation="include">
+        </childnode>
+      </node>
+      <node id="1642">
+        <label>Classes/MoveMode.h</label>
+        <link refid="MoveMode.h"/>
+        <childnode refid="1643" relation="include">
+        </childnode>
+        <childnode refid="1644" relation="include">
+        </childnode>
+      </node>
+      <node id="1643">
+        <label>Foundation/Foundation.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1645">
+        <label>Classes/MoveMode.h</label>
+        <link refid="MoveMode.h"/>
+        <childnode refid="1646" relation="include">
+        </childnode>
+        <childnode refid="1654" relation="include">
+        </childnode>
+      </node>
+      <node id="1654">
+        <label>Classes/MoveMode.m</label>
+        <link refid="_move_mode_8m"/>
+      </node>
+      <node id="1647">
+        <label>Classes/ConnectorTargetCommandPanel.m</label>
+        <link refid="_connector_target_command_panel_8m"/>
+      </node>
+      <node id="1649">
+        <label>Classes/DiagramFrameView.m</label>
+        <link refid="_diagram_frame_view_8m"/>
+      </node>
+      <node id="1650">
+        <label>Classes/DiagramFrameViewController.m</label>
+        <link refid="_diagram_frame_view_controller_8m"/>
+      </node>
+      <node id="1653">
+        <label>Classes/TapMode.m</label>
+        <link refid="_tap_mode_8m"/>
+      </node>
+      <node id="1648">
+        <label>Classes/CreateRelationMode.m</label>
+        <link refid="_create_relation_mode_8m"/>
+      </node>
+      <node id="1646">
+        <label>Classes/ModeManager.h</label>
+        <link refid="_mode_manager_8h"/>
+        <childnode refid="1647" relation="include">
+        </childnode>
+        <childnode refid="1648" relation="include">
+        </childnode>
+        <childnode refid="1649" relation="include">
+        </childnode>
+        <childnode refid="1650" relation="include">
+        </childnode>
+        <childnode refid="1651" relation="include">
+        </childnode>
+        <childnode refid="1652" relation="include">
+        </childnode>
+        <childnode refid="1653" relation="include">
+        </childnode>
+      </node>
+      <node id="1651">
+        <label>Classes/ModeManager.m</label>
+        <link refid="_mode_manager_8m"/>
+      </node>
+      <node id="1652">
+        <label>Classes/SelectConnectorTypePanel.m</label>
+        <link refid="_select_connector_type_panel_8m"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="interface_move_mode" prot="public">MoveMode</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>LongPressMode.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>UmlPad</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>梅田<sp/>政利<sp/>on<sp/>10/07/06.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>2010<sp/>Change<sp/>Vision.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;Foundation/Foundation.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_mode_8h" kindref="compound">Mode.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_view_element" kindref="compound">ViewElement</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_move_command" kindref="compound">MoveCommand</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="interface_move_mode" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_move_mode" kindref="compound">MoveMode</ref><sp/>:<sp/><ref refid="interface_mode" kindref="compound">Mode</ref><sp/>{</highlight></codeline>
+<codeline lineno="16" refid="interface_move_mode_1abb6100c1d2874d4bdf612bd89bcd70a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_view_element" kindref="compound">ViewElement</ref><sp/>*<ref refid="interface_move_mode_1abb6100c1d2874d4bdf612bd89bcd70a6" kindref="member">source</ref>;</highlight></codeline>
+<codeline lineno="17" refid="interface_move_mode_1a39e1dbdd15794146b45c19614396f95a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGPoint<sp/><ref refid="interface_move_mode_1a39e1dbdd15794146b45c19614396f95a" kindref="member">startPoint</ref>;</highlight></codeline>
+<codeline lineno="18" refid="interface_move_mode_1af108ffa230f4f270dabf1eabdef0440e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGPoint<sp/><ref refid="interface_move_mode_1af108ffa230f4f270dabf1eabdef0440e" kindref="member">offset</ref>;</highlight></codeline>
+<codeline lineno="19" refid="interface_move_mode_1a6f89d1651c75edf758a3fbbc87de3229" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_move_command" kindref="compound">MoveCommand</ref><sp/>*<ref refid="interface_move_mode_1a6f89d1651c75edf758a3fbbc87de3229" kindref="member">moveCommand</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/MoveMode.h"/>
+  </compounddef>
+</doxygen>

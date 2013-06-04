@@ -1,0 +1,397 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="detlinefit_8cpp" kind="file">
+    <compoundname>detlinefit.cpp</compoundname>
+    <includes refid="detlinefit_8h" local="yes">detlinefit.h</includes>
+    <includes refid="statistc_8h" local="yes">statistc.h</includes>
+    <includes refid="ndminx_8h" local="yes">ndminx.h</includes>
+    <incdepgraph>
+      <node id="7418">
+        <label>ndminx.h</label>
+        <link refid="ndminx_8h"/>
+      </node>
+      <node id="7416">
+        <label>statistc.h</label>
+        <link refid="statistc_8h"/>
+        <childnode refid="7401" relation="include">
+        </childnode>
+        <childnode refid="7404" relation="include">
+        </childnode>
+        <childnode refid="7417" relation="include">
+        </childnode>
+      </node>
+      <node id="7408">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7405">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="7406" relation="include">
+        </childnode>
+      </node>
+      <node id="7399">
+        <label>detlinefit.h</label>
+        <link refid="detlinefit_8h"/>
+        <childnode refid="7400" relation="include">
+        </childnode>
+      </node>
+      <node id="7417">
+        <label>scrollview.h</label>
+        <link refid="scrollview_8h"/>
+        <childnode refid="7401" relation="include">
+        </childnode>
+      </node>
+      <node id="7407">
+        <label>serialis.h</label>
+        <link refid="serialis_8h"/>
+        <childnode refid="7408" relation="include">
+        </childnode>
+        <childnode refid="7409" relation="include">
+        </childnode>
+        <childnode refid="7401" relation="include">
+        </childnode>
+        <childnode refid="7410" relation="include">
+        </childnode>
+        <childnode refid="7412" relation="include">
+        </childnode>
+        <childnode refid="7413" relation="include">
+        </childnode>
+      </node>
+      <node id="7411">
+        <label>stddef.h</label>
+      </node>
+      <node id="7412">
+        <label>errcode.h</label>
+        <link refid="errcode_8h"/>
+        <childnode refid="7404" relation="include">
+        </childnode>
+      </node>
+      <node id="7406">
+        <label>limits.h</label>
+      </node>
+      <node id="7415">
+        <label>ipoints.h</label>
+        <link refid="ipoints_8h"/>
+        <childnode refid="7402" relation="include">
+        </childnode>
+      </node>
+      <node id="7409">
+        <label>string.h</label>
+      </node>
+      <node id="7413">
+        <label>fileerr.h</label>
+        <link refid="fileerr_8h"/>
+        <childnode refid="7412" relation="include">
+        </childnode>
+      </node>
+      <node id="7402">
+        <label>math.h</label>
+      </node>
+      <node id="7414">
+        <label>lsterr.h</label>
+        <link refid="lsterr_8h"/>
+        <childnode refid="7412" relation="include">
+        </childnode>
+      </node>
+      <node id="7410">
+        <label>memry.h</label>
+        <link refid="memry_8h"/>
+        <childnode refid="7411" relation="include">
+        </childnode>
+        <childnode refid="7404" relation="include">
+        </childnode>
+      </node>
+      <node id="7398">
+        <label>ccstruct/detlinefit.cpp</label>
+        <link refid="detlinefit.cpp"/>
+        <childnode refid="7399" relation="include">
+        </childnode>
+        <childnode refid="7416" relation="include">
+        </childnode>
+        <childnode refid="7418" relation="include">
+        </childnode>
+      </node>
+      <node id="7403">
+        <label>elst.h</label>
+        <link refid="elst_8h"/>
+        <childnode refid="7401" relation="include">
+        </childnode>
+        <childnode refid="7404" relation="include">
+        </childnode>
+        <childnode refid="7407" relation="include">
+        </childnode>
+        <childnode refid="7414" relation="include">
+        </childnode>
+      </node>
+      <node id="7400">
+        <label>points.h</label>
+        <link refid="points_8h"/>
+        <childnode refid="7401" relation="include">
+        </childnode>
+        <childnode refid="7402" relation="include">
+        </childnode>
+        <childnode refid="7403" relation="include">
+        </childnode>
+        <childnode refid="7415" relation="include">
+        </childnode>
+      </node>
+      <node id="7404">
+        <label>host.h</label>
+        <link refid="host_8h"/>
+        <childnode refid="7405" relation="include">
+        </childnode>
+      </node>
+      <node id="7401">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacetesseract">tesseract</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>detlinefit.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Description:<sp/>Deterministic<sp/>least<sp/>median<sp/>squares<sp/>line<sp/>fitting.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/><sp/><sp/><sp/><sp/><sp/>Ray<sp/>Smith</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created:<sp/><sp/><sp/><sp/><sp/>Thu<sp/>Feb<sp/>28<sp/>14:45:01<sp/>PDT<sp/>2008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(C)<sp/>Copyright<sp/>2008,<sp/>Google<sp/>Inc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="detlinefit_8h" kindref="compound">detlinefit.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="statistc_8h" kindref="compound">statistc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ndminx_8h" kindref="compound">ndminx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetesseract-c__api-demo_1afed58feacb84df2de88bdd613cfdba6d" kindref="member">tesseract</ref><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>number<sp/>of<sp/>points<sp/>to<sp/>consider<sp/>at<sp/>each<sp/>end.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespacetesseract_1acd4677fe72e83fad95bf289ca8b832b6" kindref="member">kNumEndPoints</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><ref refid="classtesseract_1_1_det_line_fit_1ab8226dd14457087c9a1445d0dc06353c" kindref="member">DetLineFit::DetLineFit</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><ref refid="classtesseract_1_1_det_line_fit_1a1068df3ab255efe45ec89e19c961a99a" kindref="member">DetLineFit::~DetLineFit</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Delete<sp/>all<sp/>Added<sp/>points.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_det_line_fit_1a97c074bfc1d7106ddda618ea8cf45ff7" kindref="member">DetLineFit::Clear</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>pt_list_.clear();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Add<sp/>a<sp/>new<sp/>point.<sp/>Takes<sp/>a<sp/>copy<sp/>-<sp/>the<sp/>pt<sp/>doesn&apos;t<sp/>need<sp/>to<sp/>stay<sp/>in<sp/>scope.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_det_line_fit_1a4eba2b6e761080e5d1a48c9c797257b2" kindref="member">DetLineFit::Add</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_i_c_o_o_r_d" kindref="compound" tooltip="integer coordinate ">ICOORD</ref>&amp;<sp/>pt)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>ICOORDELT_IT<sp/>it<sp/>=<sp/>&amp;pt_list_;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><ref refid="class_i_c_o_o_r_d_e_l_t" kindref="compound">ICOORDELT</ref>*<sp/>new_pt<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_i_c_o_o_r_d_e_l_t" kindref="compound">ICOORDELT</ref>(pt);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>it.add_to_end(new_pt);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Fit<sp/>a<sp/>line<sp/>to<sp/>the<sp/>points,<sp/>returning<sp/>the<sp/>fitted<sp/>line<sp/>as<sp/>a<sp/>pair<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>points,<sp/>and<sp/>the<sp/>upper<sp/>quartile<sp/>error.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_det_line_fit_1a768ec4a8f90593d8d679981c873f7a56" kindref="member">DetLineFit::Fit</ref>(<ref refid="class_i_c_o_o_r_d" kindref="compound" tooltip="integer coordinate ">ICOORD</ref>*<sp/>pt1,<sp/><ref refid="class_i_c_o_o_r_d" kindref="compound" tooltip="integer coordinate ">ICOORD</ref>*<sp/>pt2)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>ICOORDELT_IT<sp/>it(&amp;pt_list_);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Do<sp/>something<sp/>sensible<sp/>with<sp/>no<sp/>points.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pt_list_.empty())<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>pt1-&gt;<ref refid="class_i_c_o_o_r_d_1a94c586039b3a003b35cf659b33b938f3" kindref="member" tooltip="rewrite function ">set_x</ref>(0);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>pt1-&gt;<ref refid="class_i_c_o_o_r_d_1aa9fb418d1c602c0533e426759da43d67" kindref="member" tooltip="rewrite function ">set_y</ref>(0);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>*pt2<sp/>=<sp/>*pt1;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Count<sp/>the<sp/>points<sp/>and<sp/>find<sp/>the<sp/>first<sp/>and<sp/>last<sp/>kNumEndPoints.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><ref refid="class_i_c_o_o_r_d" kindref="compound" tooltip="integer coordinate ">ICOORD</ref>*<sp/>starts[<ref refid="namespacetesseract_1acd4677fe72e83fad95bf289ca8b832b6" kindref="member">kNumEndPoints</ref>];</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><ref refid="class_i_c_o_o_r_d" kindref="compound" tooltip="integer coordinate ">ICOORD</ref>*<sp/>ends[<ref refid="namespacetesseract_1acd4677fe72e83fad95bf289ca8b832b6" kindref="member">kNumEndPoints</ref>];</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pt_count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(it.mark_cycle_pt();<sp/>!it.cycled_list();<sp/>it.forward())<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pt_count<sp/>&lt;<sp/><ref refid="namespacetesseract_1acd4677fe72e83fad95bf289ca8b832b6" kindref="member">kNumEndPoints</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>starts[pt_count]<sp/>=<sp/>it.data();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ends[pt_count]<sp/>=<sp/>starts[pt_count];</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/><ref refid="namespacetesseract_1acd4677fe72e83fad95bf289ca8b832b6" kindref="member">kNumEndPoints</ref>;<sp/>++i)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ends[i<sp/>-<sp/>1]<sp/>=<sp/>ends[i];</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ends[kNumEndPoints<sp/>-<sp/>1]<sp/>=<sp/>it.data();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>++pt_count;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>1<sp/>or<sp/>2<sp/>points<sp/>need<sp/>special<sp/>treatment.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pt_count<sp/>&lt;=<sp/>2)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>*pt1<sp/>=<sp/>*starts[0];</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pt_count<sp/>&gt;<sp/>1)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>*pt2<sp/>=<sp/>*starts[1];</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>*pt2<sp/>=<sp/>*pt1;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end_count<sp/>=<sp/><ref refid="ndminx_8h_1a74e75242132eaabbc1c512488a135926" kindref="member">MIN</ref>(pt_count,<sp/><ref refid="namespacetesseract_1acd4677fe72e83fad95bf289ca8b832b6" kindref="member">kNumEndPoints</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>distances<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[pt_count];</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>best_uq<sp/>=<sp/>-1.0;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Iterate<sp/>each<sp/>pair<sp/>of<sp/>points<sp/>and<sp/>find<sp/>the<sp/>best<sp/>fitting<sp/>line.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>end_count;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_i_c_o_o_r_d" kindref="compound" tooltip="integer coordinate ">ICOORD</ref>*<sp/>start<sp/>=<sp/>starts[i];</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>end_count;<sp/>++j)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_i_c_o_o_r_d" kindref="compound" tooltip="integer coordinate ">ICOORD</ref>*<sp/>end<sp/>=<sp/>ends[j];</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(start<sp/>!=<sp/>end)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Compute<sp/>the<sp/>upper<sp/>quartile<sp/>error<sp/>from<sp/>the<sp/>line.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/>ComputeErrors(*start,<sp/>*end,<sp/>distances);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dist<sp/>&lt;<sp/>best_uq<sp/>||<sp/>best_uq<sp/>&lt;<sp/>0.0)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>best_uq<sp/>=<sp/>dist;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*pt1<sp/>=<sp/>*start;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*pt2<sp/>=<sp/>*end;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>[]<sp/>distances;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Finally<sp/>compute<sp/>the<sp/>square<sp/>root<sp/>to<sp/>return<sp/>the<sp/>true<sp/>distance.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>best_uq<sp/>&gt;<sp/>0.0<sp/>?<sp/>sqrt(best_uq)<sp/>:<sp/>best_uq;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Backwards<sp/>compatible<sp/>fit<sp/>returning<sp/>a<sp/>gradient<sp/>and<sp/>constant.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Deprecated.<sp/>Prefer<sp/>Fit(ICOORD*,<sp/>ICOORD*)<sp/>where<sp/>possible,<sp/>but<sp/>use<sp/>this</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment">//<sp/>function<sp/>in<sp/>preference<sp/>to<sp/>the<sp/>LMS<sp/>class.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_det_line_fit_1a768ec4a8f90593d8d679981c873f7a56" kindref="member">DetLineFit::Fit</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>m,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>c)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><ref refid="class_i_c_o_o_r_d" kindref="compound" tooltip="integer coordinate ">ICOORD</ref><sp/>start,<sp/>end;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>error<sp/>=<sp/><ref refid="classtesseract_1_1_det_line_fit_1a768ec4a8f90593d8d679981c873f7a56" kindref="member">Fit</ref>(&amp;start,<sp/>&amp;end);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(end.<ref refid="class_i_c_o_o_r_d_1a59722a47c540007c58a539f0e35b3f33" kindref="member" tooltip="access function ">x</ref>()<sp/>!=<sp/>start.<ref refid="class_i_c_o_o_r_d_1a59722a47c540007c58a539f0e35b3f33" kindref="member" tooltip="access function ">x</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>*m<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(end.<ref refid="class_i_c_o_o_r_d_1a66bba6ff8a5f060775e1c2ca511f7f29" kindref="member" tooltip="access_function ">y</ref>()<sp/>-<sp/>start.<ref refid="class_i_c_o_o_r_d_1a66bba6ff8a5f060775e1c2ca511f7f29" kindref="member" tooltip="access_function ">y</ref>())<sp/>/<sp/>(end.<ref refid="class_i_c_o_o_r_d_1a59722a47c540007c58a539f0e35b3f33" kindref="member" tooltip="access function ">x</ref>()<sp/>-<sp/>start.<ref refid="class_i_c_o_o_r_d_1a59722a47c540007c58a539f0e35b3f33" kindref="member" tooltip="access function ">x</ref>());</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>*c<sp/>=<sp/>start.<ref refid="class_i_c_o_o_r_d_1a66bba6ff8a5f060775e1c2ca511f7f29" kindref="member" tooltip="access_function ">y</ref>()<sp/>-<sp/>*m<sp/>*<sp/>start.<ref refid="class_i_c_o_o_r_d_1a59722a47c540007c58a539f0e35b3f33" kindref="member" tooltip="access function ">x</ref>();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>*m<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>*c<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>error;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Helper<sp/>function<sp/>to<sp/>compute<sp/>a<sp/>fictitious<sp/>end<sp/>point<sp/>that<sp/>is<sp/>on<sp/>a<sp/>line</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">//<sp/>of<sp/>a<sp/>given<sp/>gradient<sp/>through<sp/>the<sp/>given<sp/>start.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><ref refid="class_i_c_o_o_r_d" kindref="compound" tooltip="integer coordinate ">ICOORD</ref><sp/><ref refid="namespacetesseract_1a0ea591521432f65d5384df8250f90c4f" kindref="member">ComputeEndFromGradient</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_i_c_o_o_r_d" kindref="compound" tooltip="integer coordinate ">ICOORD</ref>&amp;<sp/>start,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>m)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m<sp/>&gt;<sp/>1.0<sp/>||<sp/>m<sp/>&lt;<sp/>-1.0)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>dy<sp/>dominates.<sp/>Force<sp/>it<sp/>to<sp/>have<sp/>the<sp/>opposite<sp/>sign<sp/>of<sp/>start.y()<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>compute<sp/>dx<sp/>based<sp/>on<sp/>dy<sp/>being<sp/>as<sp/>large<sp/>as<sp/>possible</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dx<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(floor(<ref refid="host_8h_1a3905e54374e49708219791e7d59c60fb" kindref="member">MAX_INT16</ref><sp/>/<sp/>m));</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dx<sp/>&lt;<sp/>0)<sp/>++dx;<sp/><sp/></highlight><highlight class="comment">//<sp/>Truncate<sp/>towards<sp/>0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(start.<ref refid="class_i_c_o_o_r_d_1a66bba6ff8a5f060775e1c2ca511f7f29" kindref="member" tooltip="access_function ">y</ref>()<sp/>&gt;<sp/>0)<sp/>dx<sp/>=<sp/>-<sp/>dx;<sp/><sp/></highlight><highlight class="comment">//<sp/>Force<sp/>dy<sp/>to<sp/>be<sp/>opposite<sp/>to<sp/>start.y().</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constrain<sp/>dx<sp/>so<sp/>the<sp/>result<sp/>fits<sp/>in<sp/>an<sp/>inT16.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(start.<ref refid="class_i_c_o_o_r_d_1a59722a47c540007c58a539f0e35b3f33" kindref="member" tooltip="access function ">x</ref>()<sp/>+<sp/>dx<sp/>&gt;<sp/><ref refid="host_8h_1a3905e54374e49708219791e7d59c60fb" kindref="member">MAX_INT16</ref><sp/>||<sp/>start.<ref refid="class_i_c_o_o_r_d_1a59722a47c540007c58a539f0e35b3f33" kindref="member" tooltip="access function ">x</ref>()<sp/>+<sp/>dx<sp/>&lt;<sp/>-<ref refid="host_8h_1a3905e54374e49708219791e7d59c60fb" kindref="member">MAX_INT16</ref>)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>dx<sp/>/=<sp/>2;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(-1<sp/>&lt;=<sp/>dx<sp/>&amp;&amp;<sp/>dx<sp/>&lt;=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_i_c_o_o_r_d" kindref="compound" tooltip="integer coordinate ">ICOORD</ref>(start.<ref refid="class_i_c_o_o_r_d_1a59722a47c540007c58a539f0e35b3f33" kindref="member" tooltip="access function ">x</ref>(),<sp/>start.<ref refid="class_i_c_o_o_r_d_1a66bba6ff8a5f060775e1c2ca511f7f29" kindref="member" tooltip="access_function ">y</ref>()<sp/>+<sp/>1);<sp/><sp/></highlight><highlight class="comment">//<sp/>Too<sp/>steep<sp/>for<sp/>anything<sp/>else.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>start.<ref refid="class_i_c_o_o_r_d_1a66bba6ff8a5f060775e1c2ca511f7f29" kindref="member" tooltip="access_function ">y</ref>()<sp/>+<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(floor(dx<sp/>*<sp/>m<sp/>+<sp/>0.5));</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="errcode_8h_1a93a603f4063a6b9403d81caa245a583b" kindref="member">ASSERT_HOST</ref>(-<ref refid="host_8h_1a3905e54374e49708219791e7d59c60fb" kindref="member">MAX_INT16</ref><sp/>&lt;=<sp/>y<sp/>&amp;&amp;<sp/>y<sp/>&lt;=<sp/><ref refid="host_8h_1a3905e54374e49708219791e7d59c60fb" kindref="member">MAX_INT16</ref>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_i_c_o_o_r_d" kindref="compound" tooltip="integer coordinate ">ICOORD</ref>(start.<ref refid="class_i_c_o_o_r_d_1a59722a47c540007c58a539f0e35b3f33" kindref="member" tooltip="access function ">x</ref>()<sp/>+<sp/>dx,<sp/>y);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>dx<sp/>dominates.<sp/>Force<sp/>it<sp/>to<sp/>have<sp/>the<sp/>opposite<sp/>sign<sp/>of<sp/>start.x()<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>compute<sp/>dy<sp/>based<sp/>on<sp/>dx<sp/>being<sp/>as<sp/>large<sp/>as<sp/>possible.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dy<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(floor(<ref refid="host_8h_1a3905e54374e49708219791e7d59c60fb" kindref="member">MAX_INT16</ref><sp/>*<sp/>m));</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dy<sp/>&lt;<sp/>0)<sp/>++dy;<sp/><sp/></highlight><highlight class="comment">//<sp/>Truncate<sp/>towards<sp/>0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(start.<ref refid="class_i_c_o_o_r_d_1a59722a47c540007c58a539f0e35b3f33" kindref="member" tooltip="access function ">x</ref>()<sp/>&gt;<sp/>0)<sp/>dy<sp/>=<sp/>-<sp/>dy;<sp/><sp/></highlight><highlight class="comment">//<sp/>Force<sp/>dx<sp/>to<sp/>be<sp/>opposite<sp/>to<sp/>start.x().</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constrain<sp/>dy<sp/>so<sp/>the<sp/>result<sp/>fits<sp/>in<sp/>an<sp/>inT16.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(start.<ref refid="class_i_c_o_o_r_d_1a66bba6ff8a5f060775e1c2ca511f7f29" kindref="member" tooltip="access_function ">y</ref>()<sp/>+<sp/>dy<sp/>&gt;<sp/><ref refid="host_8h_1a3905e54374e49708219791e7d59c60fb" kindref="member">MAX_INT16</ref><sp/>||<sp/>start.<ref refid="class_i_c_o_o_r_d_1a66bba6ff8a5f060775e1c2ca511f7f29" kindref="member" tooltip="access_function ">y</ref>()<sp/>+<sp/>dy<sp/>&lt;<sp/>-<ref refid="host_8h_1a3905e54374e49708219791e7d59c60fb" kindref="member">MAX_INT16</ref>)</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>dy<sp/>/=<sp/>2;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(-1<sp/>&lt;=<sp/>dy<sp/>&amp;&amp;<sp/>dy<sp/>&lt;=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_i_c_o_o_r_d" kindref="compound" tooltip="integer coordinate ">ICOORD</ref>(start.<ref refid="class_i_c_o_o_r_d_1a59722a47c540007c58a539f0e35b3f33" kindref="member" tooltip="access function ">x</ref>()<sp/>+<sp/>1,<sp/>start.<ref refid="class_i_c_o_o_r_d_1a66bba6ff8a5f060775e1c2ca511f7f29" kindref="member" tooltip="access_function ">y</ref>());<sp/><sp/></highlight><highlight class="comment">//<sp/>Too<sp/>flat<sp/>for<sp/>anything<sp/>else.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>start.<ref refid="class_i_c_o_o_r_d_1a59722a47c540007c58a539f0e35b3f33" kindref="member" tooltip="access function ">x</ref>()<sp/>+<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(floor(dy<sp/>/<sp/>m<sp/>+<sp/>0.5));</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="errcode_8h_1a93a603f4063a6b9403d81caa245a583b" kindref="member">ASSERT_HOST</ref>(-<ref refid="host_8h_1a3905e54374e49708219791e7d59c60fb" kindref="member">MAX_INT16</ref><sp/>&lt;=<sp/>x<sp/>&amp;&amp;<sp/>x<sp/>&lt;=<sp/><ref refid="host_8h_1a3905e54374e49708219791e7d59c60fb" kindref="member">MAX_INT16</ref>);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_i_c_o_o_r_d" kindref="compound" tooltip="integer coordinate ">ICOORD</ref>(x,<sp/>start.<ref refid="class_i_c_o_o_r_d_1a66bba6ff8a5f060775e1c2ca511f7f29" kindref="member" tooltip="access_function ">y</ref>()<sp/>+<sp/>dy);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Backwards<sp/>compatible<sp/>constrained<sp/>fit<sp/>with<sp/>a<sp/>supplied<sp/>gradient.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_det_line_fit_1a58c6ff442c9ab172952eea607f83dca8" kindref="member">DetLineFit::ConstrainedFit</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>m,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>c)<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>ICOORDELT_IT<sp/>it(&amp;pt_list_);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Do<sp/>something<sp/>sensible<sp/>with<sp/>no<sp/>points.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pt_list_.empty())<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>*c<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Count<sp/>the<sp/>points<sp/>and<sp/>find<sp/>the<sp/>first<sp/>and<sp/>last<sp/>kNumEndPoints.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Put<sp/>the<sp/>ends<sp/>in<sp/>a<sp/>single<sp/>array<sp/>to<sp/>make<sp/>their<sp/>use<sp/>easier<sp/>later.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><ref refid="class_i_c_o_o_r_d" kindref="compound" tooltip="integer coordinate ">ICOORD</ref>*<sp/>pts[<ref refid="namespacetesseract_1acd4677fe72e83fad95bf289ca8b832b6" kindref="member">kNumEndPoints</ref><sp/>*<sp/>2];</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pt_count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(it.mark_cycle_pt();<sp/>!it.cycled_list();<sp/>it.forward())<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pt_count<sp/>&lt;<sp/><ref refid="namespacetesseract_1acd4677fe72e83fad95bf289ca8b832b6" kindref="member">kNumEndPoints</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>pts[pt_count]<sp/>=<sp/>it.data();</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>pts[<ref refid="namespacetesseract_1acd4677fe72e83fad95bf289ca8b832b6" kindref="member">kNumEndPoints</ref><sp/>+<sp/>pt_count]<sp/>=<sp/>pts[pt_count];</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/><ref refid="namespacetesseract_1acd4677fe72e83fad95bf289ca8b832b6" kindref="member">kNumEndPoints</ref>;<sp/>++i)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pts[kNumEndPoints<sp/>+<sp/>i<sp/>-<sp/>1]<sp/>=<sp/>pts[kNumEndPoints<sp/>+<sp/>i];</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>pts[kNumEndPoints<sp/>*<sp/>2<sp/>-<sp/>1]<sp/>=<sp/>it.data();</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>++pt_count;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(pt_count<sp/>&lt;<sp/><ref refid="namespacetesseract_1acd4677fe72e83fad95bf289ca8b832b6" kindref="member">kNumEndPoints</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>pts[pt_count]<sp/>=<sp/><ref refid="host_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>pts[<ref refid="namespacetesseract_1acd4677fe72e83fad95bf289ca8b832b6" kindref="member">kNumEndPoints</ref><sp/>+<sp/>pt_count++]<sp/>=<sp/><ref refid="host_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>distances<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[pt_count];</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>best_uq<sp/>=<sp/>-1.0;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Iterate<sp/>each<sp/>pair<sp/>of<sp/>points<sp/>and<sp/>find<sp/>the<sp/>best<sp/>fitting<sp/>line.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="namespacetesseract_1acd4677fe72e83fad95bf289ca8b832b6" kindref="member">kNumEndPoints</ref><sp/>*<sp/>2;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_i_c_o_o_r_d" kindref="compound" tooltip="integer coordinate ">ICOORD</ref>*<sp/>start<sp/>=<sp/>pts[i];</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(start<sp/>==<sp/><ref refid="host_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)<sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_i_c_o_o_r_d" kindref="compound" tooltip="integer coordinate ">ICOORD</ref><sp/>end<sp/>=<sp/><ref refid="namespacetesseract_1a0ea591521432f65d5384df8250f90c4f" kindref="member">ComputeEndFromGradient</ref>(*start,<sp/>m);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Compute<sp/>the<sp/>upper<sp/>quartile<sp/>error<sp/>from<sp/>the<sp/>line.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/>ComputeErrors(*start,<sp/>end,<sp/>distances);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dist<sp/>&lt;<sp/>best_uq<sp/>||<sp/>best_uq<sp/>&lt;<sp/>0.0)<sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>best_uq<sp/>=<sp/>dist;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>*c<sp/>=<sp/>start-&gt;<ref refid="class_i_c_o_o_r_d_1a66bba6ff8a5f060775e1c2ca511f7f29" kindref="member" tooltip="access_function ">y</ref>()<sp/>-<sp/>start-&gt;<ref refid="class_i_c_o_o_r_d_1a59722a47c540007c58a539f0e35b3f33" kindref="member" tooltip="access function ">x</ref>()<sp/>*<sp/>m;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>[]<sp/>distances;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Finally<sp/>compute<sp/>the<sp/>square<sp/>root<sp/>to<sp/>return<sp/>the<sp/>true<sp/>distance.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>best_uq<sp/>&gt;<sp/>0.0<sp/>?<sp/>sqrt(best_uq)<sp/>:<sp/>best_uq;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Comparator<sp/>function<sp/>used<sp/>by<sp/>the<sp/>nth_item<sp/>funtion.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>CompareInts(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*p2)<sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>i1<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(p1);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>i2<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(p2);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*i1<sp/>-<sp/>*i2;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Compute<sp/>all<sp/>the<sp/>cross<sp/>product<sp/>distances<sp/>of<sp/>the<sp/>points<sp/>from<sp/>the<sp/>line</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="comment">//<sp/>and<sp/>return<sp/>the<sp/>true<sp/>squared<sp/>upper<sp/>quartile<sp/>distance.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>DetLineFit::ComputeErrors(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_i_c_o_o_r_d" kindref="compound" tooltip="integer coordinate ">ICOORD</ref><sp/>start,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_i_c_o_o_r_d" kindref="compound" tooltip="integer coordinate ">ICOORD</ref><sp/>end,</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>distances)<sp/>{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/>ICOORDELT_IT<sp/>it(&amp;pt_list_);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><ref refid="class_i_c_o_o_r_d" kindref="compound" tooltip="integer coordinate ">ICOORD</ref><sp/>line_vector<sp/>=<sp/>end;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/>line_vector<sp/>-=<sp/>start;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Compute<sp/>the<sp/>distance<sp/>of<sp/>each<sp/>point<sp/>from<sp/>the<sp/>line.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pt_index<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(it.mark_cycle_pt();<sp/>!it.cycled_list();<sp/>it.forward())<sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_i_c_o_o_r_d" kindref="compound" tooltip="integer coordinate ">ICOORD</ref><sp/>pt_vector<sp/>=<sp/>*it.data();</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>pt_vector<sp/>-=<sp/>start;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Compute<sp/>|line_vector||pt_vector|sin(angle<sp/>between)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/>line_vector<sp/>*<sp/>pt_vector;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dist<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>dist<sp/>=<sp/>-dist;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>distances[pt_index++]<sp/>=<sp/>dist;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>get<sp/>the<sp/>upper<sp/>quartile<sp/>distance.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/><ref refid="statistc_8cpp_1ab531cf8bc727a6e03af3a6cc10b4cd7a" kindref="member">choose_nth_item</ref>(3<sp/>*<sp/>pt_index<sp/>/<sp/>4,<sp/>distances,<sp/>pt_index,</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(distances[0]),<sp/>CompareInts);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/>distances[index];</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>true<sp/>distance<sp/>is<sp/>the<sp/>square<sp/>root<sp/>of<sp/>the<sp/>dist<sp/>squared<sp/>/<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>squared<sp/>length<sp/>of<sp/>line_vector<sp/>(which<sp/>is<sp/>the<sp/>dot<sp/>product<sp/>with<sp/>itself)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Don&apos;t<sp/>bother<sp/>with<sp/>the<sp/>square<sp/>root.<sp/>Just<sp/>return<sp/>the<sp/>square<sp/>distance.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dist<sp/>*<sp/>dist<sp/>/<sp/>(line_vector<sp/>%<sp/>line_vector);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>tesseract.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/ccstruct/detlinefit.cpp"/>
+  </compounddef>
+</doxygen>

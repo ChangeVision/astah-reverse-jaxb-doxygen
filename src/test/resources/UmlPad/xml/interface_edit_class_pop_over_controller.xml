@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="interface_edit_class_pop_over_controller" kind="class" prot="public">
+    <compoundname>EditClassPopOverController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UIPopoverController</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">&lt;UIPopoverControllerDelegate&gt;</basecompoundref>
+    <includes refid="_edit_class_pop_over_controller_8h" local="no">EditClassPopOverController.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="interface_edit_class_pop_over_controller_1ad6d1380ba77e5dbdebaff467ad08c194" prot="protected" static="no" mutable="no">
+        <type><ref refid="interface_edit_class_controller" kindref="compound">EditClassController</ref> *</type>
+        <definition>EditClassController* EditClassPopOverController::editClass</definition>
+        <argsstring></argsstring>
+        <name>editClass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/EditClassPopOverController.h" line="16" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/EditClassPopOverController.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="interface_edit_class_pop_over_controller_1a5b3b5ec17ed49384479c3f2dd8db0ee3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EditClassPopOverController::show:viewElement:edit:</definition>
+        <argsstring>(DiagramView *diagramView,[viewElement] ClassViewElement *ve,[edit] BOOL edit)</argsstring>
+        <name>show:viewElement:edit:</name>
+        <param>
+          <type><ref refid="interface_diagram_view" kindref="compound">DiagramView</ref> *</type>
+          <declname>diagramView</declname>
+        </param>
+        <param>
+          <attributes>[viewElement]</attributes>
+          <type><ref refid="interface_class_view_element" kindref="compound">ClassViewElement</ref> *</type>
+          <declname>ve</declname>
+        </param>
+        <param>
+          <attributes>[edit]</attributes>
+          <type>BOOL</type>
+          <declname>edit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/EditClassPopOverController.h" line="16" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/EditClassPopOverController.m" bodystart="39" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="376">
+        <label>EditClassPopOverController</label>
+        <link refid="interface_edit_class_pop_over_controller"/>
+        <childnode refid="377" relation="public-inheritance">
+        </childnode>
+        <childnode refid="378" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="378">
+        <label>&lt;UIPopoverControllerDelegate&gt;</label>
+      </node>
+      <node id="377">
+        <label>UIPopoverController</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="393">
+        <label>RemoveOperationCommand</label>
+        <link refid="interface_remove_operation_command"/>
+        <childnode refid="386" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="387">
+        <label>Command</label>
+        <link refid="interface_command"/>
+        <childnode refid="388" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="402">
+        <label>SetVisibilityOfOperationCommand</label>
+        <link refid="interface_set_visibility_of_operation_command"/>
+        <childnode refid="386" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="395">
+        <label>SetNameCommand</label>
+        <link refid="interface_set_name_command"/>
+        <childnode refid="386" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="399">
+        <label>ClassViewElement</label>
+        <link refid="interface_class_view_element"/>
+        <childnode refid="400" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="400">
+        <label>BoundedViewElement</label>
+        <link refid="interface_bounded_view_element"/>
+        <childnode refid="389" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="386">
+        <label>ModifyCommand</label>
+        <link refid="interface_modify_command"/>
+        <childnode refid="387" relation="public-inheritance">
+        </childnode>
+        <childnode refid="389" relation="usage">
+          <edgelabel>viewElement</edgelabel>
+        </childnode>
+      </node>
+      <node id="392">
+        <label>SetOperationNameCommand</label>
+        <link refid="interface_set_operation_name_command"/>
+        <childnode refid="386" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="396">
+        <label>SwapPropertyCommand</label>
+        <link refid="interface_swap_property_command"/>
+        <childnode refid="386" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="379">
+        <label>EditClassPopOverController</label>
+        <link refid="interface_edit_class_pop_over_controller"/>
+        <childnode refid="380" relation="public-inheritance">
+        </childnode>
+        <childnode refid="381" relation="public-inheritance">
+        </childnode>
+        <childnode refid="382" relation="usage">
+          <edgelabel>editClass</edgelabel>
+        </childnode>
+      </node>
+      <node id="401">
+        <label>SetPropertyNameCommand</label>
+        <link refid="interface_set_property_name_command"/>
+        <childnode refid="386" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="385">
+        <label>RemovePropertyCommand</label>
+        <link refid="interface_remove_property_command"/>
+        <childnode refid="386" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="391">
+        <label>AddOperationCommand</label>
+        <link refid="interface_add_operation_command"/>
+        <childnode refid="386" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="382">
+        <label>EditClassController</label>
+        <link refid="interface_edit_class_controller"/>
+        <childnode refid="383" relation="public-inheritance">
+        </childnode>
+        <childnode refid="384" relation="public-inheritance">
+        </childnode>
+        <childnode refid="385" relation="usage">
+          <edgelabel>removePropertyCommand</edgelabel>
+        </childnode>
+        <childnode refid="391" relation="usage">
+          <edgelabel>addOperationCommand</edgelabel>
+        </childnode>
+        <childnode refid="392" relation="usage">
+          <edgelabel>setOperationNameCommand</edgelabel>
+        </childnode>
+        <childnode refid="393" relation="usage">
+          <edgelabel>removeOperationCommand</edgelabel>
+        </childnode>
+        <childnode refid="394" relation="usage">
+          <edgelabel>addPropertyCommand</edgelabel>
+        </childnode>
+        <childnode refid="395" relation="usage">
+          <edgelabel>setNameCommand</edgelabel>
+        </childnode>
+        <childnode refid="396" relation="usage">
+          <edgelabel>swapPropertyCommand</edgelabel>
+        </childnode>
+        <childnode refid="397" relation="usage">
+          <edgelabel>editingTextField</edgelabel>
+        </childnode>
+        <childnode refid="399" relation="usage">
+          <edgelabel>viewElement</edgelabel>
+        </childnode>
+        <childnode refid="401" relation="usage">
+          <edgelabel>setPropertyNameCommand</edgelabel>
+        </childnode>
+        <childnode refid="402" relation="usage">
+          <edgelabel>setVisibilityOfOperationCommand</edgelabel>
+        </childnode>
+        <childnode refid="403" relation="usage">
+          <edgelabel>setVisibilityOfPropertyCommand</edgelabel>
+        </childnode>
+        <childnode refid="404" relation="usage">
+          <edgelabel>swapOperationCommand</edgelabel>
+        </childnode>
+      </node>
+      <node id="403">
+        <label>SetVisibilityOfPropertyCommand</label>
+        <link refid="interface_set_visibility_of_property_command"/>
+        <childnode refid="386" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="381">
+        <label>&lt;UIPopoverControllerDelegate&gt;</label>
+      </node>
+      <node id="380">
+        <label>UIPopoverController</label>
+      </node>
+      <node id="384">
+        <label>&lt;UITextFieldDelegate&gt;</label>
+      </node>
+      <node id="397">
+        <label>TextFieldWithAccessoryKeyboard</label>
+        <link refid="interface_text_field_with_accessory_keyboard"/>
+        <childnode refid="398" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="383">
+        <label>UITableViewController</label>
+      </node>
+      <node id="394">
+        <label>AddPropertyCommand</label>
+        <link refid="interface_add_property_command"/>
+        <childnode refid="386" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="404">
+        <label>SwapOperationCommand</label>
+        <link refid="interface_swap_operation_command"/>
+        <childnode refid="386" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="390">
+        <label>UIView</label>
+      </node>
+      <node id="388">
+        <label>NSObject</label>
+      </node>
+      <node id="389">
+        <label>ViewElement</label>
+        <link refid="interface_view_element"/>
+        <childnode refid="390" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="398">
+        <label>UITextField</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/EditClassPopOverController.h" line="15" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/EditClassPopOverController.h" bodystart="15" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_edit_class_pop_over_controller_1ad6d1380ba77e5dbdebaff467ad08c194" prot="protected" virt="non-virtual"><scope>EditClassPopOverController</scope><name>editClass</name></member>
+      <member refid="interface_edit_class_pop_over_controller_1a5b3b5ec17ed49384479c3f2dd8db0ee3" prot="public" virt="virtual"><scope>EditClassPopOverController</scope><name>show:viewElement:edit:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

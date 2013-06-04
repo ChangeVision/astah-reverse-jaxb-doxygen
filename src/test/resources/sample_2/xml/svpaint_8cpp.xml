@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="svpaint_8cpp" kind="file">
+    <compoundname>svpaint.cpp</compoundname>
+    <includes refid="scrollview_8h" local="yes">scrollview.h</includes>
+    <includes refid="svmnode_8h" local="yes">svmnode.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">iostream</includes>
+    <incdepgraph>
+      <node id="42254">
+        <label>stdlib.h</label>
+      </node>
+      <node id="42251">
+        <label>scrollview.h</label>
+        <link refid="scrollview_8h"/>
+        <childnode refid="42252" relation="include">
+        </childnode>
+      </node>
+      <node id="42250">
+        <label>viewer/svpaint.cpp</label>
+        <link refid="svpaint.cpp"/>
+        <childnode refid="42251" relation="include">
+        </childnode>
+        <childnode refid="42253" relation="include">
+        </childnode>
+        <childnode refid="42254" relation="include">
+        </childnode>
+        <childnode refid="42255" relation="include">
+        </childnode>
+      </node>
+      <node id="42253">
+        <label>svmnode.h</label>
+        <link refid="svmnode_8h"/>
+      </node>
+      <node id="42255">
+        <label>iostream</label>
+      </node>
+      <node id="42252">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_s_v_paint" prot="public">SVPaint</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="svpaint_8cpp_1ae2af510c23176345b05b6a9a29fe524b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int rgb[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>rgb</name>
+        <initializer>= { 255, 255, 255 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/viewer/svpaint.cpp" line="26" column="1" bodyfile="/Users/makoto/Desktop/trunk/viewer/svpaint.cpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="svpaint_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><hruler/>
+ <heading level="2">Public Function Prototypes </heading>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/viewer/svpaint.cpp" line="221" column="1" bodyfile="/Users/makoto/Desktop/trunk/viewer/svpaint.cpp" bodystart="221" bodyend="225"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2007<sp/>Google<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Joern<sp/>Wanke</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Simple<sp/>drawing<sp/>program<sp/>to<sp/>illustrate<sp/>ScrollView<sp/>capabilities.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Functionality:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>The<sp/>menubar<sp/>is<sp/>used<sp/>to<sp/>select<sp/>from<sp/>different<sp/>sample<sp/>styles<sp/>of<sp/>input.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>With<sp/>the<sp/>RMB<sp/>it<sp/>is<sp/>possible<sp/>to<sp/>change<sp/>the<sp/>RGB<sp/>values<sp/>in<sp/>different</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>popup<sp/>menus.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>A<sp/>LMB<sp/>click<sp/>either<sp/>draws<sp/>point-to-point,<sp/>point<sp/>or<sp/>text.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>A<sp/>LMB<sp/>dragging<sp/>either<sp/>draws<sp/>a<sp/>line,<sp/>a<sp/>rectangle<sp/>or<sp/>ellipse.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Include<sp/>automatically<sp/>generated<sp/>configuration<sp/>file<sp/>if<sp/>running<sp/>autoconf.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>HAVE_CONFIG_H</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;config_auto.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GRAPHICS_DISABLED</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="scrollview_8h" kindref="compound">scrollview.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="svmnode_8h" kindref="compound">svmnode.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>current<sp/>color<sp/>values<sp/>we<sp/>use,<sp/>initially<sp/>white<sp/>(==<sp/>ScrollView::WHITE).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="svpaint_8cpp_1ae2af510c23176345b05b6a9a29fe524b" kindref="member">rgb</ref>[3]<sp/>=<sp/>{<sp/>255,<sp/>255,<sp/>255<sp/>};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_s_v_paint" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_v_paint" kindref="compound">SVPaint</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_s_v_event_handler" kindref="compound">SVEventHandler</ref><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_s_v_paint_1ad4dd260f56a7e9e11b47ab0a015488ac" kindref="member">SVPaint</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>server_name);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>the<sp/>main<sp/>event<sp/>handling<sp/>function<sp/>that<sp/>we<sp/>need<sp/>to<sp/>overwrite,<sp/>defined</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>in<sp/>SVEventHandler.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_v_paint_1acdab8b59cf5444f0fe8694caa692e50c" kindref="member">Notify</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_s_v_event" kindref="compound">SVEvent</ref>*<sp/>sv_event);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>Handler<sp/>take<sp/>care<sp/>of<sp/>the<sp/>SVET_POPUP,<sp/>SVET_MENU,<sp/>SVET_CLICK<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SVET_SELECTION<sp/>events.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PopupHandler(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_s_v_event" kindref="compound">SVEvent</ref>*<sp/>sv_event);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MenuBarHandler(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_s_v_event" kindref="compound">SVEvent</ref>*<sp/>sv_event);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ClickHandler(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_s_v_event" kindref="compound">SVEvent</ref>*<sp/>sv_event);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SelectionHandler(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_s_v_event" kindref="compound">SVEvent</ref>*<sp/>sv_event);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Convenience<sp/>functions<sp/>to<sp/>build<sp/>little<sp/>menus.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_s_v_menu_node" kindref="compound">SVMenuNode</ref>*<sp/>BuildPopupMenu();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_s_v_menu_node" kindref="compound">SVMenuNode</ref>*<sp/>BuildMenuBar();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Our<sp/>window.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><ref refid="class_scroll_view" kindref="compound">ScrollView</ref>*<sp/>window_;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>mode<sp/>we<sp/>are<sp/>in<sp/>when<sp/>an<sp/>SVET_CLICK<sp/>or<sp/>an<sp/>SVET_SELECTION<sp/>event<sp/>occurs.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>click_mode_;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>drag_mode_;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/>In<sp/>the<sp/>point-to-point<sp/>drawing<sp/>mode,<sp/>we<sp/>need<sp/>to<sp/>set<sp/>a<sp/>start-point<sp/>the<sp/>first</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">//<sp/>time<sp/>we<sp/>call<sp/>it<sp/>(e.g.<sp/>call<sp/>SetCursor).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>has_start_point_;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Build<sp/>a<sp/>sample<sp/>popup<sp/>menu.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><ref refid="class_s_v_menu_node" kindref="compound">SVMenuNode</ref>*<sp/>SVPaint::BuildPopupMenu()<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><ref refid="class_s_v_menu_node" kindref="compound">SVMenuNode</ref>*<sp/>root<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_s_v_menu_node" kindref="compound">SVMenuNode</ref>();<sp/><sp/></highlight><highlight class="comment">//<sp/>Empty<sp/>root<sp/>node</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Initial<sp/>color<sp/>is<sp/>white,<sp/>so<sp/>we<sp/><sp/>all<sp/>values<sp/>to<sp/>255.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>root-&gt;<ref refid="class_s_v_menu_node_1a2d119f4867dcb3015103eabb6cd7386d" kindref="member">AddChild</ref>(</highlight><highlight class="stringliteral">&quot;R&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Shown<sp/>caption.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>assoc.<sp/>command_id.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;255&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>initial<sp/>value.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Red<sp/>Color<sp/>Value?&quot;</highlight><highlight class="normal">);<sp/><sp/></highlight><highlight class="comment">//<sp/>Shown<sp/>description.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>root-&gt;<ref refid="class_s_v_menu_node_1a2d119f4867dcb3015103eabb6cd7386d" kindref="member">AddChild</ref>(</highlight><highlight class="stringliteral">&quot;G&quot;</highlight><highlight class="normal">,<sp/>2,<sp/></highlight><highlight class="stringliteral">&quot;255&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Green<sp/>Color<sp/>Value?&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>root-&gt;<ref refid="class_s_v_menu_node_1a2d119f4867dcb3015103eabb6cd7386d" kindref="member">AddChild</ref>(</highlight><highlight class="stringliteral">&quot;B&quot;</highlight><highlight class="normal">,<sp/>3,<sp/></highlight><highlight class="stringliteral">&quot;255&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Blue<sp/>Color<sp/>Value?&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>root;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Build<sp/>a<sp/>sample<sp/>menu<sp/>bar.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><ref refid="class_s_v_menu_node" kindref="compound">SVMenuNode</ref>*<sp/>SVPaint::BuildMenuBar()<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><ref refid="class_s_v_menu_node" kindref="compound">SVMenuNode</ref>*<sp/>root<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_s_v_menu_node" kindref="compound">SVMenuNode</ref>();<sp/><sp/></highlight><highlight class="comment">//<sp/>Empty<sp/>root<sp/>node</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>some<sp/>submenus<sp/>and<sp/>add<sp/>them<sp/>to<sp/>the<sp/>root.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><ref refid="class_s_v_menu_node" kindref="compound">SVMenuNode</ref>*<sp/>click<sp/>=<sp/>root-&gt;<ref refid="class_s_v_menu_node_1a2d119f4867dcb3015103eabb6cd7386d" kindref="member">AddChild</ref>(</highlight><highlight class="stringliteral">&quot;Clicking&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><ref refid="class_s_v_menu_node" kindref="compound">SVMenuNode</ref>*<sp/>drag<sp/>=<sp/>root-&gt;<ref refid="class_s_v_menu_node_1a2d119f4867dcb3015103eabb6cd7386d" kindref="member">AddChild</ref>(</highlight><highlight class="stringliteral">&quot;Dragging&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Put<sp/>some<sp/>nodes<sp/>into<sp/>the<sp/>submenus.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>click-&gt;<ref refid="class_s_v_menu_node_1a2d119f4867dcb3015103eabb6cd7386d" kindref="member">AddChild</ref>(</highlight><highlight class="stringliteral">&quot;Point<sp/>to<sp/>Point<sp/>Drawing&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="comment">//<sp/>Caption.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>command_id.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>click-&gt;<ref refid="class_s_v_menu_node_1a2d119f4867dcb3015103eabb6cd7386d" kindref="member">AddChild</ref>(</highlight><highlight class="stringliteral">&quot;Point<sp/>Drawing&quot;</highlight><highlight class="normal">,<sp/>2);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>click-&gt;<ref refid="class_s_v_menu_node_1a2d119f4867dcb3015103eabb6cd7386d" kindref="member">AddChild</ref>(</highlight><highlight class="stringliteral">&quot;Text<sp/>Drawing&quot;</highlight><highlight class="normal">,<sp/>3);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>drag-&gt;<ref refid="class_s_v_menu_node_1a2d119f4867dcb3015103eabb6cd7386d" kindref="member">AddChild</ref>(</highlight><highlight class="stringliteral">&quot;Line<sp/>Drawing&quot;</highlight><highlight class="normal">,<sp/>4);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>drag-&gt;<ref refid="class_s_v_menu_node_1a2d119f4867dcb3015103eabb6cd7386d" kindref="member">AddChild</ref>(</highlight><highlight class="stringliteral">&quot;Rectangle<sp/>Drawing&quot;</highlight><highlight class="normal">,<sp/>5);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>drag-&gt;<ref refid="class_s_v_menu_node_1a2d119f4867dcb3015103eabb6cd7386d" kindref="member">AddChild</ref>(</highlight><highlight class="stringliteral">&quot;Ellipse<sp/>Drawing&quot;</highlight><highlight class="normal">,<sp/>6);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>root;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Takes<sp/>care<sp/>of<sp/>the<sp/>SVET_POPUP<sp/>events.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">//<sp/>In<sp/>our<sp/>case,<sp/>SVET_POPUP<sp/>is<sp/>used<sp/>to<sp/>set<sp/>RGB<sp/>values.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SVPaint::PopupHandler(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_s_v_event" kindref="compound">SVEvent</ref>*<sp/>sv_event)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Since<sp/>we<sp/>only<sp/>have<sp/>the<sp/>RGB<sp/>values<sp/>as<sp/>popup<sp/>items,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>take<sp/>a<sp/>shortcut<sp/>to<sp/>not<sp/>bloat<sp/>up<sp/>code:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><ref refid="svpaint_8cpp_1ae2af510c23176345b05b6a9a29fe524b" kindref="member">rgb</ref>[sv_event-&gt;<ref refid="struct_s_v_event_1ad0db5c2aa893a41b6c6f65b9d3f62318" kindref="member">command_id</ref><sp/>-<sp/>1]<sp/>=<sp/>atoi(sv_event-&gt;<ref refid="struct_s_v_event_1a6e0de466c57df117c731bfb4db68fc79" kindref="member">parameter</ref>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>window_-&gt;<ref refid="class_scroll_view_1a79855c525ec660b452382e9813d2edb5" kindref="member">Pen</ref>(<ref refid="svpaint_8cpp_1ae2af510c23176345b05b6a9a29fe524b" kindref="member">rgb</ref>[0],<sp/><ref refid="svpaint_8cpp_1ae2af510c23176345b05b6a9a29fe524b" kindref="member">rgb</ref>[1],<sp/><ref refid="svpaint_8cpp_1ae2af510c23176345b05b6a9a29fe524b" kindref="member">rgb</ref>[2]);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Takes<sp/>care<sp/>of<sp/>the<sp/>SVET_MENU<sp/>events.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">//<sp/>In<sp/>our<sp/>case,<sp/>we<sp/>change<sp/>either<sp/>the<sp/>click_mode_<sp/>(commands<sp/>1-3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">//<sp/>or<sp/>the<sp/>drag_mode_<sp/>(commands<sp/>4-6).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SVPaint::MenuBarHandler(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_s_v_event" kindref="compound">SVEvent</ref>*<sp/>sv_event)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((sv_event-&gt;<ref refid="struct_s_v_event_1ad0db5c2aa893a41b6c6f65b9d3f62318" kindref="member">command_id</ref><sp/>&gt;<sp/>0)<sp/>&amp;&amp;<sp/>(sv_event-&gt;<ref refid="struct_s_v_event_1ad0db5c2aa893a41b6c6f65b9d3f62318" kindref="member">command_id</ref><sp/>&lt;<sp/>4))<sp/>{<sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>click_mode_<sp/>=<sp/>sv_event-&gt;<ref refid="struct_s_v_event_1ad0db5c2aa893a41b6c6f65b9d3f62318" kindref="member">command_id</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>has_start_point_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/>drag_mode_<sp/>=<sp/>sv_event-&gt;<ref refid="struct_s_v_event_1ad0db5c2aa893a41b6c6f65b9d3f62318" kindref="member">command_id</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Takes<sp/>care<sp/>of<sp/>the<sp/>SVET_CLICK<sp/>events.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Depending<sp/>on<sp/>the<sp/>click_mode_<sp/>we<sp/>are<sp/>in,<sp/>either<sp/>do<sp/>Point-to-Point<sp/>drawing,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">//<sp/>point<sp/>drawing,<sp/>or<sp/>draw<sp/>text.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SVPaint::ClickHandler(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_s_v_event" kindref="compound">SVEvent</ref>*<sp/>sv_event)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(click_mode_)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:<sp/></highlight><highlight class="comment">//Point<sp/>to<sp/>Point</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(has_start_point_)<sp/>{<sp/>window_-&gt;<ref refid="class_scroll_view_1a101de80a4722fe821969f61f6e7303a6" kindref="member">DrawTo</ref>(sv_event-&gt;<ref refid="struct_s_v_event_1a45ffe2bc44987a5461278e78de76f6f7" kindref="member">x</ref>,<sp/>sv_event-&gt;<ref refid="struct_s_v_event_1aabace8b3b902fe15aef808ad9c203bb7" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>has_start_point_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window_-&gt;<ref refid="class_scroll_view_1a730b182e350dfe37b0986d7f0591fee5" kindref="member">SetCursor</ref>(sv_event-&gt;<ref refid="struct_s_v_event_1a45ffe2bc44987a5461278e78de76f6f7" kindref="member">x</ref>,<sp/>sv_event-&gt;<ref refid="struct_s_v_event_1aabace8b3b902fe15aef808ad9c203bb7" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:<sp/></highlight><highlight class="comment">//Point<sp/>Drawing..simulated<sp/>by<sp/>drawing<sp/>a<sp/>1<sp/>pixel<sp/>line.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>window_-&gt;<ref refid="class_scroll_view_1a2ba16f17fc401bb28be1a08160207e45" kindref="member">Line</ref>(sv_event-&gt;<ref refid="struct_s_v_event_1a45ffe2bc44987a5461278e78de76f6f7" kindref="member">x</ref>,<sp/>sv_event-&gt;<ref refid="struct_s_v_event_1aabace8b3b902fe15aef808ad9c203bb7" kindref="member">y</ref>,<sp/>sv_event-&gt;<ref refid="struct_s_v_event_1a45ffe2bc44987a5461278e78de76f6f7" kindref="member">x</ref>,<sp/>sv_event-&gt;<ref refid="struct_s_v_event_1aabace8b3b902fe15aef808ad9c203bb7" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>3:<sp/></highlight><highlight class="comment">//Text</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>show<sp/>a<sp/>modal<sp/>input<sp/>dialog<sp/>on<sp/>our<sp/>window,<sp/>then<sp/>draw<sp/>the<sp/>input<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>finally<sp/>delete<sp/>the<sp/>input<sp/>pointer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>p<sp/>=<sp/>window_-&gt;<ref refid="class_scroll_view_1ac8df851fca17eed55ad4e70d27104265" kindref="member">ShowInputDialog</ref>(</highlight><highlight class="stringliteral">&quot;Text:&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>window_-&gt;<ref refid="class_scroll_view_1a4c5cb55d6eab9d7d996d25ed8922593d" kindref="member">Text</ref>(sv_event-&gt;<ref refid="struct_s_v_event_1a45ffe2bc44987a5461278e78de76f6f7" kindref="member">x</ref>,<sp/>sv_event-&gt;<ref refid="struct_s_v_event_1aabace8b3b902fe15aef808ad9c203bb7" kindref="member">y</ref>,<sp/>p);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>p;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Takes<sp/>care<sp/>of<sp/>the<sp/>SVET_SELECTION<sp/>events.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Depending<sp/>on<sp/>the<sp/>drag_mode_<sp/>we<sp/>are<sp/>in,<sp/>either<sp/>draw<sp/>a<sp/>line,<sp/>a<sp/>rectangle<sp/>or</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="comment">//<sp/>an<sp/>ellipse.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SVPaint::SelectionHandler(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_s_v_event" kindref="compound">SVEvent</ref>*<sp/>sv_event)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(drag_mode_)<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//FIXME<sp/>inversed<sp/>x_size,<sp/>y_size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>4:<sp/></highlight><highlight class="comment">//Line</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>window_-&gt;<ref refid="class_scroll_view_1a2ba16f17fc401bb28be1a08160207e45" kindref="member">Line</ref>(sv_event-&gt;<ref refid="struct_s_v_event_1a45ffe2bc44987a5461278e78de76f6f7" kindref="member">x</ref>,<sp/>sv_event-&gt;<ref refid="struct_s_v_event_1aabace8b3b902fe15aef808ad9c203bb7" kindref="member">y</ref>,<sp/></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sv_event-&gt;<ref refid="struct_s_v_event_1a45ffe2bc44987a5461278e78de76f6f7" kindref="member">x</ref><sp/>-<sp/>sv_event-&gt;<ref refid="struct_s_v_event_1a5fd198e994158c7bd67cb5e099beb3bc" kindref="member">x_size</ref>,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sv_event-&gt;<ref refid="struct_s_v_event_1aabace8b3b902fe15aef808ad9c203bb7" kindref="member">y</ref><sp/>-<sp/>sv_event-&gt;<ref refid="struct_s_v_event_1ad0a03e02e396750e6f77e01fe22d5ae0" kindref="member">y_size</ref>);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>5:<sp/></highlight><highlight class="comment">//Rectangle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>window_-&gt;<ref refid="class_scroll_view_1ac2a8fdf5d37967ea4a298dc092b6ed0e" kindref="member">Rectangle</ref>(sv_event-&gt;<ref refid="struct_s_v_event_1a45ffe2bc44987a5461278e78de76f6f7" kindref="member">x</ref>,<sp/>sv_event-&gt;<ref refid="struct_s_v_event_1aabace8b3b902fe15aef808ad9c203bb7" kindref="member">y</ref>,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sv_event-&gt;<ref refid="struct_s_v_event_1a45ffe2bc44987a5461278e78de76f6f7" kindref="member">x</ref><sp/>-<sp/>sv_event-&gt;<ref refid="struct_s_v_event_1a5fd198e994158c7bd67cb5e099beb3bc" kindref="member">x_size</ref>,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sv_event-&gt;<ref refid="struct_s_v_event_1aabace8b3b902fe15aef808ad9c203bb7" kindref="member">y</ref><sp/>-<sp/>sv_event-&gt;<ref refid="struct_s_v_event_1ad0a03e02e396750e6f77e01fe22d5ae0" kindref="member">y_size</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>6:<sp/></highlight><highlight class="comment">//Ellipse</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>window_-&gt;<ref refid="class_scroll_view_1a2c2cf6a263579ef46cbc8933c02e3549" kindref="member">Ellipse</ref>(sv_event-&gt;<ref refid="struct_s_v_event_1a45ffe2bc44987a5461278e78de76f6f7" kindref="member">x</ref><sp/>-<sp/>sv_event-&gt;<ref refid="struct_s_v_event_1a5fd198e994158c7bd67cb5e099beb3bc" kindref="member">x_size</ref>,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sv_event-&gt;<ref refid="struct_s_v_event_1aabace8b3b902fe15aef808ad9c203bb7" kindref="member">y</ref><sp/>-<sp/>sv_event-&gt;<ref refid="struct_s_v_event_1ad0a03e02e396750e6f77e01fe22d5ae0" kindref="member">y_size</ref>,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sv_event-&gt;<ref refid="struct_s_v_event_1a5fd198e994158c7bd67cb5e099beb3bc" kindref="member">x_size</ref>,<sp/>sv_event-&gt;<ref refid="struct_s_v_event_1ad0a03e02e396750e6f77e01fe22d5ae0" kindref="member">y_size</ref>);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>event<sp/>handling<sp/>function<sp/>from<sp/>ScrollView<sp/>which<sp/>we<sp/>have<sp/>to<sp/>overwrite.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="comment">//<sp/>We<sp/>handle<sp/>CLICK,<sp/>SELECTION,<sp/>MENU<sp/>and<sp/>POPUP<sp/>and<sp/>throw<sp/>away<sp/>all<sp/>other<sp/>events.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_v_paint_1acdab8b59cf5444f0fe8694caa692e50c" kindref="member">SVPaint::Notify</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_s_v_event" kindref="compound">SVEvent</ref>*<sp/>sv_event)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sv_event-&gt;<ref refid="struct_s_v_event_1a5bf8585bd1901b9103eb2783f8afe508" kindref="member">type</ref><sp/>==<sp/><ref refid="scrollview_8h_1a3688a0cf2f95d10a57e095222ccfe9a0a2afe407abe8c055c45765b85d20e7946" kindref="member">SVET_CLICK</ref>)<sp/>{<sp/>ClickHandler(sv_event);<sp/>}<sp/><sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sv_event-&gt;<ref refid="struct_s_v_event_1a5bf8585bd1901b9103eb2783f8afe508" kindref="member">type</ref><sp/>==<sp/><ref refid="scrollview_8h_1a3688a0cf2f95d10a57e095222ccfe9a0a9191b9a8fb723411f7fdce96dcd7d45c" kindref="member">SVET_SELECTION</ref>)<sp/>{<sp/>SelectionHandler(sv_event);<sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sv_event-&gt;<ref refid="struct_s_v_event_1a5bf8585bd1901b9103eb2783f8afe508" kindref="member">type</ref><sp/>==<sp/><ref refid="scrollview_8h_1a3688a0cf2f95d10a57e095222ccfe9a0aaf25c15351aa38a45513fe391dc73a11" kindref="member">SVET_MENU</ref>)<sp/>{<sp/>MenuBarHandler(sv_event);<sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sv_event-&gt;<ref refid="struct_s_v_event_1a5bf8585bd1901b9103eb2783f8afe508" kindref="member">type</ref><sp/>==<sp/><ref refid="scrollview_8h_1a3688a0cf2f95d10a57e095222ccfe9a0a3752863b11af097f289eb55405df8fa5" kindref="member">SVET_POPUP</ref>)<sp/>{<sp/>PopupHandler(sv_event);<sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{}<sp/></highlight><highlight class="comment">//throw<sp/>other<sp/>events<sp/>away</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Builds<sp/>a<sp/>new<sp/>window,<sp/>initializes<sp/>the<sp/>variables<sp/>and<sp/>event<sp/>handler<sp/>and<sp/>builds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>menu.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><ref refid="class_s_v_paint_1ad4dd260f56a7e9e11b47ab0a015488ac" kindref="member">SVPaint::SVPaint</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*server_name)<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>window_<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_scroll_view" kindref="compound">ScrollView</ref>(</highlight><highlight class="stringliteral">&quot;ScrollView<sp/>Paint<sp/>Example&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="comment">//<sp/>window<sp/>caption</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>x,y<sp/>window<sp/>position</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>500,<sp/>500,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>window<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>500,<sp/>500,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>canvas<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>whether<sp/>the<sp/>Y<sp/>axis<sp/>is<sp/>inversed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>is<sp/>included<sp/>due<sp/>to<sp/>legacy<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reasons<sp/>for<sp/>tesseract<sp/>and<sp/>enables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>us<sp/>to<sp/>have<sp/>(0,0)<sp/>as<sp/>the<sp/>LOWER<sp/>left</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>of<sp/>the<sp/>coordinate<sp/>system.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>server_name);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>server<sp/>address.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>start<sp/>modes<sp/>to<sp/>point-to-point<sp/>and<sp/>line<sp/>drawing.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>click_mode_<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>drag_mode_<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/>has_start_point_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Bild<sp/>our<sp/>menus<sp/>and<sp/>add<sp/>them<sp/>to<sp/>the<sp/>window.<sp/>The<sp/>flag<sp/>illustrates<sp/>whether</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>is<sp/>a<sp/>menu<sp/>bar.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><ref refid="class_s_v_menu_node" kindref="compound">SVMenuNode</ref>*<sp/>popup_menu<sp/>=<sp/>BuildPopupMenu();</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/>popup_menu-&gt;<ref refid="class_s_v_menu_node_1a693800de6b590b47e81213fef7de180a" kindref="member">BuildMenu</ref>(window_,</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><ref refid="class_s_v_menu_node" kindref="compound">SVMenuNode</ref>*<sp/>bar_menu<sp/>=<sp/>BuildMenuBar();</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/>bar_menu-&gt;<ref refid="class_s_v_menu_node_1a693800de6b590b47e81213fef7de180a" kindref="member">BuildMenu</ref>(window_,</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>initial<sp/>color<sp/>values<sp/>to<sp/>White<sp/>(could<sp/>also<sp/>be<sp/>done<sp/>by</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>passing<sp/>(rgb[0],<sp/>rgb[1],<sp/>rgb[2]).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/>window_-&gt;<ref refid="class_scroll_view_1a79855c525ec660b452382e9813d2edb5" kindref="member">Pen</ref>(<ref refid="class_scroll_view_1a100504544a5423a94222149ee9ed0fe8a0eab2b208fc9a5e2774f92cf3e768982" kindref="member">ScrollView::WHITE</ref>);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/>window_-&gt;<ref refid="class_scroll_view_1ad5f03af259325c42eaaffa843cd1fdde" kindref="member">Brush</ref>(<ref refid="class_scroll_view_1a100504544a5423a94222149ee9ed0fe8a0eab2b208fc9a5e2774f92cf3e768982" kindref="member">ScrollView::WHITE</ref>);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Adds<sp/>the<sp/>event<sp/>handler<sp/>to<sp/>the<sp/>window.<sp/>This<sp/>actually<sp/>ensures<sp/>that<sp/>Notify</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>gets<sp/>called<sp/>when<sp/>events<sp/>occur.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/>window_-&gt;<ref refid="class_scroll_view_1a598dcb006fb07910229fcfcf1ee05543" kindref="member" tooltip="Add an Event Listener to this ScrollView Window. ">AddEventHandler</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>window<sp/>visible<sp/>(calling<sp/>this<sp/>is<sp/>important<sp/>to<sp/>actually<sp/>render</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>everything.<sp/>Without<sp/>this<sp/>call,<sp/>the<sp/>window<sp/>would<sp/>also<sp/>be<sp/>drawn,<sp/>but<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>menu<sp/>bars<sp/>would<sp/>be<sp/>missing.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/>window_-&gt;<ref refid="class_scroll_view_1a9b065fb8e11357d41bb0f55a510e9f40" kindref="member">SetVisible</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Rest<sp/>this<sp/>thread<sp/>until<sp/>its<sp/>window<sp/>is<sp/>destroyed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Note<sp/>that<sp/>a<sp/>special<sp/>eventhandling<sp/>thread<sp/>was<sp/>created<sp/>when<sp/>constructing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>window.<sp/>Due<sp/>to<sp/>this,<sp/>the<sp/>application<sp/>will<sp/>not<sp/>deadlock<sp/>here.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/>window_-&gt;<ref refid="class_scroll_view_1a0b820b3fe7a2ce083da0784e9339a1ad" kindref="member">AwaitEvent</ref>(<ref refid="scrollview_8h_1a3688a0cf2f95d10a57e095222ccfe9a0adbe9fb2ca110dbf1b838d845d32a89e7" kindref="member">SVET_DESTROY</ref>);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>now<sp/>have<sp/>3<sp/>Threads<sp/>running:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>(1)<sp/>The<sp/>MessageReceiver<sp/>thread<sp/>which<sp/>fetches<sp/>messages<sp/>and<sp/>distributes<sp/>them</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>(2)<sp/>The<sp/>EventHandler<sp/>thread<sp/>which<sp/>handles<sp/>all<sp/>events<sp/>for<sp/>window_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>(3)<sp/>The<sp/>main<sp/>thread<sp/>which<sp/>waits<sp/>on<sp/>window_<sp/>for<sp/>a<sp/>DESTROY<sp/>event<sp/>(blocked)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>a<sp/>parameter<sp/>is<sp/>given,<sp/>we<sp/>try<sp/>to<sp/>connect<sp/>to<sp/>the<sp/>given<sp/>server.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>enables<sp/>us<sp/>to<sp/>test<sp/>the<sp/>remote<sp/>capabilites<sp/>of<sp/>ScrollView.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="tesseractmain_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)<sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>server_name;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argc<sp/>&gt;<sp/>1)<sp/>{<sp/>server_name<sp/>=<sp/>argv[1];<sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/>server_name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;localhost&quot;</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_s_v_paint" kindref="compound">SVPaint</ref><sp/>svp(server_name);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>GRAPHICS_DISABLED</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/viewer/svpaint.cpp"/>
+  </compounddef>
+</doxygen>

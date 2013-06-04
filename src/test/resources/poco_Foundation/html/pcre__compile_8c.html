@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>My Project: src/pcre_compile.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.4 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">構成</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">pcre_compile.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="pcre__config_8h_source.html">pcre_config.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="pcre__internal_8h_source.html">pcre_internal.h</a>&quot;</code><br/>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+構成</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structverbitem.html">verbitem</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a95a3c07f6f5cdb6c70ce239175f163d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcre__compile_8c.html#a95a3c07f6f5cdb6c70ce239175f163d0">NLBLOCK</a>&#160;&#160;&#160;cd             /* Block containing newline information */</td></tr>
+<tr class="separator:a95a3c07f6f5cdb6c70ce239175f163d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24a8ab0a4c94d7ad2ea58b502f552136"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcre__compile_8c.html#a24a8ab0a4c94d7ad2ea58b502f552136">PSSTART</a>&#160;&#160;&#160;start_pattern  /* Field containing processed string start */</td></tr>
+<tr class="separator:a24a8ab0a4c94d7ad2ea58b502f552136"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7e8ae41e062a5935164c1e0c4c2b1f0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcre__compile_8c.html#af7e8ae41e062a5935164c1e0c4c2b1f0">PSEND</a>&#160;&#160;&#160;end_pattern    /* Field containing processed string end */</td></tr>
+<tr class="separator:af7e8ae41e062a5935164c1e0c4c2b1f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac47a41bc402846743c4490200f23ed2c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcre__compile_8c.html#ac47a41bc402846743c4490200f23ed2c">SETBIT</a>(a, b)&#160;&#160;&#160;a[b/8] |= (1 &lt;&lt; (b%8))</td></tr>
+<tr class="separator:ac47a41bc402846743c4490200f23ed2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadb8b9f58ce39150beab75aa4003816a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcre__compile_8c.html#aadb8b9f58ce39150beab75aa4003816a">OFLOW_MAX</a>&#160;&#160;&#160;(INT_MAX - 20)</td></tr>
+<tr class="separator:aadb8b9f58ce39150beab75aa4003816a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6ca9bdec2edc32d0268bd41de2f9b18"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcre__compile_8c.html#ae6ca9bdec2edc32d0268bd41de2f9b18">COMPILE_WORK_SIZE</a>&#160;&#160;&#160;(4096)</td></tr>
+<tr class="separator:ae6ca9bdec2edc32d0268bd41de2f9b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac44504206ba5e7edf67f453407103815"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcre__compile_8c.html#ac44504206ba5e7edf67f453407103815">STRING</a>(a)&#160;&#160;&#160;# a</td></tr>
+<tr class="separator:ac44504206ba5e7edf67f453407103815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca706bf8dd2234d7d20c5284a653d73b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcre__compile_8c.html#aca706bf8dd2234d7d20c5284a653d73b">XSTRING</a>(s)&#160;&#160;&#160;<a class="el" href="pcre__compile_8c.html#ac44504206ba5e7edf67f453407103815">STRING</a>(s)</td></tr>
+<tr class="separator:aca706bf8dd2234d7d20c5284a653d73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a48fea4df452819e68493a442c1cbe114"><td class="memItemLeft" align="right" valign="top">pcre *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcre__compile_8c.html#a48fea4df452819e68493a442c1cbe114">pcre_compile</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *pattern, int options, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char **errorptr, int *erroroffset, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> unsigned char *tables)</td></tr>
+<tr class="separator:a48fea4df452819e68493a442c1cbe114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a445a6fe3b6e83b2e5a2158bb4f56da86"><td class="memItemLeft" align="right" valign="top">pcre *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pcre__compile_8c.html#a445a6fe3b6e83b2e5a2158bb4f56da86">pcre_compile2</a> (<a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *pattern, int options, int *errorcodeptr, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char **errorptr, int *erroroffset, <a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> unsigned char *tables)</td></tr>
+<tr class="separator:a445a6fe3b6e83b2e5a2158bb4f56da86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義</h2>
+<a class="anchor" id="ae6ca9bdec2edc32d0268bd41de2f9b18"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COMPILE_WORK_SIZE&#160;&#160;&#160;(4096)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a95a3c07f6f5cdb6c70ce239175f163d0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NLBLOCK&#160;&#160;&#160;cd             /* Block containing newline information */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aadb8b9f58ce39150beab75aa4003816a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OFLOW_MAX&#160;&#160;&#160;(INT_MAX - 20)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af7e8ae41e062a5935164c1e0c4c2b1f0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PSEND&#160;&#160;&#160;end_pattern    /* Field containing processed string end */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a24a8ab0a4c94d7ad2ea58b502f552136"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PSSTART&#160;&#160;&#160;start_pattern  /* Field containing processed string start */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac47a41bc402846743c4490200f23ed2c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SETBIT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;a[b/8] |= (1 &lt;&lt; (b%8))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac44504206ba5e7edf67f453407103815"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STRING</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a)</td><td></td>
+          <td>&#160;&#160;&#160;# a</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aca706bf8dd2234d7d20c5284a653d73b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define XSTRING</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">s)</td><td></td>
+          <td>&#160;&#160;&#160;<a class="el" href="pcre__compile_8c.html#ac44504206ba5e7edf67f453407103815">STRING</a>(s)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数</h2>
+<a class="anchor" id="a48fea4df452819e68493a442c1cbe114"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pcre* pcre_compile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *&#160;</td>
+          <td class="paramname"><em>pattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char **&#160;</td>
+          <td class="paramname"><em>errorptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>erroroffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> unsigned char *&#160;</td>
+          <td class="paramname"><em>tables</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a445a6fe3b6e83b2e5a2158bb4f56da86"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pcre* pcre_compile2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *&#160;</td>
+          <td class="paramname"><em>pattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>options</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>errorcodeptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char **&#160;</td>
+          <td class="paramname"><em>errorptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>erroroffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a2c212835823e3c54a8ab6d95c652660e">const</a> unsigned char *&#160;</td>
+          <td class="paramname"><em>tables</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+My Projectに対してThu May 23 2013 12:59:26に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

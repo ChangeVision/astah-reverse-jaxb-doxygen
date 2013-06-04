@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_command_line_parser_test_8h" kind="file">
+    <compoundname>CommandLineParserTest.h</compoundname>
+    <includes local="no">cppunit/extensions/HelperMacros.h</includes>
+    <includedby refid="_command_line_parser_test_8cpp" local="yes">src/DllPlugInTester/CommandLineParserTest.cpp</includedby>
+    <incdepgraph>
+      <node id="299">
+        <label>src/DllPlugInTester/CommandLineParserTest.h</label>
+        <link refid="CommandLineParserTest.h"/>
+        <childnode refid="300" relation="include">
+        </childnode>
+      </node>
+      <node id="300">
+        <label>cppunit/extensions/HelperMacros.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="301">
+        <label>src/DllPlugInTester/CommandLineParserTest.h</label>
+        <link refid="CommandLineParserTest.h"/>
+        <childnode refid="302" relation="include">
+        </childnode>
+      </node>
+      <node id="302">
+        <label>src/DllPlugInTester/CommandLineParserTest.cpp</label>
+        <link refid="_command_line_parser_test_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_command_line_parser_test" prot="public">CommandLineParserTest</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>COMMANDLINEPARSERTEST_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>COMMANDLINEPARSERTEST_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cppunit/extensions/HelperMacros.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_command_line_parser" kindref="compound">CommandLineParser</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_command_line_parser_exception" kindref="compound">CommandLineParserException</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_command_line_parser_test" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_command_line_parser_test" kindref="compound">CommandLineParserTest</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>CPPUNIT_NS::TestCase</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>CPPUNIT_TEST_SUITE(<sp/><ref refid="class_command_line_parser_test" kindref="compound">CommandLineParserTest</ref><sp/>);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>CPPUNIT_TEST(<sp/><ref refid="class_command_line_parser_test_1abd87b26704c2722024879e432b1cd1e8" kindref="member">testEmptyCommandLine</ref><sp/>);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>CPPUNIT_TEST(<sp/><ref refid="class_command_line_parser_test_1a115853fed68c76ce7ba5282d48dc1a17" kindref="member">testFlagCompiler</ref><sp/>);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>CPPUNIT_TEST(<sp/><ref refid="class_command_line_parser_test_1afbecde21b9b1cbd3acc652cda4250543" kindref="member">testLongFlagBriefProgress</ref><sp/>);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>CPPUNIT_TEST(<sp/><ref refid="class_command_line_parser_test_1a2554b2e37a40efa0eb28ce24a018ea52" kindref="member">testFileName</ref><sp/>);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>CPPUNIT_TEST(<sp/><ref refid="class_command_line_parser_test_1a5f3e3e24e6c8a111824261d8399cd655" kindref="member">testTestPath</ref><sp/>);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>CPPUNIT_TEST(<sp/><ref refid="class_command_line_parser_test_1a3dffe250d24cfd071b967ed1628af464" kindref="member">testParameterWithSpace</ref><sp/>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>CPPUNIT_TEST_EXCEPTION(<sp/><ref refid="class_command_line_parser_test_1a852c29d51bde93cc497e44f52e85b06c" kindref="member">testMissingStyleSheetParameterThrow</ref>,<sp/><ref refid="class_command_line_parser_exception" kindref="compound">CommandLineParserException</ref>);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>CPPUNIT_TEST_EXCEPTION(<sp/><ref refid="class_command_line_parser_test_1a174af3c6a643e9b54ea028f331022376" kindref="member">testMissingEncodingParameterThrow</ref>,<sp/><ref refid="class_command_line_parser_exception" kindref="compound">CommandLineParserException</ref>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>CPPUNIT_TEST(<sp/><ref refid="class_command_line_parser_test_1a98837d5486864661a94118d0fce6e6b0" kindref="member">testXmlFileNameIsOptional</ref><sp/>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>CPPUNIT_TEST(<sp/><ref refid="class_command_line_parser_test_1a0b65bbe288482ee86a1a89f9607b13f1" kindref="member">testPlugInsWithParameters</ref><sp/>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>CPPUNIT_TEST_SUITE_END();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><ref refid="class_command_line_parser_test_1aeff163912cbdddba7997c02e37f8a359" kindref="member">CommandLineParserTest</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_test_1a970fa0b8083076a34d4ec9b316fe94d9" kindref="member">‾CommandLineParserTest</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_test_1a99755b70653313f8f2bbc3ff130671e4" kindref="member">setUp</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_test_1a46efbc7974067e069fd9a6b507ae3fd9" kindref="member">tearDown</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_test_1abd87b26704c2722024879e432b1cd1e8" kindref="member">testEmptyCommandLine</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_test_1a115853fed68c76ce7ba5282d48dc1a17" kindref="member">testFlagCompiler</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_test_1afbecde21b9b1cbd3acc652cda4250543" kindref="member">testLongFlagBriefProgress</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_test_1a2554b2e37a40efa0eb28ce24a018ea52" kindref="member">testFileName</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_test_1a5f3e3e24e6c8a111824261d8399cd655" kindref="member">testTestPath</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_test_1a3dffe250d24cfd071b967ed1628af464" kindref="member">testParameterWithSpace</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_test_1a852c29d51bde93cc497e44f52e85b06c" kindref="member">testMissingStyleSheetParameterThrow</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_test_1a174af3c6a643e9b54ea028f331022376" kindref="member">testMissingEncodingParameterThrow</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_test_1a98837d5486864661a94118d0fce6e6b0" kindref="member">testXmlFileNameIsOptional</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_test_1a0b65bbe288482ee86a1a89f9607b13f1" kindref="member">testPlugInsWithParameters</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><ref refid="class_command_line_parser_test_1aeff163912cbdddba7997c02e37f8a359" kindref="member">CommandLineParserTest</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_test" kindref="compound">CommandLineParserTest</ref><sp/>&amp;other<sp/>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator<sp/>=(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_test" kindref="compound">CommandLineParserTest</ref><sp/>&amp;other<sp/>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>parse(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**lines<sp/>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><ref refid="class_command_line_parser" kindref="compound">CommandLineParser</ref><sp/>*_parser;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Inlines<sp/>methods<sp/>for<sp/>CommandLineParserTest:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">//<sp/>------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>COMMANDLINEPARSERTEST_H</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/DllPlugInTester/CommandLineParserTest.h"/>
+  </compounddef>
+</doxygen>

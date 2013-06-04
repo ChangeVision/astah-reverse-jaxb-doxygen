@@ -1,0 +1,350 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="class_unicity_table" kind="class" prot="public">
+    <compoundname>UnicityTable</compoundname>
+    <derivedcompoundref refid="class_unicity_table_eq_eq" prot="public" virt="non-virtual">UnicityTableEqEq&lt; T &gt;</derivedcompoundref>
+    <includes refid="unicity__table_8h" local="no">unicity_table.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_unicity_table_1a42735023a7264e76f51d96156496441f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; T &gt;</type>
+        <definition>GenericVector&lt;T&gt; UnicityTable&lt; T &gt;::table_</definition>
+        <argsstring></argsstring>
+        <name>table_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" line="93" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_unicity_table_1ae43dc449a688c66ed303029ff999f06c" prot="private" static="no" mutable="yes">
+        <type><ref refid="class_tess_result_callback2" kindref="compound">TessResultCallback2</ref>&lt; bool, T const &amp;, T const &amp; &gt; *</type>
+        <definition>TessResultCallback2&lt;bool, T const &amp;, T const &amp;&gt;* UnicityTable&lt; T &gt;::compare_cb_</definition>
+        <argsstring></argsstring>
+        <name>compare_cb_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" line="95" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_unicity_table_1ad2cf3104bf7e0b115d3709359e57cc72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>UnicityTable&lt; T &gt;::UnicityTable</definition>
+        <argsstring>()</argsstring>
+        <name>UnicityTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" line="35" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" bodystart="108" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unicity_table_1a98181de03a916ae28b9443a8821e90a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>UnicityTable&lt; T &gt;::~UnicityTable</definition>
+        <argsstring>()</argsstring>
+        <name>~UnicityTable</name>
+        <briefdescription>
+<para>Clear the structures and deallocate internal structures. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" line="37" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" bodystart="114" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unicity_table_1aed48975fff77cc08f4724edd62e52b2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnicityTable&lt; T &gt;::reserve</definition>
+        <argsstring>(int size)</argsstring>
+        <name>reserve</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reserve some memory. If there is size or more elements, the table will then allocate size * 2 elements. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" line="41" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" bodystart="126" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unicity_table_1a834de17f090dcfcc6625b01c5a627c2f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int UnicityTable&lt; T &gt;::size</definition>
+        <argsstring>() const </argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>Return the size used. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" line="44" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" bodystart="119" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unicity_table_1a3b3107bc72d9edfe501eaba7404de7eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const T &amp;</type>
+        <definition>const T &amp; UnicityTable&lt; T &gt;::get</definition>
+        <argsstring>(int id) const </argsstring>
+        <name>get</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Return the object from an id. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" line="47" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" bodystart="132" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unicity_table_1a6913a3f4f880861e0eca6c606e47646a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T *</type>
+        <definition>T * UnicityTable&lt; T &gt;::get_mutable</definition>
+        <argsstring>(int id)</argsstring>
+        <name>get_mutable</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" line="50" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" bodystart="137" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unicity_table_1a4820bb7a54cf6ecda86856161c6d5a2f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int UnicityTable&lt; T &gt;::get_id</definition>
+        <argsstring>(T object) const </argsstring>
+        <name>get_id</name>
+        <param>
+          <type>T</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the id of the T object. This method NEEDS a compare_callback to be passed to set_compare_callback. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" line="55" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" bodystart="148" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unicity_table_1ae2ca9cd7a9bf7837306df260c218772b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UnicityTable&lt; T &gt;::contains</definition>
+        <argsstring>(T object) const </argsstring>
+        <name>contains</name>
+        <param>
+          <type>T</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+<para>Return true if T is in the table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" line="58" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" bodystart="154" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unicity_table_1a327b95e35d5624c791467a63860b6c6b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T</type>
+        <definition>T UnicityTable&lt; T &gt;::contains_id</definition>
+        <argsstring>(int id) const </argsstring>
+        <name>contains_id</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Return true if the id is valid. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" line="61" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" bodystart="142" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unicity_table_1a659534293ab0e46a46cab4421bebfb8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int UnicityTable&lt; T &gt;::push_back</definition>
+        <argsstring>(T object)</argsstring>
+        <name>push_back</name>
+        <param>
+          <type>T</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+<para>Add an element in the table. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" line="64" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" bodystart="160" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unicity_table_1accc4dcfc4923d6ec2cb0f19c9f21ecfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnicityTable&lt; T &gt;::set_clear_callback</definition>
+        <argsstring>(TessCallback1&lt; T &gt; *cb)</argsstring>
+        <name>set_clear_callback</name>
+        <param>
+          <type><ref refid="class_tess_callback1" kindref="compound">TessCallback1</ref>&lt; T &gt; *</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a callback to be called to delete the elements when the table took their ownership. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" line="68" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" bodystart="171" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unicity_table_1a7e1ff22ed9e31fd303ce9fea4f1eeff2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnicityTable&lt; T &gt;::set_compare_callback</definition>
+        <argsstring>(TessResultCallback2&lt; bool, T const &amp;, T const &amp; &gt; *cb)</argsstring>
+        <name>set_compare_callback</name>
+        <param>
+          <type><ref refid="class_tess_result_callback2" kindref="compound">TessResultCallback2</ref>&lt; bool, T const &amp;, T const &amp; &gt; *</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a callback to be called to compare the elements when needed (contains, get_id, ...) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" line="72" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" bodystart="178" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unicity_table_1a43dd3813d75e38232c26e5532b9a096f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnicityTable&lt; T &gt;::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clear the table, calling the callback function if any. All the owned Callbacks are also deleted. If you don&apos;t want the Callbacks to be deleted, before calling clear, set the callback to NULL. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" line="78" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" bodystart="185" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unicity_table_1a18c8fc9ccbd7c0befdae1ab65bafdb12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnicityTable&lt; T &gt;::move</definition>
+        <argsstring>(UnicityTable&lt; T &gt; *from)</argsstring>
+        <name>move</name>
+        <param>
+          <type><ref refid="class_unicity_table" kindref="compound">UnicityTable</ref>&lt; T &gt; *</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method clear the current object, then, does a shallow copy of its argument, and finally invalidate its argument. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" line="82" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" bodystart="204" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unicity_table_1a23b683e4ea0132af3004552f5d515d61" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UnicityTable&lt; T &gt;::write</definition>
+        <argsstring>(FILE *f, TessResultCallback2&lt; bool, FILE *, T const &amp; &gt; *cb) const </argsstring>
+        <name>write</name>
+        <param>
+          <type>FILE *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="class_tess_result_callback2" kindref="compound">TessResultCallback2</ref>&lt; bool, FILE *, T const &amp; &gt; *</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read/Write the table to a file. This does <emphasis>NOT</emphasis> read/write the callbacks. The Callback given must be permanent since they will be called more than once. The given callback will be deleted at the end. Returns false on read/write error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" line="88" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" bodystart="190" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unicity_table_1a31e2edb3f92024b211332a850723d237" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UnicityTable&lt; T &gt;::read</definition>
+        <argsstring>(FILE *f, TessResultCallback3&lt; bool, FILE *, T *, bool &gt; *cb, bool swap)</argsstring>
+        <name>read</name>
+        <param>
+          <type>FILE *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="class_tess_result_callback3" kindref="compound">TessResultCallback3</ref>&lt; bool, FILE *, T *, bool &gt; *</type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>swap</declname>
+        </param>
+        <briefdescription>
+<para>swap is used to switch the endianness. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" line="90" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" bodystart="196" bodyend="199"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2363">
+        <label>UnicityTable&lt; T &gt;</label>
+        <link refid="class_unicity_table"/>
+      </node>
+      <node id="2364">
+        <label>UnicityTableEqEq&lt; T &gt;</label>
+        <link refid="class_unicity_table_eq_eq"/>
+        <childnode refid="2363" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" line="33" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/unicity_table.h" bodystart="33" bodyend="96"/>
+    <listofallmembers>
+      <member refid="class_unicity_table_1a43dd3813d75e38232c26e5532b9a096f" prot="public" virt="non-virtual"><scope>UnicityTable</scope><name>clear</name></member>
+      <member refid="class_unicity_table_1ae43dc449a688c66ed303029ff999f06c" prot="private" virt="non-virtual"><scope>UnicityTable</scope><name>compare_cb_</name></member>
+      <member refid="class_unicity_table_1ae2ca9cd7a9bf7837306df260c218772b" prot="public" virt="non-virtual"><scope>UnicityTable</scope><name>contains</name></member>
+      <member refid="class_unicity_table_1a327b95e35d5624c791467a63860b6c6b" prot="public" virt="non-virtual"><scope>UnicityTable</scope><name>contains_id</name></member>
+      <member refid="class_unicity_table_1a3b3107bc72d9edfe501eaba7404de7eb" prot="public" virt="non-virtual"><scope>UnicityTable</scope><name>get</name></member>
+      <member refid="class_unicity_table_1a4820bb7a54cf6ecda86856161c6d5a2f" prot="public" virt="non-virtual"><scope>UnicityTable</scope><name>get_id</name></member>
+      <member refid="class_unicity_table_1a6913a3f4f880861e0eca6c606e47646a" prot="public" virt="non-virtual"><scope>UnicityTable</scope><name>get_mutable</name></member>
+      <member refid="class_unicity_table_1a18c8fc9ccbd7c0befdae1ab65bafdb12" prot="public" virt="non-virtual"><scope>UnicityTable</scope><name>move</name></member>
+      <member refid="class_unicity_table_1a659534293ab0e46a46cab4421bebfb8f" prot="public" virt="non-virtual"><scope>UnicityTable</scope><name>push_back</name></member>
+      <member refid="class_unicity_table_1a31e2edb3f92024b211332a850723d237" prot="public" virt="non-virtual"><scope>UnicityTable</scope><name>read</name></member>
+      <member refid="class_unicity_table_1aed48975fff77cc08f4724edd62e52b2e" prot="public" virt="non-virtual"><scope>UnicityTable</scope><name>reserve</name></member>
+      <member refid="class_unicity_table_1accc4dcfc4923d6ec2cb0f19c9f21ecfb" prot="public" virt="non-virtual"><scope>UnicityTable</scope><name>set_clear_callback</name></member>
+      <member refid="class_unicity_table_1a7e1ff22ed9e31fd303ce9fea4f1eeff2" prot="public" virt="non-virtual"><scope>UnicityTable</scope><name>set_compare_callback</name></member>
+      <member refid="class_unicity_table_1a834de17f090dcfcc6625b01c5a627c2f" prot="public" virt="non-virtual"><scope>UnicityTable</scope><name>size</name></member>
+      <member refid="class_unicity_table_1a42735023a7264e76f51d96156496441f" prot="private" virt="non-virtual"><scope>UnicityTable</scope><name>table_</name></member>
+      <member refid="class_unicity_table_1ad2cf3104bf7e0b115d3709359e57cc72" prot="public" virt="non-virtual"><scope>UnicityTable</scope><name>UnicityTable</name></member>
+      <member refid="class_unicity_table_1a23b683e4ea0132af3004552f5d515d61" prot="public" virt="non-virtual"><scope>UnicityTable</scope><name>write</name></member>
+      <member refid="class_unicity_table_1a98181de03a916ae28b9443a8821e90a5" prot="public" virt="non-virtual"><scope>UnicityTable</scope><name>~UnicityTable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

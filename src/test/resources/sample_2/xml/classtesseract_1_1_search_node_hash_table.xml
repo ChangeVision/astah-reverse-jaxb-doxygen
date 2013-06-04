@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_search_node_hash_table" kind="class" prot="public">
+    <compoundname>tesseract::SearchNodeHashTable</compoundname>
+    <includes refid="search__node_8h" local="no">search_node.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_search_node_hash_table_1ae5a6fa337b8f555eba57f5bc000a4014" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::SearchNodeHashTable::kSearchNodeHashBins</definition>
+        <argsstring></argsstring>
+        <name>kSearchNodeHashBins</name>
+        <initializer>= 4096</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/search_node.h" line="161" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/search_node.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_search_node_hash_table_1a14373564a05abc83ed8bf72b02f331e4" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::SearchNodeHashTable::kMaxSearchNodePerBin</definition>
+        <argsstring></argsstring>
+        <name>kMaxSearchNodePerBin</name>
+        <initializer>= 512</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/search_node.h" line="162" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/search_node.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_search_node_hash_table_1a5cb4fc17cf2e83853cfd5a934b47ae96" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::SearchNodeHashTable::bin_size_array_[kSearchNodeHashBins]</definition>
+        <argsstring>[kSearchNodeHashBins]</argsstring>
+        <name>bin_size_array_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/search_node.h" line="163" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/search_node.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_search_node_hash_table_1aa47863a4ed602d29cf344b89fe9340f3" prot="private" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_search_node" kindref="compound">SearchNode</ref> *</type>
+        <definition>SearchNode* tesseract::SearchNodeHashTable::bin_array_[kSearchNodeHashBins][kMaxSearchNodePerBin]</definition>
+        <argsstring>[kSearchNodeHashBins][kMaxSearchNodePerBin]</argsstring>
+        <name>bin_array_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/search_node.h" line="164" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/search_node.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_search_node_hash_table_1a562bdd5876b9292deb9584e8c4ad4ab4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::SearchNodeHashTable::SearchNodeHashTable</definition>
+        <argsstring>()</argsstring>
+        <name>SearchNodeHashTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/search_node.h" line="111" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/search_node.h" bodystart="111" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_search_node_hash_table_1a6101916ebcbb560f6f2f2382aa9dab6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::SearchNodeHashTable::~SearchNodeHashTable</definition>
+        <argsstring>()</argsstring>
+        <name>~SearchNodeHashTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/search_node.h" line="115" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/search_node.h" bodystart="115" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_search_node_hash_table_1aae7833296f799fb4577fe1d25ee76f28" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::SearchNodeHashTable::Insert</definition>
+        <argsstring>(LangModEdge *lang_mod_edge, SearchNode *srch_node)</argsstring>
+        <name>Insert</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_lang_mod_edge" kindref="compound">LangModEdge</ref> *</type>
+          <declname>lang_mod_edge</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_search_node" kindref="compound">SearchNode</ref> *</type>
+          <declname>srch_node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/search_node.h" line="119" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/search_node.h" bodystart="119" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_search_node_hash_table_1a2f437ed6409f38572913c64bf45b1249" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtesseract_1_1_search_node" kindref="compound">SearchNode</ref> *</type>
+        <definition>SearchNode* tesseract::SearchNodeHashTable::Lookup</definition>
+        <argsstring>(LangModEdge *lang_mod_edge, SearchNode *parent_node)</argsstring>
+        <name>Lookup</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_lang_mod_edge" kindref="compound">LangModEdge</ref> *</type>
+          <declname>lang_mod_edge</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_search_node" kindref="compound">SearchNode</ref> *</type>
+          <declname>parent_node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/search_node.h" line="137" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/search_node.h" bodystart="137" bodyend="156"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/makoto/Desktop/trunk/cube/search_node.h" line="109" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/search_node.h" bodystart="109" bodyend="165"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_search_node_hash_table_1aa47863a4ed602d29cf344b89fe9340f3" prot="private" virt="non-virtual"><scope>tesseract::SearchNodeHashTable</scope><name>bin_array_</name></member>
+      <member refid="classtesseract_1_1_search_node_hash_table_1a5cb4fc17cf2e83853cfd5a934b47ae96" prot="private" virt="non-virtual"><scope>tesseract::SearchNodeHashTable</scope><name>bin_size_array_</name></member>
+      <member refid="classtesseract_1_1_search_node_hash_table_1aae7833296f799fb4577fe1d25ee76f28" prot="public" virt="non-virtual"><scope>tesseract::SearchNodeHashTable</scope><name>Insert</name></member>
+      <member refid="classtesseract_1_1_search_node_hash_table_1a14373564a05abc83ed8bf72b02f331e4" prot="private" virt="non-virtual"><scope>tesseract::SearchNodeHashTable</scope><name>kMaxSearchNodePerBin</name></member>
+      <member refid="classtesseract_1_1_search_node_hash_table_1ae5a6fa337b8f555eba57f5bc000a4014" prot="private" virt="non-virtual"><scope>tesseract::SearchNodeHashTable</scope><name>kSearchNodeHashBins</name></member>
+      <member refid="classtesseract_1_1_search_node_hash_table_1a2f437ed6409f38572913c64bf45b1249" prot="public" virt="non-virtual"><scope>tesseract::SearchNodeHashTable</scope><name>Lookup</name></member>
+      <member refid="classtesseract_1_1_search_node_hash_table_1a562bdd5876b9292deb9584e8c4ad4ab4" prot="public" virt="non-virtual"><scope>tesseract::SearchNodeHashTable</scope><name>SearchNodeHashTable</name></member>
+      <member refid="classtesseract_1_1_search_node_hash_table_1a6101916ebcbb560f6f2f2382aa9dab6d" prot="public" virt="non-virtual"><scope>tesseract::SearchNodeHashTable</scope><name>~SearchNodeHashTable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

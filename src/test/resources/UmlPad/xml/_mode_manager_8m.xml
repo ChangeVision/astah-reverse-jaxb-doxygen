@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_mode_manager_8m" kind="file">
+    <compoundname>ModeManager.m</compoundname>
+    <includes refid="_mode_manager_8h" local="yes">ModeManager.h</includes>
+    <includes refid="_panel_manager_8h" local="yes">PanelManager.h</includes>
+    <incdepgraph>
+      <node id="1495">
+        <label>Mode.h</label>
+        <link refid="_mode_8h"/>
+        <childnode refid="1493" relation="include">
+        </childnode>
+      </node>
+      <node id="1498">
+        <label>MoveMode.h</label>
+        <link refid="_move_mode_8h"/>
+        <childnode refid="1493" relation="include">
+        </childnode>
+        <childnode refid="1495" relation="include">
+        </childnode>
+      </node>
+      <node id="1502">
+        <label>UIKit/UIKit.h</label>
+      </node>
+      <node id="1504">
+        <label>ConnectorTargetCommandPanel.h</label>
+        <link refid="_connector_target_command_panel_8h"/>
+        <childnode refid="1502" relation="include">
+        </childnode>
+        <childnode refid="1503" relation="include">
+        </childnode>
+      </node>
+      <node id="1503">
+        <label>CommandPanel.h</label>
+        <link refid="_command_panel_8h"/>
+        <childnode refid="1502" relation="include">
+        </childnode>
+      </node>
+      <node id="1499">
+        <label>ModifyRelationMode.h</label>
+        <link refid="_modify_relation_mode_8h"/>
+        <childnode refid="1493" relation="include">
+        </childnode>
+        <childnode refid="1495" relation="include">
+        </childnode>
+      </node>
+      <node id="1497">
+        <label>CommandManager.h</label>
+        <link refid="_command_manager_8h"/>
+        <childnode refid="1493" relation="include">
+        </childnode>
+      </node>
+      <node id="1494">
+        <label>TapMode.h</label>
+        <link refid="_tap_mode_8h"/>
+        <childnode refid="1493" relation="include">
+        </childnode>
+        <childnode refid="1495" relation="include">
+        </childnode>
+      </node>
+      <node id="1501">
+        <label>BasicCommandPanel.h</label>
+        <link refid="_basic_command_panel_8h"/>
+        <childnode refid="1502" relation="include">
+        </childnode>
+        <childnode refid="1503" relation="include">
+        </childnode>
+      </node>
+      <node id="1493">
+        <label>Foundation/Foundation.h</label>
+      </node>
+      <node id="1496">
+        <label>CreateRelationMode.h</label>
+        <link refid="_create_relation_mode_8h"/>
+        <childnode refid="1493" relation="include">
+        </childnode>
+        <childnode refid="1495" relation="include">
+        </childnode>
+        <childnode refid="1497" relation="include">
+        </childnode>
+      </node>
+      <node id="1492">
+        <label>ModeManager.h</label>
+        <link refid="_mode_manager_8h"/>
+        <childnode refid="1493" relation="include">
+        </childnode>
+        <childnode refid="1494" relation="include">
+        </childnode>
+        <childnode refid="1496" relation="include">
+        </childnode>
+        <childnode refid="1498" relation="include">
+        </childnode>
+        <childnode refid="1499" relation="include">
+        </childnode>
+      </node>
+      <node id="1491">
+        <label>Classes/ModeManager.m</label>
+        <link refid="ModeManager.m"/>
+        <childnode refid="1492" relation="include">
+        </childnode>
+        <childnode refid="1500" relation="include">
+        </childnode>
+      </node>
+      <node id="1500">
+        <label>PanelManager.h</label>
+        <link refid="_panel_manager_8h"/>
+        <childnode refid="1493" relation="include">
+        </childnode>
+        <childnode refid="1501" relation="include">
+        </childnode>
+        <childnode refid="1504" relation="include">
+        </childnode>
+        <childnode refid="1505" relation="include">
+        </childnode>
+      </node>
+      <node id="1505">
+        <label>SelectConnectorTypePanel.h</label>
+        <link refid="_select_connector_type_panel_8h"/>
+        <childnode refid="1493" relation="include">
+        </childnode>
+        <childnode refid="1503" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>ModeManager.m</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>UmlPad</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>梅田<sp/>政利<sp/>on<sp/>10/06/10.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>2010<sp/>Change<sp/>Vision.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_mode_manager_8h" kindref="compound">ModeManager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_panel_manager_8h" kindref="compound">PanelManager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">@implementation<sp/></highlight><highlight class="normal"><ref refid="interface_mode_manager" kindref="compound">ModeManager</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">@synthesize</highlight><highlight class="normal"><sp/><ref refid="interface_mode_manager_1a391fd66accbea489480e3fafa2f5983f" kindref="member">tapMode</ref>,<sp/><ref refid="interface_mode_manager_1a55b161c8f2b37c9a36ebe1b5c4cdd35a" kindref="member">createRelationMode</ref>,<sp/><ref refid="interface_mode_manager_1a3f4d153c84eb9ba351fd0a241917de62" kindref="member">moveMode</ref>,<sp/><ref refid="interface_mode_manager_1a5ffb93820bd77ac4be2c99abf151913b" kindref="member">modifyRelationMode</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">+<sp/>(id)<ref refid="interface_mode_manager_1a7a7bff178c146dcf0efc166054c6923a" kindref="member">instance</ref><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>_instance<sp/>=<sp/>nil;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>@</highlight><highlight class="keyword">synchronized</highlight><highlight class="normal">(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!_instance)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_instance<sp/>=<sp/>[[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>alloc]<sp/>init];</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_instance;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">-<sp/>(id)init<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>=<sp/>[</highlight><highlight class="keyword">super</highlight><highlight class="normal"><sp/>init];</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_mode_manager_1a391fd66accbea489480e3fafa2f5983f" kindref="member">tapMode</ref><sp/>=<sp/>[[<ref refid="interface_tap_mode" kindref="compound">TapMode</ref><sp/>alloc]<sp/>init];</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_mode_manager_1a55b161c8f2b37c9a36ebe1b5c4cdd35a" kindref="member">createRelationMode</ref><sp/>=<sp/>[[<ref refid="interface_create_relation_mode" kindref="compound">CreateRelationMode</ref><sp/>alloc]<sp/>init];</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_mode_manager_1a3f4d153c84eb9ba351fd0a241917de62" kindref="member">moveMode</ref><sp/>=<sp/>[[<ref refid="interface_move_mode" kindref="compound">MoveMode</ref><sp/>alloc]<sp/>init];</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_mode_manager_1a5ffb93820bd77ac4be2c99abf151913b" kindref="member">modifyRelationMode</ref><sp/>=<sp/>[[<ref refid="interface_modify_relation_mode" kindref="compound">ModifyRelationMode</ref><sp/>alloc]<sp/>init];</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_panel_manager" kindref="compound">PanelManager</ref><sp/>*panelManager<sp/>=<sp/>[<ref refid="interface_panel_manager" kindref="compound">PanelManager</ref><sp/><ref refid="interface_panel_manager_1a9d3208a00179ea4cf4ecc5c9335118e1" kindref="member">instance</ref>];</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>panelManager.<ref refid="interface_panel_manager_1a9297822be1dc7a131d7b93f5873724a0" kindref="member">selectConnectorTypePanel</ref>.<ref refid="interface_select_connector_type_panel_1ad76f99f7709724413aaf9b2d24ad538d" kindref="member">panMode</ref><sp/>=<sp/><ref refid="interface_mode_manager_1a55b161c8f2b37c9a36ebe1b5c4cdd35a" kindref="member">createRelationMode</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">-<sp/>(void)dealloc<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>[tapMode<sp/>release];</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>[createRelationMode<sp/>release];</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>[moveMode<sp/>release];</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>[modifyRelationMode<sp/>release];</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">super</highlight><highlight class="normal"><sp/>dealloc];</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/ModeManager.m"/>
+  </compounddef>
+</doxygen>

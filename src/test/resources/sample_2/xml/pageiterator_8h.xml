@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="pageiterator_8h" kind="file">
+    <compoundname>pageiterator.h</compoundname>
+    <includes refid="publictypes_8h" local="yes">publictypes.h</includes>
+    <includes refid="platform_8h" local="yes">platform.h</includes>
+    <includedby refid="baseapi_8h" local="yes">api/baseapi.h</includedby>
+    <includedby refid="capi_8h" local="yes">api/capi.h</includedby>
+    <includedby refid="ltrresultiterator_8h" local="yes">ccmain/ltrresultiterator.h</includedby>
+    <includedby refid="pageiterator_8cpp" local="yes">ccmain/pageiterator.cpp</includedby>
+    <incdepgraph>
+      <node id="2722">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="2723" relation="include">
+        </childnode>
+      </node>
+      <node id="2720">
+        <label>ccmain/pageiterator.h</label>
+        <link refid="pageiterator.h"/>
+        <childnode refid="2721" relation="include">
+        </childnode>
+        <childnode refid="2722" relation="include">
+        </childnode>
+      </node>
+      <node id="2723">
+        <label>limits.h</label>
+      </node>
+      <node id="2721">
+        <label>publictypes.h</label>
+        <link refid="publictypes_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2736">
+        <label>ccmain/paragraphs.cpp</label>
+        <link refid="paragraphs_8cpp"/>
+      </node>
+      <node id="2735">
+        <label>ccmain/mutableiterator.h</label>
+        <link refid="mutableiterator_8h"/>
+        <childnode refid="2726" relation="include">
+        </childnode>
+        <childnode refid="2736" relation="include">
+        </childnode>
+      </node>
+      <node id="2728">
+        <label>api/capi.cpp</label>
+        <link refid="capi_8cpp"/>
+      </node>
+      <node id="2733">
+        <label>ccmain/ltrresultiterator.cpp</label>
+        <link refid="ltrresultiterator_8cpp"/>
+      </node>
+      <node id="2724">
+        <label>ccmain/pageiterator.h</label>
+        <link refid="pageiterator.h"/>
+        <childnode refid="2725" relation="include">
+        </childnode>
+        <childnode refid="2727" relation="include">
+        </childnode>
+        <childnode refid="2732" relation="include">
+        </childnode>
+        <childnode refid="2738" relation="include">
+        </childnode>
+      </node>
+      <node id="2734">
+        <label>ccmain/resultiterator.h</label>
+        <link refid="resultiterator_8h"/>
+        <childnode refid="2725" relation="include">
+        </childnode>
+        <childnode refid="2726" relation="include">
+        </childnode>
+        <childnode refid="2727" relation="include">
+        </childnode>
+        <childnode refid="2735" relation="include">
+        </childnode>
+        <childnode refid="2737" relation="include">
+        </childnode>
+      </node>
+      <node id="2725">
+        <label>api/baseapi.h</label>
+        <link refid="baseapi_8h"/>
+        <childnode refid="2726" relation="include">
+        </childnode>
+        <childnode refid="2727" relation="include">
+        </childnode>
+        <childnode refid="2729" relation="include">
+        </childnode>
+        <childnode refid="2730" relation="include">
+        </childnode>
+        <childnode refid="2731" relation="include">
+        </childnode>
+      </node>
+      <node id="2726">
+        <label>api/baseapi.cpp</label>
+        <link refid="baseapi_8cpp"/>
+      </node>
+      <node id="2738">
+        <label>ccmain/pageiterator.cpp</label>
+        <link refid="pageiterator_8cpp"/>
+      </node>
+      <node id="2729">
+        <label>api/tesseractmain.cpp</label>
+        <link refid="tesseractmain_8cpp"/>
+      </node>
+      <node id="2730">
+        <label>training/ambiguous_words.cpp</label>
+        <link refid="ambiguous__words_8cpp"/>
+      </node>
+      <node id="2732">
+        <label>ccmain/ltrresultiterator.h</label>
+        <link refid="ltrresultiterator_8h"/>
+        <childnode refid="2733" relation="include">
+        </childnode>
+        <childnode refid="2734" relation="include">
+        </childnode>
+      </node>
+      <node id="2727">
+        <label>api/capi.h</label>
+        <link refid="capi_8h"/>
+        <childnode refid="2728" relation="include">
+        </childnode>
+      </node>
+      <node id="2731">
+        <label>training/classifier_tester.cpp</label>
+        <link refid="classifier__tester_8cpp"/>
+      </node>
+      <node id="2737">
+        <label>ccmain/resultiterator.cpp</label>
+        <link refid="resultiterator_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtesseract_1_1_page_iterator" prot="public">tesseract::PageIterator</innerclass>
+    <innernamespace refid="namespacetesseract">tesseract</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pageiterator.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Description:<sp/>Iterator<sp/>for<sp/>tesseract<sp/>page<sp/>structure<sp/>that<sp/>avoids<sp/>using</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tesseract<sp/>internal<sp/>data<sp/>structures.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/><sp/><sp/><sp/><sp/><sp/>Ray<sp/>Smith</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created:<sp/><sp/><sp/><sp/><sp/>Fri<sp/>Feb<sp/>26<sp/>11:01:06<sp/>PST<sp/>2010</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(C)<sp/>Copyright<sp/>2010,<sp/>Google<sp/>Inc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TESSERACT_CCMAIN_PAGEITERATOR_H__</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TESSERACT_CCMAIN_PAGEITERATOR_H__</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="publictypes_8h" kindref="compound">publictypes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="platform_8h" kindref="compound">platform.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">C_BLOB_IT;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">PBLOB_IT;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_p_a_g_e___r_e_s" kindref="compound">PAGE_RES</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_p_a_g_e___r_e_s___i_t" kindref="compound">PAGE_RES_IT</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_w_e_r_d" kindref="compound">WERD</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Pix;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetesseract-c__api-demo_1afed58feacb84df2de88bdd613cfdba6d" kindref="member">tesseract</ref><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Tesseract;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classtesseract_1_1_page_iterator" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="platform_8h_1a86e51270628c53ce7e2c23b1c2b4490e" kindref="member">TESS_API</ref><sp/><ref refid="classtesseract_1_1_page_iterator" kindref="compound">PageIterator</ref><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_page_iterator" kindref="compound">PageIterator</ref>(<ref refid="class_p_a_g_e___r_e_s" kindref="compound">PAGE_RES</ref>*<sp/>page_res,<sp/><ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref>*<sp/><ref refid="namespacetesseract-c__api-demo_1afed58feacb84df2de88bdd613cfdba6d" kindref="member">tesseract</ref>,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scale,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scaled_yres,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rect_left,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rect_top,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rect_width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rect_height);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classtesseract_1_1_page_iterator" kindref="compound">PageIterator</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_page_iterator" kindref="compound">PageIterator</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_page_iterator" kindref="compound">PageIterator</ref>&amp;<sp/>src);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_page_iterator" kindref="compound">PageIterator</ref>&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_page_iterator" kindref="compound">PageIterator</ref>&amp;<sp/>src);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>PositionedAtSameWord(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_p_a_g_e___r_e_s___i_t" kindref="compound">PAGE_RES_IT</ref>*<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>=============<sp/>Moving<sp/>around<sp/>within<sp/>the<sp/>page<sp/>============.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Begin();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>RestartParagraph();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IsWithinFirstTextlineOfParagraph()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>RestartRow();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Next(<ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref><sp/>level);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IsAtBeginningOf(<ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref><sp/>level)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IsAtFinalElement(<ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref><sp/>level,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref><sp/>element)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Cmp(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_page_iterator" kindref="compound">PageIterator</ref><sp/>&amp;other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>=============<sp/>Accessing<sp/>data<sp/>==============.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Coordinate<sp/>system:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Integer<sp/>coordinates<sp/>are<sp/>at<sp/>the<sp/>cracks<sp/>between<sp/>the<sp/>pixels.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>top-left<sp/>corner<sp/>of<sp/>the<sp/>top-left<sp/>pixel<sp/>in<sp/>the<sp/>image<sp/>is<sp/>at<sp/>(0,0).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>bottom-right<sp/>corner<sp/>of<sp/>the<sp/>bottom-right<sp/>pixel<sp/>in<sp/>the<sp/>image<sp/>is<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>(width,<sp/>height).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Every<sp/>bounding<sp/>box<sp/>goes<sp/>from<sp/>the<sp/>top-left<sp/>of<sp/>the<sp/>top-left<sp/>contained</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>pixel<sp/>to<sp/>the<sp/>bottom-right<sp/>of<sp/>the<sp/>bottom-right<sp/>contained<sp/>pixel,<sp/>so</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>bounding<sp/>box<sp/>of<sp/>the<sp/>single<sp/>top-left<sp/>pixel<sp/>in<sp/>the<sp/>image<sp/>is:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>(0,0)-&gt;(1,1).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>an<sp/>image<sp/>rectangle<sp/>has<sp/>been<sp/>set<sp/>in<sp/>the<sp/>API,<sp/>then<sp/>returned<sp/>coordinates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>relate<sp/>to<sp/>the<sp/>original<sp/>(full)<sp/>image,<sp/>rather<sp/>than<sp/>the<sp/>rectangle.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>BoundingBox(<ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref><sp/>level,</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>left,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>top,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>right,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>bottom)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>BoundingBoxInternal(<ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref><sp/>level,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>left,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>top,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>right,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>bottom)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Empty(<ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref><sp/>level)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><ref refid="publictypes_8h_1a03566528a98c079dafeebf00502f2b60" kindref="member">PolyBlockType</ref><sp/>BlockType()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/>Pix*<sp/>GetBinaryImage(<ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref><sp/>level)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/>Pix*<sp/>GetImage(<ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref><sp/>level,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>padding,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>left,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>top)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Baseline(<ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref><sp/>level,</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>x1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>y1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>x2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>y2)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacetesseract_1a76ce0248fd3ba576ca053e9bb82e492f" kindref="member">Orientation</ref>(<ref refid="namespacetesseract_1a76ce0248fd3ba576ca053e9bb82e492f" kindref="member">tesseract::Orientation</ref><sp/>*orientation,</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetesseract_1acac5bfbc6e9f8ca26f42ea3bad95d84e" kindref="member">tesseract::WritingDirection</ref><sp/>*writing_direction,</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetesseract_1a28b14f9ab9d686fb45e130abc15c1781" kindref="member">tesseract::TextlineOrder</ref><sp/>*textline_order,</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*deskew_angle)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ParagraphInfo(<ref refid="namespacetesseract_1a550970d1662b3ac5830c6a28dba676b1" kindref="member">tesseract::ParagraphJustification</ref><sp/>*justification,</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*is_list_item,</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>*is_crown,</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*first_line_indent)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><ref refid="platform_8h_1aefcd819eeed9085ef0eeeff0f4cac64f" kindref="member">TESS_LOCAL</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>BeginWord(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293" refid="classtesseract_1_1_page_iterator_1a480fee3b9cf81df1745ab671c5f28788" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_p_a_g_e___r_e_s" kindref="compound">PAGE_RES</ref>*<sp/><ref refid="classtesseract_1_1_page_iterator_1a480fee3b9cf81df1745ab671c5f28788" kindref="member">page_res_</ref>;</highlight></codeline>
+<codeline lineno="295" refid="classtesseract_1_1_page_iterator_1acca34c1adcf494eca7dfefe74258f991" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref>*<sp/><ref refid="classtesseract_1_1_page_iterator_1acca34c1adcf494eca7dfefe74258f991" kindref="member">tesseract_</ref>;</highlight></codeline>
+<codeline lineno="300" refid="classtesseract_1_1_page_iterator_1a42df7b8e352be1e5a140787109419f93" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_p_a_g_e___r_e_s___i_t" kindref="compound">PAGE_RES_IT</ref>*<sp/><ref refid="classtesseract_1_1_page_iterator_1a42df7b8e352be1e5a140787109419f93" kindref="member">it_</ref>;</highlight></codeline>
+<codeline lineno="305" refid="classtesseract_1_1_page_iterator_1a409db505129bcd894cbe20b77f7663bb" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_w_e_r_d" kindref="compound">WERD</ref>*<sp/><ref refid="classtesseract_1_1_page_iterator_1a409db505129bcd894cbe20b77f7663bb" kindref="member">word_</ref>;</highlight></codeline>
+<codeline lineno="307" refid="classtesseract_1_1_page_iterator_1a5bcc04bef9fefefc856440bcfe15d9ab" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_page_iterator_1a5bcc04bef9fefefc856440bcfe15d9ab" kindref="member">word_length_</ref>;</highlight></codeline>
+<codeline lineno="309" refid="classtesseract_1_1_page_iterator_1a98d81a4da55f06637a0db60ac33cc814" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_page_iterator_1a98d81a4da55f06637a0db60ac33cc814" kindref="member">blob_index_</ref>;</highlight></codeline>
+<codeline lineno="315" refid="classtesseract_1_1_page_iterator_1a4ea0a38b584bbc0047792ebe6b0294ce" refkind="member"><highlight class="normal"><sp/><sp/>C_BLOB_IT*<sp/><ref refid="classtesseract_1_1_page_iterator_1a4ea0a38b584bbc0047792ebe6b0294ce" kindref="member">cblob_it_</ref>;</highlight></codeline>
+<codeline lineno="317" refid="classtesseract_1_1_page_iterator_1ae72a89d863ac231b9cfbab4c6004ad3d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_page_iterator_1ae72a89d863ac231b9cfbab4c6004ad3d" kindref="member">scale_</ref>;</highlight></codeline>
+<codeline lineno="318" refid="classtesseract_1_1_page_iterator_1a43f0c51fac0f0e60139487d5868812a3" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_page_iterator_1a43f0c51fac0f0e60139487d5868812a3" kindref="member">scaled_yres_</ref>;</highlight></codeline>
+<codeline lineno="319" refid="classtesseract_1_1_page_iterator_1a2e33ff0e1d949366720fe29a7203f57e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_page_iterator_1a2e33ff0e1d949366720fe29a7203f57e" kindref="member">rect_left_</ref>;</highlight></codeline>
+<codeline lineno="320" refid="classtesseract_1_1_page_iterator_1a7c33ac80eda9144c2b857963457ace9c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_page_iterator_1a7c33ac80eda9144c2b857963457ace9c" kindref="member">rect_top_</ref>;</highlight></codeline>
+<codeline lineno="321" refid="classtesseract_1_1_page_iterator_1aa8eba0c6367dd6349fe903ac7c3860a4" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_page_iterator_1aa8eba0c6367dd6349fe903ac7c3860a4" kindref="member">rect_width_</ref>;</highlight></codeline>
+<codeline lineno="322" refid="classtesseract_1_1_page_iterator_1a66e96ed36eeed8b9da723c397910f9e9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_page_iterator_1a66e96ed36eeed8b9da723c397910f9e9" kindref="member">rect_height_</ref>;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>tesseract.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>TESSERACT_CCMAIN_PAGEITERATOR_H__</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/ccmain/pageiterator.h"/>
+  </compounddef>
+</doxygen>

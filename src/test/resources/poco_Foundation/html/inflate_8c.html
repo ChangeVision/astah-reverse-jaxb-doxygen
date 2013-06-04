@@ -1,0 +1,749 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>My Project: src/inflate.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.4 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">inflate.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="zutil_8h_source.html">zutil.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="inftrees_8h_source.html">inftrees.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="inflate_8h_source.html">inflate.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="inffast_8h_source.html">inffast.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="inffixed_8h_source.html">inffixed.h</a>&quot;</code><br/>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a5eea7ffd1fff4fbea834bcb292d1bea2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#a5eea7ffd1fff4fbea834bcb292d1bea2">UPDATE</a>(check, buf, len)&#160;&#160;&#160;(state-&gt;flags ? <a class="el" href="zlib_8h.html#ae594a92daa59da8ef2c346cea7abdf68">crc32</a>(check, buf, len) : <a class="el" href="zlib_8h.html#a154683f5b7c8527aee6e9f54d2a469e7">adler32</a>(check, buf, len))</td></tr>
+<tr class="separator:a5eea7ffd1fff4fbea834bcb292d1bea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bdde00539008d4c1be6f9d29f0e4bd0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#a2bdde00539008d4c1be6f9d29f0e4bd0">CRC2</a>(check, word)</td></tr>
+<tr class="separator:a2bdde00539008d4c1be6f9d29f0e4bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57c65b3c2ffdfe37b805b749a2c5fdbe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#a57c65b3c2ffdfe37b805b749a2c5fdbe">CRC4</a>(check, word)</td></tr>
+<tr class="separator:a57c65b3c2ffdfe37b805b749a2c5fdbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03dae42536f97b08183620a910f9b204"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#a03dae42536f97b08183620a910f9b204">LOAD</a>()</td></tr>
+<tr class="separator:a03dae42536f97b08183620a910f9b204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3b6db2fe8b54bb9edf88c2002e4bf34"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#af3b6db2fe8b54bb9edf88c2002e4bf34">RESTORE</a>()</td></tr>
+<tr class="separator:af3b6db2fe8b54bb9edf88c2002e4bf34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ffcbdd4824c339e07ea67dd412636fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#a3ffcbdd4824c339e07ea67dd412636fd">INITBITS</a>()</td></tr>
+<tr class="separator:a3ffcbdd4824c339e07ea67dd412636fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add54302c739466e0e4a204fa1015694b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#add54302c739466e0e4a204fa1015694b">PULLBYTE</a>()</td></tr>
+<tr class="separator:add54302c739466e0e4a204fa1015694b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3731a4aa4bb04481dc95069bbfb7156"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#ab3731a4aa4bb04481dc95069bbfb7156">NEEDBITS</a>(n)</td></tr>
+<tr class="separator:ab3731a4aa4bb04481dc95069bbfb7156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5967693540f086cfa357f68978bf0be7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#a5967693540f086cfa357f68978bf0be7">BITS</a>(n)&#160;&#160;&#160;((unsigned)hold &amp; ((1U &lt;&lt; (n)) - 1))</td></tr>
+<tr class="separator:a5967693540f086cfa357f68978bf0be7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65312e68bdf918e606b0deaf69793523"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#a65312e68bdf918e606b0deaf69793523">DROPBITS</a>(n)</td></tr>
+<tr class="separator:a65312e68bdf918e606b0deaf69793523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1e478b107abaccc428d6266ea5ca595"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#aa1e478b107abaccc428d6266ea5ca595">BYTEBITS</a>()</td></tr>
+<tr class="separator:aa1e478b107abaccc428d6266ea5ca595"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a802df6861be59122fc6f9f8e47141359"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#a802df6861be59122fc6f9f8e47141359">REVERSE</a>(q)</td></tr>
+<tr class="separator:a802df6861be59122fc6f9f8e47141359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a9990ecfeb0e3b82bcfe07920cef7b1c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#a9990ecfeb0e3b82bcfe07920cef7b1c2">inflateReset</a> (<a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a> strm)</td></tr>
+<tr class="separator:a9990ecfeb0e3b82bcfe07920cef7b1c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f7870e285eb71c6eb69b9afe76a9e7a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#a9f7870e285eb71c6eb69b9afe76a9e7a">inflateReset2</a> (<a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a> strm, int windowBits)</td></tr>
+<tr class="separator:a9f7870e285eb71c6eb69b9afe76a9e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a692308454849f272e9e508d3b917bb11"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#a692308454849f272e9e508d3b917bb11">inflateInit2_</a> (<a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a> strm, int windowBits, char *version, int stream_size)</td></tr>
+<tr class="separator:a692308454849f272e9e508d3b917bb11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd49cc04c5deb7ff8999820b88e98557"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#acd49cc04c5deb7ff8999820b88e98557">inflateInit_</a> (<a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a> strm, char *version, int stream_size)</td></tr>
+<tr class="separator:acd49cc04c5deb7ff8999820b88e98557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1347edaf73085e58907e49e5176aaab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#af1347edaf73085e58907e49e5176aaab">inflatePrime</a> (<a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a> strm, int bits, int value)</td></tr>
+<tr class="separator:af1347edaf73085e58907e49e5176aaab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79b92a0a5ce8f5dcdfe65d301e6c12a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#a79b92a0a5ce8f5dcdfe65d301e6c12a4">inflate</a> (<a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a> strm, int flush)</td></tr>
+<tr class="separator:a79b92a0a5ce8f5dcdfe65d301e6c12a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc6f3c66e6691b5007ecc9e1cb570fa2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#abc6f3c66e6691b5007ecc9e1cb570fa2">inflateEnd</a> (<a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a> strm)</td></tr>
+<tr class="separator:abc6f3c66e6691b5007ecc9e1cb570fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70a95f343952a809bbb6bcf3b362e593"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#a70a95f343952a809bbb6bcf3b362e593">inflateSetDictionary</a> (<a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a> strm, <a class="el" href="zconf_8h.html#ac5613fe8160cbbf89d3e470574b755fb">Bytef</a> *dictionary, <a class="el" href="zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a> dictLength)</td></tr>
+<tr class="separator:a70a95f343952a809bbb6bcf3b362e593"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab62a5fbe5226dd4e9300eb0cb6d6610e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#ab62a5fbe5226dd4e9300eb0cb6d6610e">inflateGetHeader</a> (<a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a> strm, <a class="el" href="zlib_8h.html#a20a6ffc695393cb54433da98ab4be7eb">gz_headerp</a> head)</td></tr>
+<tr class="separator:ab62a5fbe5226dd4e9300eb0cb6d6610e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6311fc784f0bf21d96cb58962359ea61"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#a6311fc784f0bf21d96cb58962359ea61">inflateSync</a> (<a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a> strm)</td></tr>
+<tr class="separator:a6311fc784f0bf21d96cb58962359ea61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad50808147db441fd9260150a218974bb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#ad50808147db441fd9260150a218974bb">inflateSyncPoint</a> (<a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a> strm)</td></tr>
+<tr class="separator:ad50808147db441fd9260150a218974bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4be131080ab2d224f9bebbcab3a2ccd6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#a4be131080ab2d224f9bebbcab3a2ccd6">inflateCopy</a> (<a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a> dest, <a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a> source)</td></tr>
+<tr class="separator:a4be131080ab2d224f9bebbcab3a2ccd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe000de8c61c3299468122d0475809b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#afe000de8c61c3299468122d0475809b7">inflateUndermine</a> (<a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a> strm, int subvert)</td></tr>
+<tr class="separator:afe000de8c61c3299468122d0475809b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44cda52058b0618a3c2beb861b14d649"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inflate_8c.html#a44cda52058b0618a3c2beb861b14d649">inflateMark</a> (<a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a> strm)</td></tr>
+<tr class="separator:a44cda52058b0618a3c2beb861b14d649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義</h2>
+<a class="anchor" id="a5967693540f086cfa357f68978bf0be7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BITS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n)</td><td></td>
+          <td>&#160;&#160;&#160;((unsigned)hold &amp; ((1U &lt;&lt; (n)) - 1))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa1e478b107abaccc428d6266ea5ca595"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BYTEBITS</td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> { \</div>
+<div class="line">        hold &gt;&gt;= bits &amp; 7; \</div>
+<div class="line">        bits -= bits &amp; 7; \</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a2bdde00539008d4c1be6f9d29f0e4bd0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CRC2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">check, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">word&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> { \</div>
+<div class="line">        hbuf[0] = (<span class="keywordtype">unsigned</span> char)(word); \</div>
+<div class="line">        hbuf[1] = (<span class="keywordtype">unsigned</span> char)((word) &gt;&gt; 8); \</div>
+<div class="line">        check = <a class="code" href="crc32_8c.html#a68c725fbf3dc9f3fe41995b2b8ba250b">crc32</a>(check, hbuf, 2); \</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a57c65b3c2ffdfe37b805b749a2c5fdbe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CRC4</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">check, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">word&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> { \</div>
+<div class="line">        hbuf[0] = (<span class="keywordtype">unsigned</span> char)(word); \</div>
+<div class="line">        hbuf[1] = (<span class="keywordtype">unsigned</span> char)((word) &gt;&gt; 8); \</div>
+<div class="line">        hbuf[2] = (<span class="keywordtype">unsigned</span> char)((word) &gt;&gt; 16); \</div>
+<div class="line">        hbuf[3] = (<span class="keywordtype">unsigned</span> char)((word) &gt;&gt; 24); \</div>
+<div class="line">        check = <a class="code" href="crc32_8c.html#a68c725fbf3dc9f3fe41995b2b8ba250b">crc32</a>(check, hbuf, 4); \</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a65312e68bdf918e606b0deaf69793523"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DROPBITS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> { \</div>
+<div class="line">        hold &gt;&gt;= (n); \</div>
+<div class="line">        bits -= (unsigned)(n); \</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a3ffcbdd4824c339e07ea67dd412636fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INITBITS</td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> { \</div>
+<div class="line">        hold = 0; \</div>
+<div class="line">        bits = 0; \</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a03dae42536f97b08183620a910f9b204"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOAD</td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> { \</div>
+<div class="line">        put = strm-&gt;next_out; \</div>
+<div class="line">        left = strm-&gt;avail_out; \</div>
+<div class="line">        next = strm-&gt;next_in; \</div>
+<div class="line">        have = strm-&gt;avail_in; \</div>
+<div class="line">        hold = state-&gt;hold; \</div>
+<div class="line">        bits = state-&gt;bits; \</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ab3731a4aa4bb04481dc95069bbfb7156"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NEEDBITS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> { \</div>
+<div class="line">        while (bits &lt; (<span class="keywordtype">unsigned</span>)(n)) \</div>
+<div class="line">            PULLBYTE(); \</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="add54302c739466e0e4a204fa1015694b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PULLBYTE</td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> { \</div>
+<div class="line">        if (have == 0) goto inf_leave; \</div>
+<div class="line">        have--; \</div>
+<div class="line">        hold += (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>)(*next++) &lt;&lt; bits; \</div>
+<div class="line">        bits += 8; \</div>
+<div class="line">    } while (0)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="af3b6db2fe8b54bb9edf88c2002e4bf34"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RESTORE</td>
+          <td>(</td>
+          <td class="paramname">)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> { \</div>
+<div class="line">        strm-&gt;next_out = put; \</div>
+<div class="line">        strm-&gt;avail_out = left; \</div>
+<div class="line">        strm-&gt;next_in = next; \</div>
+<div class="line">        strm-&gt;avail_in = have; \</div>
+<div class="line">        state-&gt;hold = hold; \</div>
+<div class="line">        state-&gt;bits = bits; \</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a802df6861be59122fc6f9f8e47141359"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REVERSE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">q)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">((((q) &gt;&gt; 24) &amp; 0xff) + (((q) &gt;&gt; 8) &amp; 0xff00) + \</div>
+<div class="line">     (((q) &amp; 0xff00) &lt;&lt; 8) + (((q) &amp; 0xff) &lt;&lt; 24))</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a5eea7ffd1fff4fbea834bcb292d1bea2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UPDATE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">check, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">buf, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(state-&gt;flags ? <a class="el" href="zlib_8h.html#ae594a92daa59da8ef2c346cea7abdf68">crc32</a>(check, buf, len) : <a class="el" href="zlib_8h.html#a154683f5b7c8527aee6e9f54d2a469e7">adler32</a>(check, buf, len))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数</h2>
+<a class="anchor" id="a79b92a0a5ce8f5dcdfe65d301e6c12a4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int inflate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a>&#160;</td>
+          <td class="paramname"><em>strm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flush</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4be131080ab2d224f9bebbcab3a2ccd6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int inflateCopy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a>&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a>&#160;</td>
+          <td class="paramname"><em>source</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="abc6f3c66e6691b5007ecc9e1cb570fa2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int inflateEnd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a>&#160;</td>
+          <td class="paramname"><em>strm</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab62a5fbe5226dd4e9300eb0cb6d6610e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int inflateGetHeader </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a>&#160;</td>
+          <td class="paramname"><em>strm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zlib_8h.html#a20a6ffc695393cb54433da98ab4be7eb">gz_headerp</a>&#160;</td>
+          <td class="paramname"><em>head</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a692308454849f272e9e508d3b917bb11"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int inflateInit2_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a>&#160;</td>
+          <td class="paramname"><em>strm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>windowBits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>version</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stream_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acd49cc04c5deb7ff8999820b88e98557"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int inflateInit_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a>&#160;</td>
+          <td class="paramname"><em>strm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>version</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stream_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a44cda52058b0618a3c2beb861b14d649"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long inflateMark </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a>&#160;</td>
+          <td class="paramname"><em>strm</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af1347edaf73085e58907e49e5176aaab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int inflatePrime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a>&#160;</td>
+          <td class="paramname"><em>strm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9990ecfeb0e3b82bcfe07920cef7b1c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int inflateReset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a>&#160;</td>
+          <td class="paramname"><em>strm</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9f7870e285eb71c6eb69b9afe76a9e7a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int inflateReset2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a>&#160;</td>
+          <td class="paramname"><em>strm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>windowBits</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a70a95f343952a809bbb6bcf3b362e593"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int inflateSetDictionary </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a>&#160;</td>
+          <td class="paramname"><em>strm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#ac5613fe8160cbbf89d3e470574b755fb">Bytef</a> *&#160;</td>
+          <td class="paramname"><em>dictionary</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="zconf_8h.html#a87d141052bcd5ec8a80812a565c70369">uInt</a>&#160;</td>
+          <td class="paramname"><em>dictLength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6311fc784f0bf21d96cb58962359ea61"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int inflateSync </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a>&#160;</td>
+          <td class="paramname"><em>strm</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad50808147db441fd9260150a218974bb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int inflateSyncPoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a>&#160;</td>
+          <td class="paramname"><em>strm</em>)</td><td></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afe000de8c61c3299468122d0475809b7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int inflateUndermine </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zlib_8h.html#a0073ee5c5eb2aa018825a6a760f93fb9">z_streamp</a>&#160;</td>
+          <td class="paramname"><em>strm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>subvert</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+My Projectに対してThu May 23 2013 12:59:26に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

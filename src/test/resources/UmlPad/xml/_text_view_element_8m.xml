@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_text_view_element_8m" kind="file">
+    <compoundname>TextViewElement.m</compoundname>
+    <includes refid="_text_view_element_8h" local="yes">TextViewElement.h</includes>
+    <incdepgraph>
+      <node id="2343">
+        <label>BoundedViewElement.h</label>
+        <link refid="_bounded_view_element_8h"/>
+        <childnode refid="2342" relation="include">
+        </childnode>
+        <childnode refid="2344" relation="include">
+        </childnode>
+      </node>
+      <node id="2344">
+        <label>ViewElement.h</label>
+        <link refid="_view_element_8h"/>
+        <childnode refid="2342" relation="include">
+        </childnode>
+      </node>
+      <node id="2342">
+        <label>UIKit/UIKit.h</label>
+      </node>
+      <node id="2341">
+        <label>TextViewElement.h</label>
+        <link refid="_text_view_element_8h"/>
+        <childnode refid="2342" relation="include">
+        </childnode>
+        <childnode refid="2343" relation="include">
+        </childnode>
+      </node>
+      <node id="2340">
+        <label>Classes/TextViewElement.m</label>
+        <link refid="TextViewElement.m"/>
+        <childnode refid="2341" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>TextViewElement.m</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>UmlPad</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>梅田<sp/>政利<sp/>on<sp/>10/06/11.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>2010<sp/>Change<sp/>Vision.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_text_view_element_8h" kindref="compound">TextViewElement.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">@implementation<sp/></highlight><highlight class="normal"><ref refid="interface_text_view_element" kindref="compound">TextViewElement</ref></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">-<sp/>(id)initWithPoint:(CGPoint)point<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>=<sp/>[</highlight><highlight class="keyword">super</highlight><highlight class="normal"><sp/>initWithPoint:point];</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_text_view_element_1afded68e05353d8aa943b1f63e82de267" kindref="member">labelView</ref><sp/>=<sp/>[[UILabel<sp/>alloc]<sp/>initWithFrame:CGRectMake(TEXT_MARGIN_X,<sp/>0,<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>getInitWidth]<sp/>-<sp/>TEXT_MARGIN_X<sp/>*<sp/>2,<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>getInitHeight])];</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_text_view_element_1afded68e05353d8aa943b1f63e82de267" kindref="member">labelView</ref>.numberOfLines<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_text_view_element_1afded68e05353d8aa943b1f63e82de267" kindref="member">labelView</ref>.lineBreakMode<sp/>=<sp/>YES;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>setBodyColor:[UIColor<sp/>clearColor]];</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_text_view_element_1afded68e05353d8aa943b1f63e82de267" kindref="member">labelView</ref>.font<sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>getFont];</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//labelView.textAlignment<sp/>=<sp/>UITextAlignmentCenter;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_text_view_element_1afded68e05353d8aa943b1f63e82de267" kindref="member">labelView</ref>.userInteractionEnabled<sp/>=<sp/>FALSE;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>addSubview:labelView];</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">-<sp/>(id)initWithCoder:(NSCoder<sp/>*)coder<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">super</highlight><highlight class="normal"><sp/>initWithCoder:coder];</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_text_view_element_1afded68e05353d8aa943b1f63e82de267" kindref="member">labelView</ref><sp/>=<sp/>[[coder<sp/>decodeObjectForKey:@&quot;labelView&quot;]<sp/>retain];</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">-<sp/>(void)encodeWithCoder:(NSCoder<sp/>*)coder<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>[coder<sp/>encodeObject:labelView<sp/>forKey:@&quot;labelView&quot;];</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">super</highlight><highlight class="normal"><sp/>encodeWithCoder:coder];</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">-<sp/>(void)setFrame:(CGRect)rect<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">super</highlight><highlight class="normal"><sp/>setFrame:rect];</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_text_view_element_1afded68e05353d8aa943b1f63e82de267" kindref="member">labelView</ref>.frame<sp/>=<sp/>CGRectMake(<ref refid="_view_element_8h_1a8ae5a33ecbce2edf9bcc8b86d7ffdef8" kindref="member">TEXT_MARGIN_X</ref>,<sp/>0,<sp/>rect.size.width<sp/>-<sp/><ref refid="_view_element_8h_1a8ae5a33ecbce2edf9bcc8b86d7ffdef8" kindref="member">TEXT_MARGIN_X</ref><sp/>*<sp/>2,<sp/>rect.size.height);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">-<sp/>(void)setBodyColor:(UIColor<sp/>*)newColor<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">super</highlight><highlight class="normal"><sp/>setBodyColor:newColor];</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_text_view_element_1afded68e05353d8aa943b1f63e82de267" kindref="member">labelView</ref>.backgroundColor<sp/>=<sp/>newColor;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.backgroundColor<sp/>=<sp/>newColor;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">-<sp/>(void)setName:(NSString<sp/>*)newName<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">super</highlight><highlight class="normal"><sp/>setName:newName];</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_text_view_element_1afded68e05353d8aa943b1f63e82de267" kindref="member">labelView</ref>.text<sp/>=<sp/>newName;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">-<sp/>(int)<ref refid="interface_bounded_view_element_1a1cf20236602d1963730330e1454d5c69" kindref="member">getInitWidth</ref><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>130;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">-<sp/>(int)<ref refid="interface_bounded_view_element_1ac336c9ef5f3495e2ccecf22579be0c4a" kindref="member">getInitHeight</ref><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>80;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">-<sp/>(int)<ref refid="interface_bounded_view_element_1a46a2769bb7acf89774b7beef78827acd" kindref="member">getMinWidth</ref><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>40;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">-<sp/>(int)<ref refid="interface_bounded_view_element_1a6ca7c6e3e3a50ecadc154aac7a80c207" kindref="member">getMinHeight</ref><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>28;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">-<sp/>(CGSize)getPreferredSize<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>UIFont<sp/>*font<sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>getFont];</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>maxWidth<sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>getMinWidth];</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>height<sp/>=<sp/><ref refid="_view_element_8h_1add1e27a0510ed63c30d958f666be4c2d" kindref="member">TEXT_MARGIN_HEIGHT</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>CGSize<sp/>nameSize<sp/>=<sp/>[name<sp/>sizeWithFont:font];</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>fontHeight<sp/>=<sp/>nameSize.height;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fontHeight<sp/>&lt;<sp/><ref refid="_view_element_8h_1aa968a61524f9ed159c4c5464cb26dd41" kindref="member">FONT_SIZE</ref>)<sp/>fontHeight<sp/>=<sp/><ref refid="_view_element_8h_1aa968a61524f9ed159c4c5464cb26dd41" kindref="member">FONT_SIZE</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>NSArray<sp/>*texts<sp/>=<sp/>[name<sp/>componentsSeparatedByString:@&quot;\n&quot;];</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(NSString<sp/>*text<sp/>in<sp/>texts)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CGSize<sp/>nameSize<sp/>=<sp/>[text<sp/>sizeWithFont:font];</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(maxWidth<sp/>&lt;<sp/>nameSize.width)<sp/>maxWidth<sp/>=<sp/>nameSize.width;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>height<sp/>+=<sp/>fontHeight;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(height<sp/>&lt;<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/><ref refid="interface_bounded_view_element_1a6ca7c6e3e3a50ecadc154aac7a80c207" kindref="member">getMinHeight</ref>])<sp/>height<sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>getMinHeight];</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>CGSizeMake(maxWidth<sp/>+<sp/><ref refid="_view_element_8h_1a8ae5a33ecbce2edf9bcc8b86d7ffdef8" kindref="member">TEXT_MARGIN_X</ref><sp/>*<sp/>3,<sp/>height);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">-<sp/>(void)<ref refid="interface_view_element_1a3cb5810aff404daff6affe0cd596f260" kindref="member">updateViewSize</ref><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>setViewSize:[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>getPreferredSize]];</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">super</highlight><highlight class="normal"><sp/>updateViewSize];</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">-<sp/>(void)dealloc<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">super</highlight><highlight class="normal"><sp/>dealloc];</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/TextViewElement.m"/>
+  </compounddef>
+</doxygen>

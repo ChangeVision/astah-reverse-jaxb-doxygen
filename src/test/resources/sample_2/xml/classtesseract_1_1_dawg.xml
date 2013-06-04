@@ -1,0 +1,839 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_dawg" kind="class" prot="public" abstract="yes">
+    <compoundname>tesseract::Dawg</compoundname>
+    <derivedcompoundref refid="classtesseract_1_1_squished_dawg" prot="public" virt="non-virtual">tesseract::SquishedDawg</derivedcompoundref>
+    <derivedcompoundref refid="classtesseract_1_1_trie" prot="public" virt="non-virtual">tesseract::Trie</derivedcompoundref>
+    <includes refid="dawg_8h" local="no">dawg.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_dawg_1a6f2b9b30147a54ee156dcb2aa49b110d" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+        <definition>const inT16 tesseract::Dawg::kDawgMagicNumber</definition>
+        <argsstring></argsstring>
+        <name>kDawgMagicNumber</name>
+        <initializer>= 42</initializer>
+        <briefdescription>
+<para>Magic number to determine endianness when reading the <ref refid="classtesseract_1_1_dawg" kindref="compound">Dawg</ref> from file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="125" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_dawg_1af6a39872b9a20f3b02020f237731af87" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+        <definition>const UNICHAR_ID tesseract::Dawg::kPatternUnicharID</definition>
+        <argsstring></argsstring>
+        <name>kPatternUnicharID</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A special unichar id that indicates that any appropriate pattern (e.g.dicitonary word, 0-9 digit, etc) can be inserted instead Used for expressing patterns in punctuation and number Dawgs. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="129" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_dawg_1a8f628fef1da0ff7323958362f8286695" prot="protected" static="no" mutable="no">
+        <type><ref refid="namespacetesseract_1a07c41f251f1782c60df4e626c35d2151" kindref="member">DawgType</ref></type>
+        <definition>DawgType tesseract::Dawg::type_</definition>
+        <argsstring></argsstring>
+        <name>type_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="283" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_dawg_1ac03a89c4ecb3dc5b99ca0500f7f5db41" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_s_t_r_i_n_g" kindref="compound">STRING</ref></type>
+        <definition>STRING tesseract::Dawg::lang_</definition>
+        <argsstring></argsstring>
+        <name>lang_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="284" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_dawg_1ad33dc7881a2f933e801f0d5fd4ccbe41" prot="protected" static="no" mutable="no">
+        <type>PermuterType</type>
+        <definition>PermuterType tesseract::Dawg::perm_</definition>
+        <argsstring></argsstring>
+        <name>perm_</name>
+        <briefdescription>
+<para>Permuter code that should be used if the word is found in this <ref refid="classtesseract_1_1_dawg" kindref="compound">Dawg</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="286" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_dawg_1a96b429ef5449ad3cab057eb27d199c66" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::Dawg::unicharset_size_</definition>
+        <argsstring></argsstring>
+        <name>unicharset_size_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="291" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_dawg_1a1c15b73bdf9dc00d548836439a61925c" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::Dawg::flag_start_bit_</definition>
+        <argsstring></argsstring>
+        <name>flag_start_bit_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="292" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_dawg_1a8a140175a0051a3691084942da99dfb0" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::Dawg::next_node_start_bit_</definition>
+        <argsstring></argsstring>
+        <name>next_node_start_bit_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="293" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="293" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_dawg_1a35d2c5deb0a9bf3bc9452187aec40410" prot="protected" static="no" mutable="no">
+        <type><ref refid="host_8h_1a7b5288262772176824620c2fb01a0abc" kindref="member">uinT64</ref></type>
+        <definition>uinT64 tesseract::Dawg::next_node_mask_</definition>
+        <argsstring></argsstring>
+        <name>next_node_mask_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="294" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_dawg_1ad60ae15e5b48287343657d9ea9f20f15" prot="protected" static="no" mutable="no">
+        <type><ref refid="host_8h_1a7b5288262772176824620c2fb01a0abc" kindref="member">uinT64</ref></type>
+        <definition>uinT64 tesseract::Dawg::flags_mask_</definition>
+        <argsstring></argsstring>
+        <name>flags_mask_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="295" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_dawg_1ad67c4d32f31869f9a592d01fc65a3a73" prot="protected" static="no" mutable="no">
+        <type><ref refid="host_8h_1a7b5288262772176824620c2fb01a0abc" kindref="member">uinT64</ref></type>
+        <definition>uinT64 tesseract::Dawg::letter_mask_</definition>
+        <argsstring></argsstring>
+        <name>letter_mask_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="296" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_dawg_1adc74b0871a5aafecd0daaf87b6cf4141" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::Dawg::debug_level_</definition>
+        <argsstring></argsstring>
+        <name>debug_level_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="298" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1a746cceae242993f4945f454e9752d4a5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacetesseract_1a07c41f251f1782c60df4e626c35d2151" kindref="member">DawgType</ref></type>
+        <definition>DawgType tesseract::Dawg::type</definition>
+        <argsstring>() const </argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="131" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="131" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1a317802599bebeb7a6939c5b2bc1669ad" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_s_t_r_i_n_g" kindref="compound">STRING</ref> &amp;</type>
+        <definition>const STRING&amp; tesseract::Dawg::lang</definition>
+        <argsstring>() const </argsstring>
+        <name>lang</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="132" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="132" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1a1a9e92e426883774c82a688e32bf2434" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>PermuterType</type>
+        <definition>PermuterType tesseract::Dawg::permuter</definition>
+        <argsstring>() const </argsstring>
+        <name>permuter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="133" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="133" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1ad54b2916f52c1db80bfeda8bd712228e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual tesseract::Dawg::~Dawg</definition>
+        <argsstring>()</argsstring>
+        <name>~Dawg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="135" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="135" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1a37e1a2a607ac12c92826247303ebb6d0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::Dawg::word_in_dawg</definition>
+        <argsstring>(const WERD_CHOICE &amp;word) const </argsstring>
+        <name>word_in_dawg</name>
+        <param>
+          <type>const <ref refid="class_w_e_r_d___c_h_o_i_c_e" kindref="compound">WERD_CHOICE</ref> &amp;</type>
+          <declname>word</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if the given word is in the <ref refid="classtesseract_1_1_dawg" kindref="compound">Dawg</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="138" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.cpp" bodystart="48" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1a15dc54d58a9d7383b64d678dcf3e2b70" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::Dawg::check_for_words</definition>
+        <argsstring>(const char *filename, const UNICHARSET &amp;unicharset, bool enable_wildcard) const </argsstring>
+        <name>check_for_words</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_u_n_i_c_h_a_r_s_e_t" kindref="compound">UNICHARSET</ref> &amp;</type>
+          <declname>unicharset</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable_wildcard</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks the <ref refid="classtesseract_1_1_dawg" kindref="compound">Dawg</ref> for the words that are listed in the requested file. Returns the number of words in the given file missing from the <ref refid="classtesseract_1_1_dawg" kindref="compound">Dawg</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="142" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.cpp" bodystart="69" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1afa7a4af08c1110868e5b278a704dfec3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Dawg::iterate_words</definition>
+        <argsstring>(const UNICHARSET &amp;unicharset, TessCallback1&lt; const char * &gt; *cb) const </argsstring>
+        <name>iterate_words</name>
+        <param>
+          <type>const <ref refid="class_u_n_i_c_h_a_r_s_e_t" kindref="compound">UNICHARSET</ref> &amp;</type>
+          <declname>unicharset</declname>
+        </param>
+        <param>
+          <type><ref refid="class_tess_callback1" kindref="compound">TessCallback1</ref>&lt; const char * &gt; *</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="148" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.cpp" bodystart="101" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1ad75874486a2a4d1f104df83ecb9fa321" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+        <definition>virtual EDGE_REF tesseract::Dawg::edge_char_of</definition>
+        <argsstring>(NODE_REF node, UNICHAR_ID unichar_id, bool word_end) const =0</argsstring>
+        <name>edge_char_of</name>
+        <reimplementedby refid="classtesseract_1_1_trie_1ade0ed371c5aa6f137fdbdb485c617eba">edge_char_of</reimplementedby>
+        <reimplementedby refid="classtesseract_1_1_squished_dawg_1a8f6eed53e405fe95816d7632a180f7b2">edge_char_of</reimplementedby>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+          <declname>unichar_id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>word_end</declname>
+        </param>
+        <briefdescription>
+<para>Returns the edge that corresponds to the letter out of this node. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="154" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1ac4b22fb6918a0f9e9b98eb4721cbba33" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void tesseract::Dawg::unichar_ids_of</definition>
+        <argsstring>(NODE_REF node, NodeChildVector *vec) const =0</argsstring>
+        <name>unichar_ids_of</name>
+        <reimplementedby refid="classtesseract_1_1_trie_1ae29335b9ec1836a58dfb4425c635c708">unichar_ids_of</reimplementedby>
+        <reimplementedby refid="classtesseract_1_1_squished_dawg_1a0f68be41bc7cbcf6c148d97eeb3f569c">unichar_ids_of</reimplementedby>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1a5084886f7cd9adefa73d03111d92f593" kindref="member">NodeChildVector</ref> *</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fills the given NodeChildVector with all the unichar ids (and the corresponding EDGE_REFs) for which there is an edge out of this node. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="159" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1ae68706a55d86637dec1da9615effb659" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+        <definition>virtual NODE_REF tesseract::Dawg::next_node</definition>
+        <argsstring>(EDGE_REF edge_ref) const =0</argsstring>
+        <name>next_node</name>
+        <reimplementedby refid="classtesseract_1_1_trie_1a6dcd5c5eafcddd03ee64abd1ec42d4c0">next_node</reimplementedby>
+        <reimplementedby refid="classtesseract_1_1_squished_dawg_1a7770bbc4e5423ee2c5492144488db6d1">next_node</reimplementedby>
+        <param>
+          <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+          <declname>edge_ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the next node visited by following the edge indicated by the given EDGE_REF. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="163" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1a4b81cd795923fc21e8a0f9ea9a1f8626" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool tesseract::Dawg::end_of_word</definition>
+        <argsstring>(EDGE_REF edge_ref) const =0</argsstring>
+        <name>end_of_word</name>
+        <reimplementedby refid="classtesseract_1_1_trie_1a42ba6f54332148febd38a426c42b403a">end_of_word</reimplementedby>
+        <reimplementedby refid="classtesseract_1_1_squished_dawg_1a0b1e601dd82d9d09d90f8d22d5094042">end_of_word</reimplementedby>
+        <param>
+          <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+          <declname>edge_ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true if the edge indicated by the given EDGE_REF marks the end of a word. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="167" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1aeb12fee19d228b6225a495c9c115a77e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+        <definition>virtual UNICHAR_ID tesseract::Dawg::edge_letter</definition>
+        <argsstring>(EDGE_REF edge_ref) const =0</argsstring>
+        <name>edge_letter</name>
+        <reimplementedby refid="classtesseract_1_1_trie_1a77b23425f9a6dab9a96de9b6d173d0b9">edge_letter</reimplementedby>
+        <reimplementedby refid="classtesseract_1_1_squished_dawg_1a548e8dae185f57541f43a35a07fb84fc">edge_letter</reimplementedby>
+        <param>
+          <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+          <declname>edge_ref</declname>
+        </param>
+        <briefdescription>
+<para>Returns UNICHAR_ID stored in the edge indicated by the given EDGE_REF. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="170" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1aa9e379edd04453122e805d9266f8f21c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void tesseract::Dawg::print_node</definition>
+        <argsstring>(NODE_REF node, int max_num_edges) const =0</argsstring>
+        <name>print_node</name>
+        <reimplementedby refid="classtesseract_1_1_trie_1a38abf00b13ad917570c6cb3226ceb74d">print_node</reimplementedby>
+        <reimplementedby refid="classtesseract_1_1_squished_dawg_1ae592b65dc4b4861d440ff460ad8b5afc">print_node</reimplementedby>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_num_edges</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints the contents of the node indicated by the given NODE_REF. At most max_num_edges will be printed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="174" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1a117058973cbddfa66e92ef13474a464a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void tesseract::Dawg::unichar_id_to_patterns</definition>
+        <argsstring>(UNICHAR_ID unichar_id, const UNICHARSET &amp;unicharset, GenericVector&lt; UNICHAR_ID &gt; *vec) const </argsstring>
+        <name>unichar_id_to_patterns</name>
+        <reimplementedby refid="classtesseract_1_1_trie_1a6f0727490d09b82d4b60a7a96191e832">unichar_id_to_patterns</reimplementedby>
+        <param>
+          <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+          <declname>unichar_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_u_n_i_c_h_a_r_s_e_t" kindref="compound">UNICHARSET</ref> &amp;</type>
+          <declname>unicharset</declname>
+        </param>
+        <param>
+          <type><ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; <ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref> &gt; *</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fills vec with unichar ids that represent the character classes of the given unichar_id. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="178" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="178" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1ace2f07e3a3ed7779426d42080c9c5bad" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+        <definition>virtual EDGE_REF tesseract::Dawg::pattern_loop_edge</definition>
+        <argsstring>(EDGE_REF edge_ref, UNICHAR_ID unichar_id, bool word_end) const </argsstring>
+        <name>pattern_loop_edge</name>
+        <reimplementedby refid="classtesseract_1_1_trie_1a6addef8f1c5d6ca6302db5280993dfdd">pattern_loop_edge</reimplementedby>
+        <param>
+          <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+          <declname>edge_ref</declname>
+        </param>
+        <param>
+          <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+          <declname>unichar_id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>word_end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the given EDGE_REF if the EDGE_RECORD that it points to has a self loop and the given unichar_id matches the unichar_id stored in the EDGE_RECORD, returns NO_EDGE otherwise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="185" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="185" bodyend="188"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1aa433840463bbc95c36f6418bd64fb8bd" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Dawg::Dawg</definition>
+        <argsstring>()</argsstring>
+        <name>Dawg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="191" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="191" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1a8fda693bddf7420100b13312831dfe53" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+        <definition>NODE_REF tesseract::Dawg::next_node_from_edge_rec</definition>
+        <argsstring>(const EDGE_RECORD &amp;edge_rec) const </argsstring>
+        <name>next_node_from_edge_rec</name>
+        <param>
+          <type>const <ref refid="dawg_8h_1a04b50b4c4f290148d1bee82f401a31fa" kindref="member">EDGE_RECORD</ref> &amp;</type>
+          <declname>edge_rec</declname>
+        </param>
+        <briefdescription>
+<para>Returns the next node visited by following this edge. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="194" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="194" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1a1729e82cc3d78d51d97c8be89a5409ca" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::Dawg::marker_flag_from_edge_rec</definition>
+        <argsstring>(const EDGE_RECORD &amp;edge_rec) const </argsstring>
+        <name>marker_flag_from_edge_rec</name>
+        <param>
+          <type>const <ref refid="dawg_8h_1a04b50b4c4f290148d1bee82f401a31fa" kindref="member">EDGE_RECORD</ref> &amp;</type>
+          <declname>edge_rec</declname>
+        </param>
+        <briefdescription>
+<para>Returns the marker flag of this edge. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="198" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="198" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1af6f9affc795811d63e2f255f413bb36e" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::Dawg::direction_from_edge_rec</definition>
+        <argsstring>(const EDGE_RECORD &amp;edge_rec) const </argsstring>
+        <name>direction_from_edge_rec</name>
+        <param>
+          <type>const <ref refid="dawg_8h_1a04b50b4c4f290148d1bee82f401a31fa" kindref="member">EDGE_RECORD</ref> &amp;</type>
+          <declname>edge_rec</declname>
+        </param>
+        <briefdescription>
+<para>Returns the direction flag of this edge. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="202" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="202" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1a7b0b2851a321a4dee49609995f1cc018" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::Dawg::end_of_word_from_edge_rec</definition>
+        <argsstring>(const EDGE_RECORD &amp;edge_rec) const </argsstring>
+        <name>end_of_word_from_edge_rec</name>
+        <param>
+          <type>const <ref refid="dawg_8h_1a04b50b4c4f290148d1bee82f401a31fa" kindref="member">EDGE_RECORD</ref> &amp;</type>
+          <declname>edge_rec</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if this edge marks the end of a word. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="207" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="207" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1a89f558c998d293d7e2feabeb03eca5ef" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+        <definition>UNICHAR_ID tesseract::Dawg::unichar_id_from_edge_rec</definition>
+        <argsstring>(const EDGE_RECORD &amp;edge_rec) const </argsstring>
+        <name>unichar_id_from_edge_rec</name>
+        <param>
+          <type>const <ref refid="dawg_8h_1a04b50b4c4f290148d1bee82f401a31fa" kindref="member">EDGE_RECORD</ref> &amp;</type>
+          <declname>edge_rec</declname>
+        </param>
+        <briefdescription>
+<para>Returns UNICHAR_ID recorded in this edge. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="211" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="211" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1a4a4b153bf6de3083aaac1af0600fa4ee" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Dawg::set_next_node_in_edge_rec</definition>
+        <argsstring>(EDGE_RECORD *edge_rec, EDGE_REF value)</argsstring>
+        <name>set_next_node_in_edge_rec</name>
+        <param>
+          <type><ref refid="dawg_8h_1a04b50b4c4f290148d1bee82f401a31fa" kindref="member">EDGE_RECORD</ref> *</type>
+          <declname>edge_rec</declname>
+        </param>
+        <param>
+          <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the next node link for this edge in the <ref refid="classtesseract_1_1_dawg" kindref="compound">Dawg</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="216" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="216" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1ab55a9591be8d4332a62c25c527db3479" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Dawg::set_marker_flag_in_edge_rec</definition>
+        <argsstring>(EDGE_RECORD *edge_rec)</argsstring>
+        <name>set_marker_flag_in_edge_rec</name>
+        <param>
+          <type><ref refid="dawg_8h_1a04b50b4c4f290148d1bee82f401a31fa" kindref="member">EDGE_RECORD</ref> *</type>
+          <declname>edge_rec</declname>
+        </param>
+        <briefdescription>
+<para>Sets this edge record to be the last one in a sequence of edges. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="222" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="222" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1a51413c471a98611d2d46a8685ff1eb40" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::Dawg::given_greater_than_edge_rec</definition>
+        <argsstring>(NODE_REF next_node, bool word_end, UNICHAR_ID unichar_id, const EDGE_RECORD &amp;edge_rec) const </argsstring>
+        <name>given_greater_than_edge_rec</name>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>next_node</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>word_end</declname>
+        </param>
+        <param>
+          <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+          <declname>unichar_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dawg_8h_1a04b50b4c4f290148d1bee82f401a31fa" kindref="member">EDGE_RECORD</ref> &amp;</type>
+          <declname>edge_rec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sequentially compares the given values of unichar ID, next node and word end marker with the values in the given EDGE_RECORD. Returns: 1 if at any step the given input value exceeds that of edge_rec (and all the values already checked are the same) 0 if <ref refid="classtesseract_1_1_dawg_1a7dff8b32c3f0f735944fce4b270e3e3e" kindref="member">edge_rec_match()</ref> returns true -1 otherwise </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="232" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="232" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1a7dff8b32c3f0f735944fce4b270e3e3e" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::Dawg::edge_rec_match</definition>
+        <argsstring>(NODE_REF next_node, bool word_end, UNICHAR_ID unichar_id, NODE_REF other_next_node, bool other_word_end, UNICHAR_ID other_unichar_id) const </argsstring>
+        <name>edge_rec_match</name>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>next_node</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>word_end</declname>
+        </param>
+        <param>
+          <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+          <declname>unichar_id</declname>
+        </param>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>other_next_node</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>other_word_end</declname>
+        </param>
+        <param>
+          <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+          <declname>other_unichar_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true if all the values are equal (any value matches next_node if next_node == NO_EDGE, any value matches word_end if word_end is false). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="253" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="253" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1a6b415183039524d69b370b4e93acdf56" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Dawg::init</definition>
+        <argsstring>(DawgType type, const STRING &amp;lang, PermuterType perm, int unicharset_size, int debug_level)</argsstring>
+        <name>init</name>
+        <param>
+          <type><ref refid="namespacetesseract_1a07c41f251f1782c60df4e626c35d2151" kindref="member">DawgType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_t_r_i_n_g" kindref="compound">STRING</ref> &amp;</type>
+          <declname>lang</declname>
+        </param>
+        <param>
+          <type>PermuterType</type>
+          <declname>perm</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>unicharset_size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>debug_level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets type_, lang_, perm_, unicharset_size_. Initializes the values of various masks from unicharset_size_. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="266" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.cpp" bodystart="159" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1a90a78c5aab9e7d918867dfba1f0ebf09" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::Dawg::match_words</definition>
+        <argsstring>(WERD_CHOICE *word, inT32 index, NODE_REF node, UNICHAR_ID wildcard) const </argsstring>
+        <name>match_words</name>
+        <param>
+          <type><ref refid="class_w_e_r_d___c_h_o_i_c_e" kindref="compound">WERD_CHOICE</ref> *</type>
+          <declname>word</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref></type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+          <declname>wildcard</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Matches all of the words that are represented by this string. If wilcard is set to something other than INVALID_UNICHAR_ID, the *&apos;s in this string are interpreted as wildcards. <ref refid="class_w_e_r_d___c_h_o_i_c_e" kindref="compound">WERD_CHOICE</ref> param is not passed by const so that wildcard searches can modify it and work without having to copy WERD_CHOICEs. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="274" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.cpp" bodystart="127" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_1a21d62c34f51dc4c123e559a3780b2d15" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Dawg::iterate_words_rec</definition>
+        <argsstring>(const WERD_CHOICE &amp;word_so_far, NODE_REF to_explore, TessCallback1&lt; const char * &gt; *cb) const </argsstring>
+        <name>iterate_words_rec</name>
+        <param>
+          <type>const <ref refid="class_w_e_r_d___c_h_o_i_c_e" kindref="compound">WERD_CHOICE</ref> &amp;</type>
+          <declname>word_so_far</declname>
+        </param>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>to_explore</declname>
+        </param>
+        <param>
+          <type><ref refid="class_tess_callback1" kindref="compound">TessCallback1</ref>&lt; const char * &gt; *</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="278" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.cpp" bodystart="107" bodyend="125"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Abstract class (an interface) that declares methods needed by the various tesseract classes to operate on <ref refid="classtesseract_1_1_squished_dawg" kindref="compound">SquishedDawg</ref> and <ref refid="classtesseract_1_1_trie" kindref="compound">Trie</ref> objects.</para><para>This class initializes all the edge masks (since their usage by <ref refid="classtesseract_1_1_squished_dawg" kindref="compound">SquishedDawg</ref> and <ref refid="classtesseract_1_1_trie" kindref="compound">Trie</ref> is identical) and implements simple accessors for each of the fields encoded in an EDGE_RECORD. This class also implements <ref refid="classtesseract_1_1_dawg_1a37e1a2a607ac12c92826247303ebb6d0" kindref="member">word_in_dawg()</ref> and <ref refid="classtesseract_1_1_dawg_1a15dc54d58a9d7383b64d678dcf3e2b70" kindref="member">check_for_words()</ref> (since they use only the public methods of <ref refid="classtesseract_1_1_squished_dawg" kindref="compound">SquishedDawg</ref> and <ref refid="classtesseract_1_1_trie" kindref="compound">Trie</ref> classes that are inherited from the <ref refid="classtesseract_1_1_dawg" kindref="compound">Dawg</ref> base class). </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="707">
+        <label>tesseract::SquishedDawg</label>
+        <link refid="classtesseract_1_1_squished_dawg"/>
+        <childnode refid="706" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="708">
+        <label>tesseract::Trie</label>
+        <link refid="classtesseract_1_1_trie"/>
+        <childnode refid="706" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="706">
+        <label>tesseract::Dawg</label>
+        <link refid="classtesseract_1_1_dawg"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="710">
+        <label>STRING</label>
+        <link refid="class_s_t_r_i_n_g"/>
+      </node>
+      <node id="709">
+        <label>tesseract::Dawg</label>
+        <link refid="classtesseract_1_1_dawg"/>
+        <childnode refid="710" relation="usage">
+          <edgelabel>lang_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="122" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="122" bodyend="299"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_dawg_1a15dc54d58a9d7383b64d678dcf3e2b70" prot="public" virt="non-virtual"><scope>tesseract::Dawg</scope><name>check_for_words</name></member>
+      <member refid="classtesseract_1_1_dawg_1aa433840463bbc95c36f6418bd64fb8bd" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>Dawg</name></member>
+      <member refid="classtesseract_1_1_dawg_1adc74b0871a5aafecd0daaf87b6cf4141" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>debug_level_</name></member>
+      <member refid="classtesseract_1_1_dawg_1af6f9affc795811d63e2f255f413bb36e" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>direction_from_edge_rec</name></member>
+      <member refid="classtesseract_1_1_dawg_1ad75874486a2a4d1f104df83ecb9fa321" prot="public" virt="pure-virtual"><scope>tesseract::Dawg</scope><name>edge_char_of</name></member>
+      <member refid="classtesseract_1_1_dawg_1aeb12fee19d228b6225a495c9c115a77e" prot="public" virt="pure-virtual"><scope>tesseract::Dawg</scope><name>edge_letter</name></member>
+      <member refid="classtesseract_1_1_dawg_1a7dff8b32c3f0f735944fce4b270e3e3e" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>edge_rec_match</name></member>
+      <member refid="classtesseract_1_1_dawg_1a4b81cd795923fc21e8a0f9ea9a1f8626" prot="public" virt="pure-virtual"><scope>tesseract::Dawg</scope><name>end_of_word</name></member>
+      <member refid="classtesseract_1_1_dawg_1a7b0b2851a321a4dee49609995f1cc018" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>end_of_word_from_edge_rec</name></member>
+      <member refid="classtesseract_1_1_dawg_1a1c15b73bdf9dc00d548836439a61925c" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>flag_start_bit_</name></member>
+      <member refid="classtesseract_1_1_dawg_1ad60ae15e5b48287343657d9ea9f20f15" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>flags_mask_</name></member>
+      <member refid="classtesseract_1_1_dawg_1a51413c471a98611d2d46a8685ff1eb40" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>given_greater_than_edge_rec</name></member>
+      <member refid="classtesseract_1_1_dawg_1a6b415183039524d69b370b4e93acdf56" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>init</name></member>
+      <member refid="classtesseract_1_1_dawg_1afa7a4af08c1110868e5b278a704dfec3" prot="public" virt="non-virtual"><scope>tesseract::Dawg</scope><name>iterate_words</name></member>
+      <member refid="classtesseract_1_1_dawg_1a21d62c34f51dc4c123e559a3780b2d15" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>iterate_words_rec</name></member>
+      <member refid="classtesseract_1_1_dawg_1a6f2b9b30147a54ee156dcb2aa49b110d" prot="public" virt="non-virtual"><scope>tesseract::Dawg</scope><name>kDawgMagicNumber</name></member>
+      <member refid="classtesseract_1_1_dawg_1af6a39872b9a20f3b02020f237731af87" prot="public" virt="non-virtual"><scope>tesseract::Dawg</scope><name>kPatternUnicharID</name></member>
+      <member refid="classtesseract_1_1_dawg_1a317802599bebeb7a6939c5b2bc1669ad" prot="public" virt="non-virtual"><scope>tesseract::Dawg</scope><name>lang</name></member>
+      <member refid="classtesseract_1_1_dawg_1ac03a89c4ecb3dc5b99ca0500f7f5db41" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>lang_</name></member>
+      <member refid="classtesseract_1_1_dawg_1ad67c4d32f31869f9a592d01fc65a3a73" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>letter_mask_</name></member>
+      <member refid="classtesseract_1_1_dawg_1a1729e82cc3d78d51d97c8be89a5409ca" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>marker_flag_from_edge_rec</name></member>
+      <member refid="classtesseract_1_1_dawg_1a90a78c5aab9e7d918867dfba1f0ebf09" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>match_words</name></member>
+      <member refid="classtesseract_1_1_dawg_1ae68706a55d86637dec1da9615effb659" prot="public" virt="pure-virtual"><scope>tesseract::Dawg</scope><name>next_node</name></member>
+      <member refid="classtesseract_1_1_dawg_1a8fda693bddf7420100b13312831dfe53" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>next_node_from_edge_rec</name></member>
+      <member refid="classtesseract_1_1_dawg_1a35d2c5deb0a9bf3bc9452187aec40410" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>next_node_mask_</name></member>
+      <member refid="classtesseract_1_1_dawg_1a8a140175a0051a3691084942da99dfb0" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>next_node_start_bit_</name></member>
+      <member refid="classtesseract_1_1_dawg_1ace2f07e3a3ed7779426d42080c9c5bad" prot="public" virt="virtual"><scope>tesseract::Dawg</scope><name>pattern_loop_edge</name></member>
+      <member refid="classtesseract_1_1_dawg_1ad33dc7881a2f933e801f0d5fd4ccbe41" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>perm_</name></member>
+      <member refid="classtesseract_1_1_dawg_1a1a9e92e426883774c82a688e32bf2434" prot="public" virt="non-virtual"><scope>tesseract::Dawg</scope><name>permuter</name></member>
+      <member refid="classtesseract_1_1_dawg_1aa9e379edd04453122e805d9266f8f21c" prot="public" virt="pure-virtual"><scope>tesseract::Dawg</scope><name>print_node</name></member>
+      <member refid="classtesseract_1_1_dawg_1ab55a9591be8d4332a62c25c527db3479" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>set_marker_flag_in_edge_rec</name></member>
+      <member refid="classtesseract_1_1_dawg_1a4a4b153bf6de3083aaac1af0600fa4ee" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>set_next_node_in_edge_rec</name></member>
+      <member refid="classtesseract_1_1_dawg_1a746cceae242993f4945f454e9752d4a5" prot="public" virt="non-virtual"><scope>tesseract::Dawg</scope><name>type</name></member>
+      <member refid="classtesseract_1_1_dawg_1a8f628fef1da0ff7323958362f8286695" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>type_</name></member>
+      <member refid="classtesseract_1_1_dawg_1a89f558c998d293d7e2feabeb03eca5ef" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>unichar_id_from_edge_rec</name></member>
+      <member refid="classtesseract_1_1_dawg_1a117058973cbddfa66e92ef13474a464a" prot="public" virt="virtual"><scope>tesseract::Dawg</scope><name>unichar_id_to_patterns</name></member>
+      <member refid="classtesseract_1_1_dawg_1ac4b22fb6918a0f9e9b98eb4721cbba33" prot="public" virt="pure-virtual"><scope>tesseract::Dawg</scope><name>unichar_ids_of</name></member>
+      <member refid="classtesseract_1_1_dawg_1a96b429ef5449ad3cab057eb27d199c66" prot="protected" virt="non-virtual"><scope>tesseract::Dawg</scope><name>unicharset_size_</name></member>
+      <member refid="classtesseract_1_1_dawg_1a37e1a2a607ac12c92826247303ebb6d0" prot="public" virt="non-virtual"><scope>tesseract::Dawg</scope><name>word_in_dawg</name></member>
+      <member refid="classtesseract_1_1_dawg_1ad54b2916f52c1db80bfeda8bd712228e" prot="public" virt="virtual"><scope>tesseract::Dawg</scope><name>~Dawg</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

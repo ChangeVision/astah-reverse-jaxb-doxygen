@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="interface_uml_pad_app_delegate" kind="class" prot="public">
+    <compoundname>UmlPadAppDelegate</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">&lt;UIApplicationDelegate&gt;</basecompoundref>
+    <includes refid="_uml_pad_app_delegate_8h" local="no">UmlPadAppDelegate.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="interface_uml_pad_app_delegate_1a5abe146914f0414aca68684e3e020a33" prot="protected" static="no" mutable="no">
+        <type>IBOutlet UIWindow *</type>
+        <definition>IBOutlet UIWindow* UmlPadAppDelegate::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/UmlPadAppDelegate.h" line="15" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/UmlPadAppDelegate.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_uml_pad_app_delegate_1a6ffe5e7f7d04a8fe2a130d4d8dbb8711" prot="protected" static="no" mutable="no">
+        <type>IBOutlet <ref refid="interface_home_view_controller" kindref="compound">HomeViewController</ref> *</type>
+        <definition>IBOutlet HomeViewController* UmlPadAppDelegate::homeViewController</definition>
+        <argsstring></argsstring>
+        <name>homeViewController</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/UmlPadAppDelegate.h" line="16" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/UmlPadAppDelegate.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_uml_pad_app_delegate_1a86c87ce69de7f6bf70c64bf00c136906" prot="protected" static="no" mutable="no">
+        <type>IBOutlet <ref refid="interface_diagram_frame_view_controller" kindref="compound">DiagramFrameViewController</ref> *</type>
+        <definition>IBOutlet DiagramFrameViewController* UmlPadAppDelegate::diagramFrameViewController</definition>
+        <argsstring></argsstring>
+        <name>diagramFrameViewController</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/UmlPadAppDelegate.h" line="17" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/UmlPadAppDelegate.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="883">
+        <label>&lt;UIApplicationDelegate&gt;</label>
+      </node>
+      <node id="881">
+        <label>UmlPadAppDelegate</label>
+        <link refid="interface_uml_pad_app_delegate"/>
+        <childnode refid="882" relation="public-inheritance">
+        </childnode>
+        <childnode refid="883" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="882">
+        <label>NSObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="900">
+        <label>&lt;UIScrollViewDelegate&gt;</label>
+      </node>
+      <node id="890">
+        <label>HomeView</label>
+        <link refid="interface_home_view"/>
+        <childnode refid="891" relation="public-inheritance">
+        </childnode>
+        <childnode refid="892" relation="public-inheritance">
+        </childnode>
+        <childnode refid="893" relation="usage">
+          <edgelabel>tappedView</edgelabel>
+        </childnode>
+      </node>
+      <node id="891">
+        <label>UIScrollView</label>
+      </node>
+      <node id="886">
+        <label>&lt;UIApplicationDelegate&gt;</label>
+      </node>
+      <node id="899">
+        <label>DiagramFrameView</label>
+        <link refid="interface_diagram_frame_view"/>
+        <childnode refid="891" relation="public-inheritance">
+        </childnode>
+        <childnode refid="900" relation="public-inheritance">
+        </childnode>
+        <childnode refid="901" relation="usage">
+          <edgelabel>currentMode</edgelabel>
+        </childnode>
+        <childnode refid="896" relation="usage">
+          <edgelabel>diagramView</edgelabel>
+        </childnode>
+        <childnode refid="895" relation="usage">
+          <edgelabel>diagramInfo</edgelabel>
+        </childnode>
+      </node>
+      <node id="884">
+        <label>UmlPadAppDelegate</label>
+        <link refid="interface_uml_pad_app_delegate"/>
+        <childnode refid="885" relation="public-inheritance">
+        </childnode>
+        <childnode refid="886" relation="public-inheritance">
+        </childnode>
+        <childnode refid="887" relation="usage">
+          <edgelabel>homeViewController</edgelabel>
+        </childnode>
+        <childnode refid="898" relation="usage">
+          <edgelabel>diagramFrameViewController</edgelabel>
+        </childnode>
+      </node>
+      <node id="896">
+        <label>DiagramView</label>
+        <link refid="interface_diagram_view"/>
+        <childnode refid="897" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="892">
+        <label>&lt;UIActionSheetDelegate&gt;</label>
+      </node>
+      <node id="901">
+        <label>Mode</label>
+        <link refid="interface_mode"/>
+        <childnode refid="885" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="893">
+        <label>DiagramInfoView</label>
+        <link refid="interface_diagram_info_view"/>
+        <childnode refid="894" relation="public-inheritance">
+        </childnode>
+        <childnode refid="895" relation="usage">
+          <edgelabel>diagramInfo</edgelabel>
+        </childnode>
+      </node>
+      <node id="889">
+        <label>&lt;UIPopoverControllerDelegate&gt;</label>
+      </node>
+      <node id="888">
+        <label>UIViewController</label>
+      </node>
+      <node id="887">
+        <label>HomeViewController</label>
+        <link refid="interface_home_view_controller"/>
+        <childnode refid="888" relation="public-inheritance">
+        </childnode>
+        <childnode refid="889" relation="public-inheritance">
+        </childnode>
+        <childnode refid="890" relation="usage">
+          <edgelabel>homeView</edgelabel>
+        </childnode>
+        <childnode refid="898" relation="usage">
+          <edgelabel>diagramFrameViewController</edgelabel>
+        </childnode>
+      </node>
+      <node id="898">
+        <label>DiagramFrameViewController</label>
+        <link refid="interface_diagram_frame_view_controller"/>
+        <childnode refid="888" relation="public-inheritance">
+        </childnode>
+        <childnode refid="892" relation="public-inheritance">
+        </childnode>
+        <childnode refid="899" relation="usage">
+          <edgelabel>diagramFrameView</edgelabel>
+        </childnode>
+        <childnode refid="887" relation="usage">
+          <edgelabel>homeViewController</edgelabel>
+        </childnode>
+      </node>
+      <node id="895">
+        <label>DiagramInfo</label>
+        <link refid="interface_diagram_info"/>
+        <childnode refid="885" relation="public-inheritance">
+        </childnode>
+        <childnode refid="896" relation="usage">
+          <edgelabel>diagramView</edgelabel>
+        </childnode>
+      </node>
+      <node id="894">
+        <label>UIImageView</label>
+      </node>
+      <node id="897">
+        <label>UIView</label>
+      </node>
+      <node id="885">
+        <label>NSObject</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/UmlPadAppDelegate.h" line="14" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/UmlPadAppDelegate.h" bodystart="14" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_uml_pad_app_delegate_1a86c87ce69de7f6bf70c64bf00c136906" prot="protected" virt="non-virtual"><scope>UmlPadAppDelegate</scope><name>diagramFrameViewController</name></member>
+      <member refid="interface_uml_pad_app_delegate_1a6ffe5e7f7d04a8fe2a130d4d8dbb8711" prot="protected" virt="non-virtual"><scope>UmlPadAppDelegate</scope><name>homeViewController</name></member>
+      <member refid="interface_uml_pad_app_delegate_1a5abe146914f0414aca68684e3e020a33" prot="protected" virt="non-virtual"><scope>UmlPadAppDelegate</scope><name>window</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

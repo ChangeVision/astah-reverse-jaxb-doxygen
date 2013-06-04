@@ -1,0 +1,539 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="mystream_8cpp" kind="file">
+    <compoundname>mystream.cpp</compoundname>
+    <includes refid="stdafx_8h" local="yes">stdafx.h</includes>
+    <includes refid="mystream_8h" local="yes">mystream.h</includes>
+    <incdepgraph>
+      <node id="261">
+        <label>mystream.cpp</label>
+        <link refid="mystream.cpp"/>
+        <childnode refid="262" relation="include">
+        </childnode>
+        <childnode refid="276" relation="include">
+        </childnode>
+      </node>
+      <node id="269">
+        <label>afxcmn.h</label>
+      </node>
+      <node id="274">
+        <label>float.h</label>
+      </node>
+      <node id="266">
+        <label>afxole.h</label>
+      </node>
+      <node id="265">
+        <label>afxext.h</label>
+      </node>
+      <node id="271">
+        <label>shlwapi.h</label>
+      </node>
+      <node id="273">
+        <label>atlimage.h</label>
+      </node>
+      <node id="270">
+        <label>afxsock.h</label>
+      </node>
+      <node id="272">
+        <label>atlpath.h</label>
+      </node>
+      <node id="276">
+        <label>mystream.h</label>
+        <link refid="mystream_8h"/>
+      </node>
+      <node id="262">
+        <label>stdafx.h</label>
+        <link refid="stdafx_8h"/>
+        <childnode refid="263" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="265" relation="include">
+        </childnode>
+        <childnode refid="266" relation="include">
+        </childnode>
+        <childnode refid="267" relation="include">
+        </childnode>
+        <childnode refid="268" relation="include">
+        </childnode>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="270" relation="include">
+        </childnode>
+        <childnode refid="271" relation="include">
+        </childnode>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="273" relation="include">
+        </childnode>
+        <childnode refid="274" relation="include">
+        </childnode>
+        <childnode refid="275" relation="include">
+        </childnode>
+      </node>
+      <node id="275">
+        <label>math.h</label>
+      </node>
+      <node id="267">
+        <label>afxdisp.h</label>
+      </node>
+      <node id="268">
+        <label>afxdtctl.h</label>
+      </node>
+      <node id="263">
+        <label>targetver.h</label>
+        <link refid="targetver_8h"/>
+      </node>
+      <node id="264">
+        <label>afxwin.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="mystream_8cpp_1abc857a28862106659c6720fdbb39b331" prot="public" static="no">
+        <name>LONGLONG_MAX</name>
+        <initializer>((LONGLONG)MAXLONGLONG)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" line="150" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="mystream_8cpp_1a65eb07a280141dab05420d9a4c6a6484" prot="public" static="no">
+        <name>LONGLONG_MIN</name>
+        <initializer>(‾<ref refid="mystream_8cpp_1abc857a28862106659c6720fdbb39b331" kindref="member">LONGLONG_MAX</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" line="151" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="mystream_8cpp_1abb917c05458ae022fb7870fda7b6c642" prot="public" static="no">
+        <name>ULONGLONG_MAX</name>
+        <initializer>(((ULONGLONG)<ref refid="mystream_8cpp_1abc857a28862106659c6720fdbb39b331" kindref="member">LONGLONG_MAX</ref> &lt;&lt; 1) | 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" line="152" column="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Change<sp/>Vision<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//#pragma<sp/>comment(exestr,<sp/>&quot;%Z%%Y%%M%<sp/>%I%<sp/>20%E%<sp/>%U%&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/><sp/><sp/>&quot;<ref refid="stdafx_8h" kindref="compound">stdafx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/><sp/><sp/>&quot;<ref refid="mystream_8h" kindref="compound">mystream.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/><sp/>_DEBUG</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>new<sp/>DEBUG_NEW</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><ref refid="class_c_my_stream_1_1lockit_1aeab219b65ae0edcaa1a4c6dbd9fb0600" kindref="member">CMyStream::lockit::‾lockit</ref>()</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>InterlockedExchange(<ref refid="class_c_my_stream_1_1lockit_1adcec10b87c114c655f17aad0b7ab2ab5" kindref="member">lockword</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><ref refid="class_c_my_stream_1_1lockit_1a5026cdb074272bf8b285e791d6b4516f" kindref="member">CMyStream::lockit::lockit</ref>(<ref refid="class_c_my_stream" kindref="compound">CMyStream</ref><sp/>*that)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>lockword<sp/>=<sp/>&amp;that-&gt;<ref refid="class_c_my_stream_1a381f0ed34380fec651a0f162ff83a546" kindref="member">ms_lockword</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(InterlockedExchange(lockword,<sp/>1))</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Sleep(0);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">HRESULT<sp/>STDMETHODCALLTYPE</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><ref refid="class_c_my_stream_1ac8c51a93c45b5fd396a7488fc741b92c" kindref="member">CMyStream::QueryInterface</ref>(REFIID<sp/>iid,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**ppv)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(iid<sp/>==<sp/>__uuidof(IUnknown)<sp/>||</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>iid<sp/>==<sp/>__uuidof(ISequentialStream)<sp/>||<sp/>iid<sp/>==<sp/>__uuidof(IStream))<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*ppv<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">IStream<sp/>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_my_stream_1ae2345e0fc4a10c921926935f3c4e9191" kindref="member">AddRef</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>S_OK;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>E_NOINTERFACE;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">ULONG<sp/>STDMETHODCALLTYPE</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="class_c_my_stream_1ae2345e0fc4a10c921926935f3c4e9191" kindref="member">CMyStream::AddRef</ref>()</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(ULONG)InterlockedIncrement(&amp;<ref refid="class_c_my_stream_1ae3771aa6438e317fb21ebd024cf56300" kindref="member">ms_refc</ref>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">ULONG<sp/>STDMETHODCALLTYPE</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><ref refid="class_c_my_stream_1a92efba04a2cdc8fc4381f12681e2945e" kindref="member">CMyStream::Release</ref>()</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>ULONG<sp/><sp/><sp/><sp/><sp/><sp/><sp/>res;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>res<sp/>=<sp/>(ULONG)InterlockedDecrement(&amp;<ref refid="class_c_my_stream_1ae3771aa6438e317fb21ebd024cf56300" kindref="member">ms_refc</ref>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(res<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>res;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">HRESULT<sp/>STDMETHODCALLTYPE</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><ref refid="class_c_my_stream_1aacdaa1a27e4e92b9510b38137b585950" kindref="member">CMyStream::Read</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*buf,<sp/>ULONG<sp/>nbytes,<sp/>ULONG<sp/>*actual)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>ULONG<sp/><sp/><sp/><sp/><sp/><sp/><sp/>rem<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(actual<sp/>&amp;&amp;<sp/>IsBadWritePtr(actual,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*actual)))</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>STG_E_INVALIDPOINTER;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(actual)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FillMemory(actual,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*actual),<sp/>0);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nbytes<sp/>&lt;=<sp/>0)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>S_OK;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(IsBadWritePtr(buf,<sp/>nbytes))</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>STG_E_INVALIDPOINTER;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(1)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lockit<sp/><sp/><sp/><sp/><sp/><sp/>by(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_c_my_stream_1a015de3221a956f28fc1b5cf75231bab3" kindref="member">ms_seek</ref><sp/>&lt;<sp/><ref refid="class_c_my_stream_1a062872c07e5bda2615f799e3b8b70a19" kindref="member">ms_mlen</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((rem<sp/>=<sp/><ref refid="class_c_my_stream_1a062872c07e5bda2615f799e3b8b70a19" kindref="member">ms_mlen</ref><sp/>-<sp/>(ULONG)<ref refid="class_c_my_stream_1a015de3221a956f28fc1b5cf75231bab3" kindref="member">ms_seek</ref>)<sp/>&gt;<sp/>nbytes)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rem<sp/>=<sp/>nbytes;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MoveMemory(buf,<sp/><ref refid="class_c_my_stream_1a0c4399b612e36b340f1263c0224e1d58" kindref="member">ms_mbuf</ref><sp/>+<sp/>ms_seek,<sp/>rem);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_seek<sp/>+=<sp/>rem;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(actual)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MoveMemory(actual,<sp/>&amp;rem,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*actual));</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>S_OK;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">HRESULT<sp/>STDMETHODCALLTYPE</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><ref refid="class_c_my_stream_1a742ad64d337e852b88efe35a4f276921" kindref="member">CMyStream::Write</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>*buf,<sp/>ULONG<sp/>nbytes,<sp/>ULONG<sp/>*actual)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>HRESULT<sp/><sp/><sp/><sp/><sp/>hr<sp/>=<sp/>S_OK;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>ULONG<sp/><sp/><sp/><sp/><sp/><sp/><sp/>rem<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(actual<sp/>&amp;&amp;<sp/>IsBadWritePtr(actual,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*actual)))</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>STG_E_INVALIDPOINTER;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>pcbWritten<sp/>parameter<sp/>can<sp/>have<sp/>a<sp/>value<sp/>even<sp/>if<sp/>an<sp/>error<sp/>occurs.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(actual)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FillMemory(actual,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*actual),<sp/>0);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nbytes<sp/>&lt;=<sp/>0)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>S_OK;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(IsBadReadPtr(buf,<sp/>nbytes))</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>STG_E_INVALIDPOINTER;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(1)<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lockit<sp/><sp/><sp/><sp/><sp/><sp/>by(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_c_my_stream_1a015de3221a956f28fc1b5cf75231bab3" kindref="member">ms_seek</ref><sp/>&gt;=<sp/><ref refid="class_c_my_stream_1a062872c07e5bda2615f799e3b8b70a19" kindref="member">ms_mlen</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hr<sp/>=<sp/>STG_E_MEDIUMFULL;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nbytes<sp/>&gt;<sp/><ref refid="class_c_my_stream_1a062872c07e5bda2615f799e3b8b70a19" kindref="member">ms_mlen</ref><sp/>-<sp/>(ULONG)<ref refid="class_c_my_stream_1a015de3221a956f28fc1b5cf75231bab3" kindref="member">ms_seek</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hr<sp/>=<sp/>STG_E_MEDIUMFULL;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rem<sp/>=<sp/>nbytes;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MoveMemory(<ref refid="class_c_my_stream_1a0c4399b612e36b340f1263c0224e1d58" kindref="member">ms_mbuf</ref><sp/>+<sp/>ms_seek,<sp/>buf,<sp/>rem);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_seek<sp/>+=<sp/>rem;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hr<sp/>==<sp/>S_OK<sp/>&amp;&amp;<sp/>actual)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MoveMemory(actual,<sp/>&amp;rem,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*actual));</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hr;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal">HRESULT<sp/>STDMETHODCALLTYPE</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><ref refid="class_c_my_stream_1a4f9d19cdbdac2b54c014db536ecaa818" kindref="member">CMyStream::Seek</ref>(LARGE_INTEGER<sp/>off,<sp/>DWORD<sp/>wh,<sp/>ULARGE_INTEGER<sp/>*noff)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>HRESULT<sp/><sp/><sp/><sp/><sp/>hr<sp/>=<sp/>S_OK;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>LONGLONG<sp/><sp/><sp/><sp/>xoff<sp/>=<sp/>off.QuadPart;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>ULONGLONG<sp/><sp/><sp/>moff<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(noff<sp/>&amp;&amp;<sp/>IsBadWritePtr(noff,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*noff)))</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>STG_E_INVALIDPOINTER;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LONGLONG_MAX<sp/><sp/><sp/><sp/>((LONGLONG)MAXLONGLONG)</highlight></codeline>
+<codeline lineno="151"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>LONGLONG_MIN<sp/><sp/><sp/><sp/>(‾LONGLONG_MAX)</highlight></codeline>
+<codeline lineno="152"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>ULONGLONG_MAX<sp/><sp/><sp/>(((ULONGLONG)LONGLONG_MAX<sp/>&lt;&lt;<sp/>1)<sp/>|<sp/>1)</highlight></codeline>
+<codeline lineno="153"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(wh)<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>STREAM_SEEK_SET:</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>この場合は<sp/>off<sp/>を<sp/>unsigned<sp/>とみなす仕様との事</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(1)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lockit<sp/><sp/><sp/><sp/><sp/><sp/>by(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>moff<sp/>=<sp/><ref refid="class_c_my_stream_1a015de3221a956f28fc1b5cf75231bab3" kindref="member">ms_seek</ref><sp/>=<sp/>xoff;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>STREAM_SEEK_CUR:</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(xoff<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lockit<sp/><sp/><sp/><sp/><sp/><sp/>by(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>0x8000...<sp/>でも<sp/>unsigned<sp/>転換でOK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ULONGLONG)-xoff<sp/>&gt;<sp/><ref refid="class_c_my_stream_1a015de3221a956f28fc1b5cf75231bab3" kindref="member">ms_seek</ref>)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hr<sp/>=<sp/>STG_E_INVALIDFUNCTION;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>moff<sp/>=<sp/>(<ref refid="class_c_my_stream_1a015de3221a956f28fc1b5cf75231bab3" kindref="member">ms_seek</ref><sp/>+=<sp/>xoff);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lockit<sp/><sp/><sp/><sp/><sp/><sp/>by(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ULONGLONG)xoff<sp/>&gt;<sp/>ULONGLONG_MAX<sp/>-<sp/><ref refid="class_c_my_stream_1a015de3221a956f28fc1b5cf75231bab3" kindref="member">ms_seek</ref>)</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hr<sp/>=<sp/>STG_E_INVALIDFUNCTION;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>moff<sp/>=<sp/>(<ref refid="class_c_my_stream_1a015de3221a956f28fc1b5cf75231bab3" kindref="member">ms_seek</ref><sp/>+=<sp/>xoff);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>STREAM_SEEK_END:</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(xoff<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lockit<sp/><sp/><sp/><sp/><sp/><sp/>by(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(xoff<sp/>&lt;<sp/>-(LONGLONG)<ref refid="class_c_my_stream_1a062872c07e5bda2615f799e3b8b70a19" kindref="member">ms_mlen</ref>)</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hr<sp/>=<sp/>STG_E_INVALIDFUNCTION;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>moff<sp/>=<sp/><ref refid="class_c_my_stream_1a015de3221a956f28fc1b5cf75231bab3" kindref="member">ms_seek</ref><sp/>=<sp/>(ULONGLONG)ms_mlen<sp/>+<sp/>xoff;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lockit<sp/><sp/><sp/><sp/><sp/><sp/>by(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ULONGLONG)xoff<sp/>&gt;<sp/>ULONGLONG_MAX<sp/>-<sp/><ref refid="class_c_my_stream_1a062872c07e5bda2615f799e3b8b70a19" kindref="member">ms_mlen</ref>)</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hr<sp/>=<sp/>STG_E_INVALIDFUNCTION;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>moff<sp/>=<sp/><ref refid="class_c_my_stream_1a015de3221a956f28fc1b5cf75231bab3" kindref="member">ms_seek</ref><sp/>=<sp/>(ULONGLONG)<ref refid="class_c_my_stream_1a062872c07e5bda2615f799e3b8b70a19" kindref="member">ms_mlen</ref><sp/>+<sp/>xoff;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hr<sp/>=<sp/>STG_E_INVALIDFUNCTION;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hr<sp/>==<sp/>S_OK<sp/>&amp;&amp;<sp/>noff)</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MoveMemory(&amp;noff-&gt;QuadPart,<sp/>&amp;moff,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(noff-&gt;QuadPart));</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hr;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal">HRESULT<sp/>STDMETHODCALLTYPE</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><ref refid="class_c_my_stream_1ad20ad0d63bfc6ee81c4f3eda33365159" kindref="member">CMyStream::SetSize</ref>(ULARGE_INTEGER<sp/>nbytes)</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>E_NOTIMPL;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal">HRESULT<sp/>STDMETHODCALLTYPE</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><ref refid="class_c_my_stream_1a07bf3b84244f5780c9af7630494d2f88" kindref="member">CMyStream::CopyTo</ref>(IStream<sp/>*,<sp/>ULARGE_INTEGER,<sp/>ULARGE_INTEGER<sp/>*,<sp/>ULARGE_INTEGER<sp/>*)</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>E_NOTIMPL;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal">HRESULT<sp/>STDMETHODCALLTYPE</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><ref refid="class_c_my_stream_1af6ebc67ddc0b0abc7224da2ca3bc443d" kindref="member">CMyStream::Commit</ref>(DWORD)</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>E_NOTIMPL;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal">HRESULT<sp/>STDMETHODCALLTYPE</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><ref refid="class_c_my_stream_1a2dcadd6fafe3c4f646aa75556525b43c" kindref="member">CMyStream::Revert</ref>()</highlight></codeline>
+<codeline lineno="234"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>E_NOTIMPL;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal">HRESULT<sp/>STDMETHODCALLTYPE</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><ref refid="class_c_my_stream_1a5a3fa68f4984ddcd5919503efb92eade" kindref="member">CMyStream::LockRegion</ref>(ULARGE_INTEGER,<sp/>ULARGE_INTEGER,<sp/>DWORD)</highlight></codeline>
+<codeline lineno="241"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>E_NOTIMPL;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal">HRESULT<sp/>STDMETHODCALLTYPE</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><ref refid="class_c_my_stream_1a761798f7cd4020e1b6554c1b5c1e5351" kindref="member">CMyStream::UnlockRegion</ref>(ULARGE_INTEGER,<sp/>ULARGE_INTEGER,<sp/>DWORD)</highlight></codeline>
+<codeline lineno="248"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>E_NOTIMPL;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal">HRESULT<sp/>STDMETHODCALLTYPE</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><ref refid="class_c_my_stream_1a5c4e6f253855b8de99fd9c39c974fc1c" kindref="member">CMyStream::Stat</ref>(STATSTG<sp/>*ssp,<sp/>DWORD<sp/>flags)</highlight></codeline>
+<codeline lineno="255"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>ULONG<sp/><sp/><sp/><sp/><sp/><sp/><sp/>cbsz;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>FILETIME<sp/><sp/><sp/><sp/>mtime,<sp/>ctime,<sp/>atime;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(flags<sp/>&amp;<sp/>STATFLAG_NONAME)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(flags<sp/>&amp;<sp/>STATFLAG_NOOPEN)<sp/><sp/>is<sp/>not<sp/>defined_spec</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ssp<sp/>||<sp/>IsBadWritePtr(ssp,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*ssp)))</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>STG_E_INVALIDPOINTER;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(ssp,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*ssp));</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>cbsz<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(&amp;mtime,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(mtime));</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(&amp;ctime,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(ctime));</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(&amp;atime,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(atime));</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(1)<sp/>{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lockit<sp/><sp/><sp/><sp/><sp/><sp/>by(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cbsz<sp/>=<sp/><ref refid="class_c_my_stream_1a062872c07e5bda2615f799e3b8b70a19" kindref="member">ms_mlen</ref>;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>ssp-&gt;pwcsName<sp/>=<sp/>NULL;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CoTaskMemFree</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>ssp-&gt;type<sp/>=<sp/>STGTY_LOCKBYTES;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>ssp-&gt;cbSize.QuadPart<sp/>=<sp/>cbsz;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>ssp-&gt;mtime<sp/>=<sp/>mtime;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>ssp-&gt;ctime<sp/>=<sp/>ctime;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>ssp-&gt;atime<sp/>=<sp/>atime;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>ssp-&gt;grfMode<sp/>=<sp/>0666;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>ssp-&gt;grfLocksSupported<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>member<sp/>is<sp/>not<sp/>used<sp/>for<sp/>streams<sp/>or<sp/>byte<sp/>arrays.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>ssp-&gt;clsid<sp/>=<sp/>CLSID_NULL;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>member<sp/>is<sp/>not<sp/>used<sp/>for<sp/>streams<sp/>or<sp/>byte<sp/>arrays.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>ssp-&gt;grfStateBits<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reserved<sp/>for<sp/>future<sp/>use.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>ssp-&gt;reserved<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>S_OK;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal">HRESULT<sp/>STDMETHODCALLTYPE</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><ref refid="class_c_my_stream_1a52b21757d6e1da3a522fffa0538a5430" kindref="member">CMyStream::Clone</ref>(IStream<sp/>**)</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>E_NOTIMPL;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><ref refid="class_c_my_stream_1aa454db1d01f492d4d2b8d5f8db06e06d" kindref="member">CMyStream::invalidate</ref>()</highlight></codeline>
+<codeline lineno="310"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>autofree<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*mbuf<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(1)<sp/>{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lockit<sp/><sp/><sp/><sp/><sp/><sp/>by(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>autofree<sp/>=<sp/><ref refid="class_c_my_stream_1a8d145b308c4ad34b26005199de201dd5" kindref="member">ms_autofree</ref>;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mbuf<sp/>=<sp/><ref refid="class_c_my_stream_1a0c4399b612e36b340f1263c0224e1d58" kindref="member">ms_mbuf</ref>;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_my_stream_1a0c4399b612e36b340f1263c0224e1d58" kindref="member">ms_mbuf</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_my_stream_1a062872c07e5bda2615f799e3b8b70a19" kindref="member">ms_mlen</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(autofree<sp/>&amp;&amp;<sp/>mbuf)</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdafx_8cpp_1a15634687fc57d437006658399cbf98b1" kindref="member">xfree</ref>(mbuf);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><ref refid="class_c_my_stream_1ab869a86688a852acee99f01fa81544f9" kindref="member">CMyStream::‾CMyStream</ref>()</highlight></codeline>
+<codeline lineno="330"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_my_stream_1aa454db1d01f492d4d2b8d5f8db06e06d" kindref="member">invalidate</ref>();</highlight></codeline>
+<codeline lineno="332"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><ref refid="class_c_my_stream_1a0aafa9f3b78fbec2e455c26db26dd1d3" kindref="member">CMyStream::CMyStream</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*mbuf,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mlen,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>autofree)</highlight></codeline>
+<codeline lineno="336"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_my_stream_1a381f0ed34380fec651a0f162ff83a546" kindref="member">ms_lockword</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_my_stream_1ae3771aa6438e317fb21ebd024cf56300" kindref="member">ms_refc</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_my_stream_1a8d145b308c4ad34b26005199de201dd5" kindref="member">ms_autofree</ref><sp/>=<sp/>autofree;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_my_stream_1a0c4399b612e36b340f1263c0224e1d58" kindref="member">ms_mbuf</ref><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_my_stream_1a062872c07e5bda2615f799e3b8b70a19" kindref="member">ms_mlen</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_my_stream_1a015de3221a956f28fc1b5cf75231bab3" kindref="member">ms_seek</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mbuf<sp/>&amp;&amp;<sp/>mlen<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_my_stream_1a0c4399b612e36b340f1263c0224e1d58" kindref="member">ms_mbuf</ref><sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)mbuf;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_my_stream_1a062872c07e5bda2615f799e3b8b70a19" kindref="member">ms_mlen</ref><sp/>=<sp/>mlen;</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mbuf<sp/>&amp;&amp;<sp/>autofree)<sp/>{</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdafx_8cpp_1a15634687fc57d437006658399cbf98b1" kindref="member">xfree</ref>(mbuf);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="350"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><ref refid="class_c_my_stream" kindref="compound">CMyStream</ref><sp/>*</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><ref refid="class_c_my_stream_1a9e741f271071976e1fbcf2d780723da0" kindref="member">CMyStream::newOne</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*mbuf,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mlen,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>autofree)</highlight></codeline>
+<codeline lineno="355"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_my_stream" kindref="compound">CMyStream</ref><sp/><sp/><sp/>*one<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>one<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_c_my_stream_1a0aafa9f3b78fbec2e455c26db26dd1d3" kindref="member">CMyStream</ref>(mbuf,<sp/>mlen,<sp/>autofree);</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(CException<sp/>*e)<sp/>{</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e-&gt;Delete();</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>one;</highlight></codeline>
+<codeline lineno="365"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><ref refid="class_c_my_stream" kindref="compound">CMyStream</ref><sp/>*</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><ref refid="class_c_my_stream_1ac6a3b0c5e48a742cb62f6d6953d88dc2" kindref="member">CMyStream::newByFile</ref>(LPCTSTR<sp/>fpath)</highlight></codeline>
+<codeline lineno="370"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_my_stream" kindref="compound">CMyStream</ref><sp/><sp/><sp/>*one<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*buf<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>len<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/>HANDLE<sp/><sp/><sp/><sp/><sp/><sp/>h<sp/>=<sp/><ref refid="stdafx_8h_1ac4be7a3847d2f545e32ff98d6ef4fdd4" kindref="member">BAD_HANDLE</ref>;</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((h<sp/>=<sp/><ref refid="stdafx_8cpp_1ae297ffeedde8d45fe75b2b07a503899a" kindref="member">xopen</ref>(fpath,<sp/>0))<sp/>==<sp/><ref refid="stdafx_8h_1ac4be7a3847d2f545e32ff98d6ef4fdd4" kindref="member">BAD_HANDLE</ref>)</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((len<sp/>=<sp/><ref refid="stdafx_8cpp_1abd045addc368d92ad721aa2760b04919" kindref="member">xlseek</ref>(h,<sp/>0,<sp/>FILE_END))<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//failed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="stdafx_8cpp_1abd045addc368d92ad721aa2760b04919" kindref="member">xlseek</ref>(h,<sp/>0,<sp/>FILE_BEGIN)<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(len<sp/>&gt;<sp/>1000<sp/>*<sp/>1024<sp/>*<sp/>1024)<sp/>{</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((buf<sp/>=<sp/><ref refid="stdafx_8cpp_1a5d3e095b3fb6561fc5773a572197880d" kindref="member">xmalloc</ref>(len))<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="stdafx_8cpp_1a771d71c7b895038aa04e125e2884b369" kindref="member">xread</ref>(h,<sp/>buf,<sp/>len)<sp/>&lt;<sp/>len)<sp/>{</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="stdafx_8cpp_1a10ff99f74c586e76c36436999b57753e" kindref="member">xclose</ref>(h);</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(len<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdafx_8cpp_1a15634687fc57d437006658399cbf98b1" kindref="member">xfree</ref>(buf);</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((one<sp/>=<sp/><ref refid="class_c_my_stream_1a9e741f271071976e1fbcf2d780723da0" kindref="member">newOne</ref>(buf,<sp/>len,<sp/>1))<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdafx_8cpp_1a15634687fc57d437006658399cbf98b1" kindref="member">xfree</ref>(buf);</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>one;</highlight></codeline>
+<codeline lineno="404"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,578 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_neural_net" kind="class" prot="public">
+    <compoundname>tesseract::NeuralNet</compoundname>
+    <includes refid="neural__net_8h" local="no">neural_net.h</includes>
+    <innerclass refid="structtesseract_1_1_neural_net_1_1_node" prot="protected">tesseract::NeuralNet::Node</innerclass>
+    <innerclass refid="structtesseract_1_1_neural_net_1_1_weighted_node" prot="protected">tesseract::NeuralNet::WeightedNode</innerclass>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_neural_net_1a680ddffcb4d92f115e1a7b8221811a81" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool tesseract::NeuralNet::read_only_</definition>
+        <argsstring></argsstring>
+        <name>read_only_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="61" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_neural_net_1a3f9506819852a7c66e83775f92f95610" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::NeuralNet::in_cnt_</definition>
+        <argsstring></argsstring>
+        <name>in_cnt_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="63" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_neural_net_1a3e1f6cb07479e2e6d9fcb11625a715c1" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::NeuralNet::out_cnt_</definition>
+        <argsstring></argsstring>
+        <name>out_cnt_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="65" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_neural_net_1a3772cb00bf4f74adf163fc5705bf1f0d" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::NeuralNet::neuron_cnt_</definition>
+        <argsstring></argsstring>
+        <name>neuron_cnt_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="67" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_neural_net_1ae260161c01b9d853d9d7ddf114d72ea9" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::NeuralNet::wts_cnt_</definition>
+        <argsstring></argsstring>
+        <name>wts_cnt_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="69" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_neural_net_1a4ff353ff0ba717e12507c6a1a909363f" prot="protected" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_neuron" kindref="compound">Neuron</ref> *</type>
+        <definition>Neuron* tesseract::NeuralNet::neurons_</definition>
+        <argsstring></argsstring>
+        <name>neurons_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="71" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_neural_net_1aaba48ba8a449a805ef8802ea3308d69d" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::NeuralNet::alloc_wgt_cnt_</definition>
+        <argsstring></argsstring>
+        <name>alloc_wgt_cnt_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="81" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_neural_net_1aa7b901ea43bae46e569d68f476c7b318" prot="protected" static="no" mutable="no">
+        <type>vector&lt; vector&lt; float &gt; * &gt;</type>
+        <definition>vector&lt;vector&lt;float&gt; *&gt; tesseract::NeuralNet::wts_vec_</definition>
+        <argsstring></argsstring>
+        <name>wts_vec_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="83" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_neural_net_1a6cc1b21c513a3bbd8de7d5435c649048" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool tesseract::NeuralNet::auto_encoder_</definition>
+        <argsstring></argsstring>
+        <name>auto_encoder_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="85" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_neural_net_1acc363035dc53cc103d2cadaa54333efa" prot="protected" static="no" mutable="no">
+        <type>vector&lt; float &gt;</type>
+        <definition>vector&lt;float&gt; tesseract::NeuralNet::inputs_max_</definition>
+        <argsstring></argsstring>
+        <name>inputs_max_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="87" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_neural_net_1aa05bfd6191232cf25b79752fd1a38117" prot="protected" static="no" mutable="no">
+        <type>vector&lt; float &gt;</type>
+        <definition>vector&lt;float&gt; tesseract::NeuralNet::inputs_min_</definition>
+        <argsstring></argsstring>
+        <name>inputs_min_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="89" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_neural_net_1a45298b08d5c9e41901911b99f0e172ca" prot="protected" static="no" mutable="no">
+        <type>vector&lt; float &gt;</type>
+        <definition>vector&lt;float&gt; tesseract::NeuralNet::inputs_mean_</definition>
+        <argsstring></argsstring>
+        <name>inputs_mean_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="91" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_neural_net_1a8d03fb672b6283010bbd32135303b60a" prot="protected" static="no" mutable="no">
+        <type>vector&lt; float &gt;</type>
+        <definition>vector&lt;float&gt; tesseract::NeuralNet::inputs_std_dev_</definition>
+        <argsstring></argsstring>
+        <name>inputs_std_dev_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="93" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_neural_net_1a769b5db25072f73c1f7c57fe6d2142c0" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="structtesseract_1_1_neural_net_1_1_node" kindref="compound">Node</ref> &gt;</type>
+        <definition>vector&lt;Node&gt; tesseract::NeuralNet::fast_nodes_</definition>
+        <argsstring></argsstring>
+        <name>fast_nodes_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="96" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_neural_net_1ace41d563521f6f0c07a29f212aec3bab" prot="protected" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::NeuralNet::kWgtChunkSize</definition>
+        <argsstring></argsstring>
+        <name>kWgtChunkSize</name>
+        <initializer>= 0x10000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="76" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_neural_net_1ab145f57d5e1244f16a4f6c00a60f01f1" prot="protected" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int tesseract::NeuralNet::kNetSignature</definition>
+        <argsstring></argsstring>
+        <name>kNetSignature</name>
+        <initializer>= 0xFEFEABD0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="79" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_neural_net_1acad221017f155837c316063a76ee3a22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::NeuralNet::NeuralNet</definition>
+        <argsstring>()</argsstring>
+        <name>NeuralNet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="24" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.cpp" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neural_net_1a0a0f8a13c536da068fad17a12b39c7b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>tesseract::NeuralNet::~NeuralNet</definition>
+        <argsstring>()</argsstring>
+        <name>~NeuralNet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="25" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.cpp" bodystart="19" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neural_net_1a4c89b7940883fa30fc0bdf84ea678a42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>template bool tesseract::NeuralNet::FeedForward</definition>
+        <argsstring>(const Type *inputs, Type *outputs)</argsstring>
+        <name>FeedForward</name>
+        <param>
+          <type>const Type *</type>
+          <declname>inputs</declname>
+        </param>
+        <param>
+          <type>Type *</type>
+          <declname>outputs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="31" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.cpp" bodystart="79" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neural_net_1a3dc0a81f7c0588aee8aed7e93884d0ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>template bool tesseract::NeuralNet::GetNetOutput</definition>
+        <argsstring>(const Type *inputs, int output_id, Type *output)</argsstring>
+        <name>GetNetOutput</name>
+        <param>
+          <type>const Type *</type>
+          <declname>inputs</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>output_id</declname>
+        </param>
+        <param>
+          <type>Type *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="36" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.cpp" bodystart="265" bodyend="287"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neural_net_1ae28208349e3d4ad72d1013fc319adc42" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::NeuralNet::in_cnt</definition>
+        <argsstring>() const </argsstring>
+        <name>in_cnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="40" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neural_net_1a5f1f4f6112ccabd23612ac70df4ddd23" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::NeuralNet::out_cnt</definition>
+        <argsstring>() const </argsstring>
+        <name>out_cnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="41" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classtesseract_1_1_neural_net_1aacdfeca9c810f9d8beb9438b35a8b93a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtesseract_1_1_neural_net" kindref="compound">NeuralNet</ref> *</type>
+        <definition>NeuralNet * tesseract::NeuralNet::FromFile</definition>
+        <argsstring>(const string file_name)</argsstring>
+        <name>FromFile</name>
+        <param>
+          <type>const string</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="27" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.cpp" bodystart="204" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neural_net_1a4bae9fde3b2be515197283b1008bf14c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtesseract_1_1_neural_net" kindref="compound">NeuralNet</ref> *</type>
+        <definition>NeuralNet * tesseract::NeuralNet::FromInputBuffer</definition>
+        <argsstring>(InputFileBuffer *ib)</argsstring>
+        <name>FromInputBuffer</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_input_file_buffer" kindref="compound">InputFileBuffer</ref> *</type>
+          <declname>ib</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="29" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.cpp" bodystart="213" bodyend="225"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classtesseract_1_1_neural_net_1a46a5af1940cf873c8cddb2c91e14b121" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::NeuralNet::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="98" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.cpp" bodystart="34" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neural_net_1a63cb2029e14bf27406aa69417128a0bc" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::NeuralNet::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="100" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" bodystart="100" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neural_net_1a20678924e5cfc8418c51d1199d89b778" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class ReadBuffType</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>template bool tesseract::NeuralNet::ReadBinary</definition>
+        <argsstring>(ReadBuffType *input_buff)</argsstring>
+        <name>ReadBinary</name>
+        <param>
+          <type>ReadBuffType *</type>
+          <declname>input_buff</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="106" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" bodystart="106" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neural_net_1a3cec386f2524f71f6ff8221badeaa5d0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::NeuralNet::SetConnection</definition>
+        <argsstring>(int from, int to)</argsstring>
+        <name>SetConnection</name>
+        <param>
+          <type>int</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="225" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.cpp" bodystart="112" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neural_net_1adf52a77999cb8e51a6fa5d4932321a3d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::NeuralNet::CreateFastNet</definition>
+        <argsstring>()</argsstring>
+        <name>CreateFastNet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="228" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.cpp" bodystart="124" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neural_net_1a1d4b0e33730cd9ee86916938251719cc" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float *</type>
+        <definition>float * tesseract::NeuralNet::AllocWgt</definition>
+        <argsstring>(int wgt_cnt)</argsstring>
+        <name>AllocWgt</name>
+        <param>
+          <type>int</type>
+          <declname>wgt_cnt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="232" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.cpp" bodystart="189" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neural_net_1aa186b29234d2d35e0c8afb52877c04ea" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>template bool tesseract::NeuralNet::FastFeedForward</definition>
+        <argsstring>(const Type *inputs, Type *outputs)</argsstring>
+        <name>FastFeedForward</name>
+        <param>
+          <type>const Type *</type>
+          <declname>inputs</declname>
+        </param>
+        <param>
+          <type>Type *</type>
+          <declname>outputs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="234" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.cpp" bodystart="52" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neural_net_1a1275c0785ed2bd9725dd39820d4f5fab" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Type</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>template bool tesseract::NeuralNet::FastGetNetOutput</definition>
+        <argsstring>(const Type *inputs, int output_id, Type *output)</argsstring>
+        <name>FastGetNetOutput</name>
+        <param>
+          <type>const Type *</type>
+          <declname>inputs</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>output_id</declname>
+        </param>
+        <param>
+          <type>Type *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="240" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.cpp" bodystart="231" bodyend="261"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1462">
+        <label>tesseract::Neuron</label>
+        <link refid="classtesseract_1_1_neuron"/>
+      </node>
+      <node id="1461">
+        <label>tesseract::NeuralNet</label>
+        <link refid="classtesseract_1_1_neural_net"/>
+        <childnode refid="1462" relation="usage">
+          <edgelabel>neurons_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" line="22" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neural_net.h" bodystart="22" bodyend="243"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_neural_net_1aaba48ba8a449a805ef8802ea3308d69d" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>alloc_wgt_cnt_</name></member>
+      <member refid="classtesseract_1_1_neural_net_1a1d4b0e33730cd9ee86916938251719cc" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>AllocWgt</name></member>
+      <member refid="classtesseract_1_1_neural_net_1a6cc1b21c513a3bbd8de7d5435c649048" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>auto_encoder_</name></member>
+      <member refid="classtesseract_1_1_neural_net_1a63cb2029e14bf27406aa69417128a0bc" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>Clear</name></member>
+      <member refid="classtesseract_1_1_neural_net_1adf52a77999cb8e51a6fa5d4932321a3d" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>CreateFastNet</name></member>
+      <member refid="classtesseract_1_1_neural_net_1a769b5db25072f73c1f7c57fe6d2142c0" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>fast_nodes_</name></member>
+      <member refid="classtesseract_1_1_neural_net_1aa186b29234d2d35e0c8afb52877c04ea" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>FastFeedForward</name></member>
+      <member refid="classtesseract_1_1_neural_net_1a1275c0785ed2bd9725dd39820d4f5fab" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>FastGetNetOutput</name></member>
+      <member refid="classtesseract_1_1_neural_net_1a4c89b7940883fa30fc0bdf84ea678a42" prot="public" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>FeedForward</name></member>
+      <member refid="classtesseract_1_1_neural_net_1aacdfeca9c810f9d8beb9438b35a8b93a" prot="public" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>FromFile</name></member>
+      <member refid="classtesseract_1_1_neural_net_1a4bae9fde3b2be515197283b1008bf14c" prot="public" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>FromInputBuffer</name></member>
+      <member refid="classtesseract_1_1_neural_net_1a3dc0a81f7c0588aee8aed7e93884d0ea" prot="public" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>GetNetOutput</name></member>
+      <member refid="classtesseract_1_1_neural_net_1ae28208349e3d4ad72d1013fc319adc42" prot="public" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>in_cnt</name></member>
+      <member refid="classtesseract_1_1_neural_net_1a3f9506819852a7c66e83775f92f95610" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>in_cnt_</name></member>
+      <member refid="classtesseract_1_1_neural_net_1a46a5af1940cf873c8cddb2c91e14b121" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>Init</name></member>
+      <member refid="classtesseract_1_1_neural_net_1acc363035dc53cc103d2cadaa54333efa" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>inputs_max_</name></member>
+      <member refid="classtesseract_1_1_neural_net_1a45298b08d5c9e41901911b99f0e172ca" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>inputs_mean_</name></member>
+      <member refid="classtesseract_1_1_neural_net_1aa05bfd6191232cf25b79752fd1a38117" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>inputs_min_</name></member>
+      <member refid="classtesseract_1_1_neural_net_1a8d03fb672b6283010bbd32135303b60a" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>inputs_std_dev_</name></member>
+      <member refid="classtesseract_1_1_neural_net_1ab145f57d5e1244f16a4f6c00a60f01f1" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>kNetSignature</name></member>
+      <member refid="classtesseract_1_1_neural_net_1ace41d563521f6f0c07a29f212aec3bab" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>kWgtChunkSize</name></member>
+      <member refid="classtesseract_1_1_neural_net_1acad221017f155837c316063a76ee3a22" prot="public" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>NeuralNet</name></member>
+      <member refid="classtesseract_1_1_neural_net_1a3772cb00bf4f74adf163fc5705bf1f0d" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>neuron_cnt_</name></member>
+      <member refid="classtesseract_1_1_neural_net_1a4ff353ff0ba717e12507c6a1a909363f" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>neurons_</name></member>
+      <member refid="classtesseract_1_1_neural_net_1a5f1f4f6112ccabd23612ac70df4ddd23" prot="public" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>out_cnt</name></member>
+      <member refid="classtesseract_1_1_neural_net_1a3e1f6cb07479e2e6d9fcb11625a715c1" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>out_cnt_</name></member>
+      <member refid="classtesseract_1_1_neural_net_1a680ddffcb4d92f115e1a7b8221811a81" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>read_only_</name></member>
+      <member refid="classtesseract_1_1_neural_net_1a20678924e5cfc8418c51d1199d89b778" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>ReadBinary</name></member>
+      <member refid="classtesseract_1_1_neural_net_1a3cec386f2524f71f6ff8221badeaa5d0" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>SetConnection</name></member>
+      <member refid="classtesseract_1_1_neural_net_1ae260161c01b9d853d9d7ddf114d72ea9" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>wts_cnt_</name></member>
+      <member refid="classtesseract_1_1_neural_net_1aa7b901ea43bae46e569d68f476c7b318" prot="protected" virt="non-virtual"><scope>tesseract::NeuralNet</scope><name>wts_vec_</name></member>
+      <member refid="classtesseract_1_1_neural_net_1a0a0f8a13c536da068fad17a12b39c7b6" prot="public" virt="virtual"><scope>tesseract::NeuralNet</scope><name>~NeuralNet</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

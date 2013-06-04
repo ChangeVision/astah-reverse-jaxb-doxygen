@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="basedir_8h" kind="file">
+    <compoundname>basedir.h</compoundname>
+    <includes refid="platform_8h" local="yes">platform.h</includes>
+    <includes refid="strngs_8h" local="yes">strngs.h</includes>
+    <includedby refid="tesseractmain_8cpp" local="yes">api/tesseractmain.cpp</includedby>
+    <includedby refid="tessedit_8cpp" local="yes">ccmain/tessedit.cpp</includedby>
+    <includedby refid="basedir_8cpp" local="yes">ccutil/basedir.cpp</includedby>
+    <incdepgraph>
+      <node id="13532">
+        <label>ccutil/basedir.h</label>
+        <link refid="basedir.h"/>
+        <childnode refid="13533" relation="include">
+        </childnode>
+        <childnode refid="13535" relation="include">
+        </childnode>
+      </node>
+      <node id="13533">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="13534" relation="include">
+        </childnode>
+      </node>
+      <node id="13539">
+        <label>stddef.h</label>
+      </node>
+      <node id="13534">
+        <label>limits.h</label>
+      </node>
+      <node id="13537">
+        <label>string.h</label>
+      </node>
+      <node id="13538">
+        <label>memry.h</label>
+        <link refid="memry_8h"/>
+        <childnode refid="13539" relation="include">
+        </childnode>
+        <childnode refid="13540" relation="include">
+        </childnode>
+      </node>
+      <node id="13540">
+        <label>host.h</label>
+        <link refid="host_8h"/>
+        <childnode refid="13533" relation="include">
+        </childnode>
+      </node>
+      <node id="13536">
+        <label>stdio.h</label>
+      </node>
+      <node id="13535">
+        <label>strngs.h</label>
+        <link refid="strngs_8h"/>
+        <childnode refid="13536" relation="include">
+        </childnode>
+        <childnode refid="13537" relation="include">
+        </childnode>
+        <childnode refid="13533" relation="include">
+        </childnode>
+        <childnode refid="13538" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="13541">
+        <label>ccutil/basedir.h</label>
+        <link refid="basedir.h"/>
+        <childnode refid="13542" relation="include">
+        </childnode>
+        <childnode refid="13543" relation="include">
+        </childnode>
+        <childnode refid="13544" relation="include">
+        </childnode>
+      </node>
+      <node id="13544">
+        <label>ccutil/basedir.cpp</label>
+        <link refid="basedir_8cpp"/>
+      </node>
+      <node id="13542">
+        <label>api/tesseractmain.cpp</label>
+        <link refid="tesseractmain_8cpp"/>
+      </node>
+      <node id="13543">
+        <label>ccmain/tessedit.cpp</label>
+        <link refid="tessedit_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="basedir_8h_1a7cf3a953ccf5f593c57b2e711cc43bf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void truncate_path</definition>
+        <argsstring>(const char *code_path, STRING *trunc_path)</argsstring>
+        <name>truncate_path</name>
+        <param>
+          <type>const char *</type>
+          <declname>code_path</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_t_r_i_n_g" kindref="compound">STRING</ref> *</type>
+          <declname>trunc_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/basedir.h" line="29" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/basedir.cpp" bodystart="32" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>basedir.h<sp/><sp/>(Formerly<sp/>getpath.h)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Description:<sp/>Header<sp/>file<sp/>for<sp/>getpath.c.<sp/>Provides<sp/>relocatability<sp/>of<sp/>data.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Author:<sp/><sp/><sp/><sp/><sp/><sp/>Ray<sp/>Smith</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Created:<sp/><sp/><sp/><sp/><sp/>Mon<sp/>Jul<sp/>09<sp/>09:13:03<sp/>BST<sp/>1990</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>(C)<sp/>Copyright<sp/>1990,<sp/>Hewlett-Packard<sp/>Ltd.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>**<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>**<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>**<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>**<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>**<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>**<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>**<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>**<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>**<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BASEDIR_H</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BASEDIR_H</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<ref refid="platform_8h" kindref="compound">platform.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<ref refid="strngs_8h" kindref="compound">strngs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Returns<sp/>the<sp/>given<sp/>code_path<sp/>truncated<sp/>to<sp/>the<sp/>last<sp/>slash.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Useful<sp/>for<sp/>getting<sp/>to<sp/>the<sp/>directory<sp/>of<sp/>argv[0],<sp/>but<sp/>does<sp/>not<sp/>search</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>any<sp/>paths.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><ref refid="platform_8h_1a86e51270628c53ce7e2c23b1c2b4490e" kindref="member">TESS_API</ref><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="basedir_8cpp_1a7cf3a953ccf5f593c57b2e711cc43bf2" kindref="member">truncate_path</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*code_path,<sp/><ref refid="class_s_t_r_i_n_g" kindref="compound">STRING</ref>*<sp/>trunc_path);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/ccutil/basedir.h"/>
+  </compounddef>
+</doxygen>

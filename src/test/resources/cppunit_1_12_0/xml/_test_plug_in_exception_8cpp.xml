@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_test_plug_in_exception_8cpp" kind="file">
+    <compoundname>TestPlugInException.cpp</compoundname>
+    <includes refid="testpluginrunner_2_std_afx_8h" local="yes">StdAfx.h</includes>
+    <includes refid="_test_plug_in_exception_8h" local="yes">TestPlugInException.h</includes>
+    <incdepgraph>
+      <node id="588">
+        <label>afxcmn.h</label>
+      </node>
+      <node id="585">
+        <label>afxext.h</label>
+      </node>
+      <node id="582">
+        <label>src/msvc6/testpluginrunner/TestPlugInException.cpp</label>
+        <link refid="TestPlugInException.cpp"/>
+        <childnode refid="583" relation="include">
+        </childnode>
+        <childnode refid="589" relation="include">
+        </childnode>
+      </node>
+      <node id="583">
+        <label>StdAfx.h</label>
+        <link refid="testpluginrunner_2_std_afx_8h"/>
+        <childnode refid="584" relation="include">
+        </childnode>
+        <childnode refid="585" relation="include">
+        </childnode>
+        <childnode refid="586" relation="include">
+        </childnode>
+        <childnode refid="587" relation="include">
+        </childnode>
+        <childnode refid="588" relation="include">
+        </childnode>
+      </node>
+      <node id="590">
+        <label>stdexcept</label>
+      </node>
+      <node id="589">
+        <label>TestPlugInException.h</label>
+        <link refid="_test_plug_in_exception_8h"/>
+        <childnode refid="590" relation="include">
+        </childnode>
+        <childnode refid="591" relation="include">
+        </childnode>
+      </node>
+      <node id="591">
+        <label>string</label>
+      </node>
+      <node id="586">
+        <label>afxdisp.h</label>
+      </node>
+      <node id="587">
+        <label>afxdtctl.h</label>
+      </node>
+      <node id="584">
+        <label>afxwin.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>//////////////////////////////////////////////////////////////////////////</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Implementation<sp/>file<sp/>TestPlugInException.cpp<sp/>for<sp/>class<sp/>TestPlugInException</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(c)Copyright<sp/>2000,<sp/>Baptiste<sp/>Lepilleur.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created:<sp/>2001/06/23</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>//////////////////////////////////////////////////////////////////////////</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="testpluginrunner_2_std_afx_8h" kindref="compound">StdAfx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_test_plug_in_exception_8h" kindref="compound">TestPlugInException.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_DEBUG</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>new<sp/>DEBUG_NEW</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>THIS_FILE</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>THIS_FILE[]<sp/>=<sp/>__FILE__;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><ref refid="class_test_plug_in_exception_1aa89d0392dd26da6a64f16a6e4a368dec" kindref="member">TestPlugInException::TestPlugInException</ref>(<sp/>std::string<sp/>message,<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Cause<sp/>cause<sp/>)<sp/>:<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>runtime_error(<sp/>message<sp/>),</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>m_cause(<sp/>cause<sp/>)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><ref refid="class_test_plug_in_exception_1aa89d0392dd26da6a64f16a6e4a368dec" kindref="member">TestPlugInException::TestPlugInException</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_test_plug_in_exception" kindref="compound">TestPlugInException</ref><sp/>&amp;copy<sp/>)<sp/>:<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>runtime_error(<sp/>copy<sp/>)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><ref refid="class_test_plug_in_exception_1a27b373b8e2c6952d87d55d12eeea2a9b" kindref="member">TestPlugInException::‾TestPlugInException</ref>()</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="class_test_plug_in_exception" kindref="compound">TestPlugInException</ref><sp/>&amp;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><ref refid="class_test_plug_in_exception_1adbed5e61ebd67be9db7be505c9dc2610" kindref="member">TestPlugInException::operator =</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_test_plug_in_exception" kindref="compound">TestPlugInException</ref><sp/>&amp;copy<sp/>)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>runtime_error::operator<sp/>=(<sp/>copy<sp/>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>m_cause<sp/>=<sp/>copy.m_cause;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><ref refid="class_test_plug_in_exception_1ac560dcaf567ed6aea8b5a6725ee711f5" kindref="member">TestPlugInException::Cause</ref><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><ref refid="class_test_plug_in_exception_1aedbc0db86be6b9f4f08f62496f98dd64" kindref="member">TestPlugInException::getCause</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="48"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_cause;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testpluginrunner/TestPlugInException.cpp"/>
+  </compounddef>
+</doxygen>

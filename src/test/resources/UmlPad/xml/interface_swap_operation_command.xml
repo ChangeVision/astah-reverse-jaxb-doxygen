@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="interface_swap_operation_command" kind="class" prot="public">
+    <compoundname>SwapOperationCommand</compoundname>
+    <basecompoundref refid="interface_modify_command" prot="public" virt="non-virtual">ModifyCommand</basecompoundref>
+    <includes refid="_swap_operation_command_8h" local="no">SwapOperationCommand.h</includes>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_swap_operation_command_1a18a97806ec5d7ba6e7cc77fa409b1d02" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="assign">
+        <type>NSUInteger</type>
+        <definition>NSUInteger SwapOperationCommand::fromIndex</definition>
+        <argsstring></argsstring>
+        <name>fromIndex</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/SwapOperationCommand.h" line="15" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/SwapOperationCommand.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_swap_operation_command_1a0a36fdb35a32dcf8d45caee749135330" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="assign">
+        <type>NSUInteger</type>
+        <definition>NSUInteger SwapOperationCommand::toIndex</definition>
+        <argsstring></argsstring>
+        <name>toIndex</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/SwapOperationCommand.h" line="16" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/SwapOperationCommand.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_swap_operation_command_1a4bead133a593bb7b576f7a86af135cb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SwapOperationCommand::swap:from:to:</definition>
+        <argsstring>(ClassViewElement *ve,[from] NSUInteger from,[to] NSUInteger to)</argsstring>
+        <name>swap:from:to:</name>
+        <param>
+          <type><ref refid="interface_class_view_element" kindref="compound">ClassViewElement</ref> *</type>
+          <declname>ve</declname>
+        </param>
+        <param>
+          <attributes>[from]</attributes>
+          <type>NSUInteger</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <attributes>[to]</attributes>
+          <type>NSUInteger</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/SwapOperationCommand.h" line="20" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/SwapOperationCommand.m" bodystart="24" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="823">
+        <label>Command</label>
+        <link refid="interface_command"/>
+        <childnode refid="824" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="822">
+        <label>ModifyCommand</label>
+        <link refid="interface_modify_command"/>
+        <childnode refid="823" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="821">
+        <label>SwapOperationCommand</label>
+        <link refid="interface_swap_operation_command"/>
+        <childnode refid="822" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="824">
+        <label>NSObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="827">
+        <label>Command</label>
+        <link refid="interface_command"/>
+        <childnode refid="828" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="826">
+        <label>ModifyCommand</label>
+        <link refid="interface_modify_command"/>
+        <childnode refid="827" relation="public-inheritance">
+        </childnode>
+        <childnode refid="829" relation="usage">
+          <edgelabel>viewElement</edgelabel>
+        </childnode>
+      </node>
+      <node id="825">
+        <label>SwapOperationCommand</label>
+        <link refid="interface_swap_operation_command"/>
+        <childnode refid="826" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="830">
+        <label>UIView</label>
+      </node>
+      <node id="828">
+        <label>NSObject</label>
+      </node>
+      <node id="829">
+        <label>ViewElement</label>
+        <link refid="interface_view_element"/>
+        <childnode refid="830" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/SwapOperationCommand.h" line="14" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/SwapOperationCommand.h" bodystart="14" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_command_1abc8574913684044b0f1a9f810b4e969b" prot="public" virt="virtual"><scope>SwapOperationCommand</scope><name>execute</name></member>
+      <member refid="interface_swap_operation_command_1a18a97806ec5d7ba6e7cc77fa409b1d02" prot="protected" virt="non-virtual"><scope>SwapOperationCommand</scope><name>fromIndex</name></member>
+      <member refid="interface_swap_operation_command_1a18a97806ec5d7ba6e7cc77fa409b1d02" prot="public" virt="non-virtual"><scope>SwapOperationCommand</scope><name>fromIndex</name></member>
+      <member refid="interface_command_1af1632585781ac0d7bb90df5c195c25bd" prot="protected" virt="non-virtual"><scope>SwapOperationCommand</scope><name>result</name></member>
+      <member refid="interface_command_1af1632585781ac0d7bb90df5c195c25bd" prot="public" virt="non-virtual"><scope>SwapOperationCommand</scope><name>result</name></member>
+      <member refid="interface_swap_operation_command_1a4bead133a593bb7b576f7a86af135cb3" prot="public" virt="virtual"><scope>SwapOperationCommand</scope><name>swap:from:to:</name></member>
+      <member refid="interface_swap_operation_command_1a0a36fdb35a32dcf8d45caee749135330" prot="protected" virt="non-virtual"><scope>SwapOperationCommand</scope><name>toIndex</name></member>
+      <member refid="interface_swap_operation_command_1a0a36fdb35a32dcf8d45caee749135330" prot="public" virt="non-virtual"><scope>SwapOperationCommand</scope><name>toIndex</name></member>
+      <member refid="interface_modify_command_1af97d75e6751a231edb491ea1ec712aa1" prot="protected" virt="non-virtual"><scope>SwapOperationCommand</scope><name>viewElement</name></member>
+      <member refid="interface_modify_command_1af97d75e6751a231edb491ea1ec712aa1" prot="public" virt="non-virtual"><scope>SwapOperationCommand</scope><name>viewElement</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="class_poco_1_1_text_encoding_manager" kind="class" prot="public">
+    <compoundname>Poco::TextEncodingManager</compoundname>
+    <innerclass refid="struct_poco_1_1_text_encoding_manager_1_1_i_l_t" prot="private">Poco::TextEncodingManager::ILT</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_poco_1_1_text_encoding_manager_1af9d1a641604e43eb2ffef72c4f748338" prot="private" static="no">
+        <type>std::map&lt; std::string, TextEncoding::Ptr, ILT &gt;</type>
+        <definition>typedef std::map&lt;std::string, TextEncoding::Ptr, ILT&gt; Poco::TextEncodingManager::EncodingMap</definition>
+        <argsstring></argsstring>
+        <name>EncodingMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" line="126" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_poco_1_1_text_encoding_manager_1a04f5d43747089fae9dd81971bd98efbc" prot="private" static="no" mutable="no">
+        <type>EncodingMap</type>
+        <definition>EncodingMap Poco::TextEncodingManager::_encodings</definition>
+        <argsstring></argsstring>
+        <name>_encodings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" line="128" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_poco_1_1_text_encoding_manager_1a450ee9cb5cd21f1ac951b932f27b9d5e" prot="private" static="no" mutable="yes">
+        <type>RWLock</type>
+        <definition>RWLock Poco::TextEncodingManager::_lock</definition>
+        <argsstring></argsstring>
+        <name>_lock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" line="129" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_poco_1_1_text_encoding_manager_1ae9e081ace63e7198ec2ca3a6fd56d047" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Poco::TextEncodingManager::TextEncodingManager</definition>
+        <argsstring>()</argsstring>
+        <name>TextEncodingManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" line="62" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" bodystart="62" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_text_encoding_manager_1a7880d707090b59797413d372cbe6a914" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Poco::TextEncodingManager::~TextEncodingManager</definition>
+        <argsstring>()</argsstring>
+        <name>~TextEncodingManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" line="75" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_text_encoding_manager_1a6171f17ccf8934665e96ea115e6896e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Poco::TextEncodingManager::add</definition>
+        <argsstring>(TextEncoding::Ptr pEncoding)</argsstring>
+        <name>add</name>
+        <param>
+          <type>TextEncoding::Ptr</type>
+          <declname>pEncoding</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" line="79" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_text_encoding_manager_1aca24af0c2a8d7ff86defa3aed53ca45a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Poco::TextEncodingManager::add</definition>
+        <argsstring>(TextEncoding::Ptr pEncoding, const std::string &amp;name)</argsstring>
+        <name>add</name>
+        <param>
+          <type>TextEncoding::Ptr</type>
+          <declname>pEncoding</declname>
+        </param>
+        <param>
+          <type><ref refid="zconf_8h_1a2c212835823e3c54a8ab6d95c652660e" kindref="member">const</ref> std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" line="84" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" bodystart="84" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_text_encoding_manager_1a1cd5af4b331fa18d9d1065180427fae8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Poco::TextEncodingManager::remove</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>remove</name>
+        <param>
+          <type><ref refid="zconf_8h_1a2c212835823e3c54a8ab6d95c652660e" kindref="member">const</ref> std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" line="91" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" bodystart="91" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_text_encoding_manager_1afed38548f301c7b27074355f4215b6e3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>TextEncoding::Ptr</type>
+        <definition>TextEncoding::Ptr Poco::TextEncodingManager::find</definition>
+        <argsstring>(const std::string &amp;name) const </argsstring>
+        <name>find</name>
+        <param>
+          <type><ref refid="zconf_8h_1a2c212835823e3c54a8ab6d95c652660e" kindref="member">const</ref> std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" line="98" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" bodystart="98" bodyend="112"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_poco_1_1_text_encoding_manager_1a7e5107e697774aa0e102b35e19d94bf4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Poco::TextEncodingManager::TextEncodingManager</definition>
+        <argsstring>(const TextEncodingManager &amp;)</argsstring>
+        <name>TextEncodingManager</name>
+        <param>
+          <type><ref refid="zconf_8h_1a2c212835823e3c54a8ab6d95c652660e" kindref="member">const</ref> <ref refid="class_poco_1_1_text_encoding_manager" kindref="compound">TextEncodingManager</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" line="115" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_text_encoding_manager_1a9733814964fb33b7834573513195704b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_poco_1_1_text_encoding_manager" kindref="compound">TextEncodingManager</ref> &amp;</type>
+        <definition>TextEncodingManager&amp; Poco::TextEncodingManager::operator=</definition>
+        <argsstring>(const TextEncodingManager &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="zconf_8h_1a2c212835823e3c54a8ab6d95c652660e" kindref="member">const</ref> <ref refid="class_poco_1_1_text_encoding_manager" kindref="compound">TextEncodingManager</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" line="116" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" line="60" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/TextEncoding.cpp" bodystart="59" bodyend="130"/>
+    <listofallmembers>
+      <member refid="class_poco_1_1_text_encoding_manager_1a04f5d43747089fae9dd81971bd98efbc" prot="private" virt="non-virtual"><scope>Poco::TextEncodingManager</scope><name>_encodings</name></member>
+      <member refid="class_poco_1_1_text_encoding_manager_1a450ee9cb5cd21f1ac951b932f27b9d5e" prot="private" virt="non-virtual"><scope>Poco::TextEncodingManager</scope><name>_lock</name></member>
+      <member refid="class_poco_1_1_text_encoding_manager_1a6171f17ccf8934665e96ea115e6896e0" prot="public" virt="non-virtual"><scope>Poco::TextEncodingManager</scope><name>add</name></member>
+      <member refid="class_poco_1_1_text_encoding_manager_1aca24af0c2a8d7ff86defa3aed53ca45a" prot="public" virt="non-virtual"><scope>Poco::TextEncodingManager</scope><name>add</name></member>
+      <member refid="class_poco_1_1_text_encoding_manager_1af9d1a641604e43eb2ffef72c4f748338" prot="private" virt="non-virtual"><scope>Poco::TextEncodingManager</scope><name>EncodingMap</name></member>
+      <member refid="class_poco_1_1_text_encoding_manager_1afed38548f301c7b27074355f4215b6e3" prot="public" virt="non-virtual"><scope>Poco::TextEncodingManager</scope><name>find</name></member>
+      <member refid="class_poco_1_1_text_encoding_manager_1a9733814964fb33b7834573513195704b" prot="private" virt="non-virtual"><scope>Poco::TextEncodingManager</scope><name>operator=</name></member>
+      <member refid="class_poco_1_1_text_encoding_manager_1a1cd5af4b331fa18d9d1065180427fae8" prot="public" virt="non-virtual"><scope>Poco::TextEncodingManager</scope><name>remove</name></member>
+      <member refid="class_poco_1_1_text_encoding_manager_1ae9e081ace63e7198ec2ca3a6fd56d047" prot="public" virt="non-virtual"><scope>Poco::TextEncodingManager</scope><name>TextEncodingManager</name></member>
+      <member refid="class_poco_1_1_text_encoding_manager_1a7e5107e697774aa0e102b35e19d94bf4" prot="private" virt="non-virtual"><scope>Poco::TextEncodingManager</scope><name>TextEncodingManager</name></member>
+      <member refid="class_poco_1_1_text_encoding_manager_1a7880d707090b59797413d372cbe6a914" prot="public" virt="non-virtual"><scope>Poco::TextEncodingManager</scope><name>~TextEncodingManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

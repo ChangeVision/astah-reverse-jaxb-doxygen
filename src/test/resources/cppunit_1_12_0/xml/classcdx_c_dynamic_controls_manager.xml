@@ -1,0 +1,1241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classcdx_c_dynamic_controls_manager" kind="class" prot="public">
+    <compoundname>cdxCDynamicControlsManager</compoundname>
+    <includes refid="cdx_c_dynamic_controls_manager_8h" local="no">cdxCDynamicControlsManager.h</includes>
+    <innerclass refid="classcdx_c_dynamic_controls_manager_1_1_control_data" prot="private">cdxCDynamicControlsManager::ControlData</innerclass>
+    <innerclass refid="classcdx_c_dynamic_controls_manager_1_1_control_position" prot="public">cdxCDynamicControlsManager::ControlPosition</innerclass>
+    <innerclass refid="classcdx_c_dynamic_controls_manager_1_1_position_setup" prot="public">cdxCDynamicControlsManager::PositionSetup</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classcdx_c_dynamic_controls_manager_1aa6bc5b117f02223f25d9bffdded3464d" prot="public" static="no">
+        <name>Mode</name>
+        <enumvalue id="classcdx_c_dynamic_controls_manager_1aa6bc5b117f02223f25d9bffdded3464da1ff2e75c95475fa7161a05f6a1d6715f" prot="public">
+          <name>mdNone</name>
+          <initializer>=	0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_controls_manager_1aa6bc5b117f02223f25d9bffdded3464daf0a6bce71b2df817b4c83f28bb820399" prot="public">
+          <name>mdResize</name>
+          <initializer>=	1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_controls_manager_1aa6bc5b117f02223f25d9bffdded3464daed3d7412dc18c3a1cc6988a655468f41" prot="public">
+          <name>mdRepos</name>
+          <initializer>=	2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_controls_manager_1aa6bc5b117f02223f25d9bffdded3464da25750f3d7382687a98dc2824dc968346" prot="public">
+          <name>mdRelative</name>
+          <initializer>=	3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_controls_manager_1aa6bc5b117f02223f25d9bffdded3464dac4551350b8671a39901b74974b79d60e" prot="public">
+          <name>md__Last</name>
+          <initializer>=	mdRelative</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="96" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="95" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="enum" id="classcdx_c_dynamic_controls_manager_1a40fd71de72c1a4fe58f4cbe18f2127d5" prot="public" static="no">
+        <name>Freedom</name>
+        <enumvalue id="classcdx_c_dynamic_controls_manager_1a40fd71de72c1a4fe58f4cbe18f2127d5a2bacf4a0bcc1edb159655265718d3338" prot="public">
+          <name>fdNone</name>
+          <initializer>=	0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_controls_manager_1a40fd71de72c1a4fe58f4cbe18f2127d5a7aadba7d40c5567884a45235bbadc0d1" prot="public">
+          <name>fdHoriz</name>
+          <initializer>=	0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_controls_manager_1a40fd71de72c1a4fe58f4cbe18f2127d5a97cab45f4d94f14b60ec88feaccd1910" prot="public">
+          <name>fdVert</name>
+          <initializer>=	0x02</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_controls_manager_1a40fd71de72c1a4fe58f4cbe18f2127d5af78dc96bb74349eb266bca4765a756db" prot="public">
+          <name>fdAll</name>
+          <initializer>=	fdHoriz|fdVert</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="105" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="104" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="enum" id="classcdx_c_dynamic_controls_manager_1ad10efc55547883f91ccd6b50e6c2cd70" prot="public" static="no">
+        <name>RestoreFlags</name>
+        <enumvalue id="classcdx_c_dynamic_controls_manager_1ad10efc55547883f91ccd6b50e6c2cd70a25729d800b0f1b06025004ac21a6e122" prot="public">
+          <name>rflg_none</name>
+          <initializer>=	0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_controls_manager_1ad10efc55547883f91ccd6b50e6c2cd70a75911a064aca469c91cf88dccf09a358" prot="public">
+          <name>rflg_state</name>
+          <initializer>=	0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_controls_manager_1ad10efc55547883f91ccd6b50e6c2cd70a86ec030ae74277ae03c2ce27aec83aa3" prot="public">
+          <name>rflg_visibility</name>
+          <initializer>=	0x02</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_controls_manager_1ad10efc55547883f91ccd6b50e6c2cd70a27405a844e673e85f84248072f21b88a" prot="public">
+          <name>rflg_all</name>
+          <initializer>=	rflg_state|rflg_visibility</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="113" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="112" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="enum" id="classcdx_c_dynamic_controls_manager_1acaa6d7131a8e71a3a1404db17665a224" prot="public" static="no">
+        <name>@0</name>
+        <enumvalue id="classcdx_c_dynamic_controls_manager_1acaa6d7131a8e71a3a1404db17665a224a20698e56e64b1bdf5bec900417a1d074" prot="public">
+          <name>ICON_CONTROL_ID</name>
+          <initializer>=	AFX_IDW_SIZE_BOX</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="121" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="120" bodyend="123"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classcdx_c_dynamic_controls_manager_1a6a209795cf7e600943b3ec64f2f6c279" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class ControlData</definition>
+        <argsstring></argsstring>
+        <name>ControlData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="261" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classcdx_c_dynamic_controls_manager_1a26af27bde04095d1bd21a7b30d7f1558" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend struct</type>
+        <definition>friend struct ControlData::ControlEntry</definition>
+        <argsstring></argsstring>
+        <name>ControlData::ControlEntry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="262" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcdx_c_dynamic_controls_manager_1ac1379c218358cd34b8e4e2fc592c7400" prot="private" static="no" mutable="no">
+        <type><ref refid="classcdx_c_dynamic_controls_manager_1a6a209795cf7e600943b3ec64f2f6c279" kindref="member">ControlData</ref> *</type>
+        <definition>ControlData* cdxCDynamicControlsManager::m_pFirst</definition>
+        <argsstring></argsstring>
+        <name>m_pFirst</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="265" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_controls_manager_1a17c2b3bbebfe05d4683bb0174ee9818f" prot="private" static="no" mutable="no">
+        <type>CWnd *</type>
+        <definition>CWnd* cdxCDynamicControlsManager::m_pWnd</definition>
+        <argsstring></argsstring>
+        <name>m_pWnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="266" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_controls_manager_1ab7aa9d60f2510b5ad9367bffa5fb9ea5" prot="private" static="no" mutable="no">
+        <type>CSize</type>
+        <definition>CSize cdxCDynamicControlsManager::m_szClientRelative</definition>
+        <argsstring></argsstring>
+        <name>m_szClientRelative</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="267" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_controls_manager_1ac426633bcef0b1527aa2c72baabe192c" prot="private" static="no" mutable="no">
+        <type>CSize</type>
+        <definition>CSize cdxCDynamicControlsManager::m_szMin</definition>
+        <argsstring></argsstring>
+        <name>m_szMin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="268" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_controls_manager_1a964ae5bcc80170301665d671e2b182d2" prot="private" static="no" mutable="no">
+        <type>CSize</type>
+        <definition>CSize cdxCDynamicControlsManager::m_szMax</definition>
+        <argsstring></argsstring>
+        <name>m_szMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="269" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_controls_manager_1af9713d19b40d11256cb92a75d1884e4e" prot="private" static="no" mutable="no">
+        <type><ref refid="classcdx_c_dynamic_controls_manager_1a40fd71de72c1a4fe58f4cbe18f2127d5" kindref="member">Freedom</ref></type>
+        <definition>Freedom cdxCDynamicControlsManager::m_Freedom</definition>
+        <argsstring></argsstring>
+        <name>m_Freedom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="270" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_controls_manager_1ae971b287b201eb020444ba3a867d004d" prot="private" static="no" mutable="no">
+        <type><ref refid="cdx_c_dynamic_controls_manager_8h_1a58d780ad0646aff4243c780277b4b779" kindref="member">cdxCSizeCtrl</ref> *</type>
+        <definition>cdxCSizeCtrl* cdxCDynamicControlsManager::m_pWndSizeIcon</definition>
+        <argsstring></argsstring>
+        <name>m_pWndSizeIcon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="271" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_controls_manager_1a94167faa1d71bd445e721a831ada47c9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cdxCDynamicControlsManager::m_iDisabledCnt</definition>
+        <argsstring></argsstring>
+        <name>m_iDisabledCnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="272" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_controls_manager_1aad182dbe7198f71ba237f71ce445b7b0" prot="private" static="no" mutable="no">
+        <type>UINT</type>
+        <definition>UINT cdxCDynamicControlsManager::m_iTotalCnt</definition>
+        <argsstring></argsstring>
+        <name>m_iTotalCnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="273" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcdx_c_dynamic_controls_manager_1ada4797f44668c8eb61541f45f5ba7a28" prot="public" static="no" mutable="no">
+        <type>UINT</type>
+        <definition>UINT cdxCDynamicControlsManager::m_idSizeIcon</definition>
+        <argsstring></argsstring>
+        <name>m_idSizeIcon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="276" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_controls_manager_1a3f051089579a1555c0ff2c211c388a5b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cdxCDynamicControlsManager::m_bApplyScrollPosition</definition>
+        <argsstring></argsstring>
+        <name>m_bApplyScrollPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="277" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1ab9a86d0357c5fd73c5c801d009ce2386" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>cdxCDynamicControlsManager::cdxCDynamicControlsManager</definition>
+        <argsstring>()</argsstring>
+        <name>cdxCDynamicControlsManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="280" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="280" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1abe33d67ea683297e234398a67a8174ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual cdxCDynamicControlsManager::‾cdxCDynamicControlsManager</definition>
+        <argsstring>()</argsstring>
+        <name>‾cdxCDynamicControlsManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="281" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="281" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1a7fcd305637c51e7a3a16e7334382cb72" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicControlsManager::IsReady</definition>
+        <argsstring>() const </argsstring>
+        <name>IsReady</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="287" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="287" bodyend="287"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1a8125e887d1b70b3e05e7bc6e5310a4c4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>UINT</type>
+        <definition>UINT cdxCDynamicControlsManager::GetTotalChildCnt</definition>
+        <argsstring>() const </argsstring>
+        <name>GetTotalChildCnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="288" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="288" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1aeace9529ac742b64481f03a71183debb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const CSize &amp;</type>
+        <definition>const CSize&amp; cdxCDynamicControlsManager::GetMinSize</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMinSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="294" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="294" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1ad1db191dc193d02d5b596e03b96e6e28" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const CSize &amp;</type>
+        <definition>const CSize&amp; cdxCDynamicControlsManager::GetMaxSize</definition>
+        <argsstring>() const </argsstring>
+        <name>GetMaxSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="295" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="295" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1aeb448ce1265623088df7d71a7634d30e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcdx_c_dynamic_controls_manager_1a40fd71de72c1a4fe58f4cbe18f2127d5" kindref="member">Freedom</ref></type>
+        <definition>Freedom cdxCDynamicControlsManager::GetFreedom</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFreedom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="296" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="296" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1a98be881c887866d3f34c570a311cd938" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicControlsManager::SetMinMaxSize</definition>
+        <argsstring>(const CSize &amp;szMin, const CSize &amp;szMax, bool bResizeIfNecessary=true)</argsstring>
+        <name>SetMinMaxSize</name>
+        <param>
+          <type>const CSize &amp;</type>
+          <declname>szMin</declname>
+        </param>
+        <param>
+          <type>const CSize &amp;</type>
+          <declname>szMax</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bResizeIfNecessary</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="301" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.cpp" bodystart="482" bodyend="499"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1a24db7d0e92f0a2e480b872af87b2e251" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicControlsManager::FixWindowSize</definition>
+        <argsstring>()</argsstring>
+        <name>FixWindowSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="302" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.cpp" bodystart="506" bodyend="534"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1a349a416456cf30ec9f953b1d26c68e9f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicControlsManager::SetFreedom</definition>
+        <argsstring>(Freedom fd)</argsstring>
+        <name>SetFreedom</name>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_controls_manager_1a40fd71de72c1a4fe58f4cbe18f2127d5" kindref="member">Freedom</ref></type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="303" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="303" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1a3a72a7d08e56838f69bf486ee55b8311" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicControlsManager::HideSizeIcon</definition>
+        <argsstring>()</argsstring>
+        <name>HideSizeIcon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="304" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.cpp" bodystart="542" bodyend="546"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1ac0649d70eb4799c82db83db9b9c67e34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicControlsManager::ShowSizeIcon</definition>
+        <argsstring>()</argsstring>
+        <name>ShowSizeIcon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="305" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.cpp" bodystart="548" bodyend="552"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1a3adc4ee96000ae96357898a9aef633d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcdx_c_dynamic_controls_manager_1_1_control_position" kindref="compound">ControlPosition</ref> *</type>
+        <definition>cdxCDynamicControlsManager::ControlPosition * cdxCDynamicControlsManager::AddSzControl</definition>
+        <argsstring>(CWnd &amp;ctrl, Mode modeX, Mode modeY)</argsstring>
+        <name>AddSzControl</name>
+        <param>
+          <type>CWnd &amp;</type>
+          <declname>ctrl</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_controls_manager_1aa6bc5b117f02223f25d9bffdded3464d" kindref="member">Mode</ref></type>
+          <declname>modeX</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_controls_manager_1aa6bc5b117f02223f25d9bffdded3464d" kindref="member">Mode</ref></type>
+          <declname>modeY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="310" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="543" bodyend="575"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1a625bf5c2c3de9414170bba642f247703" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcdx_c_dynamic_controls_manager_1_1_control_position" kindref="compound">ControlPosition</ref> *</type>
+        <definition>ControlPosition* cdxCDynamicControlsManager::AddSzXControl</definition>
+        <argsstring>(CWnd &amp;ctrl, Mode modeX)</argsstring>
+        <name>AddSzXControl</name>
+        <param>
+          <type>CWnd &amp;</type>
+          <declname>ctrl</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_controls_manager_1aa6bc5b117f02223f25d9bffdded3464d" kindref="member">Mode</ref></type>
+          <declname>modeX</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="311" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="311" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1ad80216f97c1f0e326fbb4a645d5254d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcdx_c_dynamic_controls_manager_1_1_control_position" kindref="compound">ControlPosition</ref> *</type>
+        <definition>ControlPosition* cdxCDynamicControlsManager::AddSzYControl</definition>
+        <argsstring>(CWnd &amp;ctrl, Mode modeY)</argsstring>
+        <name>AddSzYControl</name>
+        <param>
+          <type>CWnd &amp;</type>
+          <declname>ctrl</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_controls_manager_1aa6bc5b117f02223f25d9bffdded3464d" kindref="member">Mode</ref></type>
+          <declname>modeY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="312" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="312" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1af9dc5e77a6864a6b405f42575be80414" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcdx_c_dynamic_controls_manager_1_1_control_position" kindref="compound">ControlPosition</ref> *</type>
+        <definition>ControlPosition* cdxCDynamicControlsManager::AddSzControlEx</definition>
+        <argsstring>(CWnd &amp;ctrl, BYTE dX1pcnt, BYTE dX2pcnt, BYTE dY1pcnt, BYTE dY2pcnt)</argsstring>
+        <name>AddSzControlEx</name>
+        <param>
+          <type>CWnd &amp;</type>
+          <declname>ctrl</declname>
+        </param>
+        <param>
+          <type>BYTE</type>
+          <declname>dX1pcnt</declname>
+        </param>
+        <param>
+          <type>BYTE</type>
+          <declname>dX2pcnt</declname>
+        </param>
+        <param>
+          <type>BYTE</type>
+          <declname>dY1pcnt</declname>
+        </param>
+        <param>
+          <type>BYTE</type>
+          <declname>dY2pcnt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="314" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="314" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1ae408e7a22dabeca2e96cdeaa9cc188a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcdx_c_dynamic_controls_manager_1_1_control_position" kindref="compound">ControlPosition</ref> *</type>
+        <definition>ControlPosition* cdxCDynamicControlsManager::AddSzXControlEx</definition>
+        <argsstring>(CWnd &amp;ctrl, BYTE dX1pcnt, BYTE dX2pcnt)</argsstring>
+        <name>AddSzXControlEx</name>
+        <param>
+          <type>CWnd &amp;</type>
+          <declname>ctrl</declname>
+        </param>
+        <param>
+          <type>BYTE</type>
+          <declname>dX1pcnt</declname>
+        </param>
+        <param>
+          <type>BYTE</type>
+          <declname>dX2pcnt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="315" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="315" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1a93fe6ec4bfbdc5037a68ebd19e16c0af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcdx_c_dynamic_controls_manager_1_1_control_position" kindref="compound">ControlPosition</ref> *</type>
+        <definition>ControlPosition* cdxCDynamicControlsManager::AddSzYControlEx</definition>
+        <argsstring>(CWnd &amp;ctrl, BYTE dY1pcnt, BYTE dY2pcnt)</argsstring>
+        <name>AddSzYControlEx</name>
+        <param>
+          <type>CWnd &amp;</type>
+          <declname>ctrl</declname>
+        </param>
+        <param>
+          <type>BYTE</type>
+          <declname>dY1pcnt</declname>
+        </param>
+        <param>
+          <type>BYTE</type>
+          <declname>dY2pcnt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="316" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="316" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1aabe28a383533e8954d1235f7b56f9ccd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classcdx_c_dynamic_controls_manager_1_1_control_position" kindref="compound">ControlPosition</ref> *</type>
+        <definition>cdxCDynamicControlsManager::ControlPosition * cdxCDynamicControlsManager::AddSzControlEx</definition>
+        <argsstring>(CWnd &amp;ctrl, const PositionSetup &amp;rSetup)</argsstring>
+        <name>AddSzControlEx</name>
+        <param>
+          <type>CWnd &amp;</type>
+          <declname>ctrl</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classcdx_c_dynamic_controls_manager_1_1_position_setup" kindref="compound">PositionSetup</ref> &amp;</type>
+          <declname>rSetup</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="318" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="476" bodyend="484"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1a259f37c68306339df9e9e18b9a730e9a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classcdx_c_dynamic_controls_manager_1_1_control_position" kindref="compound">ControlPosition</ref> *</type>
+        <definition>cdxCDynamicControlsManager::ControlPosition * cdxCDynamicControlsManager::FindSzControl</definition>
+        <argsstring>(CWnd &amp;ctrl)</argsstring>
+        <name>FindSzControl</name>
+        <param>
+          <type>CWnd &amp;</type>
+          <declname>ctrl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="323" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="501" bodyend="510"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1aa1397fbcc9c42f2ab942f42cffeed2c7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classcdx_c_dynamic_controls_manager_1_1_control_position" kindref="compound">ControlPosition</ref> *</type>
+        <definition>const cdxCDynamicControlsManager::ControlPosition * cdxCDynamicControlsManager::FindSzControl</definition>
+        <argsstring>(CWnd &amp;ctrl) const </argsstring>
+        <name>FindSzControl</name>
+        <param>
+          <type>CWnd &amp;</type>
+          <declname>ctrl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="324" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="490" bodyend="499"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1a38950a25b190e239e64f4fe23f220170" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicControlsManager::RemSzControl</definition>
+        <argsstring>(CWnd &amp;ctrl, bool bAutoDeleteUnusedControlPos=true)</argsstring>
+        <name>RemSzControl</name>
+        <param>
+          <type>CWnd &amp;</type>
+          <declname>ctrl</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bAutoDeleteUnusedControlPos</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="325" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="523" bodyend="537"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1a5ffa3951ae66fbf4f92da5d11447c34f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool cdxCDynamicControlsManager::Enable</definition>
+        <argsstring>(bool bForce=false)</argsstring>
+        <name>Enable</name>
+        <param>
+          <type>bool</type>
+          <declname>bForce</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="330" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="330" bodyend="330"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1aa0088d69b75a2693a017e5b2edb92dcb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void cdxCDynamicControlsManager::Disable</definition>
+        <argsstring>()</argsstring>
+        <name>Disable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="331" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="331" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1a92e0f5dfb11ab5268aa65969d158848c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool cdxCDynamicControlsManager::IsDisabled</definition>
+        <argsstring>() const </argsstring>
+        <name>IsDisabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="332" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="332" bodyend="332"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1a707306d81d8068425a32f74fd1c6271d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicControlsManager::DoInitWindow</definition>
+        <argsstring>(CWnd &amp;rWnd, Freedom fd=fdAll, bool bSizeIcon=false, const CSize *pBaseClientSize=NULL)</argsstring>
+        <name>DoInitWindow</name>
+        <param>
+          <type>CWnd &amp;</type>
+          <declname>rWnd</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_controls_manager_1a40fd71de72c1a4fe58f4cbe18f2127d5" kindref="member">Freedom</ref></type>
+          <declname>fd</declname>
+          <defval><ref refid="classcdx_c_dynamic_controls_manager_1a40fd71de72c1a4fe58f4cbe18f2127d5af78dc96bb74349eb266bca4765a756db" kindref="member">fdAll</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bSizeIcon</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>const CSize *</type>
+          <declname>pBaseClientSize</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="339" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.cpp" bodystart="272" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1ac0208a921b3dd73d083ca583f371a2d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicControlsManager::DoOnGetMinMaxInfo</definition>
+        <argsstring>(MINMAXINFO FAR *lpMMI)</argsstring>
+        <name>DoOnGetMinMaxInfo</name>
+        <param>
+          <type>MINMAXINFO FAR *</type>
+          <declname>lpMMI</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="340" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.cpp" bodystart="332" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1a37bf8e0a332be0a68a0db925752824d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicControlsManager::DoOnSize</definition>
+        <argsstring>(UINT nType, int cx, int cy)</argsstring>
+        <name>DoOnSize</name>
+        <param>
+          <type>UINT</type>
+          <declname>nType</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="341" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.cpp" bodystart="362" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1ae8a73ff07394f5a8c6a846ed85b84abc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicControlsManager::DoDestroyWindow</definition>
+        <argsstring>()</argsstring>
+        <name>DoDestroyWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="342" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.cpp" bodystart="374" bodyend="391"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1aa1d93836dcc0f420eb3d78aa07301f71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicControlsManager::ReorganizeControls</definition>
+        <argsstring>(bool bRedraw=true)</argsstring>
+        <name>ReorganizeControls</name>
+        <param>
+          <type>bool</type>
+          <declname>bRedraw</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="347" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="583" bodyend="601"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1a70ab8582352e28607eec70a51deb961d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicControlsManager::ReorganizeControlsAdvanced</definition>
+        <argsstring>(const CRect &amp;rectWin, CRect rectClient, bool bRedraw=true)</argsstring>
+        <name>ReorganizeControlsAdvanced</name>
+        <param>
+          <type>const CRect &amp;</type>
+          <declname>rectWin</declname>
+        </param>
+        <param>
+          <type>CRect</type>
+          <declname>rectClient</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bRedraw</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="348" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.cpp" bodystart="407" bodyend="465"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1aaafd537e47032ec11095cfcb5d212d68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicControlsManager::StretchWindow</definition>
+        <argsstring>(const CSize &amp;szDelta)</argsstring>
+        <name>StretchWindow</name>
+        <param>
+          <type>const CSize &amp;</type>
+          <declname>szDelta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="349" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="349" bodyend="349"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1a9aa310885c202b08dd3390b7f0409490" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicControlsManager::StretchWindow</definition>
+        <argsstring>(int iAddPcnt)</argsstring>
+        <name>StretchWindow</name>
+        <param>
+          <type>int</type>
+          <declname>iAddPcnt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="350" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="350" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1ad245afc966a8cf31cbf2ff1a410f1c00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>CSize</type>
+        <definition>CSize cdxCDynamicControlsManager::GetWindowSize</definition>
+        <argsstring>()</argsstring>
+        <name>GetWindowSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="351" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="351" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1ada2f51922cebd5f119acaf912b583bd7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicControlsManager::RestoreWindowPosition</definition>
+        <argsstring>(LPCTSTR lpszProfile, UINT restoreFlags=rflg_none)</argsstring>
+        <name>RestoreWindowPosition</name>
+        <param>
+          <type>LPCTSTR</type>
+          <declname>lpszProfile</declname>
+        </param>
+        <param>
+          <type>UINT</type>
+          <declname>restoreFlags</declname>
+          <defval><ref refid="classcdx_c_dynamic_controls_manager_1ad10efc55547883f91ccd6b50e6c2cd70a25729d800b0f1b06025004ac21a6e122" kindref="member">rflg_none</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="352" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="352" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1af6fd515578486d81f15206d83e98f847" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicControlsManager::StoreWindowPosition</definition>
+        <argsstring>(LPCTSTR lpszProfile)</argsstring>
+        <name>StoreWindowPosition</name>
+        <param>
+          <type>LPCTSTR</type>
+          <declname>lpszProfile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="353" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="353" bodyend="353"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1a2969e6f55d71cc4b72bbacf6829ad7d2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicControlsManager::StretchWindow</definition>
+        <argsstring>(CWnd &amp;rWnd, const CSize &amp;szDelta)</argsstring>
+        <name>StretchWindow</name>
+        <param>
+          <type>CWnd &amp;</type>
+          <declname>rWnd</declname>
+        </param>
+        <param>
+          <type>const CSize &amp;</type>
+          <declname>szDelta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="359" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.cpp" bodystart="570" bodyend="595"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1a83328132b0022f335f4db619fc8e75d0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicControlsManager::StretchWindow</definition>
+        <argsstring>(CWnd &amp;rWnd, int iAddPcnt)</argsstring>
+        <name>StretchWindow</name>
+        <param>
+          <type>CWnd &amp;</type>
+          <declname>rWnd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iAddPcnt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="360" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.cpp" bodystart="611" bodyend="621"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1ae292cdb0dbe161365738736e2158b8cd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>CSize</type>
+        <definition>CSize cdxCDynamicControlsManager::GetWindowSize</definition>
+        <argsstring>(CWnd &amp;rWnd)</argsstring>
+        <name>GetWindowSize</name>
+        <param>
+          <type>CWnd &amp;</type>
+          <declname>rWnd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="361" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.cpp" bodystart="629" bodyend="636"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1ac2996e0fc11ccac7de8d30acd0d26ca2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicControlsManager::RestoreWindowPosition</definition>
+        <argsstring>(CWnd &amp;rWnd, LPCTSTR lpszProfile, UINT restoreFlags=rflg_none)</argsstring>
+        <name>RestoreWindowPosition</name>
+        <param>
+          <type>CWnd &amp;</type>
+          <declname>rWnd</declname>
+        </param>
+        <param>
+          <type>LPCTSTR</type>
+          <declname>lpszProfile</declname>
+        </param>
+        <param>
+          <type>UINT</type>
+          <declname>restoreFlags</declname>
+          <defval><ref refid="classcdx_c_dynamic_controls_manager_1ad10efc55547883f91ccd6b50e6c2cd70a25729d800b0f1b06025004ac21a6e122" kindref="member">rflg_none</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="362" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.cpp" bodystart="683" bodyend="778"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1aa5ea92340c5f41c8d4db341323f23c3d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicControlsManager::StoreWindowPosition</definition>
+        <argsstring>(CWnd &amp;rWnd, LPCTSTR lpszProfile)</argsstring>
+        <name>StoreWindowPosition</name>
+        <param>
+          <type>CWnd &amp;</type>
+          <declname>rWnd</declname>
+        </param>
+        <param>
+          <type>LPCTSTR</type>
+          <declname>lpszProfile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="363" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.cpp" bodystart="650" bodyend="674"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1af8846a98dcfc9da17e5f96dbcedea4ad" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>CImageList &amp;</type>
+        <definition>static CImageList&amp; cdxCDynamicControlsManager::GetSizeIconImageList</definition>
+        <argsstring>(CSize *pSzBmp=NULL)</argsstring>
+        <name>GetSizeIconImageList</name>
+        <param>
+          <type>CSize *</type>
+          <declname>pSzBmp</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="377" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="377" bodyend="377"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1abe66bb1bcce44f88944d57892eac0147" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void cdxCDynamicControlsManager::OnDeleteControlPosition</definition>
+        <argsstring>(ControlPosition &amp;rWillBeDeleted)</argsstring>
+        <name>OnDeleteControlPosition</name>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_controls_manager_1_1_control_position" kindref="compound">ControlPosition</ref> &amp;</type>
+          <declname>rWillBeDeleted</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="369" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="369" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_controls_manager_1ab73522dc5e04cdee2a327618aa4fbf98" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>CRect</type>
+        <definition>CRect cdxCDynamicControlsManager::GetRealClientRect</definition>
+        <argsstring>() const </argsstring>
+        <name>GetRealClientRect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="370" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="607" bodyend="613"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" line="90" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.h" bodystart="89" bodyend="378"/>
+    <listofallmembers>
+      <member refid="classcdx_c_dynamic_controls_manager_1a3adc4ee96000ae96357898a9aef633d3" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>AddSzControl</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1af9dc5e77a6864a6b405f42575be80414" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>AddSzControlEx</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1aabe28a383533e8954d1235f7b56f9ccd" prot="public" virt="virtual"><scope>cdxCDynamicControlsManager</scope><name>AddSzControlEx</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a625bf5c2c3de9414170bba642f247703" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>AddSzXControl</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ae408e7a22dabeca2e96cdeaa9cc188a8" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>AddSzXControlEx</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ad80216f97c1f0e326fbb4a645d5254d4" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>AddSzYControl</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a93fe6ec4bfbdc5037a68ebd19e16c0af" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>AddSzYControlEx</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ab9a86d0357c5fd73c5c801d009ce2386" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>cdxCDynamicControlsManager</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a6a209795cf7e600943b3ec64f2f6c279" prot="private" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>ControlData</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a26af27bde04095d1bd21a7b30d7f1558" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>ControlData::ControlEntry</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1aa0088d69b75a2693a017e5b2edb92dcb" prot="public" virt="virtual"><scope>cdxCDynamicControlsManager</scope><name>Disable</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ae8a73ff07394f5a8c6a846ed85b84abc" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>DoDestroyWindow</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a707306d81d8068425a32f74fd1c6271d" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>DoInitWindow</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ac0208a921b3dd73d083ca583f371a2d4" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>DoOnGetMinMaxInfo</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a37bf8e0a332be0a68a0db925752824d1" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>DoOnSize</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a5ffa3951ae66fbf4f92da5d11447c34f" prot="public" virt="virtual"><scope>cdxCDynamicControlsManager</scope><name>Enable</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a40fd71de72c1a4fe58f4cbe18f2127d5af78dc96bb74349eb266bca4765a756db" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>fdAll</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a40fd71de72c1a4fe58f4cbe18f2127d5a7aadba7d40c5567884a45235bbadc0d1" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>fdHoriz</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a40fd71de72c1a4fe58f4cbe18f2127d5a2bacf4a0bcc1edb159655265718d3338" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>fdNone</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a40fd71de72c1a4fe58f4cbe18f2127d5a97cab45f4d94f14b60ec88feaccd1910" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>fdVert</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a259f37c68306339df9e9e18b9a730e9a" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>FindSzControl</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1aa1397fbcc9c42f2ab942f42cffeed2c7" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>FindSzControl</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a24db7d0e92f0a2e480b872af87b2e251" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>FixWindowSize</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a40fd71de72c1a4fe58f4cbe18f2127d5" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>Freedom</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1aeb448ce1265623088df7d71a7634d30e" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>GetFreedom</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ad1db191dc193d02d5b596e03b96e6e28" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>GetMaxSize</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1aeace9529ac742b64481f03a71183debb" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>GetMinSize</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ab73522dc5e04cdee2a327618aa4fbf98" prot="protected" virt="virtual"><scope>cdxCDynamicControlsManager</scope><name>GetRealClientRect</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1af8846a98dcfc9da17e5f96dbcedea4ad" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>GetSizeIconImageList</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a8125e887d1b70b3e05e7bc6e5310a4c4" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>GetTotalChildCnt</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ad245afc966a8cf31cbf2ff1a410f1c00" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>GetWindowSize</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ae292cdb0dbe161365738736e2158b8cd" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>GetWindowSize</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a3a72a7d08e56838f69bf486ee55b8311" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>HideSizeIcon</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1acaa6d7131a8e71a3a1404db17665a224a20698e56e64b1bdf5bec900417a1d074" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>ICON_CONTROL_ID</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a92e0f5dfb11ab5268aa65969d158848c" prot="public" virt="virtual"><scope>cdxCDynamicControlsManager</scope><name>IsDisabled</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a7fcd305637c51e7a3a16e7334382cb72" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>IsReady</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a3f051089579a1555c0ff2c211c388a5b" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>m_bApplyScrollPosition</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1af9713d19b40d11256cb92a75d1884e4e" prot="private" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>m_Freedom</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a94167faa1d71bd445e721a831ada47c9" prot="private" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>m_iDisabledCnt</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ada4797f44668c8eb61541f45f5ba7a28" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>m_idSizeIcon</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1aad182dbe7198f71ba237f71ce445b7b0" prot="private" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>m_iTotalCnt</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ac1379c218358cd34b8e4e2fc592c7400" prot="private" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>m_pFirst</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a17c2b3bbebfe05d4683bb0174ee9818f" prot="private" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>m_pWnd</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ae971b287b201eb020444ba3a867d004d" prot="private" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>m_pWndSizeIcon</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ab7aa9d60f2510b5ad9367bffa5fb9ea5" prot="private" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>m_szClientRelative</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a964ae5bcc80170301665d671e2b182d2" prot="private" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>m_szMax</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ac426633bcef0b1527aa2c72baabe192c" prot="private" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>m_szMin</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1aa6bc5b117f02223f25d9bffdded3464dac4551350b8671a39901b74974b79d60e" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>md__Last</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1aa6bc5b117f02223f25d9bffdded3464da1ff2e75c95475fa7161a05f6a1d6715f" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>mdNone</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1aa6bc5b117f02223f25d9bffdded3464da25750f3d7382687a98dc2824dc968346" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>mdRelative</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1aa6bc5b117f02223f25d9bffdded3464daed3d7412dc18c3a1cc6988a655468f41" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>mdRepos</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1aa6bc5b117f02223f25d9bffdded3464daf0a6bce71b2df817b4c83f28bb820399" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>mdResize</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1aa6bc5b117f02223f25d9bffdded3464d" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>Mode</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1abe66bb1bcce44f88944d57892eac0147" prot="protected" virt="virtual"><scope>cdxCDynamicControlsManager</scope><name>OnDeleteControlPosition</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a38950a25b190e239e64f4fe23f220170" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>RemSzControl</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1aa1d93836dcc0f420eb3d78aa07301f71" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>ReorganizeControls</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a70ab8582352e28607eec70a51deb961d" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>ReorganizeControlsAdvanced</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ad10efc55547883f91ccd6b50e6c2cd70" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>RestoreFlags</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ada2f51922cebd5f119acaf912b583bd7" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>RestoreWindowPosition</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ac2996e0fc11ccac7de8d30acd0d26ca2" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>RestoreWindowPosition</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ad10efc55547883f91ccd6b50e6c2cd70a27405a844e673e85f84248072f21b88a" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>rflg_all</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ad10efc55547883f91ccd6b50e6c2cd70a25729d800b0f1b06025004ac21a6e122" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>rflg_none</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ad10efc55547883f91ccd6b50e6c2cd70a75911a064aca469c91cf88dccf09a358" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>rflg_state</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ad10efc55547883f91ccd6b50e6c2cd70a86ec030ae74277ae03c2ce27aec83aa3" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>rflg_visibility</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a349a416456cf30ec9f953b1d26c68e9f" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>SetFreedom</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a98be881c887866d3f34c570a311cd938" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>SetMinMaxSize</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1ac0649d70eb4799c82db83db9b9c67e34" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>ShowSizeIcon</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1af6fd515578486d81f15206d83e98f847" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>StoreWindowPosition</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1aa5ea92340c5f41c8d4db341323f23c3d" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>StoreWindowPosition</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1aaafd537e47032ec11095cfcb5d212d68" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>StretchWindow</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a9aa310885c202b08dd3390b7f0409490" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>StretchWindow</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a2969e6f55d71cc4b72bbacf6829ad7d2" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>StretchWindow</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1a83328132b0022f335f4db619fc8e75d0" prot="public" virt="non-virtual"><scope>cdxCDynamicControlsManager</scope><name>StretchWindow</name></member>
+      <member refid="classcdx_c_dynamic_controls_manager_1abe33d67ea683297e234398a67a8174ee" prot="public" virt="virtual"><scope>cdxCDynamicControlsManager</scope><name>‾cdxCDynamicControlsManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

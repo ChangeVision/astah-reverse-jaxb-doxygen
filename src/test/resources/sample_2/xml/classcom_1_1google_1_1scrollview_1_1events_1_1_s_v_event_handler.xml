@@ -1,0 +1,643 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler" kind="class" prot="public">
+    <compoundname>com::google::scrollview::events::SVEventHandler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">PBasicInputEventHandler</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">ActionListener</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">KeyListener</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">WindowListener</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1ac5f25ffae6109c1b8bd40e6b7bb3b9d4" prot="public" static="no" mutable="no">
+        <type>Timer</type>
+        <definition>Timer com.google.scrollview.events.SVEventHandler.timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Necessary to wait for a defined period of time (for SVET_HOVER). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="46" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a2aa7239d1ac8069f2178fe8721aabaea" prot="private" static="no" mutable="no">
+        <type><ref refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window" kindref="compound">SVWindow</ref></type>
+        <definition>SVWindow com.google.scrollview.events.SVEventHandler.svWindow</definition>
+        <argsstring></argsstring>
+        <name>svWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The window which the event corresponds to. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="49" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1ac3402a8a57a599615c10788148a17739" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.google.scrollview.events.SVEventHandler.lastX</definition>
+        <argsstring></argsstring>
+        <name>lastX</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>These are used to determine a selection size (for SVET_SELECTION). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="52" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a248e4676071c480be2611f22b93ed544" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.google.scrollview.events.SVEventHandler.lastY</definition>
+        <argsstring></argsstring>
+        <name>lastY</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="53" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a7a7bf42ae58ab56edfb98e1ccd7fa128" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.google.scrollview.events.SVEventHandler.lastXMove</definition>
+        <argsstring></argsstring>
+        <name>lastXMove</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>These are used in case we want to transmit our position, but do not get it because it was no MouseEvent, in particular SVET_HOVER and SVET_INPUT. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="59" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1afb91453123a023a4a1a9826f8c2d5f18" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.google.scrollview.events.SVEventHandler.lastYMove</definition>
+        <argsstring></argsstring>
+        <name>lastYMove</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="60" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1abe0adab3b68c6f0b9bca3f188653ae58" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.google.scrollview.events.SVEventHandler.startX</definition>
+        <argsstring></argsstring>
+        <name>startX</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For Drawing a rubber-band rectangle for selection </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="63" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a57ef8d09d5277963417ce31d4933875c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.google.scrollview.events.SVEventHandler.startY</definition>
+        <argsstring></argsstring>
+        <name>startY</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="64" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1ab957c1dd6be63c315361305497b17435" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float com.google.scrollview.events.SVEventHandler.rubberBandTransparency</definition>
+        <argsstring></argsstring>
+        <name>rubberBandTransparency</name>
+        <initializer>= 0.5f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="65" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a91b9e986cfc348d7694ce24e313bba15" prot="private" static="no" mutable="no">
+        <type>PNode</type>
+        <definition>PNode com.google.scrollview.events.SVEventHandler.selection</definition>
+        <argsstring></argsstring>
+        <name>selection</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="66" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1aa26ba06daebc0943467bcb71f792d395" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.google.scrollview.events.SVEventHandler.keyStr</definition>
+        <argsstring></argsstring>
+        <name>keyStr</name>
+        <initializer>= &quot;!&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The string entered since the last enter. Since the client end eats all newlines, we can&apos;t use the newline character, so use ! for now, as it cannot be entered directly anyway and therefore can never show up for real. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="72" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a19b69f39aea507f3dcbbdf7b0a85e473" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.google.scrollview.events.SVEventHandler.SVEventHandler</definition>
+        <argsstring>(SVWindow wdw)</argsstring>
+        <name>SVEventHandler</name>
+        <param>
+          <type><ref refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window" kindref="compound">SVWindow</ref></type>
+          <declname>wdw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setup the timer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="75" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a7f4693896830b323e1931938b73aa9d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.events.SVEventHandler.mouseClicked</definition>
+        <argsstring>(PInputEvent e)</argsstring>
+        <name>mouseClicked</name>
+        <param>
+          <type>PInputEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The mouse is clicked - create an SVET_CLICK event. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="104" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="104" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a17b9377e4f483752e9a8caf1514d910d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.events.SVEventHandler.mousePressed</definition>
+        <argsstring>(PInputEvent e)</argsstring>
+        <name>mousePressed</name>
+        <param>
+          <type>PInputEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The mouse key is pressed (and keeps getting pressed). Depending on the OS, show a popup menu (if the button pressed is associated with popup menus, like the RMB under windows&amp;linux) or otherwise save the position (in case it is a selection). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="120" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="120" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1abd6ac0cadfd17a6a2ab82f5af4f2c953" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.events.SVEventHandler.mouseDragged</definition>
+        <argsstring>(PInputEvent e)</argsstring>
+        <name>mouseDragged</name>
+        <param>
+          <type>PInputEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The mouse is getting dragged - create an SVET_MOUSE event. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="132" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="132" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a32e4a119efaf067355013a67cdcf553e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.events.SVEventHandler.mouseReleased</definition>
+        <argsstring>(PInputEvent e)</argsstring>
+        <name>mouseReleased</name>
+        <param>
+          <type>PInputEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The mouse was released. Depending on the OS, show a popup menu (if the button pressed is associated with popup menus, like the RMB under windows&amp;linux) or otherwise create an SVET_SELECTION event. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="165" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="165" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a44db9f1d5f3145c1325afa10eda13518" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.events.SVEventHandler.mouseWheelRotated</definition>
+        <argsstring>(PInputEvent e)</argsstring>
+        <name>mouseWheelRotated</name>
+        <param>
+          <type>PInputEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The mouse wheel is used to zoom in and out of the viewport and center on the (x,y) position the mouse is currently on. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="184" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="184" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1afa33459bd78cbe68fbf9104047c0c6f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.events.SVEventHandler.mouseMoved</definition>
+        <argsstring>(PInputEvent e)</argsstring>
+        <name>mouseMoved</name>
+        <param>
+          <type>PInputEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The mouse was moved - create an SVET_MOTION event. NOTE: This obviously creates a lot of traffic and, depending on the type of application, could quite possibly be disabled. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="201" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="201" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a3823d33eb9242084370004dd6b7ef252" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.events.SVEventHandler.mouseEntered</definition>
+        <argsstring>(PInputEvent e)</argsstring>
+        <name>mouseEntered</name>
+        <param>
+          <type>PInputEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The mouse entered the window. Start the timer, which will then emit SVET_HOVER events every X ms. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="210" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="210" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a0c3c54604e046ce7b5ef76c5f6942d31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.events.SVEventHandler.mouseExited</definition>
+        <argsstring>(PInputEvent e)</argsstring>
+        <name>mouseExited</name>
+        <param>
+          <type>PInputEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The mouse exited the window Stop the timer, so no more SVET_HOVER events will emit. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="218" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="218" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1ab42afb1a84efc258de0d2bf192e4af94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.events.SVEventHandler.actionPerformed</definition>
+        <argsstring>(ActionEvent e)</argsstring>
+        <name>actionPerformed</name>
+        <param>
+          <type>ActionEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The only associated object with this is the timer, so we use it to send a SVET_HOVER event. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="226" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="226" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a2925216a2e7f7e5032b59924f019bba6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.events.SVEventHandler.keyPressed</definition>
+        <argsstring>(KeyEvent e)</argsstring>
+        <name>keyPressed</name>
+        <param>
+          <type>KeyEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A key was pressed - create an SVET_INPUT event.</para><para>NOTE: Might be useful to specify hotkeys.</para><para>Implementation note: The keyListener provided by Piccolo seems to be broken, so we use the AWT listener directly. There are never any keyTyped events received either so we are stuck with physical keys, which is very ugly. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="241" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="241" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a6f1666e5a74569d46fb4767b083c6e2e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.events.SVEventHandler.windowClosing</definition>
+        <argsstring>(WindowEvent e)</argsstring>
+        <name>windowClosing</name>
+        <param>
+          <type>WindowEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A window is closed (by the &apos;x&apos;) - create an SVET_DESTROY event. If it was the last open Window, also send an SVET_EXIT event (but do not exit unless the client says so). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="261" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="261" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1ab2e9371b69307334fee4504bba17b7a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.events.SVEventHandler.keyReleased</definition>
+        <argsstring>(KeyEvent e)</argsstring>
+        <name>keyReleased</name>
+        <param>
+          <type>KeyEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>These are all events we do not care about and throw away </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="273" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="273" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a21f16f6be5884ab6b618c8e2538424aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.events.SVEventHandler.keyTyped</definition>
+        <argsstring>(KeyEvent e)</argsstring>
+        <name>keyTyped</name>
+        <param>
+          <type>KeyEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="276" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="276" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a41116953bfbe43014afbde16d19e6a4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.events.SVEventHandler.windowActivated</definition>
+        <argsstring>(WindowEvent e)</argsstring>
+        <name>windowActivated</name>
+        <param>
+          <type>WindowEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="279" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="279" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a7b753f3e7e98d725a10ed5709b1d6097" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.events.SVEventHandler.windowClosed</definition>
+        <argsstring>(WindowEvent e)</argsstring>
+        <name>windowClosed</name>
+        <param>
+          <type>WindowEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="282" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="282" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a4e8e8e4ad9de29ade49806964441c9e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.events.SVEventHandler.windowDeactivated</definition>
+        <argsstring>(WindowEvent e)</argsstring>
+        <name>windowDeactivated</name>
+        <param>
+          <type>WindowEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="285" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="285" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1aebdd54811dc9356e3fee83f20f5077ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.events.SVEventHandler.windowDeiconified</definition>
+        <argsstring>(WindowEvent e)</argsstring>
+        <name>windowDeiconified</name>
+        <param>
+          <type>WindowEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="288" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="288" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1ae254d51913f96fdace97a89b6ad33ce8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.events.SVEventHandler.windowIconified</definition>
+        <argsstring>(WindowEvent e)</argsstring>
+        <name>windowIconified</name>
+        <param>
+          <type>WindowEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="291" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="291" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1aa8c6eccf1f1cee7d0f1ea980a0f609b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.events.SVEventHandler.windowOpened</definition>
+        <argsstring>(WindowEvent e)</argsstring>
+        <name>windowOpened</name>
+        <param>
+          <type>WindowEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="294" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="294" bodyend="295"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a452acf12cef15ffa13ce0d9474b4614a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.events.SVEventHandler.processEvent</definition>
+        <argsstring>(SVEvent e)</argsstring>
+        <name>processEvent</name>
+        <param>
+          <type><ref refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event" kindref="compound">SVEvent</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Store the newest x,y values, add the message to the queue and restart the timer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="84" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="84" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a6ad49db9dde46983cdad2bb519f0082e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.events.SVEventHandler.showPopup</definition>
+        <argsstring>(PInputEvent e)</argsstring>
+        <name>showPopup</name>
+        <param>
+          <type>PInputEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Show the associated popup menu at (x,y) (relative position of the window). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="92" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="92" bodyend="99"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The ScrollViewEventHandler takes care of any events which might happen on the canvas and converts them to an according <ref refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event" kindref="compound">SVEvent</ref>, which is (using the processEvent method) then added to a message queue. All events from the message queue get sent gradually</para><para><simplesect kind="author"><para><ulink url="mailto:wanke@google.com">wanke@google.com</ulink> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1946">
+        <label>PBasicInputEventHandler</label>
+      </node>
+      <node id="1948">
+        <label>KeyListener</label>
+      </node>
+      <node id="1947">
+        <label>ActionListener</label>
+      </node>
+      <node id="1945">
+        <label>com.google.scrollview.events.SVEventHandler</label>
+        <link refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler"/>
+        <childnode refid="1946" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1947" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1948" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1949" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1949">
+        <label>WindowListener</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1951">
+        <label>PBasicInputEventHandler</label>
+      </node>
+      <node id="1953">
+        <label>KeyListener</label>
+      </node>
+      <node id="1952">
+        <label>ActionListener</label>
+      </node>
+      <node id="1955">
+        <label>Timer</label>
+      </node>
+      <node id="1950">
+        <label>com.google.scrollview.events.SVEventHandler</label>
+        <link refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler"/>
+        <childnode refid="1951" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1952" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1953" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1954" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1955" relation="usage">
+          <edgelabel>timer</edgelabel>
+        </childnode>
+      </node>
+      <node id="1954">
+        <label>WindowListener</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" line="43" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/events/SVEventHandler.java" bodystart="42" bodyend="296"/>
+    <listofallmembers>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1ab42afb1a84efc258de0d2bf192e4af94" prot="public" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>actionPerformed</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a2925216a2e7f7e5032b59924f019bba6" prot="public" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>keyPressed</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1ab2e9371b69307334fee4504bba17b7a7" prot="public" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>keyReleased</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1aa26ba06daebc0943467bcb71f792d395" prot="private" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>keyStr</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a21f16f6be5884ab6b618c8e2538424aa" prot="public" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>keyTyped</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1ac3402a8a57a599615c10788148a17739" prot="private" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>lastX</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a7a7bf42ae58ab56edfb98e1ccd7fa128" prot="private" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>lastXMove</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a248e4676071c480be2611f22b93ed544" prot="private" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>lastY</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1afb91453123a023a4a1a9826f8c2d5f18" prot="private" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>lastYMove</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a7f4693896830b323e1931938b73aa9d1" prot="public" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>mouseClicked</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1abd6ac0cadfd17a6a2ab82f5af4f2c953" prot="public" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>mouseDragged</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a3823d33eb9242084370004dd6b7ef252" prot="public" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>mouseEntered</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a0c3c54604e046ce7b5ef76c5f6942d31" prot="public" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>mouseExited</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1afa33459bd78cbe68fbf9104047c0c6f7" prot="public" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>mouseMoved</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a17b9377e4f483752e9a8caf1514d910d" prot="public" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>mousePressed</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a32e4a119efaf067355013a67cdcf553e" prot="public" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>mouseReleased</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a44db9f1d5f3145c1325afa10eda13518" prot="public" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>mouseWheelRotated</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a452acf12cef15ffa13ce0d9474b4614a" prot="private" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>processEvent</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1ab957c1dd6be63c315361305497b17435" prot="private" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>rubberBandTransparency</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a91b9e986cfc348d7694ce24e313bba15" prot="private" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>selection</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a6ad49db9dde46983cdad2bb519f0082e" prot="private" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>showPopup</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1abe0adab3b68c6f0b9bca3f188653ae58" prot="private" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>startX</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a57ef8d09d5277963417ce31d4933875c" prot="private" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>startY</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a19b69f39aea507f3dcbbdf7b0a85e473" prot="public" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>SVEventHandler</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a2aa7239d1ac8069f2178fe8721aabaea" prot="private" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>svWindow</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1ac5f25ffae6109c1b8bd40e6b7bb3b9d4" prot="public" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>timer</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a41116953bfbe43014afbde16d19e6a4b" prot="public" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>windowActivated</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a7b753f3e7e98d725a10ed5709b1d6097" prot="public" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>windowClosed</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a6f1666e5a74569d46fb4767b083c6e2e" prot="public" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>windowClosing</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1a4e8e8e4ad9de29ade49806964441c9e9" prot="public" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>windowDeactivated</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1aebdd54811dc9356e3fee83f20f5077ba" prot="public" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>windowDeiconified</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1ae254d51913f96fdace97a89b6ad33ce8" prot="public" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>windowIconified</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler_1aa8c6eccf1f1cee7d0f1ea980a0f609b6" prot="public" virt="non-virtual"><scope>com::google::scrollview::events::SVEventHandler</scope><name>windowOpened</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_basic_command_panel_8m" kind="file">
+    <compoundname>BasicCommandPanel.m</compoundname>
+    <includes refid="_basic_command_panel_8h" local="yes">BasicCommandPanel.h</includes>
+    <includes local="no">QuartzCore/QuartzCore.h</includes>
+    <includes refid="_create_class_command_8h" local="yes">CreateClassCommand.h</includes>
+    <includes refid="_create_interface_command_8h" local="yes">CreateInterfaceCommand.h</includes>
+    <includes refid="_create_note_command_8h" local="yes">CreateNoteCommand.h</includes>
+    <includes refid="_create_text_command_8h" local="yes">CreateTextCommand.h</includes>
+    <incdepgraph>
+      <node id="123">
+        <label>UIKit/UIKit.h</label>
+      </node>
+      <node id="126">
+        <label>CreateClassCommand.h</label>
+        <link refid="_create_class_command_8h"/>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+      </node>
+      <node id="124">
+        <label>CommandPanel.h</label>
+        <link refid="_command_panel_8h"/>
+        <childnode refid="123" relation="include">
+        </childnode>
+      </node>
+      <node id="131">
+        <label>CreateNoteCommand.h</label>
+        <link refid="_create_note_command_8h"/>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+      </node>
+      <node id="128">
+        <label>CreateCommand.h</label>
+        <link refid="_create_command_8h"/>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+      </node>
+      <node id="122">
+        <label>BasicCommandPanel.h</label>
+        <link refid="_basic_command_panel_8h"/>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+      </node>
+      <node id="121">
+        <label>Classes/BasicCommandPanel.m</label>
+        <link refid="BasicCommandPanel.m"/>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+      </node>
+      <node id="127">
+        <label>Foundation/Foundation.h</label>
+      </node>
+      <node id="125">
+        <label>QuartzCore/QuartzCore.h</label>
+      </node>
+      <node id="132">
+        <label>CreateTextCommand.h</label>
+        <link refid="_create_text_command_8h"/>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+      </node>
+      <node id="129">
+        <label>Command.h</label>
+        <link refid="_command_8h"/>
+        <childnode refid="127" relation="include">
+        </childnode>
+      </node>
+      <node id="130">
+        <label>CreateInterfaceCommand.h</label>
+        <link refid="_create_interface_command_8h"/>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>BasicCommandPanel.m</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>UmlPad</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>梅田<sp/>政利<sp/>on<sp/>10/05/20.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>2010<sp/>Change<sp/>Vision.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_basic_command_panel_8h" kindref="compound">BasicCommandPanel.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;QuartzCore/QuartzCore.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_create_class_command_8h" kindref="compound">CreateClassCommand.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_create_interface_command_8h" kindref="compound">CreateInterfaceCommand.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_create_note_command_8h" kindref="compound">CreateNoteCommand.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_create_text_command_8h" kindref="compound">CreateTextCommand.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">@implementation<sp/></highlight><highlight class="normal"><ref refid="interface_basic_command_panel" kindref="compound">BasicCommandPanel</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">-<sp/>(void)initPanel<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.backgroundColor<sp/>=<sp/>[UIColor<sp/>clearColor];</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>addPanelButton:@&quot;class.png&quot;<sp/>x:120<sp/>y:50<sp/>command:[[[<ref refid="interface_create_class_command" kindref="compound">CreateClassCommand</ref><sp/>alloc]<sp/>init]<sp/>autorelease]];</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>addPanelButton:@&quot;class_if.png&quot;<sp/>x:190<sp/>y:120<sp/>command:[[[<ref refid="interface_create_interface_command" kindref="compound">CreateInterfaceCommand</ref><sp/>alloc]<sp/>init]<sp/>autorelease]];</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>addPanelButton:@&quot;note.png&quot;<sp/>x:120<sp/>y:190<sp/>command:[[[<ref refid="interface_create_note_command" kindref="compound">CreateNoteCommand</ref><sp/>alloc]<sp/>init]<sp/>autorelease]];</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>addPanelButton:@&quot;text.png&quot;<sp/>x:50<sp/>y:120<sp/>command:[[[<ref refid="interface_create_text_command" kindref="compound">CreateTextCommand</ref><sp/>alloc]<sp/>init]<sp/>autorelease]];</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">-<sp/>(id)initWithFrame:(CGRect)frame<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>=<sp/>[super<sp/>initWithFrame:frame]))<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>initPanel];</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>0</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"></highlight><highlight class="normal">-<sp/>(void)hidePanelAuto<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.hidden<sp/>==<sp/>YES)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.hidden<sp/>=<sp/>YES;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>CATransition<sp/>*transition<sp/>=<sp/>[CATransition<sp/>animation];</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>transition.duration<sp/>=<sp/>0.3;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>transition.timingFunction<sp/>=<sp/>[CAMediaTimingFunction<sp/>functionWithName:kCAMediaTimingFunctionEaseOut];</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>transition.type<sp/>=<sp/>kCATransitionFade;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.layer<sp/>addAnimation:transition<sp/>forKey:nil];</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>このメソッドの登録（どこか別のところで呼び出す）</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>[self<sp/>performSelector:@selector(hidePanelAuto)<sp/>withObject:nil<sp/>afterDelay:3.0];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">-<sp/>(void)<ref refid="interface_command_panel_1ad8ba7759168cbd92c7e488b4872bb3b4" kindref="member">showPanel</ref><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.superview<sp/>bringSubviewToFront:self];</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>CALayer<sp/>*layer<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.layer;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>CGFloat<sp/>animationDuration<sp/>=<sp/>0.25;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>CABasicAnimation<sp/>*transformAnimation<sp/>=<sp/>[CABasicAnimation<sp/>animationWithKeyPath:@&quot;transform&quot;];</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>transformAnimation.removedOnCompletion<sp/>=<sp/>YES;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>transformAnimation.duration<sp/>=<sp/>animationDuration;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>transformAnimation.fromValue<sp/>=<sp/>[NSValue<sp/>valueWithCATransform3D:CATransform3DMakeScale(0.1,<sp/>0.1,<sp/>1)];</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>transformAnimation.toValue<sp/>=<sp/>[NSValue<sp/>valueWithCATransform3D:CATransform3DMakeScale(1,<sp/>1,<sp/>1)];</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>transformAnimation.delegate<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>transformAnimation.timingFunction<sp/>=<sp/>[CAMediaTimingFunction<sp/>functionWithName:kCAMediaTimingFunctionEaseIn];</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>[layer<sp/>addAnimation:transformAnimation<sp/>forKey:@&quot;animateToShow&quot;];</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">-<sp/>(void)animationDidStop:(CAAnimation<sp/>*)theAnimation<sp/>finished:(BOOL)flag<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="71"><highlight class="comment">//<sp/>Only<sp/>override<sp/>drawRect:<sp/>if<sp/>you<sp/>perform<sp/>custom<sp/>drawing.</highlight></codeline>
+<codeline lineno="72"><highlight class="comment">//<sp/>An<sp/>empty<sp/>implementation<sp/>adversely<sp/>affects<sp/>performance<sp/>during<sp/>animation.</highlight></codeline>
+<codeline lineno="73"><highlight class="comment">-<sp/>(void)drawRect:(CGRect)rect<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>Drawing<sp/>code</highlight></codeline>
+<codeline lineno="75"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="76"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">-<sp/>(void)dealloc<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">super</highlight><highlight class="normal"><sp/>dealloc];</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/BasicCommandPanel.m"/>
+  </compounddef>
+</doxygen>

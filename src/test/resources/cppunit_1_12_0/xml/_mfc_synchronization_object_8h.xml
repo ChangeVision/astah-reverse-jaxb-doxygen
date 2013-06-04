@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_mfc_synchronization_object_8h" kind="file">
+    <compoundname>MfcSynchronizationObject.h</compoundname>
+    <includes local="no">cppunit/SynchronizedObject.h</includes>
+    <includedby refid="_test_runner_dlg_8cpp" local="yes">src/msvc6/testrunner/TestRunnerDlg.cpp</includedby>
+    <incdepgraph>
+      <node id="971">
+        <label>src/msvc6/testrunner/MfcSynchronizationObject.h</label>
+        <link refid="MfcSynchronizationObject.h"/>
+        <childnode refid="972" relation="include">
+        </childnode>
+      </node>
+      <node id="972">
+        <label>cppunit/SynchronizedObject.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="973">
+        <label>src/msvc6/testrunner/MfcSynchronizationObject.h</label>
+        <link refid="MfcSynchronizationObject.h"/>
+        <childnode refid="974" relation="include">
+        </childnode>
+      </node>
+      <node id="974">
+        <label>src/msvc6/testrunner/TestRunnerDlg.cpp</label>
+        <link refid="_test_runner_dlg_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_mfc_synchronization_object" prot="public">MfcSynchronizationObject</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>//////////////////////////////////////////////////////////////////////////</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Header<sp/>file<sp/>LightweightSynchronizationObject.h<sp/>for<sp/>class<sp/>LightweightSynchronizationObject</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(c)Copyright<sp/>2000,<sp/>Baptiste<sp/>Lepilleur.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created:<sp/>2002/02/27</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>//////////////////////////////////////////////////////////////////////////</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LIGHTWEIGHTSYNCHRONIZATIONOBJECT_H</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>LIGHTWEIGHTSYNCHRONIZATIONOBJECT_H</highlight></codeline>
+<codeline lineno="8"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cppunit/SynchronizedObject.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_mfc_synchronization_object" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mfc_synchronization_object" kindref="compound">MfcSynchronizationObject</ref><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>CPPUNIT_NS::SynchronizedObject::SynchronizationObject</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>CCriticalSection<sp/>m_syncObject;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21" refid="class_mfc_synchronization_object_1ae96836f52826f4edc1cdeaaa797e41fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mfc_synchronization_object_1ae96836f52826f4edc1cdeaaa797e41fb" kindref="member">lock</ref>()</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>m_syncObject.Lock();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26" refid="class_mfc_synchronization_object_1afba48ba5a266e3a6859d5bc2aa0c0b77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mfc_synchronization_object_1afba48ba5a266e3a6859d5bc2aa0c0b77" kindref="member">unlock</ref>()</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>m_syncObject.Unlock();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Inlines<sp/>methods<sp/>for<sp/>LightweightSynchronizationObject:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-----------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>LIGHTWEIGHTSYNCHRONIZATIONOBJECT_H</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/MfcSynchronizationObject.h"/>
+  </compounddef>
+</doxygen>

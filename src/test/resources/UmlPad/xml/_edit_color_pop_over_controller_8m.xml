@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_edit_color_pop_over_controller_8m" kind="file">
+    <compoundname>EditColorPopOverController.m</compoundname>
+    <includes refid="_edit_color_pop_over_controller_8h" local="yes">EditColorPopOverController.h</includes>
+    <includes refid="_diagram_view_8h" local="yes">DiagramView.h</includes>
+    <includes refid="_view_element_8h" local="yes">ViewElement.h</includes>
+    <includes refid="_edit_color_controller_8h" local="yes">EditColorController.h</includes>
+    <incdepgraph>
+      <node id="1221">
+        <label>ViewElement.h</label>
+        <link refid="_view_element_8h"/>
+        <childnode refid="1219" relation="include">
+        </childnode>
+      </node>
+      <node id="1219">
+        <label>UIKit/UIKit.h</label>
+      </node>
+      <node id="1218">
+        <label>EditColorPopOverController.h</label>
+        <link refid="_edit_color_pop_over_controller_8h"/>
+        <childnode refid="1219" relation="include">
+        </childnode>
+      </node>
+      <node id="1217">
+        <label>Classes/EditColorPopOverController.m</label>
+        <link refid="EditColorPopOverController.m"/>
+        <childnode refid="1218" relation="include">
+        </childnode>
+        <childnode refid="1220" relation="include">
+        </childnode>
+        <childnode refid="1221" relation="include">
+        </childnode>
+        <childnode refid="1222" relation="include">
+        </childnode>
+      </node>
+      <node id="1222">
+        <label>EditColorController.h</label>
+        <link refid="_edit_color_controller_8h"/>
+        <childnode refid="1219" relation="include">
+        </childnode>
+      </node>
+      <node id="1220">
+        <label>DiagramView.h</label>
+        <link refid="_diagram_view_8h"/>
+        <childnode refid="1219" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>EditColorPopOverController.m</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>UmlPad</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>梅田<sp/>政利<sp/>on<sp/>10/06/14.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>2010<sp/>Change<sp/>Vision.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_edit_color_pop_over_controller_8h" kindref="compound">EditColorPopOverController.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_diagram_view_8h" kindref="compound">DiagramView.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_view_element_8h" kindref="compound">ViewElement.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_edit_color_controller_8h" kindref="compound">EditColorController.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">@implementation<sp/></highlight><highlight class="normal"><ref refid="interface_edit_color_pop_over_controller" kindref="compound">EditColorPopOverController</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">-<sp/>(void)present:(<ref refid="interface_diagram_view" kindref="compound">DiagramView</ref><sp/>*)diagramView<sp/>viewElement:(<ref refid="interface_view_element" kindref="compound">ViewElement</ref><sp/>*)ve<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_edit_color_pop_over_controller_1a787fea33cad930472976fd3fb20dddb8" kindref="member">editColor</ref>.<ref refid="interface_edit_color_controller_1a22eafd8ef161d7aa7edcd82c76a103c2" kindref="member">viewElement</ref><sp/>=<sp/>ve;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>presentPopoverFromRect:ve.frame<sp/>inView:diagramView</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>permittedArrowDirections:UIPopoverArrowDirectionAny<sp/>animated:YES];</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">-<sp/>(void)<ref refid="interface_edit_color_pop_over_controller_1a7f46115310580535a201f8a0cfdab045" kindref="member">dismiss</ref><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>dismissPopoverAnimated:YES];</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">+<sp/>(void)show:(<ref refid="interface_diagram_view" kindref="compound">DiagramView</ref><sp/>*)diagramView<sp/>viewElement:(<ref refid="interface_view_element" kindref="compound">ViewElement</ref><sp/>*)ve<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>_instance<sp/>=<sp/>nil;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>@</highlight><highlight class="keyword">synchronized</highlight><highlight class="normal">(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!_instance)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_instance<sp/>=<sp/>[[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>alloc]<sp/>init];</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>[_instance<sp/>present:diagramView<sp/>viewElement:(ViewElement<sp/>*)ve];</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">-<sp/>(id)init<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_edit_color_pop_over_controller_1a787fea33cad930472976fd3fb20dddb8" kindref="member">editColor</ref><sp/>=<sp/>[[<ref refid="interface_edit_color_controller" kindref="compound">EditColorController</ref><sp/>alloc]<sp/>init];</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_edit_color_pop_over_controller_1a787fea33cad930472976fd3fb20dddb8" kindref="member">editColor</ref>.contentSizeForViewInPopover<sp/>=<sp/><ref refid="interface_edit_color_pop_over_controller_1a787fea33cad930472976fd3fb20dddb8" kindref="member">editColor</ref>.view.frame.size;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_edit_color_pop_over_controller_1a787fea33cad930472976fd3fb20dddb8" kindref="member">editColor</ref>.<ref refid="interface_edit_color_controller_1a477ede3900826934508a449906d19ea1" kindref="member">parent</ref><sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>initWithContentViewController:editColor];</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>[editColor<sp/>release];</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>//<sp/>The<sp/>designated<sp/>initializer.<sp/><sp/>Override<sp/>if<sp/>you<sp/>create<sp/>the<sp/>controller<sp/>programmatically<sp/>and<sp/>want<sp/>to<sp/>perform<sp/>customization<sp/>that<sp/>is<sp/>not<sp/>appropriate<sp/>for<sp/>viewDidLoad.</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>-<sp/>(id)initWithNibName:(NSString<sp/>*)nibNameOrNil<sp/>bundle:(NSBundle<sp/>*)nibBundleOrNil<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>if<sp/>((self<sp/>=<sp/>[super<sp/>initWithNibName:nibNameOrNil<sp/>bundle:nibBundleOrNil]))<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>//<sp/>Custom<sp/>initialization</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/>return<sp/>self;</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/>//<sp/>Implement<sp/>loadView<sp/>to<sp/>create<sp/>a<sp/>view<sp/>hierarchy<sp/>programmatically,<sp/>without<sp/>using<sp/>a<sp/>nib.</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/>-<sp/>(void)loadView<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/>//<sp/>Implement<sp/>viewDidLoad<sp/>to<sp/>do<sp/>additional<sp/>setup<sp/>after<sp/>loading<sp/>the<sp/>view,<sp/>typically<sp/>from<sp/>a<sp/>nib.</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/>-<sp/>(void)viewDidLoad<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/>[super<sp/>viewDidLoad];</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">-<sp/>(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Overriden<sp/>to<sp/>allow<sp/>any<sp/>orientation.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">-<sp/>(void)dealloc<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>[editColor<sp/>release];</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">super</highlight><highlight class="normal"><sp/>dealloc];</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/EditColorPopOverController.m"/>
+  </compounddef>
+</doxygen>

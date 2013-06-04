@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_search_object" kind="class" prot="public" abstract="yes">
+    <compoundname>tesseract::SearchObject</compoundname>
+    <derivedcompoundref refid="classtesseract_1_1_cube_search_object" prot="public" virt="non-virtual">tesseract::CubeSearchObject</derivedcompoundref>
+    <includes refid="search__object_8h" local="no">search_object.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_search_object_1af59efea2206aba120d36feb377fb57ae" prot="protected" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_cube_reco_context" kindref="compound">CubeRecoContext</ref> *</type>
+        <definition>CubeRecoContext* tesseract::SearchObject::cntxt_</definition>
+        <argsstring></argsstring>
+        <name>cntxt_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/search_object.h" line="51" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/search_object.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_search_object_1af3705e1c951417f2678463abf5cbe7dd" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::SearchObject::SearchObject</definition>
+        <argsstring>(CubeRecoContext *cntxt)</argsstring>
+        <name>SearchObject</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_cube_reco_context" kindref="compound">CubeRecoContext</ref> *</type>
+          <declname>cntxt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/search_object.h" line="38" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/search_object.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_search_object_1aad0eff1f4e8775081e293ce022305495" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual tesseract::SearchObject::~SearchObject</definition>
+        <argsstring>()</argsstring>
+        <name>~SearchObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/search_object.h" line="39" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/search_object.h" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_search_object_1aeb806f349cc47c57bc0ed9dd0ff4d7be" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int tesseract::SearchObject::SegPtCnt</definition>
+        <argsstring>()=0</argsstring>
+        <name>SegPtCnt</name>
+        <reimplementedby refid="classtesseract_1_1_cube_search_object_1a7d5fb530cd7cade3a6b8f02c7b660dea">SegPtCnt</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/search_object.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_search_object_1a26b97832ffb768305f3529f55b1fa3bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classtesseract_1_1_char_alt_list" kindref="compound">CharAltList</ref> *</type>
+        <definition>virtual CharAltList* tesseract::SearchObject::RecognizeSegment</definition>
+        <argsstring>(int start_pt, int end_pt)=0</argsstring>
+        <name>RecognizeSegment</name>
+        <reimplementedby refid="classtesseract_1_1_cube_search_object_1a62bad8e701d9e1e3d5ab8ceb76bc9398">RecognizeSegment</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>start_pt</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_pt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/search_object.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_search_object_1a0b0c370b28194bd9f100c69b6247d43b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classtesseract_1_1_char_samp" kindref="compound">CharSamp</ref> *</type>
+        <definition>virtual CharSamp* tesseract::SearchObject::CharSample</definition>
+        <argsstring>(int start_pt, int end_pt)=0</argsstring>
+        <name>CharSample</name>
+        <reimplementedby refid="classtesseract_1_1_cube_search_object_1a01aff334f72aba105a0ad4f30877a302">CharSample</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>start_pt</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_pt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/search_object.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_search_object_1a5dab984639f6efd6fddac11f198f47dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>Box *</type>
+        <definition>virtual Box* tesseract::SearchObject::CharBox</definition>
+        <argsstring>(int start_pt, int end_pt)=0</argsstring>
+        <name>CharBox</name>
+        <reimplementedby refid="classtesseract_1_1_cube_search_object_1a019e32a2982b452d4c9759a905c95d10">CharBox</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>start_pt</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_pt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/search_object.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_search_object_1af5f84b755ef91e3d1053dd450c7d8525" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int tesseract::SearchObject::SpaceCost</definition>
+        <argsstring>(int seg_pt)=0</argsstring>
+        <name>SpaceCost</name>
+        <reimplementedby refid="classtesseract_1_1_cube_search_object_1aca7c17893eece064b5a67c5bac2ce5d5">SpaceCost</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>seg_pt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/search_object.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_search_object_1a46707a2629be43da582ac20fe7a2b2ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int tesseract::SearchObject::NoSpaceCost</definition>
+        <argsstring>(int seg_pt)=0</argsstring>
+        <name>NoSpaceCost</name>
+        <reimplementedby refid="classtesseract_1_1_cube_search_object_1adc4581915d3dd311f0196100595878bc">NoSpaceCost</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>seg_pt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/search_object.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_search_object_1a67bff0adba2ab6caedb31addc5ad856e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int tesseract::SearchObject::NoSpaceCost</definition>
+        <argsstring>(int start_pt, int end_pt)=0</argsstring>
+        <name>NoSpaceCost</name>
+        <reimplementedby refid="classtesseract_1_1_cube_search_object_1afa309edb6d199529049b7da8eef78f13">NoSpaceCost</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>start_pt</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end_pt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/search_object.h" line="48" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1828">
+        <label>tesseract::SearchObject</label>
+        <link refid="classtesseract_1_1_search_object"/>
+      </node>
+      <node id="1829">
+        <label>tesseract::CubeSearchObject</label>
+        <link refid="classtesseract_1_1_cube_search_object"/>
+        <childnode refid="1828" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1831">
+        <label>tesseract::CubeRecoContext</label>
+        <link refid="classtesseract_1_1_cube_reco_context"/>
+      </node>
+      <node id="1830">
+        <label>tesseract::SearchObject</label>
+        <link refid="classtesseract_1_1_search_object"/>
+        <childnode refid="1831" relation="usage">
+          <edgelabel>cntxt_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/cube/search_object.h" line="36" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/search_object.h" bodystart="36" bodyend="52"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_search_object_1a5dab984639f6efd6fddac11f198f47dd" prot="public" virt="pure-virtual"><scope>tesseract::SearchObject</scope><name>CharBox</name></member>
+      <member refid="classtesseract_1_1_search_object_1a0b0c370b28194bd9f100c69b6247d43b" prot="public" virt="pure-virtual"><scope>tesseract::SearchObject</scope><name>CharSample</name></member>
+      <member refid="classtesseract_1_1_search_object_1af59efea2206aba120d36feb377fb57ae" prot="protected" virt="non-virtual"><scope>tesseract::SearchObject</scope><name>cntxt_</name></member>
+      <member refid="classtesseract_1_1_search_object_1a46707a2629be43da582ac20fe7a2b2ed" prot="public" virt="pure-virtual"><scope>tesseract::SearchObject</scope><name>NoSpaceCost</name></member>
+      <member refid="classtesseract_1_1_search_object_1a67bff0adba2ab6caedb31addc5ad856e" prot="public" virt="pure-virtual"><scope>tesseract::SearchObject</scope><name>NoSpaceCost</name></member>
+      <member refid="classtesseract_1_1_search_object_1a26b97832ffb768305f3529f55b1fa3bd" prot="public" virt="pure-virtual"><scope>tesseract::SearchObject</scope><name>RecognizeSegment</name></member>
+      <member refid="classtesseract_1_1_search_object_1af3705e1c951417f2678463abf5cbe7dd" prot="public" virt="non-virtual"><scope>tesseract::SearchObject</scope><name>SearchObject</name></member>
+      <member refid="classtesseract_1_1_search_object_1aeb806f349cc47c57bc0ed9dd0ff4d7be" prot="public" virt="pure-virtual"><scope>tesseract::SearchObject</scope><name>SegPtCnt</name></member>
+      <member refid="classtesseract_1_1_search_object_1af5f84b755ef91e3d1053dd450c7d8525" prot="public" virt="pure-virtual"><scope>tesseract::SearchObject</scope><name>SpaceCost</name></member>
+      <member refid="classtesseract_1_1_search_object_1aad0eff1f4e8775081e293ce022305495" prot="public" virt="virtual"><scope>tesseract::SearchObject</scope><name>~SearchObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

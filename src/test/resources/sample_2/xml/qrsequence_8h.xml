@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="qrsequence_8h" kind="file">
+    <compoundname>qrsequence.h</compoundname>
+    <includes local="no">math.h</includes>
+    <includedby refid="osdetect_8cpp" local="yes">ccmain/osdetect.cpp</includedby>
+    <incdepgraph>
+      <node id="19786">
+        <label>ccutil/qrsequence.h</label>
+        <link refid="qrsequence.h"/>
+        <childnode refid="19787" relation="include">
+        </childnode>
+      </node>
+      <node id="19787">
+        <label>math.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="19789">
+        <label>ccmain/osdetect.cpp</label>
+        <link refid="osdetect_8cpp"/>
+      </node>
+      <node id="19788">
+        <label>ccutil/qrsequence.h</label>
+        <link refid="qrsequence.h"/>
+        <childnode refid="19789" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_q_r_sequence_generator" prot="public">QRSequenceGenerator</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>qrsequence.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Description:<sp/>Quasi-random<sp/>sequence<sp/>generator<sp/>class.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/><sp/><sp/><sp/><sp/><sp/>Ranjith<sp/>Unnikrishnan</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created:<sp/><sp/><sp/><sp/><sp/>Wed<sp/>May<sp/>20<sp/>2009</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Class<sp/>to<sp/>generate<sp/>a<sp/>(deterministic)<sp/>quasi-random<sp/>Van<sp/>der<sp/>Corput<sp/>sequence<sp/>that</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>covers<sp/>the<sp/>interval<sp/>[0,N)<sp/>without<sp/>repetition.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>sequence<sp/>is<sp/>generated<sp/>by<sp/>reversing<sp/>the<sp/>base-2<sp/>representation<sp/>of<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>sequence<sp/>of<sp/>natural<sp/>numbers<sp/>{0,<sp/>1,...<sp/>M-1},<sp/>where<sp/>M<sp/>is<sp/>2^{num_bits_}<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>num_bits<sp/>is<sp/>the<sp/>minimum<sp/>number<sp/>of<sp/>bits<sp/>required<sp/>to<sp/>represent<sp/>N.<sp/>If<sp/>a<sp/>reversed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>numbers<sp/>is<sp/>&gt;=<sp/>N<sp/>it<sp/>is<sp/>rejected<sp/>and<sp/>the<sp/>next<sp/>natural<sp/>number<sp/>is<sp/>considered</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>until<sp/>a<sp/>valid<sp/>output<sp/>number<sp/>is<sp/>found.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(C)<sp/>Copyright<sp/>2009,<sp/>Google<sp/>Inc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);<sp/>you<sp/>may<sp/>not</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.<sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>of<sp/>the<sp/>License<sp/>at<sp/>http://www.apache.org/licenses/LICENSE-2.0<sp/>Unless<sp/>required</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software<sp/>distributed<sp/>under<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.<sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>language<sp/>governing<sp/>permissions<sp/>and<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TESSERACT_CCUTIL_QRSEQUENCE_H_</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TESSERACT_CCUTIL_QRSEQUENCE_H_</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_q_r_sequence_generator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_q_r_sequence_generator" kindref="compound">QRSequenceGenerator</ref><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Object<sp/>is<sp/>initalized<sp/>with<sp/>the<sp/>size<sp/>of<sp/>the<sp/>output<sp/>range.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_q_r_sequence_generator_1a5a059ef6ea8b396ad0569e7e948609f8" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_q_r_sequence_generator_1a5a059ef6ea8b396ad0569e7e948609f8" kindref="member">QRSequenceGenerator</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>N)<sp/>:<sp/><ref refid="class_q_r_sequence_generator_1a7c5369f6274a766bd8fa27c73def6821" kindref="member">N_</ref>(N),<sp/><ref refid="class_q_r_sequence_generator_1ab764a4da80a6383e730def95256987e7" kindref="member">next_num_</ref>(0)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_q_r_sequence_generator_1abc925af9d97d630cd000a20c719c8c60" kindref="member">num_bits_</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(ceil(log(static_cast&lt;double&gt;(N))<sp/>/<sp/>log(2.0)));</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Main<sp/>worker<sp/>method<sp/>that<sp/>retrieves<sp/>the<sp/>next<sp/>number<sp/>in<sp/>the<sp/>sequence.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Returns<sp/>kInvalidVal<sp/>if<sp/>called<sp/>more<sp/>than<sp/>N<sp/>times<sp/>after<sp/>object<sp/>initialization</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_q_r_sequence_generator_1a28c125707aded762182e647e0ec91900" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_q_r_sequence_generator_1a28c125707aded762182e647e0ec91900" kindref="member">GetVal</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>kInvalidVal<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>kMaxNaturalNumberValue<sp/>=<sp/>1<sp/>&lt;&lt;<sp/><ref refid="class_q_r_sequence_generator_1abc925af9d97d630cd000a20c719c8c60" kindref="member">num_bits_</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_q_r_sequence_generator_1ab764a4da80a6383e730def95256987e7" kindref="member">next_num_</ref><sp/>&gt;=<sp/>kMaxNaturalNumberValue)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>kInvalidVal;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n<sp/>=<sp/><ref refid="class_q_r_sequence_generator_1ab764a4da80a6383e730def95256987e7" kindref="member">next_num_</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="class_q_r_sequence_generator_1ab764a4da80a6383e730def95256987e7" kindref="member">next_num_</ref><sp/>&lt;<sp/>kMaxNaturalNumberValue)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/>=<sp/><ref refid="class_q_r_sequence_generator_1a76df4c96183f70454be79371ad16ba62" kindref="member">GetBinaryReversedInteger</ref>(<ref refid="class_q_r_sequence_generator_1ab764a4da80a6383e730def95256987e7" kindref="member">next_num_</ref>++);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>&lt;<sp/><ref refid="class_q_r_sequence_generator_1a7c5369f6274a766bd8fa27c73def6821" kindref="member">N_</ref>)<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="class_q_r_sequence_generator_1ab764a4da80a6383e730def95256987e7" kindref="member">next_num_</ref><sp/>&gt;<sp/>kMaxNaturalNumberValue)<sp/>?<sp/>kInvalidVal<sp/>:<sp/>n;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Outputs<sp/>the<sp/>integer<sp/>formed<sp/>by<sp/>reversing<sp/>the<sp/>bits<sp/>of<sp/>the<sp/>input<sp/>integer.<sp/>Only</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>lowest<sp/>num_bits_<sp/>bits<sp/>of<sp/>the<sp/>input<sp/>integer<sp/>are<sp/>reversed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="class_q_r_sequence_generator_1a76df4c96183f70454be79371ad16ba62" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_q_r_sequence_generator_1a76df4c96183f70454be79371ad16ba62" kindref="member">GetBinaryReversedInteger</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>in_val)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bit_pos<sp/>=<sp/><ref refid="class_q_r_sequence_generator_1abc925af9d97d630cd000a20c719c8c60" kindref="member">num_bits_</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>out_val<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(bit_pos--)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>value<sp/>of<sp/>the<sp/>last<sp/>bit.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>out_val<sp/>|=<sp/>(in_val<sp/>&amp;<sp/>0x1);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bit_pos<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Left-shift<sp/>output<sp/>value<sp/>to<sp/>prepare<sp/>for<sp/>storing<sp/>the<sp/>next<sp/>bit.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out_val<sp/>&lt;&lt;=<sp/>1;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Right-shift<sp/>input<sp/>value<sp/>to<sp/>prepare<sp/>for<sp/>retrieving<sp/>the<sp/>next<sp/>bit.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>in_val<sp/>&gt;&gt;=<sp/>1;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out_val;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73" refid="class_q_r_sequence_generator_1a7c5369f6274a766bd8fa27c73def6821" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_q_r_sequence_generator_1a7c5369f6274a766bd8fa27c73def6821" kindref="member">N_</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Next<sp/>number<sp/>to<sp/>be<sp/>considered<sp/>for<sp/>reversal<sp/>and<sp/>output.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="class_q_r_sequence_generator_1ab764a4da80a6383e730def95256987e7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_q_r_sequence_generator_1ab764a4da80a6383e730def95256987e7" kindref="member">next_num_</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>number<sp/>of<sp/>bits<sp/>required<sp/>to<sp/>represent<sp/>the<sp/>numbers<sp/>of<sp/>the<sp/>sequence</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="class_q_r_sequence_generator_1abc925af9d97d630cd000a20c719c8c60" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_q_r_sequence_generator_1abc925af9d97d630cd000a20c719c8c60" kindref="member">num_bits_</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>TESSERACT_CCUTIL_QRSEQUENCE_H_</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/ccutil/qrsequence.h"/>
+  </compounddef>
+</doxygen>

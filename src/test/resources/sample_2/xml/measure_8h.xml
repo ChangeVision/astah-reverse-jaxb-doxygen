@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="measure_8h" kind="file">
+    <compoundname>measure.h</compoundname>
+    <includes local="no">math.h</includes>
+    <includedby refid="heuristic_8cpp" local="yes">wordrec/heuristic.cpp</includedby>
+    <incdepgraph>
+      <node id="44212">
+        <label>wordrec/measure.h</label>
+        <link refid="measure.h"/>
+        <childnode refid="44213" relation="include">
+        </childnode>
+      </node>
+      <node id="44213">
+        <label>math.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="44215">
+        <label>wordrec/heuristic.cpp</label>
+        <link refid="heuristic_8cpp"/>
+      </node>
+      <node id="44214">
+        <label>wordrec/measure.h</label>
+        <link refid="measure.h"/>
+        <childnode refid="44215" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_m_e_a_s_u_r_e_m_e_n_t" prot="public">MEASUREMENT</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="measure_8h_1acc2a20480b12cd0baa7b972014621c43" prot="public" static="no">
+        <name>ADD_SAMPLE</name>
+        <param><defname>m</defname></param>
+        <param><defname>s</defname></param>
+        <initializer>(m.sum_of_samples += (float) (s),               \
+	m.sum_of_squares += (float) (s) * (float) (s), \
+	++m.num_samples)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/measure.h" line="63" column="9" bodyfile="/Users/makoto/Desktop/trunk/wordrec/measure.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="measure_8h_1a4dc0d2c69c4196c34103fb377cf89a55" prot="public" static="no">
+        <name>MEAN</name>
+        <param><defname>m</defname></param>
+        <initializer>((m).num_samples ?                                  \
+	((float) ((m).sum_of_samples / (m).num_samples)) : \
+	0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/measure.h" line="74" column="9" bodyfile="/Users/makoto/Desktop/trunk/wordrec/measure.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="measure_8h_1af841ea538d8134f398f1c69553fd9c9a" prot="public" static="no">
+        <name>new_measurement</name>
+        <param><defname>m</defname></param>
+        <initializer>((m).num_samples    = 0, \
+	(m).sum_of_samples = 0, \
+	(m).sum_of_squares = 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/measure.h" line="86" column="9" bodyfile="/Users/makoto/Desktop/trunk/wordrec/measure.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="measure_8h_1a06fc1a60cd4129ce1f5b5341f29ab58c" prot="public" static="no">
+        <name>number_of_samples</name>
+        <param><defname>m</defname></param>
+        <initializer>((m).num_samples)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/measure.h" line="97" column="9" bodyfile="/Users/makoto/Desktop/trunk/wordrec/measure.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="measure_8h_1a1190781e21c3d5e4a12bcd24d779f3ec" prot="public" static="no">
+        <name>standard_deviation</name>
+        <param><defname>m</defname></param>
+        <initializer>((float) sqrt (<ref refid="measure_8h_1ae3c1a512eadd10f473675cfc6450e6dc" kindref="member">VARIANCE</ref> (m)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/measure.h" line="106" column="9" bodyfile="/Users/makoto/Desktop/trunk/wordrec/measure.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="measure_8h_1ae3c1a512eadd10f473675cfc6450e6dc" prot="public" static="no">
+        <name>VARIANCE</name>
+        <param><defname>m</defname></param>
+        <initializer>(((m).num_samples &gt; 1) ?                            \
+	((float)                                           \
+	(((m).num_samples * (m).sum_of_squares -          \
+		(m).sum_of_samples * (m).sum_of_samples) /      \
+	(((m).num_samples - 1) * (m).num_samples)))   :  \
+	0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/measure.h" line="115" column="9" bodyfile="/Users/makoto/Desktop/trunk/wordrec/measure.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="measure_8h_1ad4c2ed3ea71f5c47ed1aa55b7a324040" prot="public" static="no">
+        <name>print_summary</name>
+        <param><defname>string</defname></param>
+        <param><defname>measure</defname></param>
+        <initializer><ref refid="callcpp_8h_1a21679e7fec2d69db23107348fa13c153" kindref="member">cprintf</ref> (&quot;\t%-20s \tn = %d, \tm = %4.2f, \ts = %4.2f\n &quot;,  \
+			string,                                          \
+			number_of_samples  (measure),                    \
+			MEAN           (measure),                    \
+			standard_deviation (measure))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/measure.h" line="129" column="9" bodyfile="/Users/makoto/Desktop/trunk/wordrec/measure.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-C-*-</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>********************************************************************************</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>measure.h<sp/><sp/>(Formerly<sp/>measure.h)</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Description:<sp/><sp/>Statistics<sp/>for<sp/>a<sp/>group<sp/>of<sp/>single<sp/>measurements</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Author:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mark<sp/>Seaman,<sp/>SW<sp/>Productivity</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Created:<sp/><sp/><sp/><sp/><sp/><sp/>Fri<sp/>Oct<sp/>16<sp/>14:37:00<sp/>1987</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>Modified:<sp/><sp/><sp/><sp/><sp/>Mon<sp/>Apr<sp/><sp/>8<sp/>09:42:28<sp/>1991<sp/>(Mark<sp/>Seaman)<sp/>marks@hpgrlt</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Language:<sp/><sp/><sp/><sp/><sp/>C</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Package:<sp/><sp/><sp/><sp/><sp/><sp/>N/A</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Status:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Reusable<sp/>Software<sp/>Component</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>(c)<sp/>Copyright<sp/>1987,<sp/>Hewlett-Packard<sp/>Company.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>**<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>**<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>**<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>**<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>**<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>**<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>**<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>**<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>**<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>********************************************************************************</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MEASURE_H</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>MEASURE_H</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">----------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>I<sp/>n<sp/>c<sp/>l<sp/>u<sp/>d<sp/>e<sp/>s</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">----------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="39"><highlight class="comment">----------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>y<sp/>p<sp/>e<sp/>s</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">----------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="struct_m_e_a_s_u_r_e_m_e_n_t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46" refid="struct_m_e_a_s_u_r_e_m_e_n_t_1a55024bca55b756d74e2350c5901626e7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="struct_m_e_a_s_u_r_e_m_e_n_t_1a55024bca55b756d74e2350c5901626e7" kindref="member">num_samples</ref>;</highlight></codeline>
+<codeline lineno="47" refid="struct_m_e_a_s_u_r_e_m_e_n_t_1accb64bf2ff469735b75ec5100a7be3b6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_m_e_a_s_u_r_e_m_e_n_t_1accb64bf2ff469735b75ec5100a7be3b6" kindref="member">sum_of_samples</ref>;</highlight></codeline>
+<codeline lineno="48" refid="struct_m_e_a_s_u_r_e_m_e_n_t_1a948e70eb70109e56d7ea77f671496ec5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_m_e_a_s_u_r_e_m_e_n_t_1a948e70eb70109e56d7ea77f671496ec5" kindref="member">sum_of_squares</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}<sp/><ref refid="struct_m_e_a_s_u_r_e_m_e_n_t" kindref="compound">MEASUREMENT</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">----------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>M<sp/>a<sp/>c<sp/>r<sp/>o<sp/>s</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">----------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/>*<sp/>add_sample</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/>*<sp/>Add<sp/>one<sp/>more<sp/>sample<sp/>to<sp/>a<sp/>measurement.</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/>**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="measure_8h_1acc2a20480b12cd0baa7b972014621c43" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADD_SAMPLE(m,s)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="64"><highlight class="preprocessor">(m.sum_of_samples<sp/>+=<sp/>(float)<sp/>(s),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>m.sum_of_squares<sp/>+=<sp/>(float)<sp/>(s)<sp/>*<sp/>(float)<sp/>(s),<sp/>\</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>++m.num_samples)</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/>*<sp/>mean</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/>*<sp/>Return<sp/>the<sp/>mean<sp/>value<sp/>of<sp/>the<sp/>measurement.</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/>**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="measure_8h_1a4dc0d2c69c4196c34103fb377cf89a55" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MEAN(m)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor">((m).num_samples<sp/>?<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>((float)<sp/>((m).sum_of_samples<sp/>/<sp/>(m).num_samples))<sp/>:<sp/>\</highlight></codeline>
+<codeline lineno="77"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>0)</highlight></codeline>
+<codeline lineno="78"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="80"><highlight class="comment"><sp/>*<sp/>new_measurement</highlight></codeline>
+<codeline lineno="81"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/>*<sp/>Initalize<sp/>a<sp/>record<sp/>to<sp/>hold<sp/>a<sp/>measurement<sp/>of<sp/>a<sp/>group<sp/>of<sp/>individual</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/>*<sp/>samples.</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/>**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="measure_8h_1af841ea538d8134f398f1c69553fd9c9a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>new_measurement(m)<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor">((m).num_samples<sp/><sp/><sp/><sp/>=<sp/>0,<sp/>\</highlight></codeline>
+<codeline lineno="88"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(m).sum_of_samples<sp/>=<sp/>0,<sp/>\</highlight></codeline>
+<codeline lineno="89"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(m).sum_of_squares<sp/>=<sp/>0)</highlight></codeline>
+<codeline lineno="90"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/>*<sp/>number_of_samples</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/>*<sp/>Return<sp/>the<sp/>number<sp/>of<sp/>samples<sp/>in<sp/>a<sp/>measurement.</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/>**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="measure_8h_1a06fc1a60cd4129ce1f5b5341f29ab58c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>number_of_samples(m)<sp/><sp/>\</highlight></codeline>
+<codeline lineno="98"><highlight class="preprocessor">((m).num_samples)</highlight></codeline>
+<codeline lineno="99"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/>*<sp/>standard_deviation</highlight></codeline>
+<codeline lineno="102"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="103"><highlight class="comment"><sp/>*<sp/>Return<sp/>the<sp/>standard<sp/>deviation<sp/>of<sp/>the<sp/>measurement.</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/>**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="measure_8h_1a1190781e21c3d5e4a12bcd24d779f3ec" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>standard_deviation(m)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor">((float)<sp/>sqrt<sp/>(VARIANCE<sp/>(m)))</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/>*<sp/>variance</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/>*<sp/>Return<sp/>the<sp/>variance<sp/>of<sp/>the<sp/>measurement.</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/>**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="measure_8h_1ae3c1a512eadd10f473675cfc6450e6dc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VARIANCE(m)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="116"><highlight class="preprocessor">(((m).num_samples<sp/>&gt;<sp/>1)<sp/>?<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="117"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>((float)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="118"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(((m).num_samples<sp/>*<sp/>(m).sum_of_squares<sp/>-<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="119"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(m).sum_of_samples<sp/>*<sp/>(m).sum_of_samples)<sp/>/<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="120"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(((m).num_samples<sp/>-<sp/>1)<sp/>*<sp/>(m).num_samples)))<sp/><sp/><sp/>:<sp/><sp/>\</highlight></codeline>
+<codeline lineno="121"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>0)</highlight></codeline>
+<codeline lineno="122"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/>*<sp/>print_summary</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/>*<sp/>Summarize<sp/>a<sp/>MEASUREMENT<sp/>record.</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/>**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="measure_8h_1ad4c2ed3ea71f5c47ed1aa55b7a324040" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>print_summary(string,measure)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="130"><highlight class="preprocessor">cprintf<sp/>(&quot;\t%-20s<sp/>\tn<sp/>=<sp/>%d,<sp/>\tm<sp/>=<sp/>%4.2f,<sp/>\ts<sp/>=<sp/>%4.2f\n<sp/>&quot;,<sp/><sp/>\</highlight></codeline>
+<codeline lineno="131"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>string,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="132"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>number_of_samples<sp/><sp/>(measure),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="133"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MEAN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(measure),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="134"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>standard_deviation<sp/>(measure))</highlight></codeline>
+<codeline lineno="135"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/wordrec/measure.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="classmozilla_1_1_media_stream_graph_impl" kind="class" prot="public">
+    <compoundname>mozilla::MediaStreamGraphImpl</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MediaStreamGraph</basecompoundref>
+    <innerclass refid="structmozilla_1_1_media_stream_graph_impl_1_1_message_block" prot="public">mozilla::MediaStreamGraphImpl::MessageBlock</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classmozilla_1_1_media_stream_graph_impl_1a4e36aeea0e2571059fdddfe378fbd61a" prot="public" static="no">
+        <name>@1</name>
+        <enumvalue id="classmozilla_1_1_media_stream_graph_impl_1a4e36aeea0e2571059fdddfe378fbd61aa092b04f605941ff77645c2dea3151839" prot="public">
+          <name>INCLUDE_TRAILING_BLOCKED_INTERVAL</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="281" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="281" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="enum" id="classmozilla_1_1_media_stream_graph_impl_1a9053102f620d043f4b921e73400f00e5" prot="public" static="no">
+        <name>LifecycleState</name>
+        <enumvalue id="classmozilla_1_1_media_stream_graph_impl_1a9053102f620d043f4b921e73400f00e5a52875df3c8ac00ebb0804737186ba438" prot="public">
+          <name>LIFECYCLE_THREAD_NOT_STARTED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmozilla_1_1_media_stream_graph_impl_1a9053102f620d043f4b921e73400f00e5a644c2ae18bd29fafe9b9613b6fe62add" prot="public">
+          <name>LIFECYCLE_RUNNING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmozilla_1_1_media_stream_graph_impl_1a9053102f620d043f4b921e73400f00e5a6b1c14c273551b80b00f525abc6fca0d" prot="public">
+          <name>LIFECYCLE_WAITING_FOR_MAIN_THREAD_CLEANUP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmozilla_1_1_media_stream_graph_impl_1a9053102f620d043f4b921e73400f00e5ab87ca493de72e0296788fcf7b734a768" prot="public">
+          <name>LIFECYCLE_WAITING_FOR_THREAD_SHUTDOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmozilla_1_1_media_stream_graph_impl_1a9053102f620d043f4b921e73400f00e5a0ffcf5b6371e047d893a767ea8a0b0ad" prot="public">
+          <name>LIFECYCLE_WAITING_FOR_STREAM_DESTRUCTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This enum specifies where this graph is in its lifecycle. This is used to control shutdown. Shutdown is tricky because it can happen in two different ways: 1) Shutdown due to inactivity. <ref refid="classmozilla_1_1_media_stream_graph_impl_1ae3fd1e97b1dcda969a76de94025134dd" kindref="member">RunThread()</ref> detects that it has no pending messages and no streams, and exits. The next <ref refid="classmozilla_1_1_media_stream_graph_impl_1a6fd5da3e6fbd6d7bebc4befee946f526" kindref="member">RunInStableState()</ref> checks if there are new pending messages from the main thread (true only if new stream creation raced with shutdown); if there are, it revives <ref refid="classmozilla_1_1_media_stream_graph_impl_1ae3fd1e97b1dcda969a76de94025134dd" kindref="member">RunThread()</ref>, otherwise it commits to shutting down the graph. New stream creation after this point will create a new graph. An async event is dispatched to Shutdown() the graph&apos;s threads and then delete the graph object. 2) Forced shutdown at application shutdown. A flag is set, <ref refid="classmozilla_1_1_media_stream_graph_impl_1ae3fd1e97b1dcda969a76de94025134dd" kindref="member">RunThread()</ref> detects the flag and exits, the next <ref refid="classmozilla_1_1_media_stream_graph_impl_1a6fd5da3e6fbd6d7bebc4befee946f526" kindref="member">RunInStableState()</ref> detects the flag, and dispatches the async event to Shutdown() the graph&apos;s threads. However the graph object is not deleted. New messages for the graph are processed synchronously on the main thread if necessary. When the last stream is destroyed, the graph object is deleted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="439" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="439" bodyend="458"/>
+      </memberdef>
+      <memberdef kind="enum" id="classmozilla_1_1_media_stream_graph_impl_1a5c83ee68ed4912f1670f10df55e273de" prot="public" static="no">
+        <name>WaitState</name>
+        <enumvalue id="classmozilla_1_1_media_stream_graph_impl_1a5c83ee68ed4912f1670f10df55e273dea3ed085bda2e3f1994b8cf25391b86fd7" prot="public">
+          <name>WAITSTATE_RUNNING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmozilla_1_1_media_stream_graph_impl_1a5c83ee68ed4912f1670f10df55e273deafe699be5f547b4c26307c63205a8bfc8" prot="public">
+          <name>WAITSTATE_WAITING_FOR_NEXT_ITERATION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmozilla_1_1_media_stream_graph_impl_1a5c83ee68ed4912f1670f10df55e273deaceb2e37a16616f97b7634d972bef9860" prot="public">
+          <name>WAITSTATE_WAITING_INDEFINITELY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmozilla_1_1_media_stream_graph_impl_1a5c83ee68ed4912f1670f10df55e273dea79646044003b8b43bc79bd24f30c0be6" prot="public">
+          <name>WAITSTATE_WAKING_UP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This enum specifies the wait state of the graph thread. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="463" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="463" bodyend="474"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmozilla_1_1_media_stream_graph_impl_1afdbe3acfdcbf89c80a1c1fbbd647f31b" prot="public" static="no" mutable="no">
+        <type>nsCOMPtr&lt; nsIThread &gt;</type>
+        <definition>nsCOMPtr&lt;nsIThread&gt; mozilla::MediaStreamGraphImpl::mThread</definition>
+        <argsstring></argsstring>
+        <name>mThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Media graph thread. Readonly after initialization on the main thread. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="358" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="358" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_stream_graph_impl_1ae4a9631c5848b69c4dd5177878c59fc6" prot="public" static="no" mutable="no">
+        <type>nsTArray&lt; nsRefPtr&lt; MediaStream &gt; &gt;</type>
+        <definition>nsTArray&lt;nsRefPtr&lt;MediaStream&gt; &gt; mozilla::MediaStreamGraphImpl::mStreams</definition>
+        <argsstring></argsstring>
+        <name>mStreams</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="364" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="364" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_stream_graph_impl_1ae58415f4968807aafcfe2164519ed75a" prot="public" static="no" mutable="no">
+        <type>GraphTime</type>
+        <definition>GraphTime mozilla::MediaStreamGraphImpl::mCurrentTime</definition>
+        <argsstring></argsstring>
+        <name>mCurrentTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current graph time for the current iteration of the RunThread control loop. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="369" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="369" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_stream_graph_impl_1ac7c9eb427c0d8a2d66024988432075c0" prot="public" static="no" mutable="no">
+        <type>GraphTime</type>
+        <definition>GraphTime mozilla::MediaStreamGraphImpl::mStateComputedTime</definition>
+        <argsstring></argsstring>
+        <name>mStateComputedTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Blocking decisions and all stream contents have been computed up to this time. The next batch of updates from the main thread will be processed at this time. Always &gt;= mCurrentTime. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="375" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="375" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_stream_graph_impl_1a46fe545df99f3fbd4e7ba1e4496eb7db" prot="public" static="no" mutable="no">
+        <type>TimeStamp</type>
+        <definition>TimeStamp mozilla::MediaStreamGraphImpl::mInitialTimeStamp</definition>
+        <argsstring></argsstring>
+        <name>mInitialTimeStamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is only used for logging. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="379" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="379" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_stream_graph_impl_1ab96135e9aee09b46072a5f9319ffc4be" prot="public" static="no" mutable="no">
+        <type>TimeStamp</type>
+        <definition>TimeStamp mozilla::MediaStreamGraphImpl::mCurrentTimeStamp</definition>
+        <argsstring></argsstring>
+        <name>mCurrentTimeStamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The real timestamp of the latest run of UpdateCurrentTime. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="383" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="383" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_stream_graph_impl_1a33d570429dc26401d403f8b5b5145200" prot="public" static="no" mutable="no">
+        <type>int64_t</type>
+        <definition>int64_t mozilla::MediaStreamGraphImpl::mProcessingGraphUpdateIndex</definition>
+        <argsstring></argsstring>
+        <name>mProcessingGraphUpdateIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Which update batch we are currently processing. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="387" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="387" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_stream_graph_impl_1aab1a6e71f64727f72ac36e4c4ea56d04" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t mozilla::MediaStreamGraphImpl::mPortCount</definition>
+        <argsstring></argsstring>
+        <name>mPortCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of active MediaInputPorts </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="391" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="391" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_stream_graph_impl_1ab35c24a90826b6c08094b90c53ec02f1" prot="public" static="no" mutable="no">
+        <type>Monitor</type>
+        <definition>Monitor mozilla::MediaStreamGraphImpl::mMonitor</definition>
+        <argsstring></argsstring>
+        <name>mMonitor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="398" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="398" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_stream_graph_impl_1a6e935e57f6de758d490b85eba08624cc" prot="public" static="no" mutable="no">
+        <type>nsTArray&lt; StreamUpdate &gt;</type>
+        <definition>nsTArray&lt;StreamUpdate&gt; mozilla::MediaStreamGraphImpl::mStreamUpdates</definition>
+        <argsstring></argsstring>
+        <name>mStreamUpdates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>State to copy to main thread </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="406" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_stream_graph_impl_1aca14c3f19d7d938f883575bad0e75bcb" prot="public" static="no" mutable="no">
+        <type>nsTArray&lt; nsCOMPtr&lt; nsIRunnable &gt; &gt;</type>
+        <definition>nsTArray&lt;nsCOMPtr&lt;nsIRunnable&gt; &gt; mozilla::MediaStreamGraphImpl::mUpdateRunnables</definition>
+        <argsstring></argsstring>
+        <name>mUpdateRunnables</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Runnables to run after the next update to main thread state. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="410" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_stream_graph_impl_1aa388bb1862ab972dfc8e9bf33b62ce05" prot="public" static="no" mutable="no">
+        <type>nsTArray&lt; <ref refid="structmozilla_1_1_media_stream_graph_impl_1_1_message_block" kindref="compound">MessageBlock</ref> &gt;</type>
+        <definition>nsTArray&lt;MessageBlock&gt; mozilla::MediaStreamGraphImpl::mMessageQueue</definition>
+        <argsstring></argsstring>
+        <name>mMessageQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A list of batches of messages to process. Each batch is processed as an atomic unit. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="419" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_stream_graph_impl_1a9aecafa9d654fbfbceab5ac08e5263ba" prot="public" static="no" mutable="no">
+        <type><ref refid="classmozilla_1_1_media_stream_graph_impl_1a9053102f620d043f4b921e73400f00e5" kindref="member">LifecycleState</ref></type>
+        <definition>LifecycleState mozilla::MediaStreamGraphImpl::mLifecycleState</definition>
+        <argsstring></argsstring>
+        <name>mLifecycleState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="459" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="459" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_stream_graph_impl_1a2cfccc583450e835e799a24fa440dcde" prot="public" static="no" mutable="no">
+        <type><ref refid="classmozilla_1_1_media_stream_graph_impl_1a5c83ee68ed4912f1670f10df55e273de" kindref="member">WaitState</ref></type>
+        <definition>WaitState mozilla::MediaStreamGraphImpl::mWaitState</definition>
+        <argsstring></argsstring>
+        <name>mWaitState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="475" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="475" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_stream_graph_impl_1a1266cf2c4c5c3055c159b75688a76099" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool mozilla::MediaStreamGraphImpl::mNeedAnotherIteration</definition>
+        <argsstring></argsstring>
+        <name>mNeedAnotherIteration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>True when another iteration of the control loop is required. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="479" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="479" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_stream_graph_impl_1a816cefd3472e83939600bcd46947bcdb" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool mozilla::MediaStreamGraphImpl::mForceShutDown</definition>
+        <argsstring></argsstring>
+        <name>mForceShutDown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>True when we need to do a forced shutdown during application shutdown. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="483" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="483" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_stream_graph_impl_1aea886fa95bc4439d7ff717f9c83c78c7" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool mozilla::MediaStreamGraphImpl::mPostedRunInStableStateEvent</definition>
+        <argsstring></argsstring>
+        <name>mPostedRunInStableStateEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>True when we have posted an event to the main thread to run <ref refid="classmozilla_1_1_media_stream_graph_impl_1a6fd5da3e6fbd6d7bebc4befee946f526" kindref="member">RunInStableState()</ref> and the event hasn&apos;t run yet. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="488" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="488" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_stream_graph_impl_1a4451a2fa038093967de84de408a9caaa" prot="public" static="no" mutable="no">
+        <type>nsTArray&lt; nsAutoPtr&lt; ControlMessage &gt; &gt;</type>
+        <definition>nsTArray&lt;nsAutoPtr&lt;ControlMessage&gt; &gt; mozilla::MediaStreamGraphImpl::mCurrentTaskMessageQueue</definition>
+        <argsstring></argsstring>
+        <name>mCurrentTaskMessageQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Messages posted by the current event loop task. These are forwarded to the media graph thread during RunInStableState. We can&apos;t forward them immediately because we want all messages between stable states to be processed as an atomic batch. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="498" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="498" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_stream_graph_impl_1a3725a811b508a232448c16c24bfc2163" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool mozilla::MediaStreamGraphImpl::mDetectedNotRunning</definition>
+        <argsstring></argsstring>
+        <name>mDetectedNotRunning</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>True when RunInStableState has determined that mLifecycleState is &gt; LIFECYCLE_RUNNING. Since only the main thread can reset mLifecycleState to LIFECYCLE_RUNNING, this can be relied on to not change unexpectedly. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="504" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="504" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_stream_graph_impl_1a871a4fa8ea321068f0d2595469a17224" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool mozilla::MediaStreamGraphImpl::mPostedRunInStableState</definition>
+        <argsstring></argsstring>
+        <name>mPostedRunInStableState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>True when a stable state runner has been posted to the appshell to run RunInStableState at the next stable state. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="509" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="509" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1a34fcf1a329e358eeaf2cb4ae72d814b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mozilla::MediaStreamGraphImpl::MediaStreamGraphImpl</definition>
+        <argsstring>()</argsstring>
+        <name>MediaStreamGraphImpl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="126" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="2263" bodyend="2284"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1a408e4f32b8faecdf7dab7590e6d7fb14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mozilla::MediaStreamGraphImpl::~MediaStreamGraphImpl</definition>
+        <argsstring>()</argsstring>
+        <name>~MediaStreamGraphImpl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="128" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="127" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1a6fd5da3e6fbd6d7bebc4befee946f526" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::RunInStableState</definition>
+        <argsstring>()</argsstring>
+        <name>RunInStableState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This runs every time we need to sync state from the media graph thread to the main thread while the main thread is not in the middle of a script. It runs during a &quot;stable state&quot; (per HTML5) or during an event posted to the main thread. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="141" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="1591" bodyend="1683"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1a960749a1b82780accbc7781bac8fa94e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::EnsureRunInStableState</definition>
+        <argsstring>()</argsstring>
+        <name>EnsureRunInStableState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ensure a runnable to run RunInStableState is posted to the appshell to run at the next stable state (per HTML5). See EnsureStableStateEventPosted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="147" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="1688" bodyend="1702"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1ae2ea0bd13e138103972e69db41c6c18c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::ApplyStreamUpdate</definition>
+        <argsstring>(StreamUpdate *aUpdate)</argsstring>
+        <name>ApplyStreamUpdate</name>
+        <param>
+          <type>StreamUpdate *</type>
+          <declname>aUpdate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called to apply a StreamUpdate to its stream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="151" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="1482" bodyend="1495"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1a5c71597c6bd4c3f442690553c9ce7400" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::AppendMessage</definition>
+        <argsstring>(ControlMessage *aMessage)</argsstring>
+        <name>AppendMessage</name>
+        <param>
+          <type>ControlMessage *</type>
+          <declname>aMessage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Append a ControlMessage to the message queue. This queue is drained during RunInStableState; the messages will run on the graph thread. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="156" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="1717" bodyend="1743"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1a92debcd400111704088f1e0c23774fd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::ForceShutDown</definition>
+        <argsstring>()</argsstring>
+        <name>ForceShutDown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Make this MediaStreamGraph enter forced-shutdown state. This state will be noticed by the media graph thread, which will shut down all streams and other state controlled by the media graph thread. This is called during application shutdown. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="163" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="1511" bodyend="1520"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1a1a8f240ddcfeee7aadb2d04cf0b64ad4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::ShutdownThreads</definition>
+        <argsstring>()</argsstring>
+        <name>ShutdownThreads</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Shutdown() this MediaStreamGraph&apos;s threads and return when they&apos;ve shut down. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="167" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="1498" bodyend="1508"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1ae3fd1e97b1dcda969a76de94025134dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::RunThread</definition>
+        <argsstring>()</argsstring>
+        <name>RunThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Runs main control loop on the graph thread. Normally a single invocation of this runs for the entire lifetime of the graph thread. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="175" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="1356" bodyend="1479"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1a68d4a767d7f2d53d1919cb64db0233fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::EnsureNextIteration</definition>
+        <argsstring>()</argsstring>
+        <name>EnsureNextIteration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Call this to indicate that another iteration of the control loop is required on its regular schedule. The monitor must not be held. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="180" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="1337" bodyend="1341"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1ac0e888dfce3acb0d7dc26efd00c6f8a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::EnsureNextIterationLocked</definition>
+        <argsstring>(MonitorAutoLock &amp;aLock)</argsstring>
+        <name>EnsureNextIterationLocked</name>
+        <param>
+          <type>MonitorAutoLock &amp;</type>
+          <declname>aLock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>As above, but with the monitor already held. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="184" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="1344" bodyend="1353"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1a9acb1ee98ff40b587a77e7e98811e7c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::EnsureImmediateWakeUpLocked</definition>
+        <argsstring>(MonitorAutoLock &amp;aLock)</argsstring>
+        <name>EnsureImmediateWakeUpLocked</name>
+        <param>
+          <type>MonitorAutoLock &amp;</type>
+          <declname>aLock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Call this to indicate that another iteration of the control loop is required immediately. The monitor must already be held. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="189" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="1327" bodyend="1334"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1a6723ce3a0c2566fd80ac609b0e3ecf33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::EnsureStableStateEventPosted</definition>
+        <argsstring>()</argsstring>
+        <name>EnsureStableStateEventPosted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ensure there is an event posted to the main thread to run RunInStableState. mMonitor must be held. See EnsureRunInStableState </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="195" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="1705" bodyend="1714"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1ab9d97a9b63665f21af4a01d63ee6db4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::PrepareUpdatesToMainThreadState</definition>
+        <argsstring>()</argsstring>
+        <name>PrepareUpdatesToMainThreadState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generate messages to the main thread to update it for all state changes. mMonitor must be held. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="200" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="1306" bodyend="1324"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1a62f2c08944047785b3ad0451c334904e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::UpdateCurrentTime</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateCurrentTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute a new current time for the graph and advance all on-graph-thread state to the new current time. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="206" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="763" bodyend="849"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1af4d56ec75780401f0618085754d9783e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::UpdateConsumptionState</definition>
+        <argsstring>(SourceMediaStream *aStream)</argsstring>
+        <name>UpdateConsumptionState</name>
+        <param>
+          <type>SourceMediaStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update the consumption state of aStream to reflect whether its data is needed or not. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="211" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="568" bodyend="580"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1a1643ab49fe6dd9f45594705e3890317c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::ExtractPendingInput</definition>
+        <argsstring>(SourceMediaStream *aStream, GraphTime aDesiredUpToTime, bool *aEnsureNextIteration)</argsstring>
+        <name>ExtractPendingInput</name>
+        <param>
+          <type>SourceMediaStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <param>
+          <type>GraphTime</type>
+          <declname>aDesiredUpToTime</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>aEnsureNextIteration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Extract any state updates pending in aStream, and apply them. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="217" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="583" bodyend="644"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1add775cd4edc157001cc1f8b870e144a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::UpdateBufferSufficiencyState</definition>
+        <argsstring>(SourceMediaStream *aStream)</argsstring>
+        <name>UpdateBufferSufficiencyState</name>
+        <param>
+          <type>SourceMediaStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update &quot;have enough data&quot; flags in aStream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="221" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="647" bodyend="682"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1a73e34c82f711bc7534a3aac4e0873c99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::UpdateStreamOrderForStream</definition>
+        <argsstring>(nsTArray&lt; MediaStream * &gt; *aStack, already_AddRefed&lt; MediaStream &gt; aStream)</argsstring>
+        <name>UpdateStreamOrderForStream</name>
+        <param>
+          <type>nsTArray&lt; MediaStream * &gt; *</type>
+          <declname>aStack</declname>
+        </param>
+        <param>
+          <type>already_AddRefed&lt; MediaStream &gt;</type>
+          <declname>aStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="227" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="907" bodyend="937"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1aae78122c988dc064bae7edf10c1b9d26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::UpdateStreamOrder</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateStreamOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sort mStreams so that every stream not in a cycle is after any streams it depends on, and every stream in a cycle is marked as being in a cycle. Also sets mIsConsumed on every stream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="237" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="940" bodyend="966"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1a010022e639450d6a0f6fd32d70d4ca6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::RecomputeBlocking</definition>
+        <argsstring>(GraphTime aEndBlockingDecisions)</argsstring>
+        <name>RecomputeBlocking</name>
+        <param>
+          <type>GraphTime</type>
+          <declname>aEndBlockingDecisions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute the blocking states of streams from mStateComputedTime until the desired future time aEndBlockingDecisions. Updates mStateComputedTime and sets MediaStream::mBlocked for all streams. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="244" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="969" bodyend="1009"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1a6ab88709094e3a33e8ecc80814c0abda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::AddBlockingRelatedStreamsToSet</definition>
+        <argsstring>(nsTArray&lt; MediaStream * &gt; *aStreams, MediaStream *aStream)</argsstring>
+        <name>AddBlockingRelatedStreamsToSet</name>
+        <param>
+          <type>nsTArray&lt; MediaStream * &gt; *</type>
+          <declname>aStreams</declname>
+        </param>
+        <param>
+          <type>MediaStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If aStream isn&apos;t already in aStreams, add it and recursively call AddBlockingRelatedStreamsToSet on all the streams whose blocking status could depend on or affect the state of aStream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="252" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="1012" bodyend="1034"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1a569f92de060733f9cabd3da112a9e88f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::MarkStreamBlocking</definition>
+        <argsstring>(MediaStream *aStream)</argsstring>
+        <name>MarkStreamBlocking</name>
+        <param>
+          <type>MediaStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mark a stream blocked at time aTime. If this results in decisions that need to be revisited at some point in the future, *aEnd will be reduced to the first time in the future to recompute those decisions. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="258" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="1037" bodyend="1057"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1ab2ea77ef63a0e2bc5f8db086ecdeb350" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::RecomputeBlockingAt</definition>
+        <argsstring>(const nsTArray&lt; MediaStream * &gt; &amp;aStreams, GraphTime aTime, GraphTime aEndBlockingDecisions, GraphTime *aEnd)</argsstring>
+        <name>RecomputeBlockingAt</name>
+        <param>
+          <type>const nsTArray&lt; MediaStream * &gt; &amp;</type>
+          <declname>aStreams</declname>
+        </param>
+        <param>
+          <type>GraphTime</type>
+          <declname>aTime</declname>
+        </param>
+        <param>
+          <type>GraphTime</type>
+          <declname>aEndBlockingDecisions</declname>
+        </param>
+        <param>
+          <type>GraphTime *</type>
+          <declname>aEnd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recompute blocking for the streams in aStreams for the interval starting at aTime. If this results in decisions that need to be revisited at some point in the future, *aEnd will be reduced to the first time in the future to recompute those decisions. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="267" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="1060" bodyend="1112"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1ae69a5f3821b9f3e2aaa1858a0a548135" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mozilla::MediaStreamGraphImpl::WillUnderrun</definition>
+        <argsstring>(MediaStream *aStream, GraphTime aTime, GraphTime aEndBlockingDecisions, GraphTime *aEnd)</argsstring>
+        <name>WillUnderrun</name>
+        <param>
+          <type>MediaStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <param>
+          <type>GraphTime</type>
+          <declname>aTime</declname>
+        </param>
+        <param>
+          <type>GraphTime</type>
+          <declname>aEndBlockingDecisions</declname>
+        </param>
+        <param>
+          <type>GraphTime *</type>
+          <declname>aEnd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true if aStream will underrun at aTime for its own playback. aEndBlockingDecisions is when we plan to stop making blocking decisions. *aEnd will be reduced to the first time in the future to recompute these decisions. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="275" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="852" bodyend="886"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1af9ad9c9df4782b1614313578d2ae3bed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>StreamTime</type>
+        <definition>StreamTime mozilla::MediaStreamGraphImpl::GraphTimeToStreamTime</definition>
+        <argsstring>(MediaStream *aStream, GraphTime aTime)</argsstring>
+        <name>GraphTimeToStreamTime</name>
+        <param>
+          <type>MediaStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <param>
+          <type>GraphTime</type>
+          <declname>aTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Given a graph time aTime, convert it to a stream time taking into account the time during which aStream is scheduled to be blocked. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="280" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="685" bodyend="703"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1ac53b204cef6945ff2fc953d05eeadf20" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GraphTime</type>
+        <definition>GraphTime mozilla::MediaStreamGraphImpl::StreamTimeToGraphTime</definition>
+        <argsstring>(MediaStream *aStream, StreamTime aTime, uint32_t aFlags=0)</argsstring>
+        <name>StreamTimeToGraphTime</name>
+        <param>
+          <type>MediaStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <param>
+          <type>StreamTime</type>
+          <declname>aTime</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>aFlags</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Given a stream time aTime, convert it to a graph time taking into account the time during which aStream is scheduled to be blocked. aTime must be &lt;= mStateComputedTime since blocking decisions are only known up to that point. If aTime is exactly at the start of a blocked interval, then the blocked interval is included in the time returned if and only if aFlags includes INCLUDE_TRAILING_BLOCKED_INTERVAL. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="294" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="706" bodyend="745"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1a5cce1c0e9e3a3ff69a27dfbfbbfe5861" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GraphTime</type>
+        <definition>GraphTime mozilla::MediaStreamGraphImpl::GetAudioPosition</definition>
+        <argsstring>(MediaStream *aStream)</argsstring>
+        <name>GetAudioPosition</name>
+        <param>
+          <type>MediaStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the current audio position of the stream&apos;s audio output. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="298" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="748" bodyend="760"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1a8f6439a864e23dff61fa241a80fbf10f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::NotifyHasCurrentData</definition>
+        <argsstring>(MediaStream *aStream)</argsstring>
+        <name>NotifyHasCurrentData</name>
+        <param>
+          <type>MediaStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Call NotifyHaveCurrentData on aStream&apos;s listeners. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="302" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="1115" bodyend="1122"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1a5f21f96d0f6cc2ffc2e202e536d12e48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::CreateOrDestroyAudioStreams</definition>
+        <argsstring>(GraphTime aAudioOutputStartTime, MediaStream *aStream)</argsstring>
+        <name>CreateOrDestroyAudioStreams</name>
+        <param>
+          <type>GraphTime</type>
+          <declname>aAudioOutputStartTime</declname>
+        </param>
+        <param>
+          <type>MediaStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If aStream needs an audio stream but doesn&apos;t have one, create it. If aStream doesn&apos;t need an audio stream but has one, destroy it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="308" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="1125" bodyend="1178"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1adc508535ab191a4cfa2754e71218adfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::PlayAudio</definition>
+        <argsstring>(MediaStream *aStream, GraphTime aFrom, GraphTime aTo)</argsstring>
+        <name>PlayAudio</name>
+        <param>
+          <type>MediaStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <param>
+          <type>GraphTime</type>
+          <declname>aFrom</declname>
+        </param>
+        <param>
+          <type>GraphTime</type>
+          <declname>aTo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Queue audio (mix of stream audio and silence for blocked intervals) to the audio output stream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="313" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="1181" bodyend="1253"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1adc2f8203f44bac578505820aca2828b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::PlayVideo</definition>
+        <argsstring>(MediaStream *aStream)</argsstring>
+        <name>PlayVideo</name>
+        <param>
+          <type>MediaStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the correct current video frame for stream aStream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="317" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="1256" bodyend="1303"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1ad9a53a61cc58c5060a70822422e33973" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::FinishStream</definition>
+        <argsstring>(MediaStream *aStream)</argsstring>
+        <name>FinishStream</name>
+        <param>
+          <type>MediaStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>No more data will be forthcoming for aStream. The stream will end at the current buffer end point. The StreamBuffer&apos;s tracks must be explicitly set to finished by the caller. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="323" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="526" bodyend="536"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1aef9cea5c6724536c94874c42cf9bd868" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>StreamTime</type>
+        <definition>StreamTime mozilla::MediaStreamGraphImpl::GetDesiredBufferEnd</definition>
+        <argsstring>(MediaStream *aStream)</argsstring>
+        <name>GetDesiredBufferEnd</name>
+        <param>
+          <type>MediaStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute how much stream data we would like to buffer for aStream. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="327" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="518" bodyend="523"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1abf60883dd9e52e89431752a7f2f833a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mozilla::MediaStreamGraphImpl::IsEmpty</definition>
+        <argsstring>()</argsstring>
+        <name>IsEmpty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true when there are no active streams. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="331" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="331" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1ae5836e93ab9b9d138a582e50f2213c2a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t mozilla::MediaStreamGraphImpl::GetProcessingGraphUpdateIndex</definition>
+        <argsstring>()</argsstring>
+        <name>GetProcessingGraphUpdateIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Identify which graph update index we are currently processing. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="337" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="337" bodyend="337"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1a52b00d2ba9cd519da06e97aa379e4dbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::AddStream</definition>
+        <argsstring>(MediaStream *aStream)</argsstring>
+        <name>AddStream</name>
+        <param>
+          <type>MediaStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add aStream to the graph and initializes its graph-specific state. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="341" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="539" bodyend="544"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1ad88cfc147a2a148cbec812a600e5b211" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::RemoveStream</definition>
+        <argsstring>(MediaStream *aStream)</argsstring>
+        <name>RemoveStream</name>
+        <param>
+          <type>MediaStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove aStream from the graph. Ensures that pending messages about the stream back to the main thread are flushed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="346" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="547" bodyend="565"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1aa20caa259f8bc41591ec9beeaa6c67f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::DestroyPort</definition>
+        <argsstring>(MediaInputPort *aPort)</argsstring>
+        <name>DestroyPort</name>
+        <param>
+          <type>MediaInputPort *</type>
+          <declname>aPort</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove aPort from the graph and release it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="350"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classmozilla_1_1_media_stream_graph_impl_1ac9b2bf95375227d6d3353da98e5b9eaf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaStreamGraphImpl::MarkConsumed</definition>
+        <argsstring>(MediaStream *aStream)</argsstring>
+        <name>MarkConsumed</name>
+        <param>
+          <type>MediaStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mark aStream and all its inputs (recursively) as consumed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="231" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="889" bodyend="904"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The implementation of a media stream graph. This class is private to this file. It&apos;s not in the anonymous namespace because MediaStream needs to be able to friend it.</para><para>Currently we only have one per process. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="36">
+        <label>mozilla::MediaStreamGraphImpl</label>
+        <link refid="classmozilla_1_1_media_stream_graph_impl"/>
+        <childnode refid="37" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>MediaStreamGraph</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="38">
+        <label>mozilla::MediaStreamGraphImpl</label>
+        <link refid="classmozilla_1_1_media_stream_graph_impl"/>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>MediaStreamGraph</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="124" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="124" bodyend="510"/>
+    <listofallmembers>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a6ab88709094e3a33e8ecc80814c0abda" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>AddBlockingRelatedStreamsToSet</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a52b00d2ba9cd519da06e97aa379e4dbb" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>AddStream</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a5c71597c6bd4c3f442690553c9ce7400" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>AppendMessage</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1ae2ea0bd13e138103972e69db41c6c18c" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>ApplyStreamUpdate</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a5f21f96d0f6cc2ffc2e202e536d12e48" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>CreateOrDestroyAudioStreams</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1aa20caa259f8bc41591ec9beeaa6c67f7" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>DestroyPort</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a9acb1ee98ff40b587a77e7e98811e7c5" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>EnsureImmediateWakeUpLocked</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a68d4a767d7f2d53d1919cb64db0233fe" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>EnsureNextIteration</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1ac0e888dfce3acb0d7dc26efd00c6f8a8" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>EnsureNextIterationLocked</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a960749a1b82780accbc7781bac8fa94e" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>EnsureRunInStableState</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a6723ce3a0c2566fd80ac609b0e3ecf33" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>EnsureStableStateEventPosted</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a1643ab49fe6dd9f45594705e3890317c" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>ExtractPendingInput</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1ad9a53a61cc58c5060a70822422e33973" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>FinishStream</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a92debcd400111704088f1e0c23774fd0" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>ForceShutDown</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a5cce1c0e9e3a3ff69a27dfbfbbfe5861" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>GetAudioPosition</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1aef9cea5c6724536c94874c42cf9bd868" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>GetDesiredBufferEnd</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1ae5836e93ab9b9d138a582e50f2213c2a" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>GetProcessingGraphUpdateIndex</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1af9ad9c9df4782b1614313578d2ae3bed" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>GraphTimeToStreamTime</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a4e36aeea0e2571059fdddfe378fbd61aa092b04f605941ff77645c2dea3151839" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>INCLUDE_TRAILING_BLOCKED_INTERVAL</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1abf60883dd9e52e89431752a7f2f833a2" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>IsEmpty</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a9053102f620d043f4b921e73400f00e5a644c2ae18bd29fafe9b9613b6fe62add" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>LIFECYCLE_RUNNING</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a9053102f620d043f4b921e73400f00e5a52875df3c8ac00ebb0804737186ba438" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>LIFECYCLE_THREAD_NOT_STARTED</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a9053102f620d043f4b921e73400f00e5a6b1c14c273551b80b00f525abc6fca0d" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>LIFECYCLE_WAITING_FOR_MAIN_THREAD_CLEANUP</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a9053102f620d043f4b921e73400f00e5a0ffcf5b6371e047d893a767ea8a0b0ad" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>LIFECYCLE_WAITING_FOR_STREAM_DESTRUCTION</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a9053102f620d043f4b921e73400f00e5ab87ca493de72e0296788fcf7b734a768" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>LIFECYCLE_WAITING_FOR_THREAD_SHUTDOWN</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a9053102f620d043f4b921e73400f00e5" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>LifecycleState</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1ac9b2bf95375227d6d3353da98e5b9eaf" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>MarkConsumed</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a569f92de060733f9cabd3da112a9e88f" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>MarkStreamBlocking</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a4451a2fa038093967de84de408a9caaa" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>mCurrentTaskMessageQueue</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1ae58415f4968807aafcfe2164519ed75a" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>mCurrentTime</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1ab96135e9aee09b46072a5f9319ffc4be" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>mCurrentTimeStamp</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a3725a811b508a232448c16c24bfc2163" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>mDetectedNotRunning</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a34fcf1a329e358eeaf2cb4ae72d814b7" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>MediaStreamGraphImpl</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a816cefd3472e83939600bcd46947bcdb" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>mForceShutDown</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a46fe545df99f3fbd4e7ba1e4496eb7db" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>mInitialTimeStamp</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a9aecafa9d654fbfbceab5ac08e5263ba" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>mLifecycleState</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1aa388bb1862ab972dfc8e9bf33b62ce05" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>mMessageQueue</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1ab35c24a90826b6c08094b90c53ec02f1" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>mMonitor</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a1266cf2c4c5c3055c159b75688a76099" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>mNeedAnotherIteration</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1aab1a6e71f64727f72ac36e4c4ea56d04" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>mPortCount</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a871a4fa8ea321068f0d2595469a17224" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>mPostedRunInStableState</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1aea886fa95bc4439d7ff717f9c83c78c7" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>mPostedRunInStableStateEvent</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a33d570429dc26401d403f8b5b5145200" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>mProcessingGraphUpdateIndex</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1ac7c9eb427c0d8a2d66024988432075c0" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>mStateComputedTime</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1ae4a9631c5848b69c4dd5177878c59fc6" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>mStreams</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a6e935e57f6de758d490b85eba08624cc" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>mStreamUpdates</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1afdbe3acfdcbf89c80a1c1fbbd647f31b" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>mThread</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1aca14c3f19d7d938f883575bad0e75bcb" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>mUpdateRunnables</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a2cfccc583450e835e799a24fa440dcde" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>mWaitState</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a8f6439a864e23dff61fa241a80fbf10f" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>NotifyHasCurrentData</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1adc508535ab191a4cfa2754e71218adfd" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>PlayAudio</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1adc2f8203f44bac578505820aca2828b9" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>PlayVideo</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1ab9d97a9b63665f21af4a01d63ee6db4c" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>PrepareUpdatesToMainThreadState</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a010022e639450d6a0f6fd32d70d4ca6c" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>RecomputeBlocking</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1ab2ea77ef63a0e2bc5f8db086ecdeb350" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>RecomputeBlockingAt</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1ad88cfc147a2a148cbec812a600e5b211" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>RemoveStream</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a6fd5da3e6fbd6d7bebc4befee946f526" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>RunInStableState</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1ae3fd1e97b1dcda969a76de94025134dd" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>RunThread</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a1a8f240ddcfeee7aadb2d04cf0b64ad4" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>ShutdownThreads</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1ac53b204cef6945ff2fc953d05eeadf20" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>StreamTimeToGraphTime</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1add775cd4edc157001cc1f8b870e144a1" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>UpdateBufferSufficiencyState</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1af4d56ec75780401f0618085754d9783e" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>UpdateConsumptionState</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a62f2c08944047785b3ad0451c334904e" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>UpdateCurrentTime</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1aae78122c988dc064bae7edf10c1b9d26" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>UpdateStreamOrder</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a73e34c82f711bc7534a3aac4e0873c99" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>UpdateStreamOrderForStream</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a5c83ee68ed4912f1670f10df55e273de" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>WaitState</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a5c83ee68ed4912f1670f10df55e273dea3ed085bda2e3f1994b8cf25391b86fd7" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>WAITSTATE_RUNNING</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a5c83ee68ed4912f1670f10df55e273deafe699be5f547b4c26307c63205a8bfc8" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>WAITSTATE_WAITING_FOR_NEXT_ITERATION</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a5c83ee68ed4912f1670f10df55e273deaceb2e37a16616f97b7634d972bef9860" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>WAITSTATE_WAITING_INDEFINITELY</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a5c83ee68ed4912f1670f10df55e273dea79646044003b8b43bc79bd24f30c0be6" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>WAITSTATE_WAKING_UP</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1ae69a5f3821b9f3e2aaa1858a0a548135" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>WillUnderrun</name></member>
+      <member refid="classmozilla_1_1_media_stream_graph_impl_1a408e4f32b8faecdf7dab7590e6d7fb14" prot="public" virt="non-virtual"><scope>mozilla::MediaStreamGraphImpl</scope><name>~MediaStreamGraphImpl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

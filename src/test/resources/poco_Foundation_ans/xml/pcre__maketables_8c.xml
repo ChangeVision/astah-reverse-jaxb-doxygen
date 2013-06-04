@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="pcre__maketables_8c" kind="file">
+    <compoundname>pcre_maketables.c</compoundname>
+    <includes refid="pcre__config_8h" local="yes">pcre_config.h</includes>
+    <includes refid="pcre__internal_8h" local="yes">pcre_internal.h</includes>
+    <incdepgraph>
+      <node id="1059">
+        <label>pcre_config.h</label>
+        <link refid="pcre__config_8h"/>
+      </node>
+      <node id="1068">
+        <label>stdarg.h</label>
+      </node>
+      <node id="1070">
+        <label>ucp.h</label>
+        <link refid="ucp_8h"/>
+      </node>
+      <node id="1065">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1067">
+        <label>setjmp.h</label>
+      </node>
+      <node id="1063">
+        <label>stddef.h</label>
+      </node>
+      <node id="1069">
+        <label>pcre.h</label>
+        <link refid="pcre_8h"/>
+        <childnode refid="1065" relation="include">
+        </childnode>
+      </node>
+      <node id="1062">
+        <label>limits.h</label>
+      </node>
+      <node id="1060">
+        <label>pcre_internal.h</label>
+        <link refid="pcre__internal_8h"/>
+        <childnode refid="1061" relation="include">
+        </childnode>
+        <childnode refid="1062" relation="include">
+        </childnode>
+        <childnode refid="1063" relation="include">
+        </childnode>
+        <childnode refid="1064" relation="include">
+        </childnode>
+        <childnode refid="1065" relation="include">
+        </childnode>
+        <childnode refid="1066" relation="include">
+        </childnode>
+        <childnode refid="1067" relation="include">
+        </childnode>
+        <childnode refid="1068" relation="include">
+        </childnode>
+        <childnode refid="1069" relation="include">
+        </childnode>
+        <childnode refid="1070" relation="include">
+        </childnode>
+      </node>
+      <node id="1066">
+        <label>string.h</label>
+      </node>
+      <node id="1061">
+        <label>ctype.h</label>
+      </node>
+      <node id="1064">
+        <label>stdio.h</label>
+      </node>
+      <node id="1058">
+        <label>src/pcre_maketables.c</label>
+        <link refid="pcre_maketables.c"/>
+        <childnode refid="1059" relation="include">
+        </childnode>
+        <childnode refid="1060" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pcre__maketables_8c_1a8a33ce35ab2e6f9cb4f24697966c9a5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="zconf_8h_1a2c212835823e3c54a8ab6d95c652660e" kindref="member">const</ref> unsigned char *</type>
+        <definition>const unsigned char* pcre_maketables</definition>
+        <argsstring>(void)</argsstring>
+        <name>pcre_maketables</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/pcre_maketables.c" line="68" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/pcre_maketables.c" bodystart="68" bodyend="139"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/>Perl-Compatible<sp/>Regular<sp/>Expressions<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PCRE<sp/>is<sp/>a<sp/>library<sp/>of<sp/>functions<sp/>to<sp/>support<sp/>regular<sp/>expressions<sp/>whose<sp/>syntax</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">and<sp/>semantics<sp/>are<sp/>as<sp/>close<sp/>as<sp/>possible<sp/>to<sp/>those<sp/>of<sp/>the<sp/>Perl<sp/>5<sp/>language.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Written<sp/>by<sp/>Philip<sp/>Hazel</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>1997-2008<sp/>University<sp/>of<sp/>Cambridge</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">-----------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright<sp/>notice,</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"></highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"></highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>the<sp/>University<sp/>of<sp/>Cambridge<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS<sp/>&quot;AS<sp/>IS&quot;</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">CONTRACT,<sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">-----------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>module<sp/>contains<sp/>the<sp/>external<sp/>function<sp/>pcre_maketables(),<sp/>which<sp/>builds</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">character<sp/>tables<sp/>for<sp/>PCRE<sp/>in<sp/>the<sp/>current<sp/>locale.<sp/>The<sp/>file<sp/>is<sp/>compiled<sp/>on<sp/>its</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">own<sp/>as<sp/>part<sp/>of<sp/>the<sp/>PCRE<sp/>library.<sp/>However,<sp/>it<sp/>is<sp/>also<sp/>included<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="44"><highlight class="comment">compilation<sp/>of<sp/>dftables.c,<sp/>in<sp/>which<sp/>case<sp/>the<sp/>macro<sp/>DFTABLES<sp/>is<sp/>defined.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DFTABLES</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/><sp/>include<sp/>&quot;<ref refid="pcre__config_8h" kindref="compound">pcre_config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/>include<sp/>&quot;<ref refid="pcre__internal_8h" kindref="compound">pcre_internal.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*************************************************</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Create<sp/>PCRE<sp/>character<sp/>tables<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">*************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>function<sp/>builds<sp/>a<sp/>set<sp/>of<sp/>character<sp/>tables<sp/>for<sp/>use<sp/>by<sp/>PCRE<sp/>and<sp/>returns</highlight></codeline>
+<codeline lineno="58"><highlight class="comment">a<sp/>pointer<sp/>to<sp/>them.<sp/>They<sp/>are<sp/>build<sp/>using<sp/>the<sp/>ctype<sp/>functions,<sp/>and<sp/>consequently</highlight></codeline>
+<codeline lineno="59"><highlight class="comment">their<sp/>contents<sp/>will<sp/>depend<sp/>upon<sp/>the<sp/>current<sp/>locale<sp/>setting.<sp/>When<sp/>compiled<sp/>as</highlight></codeline>
+<codeline lineno="60"><highlight class="comment">part<sp/>of<sp/>the<sp/>library,<sp/>the<sp/>store<sp/>is<sp/>obtained<sp/>via<sp/>pcre_malloc(),<sp/>but<sp/>when<sp/>compiled</highlight></codeline>
+<codeline lineno="61"><highlight class="comment">inside<sp/>dftables,<sp/>use<sp/>malloc().</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"></highlight></codeline>
+<codeline lineno="63"><highlight class="comment">Arguments:<sp/><sp/><sp/>none</highlight></codeline>
+<codeline lineno="64"><highlight class="comment">Returns:<sp/><sp/><sp/><sp/><sp/>pointer<sp/>to<sp/>the<sp/>contiguous<sp/>block<sp/>of<sp/>data</highlight></codeline>
+<codeline lineno="65"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><ref refid="pcre_8h_1a8a33ce35ab2e6f9cb4f24697966c9a5e" kindref="member">pcre_maketables</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*yield,<sp/>*p;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DFTABLES</highlight></codeline>
+<codeline lineno="74"><highlight class="preprocessor"></highlight><highlight class="normal">yield<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)(<ref refid="pcre_8h_1a26f9b74ea2d3692cfaacee68461563f4" kindref="member">pcre_malloc</ref>)(<ref refid="pcre__internal_8h_1ac214b54f9ab6a0efdc63d666ddf0287e" kindref="member">tables_length</ref>);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"></highlight><highlight class="normal">yield<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)<ref refid="zutil_8c_1a1fe6941708c67e715d2ed1a73a475257" kindref="member">malloc</ref>(<ref refid="pcre__internal_8h_1ac214b54f9ab6a0efdc63d666ddf0287e" kindref="member">tables_length</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="78"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(yield<sp/>==<sp/>NULL)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">p<sp/>=<sp/>yield;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>First<sp/>comes<sp/>the<sp/>lower<sp/>casing<sp/>table<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>256;<sp/>i++)<sp/>*p++<sp/>=<sp/>tolower(i);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Next<sp/>the<sp/>case-flipping<sp/>table<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>256;<sp/>i++)<sp/>*p++<sp/>=<sp/>islower(i)?<sp/>toupper(i)<sp/>:<sp/>tolower(i);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Then<sp/>the<sp/>character<sp/>class<sp/>tables.<sp/>Don&apos;t<sp/>try<sp/>to<sp/>be<sp/>clever<sp/>and<sp/>save<sp/>effort<sp/>on</highlight></codeline>
+<codeline lineno="91"><highlight class="comment">exclusive<sp/>ones<sp/>-<sp/>in<sp/>some<sp/>locales<sp/>things<sp/>may<sp/>be<sp/>different.<sp/>Note<sp/>that<sp/>the<sp/>table</highlight></codeline>
+<codeline lineno="92"><highlight class="comment">for<sp/>&quot;space&quot;<sp/>includes<sp/>everything<sp/>&quot;isspace&quot;<sp/>gives,<sp/>including<sp/>VT<sp/>in<sp/>the<sp/>default</highlight></codeline>
+<codeline lineno="93"><highlight class="comment">locale.<sp/>This<sp/>makes<sp/>it<sp/>work<sp/>for<sp/>the<sp/>POSIX<sp/>class<sp/>[:space:].<sp/>Note<sp/>also<sp/>that<sp/>it<sp/>is</highlight></codeline>
+<codeline lineno="94"><highlight class="comment">possible<sp/>for<sp/>a<sp/>character<sp/>to<sp/>be<sp/>alnum<sp/>or<sp/>alpha<sp/>without<sp/>being<sp/>lower<sp/>or<sp/>upper,</highlight></codeline>
+<codeline lineno="95"><highlight class="comment">such<sp/>as<sp/>&quot;male<sp/>and<sp/>female<sp/>ordinals&quot;<sp/>(\xAA<sp/>and<sp/>\xBA)<sp/>in<sp/>the<sp/>fr_FR<sp/>locale<sp/>(at</highlight></codeline>
+<codeline lineno="96"><highlight class="comment">least<sp/>under<sp/>Debian<sp/>Linux&apos;s<sp/>locales<sp/>as<sp/>of<sp/>12/2005).<sp/>So<sp/>we<sp/>must<sp/>test<sp/>for<sp/>alnum</highlight></codeline>
+<codeline lineno="97"><highlight class="comment">specially.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">memset(p,<sp/>0,<sp/><ref refid="pcre__internal_8h_1aeca26eaa37dfd8f5f652365b2427f6c8" kindref="member">cbit_length</ref>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>256;<sp/>i++)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isdigit(i))<sp/>p[<ref refid="pcre__internal_8h_1a435151c0c1724be9024d8c70ffdf017b" kindref="member">cbit_digit</ref><sp/><sp/>+<sp/>i/8]<sp/>|=<sp/>1<sp/>&lt;&lt;<sp/>(i&amp;7);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isupper(i))<sp/>p[<ref refid="pcre__internal_8h_1ac1f4d1cc73f839880a87f93c4ac5fde0" kindref="member">cbit_upper</ref><sp/><sp/>+<sp/>i/8]<sp/>|=<sp/>1<sp/>&lt;&lt;<sp/>(i&amp;7);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(islower(i))<sp/>p[<ref refid="pcre__internal_8h_1a59f70a6ab2726c7cefe65d09918427e6" kindref="member">cbit_lower</ref><sp/><sp/>+<sp/>i/8]<sp/>|=<sp/>1<sp/>&lt;&lt;<sp/>(i&amp;7);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isalnum(i))<sp/>p[<ref refid="pcre__internal_8h_1aa674bbdc6d619279dc1687e380874e7e" kindref="member">cbit_word</ref><sp/><sp/><sp/>+<sp/>i/8]<sp/>|=<sp/>1<sp/>&lt;&lt;<sp/>(i&amp;7);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>==<sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">)<sp/><sp/><sp/>p[<ref refid="pcre__internal_8h_1aa674bbdc6d619279dc1687e380874e7e" kindref="member">cbit_word</ref><sp/><sp/><sp/>+<sp/>i/8]<sp/>|=<sp/>1<sp/>&lt;&lt;<sp/>(i&amp;7);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isspace(i))<sp/>p[<ref refid="pcre__internal_8h_1a39d8c4a79369ab41b5387859520a0bb7" kindref="member">cbit_space</ref><sp/><sp/>+<sp/>i/8]<sp/>|=<sp/>1<sp/>&lt;&lt;<sp/>(i&amp;7);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isxdigit(i))p[<ref refid="pcre__internal_8h_1ab33f4ee0d0dad2e338bdc0a629a38e38" kindref="member">cbit_xdigit</ref><sp/>+<sp/>i/8]<sp/>|=<sp/>1<sp/>&lt;&lt;<sp/>(i&amp;7);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isgraph(i))<sp/>p[<ref refid="pcre__internal_8h_1af5641612b9cd173a5f9d4c03df44a62d" kindref="member">cbit_graph</ref><sp/><sp/>+<sp/>i/8]<sp/>|=<sp/>1<sp/>&lt;&lt;<sp/>(i&amp;7);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isprint(i))<sp/>p[<ref refid="pcre__internal_8h_1aeba4f3faf9967c0d5a182a3a526036c9" kindref="member">cbit_print</ref><sp/><sp/>+<sp/>i/8]<sp/>|=<sp/>1<sp/>&lt;&lt;<sp/>(i&amp;7);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ispunct(i))<sp/>p[<ref refid="pcre__internal_8h_1a2c877ee4100da3f593c190c60dfa2a44" kindref="member">cbit_punct</ref><sp/><sp/>+<sp/>i/8]<sp/>|=<sp/>1<sp/>&lt;&lt;<sp/>(i&amp;7);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(iscntrl(i))<sp/>p[<ref refid="pcre__internal_8h_1a5bcd2cd4ec962e8dc973a627abdd634a" kindref="member">cbit_cntrl</ref><sp/><sp/>+<sp/>i/8]<sp/>|=<sp/>1<sp/>&lt;&lt;<sp/>(i&amp;7);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">p<sp/>+=<sp/><ref refid="pcre__internal_8h_1aeca26eaa37dfd8f5f652365b2427f6c8" kindref="member">cbit_length</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Finally,<sp/>the<sp/>character<sp/>type<sp/>table.<sp/>In<sp/>this,<sp/>we<sp/>exclude<sp/>VT<sp/>from<sp/>the<sp/>white</highlight></codeline>
+<codeline lineno="117"><highlight class="comment">space<sp/>chars,<sp/>because<sp/>Perl<sp/>doesn&apos;t<sp/>recognize<sp/>it<sp/>as<sp/>such<sp/>for<sp/>\s<sp/>and<sp/>for<sp/>comments</highlight></codeline>
+<codeline lineno="118"><highlight class="comment">within<sp/>regexes.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>256;<sp/>i++)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>!=<sp/>0x0b<sp/>&amp;&amp;<sp/>isspace(i))<sp/>x<sp/>+=<sp/><ref refid="pcre__internal_8h_1a65dc078d774490ba90c0d33d3fdece35" kindref="member">ctype_space</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isalpha(i))<sp/>x<sp/>+=<sp/><ref refid="pcre__internal_8h_1a2dd2a83bdb0c180d49a1f14f9fda9c1e" kindref="member">ctype_letter</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isdigit(i))<sp/>x<sp/>+=<sp/><ref refid="pcre__internal_8h_1a3d4364a50c8029c795b0e0a0e7ca7fbd" kindref="member">ctype_digit</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isxdigit(i))<sp/>x<sp/>+=<sp/><ref refid="pcre__internal_8h_1a3664754fb10bf65932bf8f0c8ed543ce" kindref="member">ctype_xdigit</ref>;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isalnum(i)<sp/>||<sp/>i<sp/>==<sp/></highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">)<sp/>x<sp/>+=<sp/><ref refid="pcre__internal_8h_1a442a60d2ab94f56f28e04ab175faf43f" kindref="member">ctype_word</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Note:<sp/>strchr<sp/>includes<sp/>the<sp/>terminating<sp/>zero<sp/>in<sp/>the<sp/>characters<sp/>it<sp/>considers.</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/><sp/>In<sp/>this<sp/>instance,<sp/>that<sp/>is<sp/>ok<sp/>because<sp/>we<sp/>want<sp/>binary<sp/>zero<sp/>to<sp/>be<sp/>flagged<sp/>as<sp/>a</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/><sp/>meta-character,<sp/>which<sp/>in<sp/>this<sp/>sense<sp/>is<sp/>any<sp/>character<sp/>that<sp/>terminates<sp/>a<sp/>run</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/><sp/>of<sp/>data<sp/>characters.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strchr(</highlight><highlight class="stringliteral">&quot;\\*+?{^.$|()[&quot;</highlight><highlight class="normal">,<sp/>i)<sp/>!=<sp/>0)<sp/>x<sp/>+=<sp/><ref refid="pcre__internal_8h_1af254c479da59731eb98c178ba2db0430" kindref="member">ctype_meta</ref>;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>*p++<sp/>=<sp/>x;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>yield;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>End<sp/>of<sp/>pcre_maketables.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/pcre_maketables.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="quadratc_8cpp" kind="file">
+    <compoundname>quadratc.cpp</compoundname>
+    <includes refid="mfcpch_8h" local="yes">mfcpch.h</includes>
+    <includes refid="quadratc_8h" local="yes">quadratc.h</includes>
+    <incdepgraph>
+      <node id="10782">
+        <label>mfcpch.h</label>
+        <link refid="mfcpch_8h"/>
+      </node>
+      <node id="10792">
+        <label>stdlib.h</label>
+      </node>
+      <node id="10789">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="10790" relation="include">
+        </childnode>
+      </node>
+      <node id="10781">
+        <label>ccstruct/quadratc.cpp</label>
+        <link refid="quadratc.cpp"/>
+        <childnode refid="10782" relation="include">
+        </childnode>
+        <childnode refid="10783" relation="include">
+        </childnode>
+      </node>
+      <node id="10791">
+        <label>serialis.h</label>
+        <link refid="serialis_8h"/>
+        <childnode refid="10792" relation="include">
+        </childnode>
+        <childnode refid="10793" relation="include">
+        </childnode>
+        <childnode refid="10785" relation="include">
+        </childnode>
+        <childnode refid="10794" relation="include">
+        </childnode>
+        <childnode refid="10796" relation="include">
+        </childnode>
+        <childnode refid="10797" relation="include">
+        </childnode>
+      </node>
+      <node id="10795">
+        <label>stddef.h</label>
+      </node>
+      <node id="10796">
+        <label>errcode.h</label>
+        <link refid="errcode_8h"/>
+        <childnode refid="10788" relation="include">
+        </childnode>
+      </node>
+      <node id="10790">
+        <label>limits.h</label>
+      </node>
+      <node id="10799">
+        <label>ipoints.h</label>
+        <link refid="ipoints_8h"/>
+        <childnode refid="10786" relation="include">
+        </childnode>
+      </node>
+      <node id="10793">
+        <label>string.h</label>
+      </node>
+      <node id="10797">
+        <label>fileerr.h</label>
+        <link refid="fileerr_8h"/>
+        <childnode refid="10796" relation="include">
+        </childnode>
+      </node>
+      <node id="10786">
+        <label>math.h</label>
+      </node>
+      <node id="10798">
+        <label>lsterr.h</label>
+        <link refid="lsterr_8h"/>
+        <childnode refid="10796" relation="include">
+        </childnode>
+      </node>
+      <node id="10783">
+        <label>quadratc.h</label>
+        <link refid="quadratc_8h"/>
+        <childnode refid="10784" relation="include">
+        </childnode>
+      </node>
+      <node id="10794">
+        <label>memry.h</label>
+        <link refid="memry_8h"/>
+        <childnode refid="10795" relation="include">
+        </childnode>
+        <childnode refid="10788" relation="include">
+        </childnode>
+      </node>
+      <node id="10787">
+        <label>elst.h</label>
+        <link refid="elst_8h"/>
+        <childnode refid="10785" relation="include">
+        </childnode>
+        <childnode refid="10788" relation="include">
+        </childnode>
+        <childnode refid="10791" relation="include">
+        </childnode>
+        <childnode refid="10798" relation="include">
+        </childnode>
+      </node>
+      <node id="10784">
+        <label>points.h</label>
+        <link refid="points_8h"/>
+        <childnode refid="10785" relation="include">
+        </childnode>
+        <childnode refid="10786" relation="include">
+        </childnode>
+        <childnode refid="10787" relation="include">
+        </childnode>
+        <childnode refid="10799" relation="include">
+        </childnode>
+      </node>
+      <node id="10788">
+        <label>host.h</label>
+        <link refid="host_8h"/>
+        <childnode refid="10789" relation="include">
+        </childnode>
+      </node>
+      <node id="10785">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>quadratc.cpp<sp/><sp/>(Formerly<sp/>quadrtic.c)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Description:<sp/>Code<sp/>for<sp/>the<sp/>QUAD_COEFFS<sp/>class.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Author:<sp/><sp/><sp/><sp/><sp/><sp/>Ray<sp/>Smith</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Created:<sp/><sp/><sp/><sp/><sp/>Tue<sp/>Oct<sp/>08<sp/>17:24:40<sp/>BST<sp/>1991</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>(C)<sp/>Copyright<sp/>1991,<sp/>Hewlett-Packard<sp/>Ltd.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>**<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>**<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>**<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>**<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>**<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>**<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>**<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>**<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>**<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mfcpch_8h" kindref="compound">mfcpch.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<ref refid="quadratc_8h" kindref="compound">quadratc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/ccstruct/quadratc.cpp"/>
+  </compounddef>
+</doxygen>

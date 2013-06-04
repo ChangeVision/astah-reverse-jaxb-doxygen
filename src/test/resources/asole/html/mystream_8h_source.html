@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>My Project: mystream.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.4 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">mystream.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="mystream_8h.html">説明を見る。</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *  Copyright (c) 2012 Change Vision Inc. All Rights Reserved.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//#pragma comment(exestr, &quot;%Z%%Y%%M% %I% 20%E% %U%&quot;)</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef MYSTREAM_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define MYSTREAM_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="class_c_my_stream.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_c_my_stream.html">CMyStream</a> : <span class="keyword">public</span> IStream {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="class_c_my_stream_1_1lockit.html">   13</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_c_my_stream_1_1lockit.html">lockit</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;     <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="class_c_my_stream_1_1lockit.html#adcec10b87c114c655f17aad0b7ab2ab5">   15</a></span>&#160;        LONG    *<a class="code" href="class_c_my_stream_1_1lockit.html#adcec10b87c114c655f17aad0b7ab2ab5">lockword</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;     <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="class_c_my_stream_1_1lockit.html#aeab219b65ae0edcaa1a4c6dbd9fb0600">‾lockit</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="class_c_my_stream_1_1lockit.html#a5026cdb074272bf8b285e791d6b4516f">lockit</a>(<a class="code" href="class_c_my_stream.html">CMyStream</a> *);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    };</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="class_c_my_stream.html#a381f0ed34380fec651a0f162ff83a546">   21</a></span>&#160;    LONG        <a class="code" href="class_c_my_stream.html#a381f0ed34380fec651a0f162ff83a546">ms_lockword</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="class_c_my_stream.html#ae3771aa6438e317fb21ebd024cf56300">   22</a></span>&#160;    LONG        <a class="code" href="class_c_my_stream.html#ae3771aa6438e317fb21ebd024cf56300">ms_refc</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="class_c_my_stream.html#a8d145b308c4ad34b26005199de201dd5">   23</a></span>&#160;    <span class="keywordtype">int</span>     <a class="code" href="class_c_my_stream.html#a8d145b308c4ad34b26005199de201dd5">ms_autofree</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="class_c_my_stream.html#a0c4399b612e36b340f1263c0224e1d58">   24</a></span>&#160;    <span class="keywordtype">char</span>        *<a class="code" href="class_c_my_stream.html#a0c4399b612e36b340f1263c0224e1d58">ms_mbuf</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="class_c_my_stream.html#a062872c07e5bda2615f799e3b8b70a19">   25</a></span>&#160;    ULONG       <a class="code" href="class_c_my_stream.html#a062872c07e5bda2615f799e3b8b70a19">ms_mlen</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="class_c_my_stream.html#a015de3221a956f28fc1b5cf75231bab3">   26</a></span>&#160;    ULONGLONG   <a class="code" href="class_c_my_stream.html#a015de3221a956f28fc1b5cf75231bab3">ms_seek</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; <span class="keyword">public</span>:    <span class="comment">// IUnknown</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">virtual</span> HRESULT STDMETHODCALLTYPE <a class="code" href="class_c_my_stream.html#ac8c51a93c45b5fd396a7488fc741b92c">QueryInterface</a>(REFIID, <span class="keywordtype">void</span> **);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">virtual</span> ULONG STDMETHODCALLTYPE <a class="code" href="class_c_my_stream.html#ae2345e0fc4a10c921926935f3c4e9191">AddRef</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">virtual</span> ULONG STDMETHODCALLTYPE <a class="code" href="class_c_my_stream.html#a92efba04a2cdc8fc4381f12681e2945e">Release</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; <span class="keyword">public</span>:    <span class="comment">// ISequentialStream Interface</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">virtual</span> HRESULT STDMETHODCALLTYPE <a class="code" href="class_c_my_stream.html#aacdaa1a27e4e92b9510b38137b585950">Read</a>(<span class="keywordtype">void</span> *, ULONG, ULONG *);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">virtual</span> HRESULT STDMETHODCALLTYPE <a class="code" href="class_c_my_stream.html#a742ad64d337e852b88efe35a4f276921">Write</a>(<span class="keywordtype">void</span> <span class="keyword">const</span> *, ULONG, ULONG *);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; <span class="keyword">public</span>:    <span class="comment">// IStream Interface</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">virtual</span> HRESULT STDMETHODCALLTYPE <a class="code" href="class_c_my_stream.html#a4f9d19cdbdac2b54c014db536ecaa818">Seek</a>(LARGE_INTEGER, DWORD, ULARGE_INTEGER *);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">virtual</span> HRESULT STDMETHODCALLTYPE <a class="code" href="class_c_my_stream.html#ad20ad0d63bfc6ee81c4f3eda33365159">SetSize</a>(ULARGE_INTEGER);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">virtual</span> HRESULT STDMETHODCALLTYPE <a class="code" href="class_c_my_stream.html#a07bf3b84244f5780c9af7630494d2f88">CopyTo</a>(IStream *, ULARGE_INTEGER, ULARGE_INTEGER *, ULARGE_INTEGER *);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">virtual</span> HRESULT STDMETHODCALLTYPE <a class="code" href="class_c_my_stream.html#af6ebc67ddc0b0abc7224da2ca3bc443d">Commit</a>(DWORD);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">virtual</span> HRESULT STDMETHODCALLTYPE <a class="code" href="class_c_my_stream.html#a2dcadd6fafe3c4f646aa75556525b43c">Revert</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">virtual</span> HRESULT STDMETHODCALLTYPE <a class="code" href="class_c_my_stream.html#a5a3fa68f4984ddcd5919503efb92eade">LockRegion</a>(ULARGE_INTEGER, ULARGE_INTEGER, DWORD);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">virtual</span> HRESULT STDMETHODCALLTYPE <a class="code" href="class_c_my_stream.html#a761798f7cd4020e1b6554c1b5c1e5351">UnlockRegion</a>(ULARGE_INTEGER, ULARGE_INTEGER, DWORD);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">virtual</span> HRESULT STDMETHODCALLTYPE <a class="code" href="class_c_my_stream.html#a5c4e6f253855b8de99fd9c39c974fc1c">Stat</a>(STATSTG *, DWORD);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">virtual</span> HRESULT STDMETHODCALLTYPE <a class="code" href="class_c_my_stream.html#a52b21757d6e1da3a522fffa0538a5430">Clone</a>(IStream **);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_c_my_stream.html#aa454db1d01f492d4d2b8d5f8db06e06d">invalidate</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_c_my_stream.html#ab869a86688a852acee99f01fa81544f9">‾CMyStream</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="class_c_my_stream.html#a0aafa9f3b78fbec2e455c26db26dd1d3">CMyStream</a>(<span class="keywordtype">void</span> *mbuf, <span class="keywordtype">int</span> mlen, <span class="keywordtype">int</span> autofree = 0);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_c_my_stream.html">CMyStream</a> *<a class="code" href="class_c_my_stream.html#a9e741f271071976e1fbcf2d780723da0">newOne</a>(<span class="keywordtype">void</span> *mbuf, <span class="keywordtype">int</span> mlen, <span class="keywordtype">int</span> autofree = 0);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_c_my_stream.html">CMyStream</a> *<a class="code" href="class_c_my_stream.html#ac6a3b0c5e48a742cb62f6d6953d88dc2">newByFile</a>(LPCTSTR fpath);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+My Projectに対してThu May 23 2013 13:56:03に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

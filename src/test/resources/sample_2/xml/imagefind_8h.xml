@@ -1,0 +1,274 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="imagefind_8h" kind="file">
+    <compoundname>imagefind.h</compoundname>
+    <includes refid="host_8h" local="yes">host.h</includes>
+    <includedby refid="osdetect_8cpp" local="yes">ccmain/osdetect.cpp</includedby>
+    <includedby refid="pagesegmain_8cpp" local="yes">ccmain/pagesegmain.cpp</includedby>
+    <includedby refid="ccnontextdetect_8cpp" local="yes">textord/ccnontextdetect.cpp</includedby>
+    <includedby refid="colfind_8h" local="yes">textord/colfind.h</includedby>
+    <includedby refid="colpartition_8cpp" local="yes">textord/colpartition.cpp</includedby>
+    <includedby refid="colpartitiongrid_8cpp" local="yes">textord/colpartitiongrid.cpp</includedby>
+    <includedby refid="imagefind_8cpp" local="yes">textord/imagefind.cpp</includedby>
+    <includedby refid="strokewidth_8cpp" local="yes">textord/strokewidth.cpp</includedby>
+    <incdepgraph>
+      <node id="38478">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="38479" relation="include">
+        </childnode>
+      </node>
+      <node id="38479">
+        <label>limits.h</label>
+      </node>
+      <node id="38476">
+        <label>textord/imagefind.h</label>
+        <link refid="imagefind.h"/>
+        <childnode refid="38477" relation="include">
+        </childnode>
+      </node>
+      <node id="38477">
+        <label>host.h</label>
+        <link refid="host_8h"/>
+        <childnode refid="38478" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="38483">
+        <label>textord/ccnontextdetect.cpp</label>
+        <link refid="ccnontextdetect_8cpp"/>
+      </node>
+      <node id="38484">
+        <label>textord/colfind.h</label>
+        <link refid="colfind_8h"/>
+        <childnode refid="38481" relation="include">
+        </childnode>
+        <childnode refid="38482" relation="include">
+        </childnode>
+        <childnode refid="38485" relation="include">
+        </childnode>
+        <childnode refid="38486" relation="include">
+        </childnode>
+      </node>
+      <node id="38481">
+        <label>ccmain/osdetect.cpp</label>
+        <link refid="osdetect_8cpp"/>
+      </node>
+      <node id="38489">
+        <label>textord/imagefind.cpp</label>
+        <link refid="imagefind_8cpp"/>
+      </node>
+      <node id="38482">
+        <label>ccmain/pagesegmain.cpp</label>
+        <link refid="pagesegmain_8cpp"/>
+      </node>
+      <node id="38485">
+        <label>textord/colfind.cpp</label>
+        <link refid="colfind_8cpp"/>
+      </node>
+      <node id="38487">
+        <label>textord/colpartition.cpp</label>
+        <link refid="colpartition_8cpp"/>
+      </node>
+      <node id="38490">
+        <label>textord/strokewidth.cpp</label>
+        <link refid="strokewidth_8cpp"/>
+      </node>
+      <node id="38486">
+        <label>textord/tabvector.cpp</label>
+        <link refid="tabvector_8cpp"/>
+      </node>
+      <node id="38488">
+        <label>textord/colpartitiongrid.cpp</label>
+        <link refid="colpartitiongrid_8cpp"/>
+      </node>
+      <node id="38480">
+        <label>textord/imagefind.h</label>
+        <link refid="imagefind.h"/>
+        <childnode refid="38481" relation="include">
+        </childnode>
+        <childnode refid="38482" relation="include">
+        </childnode>
+        <childnode refid="38483" relation="include">
+        </childnode>
+        <childnode refid="38484" relation="include">
+        </childnode>
+        <childnode refid="38487" relation="include">
+        </childnode>
+        <childnode refid="38488" relation="include">
+        </childnode>
+        <childnode refid="38489" relation="include">
+        </childnode>
+        <childnode refid="38490" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtesseract_1_1_image_find" prot="public">tesseract::ImageFind</innerclass>
+    <innernamespace refid="namespacetesseract">tesseract</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>imagefind.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Description:<sp/>Class<sp/>to<sp/>find<sp/>image<sp/>and<sp/>drawing<sp/>regions<sp/>in<sp/>an<sp/>image</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>and<sp/>create<sp/>a<sp/>corresponding<sp/>list<sp/>of<sp/>empty<sp/>blobs.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/><sp/><sp/><sp/><sp/><sp/>Ray<sp/>Smith</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created:<sp/><sp/><sp/><sp/><sp/>Fri<sp/>Aug<sp/>01<sp/>10:50:01<sp/>PDT<sp/>2008</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(C)<sp/>Copyright<sp/>2008,<sp/>Google<sp/>Inc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TESSERACT_TEXTORD_IMAGEFIND_H__</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TESSERACT_TEXTORD_IMAGEFIND_H__</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="host_8h" kindref="compound">host.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Boxa;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Pix;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Pixa;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_t_b_o_x" kindref="compound">TBOX</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_t_o___b_l_o_c_k" kindref="compound">TO_BLOCK</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">BLOBNBOX_LIST;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetesseract-c__api-demo_1afed58feacb84df2de88bdd613cfdba6d" kindref="member">tesseract</ref><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ColPartitionGrid;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ColPartition_LIST;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">TabFind;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>ImageFind<sp/>class<sp/>is<sp/>a<sp/>simple<sp/>static<sp/>function<sp/>wrapper<sp/>class<sp/>that</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/>exposes<sp/>the<sp/>FindImages<sp/>function<sp/>and<sp/>some<sp/>useful<sp/>helper<sp/>functions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classtesseract_1_1_image_find" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtesseract_1_1_image_find" kindref="compound">ImageFind</ref><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Finds<sp/>image<sp/>regions<sp/>within<sp/>the<sp/>BINARY<sp/>source<sp/>pix<sp/>(page<sp/>image)<sp/>and<sp/>returns</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>image<sp/>regions<sp/>as<sp/>a<sp/>mask<sp/>image.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>returned<sp/>pix<sp/>may<sp/>be<sp/>NULL,<sp/>meaning<sp/>no<sp/>images<sp/>found.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>not<sp/>NULL,<sp/>it<sp/>must<sp/>be<sp/>PixDestroyed<sp/>by<sp/>the<sp/>caller.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>Pix*<sp/><ref refid="classtesseract_1_1_image_find_1af465be1a567090dcaaa74eb7742c51fe" kindref="member">FindImages</ref>(Pix*<sp/>pix);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Generates<sp/>a<sp/>Boxa,<sp/>Pixa<sp/>pair<sp/>from<sp/>the<sp/>input<sp/>binary<sp/>(image<sp/>mask)<sp/>pix,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>analgous<sp/>to<sp/>pixConnComp,<sp/>except<sp/>that<sp/>connected<sp/>components<sp/>which<sp/>are<sp/>nearly</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>rectangular<sp/>are<sp/>replaced<sp/>with<sp/>solid<sp/>rectangles.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>returned<sp/>boxa,<sp/>pixa<sp/>may<sp/>be<sp/>NULL,<sp/>meaning<sp/>no<sp/>images<sp/>found.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>not<sp/>NULL,<sp/>they<sp/>must<sp/>be<sp/>destroyed<sp/>by<sp/>the<sp/>caller.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Resolution<sp/>of<sp/>pix<sp/>should<sp/>match<sp/>the<sp/>source<sp/>image<sp/>(Tesseract::pix_binary_)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>so<sp/>the<sp/>output<sp/>coordinate<sp/>systems<sp/>match.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_image_find_1a43d1cc728fa439676891e5655dadb595" kindref="member">ConnCompAndRectangularize</ref>(Pix*<sp/>pix,<sp/>Boxa**<sp/>boxa,<sp/>Pixa**<sp/>pixa);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Returns<sp/>true<sp/>if<sp/>there<sp/>is<sp/>a<sp/>rectangle<sp/>in<sp/>the<sp/>source<sp/>pix,<sp/>such<sp/>that<sp/>all</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>pixel<sp/>rows<sp/>and<sp/>column<sp/>slices<sp/>outside<sp/>of<sp/>it<sp/>have<sp/>less<sp/>than</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>min_fraction<sp/>of<sp/>the<sp/>pixels<sp/>black,<sp/>and<sp/>within<sp/>max_skew_gradient<sp/>fraction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>of<sp/>the<sp/>pixels<sp/>on<sp/>the<sp/>inside,<sp/>there<sp/>are<sp/>at<sp/>least<sp/>max_fraction<sp/>of<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>pixels<sp/>black.<sp/>In<sp/>other<sp/>words,<sp/>the<sp/>inside<sp/>of<sp/>the<sp/>rectangle<sp/>looks<sp/>roughly</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>rectangular,<sp/>and<sp/>the<sp/>outside<sp/>of<sp/>it<sp/>looks<sp/>like<sp/>extra<sp/>bits.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>return,<sp/>the<sp/>rectangle<sp/>is<sp/>defined<sp/>by<sp/>x_start,<sp/>y_start,<sp/>x_end<sp/>and<sp/>y_end.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Note:<sp/>the<sp/>algorithm<sp/>is<sp/>iterative,<sp/>allowing<sp/>it<sp/>to<sp/>slice<sp/>off<sp/>pixels<sp/>from</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>one<sp/>edge,<sp/>allowing<sp/>it<sp/>to<sp/>then<sp/>slice<sp/>off<sp/>more<sp/>pixels<sp/>from<sp/>another<sp/>edge.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_image_find_1a3797147bcff0b7fd5ffee3f818770165" kindref="member">pixNearlyRectangular</ref>(Pix*<sp/>pix,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>min_fraction,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>max_fraction,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>max_skew_gradient,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>x_start,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>y_start,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>x_end,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>y_end);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Given<sp/>an<sp/>input<sp/>pix,<sp/>and<sp/>a<sp/>bounding<sp/>rectangle,<sp/>the<sp/>sides<sp/>of<sp/>the<sp/>rectangle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>are<sp/>shrunk<sp/>inwards<sp/>until<sp/>they<sp/>bound<sp/>any<sp/>black<sp/>pixels<sp/>found<sp/>within<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>original<sp/>rectangle.<sp/>Returns<sp/>false<sp/>if<sp/>the<sp/>rectangle<sp/>contains<sp/>no<sp/>black</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>pixels<sp/>at<sp/>all.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_image_find_1a98363e328fcc349cfdc5a7ea72ac77d9" kindref="member">BoundsWithinRect</ref>(Pix*<sp/>pix,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>x_start,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>y_start,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>x_end,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>y_end);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Given<sp/>a<sp/>point<sp/>in<sp/>3-D<sp/>(RGB)<sp/>space,<sp/>returns<sp/>the<sp/>squared<sp/>Euclidean<sp/>distance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>of<sp/>the<sp/>point<sp/>from<sp/>the<sp/>given<sp/>line,<sp/>defined<sp/>by<sp/>a<sp/>pair<sp/>of<sp/>points<sp/>in<sp/>the<sp/>3-D</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>(RGB)<sp/>space,<sp/>line1<sp/>and<sp/>line2.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_image_find_1a2164c90398c78d8343f4bebec81f8341" kindref="member">ColorDistanceFromLine</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="host_8h_1a458fe97f82495945f8071bb3c18d1783" kindref="member">uinT8</ref>*<sp/>line1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="host_8h_1a458fe97f82495945f8071bb3c18d1783" kindref="member">uinT8</ref>*<sp/>line2,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="host_8h_1a458fe97f82495945f8071bb3c18d1783" kindref="member">uinT8</ref>*<sp/>point);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Returns<sp/>the<sp/>leptonica<sp/>combined<sp/>code<sp/>for<sp/>the<sp/>given<sp/>RGB<sp/>triplet.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="host_8h_1afc8530b39ebe0b6df1e19159d2508d15" kindref="member">uinT32</ref><sp/><ref refid="classtesseract_1_1_image_find_1aa660fcf01330a75513f168b6b7f21082" kindref="member">ComposeRGB</ref>(<ref refid="host_8h_1afc8530b39ebe0b6df1e19159d2508d15" kindref="member">uinT32</ref><sp/>r,<sp/><ref refid="host_8h_1afc8530b39ebe0b6df1e19159d2508d15" kindref="member">uinT32</ref><sp/><ref refid="imgscale_8cpp_1a903837bbd632ce4c73eebe5852874a71" kindref="member">g</ref>,<sp/><ref refid="host_8h_1afc8530b39ebe0b6df1e19159d2508d15" kindref="member">uinT32</ref><sp/>b);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Returns<sp/>the<sp/>input<sp/>value<sp/>clipped<sp/>to<sp/>a<sp/>uinT8.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="host_8h_1a458fe97f82495945f8071bb3c18d1783" kindref="member">uinT8</ref><sp/><ref refid="classtesseract_1_1_image_find_1a4ce4005e08974dc96353023756b26c74" kindref="member">ClipToByte</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>pixel);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Computes<sp/>the<sp/>light<sp/>and<sp/>dark<sp/>extremes<sp/>of<sp/>color<sp/>in<sp/>the<sp/>given<sp/>rectangle<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>given<sp/>pix,<sp/>which<sp/>is<sp/>factor<sp/>smaller<sp/>than<sp/>the<sp/>coordinate<sp/>system<sp/>in<sp/>rect.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>light<sp/>and<sp/>dark<sp/>points<sp/>are<sp/>taken<sp/>to<sp/>be<sp/>the<sp/>upper<sp/>and<sp/>lower<sp/>8th-ile<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>most<sp/>deviant<sp/>of<sp/>R,<sp/>G<sp/>and<sp/>B.<sp/>The<sp/>value<sp/>of<sp/>the<sp/>other<sp/>2<sp/>channels<sp/>are</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>computed<sp/>by<sp/>linear<sp/>fit<sp/>against<sp/>the<sp/>most<sp/>deviant.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>colors<sp/>of<sp/>the<sp/>two<sp/>point<sp/>are<sp/>returned<sp/>in<sp/>color1<sp/>and<sp/>color2,<sp/>with<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>alpha<sp/>channel<sp/>set<sp/>to<sp/>a<sp/>scaled<sp/>mean<sp/>rms<sp/>of<sp/>the<sp/>fits.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>color_map1<sp/>is<sp/>not<sp/>null<sp/>then<sp/>it<sp/>and<sp/>color_map2<sp/>get<sp/>rect<sp/>pasted<sp/>in<sp/>them</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>with<sp/>the<sp/>two<sp/>calculated<sp/>colors,<sp/>and<sp/>rms<sp/>map<sp/>gets<sp/>a<sp/>pasted<sp/>rect<sp/>of<sp/>the<sp/>rms.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>color_map1,<sp/>color_map2<sp/>and<sp/>rms_map<sp/>are<sp/>assumed<sp/>to<sp/>be<sp/>the<sp/>same<sp/>scale<sp/>as<sp/>pix.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_image_find_1a642f61eaa3639dfe013615737ea02c41" kindref="member">ComputeRectangleColors</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_t_b_o_x" kindref="compound">TBOX</ref>&amp;<sp/>rect,<sp/>Pix*<sp/>pix,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>factor,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Pix*<sp/>color_map1,<sp/>Pix*<sp/>color_map2,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Pix*<sp/>rms_map,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="host_8h_1a458fe97f82495945f8071bb3c18d1783" kindref="member">uinT8</ref>*<sp/>color1,<sp/><ref refid="host_8h_1a458fe97f82495945f8071bb3c18d1783" kindref="member">uinT8</ref>*<sp/>color2);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Returns<sp/>true<sp/>if<sp/>there<sp/>are<sp/>no<sp/>black<sp/>pixels<sp/>in<sp/>between<sp/>the<sp/>boxes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>im_box<sp/>must<sp/>represent<sp/>the<sp/>bounding<sp/>box<sp/>of<sp/>the<sp/>pix<sp/>in<sp/>tesseract</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>coordinates,<sp/>which<sp/>may<sp/>be<sp/>negative,<sp/>due<sp/>to<sp/>rotations<sp/>to<sp/>make<sp/>the<sp/>textlines</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>horizontal.<sp/>The<sp/>boxes<sp/>are<sp/>rotated<sp/>by<sp/>rotation,<sp/>which<sp/>should<sp/>undo<sp/>such</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>rotations,<sp/>before<sp/>mapping<sp/>them<sp/>onto<sp/>the<sp/>pix.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_image_find_1a958b710c77aa2f60d139dbd50f2bb4d6" kindref="member">BlankImageInBetween</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_t_b_o_x" kindref="compound">TBOX</ref>&amp;<sp/>box1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_t_b_o_x" kindref="compound">TBOX</ref>&amp;<sp/>box2,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_t_b_o_x" kindref="compound">TBOX</ref>&amp;<sp/>im_box,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref>&amp;<sp/>rotation,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Pix*<sp/>pix);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Returns<sp/>the<sp/>number<sp/>of<sp/>pixels<sp/>in<sp/>box<sp/>in<sp/>the<sp/>pix.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>im_box<sp/>must<sp/>represent<sp/>the<sp/>bounding<sp/>box<sp/>of<sp/>the<sp/>pix<sp/>in<sp/>tesseract</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>coordinates,<sp/>which<sp/>may<sp/>be<sp/>negative,<sp/>due<sp/>to<sp/>rotations<sp/>to<sp/>make<sp/>the<sp/>textlines</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>horizontal.<sp/>The<sp/>boxes<sp/>are<sp/>rotated<sp/>by<sp/>rotation,<sp/>which<sp/>should<sp/>undo<sp/>such</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>rotations,<sp/>before<sp/>mapping<sp/>them<sp/>onto<sp/>the<sp/>pix.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_image_find_1a8b562438d65621d641ed0d7a66d60a8f" kindref="member">CountPixelsInRotatedBox</ref>(<ref refid="class_t_b_o_x" kindref="compound">TBOX</ref><sp/>box,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_t_b_o_x" kindref="compound">TBOX</ref>&amp;<sp/>im_box,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref>&amp;<sp/>rotation,<sp/>Pix*<sp/>pix);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Locates<sp/>all<sp/>the<sp/>image<sp/>partitions<sp/>in<sp/>the<sp/>part_grid,<sp/>that<sp/>were<sp/>found<sp/>by<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>previous<sp/>call<sp/>to<sp/>FindImagePartitions,<sp/>marks<sp/>them<sp/>in<sp/>the<sp/>image_mask,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>removes<sp/>them<sp/>from<sp/>the<sp/>grid,<sp/>and<sp/>deletes<sp/>them.<sp/>This<sp/>makes<sp/>it<sp/>possble<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>call<sp/>FindImagePartitions<sp/>again<sp/>to<sp/>produce<sp/>less<sp/>broken-up<sp/>and<sp/>less</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>overlapping<sp/>image<sp/>partitions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>rerotation<sp/>specifies<sp/>how<sp/>to<sp/>rotate<sp/>the<sp/>partition<sp/>coords<sp/>to<sp/>match</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>image_mask,<sp/>since<sp/>this<sp/>function<sp/>is<sp/>used<sp/>after<sp/>orientation<sp/>correction.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_image_find_1af98436ea599236937f5c013853f437df" kindref="member">TransferImagePartsToImageMask</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref>&amp;<sp/>rerotation,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtesseract_1_1_col_partition_grid" kindref="compound">ColPartitionGrid</ref>*<sp/>part_grid,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Pix*<sp/>image_mask);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Runs<sp/>a<sp/>CC<sp/>analysis<sp/>on<sp/>the<sp/>image_pix<sp/>mask<sp/>image,<sp/>and<sp/>creates</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>image<sp/>partitions<sp/>from<sp/>them,<sp/>cutting<sp/>out<sp/>strong<sp/>text,<sp/>and<sp/>merging<sp/>with</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>nearby<sp/>image<sp/>regions<sp/>such<sp/>that<sp/>they<sp/>don&apos;t<sp/>interfere<sp/>with<sp/>text.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Rotation<sp/>and<sp/>rerotation<sp/>specify<sp/>how<sp/>to<sp/>rotate<sp/>image<sp/>coords<sp/>to<sp/>match</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>blob<sp/>and<sp/>partition<sp/>coords<sp/>and<sp/>back<sp/>again.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>input/output<sp/>part_grid<sp/>owns<sp/>all<sp/>the<sp/>created<sp/>partitions,<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>partitions<sp/>own<sp/>all<sp/>the<sp/>fake<sp/>blobs<sp/>that<sp/>belong<sp/>in<sp/>the<sp/>partitions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Since<sp/>the<sp/>other<sp/>blobs<sp/>in<sp/>the<sp/>other<sp/>partitions<sp/>will<sp/>be<sp/>owned<sp/>by<sp/>the<sp/>block,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ColPartitionGrid::ReTypeBlobs<sp/>must<sp/>be<sp/>called<sp/>afterwards<sp/>to<sp/>fix<sp/>this</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>situation<sp/>and<sp/>collect<sp/>the<sp/>image<sp/>blobs.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_image_find_1aa45bf8c2f6ca0dc31e8f1ef08ffea700" kindref="member">FindImagePartitions</ref>(Pix*<sp/>image_pix,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref>&amp;<sp/>rotation,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref>&amp;<sp/>rerotation,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_t_o___b_l_o_c_k" kindref="compound">TO_BLOCK</ref>*<sp/>block,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtesseract_1_1_tab_find" kindref="compound">TabFind</ref>*<sp/>tab_grid,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtesseract_1_1_col_partition_grid" kindref="compound">ColPartitionGrid</ref>*<sp/>part_grid,</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ColPartition_LIST*<sp/>big_parts);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>tesseract.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>TESSERACT_TEXTORD_LINEFIND_H__</highlight></codeline>
+<codeline lineno="159"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/textord/imagefind.h"/>
+  </compounddef>
+</doxygen>

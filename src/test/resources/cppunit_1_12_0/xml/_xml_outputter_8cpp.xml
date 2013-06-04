@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_xml_outputter_8cpp" kind="file">
+    <compoundname>XmlOutputter.cpp</compoundname>
+    <includes local="no">cppunit/Exception.h</includes>
+    <includes local="no">cppunit/Test.h</includes>
+    <includes local="no">cppunit/TestFailure.h</includes>
+    <includes local="no">cppunit/TestResultCollector.h</includes>
+    <includes local="no">cppunit/XmlOutputter.h</includes>
+    <includes local="no">cppunit/XmlOutputterHook.h</includes>
+    <includes local="no">cppunit/tools/XmlDocument.h</includes>
+    <includes local="no">cppunit/tools/XmlElement.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">algorithm</includes>
+    <incdepgraph>
+      <node id="263">
+        <label>cppunit/tools/XmlDocument.h</label>
+      </node>
+      <node id="265">
+        <label>stdlib.h</label>
+      </node>
+      <node id="260">
+        <label>cppunit/TestResultCollector.h</label>
+      </node>
+      <node id="259">
+        <label>cppunit/TestFailure.h</label>
+      </node>
+      <node id="256">
+        <label>src/cppunit/XmlOutputter.cpp</label>
+        <link refid="XmlOutputter.cpp"/>
+        <childnode refid="257" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="260" relation="include">
+        </childnode>
+        <childnode refid="261" relation="include">
+        </childnode>
+        <childnode refid="262" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="265" relation="include">
+        </childnode>
+        <childnode refid="266" relation="include">
+        </childnode>
+      </node>
+      <node id="261">
+        <label>cppunit/XmlOutputter.h</label>
+      </node>
+      <node id="257">
+        <label>cppunit/Exception.h</label>
+      </node>
+      <node id="262">
+        <label>cppunit/XmlOutputterHook.h</label>
+      </node>
+      <node id="264">
+        <label>cppunit/tools/XmlElement.h</label>
+      </node>
+      <node id="258">
+        <label>cppunit/Test.h</label>
+      </node>
+      <node id="266">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;cppunit/Exception.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cppunit/Test.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cppunit/TestFailure.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cppunit/TestResultCollector.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cppunit/XmlOutputter.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cppunit/XmlOutputterHook.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cppunit/tools/XmlDocument.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cppunit/tools/XmlElement.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">CPPUNIT_NS_BEGIN</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">XmlOutputter::XmlOutputter(<sp/>TestResultCollector<sp/>*result,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OStream<sp/>&amp;stream,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>encoding<sp/>)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>:<sp/>m_result(<sp/>result<sp/>)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>,<sp/>m_stream(<sp/>stream<sp/>)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>,<sp/>m_xml(<sp/>new<sp/>XmlDocument(<sp/>encoding<sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">XmlOutputter::‾XmlOutputter()</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_xml;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">XmlOutputter::addHook(<sp/>XmlOutputterHook<sp/>*hook<sp/>)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>m_hooks.push_back(<sp/>hook<sp/>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">XmlOutputter::removeHook(<sp/>XmlOutputterHook<sp/>*hook<sp/>)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>m_hooks.erase(<sp/>std::find(<sp/>m_hooks.begin(),<sp/>m_hooks.end(),<sp/>hook<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">XmlOutputter::write()</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>setRootNode();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>m_stream<sp/><sp/>&lt;&lt;<sp/><sp/>m_xml-&gt;toString();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">XmlOutputter::setStyleSheet(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;styleSheet<sp/>)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>m_xml-&gt;setStyleSheet(<sp/>styleSheet<sp/>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">XmlOutputter::setStandalone(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>standalone<sp/>)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>m_xml-&gt;setStandalone(<sp/>standalone<sp/>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">XmlOutputter::setRootNode()</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>XmlElement<sp/>*rootNode<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>XmlElement(<sp/></highlight><highlight class="stringliteral">&quot;TestRun&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>m_xml-&gt;setRootElement(<sp/>rootNode<sp/>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>Hooks::iterator<sp/>it<sp/>=<sp/>m_hooks.begin();<sp/>it<sp/>!=<sp/>m_hooks.end();<sp/>++it<sp/>)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>(*it)-&gt;beginDocument(<sp/>m_xml<sp/>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>FailedTests<sp/>failedTests;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>fillFailedTestsMap(<sp/>failedTests<sp/>);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>addFailedTests(<sp/>failedTests,<sp/>rootNode<sp/>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>addSuccessfulTests(<sp/>failedTests,<sp/>rootNode<sp/>);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>addStatistics(<sp/>rootNode<sp/>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>Hooks::iterator<sp/>itEnd<sp/>=<sp/>m_hooks.begin();<sp/>itEnd<sp/>!=<sp/>m_hooks.end();<sp/>++itEnd<sp/>)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>(*itEnd)-&gt;endDocument(<sp/>m_xml<sp/>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal">XmlOutputter::fillFailedTestsMap(<sp/>FailedTests<sp/>&amp;failedTests<sp/>)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TestResultCollector::TestFailures<sp/>&amp;failures<sp/>=<sp/>m_result-&gt;failures();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>TestResultCollector::TestFailures::const_iterator<sp/>itFailure<sp/>=<sp/>failures.begin();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>itFailure<sp/>!=<sp/>failures.end()<sp/>)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>TestFailure<sp/>*failure<sp/>=<sp/>*itFailure++;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>failedTests.insert(<sp/>std::pair&lt;Test*<sp/>const,<sp/>TestFailure*&gt;(failure-&gt;failedTest(),<sp/>failure<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">XmlOutputter::addFailedTests(<sp/>FailedTests<sp/>&amp;failedTests,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>XmlElement<sp/>*rootNode<sp/>)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>XmlElement<sp/>*testsNode<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>XmlElement(<sp/></highlight><highlight class="stringliteral">&quot;FailedTests&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>rootNode-&gt;addElement(<sp/>testsNode<sp/>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TestResultCollector::Tests<sp/>&amp;tests<sp/>=<sp/>m_result-&gt;tests();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>testNumber<sp/>=<sp/>0;<sp/>testNumber<sp/>&lt;<sp/>tests.size();<sp/>++testNumber<sp/>)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>Test<sp/>*test<sp/>=<sp/>tests[testNumber];</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>failedTests.find(<sp/>test<sp/>)<sp/>!=<sp/>failedTests.end()<sp/>)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addFailedTest(<sp/>test,<sp/>failedTests[test],<sp/>testNumber+1,<sp/>testsNode<sp/>);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal">XmlOutputter::addSuccessfulTests(<sp/>FailedTests<sp/>&amp;failedTests,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>XmlElement<sp/>*rootNode<sp/>)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>XmlElement<sp/>*testsNode<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>XmlElement(<sp/></highlight><highlight class="stringliteral">&quot;SuccessfulTests&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>rootNode-&gt;addElement(<sp/>testsNode<sp/>);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TestResultCollector::Tests<sp/>&amp;tests<sp/>=<sp/>m_result-&gt;tests();</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>testNumber<sp/>=<sp/>0;<sp/>testNumber<sp/>&lt;<sp/>tests.size();<sp/>++testNumber<sp/>)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>Test<sp/>*test<sp/>=<sp/>tests[testNumber];</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>failedTests.find(<sp/>test<sp/>)<sp/>==<sp/>failedTests.end()<sp/>)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>addSuccessfulTest(<sp/>test,<sp/>testNumber+1,<sp/>testsNode<sp/>);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal">XmlOutputter::addStatistics(<sp/>XmlElement<sp/>*rootNode<sp/>)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>XmlElement<sp/>*statisticsElement<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>XmlElement(<sp/></highlight><highlight class="stringliteral">&quot;Statistics&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>rootNode-&gt;addElement(<sp/>statisticsElement<sp/>);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>statisticsElement-&gt;addElement(<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>XmlElement(<sp/></highlight><highlight class="stringliteral">&quot;Tests&quot;</highlight><highlight class="normal">,<sp/>m_result-&gt;runTests()<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>statisticsElement-&gt;addElement(<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>XmlElement(<sp/></highlight><highlight class="stringliteral">&quot;FailuresTotal&quot;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_result-&gt;testFailuresTotal()<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>statisticsElement-&gt;addElement(<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>XmlElement(<sp/></highlight><highlight class="stringliteral">&quot;Errors&quot;</highlight><highlight class="normal">,<sp/>m_result-&gt;testErrors()<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>statisticsElement-&gt;addElement(<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>XmlElement(<sp/></highlight><highlight class="stringliteral">&quot;Failures&quot;</highlight><highlight class="normal">,<sp/>m_result-&gt;testFailures()<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>Hooks::iterator<sp/>it<sp/>=<sp/>m_hooks.begin();<sp/>it<sp/>!=<sp/>m_hooks.end();<sp/>++it<sp/>)</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>(*it)-&gt;statisticsAdded(<sp/>m_xml,<sp/>statisticsElement<sp/>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal">XmlOutputter::addFailedTest(<sp/>Test<sp/>*test,</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TestFailure<sp/>*failure,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>testNumber,</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>XmlElement<sp/>*testsNode<sp/>)</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>Exception<sp/>*thrownException<sp/>=<sp/>failure-&gt;thrownException();</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>XmlElement<sp/>*testElement<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>XmlElement(<sp/></highlight><highlight class="stringliteral">&quot;FailedTest&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>testsNode-&gt;addElement(<sp/>testElement<sp/>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>testElement-&gt;addAttribute(<sp/></highlight><highlight class="stringliteral">&quot;id&quot;</highlight><highlight class="normal">,<sp/>testNumber<sp/>);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>testElement-&gt;addElement(<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>XmlElement(<sp/></highlight><highlight class="stringliteral">&quot;Name&quot;</highlight><highlight class="normal">,<sp/>test-&gt;getName()<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>testElement-&gt;addElement(<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>XmlElement(<sp/></highlight><highlight class="stringliteral">&quot;FailureType&quot;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>failure-&gt;isError()<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;Error&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Assertion&quot;</highlight><highlight class="normal"><sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>failure-&gt;sourceLine().isValid()<sp/>)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>addFailureLocation(<sp/>failure,<sp/>testElement<sp/>);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>testElement-&gt;addElement(<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>XmlElement(<sp/></highlight><highlight class="stringliteral">&quot;Message&quot;</highlight><highlight class="normal">,<sp/>thrownException-&gt;what()<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>Hooks::iterator<sp/>it<sp/>=<sp/>m_hooks.begin();<sp/>it<sp/>!=<sp/>m_hooks.end();<sp/>++it<sp/>)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>(*it)-&gt;failTestAdded(<sp/>m_xml,<sp/>testElement,<sp/>test,<sp/>failure<sp/>);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal">XmlOutputter::addFailureLocation(<sp/>TestFailure<sp/>*failure,</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>XmlElement<sp/>*testElement<sp/>)</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/>XmlElement<sp/>*locationNode<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>XmlElement(<sp/></highlight><highlight class="stringliteral">&quot;Location&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>testElement-&gt;addElement(<sp/>locationNode<sp/>);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>SourceLine<sp/>sourceLine<sp/>=<sp/>failure-&gt;sourceLine();</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/>locationNode-&gt;addElement(<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>XmlElement(<sp/></highlight><highlight class="stringliteral">&quot;File&quot;</highlight><highlight class="normal">,<sp/>sourceLine.fileName()<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/>locationNode-&gt;addElement(<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>XmlElement(<sp/></highlight><highlight class="stringliteral">&quot;Line&quot;</highlight><highlight class="normal">,<sp/>sourceLine.lineNumber()<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal">XmlOutputter::addSuccessfulTest(<sp/>Test<sp/>*test,<sp/></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>testNumber,</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>XmlElement<sp/>*testsNode<sp/>)</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/>XmlElement<sp/>*testElement<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>XmlElement(<sp/></highlight><highlight class="stringliteral">&quot;Test&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/>testsNode-&gt;addElement(<sp/>testElement<sp/>);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/>testElement-&gt;addAttribute(<sp/></highlight><highlight class="stringliteral">&quot;id&quot;</highlight><highlight class="normal">,<sp/>testNumber<sp/>);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/>testElement-&gt;addElement(<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>XmlElement(<sp/></highlight><highlight class="stringliteral">&quot;Name&quot;</highlight><highlight class="normal">,<sp/>test-&gt;getName()<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>Hooks::iterator<sp/>it<sp/>=<sp/>m_hooks.begin();<sp/>it<sp/>!=<sp/>m_hooks.end();<sp/>++it<sp/>)</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>(*it)-&gt;successfulTestAdded(<sp/>m_xml,<sp/>testElement,<sp/>test<sp/>);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal">CPPUNIT_NS_END</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/XmlOutputter.cpp"/>
+  </compounddef>
+</doxygen>

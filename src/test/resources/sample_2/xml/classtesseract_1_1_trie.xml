@@ -1,0 +1,1312 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_trie" kind="class" prot="public">
+    <compoundname>tesseract::Trie</compoundname>
+    <basecompoundref refid="classtesseract_1_1_dawg" prot="public" virt="non-virtual">tesseract::Dawg</basecompoundref>
+    <includes refid="trie_8h" local="no">trie.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classtesseract_1_1_trie_1a920adf78e22cbdb661e0c2aef58a8c80" prot="public" static="no">
+        <name>RTLReversePolicy</name>
+        <enumvalue id="classtesseract_1_1_trie_1a920adf78e22cbdb661e0c2aef58a8c80ae8a8310ee84c647dc1f9a4f289a0dc8b" prot="public">
+          <name>RRP_DO_NO_REVERSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtesseract_1_1_trie_1a920adf78e22cbdb661e0c2aef58a8c80aebb1e29c59c60c902106a61853e183e3" prot="public">
+          <name>RRP_REVERSE_IF_HAS_RTL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtesseract_1_1_trie_1a920adf78e22cbdb661e0c2aef58a8c80af7ddb14bc4c549b47f4b1b32f3c284f2" prot="public">
+          <name>RRP_FORCE_REVERSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="64" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="64" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_trie_1af3cc86948eeedc1f4a32835bb0723eb7" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::Trie::kSaneNumConcreteChars</definition>
+        <argsstring></argsstring>
+        <name>kSaneNumConcreteChars</name>
+        <initializer>= 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="71" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_trie_1accb2db10883874ef33e8fc10485d233d" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char tesseract::Trie::kAlphaPatternUnicode</definition>
+        <argsstring>[]</argsstring>
+        <name>kAlphaPatternUnicode</name>
+        <initializer>= &quot;\u2000&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="75" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_trie_1a5bfe332d0b72fdf02e06fa22aa997f4e" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char tesseract::Trie::kDigitPatternUnicode</definition>
+        <argsstring>[]</argsstring>
+        <name>kDigitPatternUnicode</name>
+        <initializer>= &quot;\u2001&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="76" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_trie_1a1e9b435df559db4d5b609ea597af5db9" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char tesseract::Trie::kAlphanumPatternUnicode</definition>
+        <argsstring>[]</argsstring>
+        <name>kAlphanumPatternUnicode</name>
+        <initializer>= &quot;\u2002&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="77" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_trie_1a8e0965655cc0eb3df2325ba15af9b6e6" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char tesseract::Trie::kPuncPatternUnicode</definition>
+        <argsstring>[]</argsstring>
+        <name>kPuncPatternUnicode</name>
+        <initializer>= &quot;\u2003&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="78" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_trie_1a17ea14c41c90b5c16daf49a0d4ae05fa" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char tesseract::Trie::kLowerPatternUnicode</definition>
+        <argsstring>[]</argsstring>
+        <name>kLowerPatternUnicode</name>
+        <initializer>= &quot;\u2004&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="79" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_trie_1a37a2d83dfea61a9ed42c71fce82d2650" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char tesseract::Trie::kUpperPatternUnicode</definition>
+        <argsstring>[]</argsstring>
+        <name>kUpperPatternUnicode</name>
+        <initializer>= &quot;\u2005&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="80" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_trie_1a33827eeb84a5847af8fa6ba9e4e64844" prot="protected" static="no" mutable="no">
+        <type><ref refid="trie_8h_1a20d5be7dac21807f513ecaf1efcd4594" kindref="member">TRIE_NODES</ref></type>
+        <definition>TRIE_NODES tesseract::Trie::nodes_</definition>
+        <argsstring></argsstring>
+        <name>nodes_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="395" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="395" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_trie_1ab0b71a3889baa598365cde4f5c9d1078" prot="protected" static="no" mutable="no">
+        <type><ref refid="host_8h_1a7b5288262772176824620c2fb01a0abc" kindref="member">uinT64</ref></type>
+        <definition>uinT64 tesseract::Trie::num_edges_</definition>
+        <argsstring></argsstring>
+        <name>num_edges_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="396" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="396" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_trie_1abcc7db0ede4b8657e021f90c2966677f" prot="protected" static="no" mutable="no">
+        <type><ref refid="host_8h_1a7b5288262772176824620c2fb01a0abc" kindref="member">uinT64</ref></type>
+        <definition>uinT64 tesseract::Trie::max_num_edges_</definition>
+        <argsstring></argsstring>
+        <name>max_num_edges_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="397" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_trie_1adb2947aaf4be6fad2801721f7b7bdf2e" prot="protected" static="no" mutable="no">
+        <type><ref refid="host_8h_1a7b5288262772176824620c2fb01a0abc" kindref="member">uinT64</ref></type>
+        <definition>uinT64 tesseract::Trie::deref_direction_mask_</definition>
+        <argsstring></argsstring>
+        <name>deref_direction_mask_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="398" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="398" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_trie_1ad0be857bc98cecc809dcbbbb207a867e" prot="protected" static="no" mutable="no">
+        <type><ref refid="host_8h_1a7b5288262772176824620c2fb01a0abc" kindref="member">uinT64</ref></type>
+        <definition>uinT64 tesseract::Trie::deref_node_index_mask_</definition>
+        <argsstring></argsstring>
+        <name>deref_node_index_mask_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="399" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="399" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_trie_1a1705accff61ce96e5491d99eb177f55c" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool tesseract::Trie::initialized_patterns_</definition>
+        <argsstring></argsstring>
+        <name>initialized_patterns_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="402" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="402" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_trie_1a01dba4e633d98d8bdddebeeb4b6240fd" prot="protected" static="no" mutable="no">
+        <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+        <definition>UNICHAR_ID tesseract::Trie::alpha_pattern_</definition>
+        <argsstring></argsstring>
+        <name>alpha_pattern_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="403" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_trie_1a38439594c671a06605349f781e2d1c2c" prot="protected" static="no" mutable="no">
+        <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+        <definition>UNICHAR_ID tesseract::Trie::digit_pattern_</definition>
+        <argsstring></argsstring>
+        <name>digit_pattern_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="404" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_trie_1a855761cc68c5bb75e792a2587fc24d2a" prot="protected" static="no" mutable="no">
+        <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+        <definition>UNICHAR_ID tesseract::Trie::alphanum_pattern_</definition>
+        <argsstring></argsstring>
+        <name>alphanum_pattern_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="405" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_trie_1a7533c8651890d62e6b0d678ed7155cb4" prot="protected" static="no" mutable="no">
+        <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+        <definition>UNICHAR_ID tesseract::Trie::punc_pattern_</definition>
+        <argsstring></argsstring>
+        <name>punc_pattern_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="406" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_trie_1a5a4f976d9be06ec5a7e7dcbe6cc12a88" prot="protected" static="no" mutable="no">
+        <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+        <definition>UNICHAR_ID tesseract::Trie::lower_pattern_</definition>
+        <argsstring></argsstring>
+        <name>lower_pattern_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="407" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_trie_1a6a9287a8e75f94462c17b13966ed2669" prot="protected" static="no" mutable="no">
+        <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+        <definition>UNICHAR_ID tesseract::Trie::upper_pattern_</definition>
+        <argsstring></argsstring>
+        <name>upper_pattern_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="408" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classtesseract_1_1_trie_1abd47ba165316b0d3218a61af590ddc25" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * tesseract::Trie::get_reverse_policy_name</definition>
+        <argsstring>(RTLReversePolicy reverse_policy)</argsstring>
+        <name>get_reverse_policy_name</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_trie_1a920adf78e22cbdb661e0c2aef58a8c80" kindref="member">RTLReversePolicy</ref></type>
+          <declname>reverse_policy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="82" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.cpp" bodystart="60" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_trie_1aa7181b957e2250479cf14afe86b0ec63" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Trie::Trie</definition>
+        <argsstring>(DawgType type, const STRING &amp;lang, PermuterType perm, uinT64 max_num_edges, int unicharset_size, int debug_level)</argsstring>
+        <name>Trie</name>
+        <param>
+          <type><ref refid="namespacetesseract_1a07c41f251f1782c60df4e626c35d2151" kindref="member">DawgType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_s_t_r_i_n_g" kindref="compound">STRING</ref> &amp;</type>
+          <declname>lang</declname>
+        </param>
+        <param>
+          <type>PermuterType</type>
+          <declname>perm</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a7b5288262772176824620c2fb01a0abc" kindref="member">uinT64</ref></type>
+          <declname>max_num_edges</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>unicharset_size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>debug_level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="89" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="89" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a0e0b2e5e68fa4a134b371d073ad9b2d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual tesseract::Trie::~Trie</definition>
+        <argsstring>()</argsstring>
+        <name>~Trie</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="98" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="98" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a344c89fd53c0773ff274848e0cd26e17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Trie::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="101" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.cpp" bodystart="65" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1ade0ed371c5aa6f137fdbdb485c617eba" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+        <definition>EDGE_REF tesseract::Trie::edge_char_of</definition>
+        <argsstring>(NODE_REF node_ref, UNICHAR_ID unichar_id, bool word_end) const </argsstring>
+        <name>edge_char_of</name>
+        <reimplements refid="classtesseract_1_1_dawg_1ad75874486a2a4d1f104df83ecb9fa321">edge_char_of</reimplements>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>node_ref</declname>
+        </param>
+        <param>
+          <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+          <declname>unichar_id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>word_end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the edge that corresponds to the letter out of this node. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="104" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="104" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1ae29335b9ec1836a58dfb4425c635c708" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void tesseract::Trie::unichar_ids_of</definition>
+        <argsstring>(NODE_REF node, NodeChildVector *vec) const </argsstring>
+        <name>unichar_ids_of</name>
+        <reimplements refid="classtesseract_1_1_dawg_1ac4b22fb6918a0f9e9b98eb4721cbba33">unichar_ids_of</reimplements>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1a5084886f7cd9adefa73d03111d92f593" kindref="member">NodeChildVector</ref> *</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fills the given NodeChildVector with all the unichar ids (and the corresponding EDGE_REFs) for which there is an edge out of this node. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="117" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="117" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a6dcd5c5eafcddd03ee64abd1ec42d4c0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+        <definition>NODE_REF tesseract::Trie::next_node</definition>
+        <argsstring>(EDGE_REF edge_ref) const </argsstring>
+        <name>next_node</name>
+        <reimplements refid="classtesseract_1_1_dawg_1ae68706a55d86637dec1da9615effb659">next_node</reimplements>
+        <param>
+          <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+          <declname>edge_ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the next node visited by following the edge indicated by the given EDGE_REF. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="130" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="130" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a42ba6f54332148febd38a426c42b403a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::Trie::end_of_word</definition>
+        <argsstring>(EDGE_REF edge_ref) const </argsstring>
+        <name>end_of_word</name>
+        <reimplements refid="classtesseract_1_1_dawg_1a4b81cd795923fc21e8a0f9ea9a1f8626">end_of_word</reimplements>
+        <param>
+          <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+          <declname>edge_ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true if the edge indicated by the given EDGE_REF marks the end of a word. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="139" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="139" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a77b23425f9a6dab9a96de9b6d173d0b9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+        <definition>UNICHAR_ID tesseract::Trie::edge_letter</definition>
+        <argsstring>(EDGE_REF edge_ref) const </argsstring>
+        <name>edge_letter</name>
+        <reimplements refid="classtesseract_1_1_dawg_1aeb12fee19d228b6225a495c9c115a77e">edge_letter</reimplements>
+        <param>
+          <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+          <declname>edge_ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns UNICHAR_ID stored in the edge indicated by the given EDGE_REF. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="145" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="145" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a38abf00b13ad917570c6cb3226ceb74d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void tesseract::Trie::print_node</definition>
+        <argsstring>(NODE_REF node, int max_num_edges) const </argsstring>
+        <name>print_node</name>
+        <reimplements refid="classtesseract_1_1_dawg_1aa9e379edd04453122e805d9266f8f21c">print_node</reimplements>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_num_edges</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints the contents of the node indicated by the given NODE_REF. At most max_num_edges will be printed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="152" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.cpp" bodystart="648" bodyend="671"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a434d71a349e7c6e7d1a239b0b71064de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtesseract_1_1_squished_dawg" kindref="compound">SquishedDawg</ref> *</type>
+        <definition>SquishedDawg * tesseract::Trie::trie_to_dawg</definition>
+        <argsstring>()</argsstring>
+        <name>trie_to_dawg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="158" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.cpp" bodystart="465" bodyend="510"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a6c611d36dee495e8954a783abe567727" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::Trie::read_word_list</definition>
+        <argsstring>(const char *filename, const UNICHARSET &amp;unicharset, Trie::RTLReversePolicy reverse)</argsstring>
+        <name>read_word_list</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_u_n_i_c_h_a_r_s_e_t" kindref="compound">UNICHARSET</ref> &amp;</type>
+          <declname>unicharset</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_trie_1a920adf78e22cbdb661e0c2aef58a8c80" kindref="member">Trie::RTLReversePolicy</ref></type>
+          <declname>reverse</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="163" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.cpp" bodystart="268" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a5e75fe75d1803bd3f5e18d423b7b8f1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::Trie::read_pattern_list</definition>
+        <argsstring>(const char *filename, const UNICHARSET &amp;unicharset)</argsstring>
+        <name>read_pattern_list</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_u_n_i_c_h_a_r_s_e_t" kindref="compound">UNICHARSET</ref> &amp;</type>
+          <declname>unicharset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="208" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.cpp" bodystart="364" bodyend="444"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a32fd568d04d81e5d5a7e30aac9b82daa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Trie::initialize_patterns</definition>
+        <argsstring>(UNICHARSET *unicharset)</argsstring>
+        <name>initialize_patterns</name>
+        <param>
+          <type><ref refid="class_u_n_i_c_h_a_r_s_e_t" kindref="compound">UNICHARSET</ref> *</type>
+          <declname>unicharset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="212" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.cpp" bodystart="307" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a6f0727490d09b82d4b60a7a96191e832" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void tesseract::Trie::unichar_id_to_patterns</definition>
+        <argsstring>(UNICHAR_ID unichar_id, const UNICHARSET &amp;unicharset, GenericVector&lt; UNICHAR_ID &gt; *vec) const </argsstring>
+        <name>unichar_id_to_patterns</name>
+        <reimplements refid="classtesseract_1_1_dawg_1a117058973cbddfa66e92ef13474a464a">unichar_id_to_patterns</reimplements>
+        <param>
+          <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+          <declname>unichar_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_u_n_i_c_h_a_r_s_e_t" kindref="compound">UNICHARSET</ref> &amp;</type>
+          <declname>unicharset</declname>
+        </param>
+        <param>
+          <type><ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; <ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref> &gt; *</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fills vec with unichar ids that represent the character classes of the given unichar_id. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="216" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.cpp" bodystart="324" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a6addef8f1c5d6ca6302db5280993dfdd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+        <definition>virtual EDGE_REF tesseract::Trie::pattern_loop_edge</definition>
+        <argsstring>(EDGE_REF edge_ref, UNICHAR_ID unichar_id, bool word_end) const </argsstring>
+        <name>pattern_loop_edge</name>
+        <reimplements refid="classtesseract_1_1_dawg_1ace2f07e3a3ed7779426d42080c9c5bad">pattern_loop_edge</reimplements>
+        <param>
+          <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+          <declname>edge_ref</declname>
+        </param>
+        <param>
+          <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+          <declname>unichar_id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>word_end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the given EDGE_REF if the EDGE_RECORD that it points to has a self loop and the given unichar_id matches the unichar_id stored in the EDGE_RECORD, returns NO_EDGE otherwise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="223" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="223" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1abafc5803b471a28d781ffc74d7a2f652" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::Trie::add_word_to_dawg</definition>
+        <argsstring>(const WERD_CHOICE &amp;word, const GenericVector&lt; bool &gt; *repetitions)</argsstring>
+        <name>add_word_to_dawg</name>
+        <param>
+          <type>const <ref refid="class_w_e_r_d___c_h_o_i_c_e" kindref="compound">WERD_CHOICE</ref> &amp;</type>
+          <declname>word</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; bool &gt; *</type>
+          <declname>repetitions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="243" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.cpp" bodystart="173" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a5e7ede39bc02eba399d7a5e5062a73ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::Trie::add_word_to_dawg</definition>
+        <argsstring>(const WERD_CHOICE &amp;word)</argsstring>
+        <name>add_word_to_dawg</name>
+        <param>
+          <type>const <ref refid="class_w_e_r_d___c_h_o_i_c_e" kindref="compound">WERD_CHOICE</ref> &amp;</type>
+          <declname>word</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="245" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="245" bodyend="247"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a3dd5b782303e745c4818936246663f61" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dawg_8h_1a04b50b4c4f290148d1bee82f401a31fa" kindref="member">EDGE_RECORD</ref> *</type>
+        <definition>EDGE_RECORD* tesseract::Trie::deref_edge_ref</definition>
+        <argsstring>(EDGE_REF edge_ref) const </argsstring>
+        <name>deref_edge_ref</name>
+        <param>
+          <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+          <declname>edge_ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="267" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="267" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a3e0402ddf1740d6ce9c29c2657f52655" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+        <definition>EDGE_REF tesseract::Trie::make_edge_ref</definition>
+        <argsstring>(NODE_REF node_index, EDGE_INDEX edge_index) const </argsstring>
+        <name>make_edge_ref</name>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>node_index</declname>
+        </param>
+        <param>
+          <type><ref refid="trie_8h_1adc7fb154cd5e9ffd8581b037e614d591" kindref="member">EDGE_INDEX</ref></type>
+          <declname>edge_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs EDGE_REF from the given node_index and edge_index. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="276" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="276" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a0efb447c693077c00d4c793acb760e52" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Trie::link_edge</definition>
+        <argsstring>(EDGE_RECORD *edge, NODE_REF nxt, bool repeats, int direction, bool word_end, UNICHAR_ID unichar_id)</argsstring>
+        <name>link_edge</name>
+        <param>
+          <type><ref refid="dawg_8h_1a04b50b4c4f290148d1bee82f401a31fa" kindref="member">EDGE_RECORD</ref> *</type>
+          <declname>edge</declname>
+        </param>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>nxt</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>repeats</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>direction</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>word_end</declname>
+        </param>
+        <param>
+          <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+          <declname>unichar_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets up this edge record to the requested values. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="282" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="282" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a1705a4d141922e55fa5b09f67b33301f" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Trie::print_edge_rec</definition>
+        <argsstring>(const EDGE_RECORD &amp;edge_rec) const </argsstring>
+        <name>print_edge_rec</name>
+        <param>
+          <type>const <ref refid="dawg_8h_1a04b50b4c4f290148d1bee82f401a31fa" kindref="member">EDGE_RECORD</ref> &amp;</type>
+          <declname>edge_rec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints the given EDGE_RECORD. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="293" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="293" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1ae0fcbf55e0568a52bc5eeb7c42aff18e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::Trie::can_be_eliminated</definition>
+        <argsstring>(const EDGE_RECORD &amp;edge_rec)</argsstring>
+        <name>can_be_eliminated</name>
+        <param>
+          <type>const <ref refid="dawg_8h_1a04b50b4c4f290148d1bee82f401a31fa" kindref="member">EDGE_RECORD</ref> &amp;</type>
+          <declname>edge_rec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="302" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="302" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a34ed0e1ea9fce2a12bb02a61e166a784" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Trie::print_all</definition>
+        <argsstring>(const char *msg, int max_num_edges)</argsstring>
+        <name>print_all</name>
+        <param>
+          <type>const char *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_num_edges</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="310" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="310" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a473630c55293c37f9afd63cfc8fd79ee" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::Trie::edge_char_of</definition>
+        <argsstring>(NODE_REF node_ref, NODE_REF next_node, int direction, bool word_end, UNICHAR_ID unichar_id, EDGE_RECORD **edge_ptr, EDGE_INDEX *edge_index) const </argsstring>
+        <name>edge_char_of</name>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>node_ref</declname>
+        </param>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>next_node</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>direction</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>word_end</declname>
+        </param>
+        <param>
+          <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+          <declname>unichar_id</declname>
+        </param>
+        <param>
+          <type><ref refid="dawg_8h_1a04b50b4c4f290148d1bee82f401a31fa" kindref="member">EDGE_RECORD</ref> **</type>
+          <declname>edge_ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="trie_8h_1adc7fb154cd5e9ffd8581b037e614d591" kindref="member">EDGE_INDEX</ref> *</type>
+          <declname>edge_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="320" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.cpp" bodystart="72" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a43827367f1b019273a399f03ecaf9c6d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::Trie::add_edge_linkage</definition>
+        <argsstring>(NODE_REF node1, NODE_REF node2, bool repeats, int direction, bool word_end, UNICHAR_ID unichar_id)</argsstring>
+        <name>add_edge_linkage</name>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>node1</declname>
+        </param>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>node2</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>repeats</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>direction</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>word_end</declname>
+        </param>
+        <param>
+          <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+          <declname>unichar_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="326" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.cpp" bodystart="123" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a2bdf4197cdfb791df18dd373804d3372" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::Trie::add_new_edge</definition>
+        <argsstring>(NODE_REF node1, NODE_REF node2, bool repeats, bool word_end, UNICHAR_ID unichar_id)</argsstring>
+        <name>add_new_edge</name>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>node1</declname>
+        </param>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>node2</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>repeats</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>word_end</declname>
+        </param>
+        <param>
+          <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+          <declname>unichar_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="332" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="332" bodyend="338"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1affb7341ac1fa928396b525565ef6d625" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Trie::add_word_ending</definition>
+        <argsstring>(EDGE_RECORD *edge, NODE_REF the_next_node, bool repeats, UNICHAR_ID unichar_id)</argsstring>
+        <name>add_word_ending</name>
+        <param>
+          <type><ref refid="dawg_8h_1a04b50b4c4f290148d1bee82f401a31fa" kindref="member">EDGE_RECORD</ref> *</type>
+          <declname>edge</declname>
+        </param>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>the_next_node</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>repeats</declname>
+        </param>
+        <param>
+          <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+          <declname>unichar_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="342" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.cpp" bodystart="156" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1adb83b76780ee631a66db075a043205fc" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+        <definition>NODE_REF tesseract::Trie::new_dawg_node</definition>
+        <argsstring>()</argsstring>
+        <name>new_dawg_node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="348" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.cpp" bodystart="261" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a7c6ee32ebb143eea68aeaf16dfc1edfd" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Trie::remove_edge_linkage</definition>
+        <argsstring>(NODE_REF node1, NODE_REF node2, int direction, bool word_end, UNICHAR_ID unichar_id)</argsstring>
+        <name>remove_edge_linkage</name>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>node1</declname>
+        </param>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>node2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>direction</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>word_end</declname>
+        </param>
+        <param>
+          <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+          <declname>unichar_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="352" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.cpp" bodystart="446" bodyend="463"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a257f7036f5799ec557d56570686a4cb8" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Trie::remove_edge</definition>
+        <argsstring>(NODE_REF node1, NODE_REF node2, bool word_end, UNICHAR_ID unichar_id)</argsstring>
+        <name>remove_edge</name>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>node1</declname>
+        </param>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>node2</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>word_end</declname>
+        </param>
+        <param>
+          <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+          <declname>unichar_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="357" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="357" bodyend="361"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a33de60074d1ede69f4a17be28b1c03c8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::Trie::eliminate_redundant_edges</definition>
+        <argsstring>(NODE_REF node, const EDGE_RECORD &amp;edge1, const EDGE_RECORD &amp;edge2)</argsstring>
+        <name>eliminate_redundant_edges</name>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dawg_8h_1a04b50b4c4f290148d1bee82f401a31fa" kindref="member">EDGE_RECORD</ref> &amp;</type>
+          <declname>edge1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="dawg_8h_1a04b50b4c4f290148d1bee82f401a31fa" kindref="member">EDGE_RECORD</ref> &amp;</type>
+          <declname>edge2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="366" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.cpp" bodystart="512" bodyend="561"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a32561d4a203cd179f7d8310be7eadb68" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::Trie::reduce_lettered_edges</definition>
+        <argsstring>(EDGE_INDEX edge_index, UNICHAR_ID unichar_id, NODE_REF node, const EDGE_VECTOR &amp;backward_edges, NODE_MARKER reduced_nodes)</argsstring>
+        <name>reduce_lettered_edges</name>
+        <param>
+          <type><ref refid="trie_8h_1adc7fb154cd5e9ffd8581b037e614d591" kindref="member">EDGE_INDEX</ref></type>
+          <declname>edge_index</declname>
+        </param>
+        <param>
+          <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+          <declname>unichar_id</declname>
+        </param>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const <ref refid="trie_8h_1a2843c489332ffcd2f48572974d9244ad" kindref="member">EDGE_VECTOR</ref> &amp;</type>
+          <declname>backward_edges</declname>
+        </param>
+        <param>
+          <type><ref refid="trie_8h_1a48a570537b653a890670d576f8d314cf" kindref="member">NODE_MARKER</ref></type>
+          <declname>reduced_nodes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="374" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.cpp" bodystart="563" bodyend="596"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a83dff0c6f9e38ecc02eae8c4ae0ba041" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Trie::sort_edges</definition>
+        <argsstring>(EDGE_VECTOR *edges)</argsstring>
+        <name>sort_edges</name>
+        <param>
+          <type><ref refid="trie_8h_1a2843c489332ffcd2f48572974d9244ad" kindref="member">EDGE_VECTOR</ref> *</type>
+          <declname>edges</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Order num_edges of consequtive EDGE_RECORDS in the given EDGE_VECTOR in increasing order of unichar ids. This function is normally called for all edges in a single node, and since number of edges in each node is usually quite small, selection sort is used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="386" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.cpp" bodystart="598" bodyend="613"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1a65c0034f258b73575a13e0f53759ca80" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Trie::reduce_node_input</definition>
+        <argsstring>(NODE_REF node, NODE_MARKER reduced_nodes)</argsstring>
+        <name>reduce_node_input</name>
+        <param>
+          <type><ref refid="dawg_8h_1ac76aca11806fd7167c274dc45b7f7fe8" kindref="member">NODE_REF</ref></type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type><ref refid="trie_8h_1a48a570537b653a890670d576f8d314cf" kindref="member">NODE_MARKER</ref></type>
+          <declname>reduced_nodes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Eliminates any redundant edges from this node in the <ref refid="classtesseract_1_1_trie" kindref="compound">Trie</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="389" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.cpp" bodystart="615" bodyend="646"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_trie_1ab3bd9782abfe9da25e01ced2bcc5000e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="unichar_8h_1a8578b19fa1ff5ca75080db1a18ecc32e" kindref="member">UNICHAR_ID</ref></type>
+        <definition>UNICHAR_ID tesseract::Trie::character_class_to_pattern</definition>
+        <argsstring>(char ch)</argsstring>
+        <name>character_class_to_pattern</name>
+        <param>
+          <type>char</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="392" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.cpp" bodystart="346" bodyend="362"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Concrete class for <ref refid="classtesseract_1_1_trie" kindref="compound">Trie</ref> data structure that allows to store a list of words (extends <ref refid="classtesseract_1_1_dawg" kindref="compound">Dawg</ref> base class) as well as dynamically add new words. This class stores a vector of pointers to TRIE_NODE_RECORDs, each of which has a vector of forward and backward edges. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2311">
+        <label>tesseract::Trie</label>
+        <link refid="classtesseract_1_1_trie"/>
+        <childnode refid="2312" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2312">
+        <label>tesseract::Dawg</label>
+        <link refid="classtesseract_1_1_dawg"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2321">
+        <label>TessCallback1&lt; TRIE_NODE_RECORD * &gt;</label>
+        <link refid="class_tess_callback1"/>
+      </node>
+      <node id="2315">
+        <label>STRING</label>
+        <link refid="class_s_t_r_i_n_g"/>
+      </node>
+      <node id="2318">
+        <label>GenericVector&lt; EDGE_RECORD &gt;</label>
+        <link refid="class_generic_vector"/>
+        <childnode refid="2319" relation="usage">
+          <edgelabel>clear_cb_</edgelabel>
+        </childnode>
+        <childnode refid="2320" relation="usage">
+          <edgelabel>compare_cb_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2316">
+        <label>GenericVector&lt; TRIE_NODE_RECORD * &gt;</label>
+        <link refid="class_generic_vector"/>
+        <childnode refid="2317" relation="usage">
+          <edgelabel>data_</edgelabel>
+        </childnode>
+        <childnode refid="2321" relation="usage">
+          <edgelabel>clear_cb_</edgelabel>
+        </childnode>
+        <childnode refid="2322" relation="usage">
+          <edgelabel>compare_cb_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2320">
+        <label>TessResultCallback2&lt; bool, EDGE_RECORDconst &amp;, EDGE_RECORDconst &amp; &gt;</label>
+        <link refid="class_tess_result_callback2"/>
+      </node>
+      <node id="2317">
+        <label>TRIE_NODE_RECORD</label>
+        <link refid="struct_t_r_i_e___n_o_d_e___r_e_c_o_r_d"/>
+        <childnode refid="2318" relation="usage">
+          <edgelabel>forward_edges</edgelabel>
+          <edgelabel>backward_edges</edgelabel>
+        </childnode>
+      </node>
+      <node id="2322">
+        <label>TessResultCallback2&lt; bool, TRIE_NODE_RECORD *const &amp;, TRIE_NODE_RECORD *const &amp; &gt;</label>
+        <link refid="class_tess_result_callback2"/>
+      </node>
+      <node id="2313">
+        <label>tesseract::Trie</label>
+        <link refid="classtesseract_1_1_trie"/>
+        <childnode refid="2314" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2316" relation="usage">
+          <edgelabel>nodes_</edgelabel>
+        </childnode>
+      </node>
+      <node id="2319">
+        <label>TessCallback1&lt; EDGE_RECORD &gt;</label>
+        <link refid="class_tess_callback1"/>
+      </node>
+      <node id="2314">
+        <label>tesseract::Dawg</label>
+        <link refid="classtesseract_1_1_dawg"/>
+        <childnode refid="2315" relation="usage">
+          <edgelabel>lang_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/dict/trie.h" line="62" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/trie.h" bodystart="62" bodyend="409"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_trie_1a43827367f1b019273a399f03ecaf9c6d" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>add_edge_linkage</name></member>
+      <member refid="classtesseract_1_1_trie_1a2bdf4197cdfb791df18dd373804d3372" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>add_new_edge</name></member>
+      <member refid="classtesseract_1_1_trie_1affb7341ac1fa928396b525565ef6d625" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>add_word_ending</name></member>
+      <member refid="classtesseract_1_1_trie_1abafc5803b471a28d781ffc74d7a2f652" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>add_word_to_dawg</name></member>
+      <member refid="classtesseract_1_1_trie_1a5e7ede39bc02eba399d7a5e5062a73ec" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>add_word_to_dawg</name></member>
+      <member refid="classtesseract_1_1_trie_1a01dba4e633d98d8bdddebeeb4b6240fd" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>alpha_pattern_</name></member>
+      <member refid="classtesseract_1_1_trie_1a855761cc68c5bb75e792a2587fc24d2a" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>alphanum_pattern_</name></member>
+      <member refid="classtesseract_1_1_trie_1ae0fcbf55e0568a52bc5eeb7c42aff18e" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>can_be_eliminated</name></member>
+      <member refid="classtesseract_1_1_trie_1ab3bd9782abfe9da25e01ced2bcc5000e" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>character_class_to_pattern</name></member>
+      <member refid="classtesseract_1_1_dawg_1a15dc54d58a9d7383b64d678dcf3e2b70" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>check_for_words</name></member>
+      <member refid="classtesseract_1_1_trie_1a344c89fd53c0773ff274848e0cd26e17" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>clear</name></member>
+      <member refid="classtesseract_1_1_dawg_1aa433840463bbc95c36f6418bd64fb8bd" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>Dawg</name></member>
+      <member refid="classtesseract_1_1_dawg_1adc74b0871a5aafecd0daaf87b6cf4141" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>debug_level_</name></member>
+      <member refid="classtesseract_1_1_trie_1adb2947aaf4be6fad2801721f7b7bdf2e" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>deref_direction_mask_</name></member>
+      <member refid="classtesseract_1_1_trie_1a3dd5b782303e745c4818936246663f61" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>deref_edge_ref</name></member>
+      <member refid="classtesseract_1_1_trie_1ad0be857bc98cecc809dcbbbb207a867e" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>deref_node_index_mask_</name></member>
+      <member refid="classtesseract_1_1_trie_1a38439594c671a06605349f781e2d1c2c" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>digit_pattern_</name></member>
+      <member refid="classtesseract_1_1_dawg_1af6f9affc795811d63e2f255f413bb36e" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>direction_from_edge_rec</name></member>
+      <member refid="classtesseract_1_1_trie_1ade0ed371c5aa6f137fdbdb485c617eba" prot="public" virt="virtual"><scope>tesseract::Trie</scope><name>edge_char_of</name></member>
+      <member refid="classtesseract_1_1_trie_1a473630c55293c37f9afd63cfc8fd79ee" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>edge_char_of</name></member>
+      <member refid="classtesseract_1_1_trie_1a77b23425f9a6dab9a96de9b6d173d0b9" prot="public" virt="virtual"><scope>tesseract::Trie</scope><name>edge_letter</name></member>
+      <member refid="classtesseract_1_1_dawg_1a7dff8b32c3f0f735944fce4b270e3e3e" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>edge_rec_match</name></member>
+      <member refid="classtesseract_1_1_trie_1a33de60074d1ede69f4a17be28b1c03c8" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>eliminate_redundant_edges</name></member>
+      <member refid="classtesseract_1_1_trie_1a42ba6f54332148febd38a426c42b403a" prot="public" virt="virtual"><scope>tesseract::Trie</scope><name>end_of_word</name></member>
+      <member refid="classtesseract_1_1_dawg_1a7b0b2851a321a4dee49609995f1cc018" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>end_of_word_from_edge_rec</name></member>
+      <member refid="classtesseract_1_1_dawg_1a1c15b73bdf9dc00d548836439a61925c" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>flag_start_bit_</name></member>
+      <member refid="classtesseract_1_1_dawg_1ad60ae15e5b48287343657d9ea9f20f15" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>flags_mask_</name></member>
+      <member refid="classtesseract_1_1_trie_1abd47ba165316b0d3218a61af590ddc25" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>get_reverse_policy_name</name></member>
+      <member refid="classtesseract_1_1_dawg_1a51413c471a98611d2d46a8685ff1eb40" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>given_greater_than_edge_rec</name></member>
+      <member refid="classtesseract_1_1_dawg_1a6b415183039524d69b370b4e93acdf56" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>init</name></member>
+      <member refid="classtesseract_1_1_trie_1a32fd568d04d81e5d5a7e30aac9b82daa" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>initialize_patterns</name></member>
+      <member refid="classtesseract_1_1_trie_1a1705accff61ce96e5491d99eb177f55c" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>initialized_patterns_</name></member>
+      <member refid="classtesseract_1_1_dawg_1afa7a4af08c1110868e5b278a704dfec3" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>iterate_words</name></member>
+      <member refid="classtesseract_1_1_dawg_1a21d62c34f51dc4c123e559a3780b2d15" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>iterate_words_rec</name></member>
+      <member refid="classtesseract_1_1_trie_1a1e9b435df559db4d5b609ea597af5db9" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>kAlphanumPatternUnicode</name></member>
+      <member refid="classtesseract_1_1_trie_1accb2db10883874ef33e8fc10485d233d" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>kAlphaPatternUnicode</name></member>
+      <member refid="classtesseract_1_1_dawg_1a6f2b9b30147a54ee156dcb2aa49b110d" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>kDawgMagicNumber</name></member>
+      <member refid="classtesseract_1_1_trie_1a5bfe332d0b72fdf02e06fa22aa997f4e" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>kDigitPatternUnicode</name></member>
+      <member refid="classtesseract_1_1_trie_1a17ea14c41c90b5c16daf49a0d4ae05fa" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>kLowerPatternUnicode</name></member>
+      <member refid="classtesseract_1_1_dawg_1af6a39872b9a20f3b02020f237731af87" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>kPatternUnicharID</name></member>
+      <member refid="classtesseract_1_1_trie_1a8e0965655cc0eb3df2325ba15af9b6e6" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>kPuncPatternUnicode</name></member>
+      <member refid="classtesseract_1_1_trie_1af3cc86948eeedc1f4a32835bb0723eb7" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>kSaneNumConcreteChars</name></member>
+      <member refid="classtesseract_1_1_trie_1a37a2d83dfea61a9ed42c71fce82d2650" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>kUpperPatternUnicode</name></member>
+      <member refid="classtesseract_1_1_dawg_1a317802599bebeb7a6939c5b2bc1669ad" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>lang</name></member>
+      <member refid="classtesseract_1_1_dawg_1ac03a89c4ecb3dc5b99ca0500f7f5db41" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>lang_</name></member>
+      <member refid="classtesseract_1_1_dawg_1ad67c4d32f31869f9a592d01fc65a3a73" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>letter_mask_</name></member>
+      <member refid="classtesseract_1_1_trie_1a0efb447c693077c00d4c793acb760e52" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>link_edge</name></member>
+      <member refid="classtesseract_1_1_trie_1a5a4f976d9be06ec5a7e7dcbe6cc12a88" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>lower_pattern_</name></member>
+      <member refid="classtesseract_1_1_trie_1a3e0402ddf1740d6ce9c29c2657f52655" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>make_edge_ref</name></member>
+      <member refid="classtesseract_1_1_dawg_1a1729e82cc3d78d51d97c8be89a5409ca" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>marker_flag_from_edge_rec</name></member>
+      <member refid="classtesseract_1_1_dawg_1a90a78c5aab9e7d918867dfba1f0ebf09" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>match_words</name></member>
+      <member refid="classtesseract_1_1_trie_1abcc7db0ede4b8657e021f90c2966677f" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>max_num_edges_</name></member>
+      <member refid="classtesseract_1_1_trie_1adb83b76780ee631a66db075a043205fc" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>new_dawg_node</name></member>
+      <member refid="classtesseract_1_1_trie_1a6dcd5c5eafcddd03ee64abd1ec42d4c0" prot="public" virt="virtual"><scope>tesseract::Trie</scope><name>next_node</name></member>
+      <member refid="classtesseract_1_1_dawg_1a8fda693bddf7420100b13312831dfe53" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>next_node_from_edge_rec</name></member>
+      <member refid="classtesseract_1_1_dawg_1a35d2c5deb0a9bf3bc9452187aec40410" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>next_node_mask_</name></member>
+      <member refid="classtesseract_1_1_dawg_1a8a140175a0051a3691084942da99dfb0" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>next_node_start_bit_</name></member>
+      <member refid="classtesseract_1_1_trie_1a33827eeb84a5847af8fa6ba9e4e64844" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>nodes_</name></member>
+      <member refid="classtesseract_1_1_trie_1ab0b71a3889baa598365cde4f5c9d1078" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>num_edges_</name></member>
+      <member refid="classtesseract_1_1_trie_1a6addef8f1c5d6ca6302db5280993dfdd" prot="public" virt="virtual"><scope>tesseract::Trie</scope><name>pattern_loop_edge</name></member>
+      <member refid="classtesseract_1_1_dawg_1ad33dc7881a2f933e801f0d5fd4ccbe41" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>perm_</name></member>
+      <member refid="classtesseract_1_1_dawg_1a1a9e92e426883774c82a688e32bf2434" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>permuter</name></member>
+      <member refid="classtesseract_1_1_trie_1a34ed0e1ea9fce2a12bb02a61e166a784" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>print_all</name></member>
+      <member refid="classtesseract_1_1_trie_1a1705a4d141922e55fa5b09f67b33301f" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>print_edge_rec</name></member>
+      <member refid="classtesseract_1_1_trie_1a38abf00b13ad917570c6cb3226ceb74d" prot="public" virt="virtual"><scope>tesseract::Trie</scope><name>print_node</name></member>
+      <member refid="classtesseract_1_1_trie_1a7533c8651890d62e6b0d678ed7155cb4" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>punc_pattern_</name></member>
+      <member refid="classtesseract_1_1_trie_1a5e75fe75d1803bd3f5e18d423b7b8f1f" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>read_pattern_list</name></member>
+      <member refid="classtesseract_1_1_trie_1a6c611d36dee495e8954a783abe567727" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>read_word_list</name></member>
+      <member refid="classtesseract_1_1_trie_1a32561d4a203cd179f7d8310be7eadb68" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>reduce_lettered_edges</name></member>
+      <member refid="classtesseract_1_1_trie_1a65c0034f258b73575a13e0f53759ca80" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>reduce_node_input</name></member>
+      <member refid="classtesseract_1_1_trie_1a257f7036f5799ec557d56570686a4cb8" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>remove_edge</name></member>
+      <member refid="classtesseract_1_1_trie_1a7c6ee32ebb143eea68aeaf16dfc1edfd" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>remove_edge_linkage</name></member>
+      <member refid="classtesseract_1_1_trie_1a920adf78e22cbdb661e0c2aef58a8c80ae8a8310ee84c647dc1f9a4f289a0dc8b" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>RRP_DO_NO_REVERSE</name></member>
+      <member refid="classtesseract_1_1_trie_1a920adf78e22cbdb661e0c2aef58a8c80af7ddb14bc4c549b47f4b1b32f3c284f2" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>RRP_FORCE_REVERSE</name></member>
+      <member refid="classtesseract_1_1_trie_1a920adf78e22cbdb661e0c2aef58a8c80aebb1e29c59c60c902106a61853e183e3" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>RRP_REVERSE_IF_HAS_RTL</name></member>
+      <member refid="classtesseract_1_1_trie_1a920adf78e22cbdb661e0c2aef58a8c80" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>RTLReversePolicy</name></member>
+      <member refid="classtesseract_1_1_dawg_1ab55a9591be8d4332a62c25c527db3479" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>set_marker_flag_in_edge_rec</name></member>
+      <member refid="classtesseract_1_1_dawg_1a4a4b153bf6de3083aaac1af0600fa4ee" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>set_next_node_in_edge_rec</name></member>
+      <member refid="classtesseract_1_1_trie_1a83dff0c6f9e38ecc02eae8c4ae0ba041" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>sort_edges</name></member>
+      <member refid="classtesseract_1_1_trie_1aa7181b957e2250479cf14afe86b0ec63" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>Trie</name></member>
+      <member refid="classtesseract_1_1_trie_1a434d71a349e7c6e7d1a239b0b71064de" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>trie_to_dawg</name></member>
+      <member refid="classtesseract_1_1_dawg_1a746cceae242993f4945f454e9752d4a5" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>type</name></member>
+      <member refid="classtesseract_1_1_dawg_1a8f628fef1da0ff7323958362f8286695" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>type_</name></member>
+      <member refid="classtesseract_1_1_dawg_1a89f558c998d293d7e2feabeb03eca5ef" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>unichar_id_from_edge_rec</name></member>
+      <member refid="classtesseract_1_1_trie_1a6f0727490d09b82d4b60a7a96191e832" prot="public" virt="virtual"><scope>tesseract::Trie</scope><name>unichar_id_to_patterns</name></member>
+      <member refid="classtesseract_1_1_trie_1ae29335b9ec1836a58dfb4425c635c708" prot="public" virt="virtual"><scope>tesseract::Trie</scope><name>unichar_ids_of</name></member>
+      <member refid="classtesseract_1_1_dawg_1a96b429ef5449ad3cab057eb27d199c66" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>unicharset_size_</name></member>
+      <member refid="classtesseract_1_1_trie_1a6a9287a8e75f94462c17b13966ed2669" prot="protected" virt="non-virtual"><scope>tesseract::Trie</scope><name>upper_pattern_</name></member>
+      <member refid="classtesseract_1_1_dawg_1a37e1a2a607ac12c92826247303ebb6d0" prot="public" virt="non-virtual"><scope>tesseract::Trie</scope><name>word_in_dawg</name></member>
+      <member refid="classtesseract_1_1_dawg_1ad54b2916f52c1db80bfeda8bd712228e" prot="public" virt="virtual"><scope>tesseract::Trie</scope><name>~Dawg</name></member>
+      <member refid="classtesseract_1_1_trie_1a0e0b2e5e68fa4a134b371d073ad9b2d4" prot="public" virt="virtual"><scope>tesseract::Trie</scope><name>~Trie</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

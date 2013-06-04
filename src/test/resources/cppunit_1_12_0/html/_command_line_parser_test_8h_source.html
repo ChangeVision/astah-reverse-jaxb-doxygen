@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>My Project: src/DllPlugInTester/CommandLineParserTest.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.4 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_67dbedf01204e8802074491d98d95d0b.html">DllPlugInTester</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CommandLineParserTest.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_command_line_parser_test_8h.html">説明を見る。</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef COMMANDLINEPARSERTEST_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define COMMANDLINEPARSERTEST_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;cppunit/extensions/HelperMacros.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">class </span><a class="code" href="class_command_line_parser.html">CommandLineParser</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">class </span><a class="code" href="class_command_line_parser_exception.html">CommandLineParserException</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="class_command_line_parser_test.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_command_line_parser_test.html">CommandLineParserTest</a> : <span class="keyword">public</span> CPPUNIT_NS::TestCase</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  CPPUNIT_TEST_SUITE( <a class="code" href="class_command_line_parser_test.html">CommandLineParserTest</a> );</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  CPPUNIT_TEST( <a class="code" href="class_command_line_parser_test.html#abd87b26704c2722024879e432b1cd1e8">testEmptyCommandLine</a> );</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  CPPUNIT_TEST( <a class="code" href="class_command_line_parser_test.html#a115853fed68c76ce7ba5282d48dc1a17">testFlagCompiler</a> );</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  CPPUNIT_TEST( <a class="code" href="class_command_line_parser_test.html#afbecde21b9b1cbd3acc652cda4250543">testLongFlagBriefProgress</a> );</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  CPPUNIT_TEST( <a class="code" href="class_command_line_parser_test.html#a2554b2e37a40efa0eb28ce24a018ea52">testFileName</a> );</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  CPPUNIT_TEST( <a class="code" href="class_command_line_parser_test.html#a5f3e3e24e6c8a111824261d8399cd655">testTestPath</a> );</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  CPPUNIT_TEST( <a class="code" href="class_command_line_parser_test.html#a3dffe250d24cfd071b967ed1628af464">testParameterWithSpace</a> );</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  CPPUNIT_TEST_EXCEPTION( <a class="code" href="class_command_line_parser_test.html#a852c29d51bde93cc497e44f52e85b06c">testMissingStyleSheetParameterThrow</a>, <a class="code" href="class_command_line_parser_exception.html">CommandLineParserException</a>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  CPPUNIT_TEST_EXCEPTION( <a class="code" href="class_command_line_parser_test.html#a174af3c6a643e9b54ea028f331022376">testMissingEncodingParameterThrow</a>, <a class="code" href="class_command_line_parser_exception.html">CommandLineParserException</a>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  CPPUNIT_TEST( <a class="code" href="class_command_line_parser_test.html#a98837d5486864661a94118d0fce6e6b0">testXmlFileNameIsOptional</a> );</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  CPPUNIT_TEST( <a class="code" href="class_command_line_parser_test.html#a0b65bbe288482ee86a1a89f9607b13f1">testPlugInsWithParameters</a> );</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  CPPUNIT_TEST_SUITE_END();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="class_command_line_parser_test.html#aeff163912cbdddba7997c02e37f8a359">CommandLineParserTest</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="class_command_line_parser_test.html#a970fa0b8083076a34d4ec9b316fe94d9">‾CommandLineParserTest</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_command_line_parser_test.html#a99755b70653313f8f2bbc3ff130671e4">setUp</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_command_line_parser_test.html#a46efbc7974067e069fd9a6b507ae3fd9">tearDown</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_command_line_parser_test.html#abd87b26704c2722024879e432b1cd1e8">testEmptyCommandLine</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_command_line_parser_test.html#a115853fed68c76ce7ba5282d48dc1a17">testFlagCompiler</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_command_line_parser_test.html#afbecde21b9b1cbd3acc652cda4250543">testLongFlagBriefProgress</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_command_line_parser_test.html#a2554b2e37a40efa0eb28ce24a018ea52">testFileName</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_command_line_parser_test.html#a5f3e3e24e6c8a111824261d8399cd655">testTestPath</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_command_line_parser_test.html#a3dffe250d24cfd071b967ed1628af464">testParameterWithSpace</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_command_line_parser_test.html#a852c29d51bde93cc497e44f52e85b06c">testMissingStyleSheetParameterThrow</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_command_line_parser_test.html#a174af3c6a643e9b54ea028f331022376">testMissingEncodingParameterThrow</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_command_line_parser_test.html#a98837d5486864661a94118d0fce6e6b0">testXmlFileNameIsOptional</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_command_line_parser_test.html#a0b65bbe288482ee86a1a89f9607b13f1">testPlugInsWithParameters</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="class_command_line_parser_test.html#aeff163912cbdddba7997c02e37f8a359">CommandLineParserTest</a>( <span class="keyword">const</span> <a class="code" href="class_command_line_parser_test.html">CommandLineParserTest</a> &amp;other );</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">void</span> operator =( <span class="keyword">const</span> <a class="code" href="class_command_line_parser_test.html">CommandLineParserTest</a> &amp;other );</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">void</span> parse( <span class="keyword">const</span> <span class="keywordtype">char</span> **lines );</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="class_command_line_parser.html">CommandLineParser</a> *_parser;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">// Inlines methods for CommandLineParserTest:</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">// ------------------------------------------</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#endif  // COMMANDLINEPARSERTEST_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+My Projectに対してThu May 23 2013 16:14:58に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

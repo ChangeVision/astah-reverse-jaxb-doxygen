@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="pcre__chartables_8c" kind="file">
+    <compoundname>pcre_chartables.c</compoundname>
+    <includes refid="pcre__config_8h" local="yes">pcre_config.h</includes>
+    <includes refid="pcre__internal_8h" local="yes">pcre_internal.h</includes>
+    <incdepgraph>
+      <node id="945">
+        <label>pcre_config.h</label>
+        <link refid="pcre__config_8h"/>
+      </node>
+      <node id="954">
+        <label>stdarg.h</label>
+      </node>
+      <node id="956">
+        <label>ucp.h</label>
+        <link refid="ucp_8h"/>
+      </node>
+      <node id="951">
+        <label>stdlib.h</label>
+      </node>
+      <node id="953">
+        <label>setjmp.h</label>
+      </node>
+      <node id="949">
+        <label>stddef.h</label>
+      </node>
+      <node id="955">
+        <label>pcre.h</label>
+        <link refid="pcre_8h"/>
+        <childnode refid="951" relation="include">
+        </childnode>
+      </node>
+      <node id="948">
+        <label>limits.h</label>
+      </node>
+      <node id="946">
+        <label>pcre_internal.h</label>
+        <link refid="pcre__internal_8h"/>
+        <childnode refid="947" relation="include">
+        </childnode>
+        <childnode refid="948" relation="include">
+        </childnode>
+        <childnode refid="949" relation="include">
+        </childnode>
+        <childnode refid="950" relation="include">
+        </childnode>
+        <childnode refid="951" relation="include">
+        </childnode>
+        <childnode refid="952" relation="include">
+        </childnode>
+        <childnode refid="953" relation="include">
+        </childnode>
+        <childnode refid="954" relation="include">
+        </childnode>
+        <childnode refid="955" relation="include">
+        </childnode>
+        <childnode refid="956" relation="include">
+        </childnode>
+      </node>
+      <node id="952">
+        <label>string.h</label>
+      </node>
+      <node id="944">
+        <label>src/pcre_chartables.c</label>
+        <link refid="pcre_chartables.c"/>
+        <childnode refid="945" relation="include">
+        </childnode>
+        <childnode refid="946" relation="include">
+        </childnode>
+      </node>
+      <node id="947">
+        <label>ctype.h</label>
+      </node>
+      <node id="950">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="pcre__chartables_8c_1a65111e9495c90b43f671dbae9beda27a" prot="public" static="no" mutable="no">
+        <type><ref refid="zconf_8h_1a2c212835823e3c54a8ab6d95c652660e" kindref="member">const</ref> unsigned char</type>
+        <definition>const unsigned char _pcre_default_tables[]</definition>
+        <argsstring>[]</argsstring>
+        <name>_pcre_default_tables</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/pcre_chartables.c" line="26" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/pcre_chartables.c" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/>Perl-Compatible<sp/>Regular<sp/>Expressions<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>file<sp/>contains<sp/>character<sp/>tables<sp/>that<sp/>are<sp/>used<sp/>when<sp/>no<sp/>external<sp/>tables</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">are<sp/>passed<sp/>to<sp/>PCRE<sp/>by<sp/>the<sp/>application<sp/>that<sp/>calls<sp/>it.<sp/>The<sp/>tables<sp/>are<sp/>used<sp/>only</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">for<sp/>characters<sp/>whose<sp/>code<sp/>values<sp/>are<sp/>less<sp/>than<sp/>256.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">This<sp/>is<sp/>a<sp/>default<sp/>version<sp/>of<sp/>the<sp/>tables<sp/>that<sp/>assumes<sp/>ASCII<sp/>encoding.<sp/>A<sp/>program</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">called<sp/>dftables<sp/>(which<sp/>is<sp/>distributed<sp/>with<sp/>PCRE)<sp/>can<sp/>be<sp/>used<sp/>to<sp/>build</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">alternative<sp/>versions<sp/>of<sp/>this<sp/>file.<sp/>This<sp/>is<sp/>necessary<sp/>if<sp/>you<sp/>are<sp/>running<sp/>in<sp/>an</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">EBCDIC<sp/>environment,<sp/>or<sp/>if<sp/>you<sp/>want<sp/>to<sp/>default<sp/>to<sp/>a<sp/>different<sp/>encoding,<sp/>for</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">example<sp/>ISO-8859-1.<sp/>When<sp/>dftables<sp/>is<sp/>run,<sp/>it<sp/>creates<sp/>these<sp/>tables<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">current<sp/>locale.<sp/>If<sp/>PCRE<sp/>is<sp/>configured<sp/>with<sp/>--enable-rebuild-chartables,<sp/>this</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">happens<sp/>automatically.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight></codeline>
+<codeline lineno="17"><highlight class="comment">The<sp/>following<sp/>#includes<sp/>are<sp/>present<sp/>because<sp/>without<sp/>the<sp/>gcc<sp/>4.x<sp/>may<sp/>remove<sp/>the</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">array<sp/>definition<sp/>from<sp/>the<sp/>final<sp/>binary<sp/>if<sp/>PCRE<sp/>is<sp/>built<sp/>into<sp/>a<sp/>static<sp/>library</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">and<sp/>dead<sp/>code<sp/>stripping<sp/>is<sp/>activated.<sp/>This<sp/>leads<sp/>to<sp/>link<sp/>errors.<sp/>Pulling<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">header<sp/>ensures<sp/>that<sp/>the<sp/>array<sp/>gets<sp/>flagged<sp/>as<sp/>&quot;someone<sp/>outside<sp/>this<sp/>compilation</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">unit<sp/>might<sp/>reference<sp/>this&quot;<sp/>and<sp/>so<sp/>it<sp/>will<sp/>always<sp/>be<sp/>supplied<sp/>to<sp/>the<sp/>linker.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pcre__config_8h" kindref="compound">pcre_config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pcre__internal_8h" kindref="compound">pcre_internal.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="pcre__chartables_8c_1a65111e9495c90b43f671dbae9beda27a" kindref="member">_pcre_default_tables</ref>[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>table<sp/>is<sp/>a<sp/>lower<sp/>casing<sp/>table.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>0,<sp/><sp/>1,<sp/><sp/>2,<sp/><sp/>3,<sp/><sp/>4,<sp/><sp/>5,<sp/><sp/>6,<sp/><sp/>7,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>8,<sp/><sp/>9,<sp/>10,<sp/>11,<sp/>12,<sp/>13,<sp/>14,<sp/>15,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/>16,<sp/>17,<sp/>18,<sp/>19,<sp/>20,<sp/>21,<sp/>22,<sp/>23,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/>24,<sp/>25,<sp/>26,<sp/>27,<sp/>28,<sp/>29,<sp/>30,<sp/>31,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/>32,<sp/>33,<sp/>34,<sp/>35,<sp/>36,<sp/>37,<sp/>38,<sp/>39,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/>40,<sp/>41,<sp/>42,<sp/>43,<sp/>44,<sp/>45,<sp/>46,<sp/>47,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/>48,<sp/>49,<sp/>50,<sp/>51,<sp/>52,<sp/>53,<sp/>54,<sp/>55,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/>56,<sp/>57,<sp/>58,<sp/>59,<sp/>60,<sp/>61,<sp/>62,<sp/>63,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/>64,<sp/>97,<sp/>98,<sp/>99,100,101,102,103,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>104,105,106,107,108,109,110,111,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>112,113,114,115,116,117,118,119,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>120,121,122,<sp/>91,<sp/>92,<sp/>93,<sp/>94,<sp/>95,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/>96,<sp/>97,<sp/>98,<sp/>99,100,101,102,103,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>104,105,106,107,108,109,110,111,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>112,113,114,115,116,117,118,119,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>120,121,122,123,124,125,126,127,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>128,129,130,131,132,133,134,135,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>136,137,138,139,140,141,142,143,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>144,145,146,147,148,149,150,151,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>152,153,154,155,156,157,158,159,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>160,161,162,163,164,165,166,167,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>168,169,170,171,172,173,174,175,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>176,177,178,179,180,181,182,183,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>184,185,186,187,188,189,190,191,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>192,193,194,195,196,197,198,199,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>200,201,202,203,204,205,206,207,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>208,209,210,211,212,213,214,215,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>216,217,218,219,220,221,222,223,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>224,225,226,227,228,229,230,231,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>232,233,234,235,236,237,238,239,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>240,241,242,243,244,245,246,247,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>248,249,250,251,252,253,254,255,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>table<sp/>is<sp/>a<sp/>case<sp/>flipping<sp/>table.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>0,<sp/><sp/>1,<sp/><sp/>2,<sp/><sp/>3,<sp/><sp/>4,<sp/><sp/>5,<sp/><sp/>6,<sp/><sp/>7,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>8,<sp/><sp/>9,<sp/>10,<sp/>11,<sp/>12,<sp/>13,<sp/>14,<sp/>15,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/>16,<sp/>17,<sp/>18,<sp/>19,<sp/>20,<sp/>21,<sp/>22,<sp/>23,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/>24,<sp/>25,<sp/>26,<sp/>27,<sp/>28,<sp/>29,<sp/>30,<sp/>31,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/>32,<sp/>33,<sp/>34,<sp/>35,<sp/>36,<sp/>37,<sp/>38,<sp/>39,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/>40,<sp/>41,<sp/>42,<sp/>43,<sp/>44,<sp/>45,<sp/>46,<sp/>47,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/>48,<sp/>49,<sp/>50,<sp/>51,<sp/>52,<sp/>53,<sp/>54,<sp/>55,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/>56,<sp/>57,<sp/>58,<sp/>59,<sp/>60,<sp/>61,<sp/>62,<sp/>63,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/>64,<sp/>97,<sp/>98,<sp/>99,100,101,102,103,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>104,105,106,107,108,109,110,111,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>112,113,114,115,116,117,118,119,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>120,121,122,<sp/>91,<sp/>92,<sp/>93,<sp/>94,<sp/>95,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/>96,<sp/>65,<sp/>66,<sp/>67,<sp/>68,<sp/>69,<sp/>70,<sp/>71,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/>72,<sp/>73,<sp/>74,<sp/>75,<sp/>76,<sp/>77,<sp/>78,<sp/>79,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/>80,<sp/>81,<sp/>82,<sp/>83,<sp/>84,<sp/>85,<sp/>86,<sp/>87,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/>88,<sp/>89,<sp/>90,123,124,125,126,127,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>128,129,130,131,132,133,134,135,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>136,137,138,139,140,141,142,143,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>144,145,146,147,148,149,150,151,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>152,153,154,155,156,157,158,159,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>160,161,162,163,164,165,166,167,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>168,169,170,171,172,173,174,175,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>176,177,178,179,180,181,182,183,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>184,185,186,187,188,189,190,191,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>192,193,194,195,196,197,198,199,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>200,201,202,203,204,205,206,207,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>208,209,210,211,212,213,214,215,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>216,217,218,219,220,221,222,223,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>224,225,226,227,228,229,230,231,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>232,233,234,235,236,237,238,239,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>240,241,242,243,244,245,246,247,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>248,249,250,251,252,253,254,255,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>table<sp/>contains<sp/>bit<sp/>maps<sp/>for<sp/>various<sp/>character<sp/>classes.<sp/>Each<sp/>map<sp/>is<sp/>32</highlight></codeline>
+<codeline lineno="99"><highlight class="comment">bytes<sp/>long<sp/>and<sp/>the<sp/>bits<sp/>run<sp/>from<sp/>the<sp/>least<sp/>significant<sp/>end<sp/>of<sp/>each<sp/>byte.<sp/>The</highlight></codeline>
+<codeline lineno="100"><highlight class="comment">classes<sp/>that<sp/>have<sp/>their<sp/>own<sp/>maps<sp/>are:<sp/>space,<sp/>xdigit,<sp/>digit,<sp/>upper,<sp/>lower,<sp/>word,</highlight></codeline>
+<codeline lineno="101"><highlight class="comment">graph,<sp/>print,<sp/>punct,<sp/>and<sp/>cntrl.<sp/>Other<sp/>classes<sp/>are<sp/>built<sp/>from<sp/>combinations.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>0x00,0x3e,0x00,0x00,0x01,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0xff,0x03,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>0x7e,0x00,0x00,0x00,0x7e,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0xff,0x03,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>0xfe,0xff,0xff,0x07,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0xfe,0xff,0xff,0x07,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0xff,0x03,</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>0xfe,0xff,0xff,0x87,0xfe,0xff,0xff,0x07,</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0xfe,0xff,0xff,0xff,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x7f,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0xff,0xff,0xff,0xff,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>0xff,0xff,0xff,0xff,0xff,0xff,0xff,0x7f,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0xfe,0xff,0x00,0xfc,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>0x01,0x00,0x00,0xf8,0x01,0x00,0x00,0x78,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>0xff,0xff,0xff,0xff,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x80,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>table<sp/>identifies<sp/>various<sp/>classes<sp/>of<sp/>character<sp/>by<sp/>individual<sp/>bits:</highlight></codeline>
+<codeline lineno="154"><highlight class="comment"><sp/><sp/>0x01<sp/><sp/><sp/>white<sp/>space<sp/>character</highlight></codeline>
+<codeline lineno="155"><highlight class="comment"><sp/><sp/>0x02<sp/><sp/><sp/>letter</highlight></codeline>
+<codeline lineno="156"><highlight class="comment"><sp/><sp/>0x04<sp/><sp/><sp/>decimal<sp/>digit</highlight></codeline>
+<codeline lineno="157"><highlight class="comment"><sp/><sp/>0x08<sp/><sp/><sp/>hexadecimal<sp/>digit</highlight></codeline>
+<codeline lineno="158"><highlight class="comment"><sp/><sp/>0x10<sp/><sp/><sp/>alphanumeric<sp/>or<sp/>&apos;_&apos;</highlight></codeline>
+<codeline lineno="159"><highlight class="comment"><sp/><sp/>0x80<sp/><sp/><sp/>regular<sp/>expression<sp/>metacharacter<sp/>or<sp/>binary<sp/>zero</highlight></codeline>
+<codeline lineno="160"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>0x80,0x00,0x00,0x00,0x00,0x00,0x00,0x00,<sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/>0-<sp/><sp/>7<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>0x00,0x01,0x01,0x00,0x01,0x01,0x00,0x00,<sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/>8-<sp/>15<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,<sp/></highlight><highlight class="comment">/*<sp/><sp/>16-<sp/>23<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,<sp/></highlight><highlight class="comment">/*<sp/><sp/>24-<sp/>31<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/>0x01,0x00,0x00,0x00,0x80,0x00,0x00,0x00,<sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/>-<sp/>&apos;<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/>0x80,0x80,0x80,0x80,0x00,0x00,0x80,0x00,<sp/></highlight><highlight class="comment">/*<sp/><sp/>(<sp/>-<sp/>/<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/>0x1c,0x1c,0x1c,0x1c,0x1c,0x1c,0x1c,0x1c,<sp/></highlight><highlight class="comment">/*<sp/><sp/>0<sp/>-<sp/>7<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/>0x1c,0x1c,0x00,0x00,0x00,0x00,0x00,0x80,<sp/></highlight><highlight class="comment">/*<sp/><sp/>8<sp/>-<sp/>?<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/>0x00,0x1a,0x1a,0x1a,0x1a,0x1a,0x1a,0x12,<sp/></highlight><highlight class="comment">/*<sp/><sp/>@<sp/>-<sp/>G<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>0x12,0x12,0x12,0x12,0x12,0x12,0x12,0x12,<sp/></highlight><highlight class="comment">/*<sp/><sp/>H<sp/>-<sp/>O<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/>0x12,0x12,0x12,0x12,0x12,0x12,0x12,0x12,<sp/></highlight><highlight class="comment">/*<sp/><sp/>P<sp/>-<sp/>W<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/>0x12,0x12,0x12,0x80,0x80,0x00,0x80,0x10,<sp/></highlight><highlight class="comment">/*<sp/><sp/>X<sp/>-<sp/>_<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>0x00,0x1a,0x1a,0x1a,0x1a,0x1a,0x1a,0x12,<sp/></highlight><highlight class="comment">/*<sp/><sp/>`<sp/>-<sp/>g<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/>0x12,0x12,0x12,0x12,0x12,0x12,0x12,0x12,<sp/></highlight><highlight class="comment">/*<sp/><sp/>h<sp/>-<sp/>o<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>0x12,0x12,0x12,0x12,0x12,0x12,0x12,0x12,<sp/></highlight><highlight class="comment">/*<sp/><sp/>p<sp/>-<sp/>w<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/>0x12,0x12,0x12,0x80,0x80,0x00,0x00,0x00,<sp/></highlight><highlight class="comment">/*<sp/><sp/>x<sp/>-127<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,<sp/></highlight><highlight class="comment">/*<sp/>128-135<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,<sp/></highlight><highlight class="comment">/*<sp/>136-143<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,<sp/></highlight><highlight class="comment">/*<sp/>144-151<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,<sp/></highlight><highlight class="comment">/*<sp/>152-159<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,<sp/></highlight><highlight class="comment">/*<sp/>160-167<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,<sp/></highlight><highlight class="comment">/*<sp/>168-175<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,<sp/></highlight><highlight class="comment">/*<sp/>176-183<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,<sp/></highlight><highlight class="comment">/*<sp/>184-191<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,<sp/></highlight><highlight class="comment">/*<sp/>192-199<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,<sp/></highlight><highlight class="comment">/*<sp/>200-207<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,<sp/></highlight><highlight class="comment">/*<sp/>208-215<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,<sp/></highlight><highlight class="comment">/*<sp/>216-223<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,<sp/></highlight><highlight class="comment">/*<sp/>224-231<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,<sp/></highlight><highlight class="comment">/*<sp/>232-239<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,<sp/></highlight><highlight class="comment">/*<sp/>240-247<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/>0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};</highlight><highlight class="comment">/*<sp/>248-255<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>End<sp/>of<sp/>pcre_chartables.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/pcre_chartables.c"/>
+  </compounddef>
+</doxygen>

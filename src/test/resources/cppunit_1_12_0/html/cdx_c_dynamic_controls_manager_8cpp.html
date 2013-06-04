@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>My Project: src/msvc6/testrunner/DynamicWindow/cdxCDynamicControlsManager.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.4 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_160ca355bc0c1b9b707bdc17a072703c.html">msvc6</a></li><li class="navelem"><a class="el" href="dir_ea05cf39121f9fa04750d7742262a3f6.html">testrunner</a></li><li class="navelem"><a class="el" href="dir_6afd632b64baae49856c0cfbe623cc81.html">DynamicWindow</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a>  </div>
+  <div class="headertitle">
+<div class="title">cdxCDynamicControlsManager.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;stdafx.h&quot;</code><br/>
+<code>#include &quot;<a class="el" href="cdx_c_dynamic_controls_manager_8h_source.html">cdxCDynamicControlsManager.h</a>&quot;</code><br/>
+<code>#include &lt;winuser.h&gt;</code><br/>
+<code>#include &lt;afxmt.h&gt;</code><br/>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:aab361a45c357d7555d2b9fa29e08c937"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cdx_c_dynamic_controls_manager_8cpp.html#aab361a45c357d7555d2b9fa29e08c937">OBM_SIZE</a>&#160;&#160;&#160;32766</td></tr>
+<tr class="separator:aab361a45c357d7555d2b9fa29e08c937"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20adb7acb665efc8ad213383d5aab12a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cdx_c_dynamic_controls_manager_8cpp.html#a20adb7acb665efc8ad213383d5aab12a">REGVAL_NOSTATE</a>&#160;&#160;&#160;-1</td></tr>
+<tr class="separator:a20adb7acb665efc8ad213383d5aab12a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3901b35142c12986bdc8f9fce456629d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cdx_c_dynamic_controls_manager_8cpp.html#a3901b35142c12986bdc8f9fce456629d">REGVAL_VISIBLE</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a3901b35142c12986bdc8f9fce456629d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61dc71cabfd97d88307276e8ad9bde40"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cdx_c_dynamic_controls_manager_8cpp.html#a61dc71cabfd97d88307276e8ad9bde40">REGVAL_HIDDEN</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a61dc71cabfd97d88307276e8ad9bde40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ed64215eb89cdd0f7435c0da76c18d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cdx_c_dynamic_controls_manager_8cpp.html#a9ed64215eb89cdd0f7435c0da76c18d6">REGVAL_MAXIMIZED</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a9ed64215eb89cdd0f7435c0da76c18d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6efedf10c22e4293490dae2101e4c8ec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cdx_c_dynamic_controls_manager_8cpp.html#a6efedf10c22e4293490dae2101e4c8ec">REGVAL_ICONIC</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a6efedf10c22e4293490dae2101e4c8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad53e8a25c42b3d2db0bb644ec1d66ac1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cdx_c_dynamic_controls_manager_8cpp.html#ad53e8a25c42b3d2db0bb644ec1d66ac1">REGVAL_INVALID</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ad53e8a25c42b3d2db0bb644ec1d66ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a519de1df4ec14efe8f28995e65256964"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cdx_c_dynamic_controls_manager_8cpp.html#a519de1df4ec14efe8f28995e65256964">REGVAL_VALID</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a519de1df4ec14efe8f28995e65256964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義</h2>
+<a class="anchor" id="aab361a45c357d7555d2b9fa29e08c937"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OBM_SIZE&#160;&#160;&#160;32766</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a61dc71cabfd97d88307276e8ad9bde40"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REGVAL_HIDDEN&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a6efedf10c22e4293490dae2101e4c8ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REGVAL_ICONIC&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ad53e8a25c42b3d2db0bb644ec1d66ac1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REGVAL_INVALID&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9ed64215eb89cdd0f7435c0da76c18d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REGVAL_MAXIMIZED&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a20adb7acb665efc8ad213383d5aab12a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REGVAL_NOSTATE&#160;&#160;&#160;-1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a519de1df4ec14efe8f28995e65256964"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REGVAL_VALID&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3901b35142c12986bdc8f9fce456629d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define REGVAL_VISIBLE&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+My Projectに対してThu May 23 2013 16:14:59に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

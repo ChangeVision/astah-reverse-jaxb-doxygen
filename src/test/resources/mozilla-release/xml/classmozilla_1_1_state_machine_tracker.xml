@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="classmozilla_1_1_state_machine_tracker" kind="class" prot="public">
+    <compoundname>mozilla::StateMachineTracker</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classmozilla_1_1_state_machine_tracker_1ae9b57bee2148ce066780a7631a6acbfa" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t mozilla::StateMachineTracker::MAX_DECODE_THREADS</definition>
+        <argsstring></argsstring>
+        <name>MAX_DECODE_THREADS</name>
+        <initializer>= 25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="205" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classmozilla_1_1_state_machine_tracker_1a022fc7c879e2101387898f07e0f874ad" prot="private" static="yes" mutable="no">
+        <type><ref refid="classmozilla_1_1_state_machine_tracker" kindref="compound">StateMachineTracker</ref> *</type>
+        <definition>StateMachineTracker * mozilla::StateMachineTracker::sInstance</definition>
+        <argsstring></argsstring>
+        <name>sInstance</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="226" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmozilla_1_1_state_machine_tracker_1ac45a8d76ad62c68a67d32aa74f800c3f" prot="private" static="no" mutable="no">
+        <type>ReentrantMonitor</type>
+        <definition>ReentrantMonitor mozilla::StateMachineTracker::mMonitor</definition>
+        <argsstring></argsstring>
+        <name>mMonitor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="230" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_state_machine_tracker_1a360ecd1135452601dc38fba1312bf0bb" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mozilla::StateMachineTracker::mStateMachineCount</definition>
+        <argsstring></argsstring>
+        <name>mStateMachineCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="235" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_state_machine_tracker_1addf12a6deda00a7b93b15bda127c5a16" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mozilla::StateMachineTracker::mDecodeThreadCount</definition>
+        <argsstring></argsstring>
+        <name>mDecodeThreadCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="240" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_state_machine_tracker_1a0e114325ee51c8c148b619dfa2671c83" prot="private" static="no" mutable="no">
+        <type>nsIThread *</type>
+        <definition>nsIThread* mozilla::StateMachineTracker::mStateMachineThread</definition>
+        <argsstring></argsstring>
+        <name>mStateMachineThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="245" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_state_machine_tracker_1a1022794efd6b3eab5142382166c832db" prot="private" static="no" mutable="no">
+        <type>nsDeque</type>
+        <definition>nsDeque mozilla::StateMachineTracker::mPending</definition>
+        <argsstring></argsstring>
+        <name>mPending</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="249" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmozilla_1_1_state_machine_tracker_1aacbd0b21b6257175a0eeaab780556e34" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mozilla::StateMachineTracker::StateMachineTracker</definition>
+        <argsstring>()</argsstring>
+        <name>StateMachineTracker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="156" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="151" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_state_machine_tracker_1a7360aed5ef9f5cdfdcd1a8e1aa56e8e5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mozilla::StateMachineTracker::~StateMachineTracker</definition>
+        <argsstring>()</argsstring>
+        <name>~StateMachineTracker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="162" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="161" bodyend="166"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classmozilla_1_1_state_machine_tracker_1a086f7c8b49e54b13a2f8c983123eea83" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmozilla_1_1_state_machine_tracker" kindref="compound">StateMachineTracker</ref> &amp;</type>
+        <definition>StateMachineTracker &amp; mozilla::StateMachineTracker::Instance</definition>
+        <argsstring>()</argsstring>
+        <name>Instance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="174" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="254" bodyend="261"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmozilla_1_1_state_machine_tracker_1aff3978d660000d02beb86975db1f3658" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::StateMachineTracker::EnsureGlobalStateMachine</definition>
+        <argsstring>()</argsstring>
+        <name>EnsureGlobalStateMachine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="178" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="263" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_state_machine_tracker_1a84ad3d60646723159297acb782c7ef43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::StateMachineTracker::CleanupGlobalStateMachine</definition>
+        <argsstring>()</argsstring>
+        <name>CleanupGlobalStateMachine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="182" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="291" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_state_machine_tracker_1a239a4d02241dcbdd972e76d64b28df98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>nsIThread *</type>
+        <definition>nsIThread* mozilla::StateMachineTracker::GetGlobalStateMachineThread</definition>
+        <argsstring>()</argsstring>
+        <name>GetGlobalStateMachineThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="186" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="185" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_state_machine_tracker_1a1f7969025bf5f65d45d812103c13de85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>nsresult</type>
+        <definition>nsresult mozilla::StateMachineTracker::RequestCreateDecodeThread</definition>
+        <argsstring>(MediaDecoderStateMachine *aStateMachine)</argsstring>
+        <name>RequestCreateDecodeThread</name>
+        <param>
+          <type>MediaDecoderStateMachine *</type>
+          <declname>aStateMachine</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="197" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="352" bodyend="375"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_state_machine_tracker_1aaddc421c76d976dc6a35e79d8edd7cf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>nsresult</type>
+        <definition>nsresult mozilla::StateMachineTracker::CancelCreateDecodeThread</definition>
+        <argsstring>(MediaDecoderStateMachine *aStateMachine)</argsstring>
+        <name>CancelCreateDecodeThread</name>
+        <param>
+          <type>MediaDecoderStateMachine *</type>
+          <declname>aStateMachine</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="201" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="338" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_state_machine_tracker_1aff603a421dcb4e8ec2d2211bddca077e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t mozilla::StateMachineTracker::GetDecodeThreadCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetDecodeThreadCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="210" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="332" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_state_machine_tracker_1ae86a376b0f1f74f7df81f00a294ccc3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::StateMachineTracker::NoteDecodeThreadDestroyed</definition>
+        <argsstring>()</argsstring>
+        <name>NoteDecodeThreadDestroyed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="215" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="314" bodyend="330"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="149" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="148" bodyend="250"/>
+    <listofallmembers>
+      <member refid="classmozilla_1_1_state_machine_tracker_1aaddc421c76d976dc6a35e79d8edd7cf6" prot="public" virt="non-virtual"><scope>mozilla::StateMachineTracker</scope><name>CancelCreateDecodeThread</name></member>
+      <member refid="classmozilla_1_1_state_machine_tracker_1a84ad3d60646723159297acb782c7ef43" prot="public" virt="non-virtual"><scope>mozilla::StateMachineTracker</scope><name>CleanupGlobalStateMachine</name></member>
+      <member refid="classmozilla_1_1_state_machine_tracker_1aff3978d660000d02beb86975db1f3658" prot="public" virt="non-virtual"><scope>mozilla::StateMachineTracker</scope><name>EnsureGlobalStateMachine</name></member>
+      <member refid="classmozilla_1_1_state_machine_tracker_1aff603a421dcb4e8ec2d2211bddca077e" prot="public" virt="non-virtual"><scope>mozilla::StateMachineTracker</scope><name>GetDecodeThreadCount</name></member>
+      <member refid="classmozilla_1_1_state_machine_tracker_1a239a4d02241dcbdd972e76d64b28df98" prot="public" virt="non-virtual"><scope>mozilla::StateMachineTracker</scope><name>GetGlobalStateMachineThread</name></member>
+      <member refid="classmozilla_1_1_state_machine_tracker_1a086f7c8b49e54b13a2f8c983123eea83" prot="public" virt="non-virtual"><scope>mozilla::StateMachineTracker</scope><name>Instance</name></member>
+      <member refid="classmozilla_1_1_state_machine_tracker_1ae9b57bee2148ce066780a7631a6acbfa" prot="public" virt="non-virtual"><scope>mozilla::StateMachineTracker</scope><name>MAX_DECODE_THREADS</name></member>
+      <member refid="classmozilla_1_1_state_machine_tracker_1addf12a6deda00a7b93b15bda127c5a16" prot="private" virt="non-virtual"><scope>mozilla::StateMachineTracker</scope><name>mDecodeThreadCount</name></member>
+      <member refid="classmozilla_1_1_state_machine_tracker_1ac45a8d76ad62c68a67d32aa74f800c3f" prot="private" virt="non-virtual"><scope>mozilla::StateMachineTracker</scope><name>mMonitor</name></member>
+      <member refid="classmozilla_1_1_state_machine_tracker_1a1022794efd6b3eab5142382166c832db" prot="private" virt="non-virtual"><scope>mozilla::StateMachineTracker</scope><name>mPending</name></member>
+      <member refid="classmozilla_1_1_state_machine_tracker_1a360ecd1135452601dc38fba1312bf0bb" prot="private" virt="non-virtual"><scope>mozilla::StateMachineTracker</scope><name>mStateMachineCount</name></member>
+      <member refid="classmozilla_1_1_state_machine_tracker_1a0e114325ee51c8c148b619dfa2671c83" prot="private" virt="non-virtual"><scope>mozilla::StateMachineTracker</scope><name>mStateMachineThread</name></member>
+      <member refid="classmozilla_1_1_state_machine_tracker_1ae86a376b0f1f74f7df81f00a294ccc3b" prot="public" virt="non-virtual"><scope>mozilla::StateMachineTracker</scope><name>NoteDecodeThreadDestroyed</name></member>
+      <member refid="classmozilla_1_1_state_machine_tracker_1a1f7969025bf5f65d45d812103c13de85" prot="public" virt="non-virtual"><scope>mozilla::StateMachineTracker</scope><name>RequestCreateDecodeThread</name></member>
+      <member refid="classmozilla_1_1_state_machine_tracker_1a022fc7c879e2101387898f07e0f874ad" prot="private" virt="non-virtual"><scope>mozilla::StateMachineTracker</scope><name>sInstance</name></member>
+      <member refid="classmozilla_1_1_state_machine_tracker_1aacbd0b21b6257175a0eeaab780556e34" prot="private" virt="non-virtual"><scope>mozilla::StateMachineTracker</scope><name>StateMachineTracker</name></member>
+      <member refid="classmozilla_1_1_state_machine_tracker_1a7360aed5ef9f5cdfdcd1a8e1aa56e8e5" prot="private" virt="non-virtual"><scope>mozilla::StateMachineTracker</scope><name>~StateMachineTracker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

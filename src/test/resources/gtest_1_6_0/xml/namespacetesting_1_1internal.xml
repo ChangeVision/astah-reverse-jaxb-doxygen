@@ -1,0 +1,2909 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="namespacetesting_1_1internal" kind="namespace">
+    <compoundname>testing::internal</compoundname>
+    <innerclass refid="classtesting_1_1internal_1_1_g_test_flag_saver" prot="public">testing::internal::GTestFlagSaver</innerclass>
+    <innerclass refid="classtesting_1_1internal_1_1_test_property_key_is" prot="public">testing::internal::TestPropertyKeyIs</innerclass>
+    <innerclass refid="classtesting_1_1internal_1_1_unit_test_options" prot="public">testing::internal::UnitTestOptions</innerclass>
+    <innerclass refid="classtesting_1_1internal_1_1_os_stack_trace_getter_interface" prot="public">testing::internal::OsStackTraceGetterInterface</innerclass>
+    <innerclass refid="classtesting_1_1internal_1_1_os_stack_trace_getter" prot="public">testing::internal::OsStackTraceGetter</innerclass>
+    <innerclass refid="structtesting_1_1internal_1_1_trace_info" prot="public">testing::internal::TraceInfo</innerclass>
+    <innerclass refid="classtesting_1_1internal_1_1_default_global_test_part_result_reporter" prot="public">testing::internal::DefaultGlobalTestPartResultReporter</innerclass>
+    <innerclass refid="classtesting_1_1internal_1_1_default_per_thread_test_part_result_reporter" prot="public">testing::internal::DefaultPerThreadTestPartResultReporter</innerclass>
+    <innerclass refid="classtesting_1_1internal_1_1_unit_test_impl" prot="public">testing::internal::UnitTestImpl</innerclass>
+    <innerclass refid="classtesting_1_1internal_1_1_test_result_accessor" prot="public">testing::internal::TestResultAccessor</innerclass>
+    <innerclass refid="classtesting_1_1internal_1_1_captured_stream" prot="public">testing::internal::CapturedStream</innerclass>
+    <innerclass refid="classtesting_1_1internal_1_1_pretty_unit_test_result_printer" prot="public">testing::internal::PrettyUnitTestResultPrinter</innerclass>
+    <innerclass refid="classtesting_1_1internal_1_1_test_event_repeater" prot="public">testing::internal::TestEventRepeater</innerclass>
+    <innerclass refid="classtesting_1_1internal_1_1_xml_unit_test_result_printer" prot="public">testing::internal::XmlUnitTestResultPrinter</innerclass>
+    <innerclass refid="classtesting_1_1internal_1_1_test_case_name_is" prot="public">testing::internal::TestCaseNameIs</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacetesting_1_1internal_1ae2ef98247c76a50cdc80ceb4a6c81793" prot="public" static="no">
+        <name>CharFormat</name>
+        <enumvalue id="namespacetesting_1_1internal_1ae2ef98247c76a50cdc80ceb4a6c81793af7038866be92e9978360b831e376ffaa" prot="public">
+          <name>kAsIs</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacetesting_1_1internal_1ae2ef98247c76a50cdc80ceb4a6c81793aebfa5293302338a8e8678744c103f113" prot="public">
+          <name>kHexEscape</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacetesting_1_1internal_1ae2ef98247c76a50cdc80ceb4a6c81793ae1211108e9f35f891d9951da64794d03" prot="public">
+          <name>kSpecialEscape</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" line="132" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" bodystart="132" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacetesting_1_1internal_1a648c1bc94c2ef9e868ff3f9dff0f9c4e" prot="public" static="no">
+        <name>GTestColor</name>
+        <enumvalue id="namespacetesting_1_1internal_1a648c1bc94c2ef9e868ff3f9dff0f9c4eafcd8803dc9e37e374d5a4486afc230b7" prot="public">
+          <name>COLOR_DEFAULT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacetesting_1_1internal_1a648c1bc94c2ef9e868ff3f9dff0f9c4ea9ebb3ddab9391781f6ee5021e1e443c3" prot="public">
+          <name>COLOR_RED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacetesting_1_1internal_1a648c1bc94c2ef9e868ff3f9dff0f9c4ea3b1e81f5b14a17b35a8672d57d166507" prot="public">
+          <name>COLOR_GREEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacetesting_1_1internal_1a648c1bc94c2ef9e868ff3f9dff0f9c4ea2cca441161aca75a208ff08d07f5b1a5" prot="public">
+          <name>COLOR_YELLOW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="2550" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="2550" bodyend="2555"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1a64233449a015676484f86e18b33a97f5" prot="public" static="no" mutable="no">
+        <type>::testing::internal::String</type>
+        <definition>::testing::internal::String testing::internal::FLAGS_gtest_internal_run_death_test</definition>
+        <argsstring></argsstring>
+        <name>FLAGS_gtest_internal_run_death_test</name>
+        <initializer>= ( &quot;&quot; )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-death-test.cc" line="105" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-death-test.cc" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1afcd71adaa9d1e6df7b282a17fc48125c" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char testing::internal::kPathSeparator</definition>
+        <argsstring></argsstring>
+        <name>kPathSeparator</name>
+        <initializer>= &apos;/&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-filepath.cc" line="85" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-filepath.cc" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1ab8904ed136370f97cef4fd6d9eeb8439" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char testing::internal::kPathSeparatorString[]</definition>
+        <argsstring>[]</argsstring>
+        <name>kPathSeparatorString</name>
+        <initializer>= &quot;/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-filepath.cc" line="86" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-filepath.cc" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1a23a8e9527d0e544e7df2d64ad549ce3e" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char testing::internal::kCurrentDirectoryString[]</definition>
+        <argsstring>[]</argsstring>
+        <name>kCurrentDirectoryString</name>
+        <initializer>= &quot;./&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-filepath.cc" line="87" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-filepath.cc" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1acac7993efabbd9dd62c1e9c7d143a72f" prot="public" static="no" mutable="no">
+        <type>const TypeId</type>
+        <definition>const TypeId testing::internal::kTestTypeIdInGoogleTest</definition>
+        <argsstring></argsstring>
+        <name>kTestTypeIdInGoogleTest</name>
+        <initializer>= <ref refid="namespacetesting_1_1internal_1ad0d66d56ead224263cd100c1d6bfc562" kindref="member">GetTestTypeId</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="81" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="600" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1ad5882ed0ceadc0f23090f0f08b5d495b" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char testing::internal::kAlsoRunDisabledTestsFlag[]</definition>
+        <argsstring>[]</argsstring>
+        <name>kAlsoRunDisabledTestsFlag</name>
+        <initializer>= &quot;also_run_disabled_tests&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="84" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1a804c907155bfee3a6616ae3ca04048d0" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char testing::internal::kBreakOnFailureFlag[]</definition>
+        <argsstring>[]</argsstring>
+        <name>kBreakOnFailureFlag</name>
+        <initializer>= &quot;break_on_failure&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="85" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1af4bb309802e83df0927097e6e4201a38" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char testing::internal::kCatchExceptionsFlag[]</definition>
+        <argsstring>[]</argsstring>
+        <name>kCatchExceptionsFlag</name>
+        <initializer>= &quot;catch_exceptions&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="86" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1a884ff13b75232fbe7daa0caf46f1de66" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char testing::internal::kColorFlag[]</definition>
+        <argsstring>[]</argsstring>
+        <name>kColorFlag</name>
+        <initializer>= &quot;color&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="87" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1a8cb8ee7fe7659e6916a0108dffa2f7dc" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char testing::internal::kFilterFlag[]</definition>
+        <argsstring>[]</argsstring>
+        <name>kFilterFlag</name>
+        <initializer>= &quot;filter&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="88" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1a1d3cfebffefbf35f7033d4941493a8ff" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char testing::internal::kListTestsFlag[]</definition>
+        <argsstring>[]</argsstring>
+        <name>kListTestsFlag</name>
+        <initializer>= &quot;list_tests&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="89" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1abd5368e00a31d175c6696cf76cbbde10" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char testing::internal::kOutputFlag[]</definition>
+        <argsstring>[]</argsstring>
+        <name>kOutputFlag</name>
+        <initializer>= &quot;output&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="90" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1aa6c13109bb4c78740ddb082b1ec0de56" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char testing::internal::kPrintTimeFlag[]</definition>
+        <argsstring>[]</argsstring>
+        <name>kPrintTimeFlag</name>
+        <initializer>= &quot;print_time&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="91" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1a964ad71443cfda304b3208bf5d2daa75" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char testing::internal::kRandomSeedFlag[]</definition>
+        <argsstring>[]</argsstring>
+        <name>kRandomSeedFlag</name>
+        <initializer>= &quot;random_seed&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="92" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1a764ee423d39ebb8e10c53ab9b685cd9b" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char testing::internal::kRepeatFlag[]</definition>
+        <argsstring>[]</argsstring>
+        <name>kRepeatFlag</name>
+        <initializer>= &quot;repeat&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="93" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1affd2c1118505cb97d8ff728c95fc722b" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char testing::internal::kShuffleFlag[]</definition>
+        <argsstring>[]</argsstring>
+        <name>kShuffleFlag</name>
+        <initializer>= &quot;shuffle&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="94" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1ad6f90e66d431ca3a9084408878c2cc77" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char testing::internal::kStackTraceDepthFlag[]</definition>
+        <argsstring>[]</argsstring>
+        <name>kStackTraceDepthFlag</name>
+        <initializer>= &quot;stack_trace_depth&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="95" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1a84f8a2102d45c8b2b35be06d14ffefb8" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char testing::internal::kStreamResultToFlag[]</definition>
+        <argsstring>[]</argsstring>
+        <name>kStreamResultToFlag</name>
+        <initializer>= &quot;stream_result_to&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="96" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1ad9efcf363de3483afd91c7393a4fefb8" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char testing::internal::kThrowOnFailureFlag[]</definition>
+        <argsstring>[]</argsstring>
+        <name>kThrowOnFailureFlag</name>
+        <initializer>= &quot;throw_on_failure&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="97" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1a41bd421ace53d23dbe85d9618c3afaee" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int testing::internal::kMaxRandomSeed</definition>
+        <argsstring></argsstring>
+        <name>kMaxRandomSeed</name>
+        <initializer>= 99999</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="100" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1a93a772f5e51973b105d91cbb66a203f4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool testing::internal::g_help_flag</definition>
+        <argsstring></argsstring>
+        <name>g_help_flag</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="104" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1a24f0a3d50cac54a9132f4828ec9b96d9" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int testing::internal::kStdOutFileno</definition>
+        <argsstring></argsstring>
+        <name>kStdOutFileno</name>
+        <initializer>= STDOUT_FILENO</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" line="76" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1a747eccfdbdee3ff8af3bedc476a57c85" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int testing::internal::kStdErrFileno</definition>
+        <argsstring></argsstring>
+        <name>kStdErrFileno</name>
+        <initializer>= STDERR_FILENO</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" line="77" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1abae7a5775c901f2fd12b058b00d09840" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char testing::internal::kUnknownFile[]</definition>
+        <argsstring>[]</argsstring>
+        <name>kUnknownFile</name>
+        <initializer>= &quot;unknown file&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" line="426" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" bodystart="426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1ad5ab574d75a3fe6b87b56e5405df6619" prot="public" static="yes" mutable="no">
+        <type><ref refid="classtesting_1_1internal_1_1_captured_stream" kindref="compound">CapturedStream</ref> *</type>
+        <definition>CapturedStream* testing::internal::g_captured_stderr</definition>
+        <argsstring></argsstring>
+        <name>g_captured_stderr</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" line="587" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" bodystart="587" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1a85e9ceb146622a3bbcb407d5dc45aae0" prot="public" static="yes" mutable="no">
+        <type><ref refid="classtesting_1_1internal_1_1_captured_stream" kindref="compound">CapturedStream</ref> *</type>
+        <definition>CapturedStream* testing::internal::g_captured_stdout</definition>
+        <argsstring></argsstring>
+        <name>g_captured_stdout</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" line="588" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" bodystart="588" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1ac864411ee47843f7dd82c59cb306a316" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char testing::internal::kStackTraceMarker[]</definition>
+        <argsstring>[]</argsstring>
+        <name>kStackTraceMarker</name>
+        <initializer>= &quot;\nStack trace:\n&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="174" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1acf784c99c05be3215031c289709a9dde" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int testing::internal::g_init_gtest_count</definition>
+        <argsstring></argsstring>
+        <name>g_init_gtest_count</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="308" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="308" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1a1934e27495061767804b5dfa5860f70a" prot="public" static="no" mutable="no">
+        <type>::testing::internal::Mutex</type>
+        <definition>::testing::internal::Mutex testing::internal::g_linked_ptr_mutex</definition>
+        <argsstring></argsstring>
+        <name>g_linked_ptr_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="363" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="363" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1ad101ca725f68af259fee8d7d3a762cc8" prot="public" static="no" mutable="no">
+        <type>String</type>
+        <definition>String testing::internal::g_executable_path</definition>
+        <argsstring></argsstring>
+        <name>g_executable_path</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="366" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="366" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1a128515c8ed6c0fe98e498c8042da2060" prot="public" static="no" mutable="no">
+        <type>const UInt32</type>
+        <definition>const UInt32 testing::internal::kMaxCodePoint1</definition>
+        <argsstring></argsstring>
+        <name>kMaxCodePoint1</name>
+        <initializer>= (static_cast&lt;UInt32&gt;(1) &lt;&lt;  7) - 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1407" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1ab8f4a5ed784352f00342cfeadc72337e" prot="public" static="no" mutable="no">
+        <type>const UInt32</type>
+        <definition>const UInt32 testing::internal::kMaxCodePoint2</definition>
+        <argsstring></argsstring>
+        <name>kMaxCodePoint2</name>
+        <initializer>= (static_cast&lt;UInt32&gt;(1) &lt;&lt; (5 + 6)) - 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1410" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1aa42bd507418e570402996e33582beed3" prot="public" static="no" mutable="no">
+        <type>const UInt32</type>
+        <definition>const UInt32 testing::internal::kMaxCodePoint3</definition>
+        <argsstring></argsstring>
+        <name>kMaxCodePoint3</name>
+        <initializer>= (static_cast&lt;UInt32&gt;(1) &lt;&lt; (4 + 2*6)) - 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1413" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1acd87c60be9b5fedb2d017503d8834474" prot="public" static="no" mutable="no">
+        <type>const UInt32</type>
+        <definition>const UInt32 testing::internal::kMaxCodePoint4</definition>
+        <argsstring></argsstring>
+        <name>kMaxCodePoint4</name>
+        <initializer>= (static_cast&lt;UInt32&gt;(1) &lt;&lt; (3 + 3*6)) - 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1416" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetesting_1_1internal_1a159395e649dd7728b09b25f70847f1ca" prot="public" static="yes" mutable="no">
+        <type>const char</type>
+        <definition>const char testing::internal::kColorEncodedHelpMessage[]</definition>
+        <argsstring>[]</argsstring>
+        <name>kColorEncodedHelpMessage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="4704" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="4704" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a6b8d22cee9edbbfe56077420a6fa1cb1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool testing::internal::IsPathSeparator</definition>
+        <argsstring>(char c)</argsstring>
+        <name>IsPathSeparator</name>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-filepath.cc" line="91" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-filepath.cc" bodystart="91" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ae66b46943a429e6efb1db456d4cae90c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TimeInMillis</type>
+        <definition>TimeInMillis testing::internal::GetTimeInMillis</definition>
+        <argsstring>()</argsstring>
+        <name>GetTimeInMillis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="107" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="765" bodyend="814"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ac1db1b4603967a6c4404f31cbbac31a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool testing::internal::ShouldUseColor</definition>
+        <argsstring>(bool stdout_is_tty)</argsstring>
+        <name>ShouldUseColor</name>
+        <param>
+          <type>bool</type>
+          <declname>stdout_is_tty</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="110" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="2585" bodyend="2614"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a904485f27a54be8a5a92856e2d838797" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string testing::internal::FormatTimeInMillisAsSeconds</definition>
+        <argsstring>(TimeInMillis ms)</argsstring>
+        <name>FormatTimeInMillisAsSeconds</name>
+        <param>
+          <type>TimeInMillis</type>
+          <declname>ms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="113" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="3196" bodyend="3200"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ae3449e173767750b613114ceac6d916a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool testing::internal::ParseInt32Flag</definition>
+        <argsstring>(const char *str, const char *flag, Int32 *value)</argsstring>
+        <name>ParseInt32Flag</name>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>flag</declname>
+        </param>
+        <param>
+          <type>Int32 *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="119" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="4615" bodyend="4625"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ae74fedbdaebaac8d1202192266243b9e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int testing::internal::GetRandomSeedFromFlag</definition>
+        <argsstring>(Int32 random_seed_flag)</argsstring>
+        <name>GetRandomSeedFromFlag</name>
+        <param>
+          <type>Int32</type>
+          <declname>random_seed_flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="124" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="124" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a6e07a655cb987d131cd8fbeba9a7f1eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int testing::internal::GetNextRandomSeed</definition>
+        <argsstring>(int seed)</argsstring>
+        <name>GetNextRandomSeed</name>
+        <param>
+          <type>int</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="140" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="140" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ae9d2455acef1941c00b5461c6a6cb72b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * testing::internal::CodePointToUtf8</definition>
+        <argsstring>(UInt32 code_point, char *str)</argsstring>
+        <name>CodePointToUtf8</name>
+        <param>
+          <type>UInt32</type>
+          <declname>code_point</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="223" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1435" bodyend="1466"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a5755deda1a71d871806c511a848d971a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String testing::internal::WideStringToUtf8</definition>
+        <argsstring>(const wchar_t *str, int num_chars)</argsstring>
+        <name>WideStringToUtf8</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num_chars</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="238" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1504" bodyend="1526"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a19b35b39782d41e6ef76e1910a3a502e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testing::internal::WriteToShardStatusFileIfNeeded</definition>
+        <argsstring>()</argsstring>
+        <name>WriteToShardStatusFileIfNeeded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="244" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="4281" bodyend="4295"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a0fe41657b1d1ab7ec4e37ec07403ee6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool testing::internal::ShouldShard</definition>
+        <argsstring>(const char *total_shards_str, const char *shard_index_str, bool in_subprocess_for_death_test)</argsstring>
+        <name>ShouldShard</name>
+        <param>
+          <type>const char *</type>
+          <declname>total_shards_str</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>shard_index_str</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>in_subprocess_for_death_test</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="252" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="4303" bodyend="4343"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1aaa576613655c2f380278c255c3ec5fef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Int32</type>
+        <definition>Int32 testing::internal::Int32FromEnvOrDie</definition>
+        <argsstring>(const char *env_var, Int32 default_val)</argsstring>
+        <name>Int32FromEnvOrDie</name>
+        <param>
+          <type>const char *</type>
+          <declname>env_var</declname>
+        </param>
+        <param>
+          <type>Int32</type>
+          <declname>default_val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="259" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="4348" bodyend="4360"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a437bd89f5bc532778d7467600e210395" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool testing::internal::ShouldRunTestOnShard</definition>
+        <argsstring>(int total_shards, int shard_index, int test_id)</argsstring>
+        <name>ShouldRunTestOnShard</name>
+        <param>
+          <type>int</type>
+          <declname>total_shards</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>shard_index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>test_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="265" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="4366" bodyend="4368"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a1e77a774d910346eff11a86d8df783a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Container</type>
+          </param>
+          <param>
+            <type>typename Predicate</type>
+          </param>
+        </templateparamlist>
+        <type>int</type>
+        <definition>int testing::internal::CountIf</definition>
+        <argsstring>(const Container &amp;c, Predicate predicate)</argsstring>
+        <name>CountIf</name>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>Predicate</type>
+          <declname>predicate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="273" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="273" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a52f5504ed65d116201ccb8f99a44fd7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Container</type>
+          </param>
+          <param>
+            <type>typename Functor</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void testing::internal::ForEach</definition>
+        <argsstring>(const Container &amp;c, Functor functor)</argsstring>
+        <name>ForEach</name>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>Functor</type>
+          <declname>functor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="286" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="286" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a71fdd20a0686bea3dc0cdcd95e0bca1c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename E</type>
+          </param>
+        </templateparamlist>
+        <type>E</type>
+        <definition>E testing::internal::GetElementOr</definition>
+        <argsstring>(const std::vector&lt; E &gt; &amp;v, int i, E default_value)</argsstring>
+        <name>GetElementOr</name>
+        <param>
+          <type>const std::vector&lt; E &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>E</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="293" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="293" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a0e1d3dc36138a591769412d4c7779861" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename E</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void testing::internal::ShuffleRange</definition>
+        <argsstring>(internal::Random *random, int begin, int end, std::vector&lt; E &gt; *v)</argsstring>
+        <name>ShuffleRange</name>
+        <param>
+          <type>internal::Random *</type>
+          <declname>random</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; E &gt; *</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="302" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="302" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a90d9e6ffe8522a7eb1b2ce9b1a0c4673" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename E</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void testing::internal::Shuffle</definition>
+        <argsstring>(internal::Random *random, std::vector&lt; E &gt; *v)</argsstring>
+        <name>Shuffle</name>
+        <param>
+          <type>internal::Random *</type>
+          <declname>random</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; E &gt; *</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="323" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="323" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a1e7045e09392aece10aea4517458b7ed" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void testing::internal::Delete</definition>
+        <argsstring>(T *x)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type>T *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="330" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="330" bodyend="332"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a7a2bbf069f75bc99873976ad6fc356ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FilePath</type>
+        <definition>FilePath testing::internal::GetCurrentExecutableName</definition>
+        <argsstring>()</argsstring>
+        <name>GetCurrentExecutableName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="406" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="370" bodyend="380"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a6d77a036770e3e5f9730d18e3e71de52" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtesting_1_1internal_1_1_unit_test_impl" kindref="compound">UnitTestImpl</ref> *</type>
+        <definition>UnitTestImpl* testing::internal::GetUnitTestImpl</definition>
+        <argsstring>()</argsstring>
+        <name>GetUnitTestImpl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="905" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" bodystart="905" bodyend="907"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a472880afbcc592a41e3d623e2dec8412" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testing::internal::ParseGoogleTestFlagsOnly</definition>
+        <argsstring>(int *argc, char **argv)</argsstring>
+        <name>ParseGoogleTestFlagsOnly</name>
+        <param>
+          <type>int *</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="931" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="4842" bodyend="4844"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1aa3c81a67914856448d0778990d9d9cab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testing::internal::ParseGoogleTestFlagsOnly</definition>
+        <argsstring>(int *argc, wchar_t **argv)</argsstring>
+        <name>ParseGoogleTestFlagsOnly</name>
+        <param>
+          <type>int *</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>wchar_t **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-internal-inl.h" line="932" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="4845" bodyend="4847"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a3b9b3649cd04558bf46c75de52a7ef34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t testing::internal::GetThreadCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetThreadCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" line="103" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" bodystart="103" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a4ed75a6fb303f5c12e8447b07cfe33b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>::std::string</type>
+        <definition>::std::string testing::internal::FormatFileLocation</definition>
+        <argsstring>(const char *file, int line)</argsstring>
+        <name>FormatFileLocation</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" line="430" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" bodystart="430" bodyend="441"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1aa3894e558755d17ee2d1e9be5c6d2888" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>::std::string</type>
+        <definition>::std::string testing::internal::FormatCompilerIndependentFileLocation</definition>
+        <argsstring>(const char *file, int line)</argsstring>
+        <name>FormatCompilerIndependentFileLocation</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" line="448" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" bodystart="448" bodyend="456"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ae921db256ee7b0f4f6350f508a91b0da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testing::internal::CaptureStream</definition>
+        <argsstring>(int fd, const char *stream_name, CapturedStream **stream)</argsstring>
+        <name>CaptureStream</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>stream_name</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesting_1_1internal_1_1_captured_stream" kindref="compound">CapturedStream</ref> **</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" line="591" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" bodystart="591" bodyend="597"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a8edae142f6f58de805a7e0aa627f7c5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String testing::internal::GetCapturedStream</definition>
+        <argsstring>(CapturedStream **captured_stream)</argsstring>
+        <name>GetCapturedStream</name>
+        <param>
+          <type><ref refid="classtesting_1_1internal_1_1_captured_stream" kindref="compound">CapturedStream</ref> **</type>
+          <declname>captured_stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" line="600" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" bodystart="600" bodyend="607"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a827b3984f555c922da66547c9958811f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testing::internal::CaptureStdout</definition>
+        <argsstring>()</argsstring>
+        <name>CaptureStdout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" line="610" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" bodystart="610" bodyend="612"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1af6f154175aa92d9e32599151a3f4bd1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testing::internal::CaptureStderr</definition>
+        <argsstring>()</argsstring>
+        <name>CaptureStderr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" line="615" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" bodystart="615" bodyend="617"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1af4fe46a345ec7a3380d3a7d0eb5c510a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String testing::internal::GetCapturedStdout</definition>
+        <argsstring>()</argsstring>
+        <name>GetCapturedStdout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" line="620" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" bodystart="620" bodyend="620"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a503429179b69758d44e7e6282ad2ec0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String testing::internal::GetCapturedStderr</definition>
+        <argsstring>()</argsstring>
+        <name>GetCapturedStderr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" line="623" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" bodystart="623" bodyend="623"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a8ffeb2a1b277fda2e376f7abf7736a12" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>static String testing::internal::FlagToEnvVar</definition>
+        <argsstring>(const char *flag)</argsstring>
+        <name>FlagToEnvVar</name>
+        <param>
+          <type>const char *</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" line="649" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" bodystart="649" bodyend="659"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ac06fc81336a3d80755f4020d34321766" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool testing::internal::ParseInt32</definition>
+        <argsstring>(const Message &amp;src_text, const char *str, Int32 *value)</argsstring>
+        <name>ParseInt32</name>
+        <param>
+          <type>const Message &amp;</type>
+          <declname>src_text</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>Int32 *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" line="664" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" bodystart="664" bodyend="700"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a1055088bb9b867e1b7b8f096f519d7c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool testing::internal::BoolFromGTestEnv</definition>
+        <argsstring>(const char *flag, bool default_value)</argsstring>
+        <name>BoolFromGTestEnv</name>
+        <param>
+          <type>const char *</type>
+          <declname>flag</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" line="706" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" bodystart="706" bodyend="711"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ac2ea500678b361ecd2c03e4b02bb2ccf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Int32</type>
+        <definition>Int32 testing::internal::Int32FromGTestEnv</definition>
+        <argsstring>(const char *flag, Int32 default_value)</argsstring>
+        <name>Int32FromGTestEnv</name>
+        <param>
+          <type>const char *</type>
+          <declname>flag</declname>
+        </param>
+        <param>
+          <type>Int32</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" line="716" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" bodystart="716" bodyend="734"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ab676e6878569f3d79716c8655e34c392" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* testing::internal::StringFromGTestEnv</definition>
+        <argsstring>(const char *flag, const char *default_value)</argsstring>
+        <name>StringFromGTestEnv</name>
+        <param>
+          <type>const char *</type>
+          <declname>flag</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" line="738" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-port.cc" bodystart="738" bodyend="742"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a744a6dd74c12d1e2c16b3c03e14ed4d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool testing::internal::IsPrintableAscii</definition>
+        <argsstring>(wchar_t c)</argsstring>
+        <name>IsPrintableAscii</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" line="141" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" bodystart="141" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ab73d250fde6dfbf16111afb7a071dc3f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename UnsignedChar</type>
+          </param>
+          <param>
+            <type>typename Char</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacetesting_1_1internal_1ae2ef98247c76a50cdc80ceb4a6c81793" kindref="member">CharFormat</ref></type>
+        <definition>static CharFormat testing::internal::PrintAsCharLiteralTo</definition>
+        <argsstring>(Char c, ostream *os)</argsstring>
+        <name>PrintAsCharLiteralTo</name>
+        <param>
+          <type>Char</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>ostream *</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" line="150" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" bodystart="150" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1af66482b3af9f7c3562f6459f4c630ab1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacetesting_1_1internal_1ae2ef98247c76a50cdc80ceb4a6c81793" kindref="member">CharFormat</ref></type>
+        <definition>static CharFormat testing::internal::PrintAsWideStringLiteralTo</definition>
+        <argsstring>(wchar_t c, ostream *os)</argsstring>
+        <name>PrintAsWideStringLiteralTo</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>ostream *</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" line="196" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" bodystart="196" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a4e2ad5bd1c251640cf2bb78300e2d008" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacetesting_1_1internal_1ae2ef98247c76a50cdc80ceb4a6c81793" kindref="member">CharFormat</ref></type>
+        <definition>static CharFormat testing::internal::PrintAsNarrowStringLiteralTo</definition>
+        <argsstring>(char c, ostream *os)</argsstring>
+        <name>PrintAsNarrowStringLiteralTo</name>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>ostream *</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" line="211" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" bodystart="211" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a0c577e598e61d339ba45dd6643fb1969" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename UnsignedChar</type>
+          </param>
+          <param>
+            <type>typename Char</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void testing::internal::PrintCharAndCodeTo</definition>
+        <argsstring>(Char c, ostream *os)</argsstring>
+        <name>PrintCharAndCodeTo</name>
+        <param>
+          <type>Char</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>ostream *</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" line="220" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" bodystart="220" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1abae1a8d465376b68576918205ad706a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testing::internal::PrintTo</definition>
+        <argsstring>(unsigned char c,::std::ostream *os)</argsstring>
+        <name>PrintTo</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>::std::ostream *</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" line="245" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" bodystart="245" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a09f551128c4d165c37004e36ccc87aa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testing::internal::PrintTo</definition>
+        <argsstring>(signed char c,::std::ostream *os)</argsstring>
+        <name>PrintTo</name>
+        <param>
+          <type>signed char</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>::std::ostream *</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" line="248" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" bodystart="248" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1aa74ea9d64f76ce69eceb225ca5ebef58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testing::internal::PrintTo</definition>
+        <argsstring>(wchar_t wc, ostream *os)</argsstring>
+        <name>PrintTo</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>wc</declname>
+        </param>
+        <param>
+          <type>ostream *</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" line="254" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" bodystart="254" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1aa9aff8e9744f4232bd1799b7b31522d9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void testing::internal::PrintCharsAsStringTo</definition>
+        <argsstring>(const char *begin, size_t len, ostream *os)</argsstring>
+        <name>PrintCharsAsStringTo</name>
+        <param>
+          <type>const char *</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>ostream *</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" line="261" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" bodystart="261" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a070107e7a8205ad6ec4d538d52b15b38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testing::internal::UniversalPrintArray</definition>
+        <argsstring>(const char *begin, size_t len, ostream *os)</argsstring>
+        <name>UniversalPrintArray</name>
+        <param>
+          <type>const char *</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>ostream *</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" line="278" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" bodystart="278" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ab8351e46af9d9fafe15fb74bfd9c1277" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void testing::internal::PrintWideCharsAsStringTo</definition>
+        <argsstring>(const wchar_t *begin, size_t len, ostream *os)</argsstring>
+        <name>PrintWideCharsAsStringTo</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>ostream *</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" line="285" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" bodystart="285" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1adc6c98306d40b53fd07be4e295102a0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testing::internal::PrintTo</definition>
+        <argsstring>(const char *s, ostream *os)</argsstring>
+        <name>PrintTo</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>ostream *</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" line="303" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" bodystart="303" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1afc20fb56b2547a8f91f9ff99650f2024" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testing::internal::PrintTo</definition>
+        <argsstring>(const wchar_t *s, ostream *os)</argsstring>
+        <name>PrintTo</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>ostream *</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" line="320" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" bodystart="320" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ad609167d8d6792b0fb186539e0e159bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testing::internal::PrintStringTo</definition>
+        <argsstring>(const ::std::string &amp;s, ostream *os)</argsstring>
+        <name>PrintStringTo</name>
+        <param>
+          <type>const ::std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>ostream *</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" line="337" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" bodystart="337" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ac46308aa3c0294ae446a40115aeb32c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testing::internal::PrintWideStringTo</definition>
+        <argsstring>(const ::std::wstring &amp;s, ostream *os)</argsstring>
+        <name>PrintWideStringTo</name>
+        <param>
+          <type>const ::std::wstring &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>ostream *</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" line="349" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-printers.cc" bodystart="349" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a91e707e0d371fae0224ffd37f0d042af" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool testing::internal::GTestIsInitialized</definition>
+        <argsstring>()</argsstring>
+        <name>GTestIsInitialized</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="309" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="309" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ad1b758141e7e064d00a2bf0355c8ee43" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int testing::internal::SumOverTestCaseList</definition>
+        <argsstring>(const std::vector&lt; TestCase * &gt; &amp;case_list, int(TestCase::*method)() const)</argsstring>
+        <name>SumOverTestCaseList</name>
+        <param>
+          <type>const std::vector&lt; TestCase * &gt; &amp;</type>
+          <declname>case_list</declname>
+        </param>
+        <param>
+          <type>int(TestCase::*)() const</type>
+          <declname>method</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="314" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="314" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1aadc7afca7aab40f7f1d41bc17974459a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool testing::internal::TestCasePassed</definition>
+        <argsstring>(const TestCase *test_case)</argsstring>
+        <name>TestCasePassed</name>
+        <param>
+          <type>const TestCase *</type>
+          <declname>test_case</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="324" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="324" bodyend="326"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a53454b6089c1c5b25319caa9de6c5c02" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool testing::internal::TestCaseFailed</definition>
+        <argsstring>(const TestCase *test_case)</argsstring>
+        <name>TestCaseFailed</name>
+        <param>
+          <type>const TestCase *</type>
+          <declname>test_case</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="329" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="329" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a73e562dfef3eb7b30dfbb7b5e88e6df2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool testing::internal::ShouldRunTestCase</definition>
+        <argsstring>(const TestCase *test_case)</argsstring>
+        <name>ShouldRunTestCase</name>
+        <param>
+          <type>const TestCase *</type>
+          <declname>test_case</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="335" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="335" bodyend="337"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ad0d66d56ead224263cd100c1d6bfc562" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TypeId</type>
+        <definition>TypeId testing::internal::GetTestTypeId</definition>
+        <argsstring>()</argsstring>
+        <name>GetTestTypeId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="594" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="594" bodyend="596"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a14ff02e6d151f45e998657674e9af88a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AssertionResult</type>
+        <definition>AssertionResult testing::internal::HasOneFailure</definition>
+        <argsstring>(const char *, const char *, const char *, const TestPartResultArray &amp;results, TestPartResult::Type type, const string &amp;substr)</argsstring>
+        <name>HasOneFailure</name>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>const TestPartResultArray &amp;</type>
+          <declname>results</declname>
+        </param>
+        <param>
+          <type>TestPartResult::Type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>substr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="605" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="605" bodyend="639"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a23f72c3e647b9fd54b867bc81c1f133a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>static char* testing::internal::CloneString</definition>
+        <argsstring>(const char *str, size_t length)</argsstring>
+        <name>CloneString</name>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="835" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="835" bodyend="844"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a2d34c3f7106e22480582719e7cdc31b9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void testing::internal::StreamWideCharsToMessage</definition>
+        <argsstring>(const wchar_t *wstr, size_t length, Message *msg)</argsstring>
+        <name>StreamWideCharsToMessage</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>wstr</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>Message *</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="907" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="907" bodyend="924"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1aa2053b3907984c806382f957a2a48990" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AssertionResult</type>
+        <definition>AssertionResult testing::internal::EqFailure</definition>
+        <argsstring>(const char *expected_expression, const char *actual_expression, const String &amp;expected_value, const String &amp;actual_value, bool ignoring_case)</argsstring>
+        <name>EqFailure</name>
+        <param>
+          <type>const char *</type>
+          <declname>expected_expression</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>actual_expression</declname>
+        </param>
+        <param>
+          <type>const String &amp;</type>
+          <declname>expected_value</declname>
+        </param>
+        <param>
+          <type>const String &amp;</type>
+          <declname>actual_value</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ignoring_case</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="998" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="998" bodyend="1018"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a36c1071521f7ec25f1bee9ba7703c1d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String testing::internal::GetBoolAssertionFailureMessage</definition>
+        <argsstring>(const AssertionResult &amp;assertion_result, const char *expression_text, const char *actual_predicate_value, const char *expected_predicate_value)</argsstring>
+        <name>GetBoolAssertionFailureMessage</name>
+        <param>
+          <type>const AssertionResult &amp;</type>
+          <declname>assertion_result</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>expression_text</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>actual_predicate_value</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>expected_predicate_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1021" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1021" bodyend="1033"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a4f70b36c624b54c2362aeecc2f05ee8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AssertionResult</type>
+        <definition>AssertionResult testing::internal::DoubleNearPredFormat</definition>
+        <argsstring>(const char *expr1, const char *expr2, const char *abs_error_expr, double val1, double val2, double abs_error)</argsstring>
+        <name>DoubleNearPredFormat</name>
+        <param>
+          <type>const char *</type>
+          <declname>expr1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>expr2</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>abs_error_expr</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>abs_error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1036" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1036" bodyend="1053"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a17b52b6b1f81f6dcad5cc4d12e5173a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename RawType</type>
+          </param>
+        </templateparamlist>
+        <type>AssertionResult</type>
+        <definition>AssertionResult testing::internal::FloatingPointLE</definition>
+        <argsstring>(const char *expr1, const char *expr2, RawType val1, RawType val2)</argsstring>
+        <name>FloatingPointLE</name>
+        <param>
+          <type>const char *</type>
+          <declname>expr1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>expr2</declname>
+        </param>
+        <param>
+          <type>RawType</type>
+          <declname>val1</declname>
+        </param>
+        <param>
+          <type>RawType</type>
+          <declname>val2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1058" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1058" bodyend="1089"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ae82c79cea2973bbbfbd0f2aca7a6f349" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AssertionResult</type>
+        <definition>AssertionResult testing::internal::CmpHelperEQ</definition>
+        <argsstring>(const char *expected_expression, const char *actual_expression, BiggestInt expected, BiggestInt actual)</argsstring>
+        <name>CmpHelperEQ</name>
+        <param>
+          <type>const char *</type>
+          <declname>expected_expression</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>actual_expression</declname>
+        </param>
+        <param>
+          <type>BiggestInt</type>
+          <declname>expected</declname>
+        </param>
+        <param>
+          <type>BiggestInt</type>
+          <declname>actual</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1111" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1111" bodyend="1124"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a798307e57fceb374bcae2642dd4d3b19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AssertionResult</type>
+        <definition>AssertionResult testing::internal::CmpHelperNE</definition>
+        <argsstring>(const char *expr1, const char *expr2, BiggestInt val1, BiggestInt val2)</argsstring>
+        <name>CmpHelperNE</name>
+        <param>
+          <type>const char *</type>
+          <declname>expr1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>expr2</declname>
+        </param>
+        <param>
+          <type>BiggestInt</type>
+          <declname>val1</declname>
+        </param>
+        <param>
+          <type>BiggestInt</type>
+          <declname>val2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1144" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1144" bodyend="1144"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a73557a45e98a2558a13a7acf52727f33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AssertionResult</type>
+        <definition>AssertionResult testing::internal::CmpHelperLE</definition>
+        <argsstring>(const char *expr1, const char *expr2, BiggestInt val1, BiggestInt val2)</argsstring>
+        <name>CmpHelperLE</name>
+        <param>
+          <type>const char *</type>
+          <declname>expr1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>expr2</declname>
+        </param>
+        <param>
+          <type>BiggestInt</type>
+          <declname>val1</declname>
+        </param>
+        <param>
+          <type>BiggestInt</type>
+          <declname>val2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1147" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1147" bodyend="1147"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a8e660d15f056c192694c1b9205e59c17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AssertionResult</type>
+        <definition>AssertionResult testing::internal::CmpHelperLT</definition>
+        <argsstring>(const char *expr1, const char *expr2, BiggestInt val1, BiggestInt val2)</argsstring>
+        <name>CmpHelperLT</name>
+        <param>
+          <type>const char *</type>
+          <declname>expr1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>expr2</declname>
+        </param>
+        <param>
+          <type>BiggestInt</type>
+          <declname>val1</declname>
+        </param>
+        <param>
+          <type>BiggestInt</type>
+          <declname>val2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1150" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1150" bodyend="1150"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a7f239381355f814b3da31b9d5b877eeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AssertionResult</type>
+        <definition>AssertionResult testing::internal::CmpHelperGE</definition>
+        <argsstring>(const char *expr1, const char *expr2, BiggestInt val1, BiggestInt val2)</argsstring>
+        <name>CmpHelperGE</name>
+        <param>
+          <type>const char *</type>
+          <declname>expr1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>expr2</declname>
+        </param>
+        <param>
+          <type>BiggestInt</type>
+          <declname>val1</declname>
+        </param>
+        <param>
+          <type>BiggestInt</type>
+          <declname>val2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1153" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1153" bodyend="1153"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a9eda2abd054c02f1e80cc14eb1ca9b60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AssertionResult</type>
+        <definition>AssertionResult testing::internal::CmpHelperGT</definition>
+        <argsstring>(const char *expr1, const char *expr2, BiggestInt val1, BiggestInt val2)</argsstring>
+        <name>CmpHelperGT</name>
+        <param>
+          <type>const char *</type>
+          <declname>expr1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>expr2</declname>
+        </param>
+        <param>
+          <type>BiggestInt</type>
+          <declname>val1</declname>
+        </param>
+        <param>
+          <type>BiggestInt</type>
+          <declname>val2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1156" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1156" bodyend="1156"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a11ff4bc46dddd8bb07c0e247a603695d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AssertionResult</type>
+        <definition>AssertionResult testing::internal::CmpHelperSTREQ</definition>
+        <argsstring>(const char *expected_expression, const char *actual_expression, const char *expected, const char *actual)</argsstring>
+        <name>CmpHelperSTREQ</name>
+        <param>
+          <type>const char *</type>
+          <declname>expected_expression</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>actual_expression</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>expected</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>actual</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1161" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1161" bodyend="1174"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a802d9586d870a90e6a850953c167654d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AssertionResult</type>
+        <definition>AssertionResult testing::internal::CmpHelperSTRCASEEQ</definition>
+        <argsstring>(const char *expected_expression, const char *actual_expression, const char *expected, const char *actual)</argsstring>
+        <name>CmpHelperSTRCASEEQ</name>
+        <param>
+          <type>const char *</type>
+          <declname>expected_expression</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>actual_expression</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>expected</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>actual</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1177" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1177" bodyend="1190"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1af2d31c77ce73e1003a64bd7ca3564bbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AssertionResult</type>
+        <definition>AssertionResult testing::internal::CmpHelperSTRNE</definition>
+        <argsstring>(const char *s1_expression, const char *s2_expression, const char *s1, const char *s2)</argsstring>
+        <name>CmpHelperSTRNE</name>
+        <param>
+          <type>const char *</type>
+          <declname>s1_expression</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>s2_expression</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1193" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1193" bodyend="1204"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a7e31d489f06ab8f6a81a7729f0c377e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AssertionResult</type>
+        <definition>AssertionResult testing::internal::CmpHelperSTRCASENE</definition>
+        <argsstring>(const char *s1_expression, const char *s2_expression, const char *s1, const char *s2)</argsstring>
+        <name>CmpHelperSTRCASENE</name>
+        <param>
+          <type>const char *</type>
+          <declname>s1_expression</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>s2_expression</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1207" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1207" bodyend="1219"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a2c54b453387aa8a18f2f3e09f10b5a7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>UInt32</type>
+        <definition>UInt32 testing::internal::ChopLowBits</definition>
+        <argsstring>(UInt32 *bits, int n)</argsstring>
+        <name>ChopLowBits</name>
+        <param>
+          <type>UInt32 *</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1421" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1421" bodyend="1425"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a681895f8cc32286211be9889da107394" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool testing::internal::IsUtf16SurrogatePair</definition>
+        <argsstring>(wchar_t first, wchar_t second)</argsstring>
+        <name>IsUtf16SurrogatePair</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>wchar_t</type>
+          <declname>second</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1475" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1475" bodyend="1478"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ac8ef1bb10cd9e69de939789b759e6bc9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>UInt32</type>
+        <definition>UInt32 testing::internal::CreateCodePointFromUtf16SurrogatePair</definition>
+        <argsstring>(wchar_t first, wchar_t second)</argsstring>
+        <name>CreateCodePointFromUtf16SurrogatePair</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>wchar_t</type>
+          <declname>second</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1481" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1481" bodyend="1489"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a5a60e3eb4490e67f00fdb62dd147cd89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AssertionResult</type>
+        <definition>AssertionResult testing::internal::CmpHelperSTREQ</definition>
+        <argsstring>(const char *expected_expression, const char *actual_expression, const wchar_t *expected, const wchar_t *actual)</argsstring>
+        <name>CmpHelperSTREQ</name>
+        <param>
+          <type>const char *</type>
+          <declname>expected_expression</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>actual_expression</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>expected</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>actual</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1560" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1560" bodyend="1573"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a415a953647bbc9469f062dc966061efb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AssertionResult</type>
+        <definition>AssertionResult testing::internal::CmpHelperSTRNE</definition>
+        <argsstring>(const char *s1_expression, const char *s2_expression, const wchar_t *s1, const wchar_t *s2)</argsstring>
+        <name>CmpHelperSTRNE</name>
+        <param>
+          <type>const char *</type>
+          <declname>s1_expression</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>s2_expression</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>s1</declname>
+        </param>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>s2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1576" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1576" bodyend="1588"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a4e6f07640a07373135fee8cc42fa86f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String testing::internal::StringStreamToString</definition>
+        <argsstring>(::std::stringstream *ss)</argsstring>
+        <name>StringStreamToString</name>
+        <param>
+          <type>::std::stringstream *</type>
+          <declname>ss</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1735" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1735" bodyend="1752"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1aed6f6cc267e9688bec9497f118f8fcd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String testing::internal::AppendUserMessage</definition>
+        <argsstring>(const String &amp;gtest_msg, const Message &amp;user_msg)</argsstring>
+        <name>AppendUserMessage</name>
+        <param>
+          <type>const String &amp;</type>
+          <declname>gtest_msg</declname>
+        </param>
+        <param>
+          <type>const Message &amp;</type>
+          <declname>user_msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1755" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1755" bodyend="1767"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a4263c6e68b860fde7321cfc5a6d7ac04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testing::internal::ReportFailureInUnknownLocation</definition>
+        <argsstring>(TestPartResult::Type result_type, const String &amp;message)</argsstring>
+        <name>ReportFailureInUnknownLocation</name>
+        <param>
+          <type>TestPartResult::Type</type>
+          <declname>result_type</declname>
+        </param>
+        <param>
+          <type>const String &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="1932" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="1932" bodyend="1942"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ac5293b438139ef7ed05cb7fcaaf63545" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+          <param>
+            <type>typename Result</type>
+          </param>
+        </templateparamlist>
+        <type>Result</type>
+        <definition>Result testing::internal::HandleSehExceptionsInMethodIfSupported</definition>
+        <argsstring>(T *object, Result(T::*method)(), const char *location)</argsstring>
+        <name>HandleSehExceptionsInMethodIfSupported</name>
+        <param>
+          <type>T *</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>Result(T::*)()</type>
+          <declname>method</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>location</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="2071" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="2071" bodyend="2092"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1addb2ed165b92b74e25fe9ebe9e46b9f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+          <param>
+            <type>typename Result</type>
+          </param>
+        </templateparamlist>
+        <type>Result</type>
+        <definition>Result testing::internal::HandleExceptionsInMethodIfSupported</definition>
+        <argsstring>(T *object, Result(T::*method)(), const char *location)</argsstring>
+        <name>HandleExceptionsInMethodIfSupported</name>
+        <param>
+          <type>T *</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>Result(T::*)()</type>
+          <declname>method</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>location</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="2098" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="2098" bodyend="2147"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1af1b5c57bc7007db3246acd2634cf094e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TestInfo *</type>
+        <definition>TestInfo* testing::internal::MakeAndRegisterTestInfo</definition>
+        <argsstring>(const char *test_case_name, const char *name, const char *type_param, const char *value_param, TypeId fixture_class_id, SetUpTestCaseFunc set_up_tc, TearDownTestCaseFunc tear_down_tc, TestFactoryBase *factory)</argsstring>
+        <name>MakeAndRegisterTestInfo</name>
+        <param>
+          <type>const char *</type>
+          <declname>test_case_name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>type_param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value_param</declname>
+        </param>
+        <param>
+          <type>TypeId</type>
+          <declname>fixture_class_id</declname>
+        </param>
+        <param>
+          <type>SetUpTestCaseFunc</type>
+          <declname>set_up_tc</declname>
+        </param>
+        <param>
+          <type>TearDownTestCaseFunc</type>
+          <declname>tear_down_tc</declname>
+        </param>
+        <param>
+          <type>TestFactoryBase *</type>
+          <declname>factory</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="2229" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="2229" bodyend="2242"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a58daca981e8ae06731cca8b2499d1093" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testing::internal::ReportInvalidTestCaseType</definition>
+        <argsstring>(const char *test_case_name, const char *file, int line)</argsstring>
+        <name>ReportInvalidTestCaseType</name>
+        <param>
+          <type>const char *</type>
+          <declname>test_case_name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="2245" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="2245" bodyend="2260"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a0aefb9deb60e90f19c236559837303d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* testing::internal::GetAnsiColorCode</definition>
+        <argsstring>(GTestColor color)</argsstring>
+        <name>GetAnsiColorCode</name>
+        <param>
+          <type><ref refid="namespacetesting_1_1internal_1a648c1bc94c2ef9e868ff3f9dff0f9c4e" kindref="member">GTestColor</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="2573" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="2573" bodyend="2580"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1adef3055706176001364e54eb73a87e31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testing::internal::ColoredPrintf</definition>
+        <argsstring>(GTestColor color, const char *fmt,...)</argsstring>
+        <name>ColoredPrintf</name>
+        <param>
+          <type><ref refid="namespacetesting_1_1internal_1a648c1bc94c2ef9e868ff3f9dff0f9c4e" kindref="member">GTestColor</ref></type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="2620" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="2620" bodyend="2664"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a7a85ebe3b4de93a1edb091f92f1fb393" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void testing::internal::PrintFullTestCommentIfPresent</definition>
+        <argsstring>(const TestInfo &amp;test_info)</argsstring>
+        <name>PrintFullTestCommentIfPresent</name>
+        <param>
+          <type>const TestInfo &amp;</type>
+          <declname>test_info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="2666" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="2666" bodyend="2681"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a5f5535012d4548788a5d1a4e0f18e19e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void testing::internal::SetUpEnvironment</definition>
+        <argsstring>(Environment *env)</argsstring>
+        <name>SetUpEnvironment</name>
+        <param>
+          <type>Environment *</type>
+          <declname>env</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="4133" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="4133" bodyend="4133"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ac467e871e4781da3f5ebed2a4465aec4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void testing::internal::TearDownEnvironment</definition>
+        <argsstring>(Environment *env)</argsstring>
+        <name>TearDownEnvironment</name>
+        <param>
+          <type>Environment *</type>
+          <declname>env</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="4134" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="4134" bodyend="4134"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1aeedc1bd1790993f92dedcd02f2e08fa3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String testing::internal::GetCurrentOsStackTraceExceptTop</definition>
+        <argsstring>(UnitTest *, int skip_count)</argsstring>
+        <name>GetCurrentOsStackTraceExceptTop</name>
+        <param>
+          <type>UnitTest *</type>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>skip_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="4518" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="4518" bodyend="4523"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a527b9bcc13669b9a16400c8514266254" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool testing::internal::IsTrue</definition>
+        <argsstring>(bool condition)</argsstring>
+        <name>IsTrue</name>
+        <param>
+          <type>bool</type>
+          <declname>condition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="4531" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="4531" bodyend="4531"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a922c9da63cd4bf94fc473b9ecac76414" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool testing::internal::AlwaysTrue</definition>
+        <argsstring>()</argsstring>
+        <name>AlwaysTrue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="4533" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="4533" bodyend="4541"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a244d9a3765727306b597b8992ab84036" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool testing::internal::SkipPrefix</definition>
+        <argsstring>(const char *prefix, const char **pstr)</argsstring>
+        <name>SkipPrefix</name>
+        <param>
+          <type>const char *</type>
+          <declname>prefix</declname>
+        </param>
+        <param>
+          <type>const char **</type>
+          <declname>pstr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="4546" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="4546" bodyend="4553"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a8bfd56af5e4a89bfb76f7e1723e41b03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* testing::internal::ParseFlagValue</definition>
+        <argsstring>(const char *str, const char *flag, bool def_optional)</argsstring>
+        <name>ParseFlagValue</name>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>flag</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>def_optional</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="4560" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="4560" bodyend="4586"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ada3b98e7cfe93f4ba2053c470d9e3e51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool testing::internal::ParseBoolFlag</definition>
+        <argsstring>(const char *str, const char *flag, bool *value)</argsstring>
+        <name>ParseBoolFlag</name>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>flag</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="4598" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="4598" bodyend="4608"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1acc91b56a5954a5580c22e6eabd588241" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool testing::internal::ParseStringFlag</definition>
+        <argsstring>(const char *str, const char *flag, String *value)</argsstring>
+        <name>ParseStringFlag</name>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>flag</declname>
+        </param>
+        <param>
+          <type>String *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="4632" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="4632" bodyend="4642"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a6fff795269f50673e358438721710d6f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool testing::internal::HasGoogleTestFlagPrefix</definition>
+        <argsstring>(const char *str)</argsstring>
+        <name>HasGoogleTestFlagPrefix</name>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="4650" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="4650" bodyend="4657"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1a7d8c446a29c7e22d7d4dde8f530bb57e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void testing::internal::PrintColorEncoded</definition>
+        <argsstring>(const char *str)</argsstring>
+        <name>PrintColorEncoded</name>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="4670" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="4670" bodyend="4702"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ae4c46ce8c3d016848fff52cc5133f2ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename CharType</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void testing::internal::ParseGoogleTestFlagsOnlyImpl</definition>
+        <argsstring>(int *argc, CharType **argv)</argsstring>
+        <name>ParseGoogleTestFlagsOnlyImpl</name>
+        <param>
+          <type>int *</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>CharType **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="4772" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="4772" bodyend="4838"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetesting_1_1internal_1ac3c6fa93391768aa91c6238b31aaeeb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename CharType</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void testing::internal::InitGoogleTestImpl</definition>
+        <argsstring>(int *argc, CharType **argv)</argsstring>
+        <name>InitGoogleTestImpl</name>
+        <param>
+          <type>int *</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>CharType **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" line="4854" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest.cc" bodystart="4854" bodyend="4875"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/gtest-1.6.0/src/gtest-death-test.cc" line="97" column="1"/>
+  </compounddef>
+</doxygen>

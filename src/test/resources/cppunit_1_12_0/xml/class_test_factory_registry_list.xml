@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="class_test_factory_registry_list" kind="class" prot="public">
+    <compoundname>TestFactoryRegistryList</compoundname>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_test_factory_registry_list_1ad0597620627b90e430064bd5e7952538" prot="private" static="no">
+        <name>State</name>
+        <enumvalue id="class_test_factory_registry_list_1ad0597620627b90e430064bd5e7952538a101e3d05a8383512bce95757b7070096" prot="private">
+          <name>doNotChange</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_test_factory_registry_list_1ad0597620627b90e430064bd5e7952538af5dd2e6008d0c3757341b348c55e0e04" prot="private">
+          <name>notCreated</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_test_factory_registry_list_1ad0597620627b90e430064bd5e7952538a99ba259f53674b662b0709651b0e7e7f" prot="private">
+          <name>exist</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_test_factory_registry_list_1ad0597620627b90e430064bd5e7952538ad590c8e300571114a12c77141a42ed97" prot="private">
+          <name>destroyed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" line="18" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" bodystart="18" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_test_factory_registry_list_1ad68ae335973f3bd3a6beadcacfec7143" prot="private" static="no">
+        <type>::map&lt; ::string, TestFactoryRegistry *,::less&lt; ::string &gt; &gt;</type>
+        <definition>typedef ::map&lt; ::string, TestFactoryRegistry *, ::less&lt; ::string&gt; &gt; TestFactoryRegistryList::Registries</definition>
+        <argsstring></argsstring>
+        <name>Registries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" line="15" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_test_factory_registry_list_1a2b19db11e057deaad5f709ffd714a6f7" prot="private" static="no" mutable="no">
+        <type>Registries</type>
+        <definition>Registries TestFactoryRegistryList::m_registries</definition>
+        <argsstring></argsstring>
+        <name>m_registries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" line="16" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_test_factory_registry_list_1a50e6dab4ccf2fc0378bb2425b0fa007a" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>State</type>
+        <definition>static State TestFactoryRegistryList::stateFlag</definition>
+        <argsstring>(State newState=doNotChange)</argsstring>
+        <name>stateFlag</name>
+        <param>
+          <type>State</type>
+          <declname>newState</declname>
+          <defval>doNotChange</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" line="25" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" bodystart="25" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_factory_registry_list_1ae8cce4f1f2180f259ae12bc01694be0d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_test_factory_registry_list" kindref="compound">TestFactoryRegistryList</ref> *</type>
+        <definition>static TestFactoryRegistryList* TestFactoryRegistryList::getInstance</definition>
+        <argsstring>()</argsstring>
+        <name>getInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" line="33" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" bodystart="33" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_test_factory_registry_list_1a7464a81608e364eb8d17754f54c4b440" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TestFactoryRegistry *</type>
+        <definition>TestFactoryRegistry* TestFactoryRegistryList::getInternalRegistry</definition>
+        <argsstring>(const ::string &amp;name)</argsstring>
+        <name>getInternalRegistry</name>
+        <param>
+          <type>const ::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" line="39" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" bodystart="39" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_test_factory_registry_list_1a436e528d9b7a3d4283be05ef1dd0644f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TestFactoryRegistryList::TestFactoryRegistryList</definition>
+        <argsstring>()</argsstring>
+        <name>TestFactoryRegistryList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" line="52" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_factory_registry_list_1af03a4bd5c054329008b00a650953db71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TestFactoryRegistryList::‾TestFactoryRegistryList</definition>
+        <argsstring>()</argsstring>
+        <name>‾TestFactoryRegistryList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" line="57" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" bodystart="57" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_test_factory_registry_list_1abb797a8cf202ed841f1f3b4d1cc0e6d3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TestFactoryRegistry *</type>
+        <definition>static TestFactoryRegistry* TestFactoryRegistryList::getRegistry</definition>
+        <argsstring>(const ::string &amp;name)</argsstring>
+        <name>getRegistry</name>
+        <param>
+          <type>const ::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" line="65" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" bodystart="65" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_factory_registry_list_1a9a799f9f2d2e7da406f6f576d46976cf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool TestFactoryRegistryList::isValid</definition>
+        <argsstring>()</argsstring>
+        <name>isValid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" line="77" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" bodystart="77" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>¥brief (INTERNAL) List of all TestFactoryRegistry. </para>    </detaileddescription>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" line="13" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TestFactoryRegistry.cpp" bodystart="12" bodyend="81"/>
+    <listofallmembers>
+      <member refid="class_test_factory_registry_list_1ad0597620627b90e430064bd5e7952538ad590c8e300571114a12c77141a42ed97" prot="private" virt="non-virtual"><scope>TestFactoryRegistryList</scope><name>destroyed</name></member>
+      <member refid="class_test_factory_registry_list_1ad0597620627b90e430064bd5e7952538a101e3d05a8383512bce95757b7070096" prot="private" virt="non-virtual"><scope>TestFactoryRegistryList</scope><name>doNotChange</name></member>
+      <member refid="class_test_factory_registry_list_1ad0597620627b90e430064bd5e7952538a99ba259f53674b662b0709651b0e7e7f" prot="private" virt="non-virtual"><scope>TestFactoryRegistryList</scope><name>exist</name></member>
+      <member refid="class_test_factory_registry_list_1ae8cce4f1f2180f259ae12bc01694be0d" prot="private" virt="non-virtual"><scope>TestFactoryRegistryList</scope><name>getInstance</name></member>
+      <member refid="class_test_factory_registry_list_1a7464a81608e364eb8d17754f54c4b440" prot="private" virt="non-virtual"><scope>TestFactoryRegistryList</scope><name>getInternalRegistry</name></member>
+      <member refid="class_test_factory_registry_list_1abb797a8cf202ed841f1f3b4d1cc0e6d3" prot="public" virt="non-virtual"><scope>TestFactoryRegistryList</scope><name>getRegistry</name></member>
+      <member refid="class_test_factory_registry_list_1a9a799f9f2d2e7da406f6f576d46976cf" prot="public" virt="non-virtual"><scope>TestFactoryRegistryList</scope><name>isValid</name></member>
+      <member refid="class_test_factory_registry_list_1a2b19db11e057deaad5f709ffd714a6f7" prot="private" virt="non-virtual"><scope>TestFactoryRegistryList</scope><name>m_registries</name></member>
+      <member refid="class_test_factory_registry_list_1ad0597620627b90e430064bd5e7952538af5dd2e6008d0c3757341b348c55e0e04" prot="private" virt="non-virtual"><scope>TestFactoryRegistryList</scope><name>notCreated</name></member>
+      <member refid="class_test_factory_registry_list_1ad68ae335973f3bd3a6beadcacfec7143" prot="private" virt="non-virtual"><scope>TestFactoryRegistryList</scope><name>Registries</name></member>
+      <member refid="class_test_factory_registry_list_1ad0597620627b90e430064bd5e7952538" prot="private" virt="non-virtual"><scope>TestFactoryRegistryList</scope><name>State</name></member>
+      <member refid="class_test_factory_registry_list_1a50e6dab4ccf2fc0378bb2425b0fa007a" prot="private" virt="non-virtual"><scope>TestFactoryRegistryList</scope><name>stateFlag</name></member>
+      <member refid="class_test_factory_registry_list_1a436e528d9b7a3d4283be05ef1dd0644f" prot="public" virt="non-virtual"><scope>TestFactoryRegistryList</scope><name>TestFactoryRegistryList</name></member>
+      <member refid="class_test_factory_registry_list_1af03a4bd5c054329008b00a650953db71" prot="public" virt="non-virtual"><scope>TestFactoryRegistryList</scope><name>‾TestFactoryRegistryList</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_dawg_info_vector" kind="class" prot="public">
+    <compoundname>tesseract::DawgInfoVector</compoundname>
+    <basecompoundref refid="class_generic_vector" prot="public" virt="non-virtual">GenericVector&lt; DawgInfo &gt;</basecompoundref>
+    <includes refid="dawg_8h" local="no">dawg.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_dawg_info_vector_1a194b015eef92df80742a78f3ca240955" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::DawgInfoVector::~DawgInfoVector</definition>
+        <argsstring>()</argsstring>
+        <name>~DawgInfoVector</name>
+        <briefdescription>
+<para>Overload destructor, since <ref refid="classtesseract_1_1_dawg_info_vector_1ae6b547bc520864c0b291530cb00d4ca5" kindref="member">clear()</ref> does not delete data_[] any more. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="317" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="317" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_info_vector_1ae6b547bc520864c0b291530cb00d4ca5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void tesseract::DawgInfoVector::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <reimplements refid="class_generic_vector_1a9cdbff49b186574b83e43afba606fdd9">clear</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Overload <ref refid="classtesseract_1_1_dawg_info_vector_1ae6b547bc520864c0b291530cb00d4ca5" kindref="member">clear()</ref> in order to avoid allocating/deallocating memory when clearing the vector and re-inserting entries into it later. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="326" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="326" bodyend="326"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_dawg_info_vector_1afb770b4357771797dd410725d9e9eb10" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::DawgInfoVector::add_unique</definition>
+        <argsstring>(const DawgInfo &amp;new_info, bool debug, const char *debug_msg)</argsstring>
+        <name>add_unique</name>
+        <param>
+          <type>const <ref refid="structtesseract_1_1_dawg_info" kindref="compound">DawgInfo</ref> &amp;</type>
+          <declname>new_info</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>debug</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>debug_msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds an entry for the given dawg_index with the given node to the vec. Returns false if the same entry already exists in the vector, true otherwise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="330" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="330" bodyend="341"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="720">
+        <label>tesseract::DawgInfoVector</label>
+        <link refid="classtesseract_1_1_dawg_info_vector"/>
+        <childnode refid="721" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="721">
+        <label>GenericVector&lt; DawgInfo &gt;</label>
+        <link refid="class_generic_vector"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="722">
+        <label>tesseract::DawgInfoVector</label>
+        <link refid="classtesseract_1_1_dawg_info_vector"/>
+        <childnode refid="723" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="724">
+        <label>tesseract::DawgInfo</label>
+        <link refid="structtesseract_1_1_dawg_info"/>
+      </node>
+      <node id="726">
+        <label>TessResultCallback2&lt; bool, DawgInfoconst &amp;, DawgInfoconst &amp; &gt;</label>
+        <link refid="class_tess_result_callback2"/>
+      </node>
+      <node id="723">
+        <label>GenericVector&lt; DawgInfo &gt;</label>
+        <link refid="class_generic_vector"/>
+        <childnode refid="724" relation="usage">
+          <edgelabel>data_</edgelabel>
+        </childnode>
+        <childnode refid="725" relation="usage">
+          <edgelabel>clear_cb_</edgelabel>
+        </childnode>
+        <childnode refid="726" relation="usage">
+          <edgelabel>compare_cb_</edgelabel>
+        </childnode>
+      </node>
+      <node id="725">
+        <label>TessCallback1&lt; DawgInfo &gt;</label>
+        <link refid="class_tess_callback1"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/dict/dawg.h" line="314" column="1" bodyfile="/Users/makoto/Desktop/trunk/dict/dawg.h" bodystart="314" bodyend="342"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_dawg_info_vector_1afb770b4357771797dd410725d9e9eb10" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>add_unique</name></member>
+      <member refid="class_generic_vector_1a6e6d6497a6f7dd999b6d591c15354167" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>back</name></member>
+      <member refid="class_generic_vector_1a2eaa0df35abb2c00571bb1d6e5d73377" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>binary_search</name></member>
+      <member refid="class_generic_vector_1a56b47b53976101ce26410fea5be3cdd2" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>bool_binary_search</name></member>
+      <member refid="classtesseract_1_1_dawg_info_vector_1ae6b547bc520864c0b291530cb00d4ca5" prot="public" virt="virtual"><scope>tesseract::DawgInfoVector</scope><name>clear</name></member>
+      <member refid="class_generic_vector_1a57a833bdcc07a53e9a7b57d07cac2131" prot="protected" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>clear_cb_</name></member>
+      <member refid="class_generic_vector_1a080f7786e007523bcaa3f69913a82882" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>compact</name></member>
+      <member refid="class_generic_vector_1a8cb22ff55d6dd125d93cd03fd73bf8ad" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>compact_sorted</name></member>
+      <member refid="class_generic_vector_1acd69761952fb39cbe7d7b43a6b06a432" prot="protected" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>compare_cb_</name></member>
+      <member refid="class_generic_vector_1a135efb0c3d9bb58fa7538f137567c9c5" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>contains</name></member>
+      <member refid="class_generic_vector_1aa7a4692f87d6418d782c3261ed11a952" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>contains_index</name></member>
+      <member refid="class_generic_vector_1ab88657a46d06c175dcfc76c0fcdaac7d" prot="protected" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>data_</name></member>
+      <member refid="class_generic_vector_1a98f62dccd75224a60437c2761bd215cd" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>delete_data_pointers</name></member>
+      <member refid="class_generic_vector_1aa4f5b1bc0d044fbd1fc77363b798c39c" prot="public" virt="virtual"><scope>tesseract::DawgInfoVector</scope><name>DeSerialize</name></member>
+      <member refid="class_generic_vector_1a698ebd328d22f1edc114053ca2eba48e" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>DeSerializeClasses</name></member>
+      <member refid="class_generic_vector_1aea840b1a4c4275a944c46e0f09d2851f" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>dot_product</name></member>
+      <member refid="class_generic_vector_1af0214c8c21da9eb57dfebc78611d0cd6" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>double_the_size</name></member>
+      <member refid="class_generic_vector_1a85308b8287bcb7924d64175cbc681f89" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>double_the_size_memcpy</name></member>
+      <member refid="class_generic_vector_1afb0d8c52a603b6aa965d63bbf06a27dd" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>empty</name></member>
+      <member refid="class_generic_vector_1a60d42eebf02708482a8b506edd417990" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>GenericVector</name></member>
+      <member refid="class_generic_vector_1a23c207b5077ea514bc5ec813649140d1" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>GenericVector</name></member>
+      <member refid="class_generic_vector_1a2b61cd1cd756770518f5ac30f817a9bf" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>GenericVector</name></member>
+      <member refid="class_generic_vector_1a33070cfea2a16a20c6b30bbcfecd8ecc" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>get</name></member>
+      <member refid="class_generic_vector_1a0a62e2c80254bad72fb8aa37fed3af33" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>get_index</name></member>
+      <member refid="class_generic_vector_1a5b010723588fe15f303e4f3474d8479e" prot="protected" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>init</name></member>
+      <member refid="class_generic_vector_1a6751521fd3eb461d81fc83ef93a0def3" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>init_to_size</name></member>
+      <member refid="class_generic_vector_1a57ca5259541548a97bcfd4d0925a27ff" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>insert</name></member>
+      <member refid="class_generic_vector_1a17604861454b13965d7e2cb8c0c5b59a" prot="protected" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>kDefaultVectorSize</name></member>
+      <member refid="class_generic_vector_1a690cd403343d371ed7763fdaf3ed71d2" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>length</name></member>
+      <member refid="class_generic_vector_1abae057ce589be25aae9b80958f84e34c" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>move</name></member>
+      <member refid="class_generic_vector_1af73fadcdb08f0a12a5615f2bcf6fa6a8" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>operator+=</name></member>
+      <member refid="class_generic_vector_1acc7df2256174b32632e4d5b6c8d05d29" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>operator+=</name></member>
+      <member refid="class_generic_vector_1af6fd5b3891b276c10add96f9411bec05" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>operator=</name></member>
+      <member refid="class_generic_vector_1af6a96287d98d4b6581cad4d4bb27e5aa" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>operator[]</name></member>
+      <member refid="class_generic_vector_1a0dc89fe2a365b04a61017f9d78c1a303" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>push_back</name></member>
+      <member refid="class_generic_vector_1a393f9f8dcc55ad759a5c7fbdc4840a89" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>push_back_new</name></member>
+      <member refid="class_generic_vector_1ae08e7cece0097ad356b5e565cbb2cf0b" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>push_front</name></member>
+      <member refid="class_generic_vector_1aa0efce3eef59f7b96d7058f114c49387" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>read</name></member>
+      <member refid="class_generic_vector_1a3fd37a240a42f1c3052e8d28614d3702" prot="public" virt="virtual"><scope>tesseract::DawgInfoVector</scope><name>remove</name></member>
+      <member refid="class_generic_vector_1aa225ea3fc9374961482bc804028317eb" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>reserve</name></member>
+      <member refid="class_generic_vector_1a51aeec27092537323abc7174af1c16ef" prot="public" virt="virtual"><scope>tesseract::DawgInfoVector</scope><name>Serialize</name></member>
+      <member refid="class_generic_vector_1a42e50cf68bb453fc11de039ca2ed81c8" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>SerializeClasses</name></member>
+      <member refid="class_generic_vector_1a067b7833ee66238b7b5e230404525fcb" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>set</name></member>
+      <member refid="class_generic_vector_1af2bbca5b3258035a333b62679835a253" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>set_clear_callback</name></member>
+      <member refid="class_generic_vector_1a5fb7cbde5178b72ff3637e8c91e739b7" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>set_compare_callback</name></member>
+      <member refid="class_generic_vector_1a111b51dd0bf1324cfb69ef70703d8e70" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>size</name></member>
+      <member refid="class_generic_vector_1a651ead7f279fb6ed4bfb683989d573de" prot="protected" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>size_reserved_</name></member>
+      <member refid="class_generic_vector_1ae7cf6cba62f831b6d56c7d03e9eff3bc" prot="protected" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>size_used_</name></member>
+      <member refid="class_generic_vector_1a999bbd8ff336c81fe1198ea714c7936d" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>sort</name></member>
+      <member refid="class_generic_vector_1a461142d4ff7c61f22119552b7c0b2755" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>sort</name></member>
+      <member refid="class_generic_vector_1af1793745c45178626c9afe48c7a1e140" prot="public" virt="virtual"><scope>tesseract::DawgInfoVector</scope><name>truncate</name></member>
+      <member refid="class_generic_vector_1a9fa53a15945a79e1dbfc7aad3d5875e9" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>write</name></member>
+      <member refid="classtesseract_1_1_dawg_info_vector_1a194b015eef92df80742a78f3ca240955" prot="public" virt="non-virtual"><scope>tesseract::DawgInfoVector</scope><name>~DawgInfoVector</name></member>
+      <member refid="class_generic_vector_1a49840c8743a063b87839baef7e19b968" prot="public" virt="virtual"><scope>tesseract::DawgInfoVector</scope><name>~GenericVector</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

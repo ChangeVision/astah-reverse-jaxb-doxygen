@@ -1,0 +1,516 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="class_c_my_stream" kind="class" prot="public">
+    <compoundname>CMyStream</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IStream</basecompoundref>
+    <includes refid="mystream_8h" local="no">mystream.h</includes>
+    <innerclass refid="class_c_my_stream_1_1lockit" prot="protected">CMyStream::lockit</innerclass>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_c_my_stream_1a381f0ed34380fec651a0f162ff83a546" prot="protected" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG CMyStream::ms_lockword</definition>
+        <argsstring></argsstring>
+        <name>ms_lockword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="21" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_my_stream_1ae3771aa6438e317fb21ebd024cf56300" prot="protected" static="no" mutable="no">
+        <type>LONG</type>
+        <definition>LONG CMyStream::ms_refc</definition>
+        <argsstring></argsstring>
+        <name>ms_refc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="22" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_my_stream_1a8d145b308c4ad34b26005199de201dd5" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CMyStream::ms_autofree</definition>
+        <argsstring></argsstring>
+        <name>ms_autofree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="23" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_my_stream_1a0c4399b612e36b340f1263c0224e1d58" prot="protected" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* CMyStream::ms_mbuf</definition>
+        <argsstring></argsstring>
+        <name>ms_mbuf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="24" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_my_stream_1a062872c07e5bda2615f799e3b8b70a19" prot="protected" static="no" mutable="no">
+        <type>ULONG</type>
+        <definition>ULONG CMyStream::ms_mlen</definition>
+        <argsstring></argsstring>
+        <name>ms_mlen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="25" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_my_stream_1a015de3221a956f28fc1b5cf75231bab3" prot="protected" static="no" mutable="no">
+        <type>ULONGLONG</type>
+        <definition>ULONGLONG CMyStream::ms_seek</definition>
+        <argsstring></argsstring>
+        <name>ms_seek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="26" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_my_stream_1ac8c51a93c45b5fd396a7488fc741b92c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>HRESULT STDMETHODCALLTYPE</type>
+        <definition>HRESULT STDMETHODCALLTYPE CMyStream::QueryInterface</definition>
+        <argsstring>(REFIID, void **)</argsstring>
+        <name>QueryInterface</name>
+        <param>
+          <type>REFIID</type>
+          <defname>iid</defname>
+        </param>
+        <param>
+          <type>void **</type>
+          <defname>ppv</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="28" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" bodystart="30" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_my_stream_1ae2345e0fc4a10c921926935f3c4e9191" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>ULONG STDMETHODCALLTYPE</type>
+        <definition>ULONG STDMETHODCALLTYPE CMyStream::AddRef</definition>
+        <argsstring>()</argsstring>
+        <name>AddRef</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="29" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_my_stream_1a92efba04a2cdc8fc4381f12681e2945e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>ULONG STDMETHODCALLTYPE</type>
+        <definition>ULONG STDMETHODCALLTYPE CMyStream::Release</definition>
+        <argsstring>()</argsstring>
+        <name>Release</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="30" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" bodystart="51" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_my_stream_1aacdaa1a27e4e92b9510b38137b585950" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>HRESULT STDMETHODCALLTYPE</type>
+        <definition>HRESULT STDMETHODCALLTYPE CMyStream::Read</definition>
+        <argsstring>(void *, ULONG, ULONG *)</argsstring>
+        <name>Read</name>
+        <param>
+          <type>void *</type>
+          <defname>buf</defname>
+        </param>
+        <param>
+          <type>ULONG</type>
+          <defname>nbytes</defname>
+        </param>
+        <param>
+          <type>ULONG *</type>
+          <defname>actual</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="32" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" bodystart="65" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_my_stream_1a742ad64d337e852b88efe35a4f276921" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>HRESULT STDMETHODCALLTYPE</type>
+        <definition>HRESULT STDMETHODCALLTYPE CMyStream::Write</definition>
+        <argsstring>(void const *, ULONG, ULONG *)</argsstring>
+        <name>Write</name>
+        <param>
+          <type>void const *</type>
+          <defname>buf</defname>
+        </param>
+        <param>
+          <type>ULONG</type>
+          <defname>nbytes</defname>
+        </param>
+        <param>
+          <type>ULONG *</type>
+          <defname>actual</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="33" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" bodystart="100" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_my_stream_1a4f9d19cdbdac2b54c014db536ecaa818" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>HRESULT STDMETHODCALLTYPE</type>
+        <definition>HRESULT STDMETHODCALLTYPE CMyStream::Seek</definition>
+        <argsstring>(LARGE_INTEGER, DWORD, ULARGE_INTEGER *)</argsstring>
+        <name>Seek</name>
+        <param>
+          <type>LARGE_INTEGER</type>
+          <defname>off</defname>
+        </param>
+        <param>
+          <type>DWORD</type>
+          <defname>wh</defname>
+        </param>
+        <param>
+          <type>ULARGE_INTEGER *</type>
+          <defname>noff</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="35" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" bodystart="141" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_my_stream_1ad20ad0d63bfc6ee81c4f3eda33365159" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>HRESULT STDMETHODCALLTYPE</type>
+        <definition>HRESULT STDMETHODCALLTYPE CMyStream::SetSize</definition>
+        <argsstring>(ULARGE_INTEGER)</argsstring>
+        <name>SetSize</name>
+        <param>
+          <type>ULARGE_INTEGER</type>
+          <defname>nbytes</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="36" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" bodystart="212" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_my_stream_1a07bf3b84244f5780c9af7630494d2f88" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>HRESULT STDMETHODCALLTYPE</type>
+        <definition>HRESULT STDMETHODCALLTYPE CMyStream::CopyTo</definition>
+        <argsstring>(IStream *, ULARGE_INTEGER, ULARGE_INTEGER *, ULARGE_INTEGER *)</argsstring>
+        <name>CopyTo</name>
+        <param>
+          <type>IStream *</type>
+        </param>
+        <param>
+          <type>ULARGE_INTEGER</type>
+        </param>
+        <param>
+          <type>ULARGE_INTEGER *</type>
+        </param>
+        <param>
+          <type>ULARGE_INTEGER *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="37" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" bodystart="219" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_my_stream_1af6ebc67ddc0b0abc7224da2ca3bc443d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>HRESULT STDMETHODCALLTYPE</type>
+        <definition>HRESULT STDMETHODCALLTYPE CMyStream::Commit</definition>
+        <argsstring>(DWORD)</argsstring>
+        <name>Commit</name>
+        <param>
+          <type>DWORD</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="38" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" bodystart="226" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_my_stream_1a2dcadd6fafe3c4f646aa75556525b43c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>HRESULT STDMETHODCALLTYPE</type>
+        <definition>HRESULT STDMETHODCALLTYPE CMyStream::Revert</definition>
+        <argsstring>()</argsstring>
+        <name>Revert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="39" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" bodystart="233" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_my_stream_1a5a3fa68f4984ddcd5919503efb92eade" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>HRESULT STDMETHODCALLTYPE</type>
+        <definition>HRESULT STDMETHODCALLTYPE CMyStream::LockRegion</definition>
+        <argsstring>(ULARGE_INTEGER, ULARGE_INTEGER, DWORD)</argsstring>
+        <name>LockRegion</name>
+        <param>
+          <type>ULARGE_INTEGER</type>
+        </param>
+        <param>
+          <type>ULARGE_INTEGER</type>
+        </param>
+        <param>
+          <type>DWORD</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="40" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" bodystart="240" bodyend="243"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_my_stream_1a761798f7cd4020e1b6554c1b5c1e5351" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>HRESULT STDMETHODCALLTYPE</type>
+        <definition>HRESULT STDMETHODCALLTYPE CMyStream::UnlockRegion</definition>
+        <argsstring>(ULARGE_INTEGER, ULARGE_INTEGER, DWORD)</argsstring>
+        <name>UnlockRegion</name>
+        <param>
+          <type>ULARGE_INTEGER</type>
+        </param>
+        <param>
+          <type>ULARGE_INTEGER</type>
+        </param>
+        <param>
+          <type>DWORD</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="41" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" bodystart="247" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_my_stream_1a5c4e6f253855b8de99fd9c39c974fc1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>HRESULT STDMETHODCALLTYPE</type>
+        <definition>HRESULT STDMETHODCALLTYPE CMyStream::Stat</definition>
+        <argsstring>(STATSTG *, DWORD)</argsstring>
+        <name>Stat</name>
+        <param>
+          <type>STATSTG *</type>
+          <defname>ssp</defname>
+        </param>
+        <param>
+          <type>DWORD</type>
+          <defname>flags</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="42" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" bodystart="254" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_my_stream_1a52b21757d6e1da3a522fffa0538a5430" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>HRESULT STDMETHODCALLTYPE</type>
+        <definition>HRESULT STDMETHODCALLTYPE CMyStream::Clone</definition>
+        <argsstring>(IStream **)</argsstring>
+        <name>Clone</name>
+        <param>
+          <type>IStream **</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="43" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" bodystart="302" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_my_stream_1aa454db1d01f492d4d2b8d5f8db06e06d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CMyStream::invalidate</definition>
+        <argsstring>()</argsstring>
+        <name>invalidate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="45" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" bodystart="309" bodyend="326"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_my_stream_1ab869a86688a852acee99f01fa81544f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>CMyStream::‾CMyStream</definition>
+        <argsstring>()</argsstring>
+        <name>‾CMyStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="47" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" bodystart="329" bodyend="332"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_my_stream_1a0aafa9f3b78fbec2e455c26db26dd1d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CMyStream::CMyStream</definition>
+        <argsstring>(void *mbuf, int mlen, int autofree=0)</argsstring>
+        <name>CMyStream</name>
+        <param>
+          <type>void *</type>
+          <declname>mbuf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mlen</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>autofree</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="48" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" bodystart="335" bodyend="350"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_c_my_stream_1a9e741f271071976e1fbcf2d780723da0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_c_my_stream" kindref="compound">CMyStream</ref> *</type>
+        <definition>CMyStream * CMyStream::newOne</definition>
+        <argsstring>(void *mbuf, int mlen, int autofree=0)</argsstring>
+        <name>newOne</name>
+        <param>
+          <type>void *</type>
+          <declname>mbuf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mlen</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>autofree</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="50" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" bodystart="354" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_my_stream_1ac6a3b0c5e48a742cb62f6d6953d88dc2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_c_my_stream" kindref="compound">CMyStream</ref> *</type>
+        <definition>CMyStream * CMyStream::newByFile</definition>
+        <argsstring>(LPCTSTR fpath)</argsstring>
+        <name>newByFile</name>
+        <param>
+          <type>LPCTSTR</type>
+          <declname>fpath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="51" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.cpp" bodystart="369" bodyend="404"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="52">
+        <label>CMyStream</label>
+        <link refid="class_c_my_stream"/>
+        <childnode refid="53" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>IStream</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="54">
+        <label>CMyStream</label>
+        <link refid="class_c_my_stream"/>
+        <childnode refid="55" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>IStream</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" line="11" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/mystream.h" bodystart="11" bodyend="52"/>
+    <listofallmembers>
+      <member refid="class_c_my_stream_1ae2345e0fc4a10c921926935f3c4e9191" prot="public" virt="virtual"><scope>CMyStream</scope><name>AddRef</name></member>
+      <member refid="class_c_my_stream_1a52b21757d6e1da3a522fffa0538a5430" prot="public" virt="virtual"><scope>CMyStream</scope><name>Clone</name></member>
+      <member refid="class_c_my_stream_1a0aafa9f3b78fbec2e455c26db26dd1d3" prot="public" virt="non-virtual"><scope>CMyStream</scope><name>CMyStream</name></member>
+      <member refid="class_c_my_stream_1af6ebc67ddc0b0abc7224da2ca3bc443d" prot="public" virt="virtual"><scope>CMyStream</scope><name>Commit</name></member>
+      <member refid="class_c_my_stream_1a07bf3b84244f5780c9af7630494d2f88" prot="public" virt="virtual"><scope>CMyStream</scope><name>CopyTo</name></member>
+      <member refid="class_c_my_stream_1aa454db1d01f492d4d2b8d5f8db06e06d" prot="public" virt="non-virtual"><scope>CMyStream</scope><name>invalidate</name></member>
+      <member refid="class_c_my_stream_1a5a3fa68f4984ddcd5919503efb92eade" prot="public" virt="virtual"><scope>CMyStream</scope><name>LockRegion</name></member>
+      <member refid="class_c_my_stream_1a8d145b308c4ad34b26005199de201dd5" prot="protected" virt="non-virtual"><scope>CMyStream</scope><name>ms_autofree</name></member>
+      <member refid="class_c_my_stream_1a381f0ed34380fec651a0f162ff83a546" prot="protected" virt="non-virtual"><scope>CMyStream</scope><name>ms_lockword</name></member>
+      <member refid="class_c_my_stream_1a0c4399b612e36b340f1263c0224e1d58" prot="protected" virt="non-virtual"><scope>CMyStream</scope><name>ms_mbuf</name></member>
+      <member refid="class_c_my_stream_1a062872c07e5bda2615f799e3b8b70a19" prot="protected" virt="non-virtual"><scope>CMyStream</scope><name>ms_mlen</name></member>
+      <member refid="class_c_my_stream_1ae3771aa6438e317fb21ebd024cf56300" prot="protected" virt="non-virtual"><scope>CMyStream</scope><name>ms_refc</name></member>
+      <member refid="class_c_my_stream_1a015de3221a956f28fc1b5cf75231bab3" prot="protected" virt="non-virtual"><scope>CMyStream</scope><name>ms_seek</name></member>
+      <member refid="class_c_my_stream_1ac6a3b0c5e48a742cb62f6d6953d88dc2" prot="public" virt="non-virtual"><scope>CMyStream</scope><name>newByFile</name></member>
+      <member refid="class_c_my_stream_1a9e741f271071976e1fbcf2d780723da0" prot="public" virt="non-virtual"><scope>CMyStream</scope><name>newOne</name></member>
+      <member refid="class_c_my_stream_1ac8c51a93c45b5fd396a7488fc741b92c" prot="public" virt="virtual"><scope>CMyStream</scope><name>QueryInterface</name></member>
+      <member refid="class_c_my_stream_1aacdaa1a27e4e92b9510b38137b585950" prot="public" virt="virtual"><scope>CMyStream</scope><name>Read</name></member>
+      <member refid="class_c_my_stream_1a92efba04a2cdc8fc4381f12681e2945e" prot="public" virt="virtual"><scope>CMyStream</scope><name>Release</name></member>
+      <member refid="class_c_my_stream_1a2dcadd6fafe3c4f646aa75556525b43c" prot="public" virt="virtual"><scope>CMyStream</scope><name>Revert</name></member>
+      <member refid="class_c_my_stream_1a4f9d19cdbdac2b54c014db536ecaa818" prot="public" virt="virtual"><scope>CMyStream</scope><name>Seek</name></member>
+      <member refid="class_c_my_stream_1ad20ad0d63bfc6ee81c4f3eda33365159" prot="public" virt="virtual"><scope>CMyStream</scope><name>SetSize</name></member>
+      <member refid="class_c_my_stream_1a5c4e6f253855b8de99fd9c39c974fc1c" prot="public" virt="virtual"><scope>CMyStream</scope><name>Stat</name></member>
+      <member refid="class_c_my_stream_1a761798f7cd4020e1b6554c1b5c1e5351" prot="public" virt="virtual"><scope>CMyStream</scope><name>UnlockRegion</name></member>
+      <member refid="class_c_my_stream_1a742ad64d337e852b88efe35a4f276921" prot="public" virt="virtual"><scope>CMyStream</scope><name>Write</name></member>
+      <member refid="class_c_my_stream_1ab869a86688a852acee99f01fa81544f9" prot="public" virt="virtual"><scope>CMyStream</scope><name>‾CMyStream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

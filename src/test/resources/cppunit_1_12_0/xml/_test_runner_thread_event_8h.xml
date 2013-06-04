@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_test_runner_thread_event_8h" kind="file">
+    <compoundname>TestRunnerThreadEvent.h</compoundname>
+    <includes local="no">qevent.h</includes>
+    <includedby refid="_test_runner_failure_event_8h" local="yes">src/qttestrunner/TestRunnerFailureEvent.h</includedby>
+    <includedby refid="_test_runner_test_case_run_event_8h" local="yes">src/qttestrunner/TestRunnerTestCaseRunEvent.h</includedby>
+    <includedby refid="_test_runner_thread_finished_event_8h" local="yes">src/qttestrunner/TestRunnerThreadFinishedEvent.h</includedby>
+    <includedby refid="_test_runner_thread_event_8cpp" local="yes">src/qttestrunner/TestRunnerThreadEvent.cpp</includedby>
+    <incdepgraph>
+      <node id="1511">
+        <label>src/qttestrunner/TestRunnerThreadEvent.h</label>
+        <link refid="TestRunnerThreadEvent.h"/>
+        <childnode refid="1512" relation="include">
+        </childnode>
+      </node>
+      <node id="1512">
+        <label>qevent.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1517">
+        <label>src/qttestrunner/TestRunnerTestCaseRunEvent.h</label>
+        <link refid="_test_runner_test_case_run_event_8h"/>
+        <childnode refid="1516" relation="include">
+        </childnode>
+        <childnode refid="1518" relation="include">
+        </childnode>
+      </node>
+      <node id="1514">
+        <label>src/qttestrunner/TestRunnerFailureEvent.h</label>
+        <link refid="_test_runner_failure_event_8h"/>
+        <childnode refid="1515" relation="include">
+        </childnode>
+        <childnode refid="1516" relation="include">
+        </childnode>
+      </node>
+      <node id="1515">
+        <label>src/qttestrunner/TestRunnerFailureEvent.cpp</label>
+        <link refid="_test_runner_failure_event_8cpp"/>
+      </node>
+      <node id="1518">
+        <label>src/qttestrunner/TestRunnerTestCaseRunEvent.cpp</label>
+        <link refid="_test_runner_test_case_run_event_8cpp"/>
+      </node>
+      <node id="1519">
+        <label>src/qttestrunner/TestRunnerThreadFinishedEvent.h</label>
+        <link refid="_test_runner_thread_finished_event_8h"/>
+        <childnode refid="1516" relation="include">
+        </childnode>
+        <childnode refid="1520" relation="include">
+        </childnode>
+        <childnode refid="1521" relation="include">
+        </childnode>
+      </node>
+      <node id="1522">
+        <label>src/qttestrunner/TestRunnerThreadEvent.cpp</label>
+        <link refid="_test_runner_thread_event_8cpp"/>
+      </node>
+      <node id="1521">
+        <label>src/qttestrunner/TestRunnerThreadFinishedEvent.cpp</label>
+        <link refid="_test_runner_thread_finished_event_8cpp"/>
+      </node>
+      <node id="1516">
+        <label>src/qttestrunner/TestRunnerModel.cpp</label>
+        <link refid="qttestrunner_2_test_runner_model_8cpp"/>
+      </node>
+      <node id="1513">
+        <label>src/qttestrunner/TestRunnerThreadEvent.h</label>
+        <link refid="TestRunnerThreadEvent.h"/>
+        <childnode refid="1514" relation="include">
+        </childnode>
+        <childnode refid="1517" relation="include">
+        </childnode>
+        <childnode refid="1519" relation="include">
+        </childnode>
+        <childnode refid="1522" relation="include">
+        </childnode>
+      </node>
+      <node id="1520">
+        <label>src/qttestrunner/TestRunnerThread.cpp</label>
+        <link refid="_test_runner_thread_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_test_runner_thread_event" prot="public">TestRunnerThreadEvent</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>//////////////////////////////////////////////////////////////////////////</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Header<sp/>file<sp/>TestRunnerThreadEvent.h<sp/>for<sp/>class<sp/>TestRunnerThreadEvent</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(c)Copyright<sp/>2000,<sp/>Baptiste<sp/>Lepilleur.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created:<sp/>2001/09/21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>//////////////////////////////////////////////////////////////////////////</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TESTRUNNERTHREADEVENT_H</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TESTRUNNERTHREADEVENT_H</highlight></codeline>
+<codeline lineno="8"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;qevent.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_test_runner_model_thread_interface" kindref="compound">TestRunnerModelThreadInterface</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_test_runner_thread_event" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_test_runner_thread_event" kindref="compound">TestRunnerThreadEvent</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QCustomEvent</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><ref refid="class_test_runner_thread_event_1a57590c2202fbc440d75148939bdde3eb" kindref="member">TestRunnerThreadEvent</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_test_runner_thread_event_1a4a43cc0b2d4777e9d079d96af81879f2" kindref="member" tooltip="Destructor. ">‾TestRunnerThreadEvent</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_test_runner_thread_event_1a07a00f7da095922d7a629ab53f27c72b" kindref="member">process</ref>(<sp/><ref refid="class_test_runner_model_thread_interface" kindref="compound">TestRunnerModelThreadInterface</ref><sp/>*target<sp/>)<sp/>=0;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><ref refid="class_test_runner_thread_event_1a57590c2202fbc440d75148939bdde3eb" kindref="member">TestRunnerThreadEvent</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_test_runner_thread_event" kindref="compound">TestRunnerThreadEvent</ref><sp/>&amp;copy<sp/>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator<sp/>=(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_test_runner_thread_event" kindref="compound">TestRunnerThreadEvent</ref><sp/>&amp;copy<sp/>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>TESTRUNNERTHREADEVENT_H</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerThreadEvent.h"/>
+  </compounddef>
+</doxygen>

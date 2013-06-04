@@ -1,0 +1,1022 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="group___advanced_a_p_i" kind="group">
+    <compoundname>AdvancedAPI</compoundname>
+    <title>Advanced API</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___advanced_a_p_i_1gaa463622111f3b11d8fca5863709cc699" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessBaseAPI::SetImage</definition>
+        <argsstring>(const unsigned char *imagedata, int width, int height, int bytes_per_pixel, int bytes_per_line)</argsstring>
+        <name>SetImage</name>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>imagedata</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bytes_per_pixel</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bytes_per_line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provide an image for <ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref> to recognize. Format is as TesseractRect above. Does not copy the image buffer, or take ownership. The source image may be destroyed after Recognize is called, either explicitly or implicitly via one of the Get*Text functions. SetImage clears all recognition results, and sets the rectangle to the full image, so it may be followed immediately by a GetUTF8Text, and it will automatically perform recognition. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="311" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="444" bodyend="450"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga89aa20dee8b772168b2d18150984bd2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessBaseAPI::SetImage</definition>
+        <argsstring>(const Pix *pix)</argsstring>
+        <name>SetImage</name>
+        <param>
+          <type>const Pix *</type>
+          <declname>pix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provide an image for <ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref> to recognize. As with SetImage above, <ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref> doesn&apos;t take a copy or ownership or pixDestroy the image, so it must persist until after Recognize. Pix vs raw, which to use? Use Pix where possible. A future version of <ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref> may choose to use Pix as its internal representation and discard <ref refid="class_i_m_a_g_e" kindref="compound">IMAGE</ref> altogether. Because of that, an implementation that sources and targets Pix may end up with less copies than an implementation that does not. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="324" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="469" bodyend="472"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga4ded6137507a4e8eb6ed4bea0b9648f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessBaseAPI::SetSourceResolution</definition>
+        <argsstring>(int ppi)</argsstring>
+        <name>SetSourceResolution</name>
+        <param>
+          <type>int</type>
+          <declname>ppi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the resolution of the source image in pixels per inch so font size information can be calculated in results. Call this after <ref refid="group___advanced_a_p_i_1gaa463622111f3b11d8fca5863709cc699" kindref="member">SetImage()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="330" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="452" bodyend="457"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga284228c7e9d18bbbd3984d44e252d625" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessBaseAPI::SetRectangle</definition>
+        <argsstring>(int left, int top, int width, int height)</argsstring>
+        <name>SetRectangle</name>
+        <param>
+          <type>int</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>top</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Restrict recognition to a sub-rectangle of the image. Call after SetImage. Each SetRectangle clears the recogntion results so multiple rectangles can be recognized with the same image. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="337" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="479" bodyend="484"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga73e6a99f5f09aaf26dc23f623a813143" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessBaseAPI::SetThresholder</definition>
+        <argsstring>(ImageThresholder *thresholder)</argsstring>
+        <name>SetThresholder</name>
+        <param>
+          <type>ImageThresholder *</type>
+          <declname>thresholder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>In extreme cases only, usually with a subclass of Thresholder, it is possible to provide a different Thresholder. The Thresholder may be preloaded with an image, settings etc, or they may be set after. Note that <ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref> takes ownership of the Thresholder and will delete it when it it is replaced or the API is destructed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="346" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.h" bodystart="346" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1gaee19c9ea78a647420bbe99a447569995" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Pix *</type>
+        <definition>Pix * tesseract::TessBaseAPI::GetThresholdedImage</definition>
+        <argsstring>()</argsstring>
+        <name>GetThresholdedImage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a copy of the internal thresholded image from <ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref>. Caller takes ownership of the Pix and must pixDestroy it. May be called any time after SetImage, or after TesseractRect.</para><para>ONLY available if you have Leptonica installed. Get a copy of the internal thresholded image from <ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="358" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="490" bodyend="496"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1gafdd23f73100c54cff18ecfa14efa0379" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Boxa *</type>
+        <definition>Boxa * tesseract::TessBaseAPI::GetRegions</definition>
+        <argsstring>(Pixa **pixa)</argsstring>
+        <name>GetRegions</name>
+        <param>
+          <type>Pixa **</type>
+          <declname>pixa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the result of page layout analysis as a leptonica-style Boxa, Pixa pair, in reading order. Can be called before or after Recognize. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="365" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="503" bodyend="505"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga337bd007c5fff9336bba8dfade1924ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Boxa *</type>
+        <definition>Boxa * tesseract::TessBaseAPI::GetTextlines</definition>
+        <argsstring>(Pixa **pixa, int **blockids)</argsstring>
+        <name>GetTextlines</name>
+        <param>
+          <type>Pixa **</type>
+          <declname>pixa</declname>
+        </param>
+        <param>
+          <type>int **</type>
+          <declname>blockids</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the textlines as a leptonica-style Boxa, Pixa pair, in reading order. Can be called before or after Recognize. If blockids is not NULL, the block-id of each line is also returned as an array of one element per line. delete [] after use. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="374" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="513" bodyend="515"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1gac7c249f9f7e11eadc557d4b3cab123a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Boxa *</type>
+        <definition>Boxa * tesseract::TessBaseAPI::GetStrips</definition>
+        <argsstring>(Pixa **pixa, int **blockids)</argsstring>
+        <name>GetStrips</name>
+        <param>
+          <type>Pixa **</type>
+          <declname>pixa</declname>
+        </param>
+        <param>
+          <type>int **</type>
+          <declname>blockids</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get textlines and strips of image regions as a leptonica-style Boxa, Pixa pair, in reading order. Enables downstream handling of non-rectangular regions. Can be called before or after Recognize. If blockids is not NULL, the block-id of each line is also returned as an array of one element per line. delete [] after use. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="384" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="525" bodyend="527"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga4133bcbe38dca1173db2882ef0727703" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Boxa *</type>
+        <definition>Boxa * tesseract::TessBaseAPI::GetWords</definition>
+        <argsstring>(Pixa **pixa)</argsstring>
+        <name>GetWords</name>
+        <param>
+          <type>Pixa **</type>
+          <declname>pixa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the words as a leptonica-style Boxa, Pixa pair, in reading order. Can be called before or after Recognize. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="391" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="534" bodyend="536"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1gaf2b4f88c53457fa5153dc80f5a60e152" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Boxa *</type>
+        <definition>Boxa * tesseract::TessBaseAPI::GetConnectedComponents</definition>
+        <argsstring>(Pixa **cc)</argsstring>
+        <name>GetConnectedComponents</name>
+        <param>
+          <type>Pixa **</type>
+          <declname>cc</declname>
+          <defname>pixa</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the individual connected (text) components (created after pages segmentation step, but before recognition) as a leptonica-style Boxa, Pixa pair, in reading order. Can be called before or after Recognize. Note: the caller is responsible for calling boxaDestroy() on the returned Boxa array and pixaDestroy() on cc array.</para><para>Gets the individual connected (text) components (created after pages segmentation step, but before recognition) as a leptonica-style Boxa, Pixa pair, in reading order. Can be called before or after Recognize. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="401" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="544" bodyend="546"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga56369b1654400ef97e581bb65749ec3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Boxa *</type>
+        <definition>Boxa * tesseract::TessBaseAPI::GetComponentImages</definition>
+        <argsstring>(PageIteratorLevel level, bool text_only, Pixa **pixa, int **blockids)</argsstring>
+        <name>GetComponentImages</name>
+        <param>
+          <type>PageIteratorLevel</type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>text_only</declname>
+        </param>
+        <param>
+          <type>Pixa **</type>
+          <declname>pixa</declname>
+        </param>
+        <param>
+          <type>int **</type>
+          <declname>blockids</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the given level kind of components (block, textline, word etc.) as a leptonica-style Boxa, Pixa pair, in reading order. Can be called before or after Recognize. If blockids is not NULL, the block-id of each component is also returned as an array of one element per component. delete [] after use. If text_only is true, then only text components are returned. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="411" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="556" bodyend="603"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga6b1c8cac1ba7da32dfd32cf708eea8b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::TessBaseAPI::GetThresholdedImageScaleFactor</definition>
+        <argsstring>() const </argsstring>
+        <name>GetThresholdedImageScaleFactor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the scale factor of the thresholded image that would be returned by <ref refid="group___advanced_a_p_i_1gaee19c9ea78a647420bbe99a447569995" kindref="member">GetThresholdedImage()</ref> and the various GetX() methods that call <ref refid="group___advanced_a_p_i_1ga56369b1654400ef97e581bb65749ec3d" kindref="member">GetComponentImages()</ref>. Returns 0 if no thresholder has been set. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="421" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="605" bodyend="610"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga4e4a8dbd25ac8816155481bfb53f011a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessBaseAPI::DumpPGM</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>DumpPGM</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Dump the internal binary image to a PGM file. <xrefsect id="deprecated_1_deprecated000001"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use GetThresholdedImage and write the image using pixWrite instead if possible. </para></xrefdescription></xrefsect></para><para>Dump the internal binary image to a PGM file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="428" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="613" bodyend="629"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1gaaac2abf8505c89afb8466dc3cff2c666" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PageIterator *</type>
+        <definition>PageIterator * tesseract::TessBaseAPI::AnalyseLayout</definition>
+        <argsstring>()</argsstring>
+        <name>AnalyseLayout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Runs page layout analysis in the mode set by SetPageSegMode. May optionally be called prior to Recognize to get access to just the page layout results. Returns an iterator to the results. Returns NULL on error. The returned iterator must be deleted after use. WARNING! This class points to data held within the <ref refid="classtesseract_1_1_tess_base_a_p_i" kindref="compound">TessBaseAPI</ref> class, and therefore can only be used while the <ref refid="classtesseract_1_1_tess_base_a_p_i" kindref="compound">TessBaseAPI</ref> class still exists and has not been subjected to a call of Init, SetImage, Recognize, Clear, End DetectOS, or anything else that changes the internal <ref refid="class_p_a_g_e___r_e_s" kindref="compound">PAGE_RES</ref>.</para><para>Runs page layout analysis in the mode set by SetPageSegMode. May optionally be called prior to Recognize to get access to just the page layout results. Returns an iterator to the results. Returns NULL on error or an empty page. The returned iterator must be deleted after use. WARNING! This class points to data held within the <ref refid="classtesseract_1_1_tess_base_a_p_i" kindref="compound">TessBaseAPI</ref> class, and therefore can only be used while the <ref refid="classtesseract_1_1_tess_base_a_p_i" kindref="compound">TessBaseAPI</ref> class still exists and has not been subjected to a call of Init, SetImage, Recognize, Clear, End DetectOS, or anything else that changes the internal <ref refid="class_p_a_g_e___r_e_s" kindref="compound">PAGE_RES</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="441" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="687" bodyend="699"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga0e4065c20b142d69a2324ee0c74ae0b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::TessBaseAPI::Recognize</definition>
+        <argsstring>(ETEXT_DESC *monitor)</argsstring>
+        <name>Recognize</name>
+        <param>
+          <type><ref refid="class_e_t_e_x_t___d_e_s_c" kindref="compound">ETEXT_DESC</ref> *</type>
+          <declname>monitor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recognize the image from SetAndThresholdImage, generating <ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref> internal structures. Returns 0 on success. Optional. The Get*Text functions below will call Recognize if needed. After Recognize, the output is kept internally until the next SetImage.</para><para>Recognize the tesseract global image and return the result as <ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref> internal structures. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="449" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="705" bodyend="763"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1gaec56194587e149ae38a08eccd2e0d96a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::TessBaseAPI::RecognizeForChopTest</definition>
+        <argsstring>(ETEXT_DESC *monitor)</argsstring>
+        <name>RecognizeForChopTest</name>
+        <param>
+          <type><ref refid="class_e_t_e_x_t___d_e_s_c" kindref="compound">ETEXT_DESC</ref> *</type>
+          <declname>monitor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Methods to retrieve information after SetAndThresholdImage(), <ref refid="group___advanced_a_p_i_1ga0e4065c20b142d69a2324ee0c74ae0b0" kindref="member">Recognize()</ref> or <ref refid="classtesseract_1_1_tess_base_a_p_i_1ad34c56e08d999ece9972f4c9a9301f93" kindref="member">TesseractRect()</ref>. (Recognize is called implicitly if needed.)Variant on Recognize used for testing chopper.</para><para>Tests the chopper by exhaustively running chop_one_blob. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="457" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="766" bodyend="794"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1gaf89df932c29b0abe4fb4ca3ae852506b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TessBaseAPI::ProcessPages</definition>
+        <argsstring>(const char *filename, const char *retry_config, int timeout_millisec, STRING *text_out)</argsstring>
+        <name>ProcessPages</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>retry_config</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>timeout_millisec</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_t_r_i_n_g" kindref="compound">STRING</ref> *</type>
+          <declname>text_out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recognizes all the pages in the named file, as a multi-page tiff or list of filenames, or single image, and gets the appropriate kind of text according to parameters: tessedit_create_boxfile, tessedit_make_boxes_from_boxes, tessedit_write_unlv, tessedit_create_hocr. Calls ProcessPage on each page in the input file, which may be a multi-page tiff, single-page other file format, or a plain text list of images to read. If tessedit_page_number is non-negative, processing begins at that page of a multi-page tiff file, or filelist. The text is returned in text_out. Returns false on error. If non-zero timeout_millisec terminates processing after the timeout on a single page. If non-NULL and non-empty, and some page fails for some reason, the page is reprocessed with the retry_config config file. Useful for interactively debugging a bad page. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="475" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="812" bodyend="901"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga09be3b61fd89f7803fe37cc420b92b30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TessBaseAPI::ProcessPage</definition>
+        <argsstring>(Pix *pix, int page_index, const char *filename, const char *retry_config, int timeout_millisec, STRING *text_out)</argsstring>
+        <name>ProcessPage</name>
+        <param>
+          <type>Pix *</type>
+          <declname>pix</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>page_index</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>retry_config</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>timeout_millisec</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_t_r_i_n_g" kindref="compound">STRING</ref> *</type>
+          <declname>text_out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recognizes a single page for ProcessPages, appending the text to text_out. The pix is the image processed - filename and page_index are metadata used by side-effect processes, such as reading a box file or formatting as hOCR. If non-zero timeout_millisec terminates processing after the timeout. If non-NULL and non-empty, and some page fails for some reason, the page is reprocessed with the retry_config config file. Useful for interactively debugging a bad page. The text is returned in text_out. Returns false on error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="490" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="914" bodyend="976"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga52eee8b9a4f147c26e4b64c16b46bc04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ResultIterator *</type>
+        <definition>ResultIterator * tesseract::TessBaseAPI::GetIterator</definition>
+        <argsstring>()</argsstring>
+        <name>GetIterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a reading-order iterator to the results of LayoutAnalysis and/or Recognize. The returned iterator must be deleted after use. WARNING! This class points to data held within the <ref refid="classtesseract_1_1_tess_base_a_p_i" kindref="compound">TessBaseAPI</ref> class, and therefore can only be used while the <ref refid="classtesseract_1_1_tess_base_a_p_i" kindref="compound">TessBaseAPI</ref> class still exists and has not been subjected to a call of Init, SetImage, Recognize, Clear, End DetectOS, or anything else that changes the internal <ref refid="class_p_a_g_e___r_e_s" kindref="compound">PAGE_RES</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="502" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="999" bodyend="1006"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga29906219f78adc7fd76a83bde37e09eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MutableIterator *</type>
+        <definition>MutableIterator * tesseract::TessBaseAPI::GetMutableIterator</definition>
+        <argsstring>()</argsstring>
+        <name>GetMutableIterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a mutable iterator to the results of LayoutAnalysis and/or Recognize. The returned iterator must be deleted after use. WARNING! This class points to data held within the <ref refid="classtesseract_1_1_tess_base_a_p_i" kindref="compound">TessBaseAPI</ref> class, and therefore can only be used while the <ref refid="classtesseract_1_1_tess_base_a_p_i" kindref="compound">TessBaseAPI</ref> class still exists and has not been subjected to a call of Init, SetImage, Recognize, Clear, End DetectOS, or anything else that changes the internal <ref refid="class_p_a_g_e___r_e_s" kindref="compound">PAGE_RES</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="512" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1016" bodyend="1023"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga115ef656f83352ba608b4f0bf9cfa2c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * tesseract::TessBaseAPI::GetUTF8Text</definition>
+        <argsstring>()</argsstring>
+        <name>GetUTF8Text</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The recognized text is returned as a char* which is coded as UTF8 and must be freed with the delete [] operator.</para><para>Make a text string from the internal data structures. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="518" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1026" bodyend="1042"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga655f906bbf64dcd6f33ce633ecce997d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * tesseract::TessBaseAPI::GetHOCRText</definition>
+        <argsstring>(int page_number)</argsstring>
+        <name>GetHOCRText</name>
+        <param>
+          <type>int</type>
+          <declname>page_number</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Make a HTML-formatted string with hOCR markup from the internal data structures. page_number is 0-based but will appear in the output as 1-based.</para><para>Make a HTML-formatted string with hOCR markup from the internal data structures. page_number is 0-based but will appear in the output as 1-based. <ref refid="classtesseract_1_1_image" kindref="compound">Image</ref> name/input_file_ can be set by SetInputName before calling GetHOCRText STL removed from original patch submission and refactored by rays. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="525" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1064" bodyend="1201"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1gaadda8cd6abe770d2f6a70a18329b1973" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * tesseract::TessBaseAPI::GetBoxText</definition>
+        <argsstring>(int page_number)</argsstring>
+        <name>GetBoxText</name>
+        <param>
+          <type>int</type>
+          <declname>page_number</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The recognized text is returned as a char* which is coded in the same format as a box file used in training. Returned string must be freed with the delete [] operator. Constructs coordinates in the original image - not just the rectangle. page_number is a 0-based page index that will appear in the box file.</para><para>The recognized text is returned as a char* which is coded as a UTF8 box file and must be freed with the delete [] operator. page_number is a 0-base page index that will appear in the box file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="533" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1233" bodyend="1268"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga173b4289191b6c2faf2a4a4b7c94affc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * tesseract::TessBaseAPI::GetUNLVText</definition>
+        <argsstring>()</argsstring>
+        <name>GetUNLVText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The recognized text is returned as a char* which is coded as UNLV format Latin-1 with specific reject and suspect codes and must be freed with the delete [] operator. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="539" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1288" bodyend="1387"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga027054e6176889ff49a7108e174fce0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::TessBaseAPI::MeanTextConf</definition>
+        <argsstring>()</argsstring>
+        <name>MeanTextConf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the (average) confidence value between 0 and 100.</para><para>Returns the average word confidence for <ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref> page result. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="541" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1390" bodyend="1399"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga4a67a12db21b3569b2b50ad05b9e146a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int *</type>
+        <definition>int * tesseract::TessBaseAPI::AllWordConfidences</definition>
+        <argsstring>()</argsstring>
+        <name>AllWordConfidences</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns all word confidences (between 0 and 100) in an array, terminated by -1. The calling function must delete [] after use. The number of confidences should correspond to the number of space- delimited words in GetUTF8Text.</para><para>Returns an array of all word confidences, terminated by -1. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="548" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1402" bodyend="1424"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1gab8c2ee5d614382f0d25deb9a7adfe199" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TessBaseAPI::AdaptToWordStr</definition>
+        <argsstring>(PageSegMode mode, const char *wordstr)</argsstring>
+        <name>AdaptToWordStr</name>
+        <param>
+          <type>PageSegMode</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>wordstr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Applies the given word to the adaptive classifier if possible. The word must be SPACE-DELIMITED UTF-8 - l i k e t h i s , so it can tell the boundaries of the graphemes. Assumes that SetImage/SetRectangle have been used to set the image to the given word. The mode arg should be PSM_SINGLE_WORD or PSM_CIRCLE_WORD, as that will be used to control layout analysis. The currently set PageSegMode is preserved. Returns false if adaption was not possible for some reason. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="560" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1436" bodyend="1492"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga953b401286da174e609f09c5f275734e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessBaseAPI::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Free up recognition results and any stored image data, without actually freeing any recognition data that would be time-consuming to reload. Afterwards, you must call SetImage or TesseractRect before doing any Recognize or Get* operation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="568" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1500" bodyend="1504"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga38027513ee9c0348de1790bddcdc3391" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessBaseAPI::End</definition>
+        <argsstring>()</argsstring>
+        <name>End</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Close down tesseract and free up all memory. <ref refid="group___advanced_a_p_i_1ga38027513ee9c0348de1790bddcdc3391" kindref="member">End()</ref> is equivalent to destructing and reconstructing your <ref refid="classtesseract_1_1_tess_base_a_p_i" kindref="compound">TessBaseAPI</ref>. Once <ref refid="group___advanced_a_p_i_1ga38027513ee9c0348de1790bddcdc3391" kindref="member">End()</ref> has been used, none of the other API functions may be used other than Init and anything declared above it in the class definition. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="576" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1512" bodyend="1560"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga2c06caf08c9a8aa97a08a2de2f6200df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::TessBaseAPI::IsValidWord</definition>
+        <argsstring>(const char *word)</argsstring>
+        <name>IsValidWord</name>
+        <param>
+          <type>const char *</type>
+          <declname>word</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check whether a word is valid according to <ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref>&apos;s language model <simplesect kind="return"><para>0 if the word is invalid, non-zero if valid. </para></simplesect>
+<simplesect kind="warning"><para>temporary! This function will be removed from here and placed in a separate API at some future time.</para></simplesect>
+Check whether a word is valid according to <ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref>&apos;s language model returns 0 if the word is invalid, non-zero if valid </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="584" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1566" bodyend="1568"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga535728aa13f5f5eb66cbece59a7737e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TessBaseAPI::GetTextDirection</definition>
+        <argsstring>(int *out_offset, float *out_slope)</argsstring>
+        <name>GetTextDirection</name>
+        <param>
+          <type>int *</type>
+          <declname>out_offset</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>out_slope</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="586" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1571" bodyend="1596"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga7a7b2870798363811c011cec2bfbf22c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessBaseAPI::SetDictFunc</definition>
+        <argsstring>(DictFunc f)</argsstring>
+        <name>SetDictFunc</name>
+        <param>
+          <type>DictFunc</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets <ref refid="classtesseract_1_1_dict_1a802de385e07531ace182d16653e35f71" kindref="member">Dict::letter_is_okay_</ref> function to point to the given function. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="589" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1599" bodyend="1603"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1gad7a52133fe0ebab22e97166c5e5cab67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessBaseAPI::SetProbabilityInContextFunc</definition>
+        <argsstring>(ProbabilityInContextFunc f)</argsstring>
+        <name>SetProbabilityInContextFunc</name>
+        <param>
+          <type>ProbabilityInContextFunc</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets <ref refid="classtesseract_1_1_dict_1a7ac1496aaae5e9977a31a2781e7866f0" kindref="member">Dict::probability_in_context_</ref> function to point to the given function. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="594" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1609" bodyend="1618"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga36a739bd0dc23a819170ca40f35c4b58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessBaseAPI::SetFillLatticeFunc</definition>
+        <argsstring>(FillLatticeFunc f)</argsstring>
+        <name>SetFillLatticeFunc</name>
+        <param>
+          <type>FillLatticeFunc</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets <ref refid="classtesseract_1_1_wordrec_1a7a4f5e2cb7957a5decbc91eb2d31f87c" kindref="member">Wordrec::fill_lattice_</ref> function to point to the given function. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="597" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1621" bodyend="1623"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga5ed6e495e7f1c269588a8b85e4e19ca8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TessBaseAPI::DetectOS</definition>
+        <argsstring>(OSResults *)</argsstring>
+        <name>DetectOS</name>
+        <param>
+          <type><ref refid="struct_o_s_results" kindref="compound">OSResults</ref> *</type>
+          <defname>osr</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Estimates the Orientation And Script of the image. <simplesect kind="return"><para>true if the image was processed successfully.</para></simplesect>
+Estimates the Orientation And Script of the image. Returns true if the image was processed successfully. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="603" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1796" bodyend="1805"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga7e60370845b53aefa2e58d0e639435e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessBaseAPI::GetFeaturesForBlob</definition>
+        <argsstring>(TBLOB *blob, const DENORM &amp;denorm, INT_FEATURE_ARRAY int_features, int *num_features, int *FeatureOutlineIndex)</argsstring>
+        <name>GetFeaturesForBlob</name>
+        <param>
+          <type><ref refid="struct_t_b_l_o_b" kindref="compound">TBLOB</ref> *</type>
+          <declname>blob</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_d_e_n_o_r_m" kindref="compound">DENORM</ref> &amp;</type>
+          <declname>denorm</declname>
+        </param>
+        <param>
+          <type><ref refid="intproto_8h_1afc188645dba6ff9f0eb7f056464fdd34" kindref="member">INT_FEATURE_ARRAY</ref></type>
+          <declname>int_features</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>num_features</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>FeatureOutlineIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the features associated with the input image.</para><para>This method returns the features associated with the input blob. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="606" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="2159" bodyend="2172"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1gab73311ecd1bf8f7e6f98585a76328740" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_r_o_w" kindref="compound">ROW</ref> *</type>
+        <definition>ROW * tesseract::TessBaseAPI::FindRowForBox</definition>
+        <argsstring>(BLOCK_LIST *blocks, int left, int top, int right, int bottom)</argsstring>
+        <name>FindRowForBox</name>
+        <param>
+          <type>BLOCK_LIST *</type>
+          <declname>blocks</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>top</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>right</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bottom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the row to which a box of specified dimensions would belong. If no good match is found, it returns NULL. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="614" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="2178" bodyend="2200"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga34a1c103414dd0293ff4d40c275a5971" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessBaseAPI::RunAdaptiveClassifier</definition>
+        <argsstring>(TBLOB *blob, const DENORM &amp;denorm, int num_max_matches, int *unichar_ids, float *ratings, int *num_matches_returned)</argsstring>
+        <name>RunAdaptiveClassifier</name>
+        <param>
+          <type><ref refid="struct_t_b_l_o_b" kindref="compound">TBLOB</ref> *</type>
+          <declname>blob</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_d_e_n_o_r_m" kindref="compound">DENORM</ref> &amp;</type>
+          <declname>denorm</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num_max_matches</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>unichar_ids</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>ratings</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>num_matches_returned</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method to run adaptive classifier on a blob. It returns at max num_max_matches results.</para><para>Method to run adaptive classifier on a blob. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="621" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="2203" bodyend="2223"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga34314bb3635a6e0d171e33d4b4181db2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * tesseract::TessBaseAPI::GetUnichar</definition>
+        <argsstring>(int unichar_id)</argsstring>
+        <name>GetUnichar</name>
+        <param>
+          <type>int</type>
+          <declname>unichar_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method returns the string form of the specified unichar. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="628" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="2226" bodyend="2228"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga01fc04b1c673045ed8736c02c5943eaf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const Dawg *</type>
+        <definition>const Dawg * tesseract::TessBaseAPI::GetDawg</definition>
+        <argsstring>(int i) const </argsstring>
+        <name>GetDawg</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the pointer to the i-th dawg loaded into tesseract_ object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="631" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="2231" bodyend="2234"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1gac0a13108ccd514cab99badcb014d2f43" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::TessBaseAPI::NumDawgs</definition>
+        <argsstring>() const </argsstring>
+        <name>NumDawgs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the number of dawgs loaded into tesseract_ object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="634" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="2237" bodyend="2239"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga6188cb0fdcf944408db772131c545429" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_r_o_w" kindref="compound">ROW</ref> *</type>
+        <definition>ROW * tesseract::TessBaseAPI::MakeTessOCRRow</definition>
+        <argsstring>(float baseline, float xheight, float descender, float ascender)</argsstring>
+        <name>MakeTessOCRRow</name>
+        <param>
+          <type>float</type>
+          <declname>baseline</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>xheight</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>descender</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ascender</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a <ref refid="class_r_o_w" kindref="compound">ROW</ref> object created from the input row specification. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="637" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1890" bodyend="1904"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga0306bec5d154260922c203d8022832ca" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_t_b_l_o_b" kindref="compound">TBLOB</ref> *</type>
+        <definition>TBLOB * tesseract::TessBaseAPI::MakeTBLOB</definition>
+        <argsstring>(Pix *pix)</argsstring>
+        <name>MakeTBLOB</name>
+        <param>
+          <type>Pix *</type>
+          <declname>pix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a <ref refid="struct_t_b_l_o_b" kindref="compound">TBLOB</ref> corresponding to the entire input image.</para><para>Creates a TBLOB* from the whole pix. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="641" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1907" bodyend="1930"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga52efb13dbc0127d903cb3ecc5734ec7c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessBaseAPI::NormalizeTBLOB</definition>
+        <argsstring>(TBLOB *tblob, ROW *row, bool numeric_mode, DENORM *denorm)</argsstring>
+        <name>NormalizeTBLOB</name>
+        <param>
+          <type><ref refid="struct_t_b_l_o_b" kindref="compound">TBLOB</ref> *</type>
+          <declname>tblob</declname>
+        </param>
+        <param>
+          <type><ref refid="class_r_o_w" kindref="compound">ROW</ref> *</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>numeric_mode</declname>
+        </param>
+        <param>
+          <type><ref refid="class_d_e_n_o_r_m" kindref="compound">DENORM</ref> *</type>
+          <declname>denorm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method baseline normalizes a <ref refid="struct_t_b_l_o_b" kindref="compound">TBLOB</ref> in-place. The input row is used for normalization. The denorm is an optional parameter in which the normalization-antidote is returned. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="648" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1937" bodyend="1950"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga7b46dfdb521a2a575ab914ece8a40e6c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Tesseract *const</type>
+        <definition>Tesseract* const tesseract::TessBaseAPI::tesseract</definition>
+        <argsstring>() const </argsstring>
+        <name>tesseract</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="651" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.h" bodystart="651" bodyend="653"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1gaf810a9dc1e6d74132796c298445ea06d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>OcrEngineMode const</type>
+        <definition>OcrEngineMode const tesseract::TessBaseAPI::oem</definition>
+        <argsstring>() const </argsstring>
+        <name>oem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="655" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.h" bodystart="655" bodyend="657"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga43810a084b5482d0731611513c0a9e16" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessBaseAPI::InitTruthCallback</definition>
+        <argsstring>(TruthCallback *cb)</argsstring>
+        <name>InitTruthCallback</name>
+        <param>
+          <type>TruthCallback *</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="659" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.h" bodystart="659" bodyend="659"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga4b21b3a15434987381804258d79651fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CubeRecoContext *</type>
+        <definition>CubeRecoContext * tesseract::TessBaseAPI::GetCubeRecoContext</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCubeRecoContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return a pointer to underlying <ref refid="classtesseract_1_1_cube_reco_context" kindref="compound">CubeRecoContext</ref> object if present. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="662" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="2242" bodyend="2244"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1gac4a301ee35d57b0a7572d4434cae284c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessBaseAPI::set_min_orientation_margin</definition>
+        <argsstring>(double margin)</argsstring>
+        <name>set_min_orientation_margin</name>
+        <param>
+          <type>double</type>
+          <declname>margin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="664" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1807" bodyend="1809"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga16c4b28cadc2160bf18b84c3f897a2d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessBaseAPI::GetBlockTextOrientations</definition>
+        <argsstring>(int **block_orientation, bool **vertical_writing)</argsstring>
+        <name>GetBlockTextOrientations</name>
+        <param>
+          <type>int **</type>
+          <declname>block_orientation</declname>
+        </param>
+        <param>
+          <type>bool **</type>
+          <declname>vertical_writing</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return text orientation of each block as determined by an earlier run of layout analysis.</para><para>Return text orientation of each block as determined in an earlier page layout analysis operation. Orientation is returned as the number of ccw 90-degree rotations (in [0..3]) required to make the text in the block upright (readable). Note that this may not necessary be the block orientation preferred for recognition (such as the case of vertical CJK text).</para><para>Also returns whether the text in the block is believed to have vertical writing direction (when in an upright page orientation).</para><para>The returned array is of length equal to the number of text blocks, which may be less than the total number of blocks. The ordering is intended to be consistent with GetTextLines(). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="670" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1825" bodyend="1867"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga12273df6a36cd7b618029c21d0c53cfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BLOCK_LIST *</type>
+        <definition>BLOCK_LIST * tesseract::TessBaseAPI::FindLinesCreateBlockList</definition>
+        <argsstring>()</argsstring>
+        <name>FindLinesCreateBlockList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Find lines from the image making the BLOCK_LIST. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="674" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1873" bodyend="1878"/>
+      </memberdef>
+      <memberdef kind="function" id="group___advanced_a_p_i_1ga8f69791ff9730a032068c87bd7b92ca1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessBaseAPI::DeleteBlockList</definition>
+        <argsstring>(BLOCK_LIST *block_list)</argsstring>
+        <name>DeleteBlockList</name>
+        <param>
+          <type>BLOCK_LIST *</type>
+          <declname>block_list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Delete a block list. This is to keep BLOCK_LIST pointer opaque and let go of including the other headers. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/api/baseapi.h" line="681" column="1" bodyfile="/Users/makoto/Desktop/trunk/api/baseapi.cpp" bodystart="1885" bodyend="1887"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The following methods break TesseractRect into pieces, so you can get hold of the thresholded image, get the text in different formats, get bounding boxes, confidences etc. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

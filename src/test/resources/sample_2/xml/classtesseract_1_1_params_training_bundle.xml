@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_params_training_bundle" kind="class" prot="public">
+    <compoundname>tesseract::ParamsTrainingBundle</compoundname>
+    <includes refid="params__training__featdef_8h" local="no">params_training_featdef.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_params_training_bundle_1ab1fe926bbbf3808ca874c57a7d7070c9" prot="public" static="no" mutable="no">
+        <type><ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; <ref refid="namespacetesseract_1ac276fef8cf1673fac0a8759dcbb0ec4d" kindref="member">ParamsTrainingHypothesisList</ref> &gt;</type>
+        <definition>GenericVector&lt;ParamsTrainingHypothesisList&gt; tesseract::ParamsTrainingBundle::hyp_list_vec</definition>
+        <argsstring></argsstring>
+        <name>hyp_list_vec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/params_training_featdef.h" line="113" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/params_training_featdef.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_params_training_bundle_1a5baad028035af666ec532a5743adfce5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::ParamsTrainingBundle::ParamsTrainingBundle</definition>
+        <argsstring>()</argsstring>
+        <name>ParamsTrainingBundle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/params_training_featdef.h" line="99" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/params_training_featdef.h" bodystart="99" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_params_training_bundle_1a60a524854331fa85661fd74f0350b193" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ParamsTrainingBundle::StartHypothesisList</definition>
+        <argsstring>()</argsstring>
+        <name>StartHypothesisList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/params_training_featdef.h" line="102" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/params_training_featdef.h" bodystart="102" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_params_training_bundle_1a21f93637afcb15dca1c65b52377242b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structtesseract_1_1_params_training_hypothesis" kindref="compound">ParamsTrainingHypothesis</ref> &amp;</type>
+        <definition>ParamsTrainingHypothesis&amp; tesseract::ParamsTrainingBundle::AddHypothesis</definition>
+        <argsstring>()</argsstring>
+        <name>AddHypothesis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/params_training_featdef.h" line="107" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/params_training_featdef.h" bodystart="107" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1609">
+        <label>T</label>
+      </node>
+      <node id="1608">
+        <label>TessCallback1&lt; T &gt;</label>
+        <link refid="class_tess_callback1"/>
+      </node>
+      <node id="1606">
+        <label>GenericVector&lt; T &gt;</label>
+        <link refid="class_generic_vector"/>
+        <childnode refid="1607" relation="usage">
+          <edgelabel>compare_cb_</edgelabel>
+        </childnode>
+        <childnode refid="1608" relation="usage">
+          <edgelabel>clear_cb_</edgelabel>
+        </childnode>
+        <childnode refid="1609" relation="usage">
+          <edgelabel>data_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1610">
+        <label>TessCallback1&lt; GenericVector &gt;</label>
+        <link refid="class_tess_callback1"/>
+      </node>
+      <node id="1605">
+        <label>TessResultCallback2&lt; bool, GenericVectorconst &amp;, GenericVectorconst &amp; &gt;</label>
+        <link refid="class_tess_result_callback2"/>
+      </node>
+      <node id="1603">
+        <label>tesseract::ParamsTrainingBundle</label>
+        <link refid="classtesseract_1_1_params_training_bundle"/>
+        <childnode refid="1604" relation="usage">
+          <edgelabel>hyp_list_vec</edgelabel>
+        </childnode>
+      </node>
+      <node id="1604">
+        <label>GenericVector&lt; GenericVector &gt;</label>
+        <link refid="class_generic_vector"/>
+        <childnode refid="1605" relation="usage">
+          <edgelabel>compare_cb_</edgelabel>
+        </childnode>
+        <childnode refid="1606" relation="usage">
+          <edgelabel>data_</edgelabel>
+        </childnode>
+        <childnode refid="1610" relation="usage">
+          <edgelabel>clear_cb_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1607">
+        <label>TessResultCallback2&lt; bool, T const &amp;, T const &amp; &gt;</label>
+        <link refid="class_tess_result_callback2"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/ccstruct/params_training_featdef.h" line="97" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/params_training_featdef.h" bodystart="97" bodyend="114"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_params_training_bundle_1a21f93637afcb15dca1c65b52377242b1" prot="public" virt="non-virtual"><scope>tesseract::ParamsTrainingBundle</scope><name>AddHypothesis</name></member>
+      <member refid="classtesseract_1_1_params_training_bundle_1ab1fe926bbbf3808ca874c57a7d7070c9" prot="public" virt="non-virtual"><scope>tesseract::ParamsTrainingBundle</scope><name>hyp_list_vec</name></member>
+      <member refid="classtesseract_1_1_params_training_bundle_1a5baad028035af666ec532a5743adfce5" prot="public" virt="non-virtual"><scope>tesseract::ParamsTrainingBundle</scope><name>ParamsTrainingBundle</name></member>
+      <member refid="classtesseract_1_1_params_training_bundle_1a60a524854331fa85661fd74f0350b193" prot="public" virt="non-virtual"><scope>tesseract::ParamsTrainingBundle</scope><name>StartHypothesisList</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

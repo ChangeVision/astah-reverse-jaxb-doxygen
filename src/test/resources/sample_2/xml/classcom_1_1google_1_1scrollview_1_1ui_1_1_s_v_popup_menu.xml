@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu" kind="class" prot="public">
+    <compoundname>com::google::scrollview::ui::SVPopupMenu</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ActionListener</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu_1adccecc59967a58ef7d55101d07d7efc3" prot="private" static="no" mutable="no">
+        <type>JPopupMenu</type>
+        <definition>JPopupMenu com.google.scrollview.ui.SVPopupMenu.root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The root entry to add items to. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVPopupMenu.java" line="36" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVPopupMenu.java" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu_1a3911b9073da1de8267cf74db9dac18da" prot="private" static="no" mutable="no">
+        <type>HashMap&lt; String, SVAbstractMenuItem &gt;</type>
+        <definition>HashMap&lt;String, SVAbstractMenuItem&gt; com.google.scrollview.ui.SVPopupMenu.items</definition>
+        <argsstring></argsstring>
+        <name>items</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Contains a map of item name to its actual entry. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVPopupMenu.java" line="38" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVPopupMenu.java" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu_1a55bb627c1e648ede9eacbcf3aa7272f8" prot="private" static="no" mutable="no">
+        <type><ref refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window" kindref="compound">SVWindow</ref></type>
+        <definition>SVWindow com.google.scrollview.ui.SVPopupMenu.svWindow</definition>
+        <argsstring></argsstring>
+        <name>svWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The window the menubar belongs to. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVPopupMenu.java" line="40" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVPopupMenu.java" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu_1af9e7e39c9717be88258b3e0df3ce3fa2" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.google.scrollview.ui.SVPopupMenu.SVPopupMenu</definition>
+        <argsstring>(SVWindow sv)</argsstring>
+        <name>SVPopupMenu</name>
+        <param>
+          <type><ref refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window" kindref="compound">SVWindow</ref></type>
+          <declname>sv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu" kindref="compound">SVPopupMenu</ref> and associate it with a <ref refid="classcom_1_1google_1_1scrollview_1_1_scroll_view" kindref="compound">ScrollView</ref> window.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window our popup menu belongs to. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVPopupMenu.java" line="47" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVPopupMenu.java" bodystart="47" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu_1aab6cd8f94f4fef10391dd62950a0e1c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVPopupMenu.add</definition>
+        <argsstring>(String parent, String name, int id)</argsstring>
+        <name>add</name>
+        <param>
+          <type>String</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a new entry to the menubar. For these items, the server will poll the client to ask what to do.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The menu we add our new entry to (should have been defined before). If the parent is &quot;&quot;, we will add the entry to the root (top-level) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The caption of the new entry. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Id of the new entry. If it is -1, the entry will be treated as a menu. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVPopupMenu.java" line="64" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVPopupMenu.java" bodystart="64" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu_1ac7f02fd5355b5e7afecc1c2b2a2df7a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVPopupMenu.add</definition>
+        <argsstring>(String parent, String name, int id, String value, String desc)</argsstring>
+        <name>add</name>
+        <param>
+          <type>String</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>desc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a new entry to the menubar. In this case, we also know its value and possibly even have a description. For these items, the server will not poll the client to ask what to do, but just show an input dialog and send a message with the new value.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The menu we add our new entry to (should have been defined before). If the parent is &quot;&quot;, we will add the entry to the root (top-level) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The caption of the new entry. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Id of the new entry. If it is -1, the entry will be treated as a menu. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value of the new entry. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>desc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The description of the new entry. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVPopupMenu.java" line="111" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVPopupMenu.java" bodystart="111" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu_1a761f1a7c68a013d7ac617ecf3dc550ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVPopupMenu.actionPerformed</definition>
+        <argsstring>(ActionEvent e)</argsstring>
+        <name>actionPerformed</name>
+        <param>
+          <type>ActionEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A click on one of the items in our menubar has occured. Forward it to the item itself to let it decide what happens. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVPopupMenu.java" line="129" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVPopupMenu.java" bodystart="129" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu_1adc9edb26ea3b0c492f9d6cad0895eccc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVPopupMenu.show</definition>
+        <argsstring>(Component Invoker, int x, int y)</argsstring>
+        <name>show</name>
+        <param>
+          <type>Component</type>
+          <declname>Invoker</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets called by the <ref refid="class_s_v_event_handler" kindref="compound">SVEventHandler</ref> of the window to actually show the content of the popup menu. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVPopupMenu.java" line="141" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVPopupMenu.java" bodystart="141" bodyend="143"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu" kindref="compound">SVPopupMenu</ref> class provides the functionality to add a popup menu to <ref refid="classcom_1_1google_1_1scrollview_1_1_scroll_view" kindref="compound">ScrollView</ref>. Each popup menu item gets associated with a (client-defined) command-id, which <ref refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu" kindref="compound">SVPopupMenu</ref> will return upon clicking it.</para><para><simplesect kind="author"><para><ulink url="mailto:wanke@google.com">wanke@google.com</ulink> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1983">
+        <label>com.google.scrollview.ui.SVPopupMenu</label>
+        <link refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu"/>
+        <childnode refid="1984" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1984">
+        <label>ActionListener</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1985">
+        <label>com.google.scrollview.ui.SVPopupMenu</label>
+        <link refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu"/>
+        <childnode refid="1986" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1986">
+        <label>ActionListener</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVPopupMenu.java" line="34" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVPopupMenu.java" bodystart="34" bodyend="144"/>
+    <listofallmembers>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu_1a761f1a7c68a013d7ac617ecf3dc550ca" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVPopupMenu</scope><name>actionPerformed</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu_1aab6cd8f94f4fef10391dd62950a0e1c7" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVPopupMenu</scope><name>add</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu_1ac7f02fd5355b5e7afecc1c2b2a2df7a6" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVPopupMenu</scope><name>add</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu_1a3911b9073da1de8267cf74db9dac18da" prot="private" virt="non-virtual"><scope>com::google::scrollview::ui::SVPopupMenu</scope><name>items</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu_1adccecc59967a58ef7d55101d07d7efc3" prot="private" virt="non-virtual"><scope>com::google::scrollview::ui::SVPopupMenu</scope><name>root</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu_1adc9edb26ea3b0c492f9d6cad0895eccc" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVPopupMenu</scope><name>show</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu_1af9e7e39c9717be88258b3e0df3ce3fa2" prot="package" virt="non-virtual"><scope>com::google::scrollview::ui::SVPopupMenu</scope><name>SVPopupMenu</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu_1a55bb627c1e648ede9eacbcf3aa7272f8" prot="private" virt="non-virtual"><scope>com::google::scrollview::ui::SVPopupMenu</scope><name>svWindow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

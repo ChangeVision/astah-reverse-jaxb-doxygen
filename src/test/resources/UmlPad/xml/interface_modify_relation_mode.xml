@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="interface_modify_relation_mode" kind="class" prot="public">
+    <compoundname>ModifyRelationMode</compoundname>
+    <basecompoundref refid="interface_mode" prot="public" virt="non-virtual">Mode</basecompoundref>
+    <includes refid="_modify_relation_mode_8h" local="no">ModifyRelationMode.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="interface_modify_relation_mode_1aaa0ccf6440633b859271847a5d116fb9" prot="protected" static="no" mutable="no">
+        <type><ref refid="interface_connector_view_element" kindref="compound">ConnectorViewElement</ref> *</type>
+        <definition>ConnectorViewElement* ModifyRelationMode::viewElement</definition>
+        <argsstring></argsstring>
+        <name>viewElement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/ModifyRelationMode.h" line="16" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/ModifyRelationMode.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_modify_relation_mode_1aceda33ea532fe75ab2f302c35a9943b4" prot="protected" static="no" mutable="no">
+        <type><ref refid="interface_move_middle_point_command" kindref="compound">MoveMiddlePointCommand</ref> *</type>
+        <definition>MoveMiddlePointCommand* ModifyRelationMode::moveMiddlePointCommand</definition>
+        <argsstring></argsstring>
+        <name>moveMiddlePointCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/ModifyRelationMode.h" line="17" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/ModifyRelationMode.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="570">
+        <label>Mode</label>
+        <link refid="interface_mode"/>
+        <childnode refid="571" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="569">
+        <label>ModifyRelationMode</label>
+        <link refid="interface_modify_relation_mode"/>
+        <childnode refid="570" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="571">
+        <label>NSObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="577">
+        <label>Command</label>
+        <link refid="interface_command"/>
+        <childnode refid="574" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="575">
+        <label>MoveMiddlePointCommand</label>
+        <link refid="interface_move_middle_point_command"/>
+        <childnode refid="576" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="576">
+        <label>ModifyCommand</label>
+        <link refid="interface_modify_command"/>
+        <childnode refid="577" relation="public-inheritance">
+        </childnode>
+        <childnode refid="578" relation="usage">
+          <edgelabel>viewElement</edgelabel>
+        </childnode>
+      </node>
+      <node id="573">
+        <label>Mode</label>
+        <link refid="interface_mode"/>
+        <childnode refid="574" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="580">
+        <label>ConnectorViewElement</label>
+        <link refid="interface_connector_view_element"/>
+        <childnode refid="581" relation="public-inheritance">
+        </childnode>
+        <childnode refid="578" relation="usage">
+          <edgelabel>target</edgelabel>
+          <edgelabel>source</edgelabel>
+        </childnode>
+      </node>
+      <node id="572">
+        <label>ModifyRelationMode</label>
+        <link refid="interface_modify_relation_mode"/>
+        <childnode refid="573" relation="public-inheritance">
+        </childnode>
+        <childnode refid="575" relation="usage">
+          <edgelabel>moveMiddlePointCommand</edgelabel>
+        </childnode>
+        <childnode refid="580" relation="usage">
+          <edgelabel>viewElement</edgelabel>
+        </childnode>
+      </node>
+      <node id="581">
+        <label>LinearViewElement</label>
+        <link refid="interface_linear_view_element"/>
+        <childnode refid="578" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="579">
+        <label>UIView</label>
+      </node>
+      <node id="574">
+        <label>NSObject</label>
+      </node>
+      <node id="578">
+        <label>ViewElement</label>
+        <link refid="interface_view_element"/>
+        <childnode refid="579" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/ModifyRelationMode.h" line="15" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/ModifyRelationMode.h" bodystart="15" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_modify_relation_mode_1aceda33ea532fe75ab2f302c35a9943b4" prot="protected" virt="non-virtual"><scope>ModifyRelationMode</scope><name>moveMiddlePointCommand</name></member>
+      <member refid="interface_mode_1adbde69693521f2e5dabf85a18b1411e4" prot="public" virt="virtual"><scope>ModifyRelationMode</scope><name>touchesBegan:</name></member>
+      <member refid="interface_mode_1ae28c9c16d6e6c6bd5579e52285d4cf46" prot="public" virt="virtual"><scope>ModifyRelationMode</scope><name>touchesCancelled:</name></member>
+      <member refid="interface_mode_1a38466dcc8f6d936ada36fa19ab762abc" prot="public" virt="virtual"><scope>ModifyRelationMode</scope><name>touchesEnded:</name></member>
+      <member refid="interface_mode_1a19d2f4c3dbd70c45075805160893fa81" prot="public" virt="virtual"><scope>ModifyRelationMode</scope><name>touchesMoved:</name></member>
+      <member refid="interface_modify_relation_mode_1aaa0ccf6440633b859271847a5d116fb9" prot="protected" virt="non-virtual"><scope>ModifyRelationMode</scope><name>viewElement</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

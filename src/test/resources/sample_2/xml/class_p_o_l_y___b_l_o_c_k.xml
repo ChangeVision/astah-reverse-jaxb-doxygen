@@ -1,0 +1,410 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="class_p_o_l_y___b_l_o_c_k" kind="class" prot="public">
+    <compoundname>POLY_BLOCK</compoundname>
+    <includes refid="polyblk_8h" local="no">polyblk.h</includes>
+      <sectiondef kind="user-defined">
+      <header>POLY_BLOCK::compute_bb</header>
+      <description><para>Compute the bounding box from the outline points. </para></description>
+      <memberdef kind="function" id="class_p_o_l_y___b_l_o_c_k_1a41d49685bdbca65cb74787152c23bbc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void POLY_BLOCK::compute_bb</definition>
+        <argsstring>()</argsstring>
+        <name>compute_bb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="48" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.cpp" bodystart="68" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>POLY_BLOCK::winding_number</header>
+      <description><para>Return the winding number of the outline around the given point. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>point to wind around </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para></description>
+      <memberdef kind="function" id="class_p_o_l_y___b_l_o_c_k_1ace5639e72e2e753a3756213d62eb45ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool POLY_BLOCK::contains</definition>
+        <argsstring>(POLY_BLOCK *other)</argsstring>
+        <name>contains</name>
+        <param>
+          <type><ref refid="class_p_o_l_y___b_l_o_c_k" kindref="compound">POLY_BLOCK</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if other is inside this. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="73" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.cpp" bodystart="142" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_o_l_y___b_l_o_c_k_1ab3d2a3c2a9a09aa55d84efc5aa221713" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+        <definition>inT16 POLY_BLOCK::winding_number</definition>
+        <argsstring>(const ICOORD &amp;test_pt)</argsstring>
+        <name>winding_number</name>
+        <param>
+          <type>const <ref refid="class_i_c_o_o_r_d" kindref="compound">ICOORD</ref> &amp;</type>
+          <declname>test_pt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="81" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.cpp" bodystart="104" bodyend="138"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>POLY_BLOCK::rotate</header>
+      <description><para>Rotate the <ref refid="class_p_o_l_y___b_l_o_c_k" kindref="compound">POLY_BLOCK</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cos, sin of angle </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para></description>
+      <memberdef kind="function" id="class_p_o_l_y___b_l_o_c_k_1af93c6f325d6a4d981e884dc0c5d77819" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void POLY_BLOCK::rotate</definition>
+        <argsstring>(FCOORD rotation)</argsstring>
+        <name>rotate</name>
+        <param>
+          <type><ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref></type>
+          <declname>rotation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="60" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.cpp" bodystart="188" bodyend="204"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>POLY_BLOCK::reflect_in_y_axis</header>
+      <description><para>Reflect the coords of the polygon in the y-axis. (Flip the sign of x.) </para></description>
+      <memberdef kind="function" id="class_p_o_l_y___b_l_o_c_k_1a0bd6c09f15f0b00f45a3abed40815c67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void POLY_BLOCK::reflect_in_y_axis</definition>
+        <argsstring>()</argsstring>
+        <name>reflect_in_y_axis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="62" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.cpp" bodystart="212" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_o_l_y___b_l_o_c_k_1a7d8b03963fc8c54f78bac911234a147c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void POLY_BLOCK::move</definition>
+        <argsstring>(ICOORD shift)</argsstring>
+        <name>move</name>
+        <param>
+          <type><ref refid="class_i_c_o_o_r_d" kindref="compound">ICOORD</ref></type>
+          <declname>shift</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_p_o_l_y___b_l_o_c_k_1a7d8b03963fc8c54f78bac911234a147c" kindref="member">POLY_BLOCK::move</ref></para><para>Move the <ref refid="class_p_o_l_y___b_l_o_c_k" kindref="compound">POLY_BLOCK</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>shift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x,y translation vector </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="64" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.cpp" bodystart="233" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_o_l_y___b_l_o_c_k_1a9692d541e5125e68a399bcac3939a0a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void POLY_BLOCK::plot</definition>
+        <argsstring>(ScrollView *window, inT32 num)</argsstring>
+        <name>plot</name>
+        <param>
+          <type><ref refid="class_scroll_view" kindref="compound">ScrollView</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref></type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="66" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.cpp" bodystart="248" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_o_l_y___b_l_o_c_k_1a8e13144f5375d8ac66b8e2991552cf0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void POLY_BLOCK::fill</definition>
+        <argsstring>(ScrollView *window, ScrollView::Color colour)</argsstring>
+        <name>fill</name>
+        <param>
+          <type><ref refid="class_scroll_view" kindref="compound">ScrollView</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="class_scroll_view_1a100504544a5423a94222149ee9ed0fe8" kindref="member">ScrollView::Color</ref></type>
+          <declname>colour</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="69" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.cpp" bodystart="275" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_o_l_y___b_l_o_c_k_1a65581bb9b97bb576da4b2736467dcd94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool POLY_BLOCK::overlap</definition>
+        <argsstring>(POLY_BLOCK *other)</argsstring>
+        <name>overlap</name>
+        <param>
+          <type><ref refid="class_p_o_l_y___b_l_o_c_k" kindref="compound">POLY_BLOCK</ref> *</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if the polygons of other and this overlap. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="76" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.cpp" bodystart="305" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_o_l_y___b_l_o_c_k_1aaa733d5e7c20fa495156049537574d5b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_scroll_view_1a100504544a5423a94222149ee9ed0fe8" kindref="member">ScrollView::Color</ref></type>
+        <definition>ScrollView::Color POLY_BLOCK::ColorForPolyBlockType</definition>
+        <argsstring>(PolyBlockType type)</argsstring>
+        <name>ColorForPolyBlockType</name>
+        <param>
+          <type><ref refid="publictypes_8h_1a03566528a98c079dafeebf00502f2b60" kindref="member">PolyBlockType</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Returns a color to draw the given type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="86" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.cpp" bodystart="398" bodyend="421"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_p_o_l_y___b_l_o_c_k_1a80ab8a690ea6bb8f520d4d7680e7ea44" prot="private" static="no" mutable="no">
+        <type>ICOORDELT_LIST</type>
+        <definition>ICOORDELT_LIST POLY_BLOCK::vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="90" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_o_l_y___b_l_o_c_k_1a5eb58913ce6f8728b2370590b19d3b50" prot="private" static="no" mutable="no">
+        <type><ref refid="class_t_b_o_x" kindref="compound">TBOX</ref></type>
+        <definition>TBOX POLY_BLOCK::box</definition>
+        <argsstring></argsstring>
+        <name>box</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="91" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_o_l_y___b_l_o_c_k_1aed69588d97d17d4b283e55ad6c68b64e" prot="private" static="no" mutable="no">
+        <type><ref refid="publictypes_8h_1a03566528a98c079dafeebf00502f2b60" kindref="member">PolyBlockType</ref></type>
+        <definition>PolyBlockType POLY_BLOCK::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="92" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_p_o_l_y___b_l_o_c_k_1a3b6582b57a068ae3e2e5145b82926aca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>POLY_BLOCK::POLY_BLOCK</definition>
+        <argsstring>()</argsstring>
+        <name>POLY_BLOCK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="32" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" bodystart="32" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_o_l_y___b_l_o_c_k_1abcabd3906cf8ceb637fccb4cf2210f7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>POLY_BLOCK::POLY_BLOCK</definition>
+        <argsstring>(const TBOX &amp;box, PolyBlockType type)</argsstring>
+        <name>POLY_BLOCK</name>
+        <param>
+          <type>const <ref refid="class_t_b_o_x" kindref="compound">TBOX</ref> &amp;</type>
+          <declname>box</declname>
+        </param>
+        <param>
+          <type><ref refid="publictypes_8h_1a03566528a98c079dafeebf00502f2b60" kindref="member">PolyBlockType</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="35" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.cpp" bodystart="50" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_o_l_y___b_l_o_c_k_1a064dae5963de56ef8ab7d70afd04dbc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>POLY_BLOCK::POLY_BLOCK</definition>
+        <argsstring>(ICOORDELT_LIST *points, PolyBlockType type)</argsstring>
+        <name>POLY_BLOCK</name>
+        <param>
+          <type>ICOORDELT_LIST *</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type><ref refid="publictypes_8h_1a03566528a98c079dafeebf00502f2b60" kindref="member">PolyBlockType</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="36" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.cpp" bodystart="39" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_o_l_y___b_l_o_c_k_1a977e5c3e996cbf22bd4b799e7604c788" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>POLY_BLOCK::~POLY_BLOCK</definition>
+        <argsstring>()</argsstring>
+        <name>~POLY_BLOCK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="37" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" bodystart="37" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_o_l_y___b_l_o_c_k_1a093b9ddca1b40d5eae1b211bed47da09" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_t_b_o_x" kindref="compound">TBOX</ref> *</type>
+        <definition>TBOX* POLY_BLOCK::bounding_box</definition>
+        <argsstring>()</argsstring>
+        <name>bounding_box</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="40" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_o_l_y___b_l_o_c_k_1a0835a8ea39e763d6a229603d5532c879" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ICOORDELT_LIST *</type>
+        <definition>ICOORDELT_LIST* POLY_BLOCK::points</definition>
+        <argsstring>()</argsstring>
+        <name>points</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="44" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_o_l_y___b_l_o_c_k_1af13d2e593a49e7818d800d14633eccd0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="publictypes_8h_1a03566528a98c079dafeebf00502f2b60" kindref="member">PolyBlockType</ref></type>
+        <definition>PolyBlockType POLY_BLOCK::isA</definition>
+        <argsstring>() const </argsstring>
+        <name>isA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="50" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_o_l_y___b_l_o_c_k_1abd32dee532afe634cdbacffc0b53e660" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool POLY_BLOCK::IsText</definition>
+        <argsstring>() const </argsstring>
+        <name>IsText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="54" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" bodystart="54" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" line="30" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccstruct/polyblk.h" bodystart="30" bodyend="93"/>
+    <listofallmembers>
+      <member refid="class_p_o_l_y___b_l_o_c_k_1a093b9ddca1b40d5eae1b211bed47da09" prot="public" virt="non-virtual"><scope>POLY_BLOCK</scope><name>bounding_box</name></member>
+      <member refid="class_p_o_l_y___b_l_o_c_k_1a5eb58913ce6f8728b2370590b19d3b50" prot="private" virt="non-virtual"><scope>POLY_BLOCK</scope><name>box</name></member>
+      <member refid="class_p_o_l_y___b_l_o_c_k_1aaa733d5e7c20fa495156049537574d5b" prot="public" virt="non-virtual"><scope>POLY_BLOCK</scope><name>ColorForPolyBlockType</name></member>
+      <member refid="class_p_o_l_y___b_l_o_c_k_1a41d49685bdbca65cb74787152c23bbc4" prot="public" virt="non-virtual"><scope>POLY_BLOCK</scope><name>compute_bb</name></member>
+      <member refid="class_p_o_l_y___b_l_o_c_k_1ace5639e72e2e753a3756213d62eb45ff" prot="public" virt="non-virtual"><scope>POLY_BLOCK</scope><name>contains</name></member>
+      <member refid="class_p_o_l_y___b_l_o_c_k_1a8e13144f5375d8ac66b8e2991552cf0e" prot="public" virt="non-virtual"><scope>POLY_BLOCK</scope><name>fill</name></member>
+      <member refid="class_p_o_l_y___b_l_o_c_k_1af13d2e593a49e7818d800d14633eccd0" prot="public" virt="non-virtual"><scope>POLY_BLOCK</scope><name>isA</name></member>
+      <member refid="class_p_o_l_y___b_l_o_c_k_1abd32dee532afe634cdbacffc0b53e660" prot="public" virt="non-virtual"><scope>POLY_BLOCK</scope><name>IsText</name></member>
+      <member refid="class_p_o_l_y___b_l_o_c_k_1a7d8b03963fc8c54f78bac911234a147c" prot="public" virt="non-virtual"><scope>POLY_BLOCK</scope><name>move</name></member>
+      <member refid="class_p_o_l_y___b_l_o_c_k_1a65581bb9b97bb576da4b2736467dcd94" prot="public" virt="non-virtual"><scope>POLY_BLOCK</scope><name>overlap</name></member>
+      <member refid="class_p_o_l_y___b_l_o_c_k_1a9692d541e5125e68a399bcac3939a0a5" prot="public" virt="non-virtual"><scope>POLY_BLOCK</scope><name>plot</name></member>
+      <member refid="class_p_o_l_y___b_l_o_c_k_1a0835a8ea39e763d6a229603d5532c879" prot="public" virt="non-virtual"><scope>POLY_BLOCK</scope><name>points</name></member>
+      <member refid="class_p_o_l_y___b_l_o_c_k_1a3b6582b57a068ae3e2e5145b82926aca" prot="public" virt="non-virtual"><scope>POLY_BLOCK</scope><name>POLY_BLOCK</name></member>
+      <member refid="class_p_o_l_y___b_l_o_c_k_1abcabd3906cf8ceb637fccb4cf2210f7b" prot="public" virt="non-virtual"><scope>POLY_BLOCK</scope><name>POLY_BLOCK</name></member>
+      <member refid="class_p_o_l_y___b_l_o_c_k_1a064dae5963de56ef8ab7d70afd04dbc8" prot="public" virt="non-virtual"><scope>POLY_BLOCK</scope><name>POLY_BLOCK</name></member>
+      <member refid="class_p_o_l_y___b_l_o_c_k_1a0bd6c09f15f0b00f45a3abed40815c67" prot="public" virt="non-virtual"><scope>POLY_BLOCK</scope><name>reflect_in_y_axis</name></member>
+      <member refid="class_p_o_l_y___b_l_o_c_k_1af93c6f325d6a4d981e884dc0c5d77819" prot="public" virt="non-virtual"><scope>POLY_BLOCK</scope><name>rotate</name></member>
+      <member refid="class_p_o_l_y___b_l_o_c_k_1aed69588d97d17d4b283e55ad6c68b64e" prot="private" virt="non-virtual"><scope>POLY_BLOCK</scope><name>type</name></member>
+      <member refid="class_p_o_l_y___b_l_o_c_k_1a80ab8a690ea6bb8f520d4d7680e7ea44" prot="private" virt="non-virtual"><scope>POLY_BLOCK</scope><name>vertices</name></member>
+      <member refid="class_p_o_l_y___b_l_o_c_k_1ab3d2a3c2a9a09aa55d84efc5aa221713" prot="public" virt="non-virtual"><scope>POLY_BLOCK</scope><name>winding_number</name></member>
+      <member refid="class_p_o_l_y___b_l_o_c_k_1a977e5c3e996cbf22bd4b799e7604c788" prot="public" virt="non-virtual"><scope>POLY_BLOCK</scope><name>~POLY_BLOCK</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

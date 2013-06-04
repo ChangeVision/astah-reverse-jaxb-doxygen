@@ -1,0 +1,432 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="adler32_8c" kind="file">
+    <compoundname>adler32.c</compoundname>
+    <includes refid="zutil_8h" local="yes">zutil.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>src/adler32.c</label>
+        <link refid="adler32.c"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>zconf.h</label>
+        <link refid="zconf_8h"/>
+      </node>
+      <node id="9">
+        <label>zutil.h</label>
+        <link refid="zutil_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>zlib.h</label>
+        <link refid="zlib_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="adler32_8c_1a08023ea6765c99d60a6a3840cd07156e" prot="public" static="no">
+        <name>local</name>
+        <initializer>static</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" line="10" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="adler32_8c_1a79bcfb6bde984f42d1124b068a509af7" prot="public" static="no">
+        <name>BASE</name>
+        <initializer>65521UL    /* largest prime smaller than 65536 */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" line="14" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="adler32_8c_1a5de5d183f9a6a8d53316f743e1ca6dc2" prot="public" static="no">
+        <name>NMAX</name>
+        <initializer>5552</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" line="15" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="adler32_8c_1a465ff70ce96dfc2e84b0e87548b4ecb4" prot="public" static="no">
+        <name>DO1</name>
+        <param><defname>buf</defname></param>
+        <param><defname>i</defname></param>
+        <initializer>{adler += (buf)[i]; sum2 += adler;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" line="18" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="adler32_8c_1a3d7044f8ea7e75164fe5108048fd87eb" prot="public" static="no">
+        <name>DO2</name>
+        <param><defname>buf</defname></param>
+        <param><defname>i</defname></param>
+        <initializer><ref refid="crc32_8c_1aff265ea9630e020c8ac850c18d5d972f" kindref="member">DO1</ref>(buf,i); <ref refid="crc32_8c_1aff265ea9630e020c8ac850c18d5d972f" kindref="member">DO1</ref>(buf,i+1);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" line="19" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="adler32_8c_1aef9bafc8b3d89e98b6e26320f99b9e31" prot="public" static="no">
+        <name>DO4</name>
+        <param><defname>buf</defname></param>
+        <param><defname>i</defname></param>
+        <initializer><ref refid="adler32_8c_1a3d7044f8ea7e75164fe5108048fd87eb" kindref="member">DO2</ref>(buf,i); <ref refid="adler32_8c_1a3d7044f8ea7e75164fe5108048fd87eb" kindref="member">DO2</ref>(buf,i+2);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" line="20" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="adler32_8c_1a9aafc447614bf5c4dc0d484aba9edb89" prot="public" static="no">
+        <name>DO8</name>
+        <param><defname>buf</defname></param>
+        <param><defname>i</defname></param>
+        <initializer><ref refid="adler32_8c_1aef9bafc8b3d89e98b6e26320f99b9e31" kindref="member">DO4</ref>(buf,i); <ref refid="adler32_8c_1aef9bafc8b3d89e98b6e26320f99b9e31" kindref="member">DO4</ref>(buf,i+4);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" line="21" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="adler32_8c_1a6912c3e78e2b797f42f214d1b508aa0c" prot="public" static="no">
+        <name>DO16</name>
+        <param><defname>buf</defname></param>
+        <initializer><ref refid="crc32_8c_1aed1b41414efee0773c67c28e09317455" kindref="member">DO8</ref>(buf,0); <ref refid="crc32_8c_1aed1b41414efee0773c67c28e09317455" kindref="member">DO8</ref>(buf,8);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" line="22" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="adler32_8c_1aa1e26f19f1e6cf348e41511e7db90881" prot="public" static="no">
+        <name>MOD</name>
+        <param><defname>a</defname></param>
+        <initializer>a %= <ref refid="adler32_8c_1a79bcfb6bde984f42d1124b068a509af7" kindref="member">BASE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" line="55" column="12" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="adler32_8c_1ad7b4cfdfbc3e12bf00d27e3375d196d4" prot="public" static="no">
+        <name>MOD4</name>
+        <param><defname>a</defname></param>
+        <initializer>a %= <ref refid="adler32_8c_1a79bcfb6bde984f42d1124b068a509af7" kindref="member">BASE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" line="56" column="11" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="adler32_8c_1a0ef9d5e574e4ffe16ead769ad1d08351" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref></type>
+        <definition>static uLong adler32_combine_</definition>
+        <argsstring>(uLong adler1, uLong adler2, long len2)</argsstring>
+        <name>adler32_combine_</name>
+        <param>
+          <type><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref></type>
+          <declname>adler1</declname>
+        </param>
+        <param>
+          <type><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref></type>
+          <declname>adler2</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>len2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" line="12" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" bodystart="131" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="adler32_8c_1a5a72291922586b323fa442b9fe8549ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref></type>
+        <definition>uLong adler32</definition>
+        <argsstring>(uLong adler, Bytef *buf, uInt len)</argsstring>
+        <name>adler32</name>
+        <param>
+          <type><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref></type>
+          <declname>adler</declname>
+        </param>
+        <param>
+          <type><ref refid="zconf_8h_1ac5613fe8160cbbf89d3e470574b755fb" kindref="member">Bytef</ref> *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref></type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" line="60" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" bodystart="60" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="adler32_8c_1a1d2f0b036f2d719742b5abd234ca2115" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref></type>
+        <definition>uLong adler32_combine</definition>
+        <argsstring>(uLong adler1, uLong adler2, long len2)</argsstring>
+        <name>adler32_combine</name>
+        <param>
+          <type><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref></type>
+          <declname>adler1</declname>
+        </param>
+        <param>
+          <type><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref></type>
+          <declname>adler2</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>len2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" line="155" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" bodystart="155" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="adler32_8c_1a98fd33ee7f4220ffab679979e6c27af9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref></type>
+        <definition>uLong adler32_combine64</definition>
+        <argsstring>(uLong adler1, uLong adler2, long len2)</argsstring>
+        <name>adler32_combine64</name>
+        <param>
+          <type><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref></type>
+          <declname>adler1</declname>
+        </param>
+        <param>
+          <type><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref></type>
+          <declname>adler2</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>len2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" line="163" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c" bodystart="163" bodyend="169"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>adler32.c<sp/>--<sp/>compute<sp/>the<sp/>Adler-32<sp/>checksum<sp/>of<sp/>a<sp/>data<sp/>stream</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>1995-2007<sp/>Mark<sp/>Adler</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>For<sp/>conditions<sp/>of<sp/>distribution<sp/>and<sp/>use,<sp/>see<sp/>copyright<sp/>notice<sp/>in<sp/>zlib.h</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>@(#)<sp/>$Id$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="zutil_8h" kindref="compound">zutil.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>local<sp/>static</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="adler32_8c_1a08023ea6765c99d60a6a3840cd07156e" kindref="member">local</ref><sp/><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref><sp/>adler32_combine_(<ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref><sp/>adler1,<sp/><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref><sp/>adler2,<sp/><ref refid="zconf_8h_1ab9923767082c7a76924b31493e60d42c" kindref="member">z_off64_t</ref><sp/>len2);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BASE<sp/>65521UL<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>largest<sp/>prime<sp/>smaller<sp/>than<sp/>65536<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>NMAX<sp/>5552</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>NMAX<sp/>is<sp/>the<sp/>largest<sp/>n<sp/>such<sp/>that<sp/>255n(n+1)/2<sp/>+<sp/>(n+1)(BASE-1)<sp/>&lt;=<sp/>2^32-1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DO1(buf,i)<sp/><sp/>{adler<sp/>+=<sp/>(buf)[i];<sp/>sum2<sp/>+=<sp/>adler;}</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>DO2(buf,i)<sp/><sp/>DO1(buf,i);<sp/>DO1(buf,i+1);</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>DO4(buf,i)<sp/><sp/>DO2(buf,i);<sp/>DO2(buf,i+2);</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>DO8(buf,i)<sp/><sp/>DO4(buf,i);<sp/>DO4(buf,i+4);</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>DO16(buf)<sp/><sp/><sp/>DO8(buf,0);<sp/>DO8(buf,8);</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>use<sp/>NO_DIVIDE<sp/>if<sp/>your<sp/>processor<sp/>does<sp/>not<sp/>do<sp/>division<sp/>in<sp/>hardware<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>NO_DIVIDE</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>MOD(a)<sp/>\</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>(BASE<sp/>&lt;&lt;<sp/>16))<sp/>a<sp/>-=<sp/>(BASE<sp/>&lt;&lt;<sp/>16);<sp/>\</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>(BASE<sp/>&lt;&lt;<sp/>15))<sp/>a<sp/>-=<sp/>(BASE<sp/>&lt;&lt;<sp/>15);<sp/>\</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>(BASE<sp/>&lt;&lt;<sp/>14))<sp/>a<sp/>-=<sp/>(BASE<sp/>&lt;&lt;<sp/>14);<sp/>\</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>(BASE<sp/>&lt;&lt;<sp/>13))<sp/>a<sp/>-=<sp/>(BASE<sp/>&lt;&lt;<sp/>13);<sp/>\</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>(BASE<sp/>&lt;&lt;<sp/>12))<sp/>a<sp/>-=<sp/>(BASE<sp/>&lt;&lt;<sp/>12);<sp/>\</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>(BASE<sp/>&lt;&lt;<sp/>11))<sp/>a<sp/>-=<sp/>(BASE<sp/>&lt;&lt;<sp/>11);<sp/>\</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>(BASE<sp/>&lt;&lt;<sp/>10))<sp/>a<sp/>-=<sp/>(BASE<sp/>&lt;&lt;<sp/>10);<sp/>\</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>(BASE<sp/>&lt;&lt;<sp/>9))<sp/>a<sp/>-=<sp/>(BASE<sp/>&lt;&lt;<sp/>9);<sp/>\</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>(BASE<sp/>&lt;&lt;<sp/>8))<sp/>a<sp/>-=<sp/>(BASE<sp/>&lt;&lt;<sp/>8);<sp/>\</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>(BASE<sp/>&lt;&lt;<sp/>7))<sp/>a<sp/>-=<sp/>(BASE<sp/>&lt;&lt;<sp/>7);<sp/>\</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>(BASE<sp/>&lt;&lt;<sp/>6))<sp/>a<sp/>-=<sp/>(BASE<sp/>&lt;&lt;<sp/>6);<sp/>\</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>(BASE<sp/>&lt;&lt;<sp/>5))<sp/>a<sp/>-=<sp/>(BASE<sp/>&lt;&lt;<sp/>5);<sp/>\</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>(BASE<sp/>&lt;&lt;<sp/>4))<sp/>a<sp/>-=<sp/>(BASE<sp/>&lt;&lt;<sp/>4);<sp/>\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>(BASE<sp/>&lt;&lt;<sp/>3))<sp/>a<sp/>-=<sp/>(BASE<sp/>&lt;&lt;<sp/>3);<sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>(BASE<sp/>&lt;&lt;<sp/>2))<sp/>a<sp/>-=<sp/>(BASE<sp/>&lt;&lt;<sp/>2);<sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>(BASE<sp/>&lt;&lt;<sp/>1))<sp/>a<sp/>-=<sp/>(BASE<sp/>&lt;&lt;<sp/>1);<sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>BASE)<sp/>a<sp/>-=<sp/>BASE;<sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>MOD4(a)<sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>(BASE<sp/>&lt;&lt;<sp/>4))<sp/>a<sp/>-=<sp/>(BASE<sp/>&lt;&lt;<sp/>4);<sp/>\</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>(BASE<sp/>&lt;&lt;<sp/>3))<sp/>a<sp/>-=<sp/>(BASE<sp/>&lt;&lt;<sp/>3);<sp/>\</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>(BASE<sp/>&lt;&lt;<sp/>2))<sp/>a<sp/>-=<sp/>(BASE<sp/>&lt;&lt;<sp/>2);<sp/>\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>(BASE<sp/>&lt;&lt;<sp/>1))<sp/>a<sp/>-=<sp/>(BASE<sp/>&lt;&lt;<sp/>1);<sp/>\</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a<sp/>&gt;=<sp/>BASE)<sp/>a<sp/>-=<sp/>BASE;<sp/>\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>MOD(a)<sp/>a<sp/>%=<sp/>BASE</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>MOD4(a)<sp/>a<sp/>%=<sp/>BASE</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>=========================================================================<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref><sp/><ref refid="zconf_8h_1a181415878f03b95a7094309d824a14b6" kindref="member">ZEXPORT</ref><sp/><ref refid="adler32_8c_1a5a72291922586b323fa442b9fe8549ec" kindref="member">adler32</ref>(adler,<sp/>buf,<sp/>len)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref><sp/>adler;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a2c212835823e3c54a8ab6d95c652660e" kindref="member">const</ref><sp/><ref refid="zconf_8h_1ac5613fe8160cbbf89d3e470574b755fb" kindref="member">Bytef</ref><sp/>*buf;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/>len;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>sum2;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>n;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>split<sp/>Adler-32<sp/>into<sp/>component<sp/>sums<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>sum2<sp/>=<sp/>(adler<sp/>&gt;&gt;<sp/>16)<sp/>&amp;<sp/>0xffff;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>adler<sp/>&amp;=<sp/>0xffff;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>in<sp/>case<sp/>user<sp/>likes<sp/>doing<sp/>a<sp/>byte<sp/>at<sp/>a<sp/>time,<sp/>keep<sp/>it<sp/>fast<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(len<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>adler<sp/>+=<sp/>buf[0];</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(adler<sp/>&gt;=<sp/><ref refid="adler32_8c_1a79bcfb6bde984f42d1124b068a509af7" kindref="member">BASE</ref>)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>adler<sp/>-=<sp/><ref refid="adler32_8c_1a79bcfb6bde984f42d1124b068a509af7" kindref="member">BASE</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum2<sp/>+=<sp/>adler;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sum2<sp/>&gt;=<sp/><ref refid="adler32_8c_1a79bcfb6bde984f42d1124b068a509af7" kindref="member">BASE</ref>)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum2<sp/>-=<sp/><ref refid="adler32_8c_1a79bcfb6bde984f42d1124b068a509af7" kindref="member">BASE</ref>;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>adler<sp/>|<sp/>(sum2<sp/>&lt;&lt;<sp/>16);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>initial<sp/>Adler-32<sp/>value<sp/>(deferred<sp/>check<sp/>for<sp/>len<sp/>==<sp/>1<sp/>speed)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(buf<sp/>==<sp/><ref refid="zlib_8h_1ad15afa2776b41b2f4d8582dd152bd736" kindref="member">Z_NULL</ref>)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1L;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>in<sp/>case<sp/>short<sp/>lengths<sp/>are<sp/>provided,<sp/>keep<sp/>it<sp/>somewhat<sp/>fast<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(len<sp/>&lt;<sp/>16)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(len--)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>adler<sp/>+=<sp/>*buf++;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum2<sp/>+=<sp/>adler;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(adler<sp/>&gt;=<sp/><ref refid="adler32_8c_1a79bcfb6bde984f42d1124b068a509af7" kindref="member">BASE</ref>)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>adler<sp/>-=<sp/><ref refid="adler32_8c_1a79bcfb6bde984f42d1124b068a509af7" kindref="member">BASE</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="adler32_8c_1ad7b4cfdfbc3e12bf00d27e3375d196d4" kindref="member">MOD4</ref>(sum2);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>only<sp/>added<sp/>so<sp/>many<sp/>BASE&apos;s<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>adler<sp/>|<sp/>(sum2<sp/>&lt;&lt;<sp/>16);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>do<sp/>length<sp/>NMAX<sp/>blocks<sp/>--<sp/>requires<sp/>just<sp/>one<sp/>modulo<sp/>operation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(len<sp/>&gt;=<sp/><ref refid="adler32_8c_1a5de5d183f9a6a8d53316f743e1ca6dc2" kindref="member">NMAX</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len<sp/>-=<sp/><ref refid="adler32_8c_1a5de5d183f9a6a8d53316f743e1ca6dc2" kindref="member">NMAX</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/>=<sp/><ref refid="adler32_8c_1a5de5d183f9a6a8d53316f743e1ca6dc2" kindref="member">NMAX</ref><sp/>/<sp/>16;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>NMAX<sp/>is<sp/>divisible<sp/>by<sp/>16<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="adler32_8c_1a6912c3e78e2b797f42f214d1b508aa0c" kindref="member">DO16</ref>(buf);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>16<sp/>sums<sp/>unrolled<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf<sp/>+=<sp/>16;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(--n);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="adler32_8c_1aa1e26f19f1e6cf348e41511e7db90881" kindref="member">MOD</ref>(adler);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="adler32_8c_1aa1e26f19f1e6cf348e41511e7db90881" kindref="member">MOD</ref>(sum2);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>do<sp/>remaining<sp/>bytes<sp/>(less<sp/>than<sp/>NMAX,<sp/>still<sp/>just<sp/>one<sp/>modulo)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(len)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>avoid<sp/>modulos<sp/>if<sp/>none<sp/>remaining<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(len<sp/>&gt;=<sp/>16)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>len<sp/>-=<sp/>16;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="adler32_8c_1a6912c3e78e2b797f42f214d1b508aa0c" kindref="member">DO16</ref>(buf);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf<sp/>+=<sp/>16;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(len--)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>adler<sp/>+=<sp/>*buf++;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum2<sp/>+=<sp/>adler;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="adler32_8c_1aa1e26f19f1e6cf348e41511e7db90881" kindref="member">MOD</ref>(adler);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="adler32_8c_1aa1e26f19f1e6cf348e41511e7db90881" kindref="member">MOD</ref>(sum2);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>return<sp/>recombined<sp/>sums<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>adler<sp/>|<sp/>(sum2<sp/>&lt;&lt;<sp/>16);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>=========================================================================<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><ref refid="adler32_8c_1a08023ea6765c99d60a6a3840cd07156e" kindref="member">local</ref><sp/><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref><sp/>adler32_combine_(adler1,<sp/>adler2,<sp/>len2)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref><sp/>adler1;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref><sp/>adler2;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1ab9923767082c7a76924b31493e60d42c" kindref="member">z_off64_t</ref><sp/>len2;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>sum1;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>sum2;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>rem;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>the<sp/>derivation<sp/>of<sp/>this<sp/>formula<sp/>is<sp/>left<sp/>as<sp/>an<sp/>exercise<sp/>for<sp/>the<sp/>reader<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>rem<sp/>=<sp/>(unsigned)(len2<sp/>%<sp/><ref refid="adler32_8c_1a79bcfb6bde984f42d1124b068a509af7" kindref="member">BASE</ref>);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>sum1<sp/>=<sp/>adler1<sp/>&amp;<sp/>0xffff;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>sum2<sp/>=<sp/>rem<sp/>*<sp/>sum1;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="adler32_8c_1aa1e26f19f1e6cf348e41511e7db90881" kindref="member">MOD</ref>(sum2);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>sum1<sp/>+=<sp/>(adler2<sp/>&amp;<sp/>0xffff)<sp/>+<sp/>BASE<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>sum2<sp/>+=<sp/>((adler1<sp/>&gt;&gt;<sp/>16)<sp/>&amp;<sp/>0xffff)<sp/>+<sp/>((adler2<sp/>&gt;&gt;<sp/>16)<sp/>&amp;<sp/>0xffff)<sp/>+<sp/>BASE<sp/>-<sp/>rem;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sum1<sp/>&gt;=<sp/>BASE)<sp/>sum1<sp/>-=<sp/><ref refid="adler32_8c_1a79bcfb6bde984f42d1124b068a509af7" kindref="member">BASE</ref>;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sum1<sp/>&gt;=<sp/>BASE)<sp/>sum1<sp/>-=<sp/><ref refid="adler32_8c_1a79bcfb6bde984f42d1124b068a509af7" kindref="member">BASE</ref>;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sum2<sp/>&gt;=<sp/>(BASE<sp/>&lt;&lt;<sp/>1))<sp/>sum2<sp/>-=<sp/>(BASE<sp/>&lt;&lt;<sp/>1);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sum2<sp/>&gt;=<sp/>BASE)<sp/>sum2<sp/>-=<sp/><ref refid="adler32_8c_1a79bcfb6bde984f42d1124b068a509af7" kindref="member">BASE</ref>;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sum1<sp/>|<sp/>(sum2<sp/>&lt;&lt;<sp/>16);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>=========================================================================<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref><sp/><ref refid="zconf_8h_1a181415878f03b95a7094309d824a14b6" kindref="member">ZEXPORT</ref><sp/><ref refid="adler32_8c_1a1d2f0b036f2d719742b5abd234ca2115" kindref="member">adler32_combine</ref>(adler1,<sp/>adler2,<sp/>len2)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref><sp/>adler1;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref><sp/>adler2;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a8cf4661a88ec12823d7cbdd3fa629eb0" kindref="member">z_off_t</ref><sp/>len2;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>adler32_combine_(adler1,<sp/>adler2,<sp/>len2);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref><sp/><ref refid="zconf_8h_1a181415878f03b95a7094309d824a14b6" kindref="member">ZEXPORT</ref><sp/><ref refid="adler32_8c_1a98fd33ee7f4220ffab679979e6c27af9" kindref="member">adler32_combine64</ref>(adler1,<sp/>adler2,<sp/>len2)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref><sp/>adler1;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1acd2a5701a3aecf6700d2c66c606ecb40" kindref="member">uLong</ref><sp/>adler2;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1ab9923767082c7a76924b31493e60d42c" kindref="member">z_off64_t</ref><sp/>len2;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>adler32_combine_(adler1,<sp/>adler2,<sp/>len2);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/adler32.c"/>
+  </compounddef>
+</doxygen>

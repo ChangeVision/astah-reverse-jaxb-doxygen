@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="svmnode_8h" kind="file">
+    <compoundname>svmnode.h</compoundname>
+    <includedby refid="paramsd_8cpp" local="yes">ccmain/paramsd.cpp</includedby>
+    <includedby refid="pgedit_8cpp" local="yes">ccmain/pgedit.cpp</includedby>
+    <includedby refid="intproto_8cpp" local="yes">classify/intproto.cpp</includedby>
+    <includedby refid="mastertrainer_8cpp" local="yes">classify/mastertrainer.cpp</includedby>
+    <includedby refid="svmnode_8cpp" local="yes">viewer/svmnode.cpp</includedby>
+    <includedby refid="svpaint_8cpp" local="yes">viewer/svpaint.cpp</includedby>
+    <invincdepgraph>
+      <node id="42247">
+        <label>classify/mastertrainer.cpp</label>
+        <link refid="mastertrainer_8cpp"/>
+      </node>
+      <node id="42249">
+        <label>viewer/svpaint.cpp</label>
+        <link refid="svpaint_8cpp"/>
+      </node>
+      <node id="42248">
+        <label>viewer/svmnode.cpp</label>
+        <link refid="svmnode_8cpp"/>
+      </node>
+      <node id="42244">
+        <label>ccmain/paramsd.cpp</label>
+        <link refid="paramsd_8cpp"/>
+      </node>
+      <node id="42246">
+        <label>classify/intproto.cpp</label>
+        <link refid="intproto_8cpp"/>
+      </node>
+      <node id="42243">
+        <label>viewer/svmnode.h</label>
+        <link refid="svmnode.h"/>
+        <childnode refid="42244" relation="include">
+        </childnode>
+        <childnode refid="42245" relation="include">
+        </childnode>
+        <childnode refid="42246" relation="include">
+        </childnode>
+        <childnode refid="42247" relation="include">
+        </childnode>
+        <childnode refid="42248" relation="include">
+        </childnode>
+        <childnode refid="42249" relation="include">
+        </childnode>
+      </node>
+      <node id="42245">
+        <label>ccmain/pgedit.cpp</label>
+        <link refid="pgedit_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_s_v_menu_node" prot="public">SVMenuNode</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>svmnode.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>description_:<sp/>ScrollView<sp/>Menu<sp/>Node</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/><sp/><sp/><sp/><sp/><sp/>Joern<sp/>Wanke</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created:<sp/><sp/><sp/><sp/><sp/>Thu<sp/>Nov<sp/>29<sp/>2007</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(C)<sp/>Copyright<sp/>2007,<sp/>Google<sp/>Inc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>A<sp/>SVMenuNode<sp/>is<sp/>an<sp/>entity<sp/>which<sp/>contains<sp/>the<sp/>mapping<sp/>from<sp/>a<sp/>menu<sp/>entry<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>server<sp/>side<sp/>to<sp/>the<sp/>corresponding<sp/>associated<sp/>commands<sp/>on<sp/>the<sp/>client.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>It<sp/>is<sp/>designed<sp/>to<sp/>be<sp/>a<sp/>tree<sp/>structure<sp/>with<sp/>a<sp/>root<sp/>node,<sp/>which<sp/>can<sp/>then<sp/>be</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>used<sp/>to<sp/>generate<sp/>the<sp/>appropriate<sp/>messages<sp/>to<sp/>the<sp/>server<sp/>to<sp/>display<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>menu<sp/>structure<sp/>there.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>A<sp/>SVMenuNode<sp/>can<sp/>both<sp/>be<sp/>used<sp/>in<sp/>the<sp/>context_<sp/>of<sp/>popup<sp/>menus<sp/>as<sp/>well<sp/>as</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>menu<sp/>bars.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TESSERACT_VIEWER_SVMNODE_H__</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TESSERACT_VIEWER_SVMNODE_H__</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_scroll_view" kindref="compound">ScrollView</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_s_v_menu_node" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_v_menu_node" kindref="compound">SVMenuNode</ref><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Creating<sp/>the<sp/>(empty)<sp/>root<sp/>menu<sp/>node.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><ref refid="class_s_v_menu_node_1aa1ed336650e32dff50e1e14d8d4ea44b" kindref="member">SVMenuNode</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Destructor<sp/>for<sp/>every<sp/>node.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><ref refid="class_s_v_menu_node_1a020fc873b1d90e024fcb41bb7a075ba6" kindref="member">~SVMenuNode</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>new<sp/>sub<sp/>menu<sp/>node<sp/>with<sp/>just<sp/>a<sp/>caption.<sp/><sp/>This<sp/>is<sp/>used<sp/>to<sp/>create</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>nodes<sp/>which<sp/>act<sp/>as<sp/>parent<sp/>nodes<sp/>to<sp/>other<sp/>nodes<sp/>(e.g.<sp/>submenus).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><ref refid="class_s_v_menu_node" kindref="compound">SVMenuNode</ref>*<sp/><ref refid="class_s_v_menu_node_1a2d119f4867dcb3015103eabb6cd7386d" kindref="member">AddChild</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>txt);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>&quot;normal&quot;<sp/>menu<sp/>node<sp/>which<sp/>is<sp/>associated<sp/>with<sp/>a<sp/>command<sp/>event.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_v_menu_node_1a2d119f4867dcb3015103eabb6cd7386d" kindref="member">AddChild</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>txt,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>command_event);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>flag<sp/>menu<sp/>node.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_v_menu_node_1a2d119f4867dcb3015103eabb6cd7386d" kindref="member">AddChild</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>txt,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>command_event,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tv);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>menu<sp/>node<sp/>with<sp/>an<sp/>associated<sp/>value<sp/>(which<sp/>might<sp/>be<sp/>changed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>through<sp/>the<sp/>gui).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_v_menu_node_1a2d119f4867dcb3015103eabb6cd7386d" kindref="member">AddChild</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>txt,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>command_event,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>val);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>menu<sp/>node<sp/>with<sp/>an<sp/>associated<sp/>value<sp/>and<sp/>description_.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_v_menu_node_1a2d119f4867dcb3015103eabb6cd7386d" kindref="member">AddChild</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>txt,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>command_event,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>val,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>desc);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Build<sp/>a<sp/>menu<sp/>structure<sp/>for<sp/>the<sp/>server<sp/>and<sp/>send<sp/>the<sp/>necessary<sp/>messages.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Should<sp/>be<sp/>called<sp/>on<sp/>the<sp/>root<sp/>node.<sp/>If<sp/>menu_bar<sp/>is<sp/>true,<sp/>a<sp/>menu_bar<sp/>menu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>is<sp/>built<sp/>(e.g.<sp/>on<sp/>top<sp/>of<sp/>the<sp/>window),<sp/>if<sp/>it<sp/>is<sp/>false<sp/>a<sp/>popup<sp/>menu<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>built<sp/>which<sp/>gets<sp/>shown<sp/>by<sp/>right<sp/>clicking<sp/>on<sp/>the<sp/>window.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_v_menu_node_1a693800de6b590b47e81213fef7de180a" kindref="member">BuildMenu</ref>(<ref refid="class_scroll_view" kindref="compound">ScrollView</ref><sp/>*sv,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>menu_bar<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructor<sp/>holding<sp/>the<sp/>actual<sp/>node<sp/>data.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><ref refid="class_s_v_menu_node_1aa1ed336650e32dff50e1e14d8d4ea44b" kindref="member">SVMenuNode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>command_event,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>txt,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tv,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>check_box_entry,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>val,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>desc);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Adds<sp/>a<sp/>new<sp/>menu<sp/>node<sp/>to<sp/>the<sp/>current<sp/>node.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_v_menu_node_1a2d119f4867dcb3015103eabb6cd7386d" kindref="member">AddChild</ref>(<ref refid="class_s_v_menu_node" kindref="compound">SVMenuNode</ref>*<sp/>svmn);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>parent<sp/>node<sp/>of<sp/>this<sp/>node.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><ref refid="class_s_v_menu_node" kindref="compound">SVMenuNode</ref>*<sp/>parent_;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>first<sp/>child<sp/>of<sp/>this<sp/>node.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><ref refid="class_s_v_menu_node" kindref="compound">SVMenuNode</ref>*<sp/>child_;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>next<sp/>&quot;sibling&quot;<sp/>of<sp/>this<sp/>node<sp/>(e.g.<sp/>same<sp/>parent).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><ref refid="class_s_v_menu_node" kindref="compound">SVMenuNode</ref>*<sp/>next_;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Whether<sp/>this<sp/>menu<sp/>node<sp/>actually<sp/>is<sp/>a<sp/>flag.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_check_box_entry_;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>command<sp/>event<sp/>associated<sp/>with<sp/>a<sp/>specific<sp/>menu<sp/>node.<sp/>Should<sp/>be<sp/>unique.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cmd_event_;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>caption<sp/>associated<sp/>with<sp/>a<sp/>specific<sp/>menu<sp/>node.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>text_;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>value<sp/>of<sp/>the<sp/>flag<sp/>(if<sp/>this<sp/>menu<sp/>node<sp/>is<sp/>a<sp/>flag).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>toggle_value_;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>value<sp/>of<sp/>the<sp/>menu<sp/>node.<sp/>(optional)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>value_;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>description_<sp/>of<sp/>the<sp/>value.<sp/>(optional)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>description_;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>TESSERACT_VIEWER_SVMNODE_H__</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/viewer/svmnode.h"/>
+  </compounddef>
+</doxygen>

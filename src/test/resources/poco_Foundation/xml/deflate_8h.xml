@@ -1,0 +1,861 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="deflate_8h" kind="file">
+    <compoundname>deflate.h</compoundname>
+    <includes refid="zutil_8h" local="yes">zutil.h</includes>
+    <includedby refid="deflate_8c" local="yes">src/deflate.c</includedby>
+    <includedby refid="trees_8c" local="yes">src/trees.c</includedby>
+    <incdepgraph>
+      <node id="149">
+        <label>zconf.h</label>
+        <link refid="zconf_8h"/>
+      </node>
+      <node id="146">
+        <label>src/deflate.h</label>
+        <link refid="deflate.h"/>
+        <childnode refid="147" relation="include">
+        </childnode>
+      </node>
+      <node id="147">
+        <label>zutil.h</label>
+        <link refid="zutil_8h"/>
+        <childnode refid="148" relation="include">
+        </childnode>
+      </node>
+      <node id="148">
+        <label>zlib.h</label>
+        <link refid="zlib_8h"/>
+        <childnode refid="149" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="152">
+        <label>src/trees.c</label>
+        <link refid="trees_8c"/>
+      </node>
+      <node id="151">
+        <label>src/deflate.c</label>
+        <link refid="deflate_8c"/>
+      </node>
+      <node id="150">
+        <label>src/deflate.h</label>
+        <link refid="deflate.h"/>
+        <childnode refid="151" relation="include">
+        </childnode>
+        <childnode refid="152" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structct__data" prot="public">ct_data</innerclass>
+    <innerclass refid="structtree__desc" prot="public">tree_desc</innerclass>
+    <innerclass refid="structdeflate__state" prot="public">deflate_state</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="deflate_8h_1a9564352992f7a4001386d1c8e2977571" prot="public" static="no">
+        <name>GZIP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="23" column="11" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1a8dd3b78c666b6592944b2acf1706e611" prot="public" static="no">
+        <name>LENGTH_CODES</name>
+        <initializer>29</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="30" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1a3f59145500c9de746e7dc49fb98c29ef" prot="public" static="no">
+        <name>LITERALS</name>
+        <initializer>256</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="33" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1a2b0cc00cc6a7d521fba8d208a1cae477" prot="public" static="no">
+        <name>L_CODES</name>
+        <initializer>(<ref refid="deflate_8h_1a3f59145500c9de746e7dc49fb98c29ef" kindref="member">LITERALS</ref>+1+<ref refid="deflate_8h_1a8dd3b78c666b6592944b2acf1706e611" kindref="member">LENGTH_CODES</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="36" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1a8798a9a526623abbd88fedb0727e21aa" prot="public" static="no">
+        <name>D_CODES</name>
+        <initializer>30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="39" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1a9e19158a493307d4f211cdf223da8319" prot="public" static="no">
+        <name>BL_CODES</name>
+        <initializer>19</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="42" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1a1b45302695680930829cac31d65e41e1" prot="public" static="no">
+        <name>HEAP_SIZE</name>
+        <initializer>(2*<ref refid="deflate_8h_1a2b0cc00cc6a7d521fba8d208a1cae477" kindref="member">L_CODES</ref>+1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="45" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1a51c241e7ad52441b8d4c1fd5f498b3b9" prot="public" static="no">
+        <name>MAX_BITS</name>
+        <initializer>15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="48" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1a96cb576b9a3b5f8cb90bd4bb7ee449d2" prot="public" static="no">
+        <name>INIT_STATE</name>
+        <initializer>42</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="51" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1affc01bd472ba5f5ad1519c40e20a3778" prot="public" static="no">
+        <name>EXTRA_STATE</name>
+        <initializer>69</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="52" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1acec08b85e51457d214b759d489785e99" prot="public" static="no">
+        <name>NAME_STATE</name>
+        <initializer>73</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="53" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1a06c47936258e98a0c4ca38dd31a5f6c7" prot="public" static="no">
+        <name>COMMENT_STATE</name>
+        <initializer>91</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="54" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1a09dffa22705cbe81ca94b8b379d43682" prot="public" static="no">
+        <name>HCRC_STATE</name>
+        <initializer>103</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="55" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1a4821f69a5605c2618cd4dc4d3f60979c" prot="public" static="no">
+        <name>BUSY_STATE</name>
+        <initializer>113</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="56" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1a0474cba74b039aa45fe9412c1de86bed" prot="public" static="no">
+        <name>FINISH_STATE</name>
+        <initializer>666</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="57" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1a8bab2775fa423836b05f407d2f8bf6e2" prot="public" static="no">
+        <name>Freq</name>
+        <initializer>fc.freq</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="73" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1a068e76e6034d06450385bc98b69ea53e" prot="public" static="no">
+        <name>Code</name>
+        <initializer>fc.code</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="74" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1ad76da95d6074d29bacb152bc46d189d5" prot="public" static="no">
+        <name>Dad</name>
+        <initializer>dl.dad</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="75" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1a4490e644c06783cc69ad87c121e39e94" prot="public" static="no">
+        <name>Len</name>
+        <initializer>dl.len</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="76" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1a0aa718c141a5a98e84262fd9fc042dbe" prot="public" static="no">
+        <name>max_insert_length</name>
+        <initializer>max_lazy_match</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="176" column="12" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1a662a0774c0de95a9f1309019d52e914b" prot="public" static="no">
+        <name>put_byte</name>
+        <param><defname>s</defname></param>
+        <param><defname>c</defname></param>
+        <initializer>{s-&gt;pending_buf[s-&gt;pending++] = (c);}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="275" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1aab627bcc7d38e658a93d395c50180cb8" prot="public" static="no">
+        <name>MIN_LOOKAHEAD</name>
+        <initializer>(<ref refid="zutil_8h_1ab7a9188dce25dac8d3a970c01b89b0c6" kindref="member">MAX_MATCH</ref>+<ref refid="zutil_8h_1a7984ceb1ff48ac91172976b91ed43f60" kindref="member">MIN_MATCH</ref>+1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="278" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1a1bac515806be1e59d7306b4126b0cca4" prot="public" static="no">
+        <name>MAX_DIST</name>
+        <param><defname>s</defname></param>
+        <initializer>((s)-&gt;w_size-<ref refid="deflate_8h_1aab627bcc7d38e658a93d395c50180cb8" kindref="member">MIN_LOOKAHEAD</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="283" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1ac2836f69eb1551bb9699e4dd87dfbdc0" prot="public" static="no">
+        <name>WIN_INIT</name>
+        <initializer><ref refid="zutil_8h_1ab7a9188dce25dac8d3a970c01b89b0c6" kindref="member">MAX_MATCH</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="288" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1a578b4336ef92d19278e0a0d95699def5" prot="public" static="no">
+        <name>d_code</name>
+        <param><defname>dist</defname></param>
+        <initializer>((dist) &lt; 256 ? <ref refid="trees_8h_1a31d5beba08f389d7ff3d9fb5143a105a" kindref="member">_dist_code</ref>[dist] : <ref refid="trees_8h_1a31d5beba08f389d7ff3d9fb5143a105a" kindref="member">_dist_code</ref>[256+((dist)&gt;&gt;7)])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="301" column="9" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1af3b11322da0fb4ec60a5ccc28e2554df" prot="public" static="no">
+        <name>_tr_tally_lit</name>
+        <param><defname>s</defname></param>
+        <param><defname>c</defname></param>
+        <param><defname>flush</defname></param>
+        <initializer>{ <ref refid="zutil_8h_1af3307af5922c72924a837559c801a8a4" kindref="member">uch</ref> cc = (c); \
+    s-&gt;d_buf[s-&gt;last_lit] = 0; \
+    s-&gt;l_buf[s-&gt;last_lit++] = cc; \
+    s-&gt;dyn_ltree[cc].<ref refid="deflate_8h_1a8bab2775fa423836b05f407d2f8bf6e2" kindref="member">Freq</ref>++; \
+    flush = (s-&gt;last_lit == s-&gt;lit_bufsize-1); \
+   }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="319" column="10" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="319" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="deflate_8h_1a68f55cdd396ad603d9f0b01afdbdf592" prot="public" static="no">
+        <name>_tr_tally_dist</name>
+        <param><defname>s</defname></param>
+        <param><defname>distance</defname></param>
+        <param><defname>length</defname></param>
+        <param><defname>flush</defname></param>
+        <initializer>{ <ref refid="zutil_8h_1af3307af5922c72924a837559c801a8a4" kindref="member">uch</ref> len = (length); \
+    <ref refid="zutil_8h_1a3754180d606d4ed15468d15d9665aa2e" kindref="member">ush</ref> dist = (distance); \
+    s-&gt;d_buf[s-&gt;last_lit] = dist; \
+    s-&gt;l_buf[s-&gt;last_lit++] = len; \
+    dist--; \
+    s-&gt;dyn_ltree[<ref refid="trees_8h_1aad8a9dfa73cf8ffa9346a441aa6c82ba" kindref="member">_length_code</ref>[len]+<ref refid="deflate_8h_1a3f59145500c9de746e7dc49fb98c29ef" kindref="member">LITERALS</ref>+1].<ref refid="deflate_8h_1a8bab2775fa423836b05f407d2f8bf6e2" kindref="member">Freq</ref>++; \
+    s-&gt;dyn_dtree[<ref refid="deflate_8h_1a578b4336ef92d19278e0a0d95699def5" kindref="member">d_code</ref>(dist)].<ref refid="deflate_8h_1a8bab2775fa423836b05f407d2f8bf6e2" kindref="member">Freq</ref>++; \
+    flush = (s-&gt;last_lit == s-&gt;lit_bufsize-1); \
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="326" column="10" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="deflate_8h_1a80a8610ae675eaeead82013bacde10a1" prot="public" static="no">
+        <type><ref refid="zutil_8h_1a3754180d606d4ed15468d15d9665aa2e" kindref="member">ush</ref></type>
+        <definition>typedef ush Pos</definition>
+        <argsstring></argsstring>
+        <name>Pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="86" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="deflate_8h_1a3e21105c8785a4c2b6f90ee1c6127e32" prot="public" static="no">
+        <type><ref refid="deflate_8h_1a80a8610ae675eaeead82013bacde10a1" kindref="member">Pos</ref></type>
+        <definition>typedef Pos Posf</definition>
+        <argsstring></argsstring>
+        <name>Posf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="87" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="deflate_8h_1ada696b787a46d01634b6365afcec1a9e" prot="public" static="no">
+        <type>unsigned</type>
+        <definition>typedef unsigned IPos</definition>
+        <argsstring></argsstring>
+        <name>IPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="88" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="deflate_8h_1a034daec5591675c08dd7dde5a753a8da" prot="public" static="no" mutable="no">
+        <type><ref refid="zutil_8h_1af3307af5922c72924a837559c801a8a4" kindref="member">uch</ref></type>
+        <definition>uch _length_code[]</definition>
+        <argsstring>[]</argsstring>
+        <name>_length_code</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="312" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/trees.c" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="deflate_8h_1af81d7b42325e3ddbcf2cca9436d0b310" prot="public" static="no" mutable="no">
+        <type><ref refid="zutil_8h_1af3307af5922c72924a837559c801a8a4" kindref="member">uch</ref></type>
+        <definition>uch _dist_code[]</definition>
+        <argsstring>[]</argsstring>
+        <name>_dist_code</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="313" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/trees.c" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="deflate_8h_1aa7c644b04c307b8f940eb1300f682575" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _tr_init</definition>
+        <argsstring>()</argsstring>
+        <name>_tr_init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="293" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="deflate_8h_1aa06a7c431223b9b805340551f7800427" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int _tr_tally</definition>
+        <argsstring>()</argsstring>
+        <name>_tr_tally</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="294" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="deflate_8h_1a4fff3e797f75b89a92f76428a8d21421" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _tr_flush_block</definition>
+        <argsstring>()</argsstring>
+        <name>_tr_flush_block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="295" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="deflate_8h_1aaa5b2cba523b97783c33e48182e08ce5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _tr_align</definition>
+        <argsstring>()</argsstring>
+        <name>_tr_align</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="297" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="deflate_8h_1ab65c8957ea36ee7dea4ae237d89e69c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _tr_stored_block</definition>
+        <argsstring>()</argsstring>
+        <name>_tr_stored_block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h" line="298" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>deflate.h<sp/>--<sp/>internal<sp/>compression<sp/>state</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>1995-2010<sp/>Jean-loup<sp/>Gailly</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>For<sp/>conditions<sp/>of<sp/>distribution<sp/>and<sp/>use,<sp/>see<sp/>copyright<sp/>notice<sp/>in<sp/>zlib.h</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>WARNING:<sp/>this<sp/>file<sp/>should<sp/>*not*<sp/>be<sp/>used<sp/>by<sp/>applications.<sp/>It<sp/>is</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/>part<sp/>of<sp/>the<sp/>implementation<sp/>of<sp/>the<sp/>compression<sp/>library<sp/>and<sp/>is</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/>subject<sp/>to<sp/>change.<sp/>Applications<sp/>should<sp/>only<sp/>use<sp/>zlib.h.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>@(#)<sp/>$Id:<sp/>//poco/1.4/Foundation/src/deflate.h#2<sp/>$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DEFLATE_H</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>DEFLATE_H</highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="zutil_8h" kindref="compound">zutil.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>define<sp/>NO_GZIP<sp/>when<sp/>compiling<sp/>if<sp/>you<sp/>want<sp/>to<sp/>disable<sp/>gzip<sp/>header<sp/>and</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/>trailer<sp/>creation<sp/>by<sp/>deflate().<sp/><sp/>NO_GZIP<sp/>would<sp/>be<sp/>used<sp/>to<sp/>avoid<sp/>linking<sp/>in</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/>the<sp/>crc<sp/>code<sp/>when<sp/>it<sp/>is<sp/>not<sp/>needed.<sp/><sp/>For<sp/>shared<sp/>libraries,<sp/>gzip<sp/>encoding</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/>should<sp/>be<sp/>left<sp/>enabled.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>NO_GZIP</highlight></codeline>
+<codeline lineno="23" refid="deflate_8h_1a9564352992f7a4001386d1c8e2977571" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>GZIP</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>===========================================================================</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>Internal<sp/>compression<sp/>state.</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="deflate_8h_1a8dd3b78c666b6592944b2acf1706e611" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LENGTH_CODES<sp/>29</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>length<sp/>codes,<sp/>not<sp/>counting<sp/>the<sp/>special<sp/>END_BLOCK<sp/>code<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="deflate_8h_1a3f59145500c9de746e7dc49fb98c29ef" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LITERALS<sp/><sp/>256</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>literal<sp/>bytes<sp/>0..255<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="deflate_8h_1a2b0cc00cc6a7d521fba8d208a1cae477" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>L_CODES<sp/>(LITERALS+1+LENGTH_CODES)</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>Literal<sp/>or<sp/>Length<sp/>codes,<sp/>including<sp/>the<sp/>END_BLOCK<sp/>code<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="deflate_8h_1a8798a9a526623abbd88fedb0727e21aa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>D_CODES<sp/><sp/><sp/>30</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>distance<sp/>codes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="deflate_8h_1a9e19158a493307d4f211cdf223da8319" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BL_CODES<sp/><sp/>19</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>codes<sp/>used<sp/>to<sp/>transfer<sp/>the<sp/>bit<sp/>lengths<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="deflate_8h_1a1b45302695680930829cac31d65e41e1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HEAP_SIZE<sp/>(2*L_CODES+1)</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>maximum<sp/>heap<sp/>size<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="deflate_8h_1a51c241e7ad52441b8d4c1fd5f498b3b9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_BITS<sp/>15</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>All<sp/>codes<sp/>must<sp/>not<sp/>exceed<sp/>MAX_BITS<sp/>bits<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="deflate_8h_1a96cb576b9a3b5f8cb90bd4bb7ee449d2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INIT_STATE<sp/><sp/><sp/><sp/>42</highlight></codeline>
+<codeline lineno="52" refid="deflate_8h_1affc01bd472ba5f5ad1519c40e20a3778" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>EXTRA_STATE<sp/><sp/><sp/>69</highlight></codeline>
+<codeline lineno="53" refid="deflate_8h_1acec08b85e51457d214b759d489785e99" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>NAME_STATE<sp/><sp/><sp/><sp/>73</highlight></codeline>
+<codeline lineno="54" refid="deflate_8h_1a06c47936258e98a0c4ca38dd31a5f6c7" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>COMMENT_STATE<sp/>91</highlight></codeline>
+<codeline lineno="55" refid="deflate_8h_1a09dffa22705cbe81ca94b8b379d43682" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>HCRC_STATE<sp/><sp/><sp/>103</highlight></codeline>
+<codeline lineno="56" refid="deflate_8h_1a4821f69a5605c2618cd4dc4d3f60979c" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>BUSY_STATE<sp/><sp/><sp/>113</highlight></codeline>
+<codeline lineno="57" refid="deflate_8h_1a0474cba74b039aa45fe9412c1de86bed" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FINISH_STATE<sp/>666</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>Stream<sp/>status<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Data<sp/>structure<sp/>describing<sp/>a<sp/>single<sp/>value<sp/>and<sp/>its<sp/>code<sp/>string.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="structct__data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ct_data_s<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64" refid="structct__data_1a30bba197a026a4aeec742820821dbb9d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="zutil_8h_1a3754180d606d4ed15468d15d9665aa2e" kindref="member">ush</ref><sp/><sp/><ref refid="structct__data_1a30bba197a026a4aeec742820821dbb9d" kindref="member">freq</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>frequency<sp/>count<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="structct__data_1aa864333efab541884137e21676116f5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="zutil_8h_1a3754180d606d4ed15468d15d9665aa2e" kindref="member">ush</ref><sp/><sp/><ref refid="structct__data_1aa864333efab541884137e21676116f5d" kindref="member">code</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>bit<sp/>string<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="pcre__exec_8c_1aba5145bd796f257f2f10e79df76abd4b" kindref="member">fc</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68" refid="structct__data_1a65632abfbd9762439e63bc9645a1b52c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="zutil_8h_1a3754180d606d4ed15468d15d9665aa2e" kindref="member">ush</ref><sp/><sp/><ref refid="structct__data_1a65632abfbd9762439e63bc9645a1b52c" kindref="member">dad</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>father<sp/>node<sp/>in<sp/>Huffman<sp/>tree<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="structct__data_1a16a52620b815ae2311aef064eb019da4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="zutil_8h_1a3754180d606d4ed15468d15d9665aa2e" kindref="member">ush</ref><sp/><sp/><ref refid="structct__data_1a16a52620b815ae2311aef064eb019da4" kindref="member">len</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>length<sp/>of<sp/>bit<sp/>string<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>dl;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}<sp/><ref refid="zconf_8h_1aef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/><ref refid="structct__data" kindref="compound">ct_data</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="deflate_8h_1a8bab2775fa423836b05f407d2f8bf6e2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Freq<sp/>fc.freq</highlight></codeline>
+<codeline lineno="74" refid="deflate_8h_1a068e76e6034d06450385bc98b69ea53e" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>Code<sp/>fc.code</highlight></codeline>
+<codeline lineno="75" refid="deflate_8h_1ad76da95d6074d29bacb152bc46d189d5" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>Dad<sp/><sp/>dl.dad</highlight></codeline>
+<codeline lineno="76" refid="deflate_8h_1a4490e644c06783cc69ad87c121e39e94" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>Len<sp/><sp/>dl.len</highlight></codeline>
+<codeline lineno="77"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structstatic__tree__desc__s" kindref="compound">static_tree_desc_s</ref><sp/><sp/>static_tree_desc;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="structtree__desc" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">tree_desc_s<sp/>{</highlight></codeline>
+<codeline lineno="81" refid="structtree__desc_1a532b4371e8e2da219cb85edc1e894643" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structct__data" kindref="compound">ct_data</ref><sp/>*<ref refid="structtree__desc_1a532b4371e8e2da219cb85edc1e894643" kindref="member">dyn_tree</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>the<sp/>dynamic<sp/>tree<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="structtree__desc_1a9c10b516bcc560f02ecba4e23e97df07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="structtree__desc_1a9c10b516bcc560f02ecba4e23e97df07" kindref="member">max_code</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>largest<sp/>code<sp/>with<sp/>non<sp/>zero<sp/>frequency<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="structtree__desc_1a7840fbd671777fa440712559a98be81d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>static_tree_desc<sp/>*<ref refid="structtree__desc_1a7840fbd671777fa440712559a98be81d" kindref="member">stat_desc</ref>;<sp/></highlight><highlight class="comment">/*<sp/>the<sp/>corresponding<sp/>static<sp/>tree<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}<sp/><ref refid="zconf_8h_1aef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/><ref refid="structtree__desc" kindref="compound">tree_desc</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="deflate_8h_1a80a8610ae675eaeead82013bacde10a1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="zutil_8h_1a3754180d606d4ed15468d15d9665aa2e" kindref="member">ush</ref><sp/><ref refid="deflate_8h_1a80a8610ae675eaeead82013bacde10a1" kindref="member">Pos</ref>;</highlight></codeline>
+<codeline lineno="87" refid="deflate_8h_1a3e21105c8785a4c2b6f90ee1c6127e32" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="deflate_8h_1a80a8610ae675eaeead82013bacde10a1" kindref="member">Pos</ref><sp/><ref refid="zconf_8h_1aef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/><ref refid="deflate_8h_1a3e21105c8785a4c2b6f90ee1c6127e32" kindref="member">Posf</ref>;</highlight></codeline>
+<codeline lineno="88" refid="deflate_8h_1ada696b787a46d01634b6365afcec1a9e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="deflate_8h_1ada696b787a46d01634b6365afcec1a9e" kindref="member">IPos</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>A<sp/>Pos<sp/>is<sp/>an<sp/>index<sp/>in<sp/>the<sp/>character<sp/>window.<sp/>We<sp/>use<sp/>short<sp/>instead<sp/>of<sp/>int<sp/>to</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/>*<sp/>save<sp/>space<sp/>in<sp/>the<sp/>various<sp/>tables.<sp/>IPos<sp/>is<sp/>used<sp/>only<sp/>for<sp/>parameter<sp/>passing.</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="structdeflate__state" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structinternal__state" kindref="compound">internal_state</ref><sp/>{</highlight></codeline>
+<codeline lineno="95" refid="structdeflate__state_1a6bd9e93b9ae735c73a3bfb80d48f8ce3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structz__stream" kindref="compound">z_streamp</ref><sp/><ref refid="structdeflate__state_1a6bd9e93b9ae735c73a3bfb80d48f8ce3" kindref="member">strm</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>pointer<sp/>back<sp/>to<sp/>this<sp/>zlib<sp/>stream<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="structdeflate__state_1a67c29e5e3ca8a35ef279ba4d2727b42b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="structdeflate__state_1a67c29e5e3ca8a35ef279ba4d2727b42b" kindref="member">status</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>as<sp/>the<sp/>name<sp/>implies<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="structdeflate__state_1a2cdf0871488bd1a43a53ae65af1e6913" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1ac5613fe8160cbbf89d3e470574b755fb" kindref="member">Bytef</ref><sp/>*<ref refid="structdeflate__state_1a2cdf0871488bd1a43a53ae65af1e6913" kindref="member">pending_buf</ref>;<sp/><sp/></highlight><highlight class="comment">/*<sp/>output<sp/>still<sp/>pending<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="structdeflate__state_1ad291e0ef820fc6c5636966722e52b0a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zutil_8h_1abd6f60bf9450af2ecb94097a32c19a64" kindref="member">ulg</ref><sp/><sp/><sp/><ref refid="structdeflate__state_1ad291e0ef820fc6c5636966722e52b0a3" kindref="member">pending_buf_size</ref>;<sp/></highlight><highlight class="comment">/*<sp/>size<sp/>of<sp/>pending_buf<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="structdeflate__state_1a66d5d670125fb80b17f181f3d0348cd5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1ac5613fe8160cbbf89d3e470574b755fb" kindref="member">Bytef</ref><sp/>*<ref refid="structdeflate__state_1a66d5d670125fb80b17f181f3d0348cd5" kindref="member">pending_out</ref>;<sp/><sp/></highlight><highlight class="comment">/*<sp/>next<sp/>pending<sp/>byte<sp/>to<sp/>output<sp/>to<sp/>the<sp/>stream<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="structdeflate__state_1adb442c620531f4c293bb0752c772bab3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/><sp/><sp/><ref refid="structdeflate__state_1adb442c620531f4c293bb0752c772bab3" kindref="member">pending</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>nb<sp/>of<sp/>bytes<sp/>in<sp/>the<sp/>pending<sp/>buffer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="structdeflate__state_1ac08f462accdde479f090aebe58dec1fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="structdeflate__state_1ac08f462accdde479f090aebe58dec1fd" kindref="member">wrap</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>bit<sp/>0<sp/>true<sp/>for<sp/>zlib,<sp/>bit<sp/>1<sp/>true<sp/>for<sp/>gzip<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="structdeflate__state_1af12619f9ba54190cff2625932d562bb1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structgz__header" kindref="compound">gz_headerp</ref><sp/><sp/><ref refid="structdeflate__state_1af12619f9ba54190cff2625932d562bb1" kindref="member">gzhead</ref>;<sp/><sp/></highlight><highlight class="comment">/*<sp/>gzip<sp/>header<sp/>information<sp/>to<sp/>write<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="structdeflate__state_1a375fd9873857c0fafa7c3c4d84a88361" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/><sp/><sp/><ref refid="structdeflate__state_1a375fd9873857c0fafa7c3c4d84a88361" kindref="member">gzindex</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>where<sp/>in<sp/>extra,<sp/>name,<sp/>or<sp/>comment<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="structdeflate__state_1ad6317375a9fc304792ca617448d72c5a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1ae3a497195d617519e5353ea7b417940f" kindref="member">Byte</ref><sp/><sp/><ref refid="structdeflate__state_1ad6317375a9fc304792ca617448d72c5a" kindref="member">method</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>STORED<sp/>(for<sp/>zip<sp/>only)<sp/>or<sp/>DEFLATED<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="structdeflate__state_1a135733289bb34cdadab48201d71c308a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="structdeflate__state_1a135733289bb34cdadab48201d71c308a" kindref="member">last_flush</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>value<sp/>of<sp/>flush<sp/>param<sp/>for<sp/>previous<sp/>deflate<sp/>call<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>used<sp/>by<sp/>deflate.c:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="structdeflate__state_1a2cf5da94f38bf464bed1bb6f54be5ccb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/><sp/><ref refid="structdeflate__state_1a2cf5da94f38bf464bed1bb6f54be5ccb" kindref="member">w_size</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>LZ77<sp/>window<sp/>size<sp/>(32K<sp/>by<sp/>default)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="structdeflate__state_1a36728569477edb0e05f9a9b6cba6396d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/><sp/><ref refid="structdeflate__state_1a36728569477edb0e05f9a9b6cba6396d" kindref="member">w_bits</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>log2(w_size)<sp/><sp/>(8..16)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="structdeflate__state_1ab7c5f35973450506394d9c716dd32f2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/><sp/><ref refid="structdeflate__state_1ab7c5f35973450506394d9c716dd32f2a" kindref="member">w_mask</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>w_size<sp/>-<sp/>1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="structdeflate__state_1a451519d287e58be5307e491d083ba468" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1ac5613fe8160cbbf89d3e470574b755fb" kindref="member">Bytef</ref><sp/>*<ref refid="structdeflate__state_1a451519d287e58be5307e491d083ba468" kindref="member">window</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Sliding<sp/>window.<sp/>Input<sp/>bytes<sp/>are<sp/>read<sp/>into<sp/>the<sp/>second<sp/>half<sp/>of<sp/>the<sp/>window,</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>and<sp/>move<sp/>to<sp/>the<sp/>first<sp/>half<sp/>later<sp/>to<sp/>keep<sp/>a<sp/>dictionary<sp/>of<sp/>at<sp/>least<sp/>wSize</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>bytes.<sp/>With<sp/>this<sp/>organization,<sp/>matches<sp/>are<sp/>limited<sp/>to<sp/>a<sp/>distance<sp/>of</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>wSize-MAX_MATCH<sp/>bytes,<sp/>but<sp/>this<sp/>ensures<sp/>that<sp/>IO<sp/>is<sp/>always</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>performed<sp/>with<sp/>a<sp/>length<sp/>multiple<sp/>of<sp/>the<sp/>block<sp/>size.<sp/>Also,<sp/>it<sp/>limits</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>the<sp/>window<sp/>size<sp/>to<sp/>64K,<sp/>which<sp/>is<sp/>quite<sp/>useful<sp/>on<sp/>MSDOS.</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>To<sp/>do:<sp/>use<sp/>the<sp/>user<sp/>input<sp/>buffer<sp/>as<sp/>sliding<sp/>window.</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="structdeflate__state_1a9508439a33adfcf4ae972b9e378309f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zutil_8h_1abd6f60bf9450af2ecb94097a32c19a64" kindref="member">ulg</ref><sp/><ref refid="structdeflate__state_1a9508439a33adfcf4ae972b9e378309f6" kindref="member">window_size</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Actual<sp/>size<sp/>of<sp/>window:<sp/>2*wSize,<sp/>except<sp/>when<sp/>the<sp/>user<sp/>input<sp/>buffer</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>is<sp/>directly<sp/>used<sp/>as<sp/>sliding<sp/>window.</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="structdeflate__state_1a75a0be4d20f0a1a061c79cb9d41b7353" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="deflate_8h_1a3e21105c8785a4c2b6f90ee1c6127e32" kindref="member">Posf</ref><sp/>*<ref refid="structdeflate__state_1a75a0be4d20f0a1a061c79cb9d41b7353" kindref="member">prev</ref>;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Link<sp/>to<sp/>older<sp/>string<sp/>with<sp/>same<sp/>hash<sp/>index.<sp/>To<sp/>limit<sp/>the<sp/>size<sp/>of<sp/>this</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>array<sp/>to<sp/>64K,<sp/>this<sp/>link<sp/>is<sp/>maintained<sp/>only<sp/>for<sp/>the<sp/>last<sp/>32K<sp/>strings.</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>An<sp/>index<sp/>in<sp/>this<sp/>array<sp/>is<sp/>thus<sp/>a<sp/>window<sp/>index<sp/>modulo<sp/>32K.</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="structdeflate__state_1a16414d17b7fe61a2de6d6cf771cd9a76" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="deflate_8h_1a3e21105c8785a4c2b6f90ee1c6127e32" kindref="member">Posf</ref><sp/>*<ref refid="structdeflate__state_1a16414d17b7fe61a2de6d6cf771cd9a76" kindref="member">head</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Heads<sp/>of<sp/>the<sp/>hash<sp/>chains<sp/>or<sp/>NIL.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="structdeflate__state_1ad59f13f7c2547375d61c81710bfd4da3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/><sp/><ref refid="structdeflate__state_1ad59f13f7c2547375d61c81710bfd4da3" kindref="member">ins_h</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>hash<sp/>index<sp/>of<sp/>string<sp/>to<sp/>be<sp/>inserted<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="structdeflate__state_1ab7f3c47fc2dd9412f1e5470296c04911" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/><sp/><ref refid="structdeflate__state_1ab7f3c47fc2dd9412f1e5470296c04911" kindref="member">hash_size</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>elements<sp/>in<sp/>hash<sp/>table<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="structdeflate__state_1a80a93021b748aec949377d72bc8f2164" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/><sp/><ref refid="structdeflate__state_1a80a93021b748aec949377d72bc8f2164" kindref="member">hash_bits</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>log2(hash_size)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="structdeflate__state_1a44b1e34758b00aefc5a53916e3407523" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/><sp/><ref refid="structdeflate__state_1a44b1e34758b00aefc5a53916e3407523" kindref="member">hash_mask</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>hash_size-1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="structdeflate__state_1ad016914550409b33a93d1343d476c0dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/><sp/><ref refid="structdeflate__state_1ad016914550409b33a93d1343d476c0dc" kindref="member">hash_shift</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Number<sp/>of<sp/>bits<sp/>by<sp/>which<sp/>ins_h<sp/>must<sp/>be<sp/>shifted<sp/>at<sp/>each<sp/>input</highlight></codeline>
+<codeline lineno="143"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>step.<sp/>It<sp/>must<sp/>be<sp/>such<sp/>that<sp/>after<sp/>MIN_MATCH<sp/>steps,<sp/>the<sp/>oldest</highlight></codeline>
+<codeline lineno="144"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>byte<sp/>no<sp/>longer<sp/>takes<sp/>part<sp/>in<sp/>the<sp/>hash<sp/>key,<sp/>that<sp/>is:</highlight></codeline>
+<codeline lineno="145"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>hash_shift<sp/>*<sp/>MIN_MATCH<sp/>&gt;=<sp/>hash_bits</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="structdeflate__state_1ae233399134dbf9ad6e31cfca9a55b472" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="structdeflate__state_1ae233399134dbf9ad6e31cfca9a55b472" kindref="member">block_start</ref>;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Window<sp/>position<sp/>at<sp/>the<sp/>beginning<sp/>of<sp/>the<sp/>current<sp/>output<sp/>block.<sp/>Gets</highlight></codeline>
+<codeline lineno="150"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>negative<sp/>when<sp/>the<sp/>window<sp/>is<sp/>moved<sp/>backwards.</highlight></codeline>
+<codeline lineno="151"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="structdeflate__state_1a4bd0e12eba558f091e2751028b42cec9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/><ref refid="structdeflate__state_1a4bd0e12eba558f091e2751028b42cec9" kindref="member">match_length</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>length<sp/>of<sp/>best<sp/>match<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="structdeflate__state_1a5c888ce2e5b266ba9b06eace0b531a8e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="deflate_8h_1ada696b787a46d01634b6365afcec1a9e" kindref="member">IPos</ref><sp/><ref refid="structdeflate__state_1a5c888ce2e5b266ba9b06eace0b531a8e" kindref="member">prev_match</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>previous<sp/>match<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="structdeflate__state_1a907d0ad7257625a317e4f4771d392a82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdeflate__state_1a907d0ad7257625a317e4f4771d392a82" kindref="member">match_available</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>set<sp/>if<sp/>previous<sp/>match<sp/>exists<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="structdeflate__state_1a5e93d5190cb1d4ed97f439b530a307b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/><ref refid="structdeflate__state_1a5e93d5190cb1d4ed97f439b530a307b9" kindref="member">strstart</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>start<sp/>of<sp/>string<sp/>to<sp/>insert<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="structdeflate__state_1a826e78c7cccc9542befb554ca90f586a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/><ref refid="structdeflate__state_1a826e78c7cccc9542befb554ca90f586a" kindref="member">match_start</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>start<sp/>of<sp/>matching<sp/>string<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="structdeflate__state_1a511e4d2726696d5561aba9431bbec8da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/><ref refid="structdeflate__state_1a511e4d2726696d5561aba9431bbec8da" kindref="member">lookahead</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>valid<sp/>bytes<sp/>ahead<sp/>in<sp/>window<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="structdeflate__state_1a17a16a6444dcfdd6275e613f8c537fdf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/><ref refid="structdeflate__state_1a17a16a6444dcfdd6275e613f8c537fdf" kindref="member">prev_length</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Length<sp/>of<sp/>the<sp/>best<sp/>match<sp/>at<sp/>previous<sp/>step.<sp/>Matches<sp/>not<sp/>greater<sp/>than<sp/>this</highlight></codeline>
+<codeline lineno="162"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>are<sp/>discarded.<sp/>This<sp/>is<sp/>used<sp/>in<sp/>the<sp/>lazy<sp/>match<sp/>evaluation.</highlight></codeline>
+<codeline lineno="163"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="structdeflate__state_1ace56bdb4d4cc71767762927b0ffbbdcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/><ref refid="structdeflate__state_1ace56bdb4d4cc71767762927b0ffbbdcb" kindref="member">max_chain_length</ref>;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>To<sp/>speed<sp/>up<sp/>deflation,<sp/>hash<sp/>chains<sp/>are<sp/>never<sp/>searched<sp/>beyond<sp/>this</highlight></codeline>
+<codeline lineno="167"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>length.<sp/><sp/>A<sp/>higher<sp/>limit<sp/>improves<sp/>compression<sp/>ratio<sp/>but<sp/>degrades<sp/>the</highlight></codeline>
+<codeline lineno="168"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>speed.</highlight></codeline>
+<codeline lineno="169"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="structdeflate__state_1a50380b078a755d6a1916148530941c09" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/><ref refid="structdeflate__state_1a50380b078a755d6a1916148530941c09" kindref="member">max_lazy_match</ref>;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Attempt<sp/>to<sp/>find<sp/>a<sp/>better<sp/>match<sp/>only<sp/>when<sp/>the<sp/>current<sp/>match<sp/>is<sp/>strictly</highlight></codeline>
+<codeline lineno="173"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>smaller<sp/>than<sp/>this<sp/>value.<sp/>This<sp/>mechanism<sp/>is<sp/>used<sp/>only<sp/>for<sp/>compression</highlight></codeline>
+<codeline lineno="174"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>levels<sp/>&gt;=<sp/>4.</highlight></codeline>
+<codeline lineno="175"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="deflate_8h_1a0aa718c141a5a98e84262fd9fc042dbe" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>define<sp/>max_insert_length<sp/><sp/>max_lazy_match</highlight></codeline>
+<codeline lineno="177"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Insert<sp/>new<sp/>strings<sp/>in<sp/>the<sp/>hash<sp/>table<sp/>only<sp/>if<sp/>the<sp/>match<sp/>length<sp/>is<sp/>not</highlight></codeline>
+<codeline lineno="178"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>greater<sp/>than<sp/>this<sp/>length.<sp/>This<sp/>saves<sp/>time<sp/>but<sp/>degrades<sp/>compression.</highlight></codeline>
+<codeline lineno="179"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>max_insert_length<sp/>is<sp/>used<sp/>only<sp/>for<sp/>compression<sp/>levels<sp/>&lt;=<sp/>3.</highlight></codeline>
+<codeline lineno="180"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="structdeflate__state_1a2f59bbded27fa209545d20574cb8a8a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdeflate__state_1a2f59bbded27fa209545d20574cb8a8a4" kindref="member">level</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>compression<sp/>level<sp/>(1..9)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183" refid="structdeflate__state_1af9cfc1b261359497e5aa9eb2411566d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdeflate__state_1af9cfc1b261359497e5aa9eb2411566d7" kindref="member">strategy</ref>;<sp/></highlight><highlight class="comment">/*<sp/>favor<sp/>or<sp/>force<sp/>Huffman<sp/>coding*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="structdeflate__state_1afeb7bf864ce6c2a14011a5ce3b0943d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/><ref refid="structdeflate__state_1afeb7bf864ce6c2a14011a5ce3b0943d0" kindref="member">good_match</ref>;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Use<sp/>a<sp/>faster<sp/>search<sp/>when<sp/>the<sp/>previous<sp/>match<sp/>is<sp/>longer<sp/>than<sp/>this<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="structdeflate__state_1adde533d70ce6aa72a01ecc3978008d84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdeflate__state_1adde533d70ce6aa72a01ecc3978008d84" kindref="member">nice_match</ref>;<sp/></highlight><highlight class="comment">/*<sp/>Stop<sp/>searching<sp/>when<sp/>current<sp/>match<sp/>exceeds<sp/>this<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>used<sp/>by<sp/>trees.c:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Didn&apos;t<sp/>use<sp/>ct_data<sp/>typedef<sp/>below<sp/>to<sp/>supress<sp/>compiler<sp/>warning<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="structdeflate__state_1a38790f1c2c86d806c2e825deba4fa783" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ct_data_s<sp/>dyn_ltree[<ref refid="deflate_8h_1a1b45302695680930829cac31d65e41e1" kindref="member">HEAP_SIZE</ref>];<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>literal<sp/>and<sp/>length<sp/>tree<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="structdeflate__state_1a1ac3ebcd8c8ffb79e624d0fd14322bfe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ct_data_s<sp/>dyn_dtree[2*<ref refid="deflate_8h_1a8798a9a526623abbd88fedb0727e21aa" kindref="member">D_CODES</ref>+1];<sp/></highlight><highlight class="comment">/*<sp/>distance<sp/>tree<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194" refid="structdeflate__state_1ade7d5fee01c602b0ec5741cf9946abf9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ct_data_s<sp/>bl_tree[2*<ref refid="deflate_8h_1a9e19158a493307d4f211cdf223da8319" kindref="member">BL_CODES</ref>+1];<sp/><sp/></highlight><highlight class="comment">/*<sp/>Huffman<sp/>tree<sp/>for<sp/>bit<sp/>lengths<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196" refid="structdeflate__state_1a7071ae3ab12b7ba9d26f62841383c5b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">tree_desc_s<sp/>l_desc;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>desc.<sp/>for<sp/>literal<sp/>tree<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="structdeflate__state_1a40eecfedbeac63db21b713099b1f04dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">tree_desc_s<sp/>d_desc;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>desc.<sp/>for<sp/>distance<sp/>tree<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="structdeflate__state_1a3fb03d757675940e13a737d52654e600" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">tree_desc_s<sp/>bl_desc;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>desc.<sp/>for<sp/>bit<sp/>length<sp/>tree<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200" refid="structdeflate__state_1afd3b097d0603cef89f7246be958e2435" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zutil_8h_1a3754180d606d4ed15468d15d9665aa2e" kindref="member">ush</ref><sp/>bl_count[<ref refid="deflate_8h_1a51c241e7ad52441b8d4c1fd5f498b3b9" kindref="member">MAX_BITS</ref>+1];</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>codes<sp/>at<sp/>each<sp/>bit<sp/>length<sp/>for<sp/>an<sp/>optimal<sp/>tree<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="structdeflate__state_1a9ff1027177692db8793b12184e26486f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>heap[2*<ref refid="deflate_8h_1a2b0cc00cc6a7d521fba8d208a1cae477" kindref="member">L_CODES</ref>+1];<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>heap<sp/>used<sp/>to<sp/>build<sp/>the<sp/>Huffman<sp/>trees<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204" refid="structdeflate__state_1a23b27417664fb5827a914d6a81031fa8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdeflate__state_1a23b27417664fb5827a914d6a81031fa8" kindref="member">heap_len</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>elements<sp/>in<sp/>the<sp/>heap<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205" refid="structdeflate__state_1abd599bb08b20d60bfaa965fd9d93c7ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdeflate__state_1abd599bb08b20d60bfaa965fd9d93c7ca" kindref="member">heap_max</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>element<sp/>of<sp/>largest<sp/>frequency<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>The<sp/>sons<sp/>of<sp/>heap[n]<sp/>are<sp/>heap[2*n]<sp/>and<sp/>heap[2*n+1].<sp/>heap[0]<sp/>is<sp/>not<sp/>used.</highlight></codeline>
+<codeline lineno="207"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>The<sp/>same<sp/>heap<sp/>array<sp/>is<sp/>used<sp/>to<sp/>build<sp/>all<sp/>trees.</highlight></codeline>
+<codeline lineno="208"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210" refid="structdeflate__state_1a2a3dc37195641262fa2459291d4a9064" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zutil_8h_1af3307af5922c72924a837559c801a8a4" kindref="member">uch</ref><sp/>depth[2*<ref refid="deflate_8h_1a2b0cc00cc6a7d521fba8d208a1cae477" kindref="member">L_CODES</ref>+1];</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Depth<sp/>of<sp/>each<sp/>subtree<sp/>used<sp/>as<sp/>tie<sp/>breaker<sp/>for<sp/>trees<sp/>of<sp/>equal<sp/>frequency</highlight></codeline>
+<codeline lineno="212"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214" refid="structdeflate__state_1a1532c80f00d561d8b79c48fa4101c9ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zutil_8h_1abb6338932978dccbf8a6c3d44c10eff1" kindref="member">uchf</ref><sp/>*<ref refid="structdeflate__state_1a1532c80f00d561d8b79c48fa4101c9ad" kindref="member">l_buf</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>buffer<sp/>for<sp/>literals<sp/>or<sp/>lengths<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216" refid="structdeflate__state_1ae4b037b30b470139d10db74e41ffecd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/><sp/><ref refid="structdeflate__state_1ae4b037b30b470139d10db74e41ffecd9" kindref="member">lit_bufsize</ref>;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Size<sp/>of<sp/>match<sp/>buffer<sp/>for<sp/>literals/lengths.<sp/><sp/>There<sp/>are<sp/>4<sp/>reasons<sp/>for</highlight></codeline>
+<codeline lineno="218"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>limiting<sp/>lit_bufsize<sp/>to<sp/>64K:</highlight></codeline>
+<codeline lineno="219"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>-<sp/>frequencies<sp/>can<sp/>be<sp/>kept<sp/>in<sp/>16<sp/>bit<sp/>counters</highlight></codeline>
+<codeline lineno="220"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>-<sp/>if<sp/>compression<sp/>is<sp/>not<sp/>successful<sp/>for<sp/>the<sp/>first<sp/>block,<sp/>all<sp/>input</highlight></codeline>
+<codeline lineno="221"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>data<sp/>is<sp/>still<sp/>in<sp/>the<sp/>window<sp/>so<sp/>we<sp/>can<sp/>still<sp/>emit<sp/>a<sp/>stored<sp/>block<sp/>even</highlight></codeline>
+<codeline lineno="222"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>when<sp/>input<sp/>comes<sp/>from<sp/>standard<sp/>input.<sp/><sp/>(This<sp/>can<sp/>also<sp/>be<sp/>done<sp/>for</highlight></codeline>
+<codeline lineno="223"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>all<sp/>blocks<sp/>if<sp/>lit_bufsize<sp/>is<sp/>not<sp/>greater<sp/>than<sp/>32K.)</highlight></codeline>
+<codeline lineno="224"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>-<sp/>if<sp/>compression<sp/>is<sp/>not<sp/>successful<sp/>for<sp/>a<sp/>file<sp/>smaller<sp/>than<sp/>64K,<sp/>we<sp/>can</highlight></codeline>
+<codeline lineno="225"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>even<sp/>emit<sp/>a<sp/>stored<sp/>file<sp/>instead<sp/>of<sp/>a<sp/>stored<sp/>block<sp/>(saving<sp/>5<sp/>bytes).</highlight></codeline>
+<codeline lineno="226"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>This<sp/>is<sp/>applicable<sp/>only<sp/>for<sp/>zip<sp/>(not<sp/>gzip<sp/>or<sp/>zlib).</highlight></codeline>
+<codeline lineno="227"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>-<sp/>creating<sp/>new<sp/>Huffman<sp/>trees<sp/>less<sp/>frequently<sp/>may<sp/>not<sp/>provide<sp/>fast</highlight></codeline>
+<codeline lineno="228"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>adaptation<sp/>to<sp/>changes<sp/>in<sp/>the<sp/>input<sp/>data<sp/>statistics.<sp/>(Take<sp/>for</highlight></codeline>
+<codeline lineno="229"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>example<sp/>a<sp/>binary<sp/>file<sp/>with<sp/>poorly<sp/>compressible<sp/>code<sp/>followed<sp/>by</highlight></codeline>
+<codeline lineno="230"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>a<sp/>highly<sp/>compressible<sp/>string<sp/>table.)<sp/>Smaller<sp/>buffer<sp/>sizes<sp/>give</highlight></codeline>
+<codeline lineno="231"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>fast<sp/>adaptation<sp/>but<sp/>have<sp/>of<sp/>course<sp/>the<sp/>overhead<sp/>of<sp/>transmitting</highlight></codeline>
+<codeline lineno="232"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/>trees<sp/>more<sp/>frequently.</highlight></codeline>
+<codeline lineno="233"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>-<sp/>I<sp/>can&apos;t<sp/>count<sp/>above<sp/>4</highlight></codeline>
+<codeline lineno="234"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236" refid="structdeflate__state_1af155246f32f2c67278af10673aa61e9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/><ref refid="structdeflate__state_1af155246f32f2c67278af10673aa61e9c" kindref="member">last_lit</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>running<sp/>index<sp/>in<sp/>l_buf<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238" refid="structdeflate__state_1a0826f7358a8ea817a0541462e387306a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zutil_8h_1acdf0e99b2ed932e64de21cfc46b8f89e" kindref="member">ushf</ref><sp/>*<ref refid="structdeflate__state_1a0826f7358a8ea817a0541462e387306a" kindref="member">d_buf</ref>;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Buffer<sp/>for<sp/>distances.<sp/>To<sp/>simplify<sp/>the<sp/>code,<sp/>d_buf<sp/>and<sp/>l_buf<sp/>have</highlight></codeline>
+<codeline lineno="240"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>the<sp/>same<sp/>number<sp/>of<sp/>elements.<sp/>To<sp/>use<sp/>different<sp/>lengths,<sp/>an<sp/>extra<sp/>flag</highlight></codeline>
+<codeline lineno="241"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>array<sp/>would<sp/>be<sp/>necessary.</highlight></codeline>
+<codeline lineno="242"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244" refid="structdeflate__state_1a6c96a5f4892f70250e3f024e746676cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zutil_8h_1abd6f60bf9450af2ecb94097a32c19a64" kindref="member">ulg</ref><sp/><ref refid="structdeflate__state_1a6c96a5f4892f70250e3f024e746676cc" kindref="member">opt_len</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>bit<sp/>length<sp/>of<sp/>current<sp/>block<sp/>with<sp/>optimal<sp/>trees<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245" refid="structdeflate__state_1abf59dc43ff40f205982b9abe00a7f1e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zutil_8h_1abd6f60bf9450af2ecb94097a32c19a64" kindref="member">ulg</ref><sp/><ref refid="structdeflate__state_1abf59dc43ff40f205982b9abe00a7f1e7" kindref="member">static_len</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>bit<sp/>length<sp/>of<sp/>current<sp/>block<sp/>with<sp/>static<sp/>trees<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246" refid="structdeflate__state_1a63fd307778454e88756275c9cf95cb60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zconf_8h_1a87d141052bcd5ec8a80812a565c70369" kindref="member">uInt</ref><sp/><ref refid="structdeflate__state_1a63fd307778454e88756275c9cf95cb60" kindref="member">matches</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>string<sp/>matches<sp/>in<sp/>current<sp/>block<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247" refid="structdeflate__state_1a0eb91ea4af2929da63ea6a2c5014a760" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdeflate__state_1a0eb91ea4af2929da63ea6a2c5014a760" kindref="member">last_eob_len</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>bit<sp/>length<sp/>of<sp/>EOB<sp/>code<sp/>for<sp/>last<sp/>block<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG</highlight></codeline>
+<codeline lineno="250"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zutil_8h_1abd6f60bf9450af2ecb94097a32c19a64" kindref="member">ulg</ref><sp/>compressed_len;<sp/></highlight><highlight class="comment">/*<sp/>total<sp/>bit<sp/>length<sp/>of<sp/>compressed<sp/>file<sp/>mod<sp/>2^32<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zutil_8h_1abd6f60bf9450af2ecb94097a32c19a64" kindref="member">ulg</ref><sp/>bits_sent;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>bit<sp/>length<sp/>of<sp/>compressed<sp/>data<sp/>sent<sp/>mod<sp/>2^32<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="253"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254" refid="structdeflate__state_1ace11da3a5005bdc05961139e379985ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zutil_8h_1a3754180d606d4ed15468d15d9665aa2e" kindref="member">ush</ref><sp/><ref refid="structdeflate__state_1ace11da3a5005bdc05961139e379985ef" kindref="member">bi_buf</ref>;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Output<sp/>buffer.<sp/>bits<sp/>are<sp/>inserted<sp/>starting<sp/>at<sp/>the<sp/>bottom<sp/>(least</highlight></codeline>
+<codeline lineno="256"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>significant<sp/>bits).</highlight></codeline>
+<codeline lineno="257"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258" refid="structdeflate__state_1a8d0532cf7ccbadb87566c13e247e5f78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structdeflate__state_1a8d0532cf7ccbadb87566c13e247e5f78" kindref="member">bi_valid</ref>;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Number<sp/>of<sp/>valid<sp/>bits<sp/>in<sp/>bi_buf.<sp/><sp/>All<sp/>bits<sp/>above<sp/>the<sp/>last<sp/>valid<sp/>bit</highlight></codeline>
+<codeline lineno="260"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>are<sp/>always<sp/>zero.</highlight></codeline>
+<codeline lineno="261"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263" refid="structdeflate__state_1af5c384476f99550c47d99b4c9a4d6119" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="zutil_8h_1abd6f60bf9450af2ecb94097a32c19a64" kindref="member">ulg</ref><sp/><ref refid="structdeflate__state_1af5c384476f99550c47d99b4c9a4d6119" kindref="member">high_water</ref>;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>High<sp/>water<sp/>mark<sp/>offset<sp/>in<sp/>window<sp/>for<sp/>initialized<sp/>bytes<sp/>--<sp/>bytes<sp/>above</highlight></codeline>
+<codeline lineno="265"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>this<sp/>are<sp/>set<sp/>to<sp/>zero<sp/>in<sp/>order<sp/>to<sp/>avoid<sp/>memory<sp/>check<sp/>warnings<sp/>when</highlight></codeline>
+<codeline lineno="266"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>longest<sp/>match<sp/>routines<sp/>access<sp/>bytes<sp/>past<sp/>the<sp/>input.<sp/><sp/>This<sp/>is<sp/>then</highlight></codeline>
+<codeline lineno="267"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>updated<sp/>to<sp/>the<sp/>new<sp/>high<sp/>water<sp/>mark.</highlight></codeline>
+<codeline lineno="268"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal">}<sp/><ref refid="zconf_8h_1aef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/><ref refid="structdeflate__state" kindref="compound">deflate_state</ref>;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Output<sp/>a<sp/>byte<sp/>on<sp/>the<sp/>stream.</highlight></codeline>
+<codeline lineno="273"><highlight class="comment"><sp/>*<sp/>IN<sp/>assertion:<sp/>there<sp/>is<sp/>enough<sp/>room<sp/>in<sp/>pending_buf.</highlight></codeline>
+<codeline lineno="274"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275" refid="deflate_8h_1a662a0774c0de95a9f1309019d52e914b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>put_byte(s,<sp/>c)<sp/>{s-&gt;pending_buf[s-&gt;pending++]<sp/>=<sp/>(c);}</highlight></codeline>
+<codeline lineno="276"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278" refid="deflate_8h_1aab627bcc7d38e658a93d395c50180cb8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MIN_LOOKAHEAD<sp/>(MAX_MATCH+MIN_MATCH+1)</highlight></codeline>
+<codeline lineno="279"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>Minimum<sp/>amount<sp/>of<sp/>lookahead,<sp/>except<sp/>at<sp/>the<sp/>end<sp/>of<sp/>the<sp/>input<sp/>file.</highlight></codeline>
+<codeline lineno="280"><highlight class="comment"><sp/>*<sp/>See<sp/>deflate.c<sp/>for<sp/>comments<sp/>about<sp/>the<sp/>MIN_MATCH+1.</highlight></codeline>
+<codeline lineno="281"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283" refid="deflate_8h_1a1bac515806be1e59d7306b4126b0cca4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_DIST(s)<sp/><sp/>((s)-&gt;w_size-MIN_LOOKAHEAD)</highlight></codeline>
+<codeline lineno="284"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>In<sp/>order<sp/>to<sp/>simplify<sp/>the<sp/>code,<sp/>particularly<sp/>on<sp/>16<sp/>bit<sp/>machines,<sp/>match</highlight></codeline>
+<codeline lineno="285"><highlight class="comment"><sp/>*<sp/>distances<sp/>are<sp/>limited<sp/>to<sp/>MAX_DIST<sp/>instead<sp/>of<sp/>WSIZE.</highlight></codeline>
+<codeline lineno="286"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288" refid="deflate_8h_1ac2836f69eb1551bb9699e4dd87dfbdc0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WIN_INIT<sp/>MAX_MATCH</highlight></codeline>
+<codeline lineno="289"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>Number<sp/>of<sp/>bytes<sp/>after<sp/>end<sp/>of<sp/>data<sp/>in<sp/>window<sp/>to<sp/>initialize<sp/>in<sp/>order<sp/>to<sp/>avoid</highlight></codeline>
+<codeline lineno="290"><highlight class="comment"><sp/><sp/><sp/>memory<sp/>checker<sp/>errors<sp/>from<sp/>longest<sp/>match<sp/>routines<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>in<sp/>trees.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="compress_8c_1a59d4d7ef4d73655c759211ec33a5d44f" kindref="member">ZLIB_INTERNAL</ref><sp/><ref refid="deflate_8h_1aa7c644b04c307b8f940eb1300f682575" kindref="member">_tr_init</ref><sp/><ref refid="zconf_8h_1aa6c3c093d0900e1d96d07c91b53c1b5d" kindref="member">OF</ref>((<ref refid="structdeflate__state" kindref="compound">deflate_state</ref><sp/>*s));</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="compress_8c_1a59d4d7ef4d73655c759211ec33a5d44f" kindref="member">ZLIB_INTERNAL</ref><sp/><ref refid="deflate_8h_1aa06a7c431223b9b805340551f7800427" kindref="member">_tr_tally</ref><sp/><ref refid="zconf_8h_1aa6c3c093d0900e1d96d07c91b53c1b5d" kindref="member">OF</ref>((<ref refid="structdeflate__state" kindref="compound">deflate_state</ref><sp/>*s,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>dist,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>lc));</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="compress_8c_1a59d4d7ef4d73655c759211ec33a5d44f" kindref="member">ZLIB_INTERNAL</ref><sp/><ref refid="deflate_8h_1a4fff3e797f75b89a92f76428a8d21421" kindref="member">_tr_flush_block</ref><sp/><ref refid="zconf_8h_1aa6c3c093d0900e1d96d07c91b53c1b5d" kindref="member">OF</ref>((<ref refid="structdeflate__state" kindref="compound">deflate_state</ref><sp/>*s,<sp/><ref refid="zconf_8h_1a864fa0e2e4e499038305f3276990689b" kindref="member">charf</ref><sp/>*buf,</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="zutil_8h_1abd6f60bf9450af2ecb94097a32c19a64" kindref="member">ulg</ref><sp/>stored_len,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>last));</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="compress_8c_1a59d4d7ef4d73655c759211ec33a5d44f" kindref="member">ZLIB_INTERNAL</ref><sp/><ref refid="deflate_8h_1aaa5b2cba523b97783c33e48182e08ce5" kindref="member">_tr_align</ref><sp/><ref refid="zconf_8h_1aa6c3c093d0900e1d96d07c91b53c1b5d" kindref="member">OF</ref>((<ref refid="structdeflate__state" kindref="compound">deflate_state</ref><sp/>*s));</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="compress_8c_1a59d4d7ef4d73655c759211ec33a5d44f" kindref="member">ZLIB_INTERNAL</ref><sp/><ref refid="deflate_8h_1ab65c8957ea36ee7dea4ae237d89e69c2" kindref="member">_tr_stored_block</ref><sp/><ref refid="zconf_8h_1aa6c3c093d0900e1d96d07c91b53c1b5d" kindref="member">OF</ref>((<ref refid="structdeflate__state" kindref="compound">deflate_state</ref><sp/>*s,<sp/><ref refid="zconf_8h_1a864fa0e2e4e499038305f3276990689b" kindref="member">charf</ref><sp/>*buf,</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="zutil_8h_1abd6f60bf9450af2ecb94097a32c19a64" kindref="member">ulg</ref><sp/>stored_len,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>last));</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301" refid="deflate_8h_1a578b4336ef92d19278e0a0d95699def5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>d_code(dist)<sp/>\</highlight></codeline>
+<codeline lineno="302"><highlight class="preprocessor"><sp/><sp/><sp/>((dist)<sp/>&lt;<sp/>256<sp/>?<sp/>_dist_code[dist]<sp/>:<sp/>_dist_code[256+((dist)&gt;&gt;7)])</highlight></codeline>
+<codeline lineno="303"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>Mapping<sp/>from<sp/>a<sp/>distance<sp/>to<sp/>a<sp/>distance<sp/>code.<sp/>dist<sp/>is<sp/>the<sp/>distance<sp/>-<sp/>1<sp/>and</highlight></codeline>
+<codeline lineno="304"><highlight class="comment"><sp/>*<sp/>must<sp/>not<sp/>have<sp/>side<sp/>effects.<sp/>_dist_code[256]<sp/>and<sp/>_dist_code[257]<sp/>are<sp/>never</highlight></codeline>
+<codeline lineno="305"><highlight class="comment"><sp/>*<sp/>used.</highlight></codeline>
+<codeline lineno="306"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DEBUG</highlight></codeline>
+<codeline lineno="309"><highlight class="preprocessor"></highlight><highlight class="comment">/*<sp/>Inline<sp/>versions<sp/>of<sp/>_tr_tally<sp/>for<sp/>speed:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(GEN_TREES_H)<sp/>||<sp/>!defined(STDC)</highlight></codeline>
+<codeline lineno="312"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="zutil_8h_1af3307af5922c72924a837559c801a8a4" kindref="member">uch</ref><sp/><ref refid="compress_8c_1a59d4d7ef4d73655c759211ec33a5d44f" kindref="member">ZLIB_INTERNAL</ref><sp/><ref refid="deflate_8h_1a034daec5591675c08dd7dde5a753a8da" kindref="member">_length_code</ref>[];</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="zutil_8h_1af3307af5922c72924a837559c801a8a4" kindref="member">uch</ref><sp/><ref refid="compress_8c_1a59d4d7ef4d73655c759211ec33a5d44f" kindref="member">ZLIB_INTERNAL</ref><sp/><ref refid="deflate_8h_1af81d7b42325e3ddbcf2cca9436d0b310" kindref="member">_dist_code</ref>[];</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="315"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="zutil_8h_1af3307af5922c72924a837559c801a8a4" kindref="member">uch</ref><sp/><ref refid="compress_8c_1a59d4d7ef4d73655c759211ec33a5d44f" kindref="member">ZLIB_INTERNAL</ref><sp/>_length_code[];</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="zutil_8h_1af3307af5922c72924a837559c801a8a4" kindref="member">uch</ref><sp/><ref refid="compress_8c_1a59d4d7ef4d73655c759211ec33a5d44f" kindref="member">ZLIB_INTERNAL</ref><sp/>_dist_code[];</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="318"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319" refid="deflate_8h_1af3b11322da0fb4ec60a5ccc28e2554df" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>define<sp/>_tr_tally_lit(s,<sp/>c,<sp/>flush)<sp/>\</highlight></codeline>
+<codeline lineno="320"><highlight class="preprocessor"><sp/><sp/>{<sp/>uch<sp/>cc<sp/>=<sp/>(c);<sp/>\</highlight></codeline>
+<codeline lineno="321"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>s-&gt;d_buf[s-&gt;last_lit]<sp/>=<sp/>0;<sp/>\</highlight></codeline>
+<codeline lineno="322"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>s-&gt;l_buf[s-&gt;last_lit++]<sp/>=<sp/>cc;<sp/>\</highlight></codeline>
+<codeline lineno="323"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>s-&gt;dyn_ltree[cc].Freq++;<sp/>\</highlight></codeline>
+<codeline lineno="324"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>flush<sp/>=<sp/>(s-&gt;last_lit<sp/>==<sp/>s-&gt;lit_bufsize-1);<sp/>\</highlight></codeline>
+<codeline lineno="325"><highlight class="preprocessor"><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="326" refid="deflate_8h_1a68f55cdd396ad603d9f0b01afdbdf592" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/>define<sp/>_tr_tally_dist(s,<sp/>distance,<sp/>length,<sp/>flush)<sp/>\</highlight></codeline>
+<codeline lineno="327"><highlight class="preprocessor"><sp/><sp/>{<sp/>uch<sp/>len<sp/>=<sp/>(length);<sp/>\</highlight></codeline>
+<codeline lineno="328"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>ush<sp/>dist<sp/>=<sp/>(distance);<sp/>\</highlight></codeline>
+<codeline lineno="329"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>s-&gt;d_buf[s-&gt;last_lit]<sp/>=<sp/>dist;<sp/>\</highlight></codeline>
+<codeline lineno="330"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>s-&gt;l_buf[s-&gt;last_lit++]<sp/>=<sp/>len;<sp/>\</highlight></codeline>
+<codeline lineno="331"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>dist--;<sp/>\</highlight></codeline>
+<codeline lineno="332"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>s-&gt;dyn_ltree[_length_code[len]+LITERALS+1].Freq++;<sp/>\</highlight></codeline>
+<codeline lineno="333"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>s-&gt;dyn_dtree[d_code(dist)].Freq++;<sp/>\</highlight></codeline>
+<codeline lineno="334"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>flush<sp/>=<sp/>(s-&gt;last_lit<sp/>==<sp/>s-&gt;lit_bufsize-1);<sp/>\</highlight></codeline>
+<codeline lineno="335"><highlight class="preprocessor"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="336"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="337"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/>define<sp/>_tr_tally_lit(s,<sp/>c,<sp/>flush)<sp/>flush<sp/>=<sp/>_tr_tally(s,<sp/>0,<sp/>c)</highlight></codeline>
+<codeline lineno="338"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/>define<sp/>_tr_tally_dist(s,<sp/>distance,<sp/>length,<sp/>flush)<sp/>\</highlight></codeline>
+<codeline lineno="339"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flush<sp/>=<sp/>_tr_tally(s,<sp/>distance,<sp/>length)</highlight></codeline>
+<codeline lineno="340"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="341"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>DEFLATE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/deflate.h"/>
+  </compounddef>
+</doxygen>

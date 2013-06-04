@@ -1,0 +1,870 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="classmozilla_1_1_media_cache" kind="class" prot="public">
+    <compoundname>mozilla::MediaCache</compoundname>
+    <innerclass refid="structmozilla_1_1_media_cache_1_1_block" prot="protected">mozilla::MediaCache::Block</innerclass>
+    <innerclass refid="structmozilla_1_1_media_cache_1_1_block_owner" prot="protected">mozilla::MediaCache::BlockOwner</innerclass>
+    <innerclass refid="classmozilla_1_1_media_cache_1_1_resource_stream_iterator" prot="public">mozilla::MediaCache::ResourceStreamIterator</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classmozilla_1_1_media_cache_1ac7ac2577bd465ef61c17eeadf2e8fe0a" prot="public" static="no">
+        <name>@0</name>
+        <enumvalue id="classmozilla_1_1_media_cache_1ac7ac2577bd465ef61c17eeadf2e8fe0aae63cf4f0f4061164ac97e43b3a4024b2" prot="public">
+          <name>BLOCK_SIZE</name>
+          <initializer>= MediaCacheStream::BLOCK_SIZE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="101" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="101" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classmozilla_1_1_media_cache_1a86194568d077d344a3d65a1d465b8921" prot="public" static="no">
+        <type>MediaCacheStream::BlockList</type>
+        <definition>typedef MediaCacheStream::BlockList mozilla::MediaCache::BlockList</definition>
+        <argsstring></argsstring>
+        <name>BlockList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="100" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-type">
+      <memberdef kind="enum" id="classmozilla_1_1_media_cache_1a3bf49607b493cd81fc33e660ca9acdf7" prot="protected" static="no">
+        <name>BlockClass</name>
+        <enumvalue id="classmozilla_1_1_media_cache_1a3bf49607b493cd81fc33e660ca9acdf7a0ea7c43beaa6a1146bf8565b5cf36733" prot="protected">
+          <name>METADATA_BLOCK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmozilla_1_1_media_cache_1a3bf49607b493cd81fc33e660ca9acdf7aace8aaca8894fdb27367374f60475450" prot="protected">
+          <name>PLAYED_BLOCK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classmozilla_1_1_media_cache_1a3bf49607b493cd81fc33e660ca9acdf7ad3244eb8884dcbf8f73a9e4853552d28" prot="protected">
+          <name>READAHEAD_BLOCK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="255" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="255" bodyend="268"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classmozilla_1_1_media_cache_1a9cab6678c795088bee7fa137c1e79112" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class MediaCacheStream::BlockList</definition>
+        <argsstring></argsstring>
+        <name>MediaCacheStream::BlockList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="99" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classmozilla_1_1_media_cache_1acf241f12a0c30b61df051c617d67d0dc" prot="protected" static="no" mutable="no">
+        <type>int64_t</type>
+        <definition>int64_t mozilla::MediaCache::mNextResourceID</definition>
+        <argsstring></argsstring>
+        <name>mNextResourceID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="321" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_cache_1ad4f34e1cdf336eb884627dd8e7b1c356" prot="protected" static="no" mutable="no">
+        <type>ReentrantMonitor</type>
+        <definition>ReentrantMonitor mozilla::MediaCache::mReentrantMonitor</definition>
+        <argsstring></argsstring>
+        <name>mReentrantMonitor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="326" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_cache_1a7691a000fbd35f0ac6c040e8cf1ab926" prot="protected" static="no" mutable="no">
+        <type>nsTArray&lt; MediaCacheStream * &gt;</type>
+        <definition>nsTArray&lt;MediaCacheStream*&gt; mozilla::MediaCache::mStreams</definition>
+        <argsstring></argsstring>
+        <name>mStreams</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="329" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="329" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_cache_1ab32d453461a41fd19dca702b823c7cbd" prot="protected" static="no" mutable="no">
+        <type>nsTArray&lt; <ref refid="structmozilla_1_1_media_cache_1_1_block" kindref="compound">Block</ref> &gt;</type>
+        <definition>nsTArray&lt;Block&gt; mozilla::MediaCache::mIndex</definition>
+        <argsstring></argsstring>
+        <name>mIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="331" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="331" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_cache_1a21076bc3360a05792c04f7958a36cd13" prot="protected" static="no" mutable="no">
+        <type>nsRefPtr&lt; FileBlockCache &gt;</type>
+        <definition>nsRefPtr&lt;FileBlockCache&gt; mozilla::MediaCache::mFileCache</definition>
+        <argsstring></argsstring>
+        <name>mFileCache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="333" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="333" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_cache_1a7b6ad9cbb4f86718b68b542716fb5115" prot="protected" static="no" mutable="no">
+        <type>BlockList</type>
+        <definition>BlockList mozilla::MediaCache::mFreeBlocks</definition>
+        <argsstring></argsstring>
+        <name>mFreeBlocks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="335" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="335" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmozilla_1_1_media_cache_1a95746302ebf7e8cdfba7639e27f072df" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool mozilla::MediaCache::mUpdateQueued</definition>
+        <argsstring></argsstring>
+        <name>mUpdateQueued</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="337" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1ac35dd552e56ebab566015ffded73aa9e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mozilla::MediaCache::MediaCache</definition>
+        <argsstring>()</argsstring>
+        <name>MediaCache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="111" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="105" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1aac972b52631e08bd0d537b0a1fb90552" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mozilla::MediaCache::~MediaCache</definition>
+        <argsstring>()</argsstring>
+        <name>~MediaCache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="114" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="114" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1a0c5e7390096a7a8900f467ded1a98ddd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>nsresult</type>
+        <definition>nsresult mozilla::MediaCache::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="128" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="515" bodyend="537"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1a45e7a59d5584eed3cb954027c1840528" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaCache::FlushInternal</definition>
+        <argsstring>()</argsstring>
+        <name>FlushInternal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="138" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="551" bodyend="567"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1ab98db013c9c86a633e60571ed3c95d83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>nsresult</type>
+        <definition>nsresult mozilla::MediaCache::ReadCacheFile</definition>
+        <argsstring>(int64_t aOffset, void *aData, int32_t aLength, int32_t *aBytes)</argsstring>
+        <name>ReadCacheFile</name>
+        <param>
+          <type>int64_t</type>
+          <declname>aOffset</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>aData</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aLength</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>aBytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="144" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="605" bodyend="614"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1a3f0cc594f25fc14889789dc6ed8bced4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>nsresult</type>
+        <definition>nsresult mozilla::MediaCache::ReadCacheFileAllBytes</definition>
+        <argsstring>(int64_t aOffset, void *aData, int32_t aLength)</argsstring>
+        <name>ReadCacheFileAllBytes</name>
+        <param>
+          <type>int64_t</type>
+          <declname>aOffset</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>aData</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="146" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="617" bodyend="637"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1a4e69b2fda202fad7796bad6a15514e88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t mozilla::MediaCache::AllocateResourceID</definition>
+        <argsstring>()</argsstring>
+        <name>AllocateResourceID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="149" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="148" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1a6c2544aa24cdfb8f582e875ae5c1ef2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaCache::OpenStream</definition>
+        <argsstring>(MediaCacheStream *aStream)</argsstring>
+        <name>OpenStream</name>
+        <param>
+          <type>MediaCacheStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="158" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="1459" bodyend="1470"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1aa1d764db99180cf4ab308fea82861bfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaCache::ReleaseStream</definition>
+        <argsstring>(MediaCacheStream *aStream)</argsstring>
+        <name>ReleaseStream</name>
+        <param>
+          <type>MediaCacheStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="160" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="1473" bodyend="1480"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1a015904422ffba4211a41db8312b3f0d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaCache::ReleaseStreamBlocks</definition>
+        <argsstring>(MediaCacheStream *aStream)</argsstring>
+        <name>ReleaseStreamBlocks</name>
+        <param>
+          <type>MediaCacheStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="162" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="1483" bodyend="1499"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1a350814f159e0c846fe58ab08cc11fe33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaCache::AllocateAndWriteBlock</definition>
+        <argsstring>(MediaCacheStream *aStream, const void *aData, MediaCacheStream::ReadMode aMode)</argsstring>
+        <name>AllocateAndWriteBlock</name>
+        <param>
+          <type>MediaCacheStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>aData</declname>
+        </param>
+        <param>
+          <type>MediaCacheStream::ReadMode</type>
+          <declname>aMode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="165" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="1382" bodyend="1456"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1a0e2f3d9e3a4c013853c17bb9d10524b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaCache::NoteSeek</definition>
+        <argsstring>(MediaCacheStream *aStream, int64_t aOldOffset)</argsstring>
+        <name>NoteSeek</name>
+        <param>
+          <type>MediaCacheStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>aOldOffset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="172" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="1555" bodyend="1606"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1a27ae7f6b4f9b73144d13c6e35bb1497c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaCache::NoteBlockUsage</definition>
+        <argsstring>(MediaCacheStream *aStream, int32_t aBlockIndex, MediaCacheStream::ReadMode aMode, TimeStamp aNow)</argsstring>
+        <name>NoteBlockUsage</name>
+        <param>
+          <type>MediaCacheStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aBlockIndex</declname>
+        </param>
+        <param>
+          <type>MediaCacheStream::ReadMode</type>
+          <declname>aMode</declname>
+        </param>
+        <param>
+          <type>TimeStamp</type>
+          <declname>aNow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="180" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="1521" bodyend="1552"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1a245c1db1e4ff3d02499171834f1089bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaCache::AddBlockOwnerAsReadahead</definition>
+        <argsstring>(int32_t aBlockIndex, MediaCacheStream *aStream, int32_t aStreamBlockIndex)</argsstring>
+        <name>AddBlockOwnerAsReadahead</name>
+        <param>
+          <type>int32_t</type>
+          <declname>aBlockIndex</declname>
+        </param>
+        <param>
+          <type>MediaCacheStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aStreamBlockIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="183" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="876" bodyend="890"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1a46ecf7742815a307a605612c3b30052b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaCache::QueueUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>QueueUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="186" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="1308" bodyend="1321"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1a8b65564fd70e8b4bfd654a591ce29dc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaCache::Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="195" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="985" bodyend="1293"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1a64cd90bd57b57a2608cd8724e4973ee4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaCache::Verify</definition>
+        <argsstring>()</argsstring>
+        <name>Verify</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="201" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="201" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1a45b4833b26815bd0b9afc0eb1e5793b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ReentrantMonitor &amp;</type>
+        <definition>ReentrantMonitor&amp; mozilla::MediaCache::GetReentrantMonitor</definition>
+        <argsstring>()</argsstring>
+        <name>GetReentrantMonitor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="204" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="204" bodyend="204"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1ad308db00fa12e8c28cb7554fe75d79c5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaCache::MaybeShutdown</definition>
+        <argsstring>()</argsstring>
+        <name>MaybeShutdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="134" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="570" bodyend="585"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1addac2b9a7106d373e0ff7d762ab3b166" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaCache::Flush</definition>
+        <argsstring>()</argsstring>
+        <name>Flush</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="137" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="540" bodyend="548"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1a76e694ed21cd622a1c66ac7945885ab7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t mozilla::MediaCache::FindBlockForIncomingData</definition>
+        <argsstring>(TimeStamp aNow, MediaCacheStream *aStream)</argsstring>
+        <name>FindBlockForIncomingData</name>
+        <param>
+          <type>TimeStamp</type>
+          <declname>aNow</declname>
+        </param>
+        <param>
+          <type>MediaCacheStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="234" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="651" bodyend="676"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1aa15315c7bfe953c2df693923744d11ae" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t mozilla::MediaCache::FindReusableBlock</definition>
+        <argsstring>(TimeStamp aNow, MediaCacheStream *aForStream, int32_t aForStreamBlock, int32_t aMaxSearchBlockIndex)</argsstring>
+        <name>FindReusableBlock</name>
+        <param>
+          <type>TimeStamp</type>
+          <declname>aNow</declname>
+        </param>
+        <param>
+          <type>MediaCacheStream *</type>
+          <declname>aForStream</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aForStreamBlock</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aMaxSearchBlockIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="245" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="716" bodyend="780"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1ac080bcf677f7031c842268b1f1a7d473" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mozilla::MediaCache::BlockIsReusable</definition>
+        <argsstring>(int32_t aBlockIndex)</argsstring>
+        <name>BlockIsReusable</name>
+        <param>
+          <type>int32_t</type>
+          <declname>aBlockIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="246" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="679" bodyend="690"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1a0114f319ab02e56a626b878fd997ef17" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaCache::AppendMostReusableBlock</definition>
+        <argsstring>(BlockList *aBlockList, nsTArray&lt; uint32_t &gt; *aResult, int32_t aBlockIndexLimit)</argsstring>
+        <name>AppendMostReusableBlock</name>
+        <param>
+          <type>BlockList *</type>
+          <declname>aBlockList</declname>
+        </param>
+        <param>
+          <type>nsTArray&lt; uint32_t &gt; *</type>
+          <declname>aResult</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aBlockIndexLimit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="253" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="693" bodyend="713"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1a9c7c7f5f3cb460421fc1a07225ff3e67" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BlockList *</type>
+        <definition>MediaCache::BlockList * mozilla::MediaCache::GetListForBlock</definition>
+        <argsstring>(BlockOwner *aBlock)</argsstring>
+        <name>GetListForBlock</name>
+        <param>
+          <type><ref refid="structmozilla_1_1_media_cache_1_1_block_owner" kindref="compound">BlockOwner</ref> *</type>
+          <declname>aBlock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="290" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="783" bodyend="799"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1a6cbaeebac7e992c731b92176b440b521" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structmozilla_1_1_media_cache_1_1_block_owner" kindref="compound">BlockOwner</ref> *</type>
+        <definition>MediaCache::BlockOwner * mozilla::MediaCache::GetBlockOwner</definition>
+        <argsstring>(int32_t aBlockIndex, MediaCacheStream *aStream)</argsstring>
+        <name>GetBlockOwner</name>
+        <param>
+          <type>int32_t</type>
+          <declname>aBlockIndex</declname>
+        </param>
+        <param>
+          <type>MediaCacheStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="293" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="802" bodyend="810"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1acc0f411a4f66a850dc5ed3d2d85ec5f8" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mozilla::MediaCache::IsBlockFree</definition>
+        <argsstring>(int32_t aBlockIndex)</argsstring>
+        <name>IsBlockFree</name>
+        <param>
+          <type>int32_t</type>
+          <declname>aBlockIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="296" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="295" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1afeafdb0f889feebd5ba2a57776e815f9" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaCache::FreeBlock</definition>
+        <argsstring>(int32_t aBlock)</argsstring>
+        <name>FreeBlock</name>
+        <param>
+          <type>int32_t</type>
+          <declname>aBlock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="299" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="893" bodyend="913"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1a2ef1706633a20cf400aa8909f8e63760" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaCache::RemoveBlockOwner</definition>
+        <argsstring>(int32_t aBlockIndex, MediaCacheStream *aStream)</argsstring>
+        <name>RemoveBlockOwner</name>
+        <param>
+          <type>int32_t</type>
+          <declname>aBlockIndex</declname>
+        </param>
+        <param>
+          <type>MediaCacheStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="302" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="858" bodyend="873"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1aa4546e3dc27aba1df33e968cac4c275b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaCache::SwapBlocks</definition>
+        <argsstring>(int32_t aBlockIndex1, int32_t aBlockIndex2)</argsstring>
+        <name>SwapBlocks</name>
+        <param>
+          <type>int32_t</type>
+          <declname>aBlockIndex1</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aBlockIndex2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="305" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="813" bodyend="855"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1ae979862870dbb5cfb7d97daaf7bead03" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaCache::InsertReadaheadBlock</definition>
+        <argsstring>(BlockOwner *aBlockOwner, int32_t aBlockIndex)</argsstring>
+        <name>InsertReadaheadBlock</name>
+        <param>
+          <type><ref refid="structmozilla_1_1_media_cache_1_1_block_owner" kindref="compound">BlockOwner</ref> *</type>
+          <declname>aBlockOwner</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aBlockIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="308" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="1356" bodyend="1379"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1a1c048992618f1efd37451ee7f9c20901" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TimeDuration</type>
+        <definition>TimeDuration mozilla::MediaCache::PredictNextUse</definition>
+        <argsstring>(TimeStamp aNow, int32_t aBlock)</argsstring>
+        <name>PredictNextUse</name>
+        <param>
+          <type>TimeStamp</type>
+          <declname>aNow</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aBlock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="311" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="916" bodyend="963"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1aeb75a7ba0a0063dcf416dbad14751523" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TimeDuration</type>
+        <definition>TimeDuration mozilla::MediaCache::PredictNextUseForIncomingData</definition>
+        <argsstring>(MediaCacheStream *aStream)</argsstring>
+        <name>PredictNextUseForIncomingData</name>
+        <param>
+          <type>MediaCacheStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="313" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="966" bodyend="980"/>
+      </memberdef>
+      <memberdef kind="function" id="classmozilla_1_1_media_cache_1a3497cdfeaeedc86c7fef69ad1d07e2ec" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mozilla::MediaCache::Truncate</definition>
+        <argsstring>()</argsstring>
+        <name>Truncate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="317" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="1502" bodyend="1518"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="97" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="97" bodyend="341"/>
+    <listofallmembers>
+      <member refid="classmozilla_1_1_media_cache_1a245c1db1e4ff3d02499171834f1089bd" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>AddBlockOwnerAsReadahead</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a350814f159e0c846fe58ab08cc11fe33" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>AllocateAndWriteBlock</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a4e69b2fda202fad7796bad6a15514e88" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>AllocateResourceID</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a0114f319ab02e56a626b878fd997ef17" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>AppendMostReusableBlock</name></member>
+      <member refid="classmozilla_1_1_media_cache_1ac7ac2577bd465ef61c17eeadf2e8fe0aae63cf4f0f4061164ac97e43b3a4024b2" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>BLOCK_SIZE</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a3bf49607b493cd81fc33e660ca9acdf7" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>BlockClass</name></member>
+      <member refid="classmozilla_1_1_media_cache_1ac080bcf677f7031c842268b1f1a7d473" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>BlockIsReusable</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a86194568d077d344a3d65a1d465b8921" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>BlockList</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a76e694ed21cd622a1c66ac7945885ab7" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>FindBlockForIncomingData</name></member>
+      <member refid="classmozilla_1_1_media_cache_1aa15315c7bfe953c2df693923744d11ae" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>FindReusableBlock</name></member>
+      <member refid="classmozilla_1_1_media_cache_1addac2b9a7106d373e0ff7d762ab3b166" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>Flush</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a45e7a59d5584eed3cb954027c1840528" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>FlushInternal</name></member>
+      <member refid="classmozilla_1_1_media_cache_1afeafdb0f889feebd5ba2a57776e815f9" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>FreeBlock</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a6cbaeebac7e992c731b92176b440b521" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>GetBlockOwner</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a9c7c7f5f3cb460421fc1a07225ff3e67" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>GetListForBlock</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a45b4833b26815bd0b9afc0eb1e5793b8" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>GetReentrantMonitor</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a0c5e7390096a7a8900f467ded1a98ddd" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>Init</name></member>
+      <member refid="classmozilla_1_1_media_cache_1ae979862870dbb5cfb7d97daaf7bead03" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>InsertReadaheadBlock</name></member>
+      <member refid="classmozilla_1_1_media_cache_1acc0f411a4f66a850dc5ed3d2d85ec5f8" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>IsBlockFree</name></member>
+      <member refid="classmozilla_1_1_media_cache_1ad308db00fa12e8c28cb7554fe75d79c5" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>MaybeShutdown</name></member>
+      <member refid="classmozilla_1_1_media_cache_1ac35dd552e56ebab566015ffded73aa9e" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>MediaCache</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a9cab6678c795088bee7fa137c1e79112" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>MediaCacheStream::BlockList</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a3bf49607b493cd81fc33e660ca9acdf7a0ea7c43beaa6a1146bf8565b5cf36733" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>METADATA_BLOCK</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a21076bc3360a05792c04f7958a36cd13" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>mFileCache</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a7b6ad9cbb4f86718b68b542716fb5115" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>mFreeBlocks</name></member>
+      <member refid="classmozilla_1_1_media_cache_1ab32d453461a41fd19dca702b823c7cbd" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>mIndex</name></member>
+      <member refid="classmozilla_1_1_media_cache_1acf241f12a0c30b61df051c617d67d0dc" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>mNextResourceID</name></member>
+      <member refid="classmozilla_1_1_media_cache_1ad4f34e1cdf336eb884627dd8e7b1c356" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>mReentrantMonitor</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a7691a000fbd35f0ac6c040e8cf1ab926" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>mStreams</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a95746302ebf7e8cdfba7639e27f072df" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>mUpdateQueued</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a27ae7f6b4f9b73144d13c6e35bb1497c" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>NoteBlockUsage</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a0e2f3d9e3a4c013853c17bb9d10524b4" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>NoteSeek</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a6c2544aa24cdfb8f582e875ae5c1ef2f" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>OpenStream</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a3bf49607b493cd81fc33e660ca9acdf7aace8aaca8894fdb27367374f60475450" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>PLAYED_BLOCK</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a1c048992618f1efd37451ee7f9c20901" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>PredictNextUse</name></member>
+      <member refid="classmozilla_1_1_media_cache_1aeb75a7ba0a0063dcf416dbad14751523" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>PredictNextUseForIncomingData</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a46ecf7742815a307a605612c3b30052b" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>QueueUpdate</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a3bf49607b493cd81fc33e660ca9acdf7ad3244eb8884dcbf8f73a9e4853552d28" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>READAHEAD_BLOCK</name></member>
+      <member refid="classmozilla_1_1_media_cache_1ab98db013c9c86a633e60571ed3c95d83" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>ReadCacheFile</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a3f0cc594f25fc14889789dc6ed8bced4" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>ReadCacheFileAllBytes</name></member>
+      <member refid="classmozilla_1_1_media_cache_1aa1d764db99180cf4ab308fea82861bfd" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>ReleaseStream</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a015904422ffba4211a41db8312b3f0d0" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>ReleaseStreamBlocks</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a2ef1706633a20cf400aa8909f8e63760" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>RemoveBlockOwner</name></member>
+      <member refid="classmozilla_1_1_media_cache_1aa4546e3dc27aba1df33e968cac4c275b" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>SwapBlocks</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a3497cdfeaeedc86c7fef69ad1d07e2ec" prot="protected" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>Truncate</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a8b65564fd70e8b4bfd654a591ce29dc3" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>Update</name></member>
+      <member refid="classmozilla_1_1_media_cache_1a64cd90bd57b57a2608cd8724e4973ee4" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>Verify</name></member>
+      <member refid="classmozilla_1_1_media_cache_1aac972b52631e08bd0d537b0a1fb90552" prot="public" virt="non-virtual"><scope>mozilla::MediaCache</scope><name>~MediaCache</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

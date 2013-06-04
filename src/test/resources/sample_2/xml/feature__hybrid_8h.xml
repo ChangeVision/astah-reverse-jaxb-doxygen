@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="feature__hybrid_8h" kind="file">
+    <compoundname>feature_hybrid.h</compoundname>
+    <includes refid="char__samp_8h" local="yes">char_samp.h</includes>
+    <includes refid="feature__bmp_8h" local="yes">feature_bmp.h</includes>
+    <includes refid="feature__chebyshev_8h" local="yes">feature_chebyshev.h</includes>
+    <includedby refid="classifier__factory_8cpp" local="yes">cube/classifier_factory.cpp</includedby>
+    <includedby refid="feature__hybrid_8cpp" local="yes">cube/feature_hybrid.cpp</includedby>
+    <incdepgraph>
+      <node id="30822">
+        <label>stdlib.h</label>
+      </node>
+      <node id="30832">
+        <label>feature_bmp.h</label>
+        <link refid="feature__bmp_8h"/>
+        <childnode refid="30821" relation="include">
+        </childnode>
+        <childnode refid="30833" relation="include">
+        </childnode>
+      </node>
+      <node id="30824">
+        <label>string</label>
+      </node>
+      <node id="30834">
+        <label>tuning_params.h</label>
+        <link refid="tuning__params_8h"/>
+        <childnode refid="30824" relation="include">
+        </childnode>
+      </node>
+      <node id="30833">
+        <label>feature_base.h</label>
+        <link refid="feature__base_8h"/>
+        <childnode refid="30821" relation="include">
+        </childnode>
+        <childnode refid="30834" relation="include">
+        </childnode>
+      </node>
+      <node id="30821">
+        <label>char_samp.h</label>
+        <link refid="char__samp_8h"/>
+        <childnode refid="30822" relation="include">
+        </childnode>
+        <childnode refid="30823" relation="include">
+        </childnode>
+        <childnode refid="30824" relation="include">
+        </childnode>
+        <childnode refid="30825" relation="include">
+        </childnode>
+        <childnode refid="30828" relation="include">
+        </childnode>
+      </node>
+      <node id="30829">
+        <label>string.h</label>
+      </node>
+      <node id="30835">
+        <label>feature_chebyshev.h</label>
+        <link refid="feature__chebyshev_8h"/>
+        <childnode refid="30821" relation="include">
+        </childnode>
+        <childnode refid="30833" relation="include">
+        </childnode>
+      </node>
+      <node id="30831">
+        <label>vector</label>
+      </node>
+      <node id="30820">
+        <label>cube/feature_hybrid.h</label>
+        <link refid="feature_hybrid.h"/>
+        <childnode refid="30821" relation="include">
+        </childnode>
+        <childnode refid="30832" relation="include">
+        </childnode>
+        <childnode refid="30835" relation="include">
+        </childnode>
+      </node>
+      <node id="30825">
+        <label>bmp_8.h</label>
+        <link refid="bmp__8_8h"/>
+        <childnode refid="30822" relation="include">
+        </childnode>
+        <childnode refid="30823" relation="include">
+        </childnode>
+        <childnode refid="30826" relation="include">
+        </childnode>
+        <childnode refid="30827" relation="include">
+        </childnode>
+      </node>
+      <node id="30826">
+        <label>con_comp.h</label>
+        <link refid="con__comp_8h"/>
+      </node>
+      <node id="30830">
+        <label>algorithm</label>
+      </node>
+      <node id="30827">
+        <label>cached_file.h</label>
+        <link refid="cached__file_8h"/>
+        <childnode refid="30823" relation="include">
+        </childnode>
+        <childnode refid="30824" relation="include">
+        </childnode>
+      </node>
+      <node id="30823">
+        <label>stdio.h</label>
+      </node>
+      <node id="30828">
+        <label>string_32.h</label>
+        <link refid="string__32_8h"/>
+        <childnode refid="30829" relation="include">
+        </childnode>
+        <childnode refid="30824" relation="include">
+        </childnode>
+        <childnode refid="30830" relation="include">
+        </childnode>
+        <childnode refid="30831" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="30838">
+        <label>cube/feature_hybrid.cpp</label>
+        <link refid="feature__hybrid_8cpp"/>
+      </node>
+      <node id="30836">
+        <label>cube/feature_hybrid.h</label>
+        <link refid="feature_hybrid.h"/>
+        <childnode refid="30837" relation="include">
+        </childnode>
+        <childnode refid="30838" relation="include">
+        </childnode>
+      </node>
+      <node id="30837">
+        <label>cube/classifier_factory.cpp</label>
+        <link refid="classifier__factory_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtesseract_1_1_feature_hybrid" prot="public">tesseract::FeatureHybrid</innerclass>
+    <innernamespace refid="namespacetesseract">tesseract</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>feature_chebyshev.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Description:<sp/>Declaration<sp/>of<sp/>the<sp/>Chebyshev<sp/>coefficients<sp/>Feature<sp/>Class</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Author:<sp/><sp/><sp/><sp/>Ahmad<sp/>Abdulkader</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Created:<sp/><sp/><sp/>2008</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>(C)<sp/>Copyright<sp/>2008,<sp/>Google<sp/>Inc.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>**<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>**<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>**<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>**<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>**<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>**<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>**<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>**<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>**<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>FeatureHybrid<sp/>class<sp/>implements<sp/>a<sp/>Bitmap<sp/>feature<sp/>extractor<sp/>class.<sp/>It</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>inherits<sp/>from<sp/>the<sp/>FeatureBase<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>class<sp/>describes<sp/>the<sp/>a<sp/>hybrid<sp/>feature<sp/>vector<sp/>composed<sp/>by<sp/>combining</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>bitmap<sp/>and<sp/>the<sp/>chebyshev<sp/>feature<sp/>vectors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FEATURE_HYBRID_H</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>FEATURE_HYBRID_H</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="char__samp_8h" kindref="compound">char_samp.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="feature__bmp_8h" kindref="compound">feature_bmp.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="feature__chebyshev_8h" kindref="compound">feature_chebyshev.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetesseract-c__api-demo_1afed58feacb84df2de88bdd613cfdba6d" kindref="member">tesseract</ref><sp/>{</highlight></codeline>
+<codeline lineno="33" refid="classtesseract_1_1_feature_hybrid" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtesseract_1_1_feature_hybrid" kindref="compound">FeatureHybrid</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_feature_base" kindref="compound">FeatureBase</ref><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_feature_hybrid_1ab6402ea2f20b77f52255f9cc6dc162b3" kindref="member">FeatureHybrid</ref>(<ref refid="classtesseract_1_1_tuning_params" kindref="compound">TuningParams</ref><sp/>*params);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_feature_hybrid_1a171274e2aa1e8fcdceaee82646c6a955" kindref="member">~FeatureHybrid</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Render<sp/>a<sp/>visualization<sp/>of<sp/>the<sp/>features<sp/>to<sp/>a<sp/>CharSamp.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>mainly<sp/>used<sp/>by<sp/>visual-debuggers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_char_samp" kindref="compound">CharSamp</ref><sp/>*<ref refid="classtesseract_1_1_feature_hybrid_1ab508c0d49e86df8c2c46cec8a2b9a102" kindref="member">ComputeFeatureBitmap</ref>(<ref refid="classtesseract_1_1_char_samp" kindref="compound">CharSamp</ref><sp/>*samp);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Compute<sp/>the<sp/>features<sp/>for<sp/>a<sp/>given<sp/>CharSamp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_feature_hybrid_1ae1c8179574a7585ab0df180fe5debf7b" kindref="member">ComputeFeatures</ref>(<ref refid="classtesseract_1_1_char_samp" kindref="compound">CharSamp</ref><sp/>*samp,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*features);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Returns<sp/>the<sp/>count<sp/>of<sp/>features</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classtesseract_1_1_feature_hybrid_1a7c0656b527b706025fc23f80369203ad" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_feature_hybrid_1a7c0656b527b706025fc23f80369203ad" kindref="member">FeatureCnt</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classtesseract_1_1_feature_hybrid_1abea94f27e387ed622d461ff5d8a065e0" kindref="member">feature_bmp_</ref><sp/>==<sp/><ref refid="host_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref><sp/>||<sp/><ref refid="classtesseract_1_1_feature_hybrid_1acf01f4dd67f0df24cc31cf2e59cb4f4e" kindref="member">feature_chebyshev_</ref><sp/>==<sp/><ref refid="host_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_feature_hybrid_1abea94f27e387ed622d461ff5d8a065e0" kindref="member">feature_bmp_</ref>-&gt;<ref refid="classtesseract_1_1_feature_bmp_1a273c553c1e638392a85d354fb7e2cdf3" kindref="member">FeatureCnt</ref>()<sp/>+<sp/><ref refid="classtesseract_1_1_feature_hybrid_1acf01f4dd67f0df24cc31cf2e59cb4f4e" kindref="member">feature_chebyshev_</ref>-&gt;<ref refid="classtesseract_1_1_feature_chebyshev_1a689ba9534f3752ec44340e821ff5c0cf" kindref="member">FeatureCnt</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51" refid="classtesseract_1_1_feature_hybrid_1abea94f27e387ed622d461ff5d8a065e0" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_feature_bmp" kindref="compound">FeatureBmp</ref><sp/>*<ref refid="classtesseract_1_1_feature_hybrid_1abea94f27e387ed622d461ff5d8a065e0" kindref="member">feature_bmp_</ref>;</highlight></codeline>
+<codeline lineno="52" refid="classtesseract_1_1_feature_hybrid_1acf01f4dd67f0df24cc31cf2e59cb4f4e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_feature_chebyshev" kindref="compound">FeatureChebyshev</ref><sp/>*<ref refid="classtesseract_1_1_feature_hybrid_1acf01f4dd67f0df24cc31cf2e59cb4f4e" kindref="member">feature_chebyshev_</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>FEATURE_HYBRID_H</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/cube/feature_hybrid.h"/>
+  </compounddef>
+</doxygen>

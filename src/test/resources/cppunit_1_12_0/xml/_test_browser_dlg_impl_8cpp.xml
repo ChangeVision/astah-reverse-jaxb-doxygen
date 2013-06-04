@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_test_browser_dlg_impl_8cpp" kind="file">
+    <compoundname>TestBrowserDlgImpl.cpp</compoundname>
+    <includes local="no">cppunit/Test.h</includes>
+    <includes local="no">qlistview.h</includes>
+    <includes local="no">qmessagebox.h</includes>
+    <includes refid="_test_browser_dlg_impl_8h" local="yes">TestBrowserDlgImpl.h</includes>
+    <includes refid="_test_list_view_item_8h" local="yes">TestListViewItem.h</includes>
+    <incdepgraph>
+      <node id="1333">
+        <label>qlistview.h</label>
+      </node>
+      <node id="1334">
+        <label>qmessagebox.h</label>
+      </node>
+      <node id="1331">
+        <label>src/qttestrunner/TestBrowserDlgImpl.cpp</label>
+        <link refid="TestBrowserDlgImpl.cpp"/>
+        <childnode refid="1332" relation="include">
+        </childnode>
+        <childnode refid="1333" relation="include">
+        </childnode>
+        <childnode refid="1334" relation="include">
+        </childnode>
+        <childnode refid="1335" relation="include">
+        </childnode>
+        <childnode refid="1337" relation="include">
+        </childnode>
+      </node>
+      <node id="1336">
+        <label>testbrowserdlg.h</label>
+      </node>
+      <node id="1337">
+        <label>TestListViewItem.h</label>
+        <link refid="_test_list_view_item_8h"/>
+        <childnode refid="1333" relation="include">
+        </childnode>
+        <childnode refid="1332" relation="include">
+        </childnode>
+      </node>
+      <node id="1335">
+        <label>TestBrowserDlgImpl.h</label>
+        <link refid="_test_browser_dlg_impl_8h"/>
+        <childnode refid="1332" relation="include">
+        </childnode>
+        <childnode refid="1336" relation="include">
+        </childnode>
+      </node>
+      <node id="1332">
+        <label>cppunit/Test.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;cppunit/Test.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;qlistview.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;qmessagebox.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_test_browser_dlg_impl_8h" kindref="compound">TestBrowserDlgImpl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_test_list_view_item_8h" kindref="compound">TestListViewItem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/*<sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>Constructs<sp/>a<sp/>TestBrowser<sp/>which<sp/>is<sp/>a<sp/>child<sp/>of<sp/>&apos;parent&apos;,<sp/>with<sp/>the<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/>name<sp/>&apos;name&apos;<sp/>and<sp/>widget<sp/>flags<sp/>set<sp/>to<sp/>&apos;f&apos;<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/>The<sp/>dialog<sp/>will<sp/>by<sp/>default<sp/>be<sp/>modeless,<sp/>unless<sp/>you<sp/>set<sp/>&apos;modal&apos;<sp/>to</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/>TRUE<sp/>to<sp/>construct<sp/>a<sp/>modal<sp/>dialog.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><ref refid="class_test_browser_1aecbcfd98038d03ea7ae8a83f9f6545b5" kindref="member">TestBrowser::TestBrowser</ref>(<sp/>QWidget*<sp/>parent,<sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>modal,<sp/>WFlags<sp/>fl<sp/>)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>TestBrowserBase(<sp/>parent,<sp/>name,<sp/>modal,<sp/>fl<sp/>),</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>_selectedTest(<sp/>NULL<sp/>)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>_listTests-&gt;setRootIsDecorated(<sp/>TRUE<sp/>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/>Destroys<sp/>the<sp/>object<sp/>and<sp/>frees<sp/>any<sp/>allocated<sp/>resources</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="class_test_browser_1afb5f1dc5e82e556a5c16bd6a7e803217" kindref="member">TestBrowser::‾TestBrowser</ref>()</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>need<sp/>to<sp/>delete<sp/>child<sp/>widgets,<sp/>Qt<sp/>does<sp/>it<sp/>all<sp/>for<sp/>us</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><ref refid="class_test_browser_1a4746413bffd70083ac909f340c4cbcbb" kindref="member">TestBrowser::setRootTest</ref>(<sp/>CPPUNIT_NS::Test<sp/>*rootTest<sp/>)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>QListViewItem<sp/>*dummyRoot<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QListViewItem(<sp/>_listTests<sp/>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>insertItemFor(<sp/>rootTest,<sp/>dummyRoot<sp/>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>dummyRoot-&gt;firstChild()-&gt;moveItem(<sp/>dummyRoot<sp/>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>dummyRoot;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>_listTests-&gt;firstChild()-&gt;setOpen(<sp/>TRUE<sp/>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>_listTests-&gt;triggerUpdate();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">TestBrowser::insertItemFor(<sp/>CPPUNIT_NS::Test<sp/>*test,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QListViewItem<sp/>*parentItem<sp/>)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>QListViewItem<sp/>*item<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_test_list_view_item" kindref="compound">TestListViewItem</ref>(<sp/>test,<sp/>parentItem<sp/>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>QString<sp/>testName<sp/>=<sp/>QString::fromLatin1(<sp/>test-&gt;getName().c_str()<sp/>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>item-&gt;setText(<sp/>0,<sp/>testName<sp/>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>test-&gt;getChildTestCount()<sp/>&gt;<sp/>0<sp/><sp/>||<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>suite<sp/>with<sp/>test</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>test-&gt;countTestCases()<sp/>==<sp/>0<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>empty<sp/>suite</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=0;<sp/>index<sp/>&lt;<sp/>test-&gt;getChildTestCount();<sp/>++index<sp/>)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>insertItemFor(<sp/>test-&gt;getChildTestAt(<sp/>index<sp/>),<sp/>item<sp/>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">CPPUNIT_NS::Test<sp/>*</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><ref refid="class_test_browser_1ae30808de7a91a6662f51b3fba771f280" kindref="member">TestBrowser::selectedTest</ref>()</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_selectedTest;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><ref refid="class_test_browser_1a2cc0b1b608747b7d4f5abc47af3229e0" kindref="member">TestBrowser::accept</ref>()</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><ref refid="class_test_list_view_item" kindref="compound">TestListViewItem</ref><sp/>*item<sp/>=<sp/>(<ref refid="class_test_list_view_item" kindref="compound">TestListViewItem</ref><sp/>*)_listTests-&gt;selectedItem();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>item<sp/>==<sp/>NULL<sp/>)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>QMessageBox::information(<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>tr(</highlight><highlight class="stringliteral">&quot;Selected<sp/>test&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tr(<sp/></highlight><highlight class="stringliteral">&quot;You<sp/>must<sp/>select<sp/>a<sp/>test.&quot;</highlight><highlight class="normal"><sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>_selectedTest<sp/>=<sp/>item-&gt;<ref refid="class_test_list_view_item_1a92cddbc74a355e555cb7916675538672" kindref="member">test</ref>();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>TestBrowserBase::accept();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestBrowserDlgImpl.cpp"/>
+  </compounddef>
+</doxygen>

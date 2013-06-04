@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="interface_edit_color_controller" kind="class" prot="public">
+    <compoundname>EditColorController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UIViewController</basecompoundref>
+    <includes refid="_edit_color_controller_8h" local="no">EditColorController.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="interface_edit_color_controller_1acbbecb7f78ce8c86f92cc02276d204b4" prot="protected" static="no" mutable="no">
+        <type><ref refid="interface_set_color_command" kindref="compound">SetColorCommand</ref> *</type>
+        <definition>SetColorCommand* EditColorController::setColorCommand</definition>
+        <argsstring></argsstring>
+        <name>setColorCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/EditColorController.h" line="18" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/EditColorController.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_edit_color_controller_1a22eafd8ef161d7aa7edcd82c76a103c2" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="assign">
+        <type><ref refid="interface_view_element" kindref="compound">ViewElement</ref> *</type>
+        <definition>ViewElement * EditColorController::viewElement</definition>
+        <argsstring></argsstring>
+        <name>viewElement</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/EditColorController.h" line="16" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/EditColorController.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_edit_color_controller_1a477ede3900826934508a449906d19ea1" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type><ref refid="interface_edit_color_pop_over_controller" kindref="compound">EditColorPopOverController</ref> *</type>
+        <definition>EditColorPopOverController * EditColorController::parent</definition>
+        <argsstring></argsstring>
+        <name>parent</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/EditColorController.h" line="17" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/EditColorController.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_edit_color_controller_1a3f5508a592782f5cffdb896f26f826e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EditColorController::tapColor:</definition>
+        <argsstring>(UIColor *color)</argsstring>
+        <name>tapColor:</name>
+        <param>
+          <type>UIColor *</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/EditColorController.h" line="18" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/EditColorController.m" bodystart="21" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="405">
+        <label>EditColorController</label>
+        <link refid="interface_edit_color_controller"/>
+        <childnode refid="406" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="406">
+        <label>UIViewController</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="414">
+        <label>Command</label>
+        <link refid="interface_command"/>
+        <childnode refid="415" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="413">
+        <label>ModifyCommand</label>
+        <link refid="interface_modify_command"/>
+        <childnode refid="414" relation="public-inheritance">
+        </childnode>
+        <childnode refid="416" relation="usage">
+          <edgelabel>viewElement</edgelabel>
+        </childnode>
+      </node>
+      <node id="407">
+        <label>EditColorController</label>
+        <link refid="interface_edit_color_controller"/>
+        <childnode refid="408" relation="public-inheritance">
+        </childnode>
+        <childnode refid="409" relation="usage">
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="412" relation="usage">
+          <edgelabel>setColorCommand</edgelabel>
+        </childnode>
+        <childnode refid="416" relation="usage">
+          <edgelabel>viewElement</edgelabel>
+        </childnode>
+      </node>
+      <node id="411">
+        <label>&lt;UIPopoverControllerDelegate&gt;</label>
+      </node>
+      <node id="409">
+        <label>EditColorPopOverController</label>
+        <link refid="interface_edit_color_pop_over_controller"/>
+        <childnode refid="410" relation="public-inheritance">
+        </childnode>
+        <childnode refid="411" relation="public-inheritance">
+        </childnode>
+        <childnode refid="407" relation="usage">
+          <edgelabel>editColor</edgelabel>
+        </childnode>
+      </node>
+      <node id="412">
+        <label>SetColorCommand</label>
+        <link refid="interface_set_color_command"/>
+        <childnode refid="413" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="410">
+        <label>UIPopoverController</label>
+      </node>
+      <node id="408">
+        <label>UIViewController</label>
+      </node>
+      <node id="417">
+        <label>UIView</label>
+      </node>
+      <node id="415">
+        <label>NSObject</label>
+      </node>
+      <node id="416">
+        <label>ViewElement</label>
+        <link refid="interface_view_element"/>
+        <childnode refid="417" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/EditColorController.h" line="15" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/EditColorController.h" bodystart="15" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_edit_color_controller_1a477ede3900826934508a449906d19ea1" prot="protected" virt="non-virtual"><scope>EditColorController</scope><name>parent</name></member>
+      <member refid="interface_edit_color_controller_1a477ede3900826934508a449906d19ea1" prot="public" virt="non-virtual"><scope>EditColorController</scope><name>parent</name></member>
+      <member refid="interface_edit_color_controller_1acbbecb7f78ce8c86f92cc02276d204b4" prot="protected" virt="non-virtual"><scope>EditColorController</scope><name>setColorCommand</name></member>
+      <member refid="interface_edit_color_controller_1a3f5508a592782f5cffdb896f26f826e5" prot="public" virt="virtual"><scope>EditColorController</scope><name>tapColor:</name></member>
+      <member refid="interface_edit_color_controller_1a22eafd8ef161d7aa7edcd82c76a103c2" prot="protected" virt="non-virtual"><scope>EditColorController</scope><name>viewElement</name></member>
+      <member refid="interface_edit_color_controller_1a22eafd8ef161d7aa7edcd82c76a103c2" prot="public" virt="non-virtual"><scope>EditColorController</scope><name>viewElement</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

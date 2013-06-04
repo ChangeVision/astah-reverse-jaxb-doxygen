@@ -1,0 +1,432 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_tessdata_manager" kind="class" prot="public">
+    <compoundname>tesseract::TessdataManager</compoundname>
+    <includes refid="tessdatamanager_8h" local="no">tessdatamanager.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_tessdata_manager_1a420bb5147f4ef6a7f9b3cdd966a2572c" prot="private" static="no" mutable="no">
+        <type><ref refid="host_8h_1ac53c9cafaf7fe16f985994c49f6b0964" kindref="member">inT64</ref></type>
+        <definition>inT64 tesseract::TessdataManager::offset_table_[TESSDATA_NUM_ENTRIES]</definition>
+        <argsstring>[TESSDATA_NUM_ENTRIES]</argsstring>
+        <name>offset_table_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Each offset_table_[i] contains a file offset in the combined data file where the data of TessdataFileType i is stored. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="270" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tessdata_manager_1a2bce094e9d68c7e35bd59c9635fa3626" prot="private" static="no" mutable="no">
+        <type><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref></type>
+        <definition>inT32 tesseract::TessdataManager::actual_tessdata_num_entries_</definition>
+        <argsstring></argsstring>
+        <name>actual_tessdata_num_entries_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Actual number of entries in the tessdata table. This value can only be same or smaller than TESSDATA_NUM_ENTRIES, but can never be larger, since then it would be impossible to interpret the type of tessdata at indices same and higher than TESSDATA_NUM_ENTRIES. This parameter is used to allow for backward compatiblity when new tessdata types are introduced. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="279" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tessdata_manager_1a7adad668381c4bde55223f09fe083165" prot="private" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* tesseract::TessdataManager::data_file_</definition>
+        <argsstring></argsstring>
+        <name>data_file_</name>
+        <briefdescription>
+<para>pointer to the data file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="280" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" bodystart="280" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tessdata_manager_1a96897cccfdea081f48a7809d2ada74b2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::TessdataManager::debug_level_</definition>
+        <argsstring></argsstring>
+        <name>debug_level_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="281" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tessdata_manager_1a224b59a5c5841aefa30b407eaaaf1bdf" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool tesseract::TessdataManager::swap_</definition>
+        <argsstring></argsstring>
+        <name>swap_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="283" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_tessdata_manager_1af776d5d04c22626406d818c2cd836b0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::TessdataManager::TessdataManager</definition>
+        <argsstring>()</argsstring>
+        <name>TessdataManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="133" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" bodystart="133" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tessdata_manager_1aafa3cdb993705f4ea53a80b47e0726e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::TessdataManager::~TessdataManager</definition>
+        <argsstring>()</argsstring>
+        <name>~TessdataManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="140" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" bodystart="140" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tessdata_manager_1a4c1d7ef19d7917740f1034980d0876fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::TessdataManager::DebugLevel</definition>
+        <argsstring>()</argsstring>
+        <name>DebugLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="141" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" bodystart="141" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tessdata_manager_1a00b72ae89511f2439887c4a48727ad75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TessdataManager::Init</definition>
+        <argsstring>(const char *data_file_name, int debug_level)</argsstring>
+        <name>Init</name>
+        <param>
+          <type>const char *</type>
+          <declname>data_file_name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>debug_level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Opens the given data file and reads the offset table. Returns true on success. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="147" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.cpp" bodystart="35" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tessdata_manager_1ad5be8f7fcf884390b22f02788330d82f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>FILE *</type>
+        <definition>FILE* tesseract::TessdataManager::GetDataFilePtr</definition>
+        <argsstring>() const </argsstring>
+        <name>GetDataFilePtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns data file pointer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="150" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" bodystart="150" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tessdata_manager_1a303e0f9733b2a55796b0178ba184f6b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TessdataManager::SeekToStart</definition>
+        <argsstring>(TessdataType tessdata_type)</argsstring>
+        <name>SeekToStart</name>
+        <param>
+          <type><ref refid="namespacetesseract_1a5f278974ef80900b460194614d4f1899" kindref="member">TessdataType</ref></type>
+          <declname>tessdata_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns false if there is no data of the given type. Otherwise does a seek on the data_file_ to position the pointer at the start of the data of the given type. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="157" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" bodystart="157" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tessdata_manager_1a89a94291dc1a6bb20fd28c04bfc0c1c4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="host_8h_1ac53c9cafaf7fe16f985994c49f6b0964" kindref="member">inT64</ref></type>
+        <definition>inT64 tesseract::TessdataManager::GetEndOffset</definition>
+        <argsstring>(TessdataType tessdata_type) const </argsstring>
+        <name>GetEndOffset</name>
+        <param>
+          <type><ref refid="namespacetesseract_1a5f278974ef80900b460194614d4f1899" kindref="member">TessdataType</ref></type>
+          <declname>tessdata_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the end offset for the given tesseract data file type. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="173" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" bodystart="173" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tessdata_manager_1a0ae65528c20fa00ca26c1899f9edd30b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessdataManager::End</definition>
+        <argsstring>()</argsstring>
+        <name>End</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Closes data_file_ (if it was opened by <ref refid="classtesseract_1_1_tessdata_manager_1a00b72ae89511f2439887c4a48727ad75" kindref="member">Init()</ref>). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="187" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" bodystart="187" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tessdata_manager_1a47ec55378864d4e0a97793c08aea75c0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TessdataManager::swap</definition>
+        <argsstring>() const </argsstring>
+        <name>swap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="193" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" bodystart="193" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tessdata_manager_1a636c6e1a2844027ff940868d8460bfd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TessdataManager::OverwriteComponents</definition>
+        <argsstring>(const char *new_traineddata_filename, char **component_filenames, int num_new_components)</argsstring>
+        <name>OverwriteComponents</name>
+        <param>
+          <type>const char *</type>
+          <declname>new_traineddata_filename</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>component_filenames</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num_new_components</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the individual components from the data_file_ with which the class was initialized. Overwrites the components specified by component_filenames. Writes the updated traineddata file to new_traineddata_filename. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="213" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.cpp" bodystart="160" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tessdata_manager_1a735169c99fb52b985aeed260bf52681c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TessdataManager::ExtractToFile</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>ExtractToFile</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Extracts tessdata component implied by the name of the input file from the combined traineddata loaded into <ref refid="classtesseract_1_1_tessdata_manager" kindref="compound">TessdataManager</ref>. Writes the extracted component to the file indicated by the file name. E.g. if the filename given is somepath/somelang.unicharset, unicharset will be extracted from the data loaded into the <ref refid="classtesseract_1_1_tessdata_manager" kindref="compound">TessdataManager</ref> and will be written to somepath/somelang.unicharset. <simplesect kind="return"><para>true if the component was successfully extracted, false if the component was not present in the traineddata loaded into <ref refid="classtesseract_1_1_tessdata_manager" kindref="compound">TessdataManager</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="227" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.cpp" bodystart="233" bodyend="252"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classtesseract_1_1_tessdata_manager_1ab2416accf8953092865410829761b95f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessdataManager::WriteMetadata</definition>
+        <argsstring>(inT64 *offset_table, FILE *output_file)</argsstring>
+        <name>WriteMetadata</name>
+        <param>
+          <type><ref refid="host_8h_1ac53c9cafaf7fe16f985994c49f6b0964" kindref="member">inT64</ref> *</type>
+          <declname>offset_table</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>output_file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes the number of entries and the given offset table to output_file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="198" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.cpp" bodystart="95" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tessdata_manager_1a1e9906f8e8ecb6dc5ce8fd201d63116b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TessdataManager::CombineDataFiles</definition>
+        <argsstring>(const char *language_data_path_prefix, const char *output_filename)</argsstring>
+        <name>CombineDataFiles</name>
+        <param>
+          <type>const char *</type>
+          <declname>language_data_path_prefix</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>output_filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads all the standard tesseract config and data files for a language at the given path and bundles them up into one binary data file. Returns true if the combined traineddata file was successfully written. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="205" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.cpp" bodystart="108" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tessdata_manager_1aaf4f11b6c7168a84a31b301e679f2c51" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessdataManager::CopyFile</definition>
+        <argsstring>(FILE *input_file, FILE *output_file, bool newline_end, inT64 num_bytes_to_copy)</argsstring>
+        <name>CopyFile</name>
+        <param>
+          <type>FILE *</type>
+          <declname>input_file</declname>
+        </param>
+        <param>
+          <type>FILE *</type>
+          <declname>output_file</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>newline_end</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1ac53c9cafaf7fe16f985994c49f6b0964" kindref="member">inT64</ref></type>
+          <declname>num_bytes_to_copy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copies data from the given input file to the output_file provided. If num_bytes_to_copy is &gt;= 0, only num_bytes_to_copy is copied from the input file, otherwise all the data in the input file is copied. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="234" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.cpp" bodystart="68" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tessdata_manager_1ac6b082ed8a3100a594a3198d26807aef" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TessdataManager::TessdataTypeFromFileSuffix</definition>
+        <argsstring>(const char *suffix, TessdataType *type, bool *text_file)</argsstring>
+        <name>TessdataTypeFromFileSuffix</name>
+        <param>
+          <type>const char *</type>
+          <declname>suffix</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1a5f278974ef80900b460194614d4f1899" kindref="member">TessdataType</ref> *</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>text_file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fills type with TessdataType of the tessdata component represented by the given file name. E.g. tessdata/eng.unicharset -&gt; TESSDATA_UNICHARSET. Sets *text_file to true if the component is in text format (e.g. unicharset, unichar ambigs, config, etc). <simplesect kind="return"><para>true if the tessdata component type could be determined from the given file name. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="245" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.cpp" bodystart="211" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tessdata_manager_1a3171a99cf61d5f3994a5abf2911161da" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TessdataManager::TessdataTypeFromFileName</definition>
+        <argsstring>(const char *filename, TessdataType *type, bool *text_file)</argsstring>
+        <name>TessdataTypeFromFileName</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1a5f278974ef80900b460194614d4f1899" kindref="member">TessdataType</ref> *</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>text_file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tries to determine tessdata component file suffix from filename, returns true on success. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="253" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.cpp" bodystart="225" bodyend="231"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classtesseract_1_1_tessdata_manager_1aa0bd344d9eb50945a15475445c77c861" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>FILE *</type>
+        <definition>static FILE* tesseract::TessdataManager::GetFilePtr</definition>
+        <argsstring>(const char *language_data_path_prefix, const char *file_suffix, bool text_file)</argsstring>
+        <name>GetFilePtr</name>
+        <param>
+          <type>const char *</type>
+          <declname>language_data_path_prefix</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file_suffix</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>text_file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Opens the file whose name is a concatenation of language_data_path_prefix and file_suffix. Returns a file pointer to the opened file. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="263" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" line="131" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/tessdatamanager.h" bodystart="131" bodyend="284"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_tessdata_manager_1a2bce094e9d68c7e35bd59c9635fa3626" prot="private" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>actual_tessdata_num_entries_</name></member>
+      <member refid="classtesseract_1_1_tessdata_manager_1a1e9906f8e8ecb6dc5ce8fd201d63116b" prot="public" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>CombineDataFiles</name></member>
+      <member refid="classtesseract_1_1_tessdata_manager_1aaf4f11b6c7168a84a31b301e679f2c51" prot="public" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>CopyFile</name></member>
+      <member refid="classtesseract_1_1_tessdata_manager_1a7adad668381c4bde55223f09fe083165" prot="private" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>data_file_</name></member>
+      <member refid="classtesseract_1_1_tessdata_manager_1a96897cccfdea081f48a7809d2ada74b2" prot="private" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>debug_level_</name></member>
+      <member refid="classtesseract_1_1_tessdata_manager_1a4c1d7ef19d7917740f1034980d0876fc" prot="public" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>DebugLevel</name></member>
+      <member refid="classtesseract_1_1_tessdata_manager_1a0ae65528c20fa00ca26c1899f9edd30b" prot="public" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>End</name></member>
+      <member refid="classtesseract_1_1_tessdata_manager_1a735169c99fb52b985aeed260bf52681c" prot="public" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>ExtractToFile</name></member>
+      <member refid="classtesseract_1_1_tessdata_manager_1ad5be8f7fcf884390b22f02788330d82f" prot="public" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>GetDataFilePtr</name></member>
+      <member refid="classtesseract_1_1_tessdata_manager_1a89a94291dc1a6bb20fd28c04bfc0c1c4" prot="public" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>GetEndOffset</name></member>
+      <member refid="classtesseract_1_1_tessdata_manager_1aa0bd344d9eb50945a15475445c77c861" prot="private" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>GetFilePtr</name></member>
+      <member refid="classtesseract_1_1_tessdata_manager_1a00b72ae89511f2439887c4a48727ad75" prot="public" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>Init</name></member>
+      <member refid="classtesseract_1_1_tessdata_manager_1a420bb5147f4ef6a7f9b3cdd966a2572c" prot="private" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>offset_table_</name></member>
+      <member refid="classtesseract_1_1_tessdata_manager_1a636c6e1a2844027ff940868d8460bfd9" prot="public" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>OverwriteComponents</name></member>
+      <member refid="classtesseract_1_1_tessdata_manager_1a303e0f9733b2a55796b0178ba184f6b2" prot="public" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>SeekToStart</name></member>
+      <member refid="classtesseract_1_1_tessdata_manager_1a47ec55378864d4e0a97793c08aea75c0" prot="public" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>swap</name></member>
+      <member refid="classtesseract_1_1_tessdata_manager_1a224b59a5c5841aefa30b407eaaaf1bdf" prot="private" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>swap_</name></member>
+      <member refid="classtesseract_1_1_tessdata_manager_1af776d5d04c22626406d818c2cd836b0e" prot="public" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>TessdataManager</name></member>
+      <member refid="classtesseract_1_1_tessdata_manager_1a3171a99cf61d5f3994a5abf2911161da" prot="public" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>TessdataTypeFromFileName</name></member>
+      <member refid="classtesseract_1_1_tessdata_manager_1ac6b082ed8a3100a594a3198d26807aef" prot="public" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>TessdataTypeFromFileSuffix</name></member>
+      <member refid="classtesseract_1_1_tessdata_manager_1ab2416accf8953092865410829761b95f" prot="public" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>WriteMetadata</name></member>
+      <member refid="classtesseract_1_1_tessdata_manager_1aafa3cdb993705f4ea53a80b47e0726e9" prot="public" virt="non-virtual"><scope>tesseract::TessdataManager</scope><name>~TessdataManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

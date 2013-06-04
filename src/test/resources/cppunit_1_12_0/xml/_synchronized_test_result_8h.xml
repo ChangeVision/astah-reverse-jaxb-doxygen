@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_synchronized_test_result_8h" kind="file">
+    <compoundname>SynchronizedTestResult.h</compoundname>
+    <includes local="no">afxmt.h</includes>
+    <includes refid="_test_result_decorator_8h" local="yes">TestResultDecorator.h</includes>
+    <incdepgraph>
+      <node id="1102">
+        <label>src/msvc6/testrunner/SynchronizedTestResult.h</label>
+        <link refid="SynchronizedTestResult.h"/>
+        <childnode refid="1103" relation="include">
+        </childnode>
+        <childnode refid="1104" relation="include">
+        </childnode>
+      </node>
+      <node id="1103">
+        <label>afxmt.h</label>
+      </node>
+      <node id="1104">
+        <label>TestResultDecorator.h</label>
+        <link refid="_test_result_decorator_8h"/>
+        <childnode refid="1105" relation="include">
+        </childnode>
+      </node>
+      <node id="1105">
+        <label>TestResult.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_synchronized_test_result" prot="public">SynchronizedTestResult</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SYNCHRONIZEDTESTRESULTDECORATOR_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SYNCHRONIZEDTESTRESULTDECORATOR_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;afxmt.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_test_result_decorator_8h" kindref="compound">TestResultDecorator.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="class_synchronized_test_result" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_synchronized_test_result" kindref="compound">SynchronizedTestResult</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator" kindref="compound">TestResultDecorator</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_synchronized_test_result_1a365847a9b5e8f8e03f2bb15559e5b2d7" kindref="member">SynchronizedTestResult</ref><sp/>(TestResult<sp/>*result);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_synchronized_test_result_1ad791090382167b6ca1baa01fbb592a5b" kindref="member">‾SynchronizedTestResult</ref><sp/>();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_synchronized_test_result_1a60b2a758aa93b985cd9e1d57e52ee9b2" kindref="member">shouldStop</ref><sp/><sp/>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_synchronized_test_result_1a3107609e4d793d545b57edfa2ea44ad0" kindref="member">addError</ref><sp/><sp/><sp/><sp/>(Test<sp/>*test,<sp/>CppUnitException<sp/>*e);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_synchronized_test_result_1a3a0c63e2afe8e58cbcfb8cf179fa0bda" kindref="member">addFailure</ref><sp/><sp/>(Test<sp/>*test,<sp/>CppUnitException<sp/>*e);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_synchronized_test_result_1af16ee8338e90fff7d9861c9adf797ba3" kindref="member">startTest</ref><sp/><sp/><sp/>(Test<sp/>*test);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_synchronized_test_result_1a2925311440e64d8f9c7f82efe0e45a55" kindref="member">endTest</ref><sp/><sp/><sp/><sp/><sp/>(Test<sp/>*test);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_synchronized_test_result_1ac3d4a4548543378818c43e74fb15b4c0" kindref="member">runTests</ref><sp/><sp/><sp/><sp/>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_synchronized_test_result_1a8ffd01fc7a5127c6d7d7de47a6fe89e4" kindref="member">testErrors</ref><sp/><sp/>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_synchronized_test_result_1a8960f8f6c6bb5ea196d239410e2ea6c7" kindref="member">testFailures</ref><sp/>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_synchronized_test_result_1a75724a678e57f8efa9a97279cf95f5c9" kindref="member">wasSuccessful</ref><sp/>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_synchronized_test_result_1aa95b8e21bbd69fec91ce4d699d936d29" kindref="member">stop</ref><sp/>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;TestFailure<sp/>*&gt;&amp;<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_synchronized_test_result_1aef0004d733c0150d6635634fb2bb32b9" kindref="member">errors</ref><sp/>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;TestFailure<sp/>*&gt;&amp;<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_synchronized_test_result_1a97fdab1a67e4514cb818e14be555d340" kindref="member">failures</ref><sp/>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>CCriticalSection<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_criticalSection;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_synchronized_test_result_1a365847a9b5e8f8e03f2bb15559e5b2d7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="class_synchronized_test_result_1a365847a9b5e8f8e03f2bb15559e5b2d7" kindref="member">SynchronizedTestResult::SynchronizedTestResult</ref><sp/>(TestResult<sp/>*result)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">:<sp/><ref refid="class_test_result_decorator" kindref="compound">TestResultDecorator</ref><sp/>(result)<sp/>{}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Destructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_synchronized_test_result_1ad791090382167b6ca1baa01fbb592a5b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="class_synchronized_test_result_1ad791090382167b6ca1baa01fbb592a5b" kindref="member">SynchronizedTestResult::‾SynchronizedTestResult</ref><sp/>()</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Returns<sp/>whether<sp/>the<sp/>test<sp/>should<sp/>stop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="class_synchronized_test_result_1a60b2a758aa93b985cd9e1d57e52ee9b2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_synchronized_test_result_1a60b2a758aa93b985cd9e1d57e52ee9b2" kindref="member">SynchronizedTestResult::shouldStop</ref><sp/>()</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{<sp/>CSingleLock<sp/>sync<sp/>(&amp;m_criticalSection,<sp/>TRUE);<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;shouldStop<sp/>();<sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Adds<sp/>an<sp/>error<sp/>to<sp/>the<sp/>list<sp/>of<sp/>errors.<sp/>The<sp/>passed<sp/>in<sp/>exception</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>caused<sp/>the<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="class_synchronized_test_result_1a3107609e4d793d545b57edfa2ea44ad0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_synchronized_test_result_1a3107609e4d793d545b57edfa2ea44ad0" kindref="member">SynchronizedTestResult::addError</ref><sp/>(Test<sp/>*test,<sp/>CppUnitException<sp/>*e)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{<sp/>CSingleLock<sp/>sync<sp/>(&amp;m_criticalSection,<sp/>TRUE);<sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;addError<sp/>(test,<sp/>e);<sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Adds<sp/>a<sp/>failure<sp/>to<sp/>the<sp/>list<sp/>of<sp/>failures.<sp/>The<sp/>passed<sp/>in<sp/>exception</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">//<sp/>caused<sp/>the<sp/>failure.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="class_synchronized_test_result_1a3a0c63e2afe8e58cbcfb8cf179fa0bda" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_synchronized_test_result_1a3a0c63e2afe8e58cbcfb8cf179fa0bda" kindref="member">SynchronizedTestResult::addFailure</ref><sp/>(Test<sp/>*test,<sp/>CppUnitException<sp/>*e)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">{<sp/>CSingleLock<sp/>sync<sp/>(&amp;m_criticalSection,<sp/>TRUE);<sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;addFailure<sp/>(test,<sp/>e);<sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Informs<sp/>the<sp/>result<sp/>that<sp/>a<sp/>test<sp/>will<sp/>be<sp/>started.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="class_synchronized_test_result_1af16ee8338e90fff7d9861c9adf797ba3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_synchronized_test_result_1af16ee8338e90fff7d9861c9adf797ba3" kindref="member">SynchronizedTestResult::startTest</ref><sp/>(Test<sp/>*test)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{<sp/>CSingleLock<sp/>sync<sp/>(&amp;m_criticalSection,<sp/>TRUE);<sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;startTest<sp/>(test);<sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Informs<sp/>the<sp/>result<sp/>that<sp/>a<sp/>test<sp/>was<sp/>completed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="class_synchronized_test_result_1a2925311440e64d8f9c7f82efe0e45a55" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_synchronized_test_result_1a2925311440e64d8f9c7f82efe0e45a55" kindref="member">SynchronizedTestResult::endTest</ref><sp/>(Test<sp/>*test)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{<sp/>CSingleLock<sp/>sync<sp/>(&amp;m_criticalSection,<sp/>TRUE);<sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;endTest<sp/>(test);<sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Gets<sp/>the<sp/>number<sp/>of<sp/>run<sp/>tests.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="class_synchronized_test_result_1ac3d4a4548543378818c43e74fb15b4c0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_synchronized_test_result_1ac3d4a4548543378818c43e74fb15b4c0" kindref="member">SynchronizedTestResult::runTests</ref><sp/>()</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{<sp/>CSingleLock<sp/>sync<sp/>(&amp;m_criticalSection,<sp/>TRUE);<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;runTests<sp/>();<sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Gets<sp/>the<sp/>number<sp/>of<sp/>detected<sp/>errors.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="class_synchronized_test_result_1a8ffd01fc7a5127c6d7d7de47a6fe89e4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_synchronized_test_result_1a8ffd01fc7a5127c6d7d7de47a6fe89e4" kindref="member">SynchronizedTestResult::testErrors</ref><sp/>()</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">{<sp/>CSingleLock<sp/>sync<sp/>(&amp;m_criticalSection,<sp/>TRUE);<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;testErrors<sp/>();<sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Gets<sp/>the<sp/>number<sp/>of<sp/>detected<sp/>failures.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="class_synchronized_test_result_1a8960f8f6c6bb5ea196d239410e2ea6c7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_synchronized_test_result_1a8960f8f6c6bb5ea196d239410e2ea6c7" kindref="member">SynchronizedTestResult::testFailures</ref><sp/>()</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{<sp/>CSingleLock<sp/>sync<sp/>(&amp;m_criticalSection,<sp/>TRUE);<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;testFailures<sp/>();<sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Returns<sp/>whether<sp/>the<sp/>entire<sp/>test<sp/>was<sp/>successful<sp/>or<sp/>not.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="class_synchronized_test_result_1a75724a678e57f8efa9a97279cf95f5c9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_synchronized_test_result_1a75724a678e57f8efa9a97279cf95f5c9" kindref="member">SynchronizedTestResult::wasSuccessful</ref><sp/>()</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{<sp/>CSingleLock<sp/>sync<sp/>(&amp;m_criticalSection,<sp/>TRUE);<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;wasSuccessful<sp/>();<sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Marks<sp/>that<sp/>the<sp/>test<sp/>run<sp/>should<sp/>stop.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="class_synchronized_test_result_1aa95b8e21bbd69fec91ce4d699d936d29" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_synchronized_test_result_1aa95b8e21bbd69fec91ce4d699d936d29" kindref="member">SynchronizedTestResult::stop</ref><sp/>()</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">{<sp/>CSingleLock<sp/>sync<sp/>(&amp;m_criticalSection,<sp/>TRUE);<sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;stop<sp/>();<sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Returns<sp/>a<sp/>vector<sp/>of<sp/>the<sp/>errors.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="class_synchronized_test_result_1aef0004d733c0150d6635634fb2bb32b9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>vector&lt;TestFailure<sp/>*&gt;&amp;<sp/><ref refid="class_synchronized_test_result_1aef0004d733c0150d6635634fb2bb32b9" kindref="member">SynchronizedTestResult::errors</ref><sp/>()</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">{<sp/>CSingleLock<sp/>sync<sp/>(&amp;m_criticalSection,<sp/>TRUE);<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;errors<sp/>();<sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Returns<sp/>a<sp/>vector<sp/>of<sp/>the<sp/>failures.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="class_synchronized_test_result_1a97fdab1a67e4514cb818e14be555d340" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>vector&lt;TestFailure<sp/>*&gt;&amp;<sp/><ref refid="class_synchronized_test_result_1a97fdab1a67e4514cb818e14be555d340" kindref="member">SynchronizedTestResult::failures</ref><sp/>()</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">{<sp/>CSingleLock<sp/>sync<sp/>(&amp;m_criticalSection,<sp/>TRUE);<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_test_result_decorator_1ae07db84f57b53e72c2e04922e2029e02" kindref="member">m_result</ref>-&gt;failures<sp/>();<sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="105"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/SynchronizedTestResult.h"/>
+  </compounddef>
+</doxygen>

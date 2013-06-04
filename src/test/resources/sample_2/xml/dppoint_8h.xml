@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="dppoint_8h" kind="file">
+    <compoundname>dppoint.h</compoundname>
+    <includes refid="host_8h" local="yes">host.h</includes>
+    <includedby refid="dppoint_8cpp" local="yes">ccstruct/dppoint.cpp</includedby>
+    <includedby refid="colpartition_8cpp" local="yes">textord/colpartition.cpp</includedby>
+    <incdepgraph>
+      <node id="7465">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="7466" relation="include">
+        </childnode>
+      </node>
+      <node id="7466">
+        <label>limits.h</label>
+      </node>
+      <node id="7463">
+        <label>ccstruct/dppoint.h</label>
+        <link refid="dppoint.h"/>
+        <childnode refid="7464" relation="include">
+        </childnode>
+      </node>
+      <node id="7464">
+        <label>host.h</label>
+        <link refid="host_8h"/>
+        <childnode refid="7465" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7468">
+        <label>ccstruct/dppoint.cpp</label>
+        <link refid="dppoint_8cpp"/>
+      </node>
+      <node id="7469">
+        <label>textord/colpartition.cpp</label>
+        <link refid="colpartition_8cpp"/>
+      </node>
+      <node id="7467">
+        <label>ccstruct/dppoint.h</label>
+        <link refid="dppoint.h"/>
+        <childnode refid="7468" relation="include">
+        </childnode>
+        <childnode refid="7469" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtesseract_1_1_d_p_point" prot="public">tesseract::DPPoint</innerclass>
+    <innernamespace refid="namespacetesseract">tesseract</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dppoint.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Description:<sp/>Simple<sp/>generic<sp/>dynamic<sp/>programming<sp/>class.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Author:<sp/><sp/><sp/><sp/><sp/><sp/>Ray<sp/>Smith</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Created:<sp/><sp/><sp/><sp/><sp/>Wed<sp/>Mar<sp/>25<sp/>18:57:01<sp/>PDT<sp/>2009</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>(C)<sp/>Copyright<sp/>2009,<sp/>Google<sp/>Inc.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>**<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>**<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>**<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>**<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>**<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>**<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>**<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>**<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>**<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TESSERACT_CCSTRUCT_DPPOINT_H__</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TESSERACT_CCSTRUCT_DPPOINT_H__</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="host_8h" kindref="compound">host.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetesseract-c__api-demo_1afed58feacb84df2de88bdd613cfdba6d" kindref="member">tesseract</ref><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/>A<sp/>simple<sp/>class<sp/>to<sp/>provide<sp/>a<sp/>dynamic<sp/>programming<sp/>solution<sp/>to<sp/>a<sp/>class<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>1st-order<sp/>problems<sp/>in<sp/>which<sp/>the<sp/>cost<sp/>is<sp/>dependent<sp/>only<sp/>on<sp/>the<sp/>current</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>step<sp/>and<sp/>the<sp/>best<sp/>cost<sp/>to<sp/>that<sp/>step,<sp/>with<sp/>a<sp/>possible<sp/>special<sp/>case</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>of<sp/>using<sp/>the<sp/>variance<sp/>of<sp/>the<sp/>steps,<sp/>and<sp/>only<sp/>the<sp/>top<sp/>choice<sp/>is<sp/>required.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Useful<sp/>for<sp/>problems<sp/>such<sp/>as<sp/>finding<sp/>the<sp/>optimal<sp/>cut<sp/>points<sp/>in<sp/>a<sp/>fixed-pitch</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(vertical<sp/>or<sp/>horizontal)<sp/>situation.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Skeletal<sp/>Example:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DPPoint*<sp/>array<sp/>=<sp/>new<sp/>DPPoint[width];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>width;<sp/>i++)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>array[i].AddLocalCost(cost_at_i)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DPPoint*<sp/>best_end<sp/>=<sp/>DPPoint::Solve(...,<sp/>array);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>while<sp/>(best_end<sp/>!=<sp/>NULL)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>int<sp/>cut_index<sp/>=<sp/>best_end<sp/>-<sp/>array;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>best_end<sp/>=<sp/>best_end-&gt;best_prev();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>delete<sp/>[]<sp/>array;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classtesseract_1_1_d_p_point" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtesseract_1_1_d_p_point" kindref="compound">DPPoint</ref><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>cost<sp/>function<sp/>evaluates<sp/>the<sp/>total<sp/>cost<sp/>at<sp/>this<sp/>(excluding<sp/>this&apos;s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>local_cost)<sp/>and<sp/>if<sp/>it<sp/>beats<sp/>this&apos;s<sp/>total_cost,<sp/>then</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>replace<sp/>the<sp/>appropriate<sp/>values<sp/>in<sp/>this.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classtesseract_1_1_d_p_point_1a08565a87060ccedd0aebe4d7f04fb9f7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="host_8h_1ac53c9cafaf7fe16f985994c49f6b0964" kindref="member">inT64</ref><sp/>(<ref refid="classtesseract_1_1_d_p_point" kindref="compound">DPPoint</ref>::*<ref refid="classtesseract_1_1_d_p_point_1a08565a87060ccedd0aebe4d7f04fb9f7" kindref="member">CostFunc</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_d_p_point" kindref="compound">DPPoint</ref>*<sp/>prev);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classtesseract_1_1_d_p_point_1accb15b0c3db492fa4813a606feabcf59" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_d_p_point_1accb15b0c3db492fa4813a606feabcf59" kindref="member">DPPoint</ref>()</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>local_cost_(0),<sp/>total_cost_(<ref refid="host_8h_1aac62d87844689a18b6f5339a89ed6e7f" kindref="member">MAX_INT32</ref>),<sp/>total_steps_(1),<sp/>best_prev_(<ref refid="host_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>),</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>n_(0),<sp/>sig_x_(0),<sp/>sig_xsq_(0)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Solve<sp/>the<sp/>dynamic<sp/>programming<sp/>problem<sp/>for<sp/>the<sp/>given<sp/>array<sp/>of<sp/>points,<sp/>with</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>given<sp/>size<sp/>and<sp/>cost<sp/>function.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Steps<sp/>backwards<sp/>are<sp/>limited<sp/>to<sp/>being<sp/>between<sp/>min_step<sp/>and<sp/>max_step</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>inclusive.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>return<sp/>value<sp/>is<sp/>the<sp/>tail<sp/>of<sp/>the<sp/>best<sp/>path.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_d_p_point" kindref="compound">DPPoint</ref>*<sp/><ref refid="classtesseract_1_1_d_p_point_1a9d0050679afe827f7e0434c70916a07a" kindref="member">Solve</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>min_step,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_step,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>debug,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtesseract_1_1_d_p_point_1a08565a87060ccedd0aebe4d7f04fb9f7" kindref="member">CostFunc</ref><sp/>cost_func,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/><ref refid="classtesseract_1_1_d_p_point" kindref="compound">DPPoint</ref>*<sp/>points);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>CostFunc<sp/>that<sp/>takes<sp/>the<sp/>variance<sp/>of<sp/>step<sp/>into<sp/>account<sp/>in<sp/>the<sp/>cost.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><ref refid="host_8h_1ac53c9cafaf7fe16f985994c49f6b0964" kindref="member">inT64</ref><sp/><ref refid="classtesseract_1_1_d_p_point_1a4d01fa4702020ea2e3cbd89f754fc9e5" kindref="member">CostWithVariance</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_d_p_point" kindref="compound">DPPoint</ref>*<sp/>prev);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Accessors.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classtesseract_1_1_d_p_point_1a6a288c5d399800d39c2e5e662b442679" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_d_p_point_1a6a288c5d399800d39c2e5e662b442679" kindref="member">total_cost</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>total_cost_;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71" refid="classtesseract_1_1_d_p_point_1ad44b4643e9979a626c138af8a3cd4fa7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_d_p_point_1ad44b4643e9979a626c138af8a3cd4fa7" kindref="member">Pathlength</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>total_steps_;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74" refid="classtesseract_1_1_d_p_point_1a3490b0893fac51b2277f7393ee935806" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_d_p_point" kindref="compound">DPPoint</ref>*<sp/><ref refid="classtesseract_1_1_d_p_point_1a3490b0893fac51b2277f7393ee935806" kindref="member">best_prev</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>best_prev_;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77" refid="classtesseract_1_1_d_p_point_1a7f0dbb492e4a02c9da32017583e1463d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_d_p_point_1a7f0dbb492e4a02c9da32017583e1463d" kindref="member">AddLocalCost</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>new_cost)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>local_cost_<sp/>+=<sp/>new_cost;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Code<sp/>common<sp/>to<sp/>different<sp/>cost<sp/>functions.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>the<sp/>other<sp/>members<sp/>if<sp/>the<sp/>cost<sp/>is<sp/>lower.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>UpdateIfBetter(<ref refid="host_8h_1ac53c9cafaf7fe16f985994c49f6b0964" kindref="member">inT64</ref><sp/>cost,<sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/>steps,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_d_p_point" kindref="compound">DPPoint</ref>*<sp/>prev,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/>n,<sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/>sig_x,<sp/><ref refid="host_8h_1ac53c9cafaf7fe16f985994c49f6b0964" kindref="member">inT64</ref><sp/>sig_xsq);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/>local_cost_;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cost<sp/>of<sp/>this<sp/>point<sp/>on<sp/>its<sp/>own.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/>total_cost_;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sum<sp/>of<sp/>all<sp/>costs<sp/>in<sp/>best<sp/>path<sp/>to<sp/>here.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>During<sp/>cost<sp/>calculations<sp/>local_cost<sp/>is<sp/>excluded.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/>total_steps_;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>steps<sp/>in<sp/>best<sp/>path<sp/>to<sp/>here.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_d_p_point" kindref="compound">DPPoint</ref>*<sp/>best_prev_;<sp/><sp/></highlight><highlight class="comment">//<sp/>Pointer<sp/>to<sp/>prev<sp/>point<sp/>in<sp/>best<sp/>path<sp/>from<sp/>here.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Information<sp/>for<sp/>computing<sp/>the<sp/>variance<sp/>part<sp/>of<sp/>the<sp/>cost.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/>n_;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>steps<sp/>in<sp/>best<sp/>path<sp/>to<sp/>here<sp/>for<sp/>variance.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/>sig_x_;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sum<sp/>of<sp/>step<sp/>sizes<sp/>for<sp/>computing<sp/>variance.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><ref refid="host_8h_1ac53c9cafaf7fe16f985994c49f6b0964" kindref="member">inT64</ref><sp/>sig_xsq_;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sum<sp/>of<sp/>squares<sp/>of<sp/>steps<sp/>for<sp/>computing<sp/>variance.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>tesseract.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>TESSERACT_CCSTRUCT_DPPOINT_H__</highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/ccstruct/dppoint.h"/>
+  </compounddef>
+</doxygen>

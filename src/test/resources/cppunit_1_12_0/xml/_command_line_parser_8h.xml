@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_command_line_parser_8h" kind="file">
+    <compoundname>CommandLineParser.h</compoundname>
+    <includes local="no">cppunit/Portability.h</includes>
+    <includes local="no">cppunit/portability/CppUnitDeque.h</includes>
+    <includes local="no">cppunit/plugin/PlugInParameters.h</includes>
+    <includes local="no">string</includes>
+    <includes local="no">stdexcept</includes>
+    <includedby refid="_command_line_parser_8cpp" local="yes">src/DllPlugInTester/CommandLineParser.cpp</includedby>
+    <includedby refid="_command_line_parser_test_8cpp" local="yes">src/DllPlugInTester/CommandLineParserTest.cpp</includedby>
+    <includedby refid="_dll_plug_in_tester_2_dll_plug_in_tester_8cpp" local="yes">src/DllPlugInTester/DllPlugInTester.cpp</includedby>
+    <incdepgraph>
+      <node id="284">
+        <label>stdexcept</label>
+      </node>
+      <node id="283">
+        <label>string</label>
+      </node>
+      <node id="281">
+        <label>cppunit/portability/CppUnitDeque.h</label>
+      </node>
+      <node id="280">
+        <label>cppunit/Portability.h</label>
+      </node>
+      <node id="279">
+        <label>src/DllPlugInTester/CommandLineParser.h</label>
+        <link refid="CommandLineParser.h"/>
+        <childnode refid="280" relation="include">
+        </childnode>
+        <childnode refid="281" relation="include">
+        </childnode>
+        <childnode refid="282" relation="include">
+        </childnode>
+        <childnode refid="283" relation="include">
+        </childnode>
+        <childnode refid="284" relation="include">
+        </childnode>
+      </node>
+      <node id="282">
+        <label>cppunit/plugin/PlugInParameters.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="286">
+        <label>src/DllPlugInTester/CommandLineParser.cpp</label>
+        <link refid="_command_line_parser_8cpp"/>
+      </node>
+      <node id="288">
+        <label>src/DllPlugInTester/DllPlugInTester.cpp</label>
+        <link refid="_dll_plug_in_tester_2_dll_plug_in_tester_8cpp"/>
+      </node>
+      <node id="285">
+        <label>src/DllPlugInTester/CommandLineParser.h</label>
+        <link refid="CommandLineParser.h"/>
+        <childnode refid="286" relation="include">
+        </childnode>
+        <childnode refid="287" relation="include">
+        </childnode>
+        <childnode refid="288" relation="include">
+        </childnode>
+      </node>
+      <node id="287">
+        <label>src/DllPlugInTester/CommandLineParserTest.cpp</label>
+        <link refid="_command_line_parser_test_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_command_line_parser_exception" prot="public">CommandLineParserException</innerclass>
+    <innerclass refid="struct_command_line_plug_in_info" prot="public">CommandLinePlugInInfo</innerclass>
+    <innerclass refid="class_command_line_parser" prot="public">CommandLineParser</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CPPUNIT_HELPER_COMMANDLINEPARSER_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CPPUNIT_HELPER_COMMANDLINEPARSER_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cppunit/Portability.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cppunit/portability/CppUnitDeque.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cppunit/plugin/PlugInParameters.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_command_line_parser_exception" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_command_line_parser_exception" kindref="compound">CommandLineParserException</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::runtime_error</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16" refid="class_command_line_parser_exception_1afdc78252285e461c73b8b7f5be846759" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_command_line_parser_exception_1afdc78252285e461c73b8b7f5be846759" kindref="member">CommandLineParserException</ref>(<sp/>std::string<sp/>message<sp/>)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>std::runtime_error(<sp/>message<sp/>)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="struct_command_line_plug_in_info" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_command_line_plug_in_info" kindref="compound">CommandLinePlugInInfo</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25" refid="struct_command_line_plug_in_info_1ac05b9082e2a3fae6a64485dfd9bc38fb" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="struct_command_line_plug_in_info_1ac05b9082e2a3fae6a64485dfd9bc38fb" kindref="member">m_fileName</ref>;</highlight></codeline>
+<codeline lineno="26" refid="struct_command_line_plug_in_info_1aee5c0f5f768b95b49f7f49f120acc34c" refkind="member"><highlight class="normal"><sp/><sp/>CPPUNIT_NS::PlugInParameters<sp/><ref refid="struct_command_line_plug_in_info_1aee5c0f5f768b95b49f7f49f120acc34c" kindref="member">m_parameters</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="class_command_line_parser" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_command_line_parser" kindref="compound">CommandLineParser</ref></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><ref refid="class_command_line_parser_1a6b8d2efcb57117a3b13912ba68413eaf" kindref="member">CommandLineParser</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[]<sp/>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a2b67e5d5459148b05b6d79bfab300407" kindref="member" tooltip="Destructor. ">‾CommandLineParser</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1aa02f4b6148e34f610f519b8cc767466b" kindref="member">parse</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a7d65e758e9c915df46f078d060bec656" kindref="member">useCompilerOutputter</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1ad0189bb7baad5df4e75a3de9203c7e70" kindref="member">useXmlOutputter</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_command_line_parser_1aad5d67fad84eedae721dca9e534450c5" kindref="member">getXmlFileName</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_command_line_parser_1a523bf80f1b5dee1684dab2116a4b8c50" kindref="member">getXmlStyleSheet</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_command_line_parser_1a4ceb49b811f14f663120a55e81987ff5" kindref="member">getEncoding</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a04aee4c12208e60a940e2953add713a0" kindref="member">useBriefTestProgress</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1aa673745a7c478581d7f2c8ea4dabbed6" kindref="member">noTestProgress</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a48495a436701ff716951113e43a4c1f4" kindref="member">useTextOutputter</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a87c99b161d6d2f7f113fb7b2b46eded8" kindref="member">useCoutStream</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a4ae3b589fc5e1e96d5c97f1d4969e68a" kindref="member">waitBeforeExit</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_command_line_parser_1ae21a92ddf5770ef275e8e8e27604cf5a" kindref="member">getTestPath</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a2f9d527a0243e662e7a01a7e7f145972" kindref="member">getPlugInCount</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><ref refid="struct_command_line_plug_in_info" kindref="compound">CommandLinePlugInInfo</ref><sp/><ref refid="class_command_line_parser_1aabfdaac5203d2e82623aa349a62a1d1f" kindref="member">getPlugInAt</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><ref refid="class_command_line_parser_1a6b8d2efcb57117a3b13912ba68413eaf" kindref="member">CommandLineParser</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser" kindref="compound">CommandLineParser</ref><sp/>&amp;copy<sp/>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a298862b0a5d996f93538d4bd3ecf069c" kindref="member" tooltip="Prevents the use of the copy operator. ">operator =</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser" kindref="compound">CommandLineParser</ref><sp/>&amp;copy<sp/>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a26699efe70ad77fc887b45d3e1177a06" kindref="member">readNonOptionCommands</ref>();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a230da16bf5428c68ff7c4abeb1f8e1fe" kindref="member">hasNextArgument</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_command_line_parser_1a26b1bb09863fcf3b0a294e8b4e2992ec" kindref="member">getNextArgument</ref>();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_command_line_parser_1a147100ef506374fa5eadaf42ad60ac4c" kindref="member">getCurrentArgument</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a68c7732344dad3f1c5d2d5e6e01824d6" kindref="member">argumentStartsWith</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;expected<sp/>)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1ab22dd7a66065a5f7cb98342b93b4678c" kindref="member">getNextOption</ref>();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a1db60643dd0b207ef92f81638b1ca9e1" kindref="member">isOption</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;shortName,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;longName<sp/>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_command_line_parser_1ab752c0837cb9aca24cea1ad0d07f5267" kindref="member">getNextParameter</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_command_line_parser_1a0eb12b545ffa27bdf583ef0f25fcd0c0" kindref="member">getNextOptionalParameter</ref>();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a7ccb7828a40379f3e853e273d922edd4" kindref="member">fail</ref>(<sp/>std::string<sp/>message<sp/>);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="104" refid="class_command_line_parser_1a5c230ddfbf08dc4027d800fcc698291f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a5c230ddfbf08dc4027d800fcc698291f" kindref="member">m_useCompiler</ref>;</highlight></codeline>
+<codeline lineno="105" refid="class_command_line_parser_1a8243894c1d3084642cf07f6451a5afad" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a8243894c1d3084642cf07f6451a5afad" kindref="member">m_useXml</ref>;</highlight></codeline>
+<codeline lineno="106" refid="class_command_line_parser_1ad39adc5a70f67b3c7e5ba5408fa0b64a" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_command_line_parser_1ad39adc5a70f67b3c7e5ba5408fa0b64a" kindref="member">m_xmlFileName</ref>;</highlight></codeline>
+<codeline lineno="107" refid="class_command_line_parser_1ab9918f4d40b3d69d71eadd88b32f33a1" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_command_line_parser_1ab9918f4d40b3d69d71eadd88b32f33a1" kindref="member">m_xsl</ref>;</highlight></codeline>
+<codeline lineno="108" refid="class_command_line_parser_1a732e1087cd898f93f1d1d9030c6b821c" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_command_line_parser_1a732e1087cd898f93f1d1d9030c6b821c" kindref="member">m_encoding</ref>;</highlight></codeline>
+<codeline lineno="109" refid="class_command_line_parser_1a51b0fb5f74a01864106092b5d6fbe259" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a51b0fb5f74a01864106092b5d6fbe259" kindref="member">m_briefProgress</ref>;</highlight></codeline>
+<codeline lineno="110" refid="class_command_line_parser_1adb6c3285a324b8ac36e5be771db717b6" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1adb6c3285a324b8ac36e5be771db717b6" kindref="member">m_noProgress</ref>;</highlight></codeline>
+<codeline lineno="111" refid="class_command_line_parser_1a1df776f8248bd60ace2f0f4253adee45" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a1df776f8248bd60ace2f0f4253adee45" kindref="member">m_useText</ref>;</highlight></codeline>
+<codeline lineno="112" refid="class_command_line_parser_1ae1fe668ffe523e2f1ccd2ef8253934f5" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1ae1fe668ffe523e2f1ccd2ef8253934f5" kindref="member">m_useCout</ref>;</highlight></codeline>
+<codeline lineno="113" refid="class_command_line_parser_1a848a5fdae50a9804c3bc135a6d374411" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1a848a5fdae50a9804c3bc135a6d374411" kindref="member">m_waitBeforeExit</ref>;</highlight></codeline>
+<codeline lineno="114" refid="class_command_line_parser_1a52e994dce7ca8404b7ce855879541e09" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_command_line_parser_1a52e994dce7ca8404b7ce855879541e09" kindref="member">m_testPath</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="class_command_line_parser_1a72dc86652e2d7e08b3e7dcbd932a2bcb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>CppUnitDeque&lt;CommandLinePlugInInfo&gt;<sp/><ref refid="class_command_line_parser_1a72dc86652e2d7e08b3e7dcbd932a2bcb" kindref="member">PlugIns</ref>;</highlight></codeline>
+<codeline lineno="117" refid="class_command_line_parser_1a89bca4541526efcfa7a0f54b118dd925" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_command_line_parser_1a72dc86652e2d7e08b3e7dcbd932a2bcb" kindref="member">PlugIns</ref><sp/><ref refid="class_command_line_parser_1a89bca4541526efcfa7a0f54b118dd925" kindref="member">m_plugIns</ref>;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="class_command_line_parser_1a4ac678aee04a5daf552c7e01ed419e08" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>CppUnitDeque&lt;std::string&gt;<sp/><ref refid="class_command_line_parser_1a4ac678aee04a5daf552c7e01ed419e08" kindref="member">Arguments</ref>;</highlight></codeline>
+<codeline lineno="120" refid="class_command_line_parser_1adc8aa6ed6175da46d6b602ddef9b30b9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="class_command_line_parser_1a4ac678aee04a5daf552c7e01ed419e08" kindref="member">Arguments</ref><sp/><ref refid="class_command_line_parser_1adc8aa6ed6175da46d6b602ddef9b30b9" kindref="member">m_arguments</ref>;</highlight></codeline>
+<codeline lineno="121" refid="class_command_line_parser_1abe9bec69a0fb60219ebbaf3328273cff" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_command_line_parser_1abe9bec69a0fb60219ebbaf3328273cff" kindref="member">m_currentArgument</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="class_command_line_parser_1a1edb2e8b4d81a08bd98c685fc539f34a" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="class_command_line_parser_1a1edb2e8b4d81a08bd98c685fc539f34a" kindref="member">m_option</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>CPPUNIT_HELPER_COMMANDLINEPARSER_H</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/DllPlugInTester/CommandLineParser.h"/>
+  </compounddef>
+</doxygen>

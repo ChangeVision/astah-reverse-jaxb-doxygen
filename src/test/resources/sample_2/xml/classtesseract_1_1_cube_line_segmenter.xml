@@ -1,0 +1,892 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_cube_line_segmenter" kind="class" prot="public">
+    <compoundname>tesseract::CubeLineSegmenter</compoundname>
+    <includes refid="cube__line__segmenter_8h" local="no">cube_line_segmenter.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_cube_line_segmenter_1a33822d1f3a46534dd4b965875ac88d11" prot="private" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float tesseract::CubeLineSegmenter::kMinValidLineHgtRatio</definition>
+        <argsstring></argsstring>
+        <name>kMinValidLineHgtRatio</name>
+        <initializer>= 2.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="85" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_cube_line_segmenter_1ac18667490589259bea1a58c2c866c544" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::CubeLineSegmenter::kLineSepMorphMinHgt</definition>
+        <argsstring></argsstring>
+        <name>kLineSepMorphMinHgt</name>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="86" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_cube_line_segmenter_1ada36929f17aa5b03ac3a9ed27572ed6a" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::CubeLineSegmenter::kHgtBins</definition>
+        <argsstring></argsstring>
+        <name>kHgtBins</name>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="87" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_cube_line_segmenter_1a0ca2982b663d4d6d35215b62516f8ba6" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::CubeLineSegmenter::kMaxConnCompHgt</definition>
+        <argsstring></argsstring>
+        <name>kMaxConnCompHgt</name>
+        <initializer>= 150</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="88" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_cube_line_segmenter_1a38925285e5775a609d93282670e9314a" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::CubeLineSegmenter::kMaxConnCompWid</definition>
+        <argsstring></argsstring>
+        <name>kMaxConnCompWid</name>
+        <initializer>= 500</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="89" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_cube_line_segmenter_1ac609e05f2fe2265e4a94e9e1574d6a62" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::CubeLineSegmenter::kMaxHorzAspectRatio</definition>
+        <argsstring></argsstring>
+        <name>kMaxHorzAspectRatio</name>
+        <initializer>= 50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="90" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_cube_line_segmenter_1ae26da1ed0eca64bb4a9f27a57e20b723" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::CubeLineSegmenter::kMaxVertAspectRatio</definition>
+        <argsstring></argsstring>
+        <name>kMaxVertAspectRatio</name>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="91" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_cube_line_segmenter_1ab60a29de69d2c3674555ee8a63a91945" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::CubeLineSegmenter::kMinWid</definition>
+        <argsstring></argsstring>
+        <name>kMinWid</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="92" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_cube_line_segmenter_1aef9d250a3a59b7e7da0d55710bae3f1d" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::CubeLineSegmenter::kMinHgt</definition>
+        <argsstring></argsstring>
+        <name>kMinHgt</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="93" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_cube_line_segmenter_1af41cc9edfb6c8c986367f4aab7f09ff3" prot="private" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double tesseract::CubeLineSegmenter::kMaxValidLineRatio</definition>
+        <argsstring></argsstring>
+        <name>kMaxValidLineRatio</name>
+        <initializer>= 3.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="94" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_cube_line_segmenter_1ad61d5af0e6684bf2339d4569efab8d59" prot="private" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_cube_reco_context" kindref="compound">CubeRecoContext</ref> *</type>
+        <definition>CubeRecoContext* tesseract::CubeLineSegmenter::cntxt_</definition>
+        <argsstring></argsstring>
+        <name>cntxt_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="97" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_cube_line_segmenter_1ae84038d15063c6a1c72edba77903b107" prot="private" static="no" mutable="no">
+        <type>Pix *</type>
+        <definition>Pix* tesseract::CubeLineSegmenter::orig_img_</definition>
+        <argsstring></argsstring>
+        <name>orig_img_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="99" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_cube_line_segmenter_1afd61484ab7742b2dad57d07e42d0fe52" prot="private" static="no" mutable="no">
+        <type>Pix *</type>
+        <definition>Pix* tesseract::CubeLineSegmenter::img_</definition>
+        <argsstring></argsstring>
+        <name>img_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="101" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_cube_line_segmenter_1a09490e73255204aa5fbd606269bb6d2f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool tesseract::CubeLineSegmenter::init_</definition>
+        <argsstring></argsstring>
+        <name>init_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="103" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_cube_line_segmenter_1a916cf7de5ef9a9c581846284bbc6de5e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::CubeLineSegmenter::line_cnt_</definition>
+        <argsstring></argsstring>
+        <name>line_cnt_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="105" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_cube_line_segmenter_1a9251aaeec3ef034387e652df29a1f647" prot="private" static="no" mutable="no">
+        <type>Pixaa *</type>
+        <definition>Pixaa* tesseract::CubeLineSegmenter::columns_</definition>
+        <argsstring></argsstring>
+        <name>columns_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="106" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_cube_line_segmenter_1a4827472b9dec63cb728b3a6d90f25d3c" prot="private" static="no" mutable="no">
+        <type>Pixa *</type>
+        <definition>Pixa* tesseract::CubeLineSegmenter::con_comps_</definition>
+        <argsstring></argsstring>
+        <name>con_comps_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="107" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_cube_line_segmenter_1ae8b3952428bd69f80f677c80df71dbd5" prot="private" static="no" mutable="no">
+        <type>Pixa *</type>
+        <definition>Pixa* tesseract::CubeLineSegmenter::lines_pixa_</definition>
+        <argsstring></argsstring>
+        <name>lines_pixa_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="108" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_cube_line_segmenter_1a237515f13078f1d5ea267e82c117354f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tesseract::CubeLineSegmenter::est_alef_hgt_</definition>
+        <argsstring></argsstring>
+        <name>est_alef_hgt_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="110" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_cube_line_segmenter_1a2a3dd21efa126fc1acd0b698ea8fbd7b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tesseract::CubeLineSegmenter::est_dot_hgt_</definition>
+        <argsstring></argsstring>
+        <name>est_dot_hgt_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="111" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1a4eeec8dfa99e6155f609de8ae9b3e726" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::CubeLineSegmenter::CubeLineSegmenter</definition>
+        <argsstring>(CubeRecoContext *cntxt, Pix *img)</argsstring>
+        <name>CubeLineSegmenter</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_cube_reco_context" kindref="compound">CubeRecoContext</ref> *</type>
+          <declname>cntxt</declname>
+        </param>
+        <param>
+          <type>Pix *</type>
+          <declname>img</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="36" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="36" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1ac1873f1cd7f873c789c5c59bf3fd9f0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::CubeLineSegmenter::~CubeLineSegmenter</definition>
+        <argsstring>()</argsstring>
+        <name>~CubeLineSegmenter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="37" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="49" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1a0c0a6970c3f72afb3b6cd082e7211168" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Pix *</type>
+        <definition>Pix* tesseract::CubeLineSegmenter::PostProcessedImage</definition>
+        <argsstring>()</argsstring>
+        <name>PostProcessedImage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="40" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="40" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1a23d9c0c31944bca1b0784566b1a6c3a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::CubeLineSegmenter::ColumnCnt</definition>
+        <argsstring>()</argsstring>
+        <name>ColumnCnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="46" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="46" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1a55647b6872b4906c9ed8d36e4e820521" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Box *</type>
+        <definition>Box* tesseract::CubeLineSegmenter::Column</definition>
+        <argsstring>(int col)</argsstring>
+        <name>Column</name>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="52" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="52" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1abd0643fb53d4b88c55d1a859237ab8d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::CubeLineSegmenter::LineCnt</definition>
+        <argsstring>()</argsstring>
+        <name>LineCnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="59" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="59" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1aaff3aa5cbfe764ed5bf63ce8e2ce9803" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Pixa *</type>
+        <definition>Pixa* tesseract::CubeLineSegmenter::ConComps</definition>
+        <argsstring>()</argsstring>
+        <name>ConComps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="66" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="66" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1a96d754e73f37c2331b2bc04ace416e7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Pixaa *</type>
+        <definition>Pixaa* tesseract::CubeLineSegmenter::Columns</definition>
+        <argsstring>()</argsstring>
+        <name>Columns</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="73" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="73" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1a5255e987650b68a40b7ac293872ff483" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tesseract::CubeLineSegmenter::AlefHgtEst</definition>
+        <argsstring>()</argsstring>
+        <name>AlefHgtEst</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="80" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="80" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1a16227df8678fbcde918cc9ccce142f12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double tesseract::CubeLineSegmenter::DotHgtEst</definition>
+        <argsstring>()</argsstring>
+        <name>DotHgtEst</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="81" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1abedfb2f940ad029c7c7b1450db7cc049" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Pix *</type>
+        <definition>Pix * tesseract::CubeLineSegmenter::Line</definition>
+        <argsstring>(int line, Box **line_box)</argsstring>
+        <name>Line</name>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>Box **</type>
+          <declname>line_box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="82" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="866" bodyend="877"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1af773542fb289e38a6fefcaf9a147f7bb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::CubeLineSegmenter::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="114" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="852" bodyend="863"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1a3a51932e357a37092d262dcf4b22fb06" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::CubeLineSegmenter::LineSegment</definition>
+        <argsstring>()</argsstring>
+        <name>LineSegment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="116" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="642" bodyend="730"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1a2f6f9d4e69600b0f884f2d0a3f632205" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Pix *</type>
+        <definition>Pix * tesseract::CubeLineSegmenter::CleanUp</definition>
+        <argsstring>(Pix *pix)</argsstring>
+        <name>CleanUp</name>
+        <param>
+          <type>Pix *</type>
+          <declname>pix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="118" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="814" bodyend="849"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1a70e18cb94df7bd768ca305745ff25763" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double tesseract::CubeLineSegmenter::ValidityRatio</definition>
+        <argsstring>(Pix *line_mask_pix, Box *line_box)</argsstring>
+        <name>ValidityRatio</name>
+        <param>
+          <type>Pix *</type>
+          <declname>line_mask_pix</declname>
+        </param>
+        <param>
+          <type>Box *</type>
+          <declname>line_box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="120" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="72" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1a25dd0699e023593f623f436db3d4d16a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::CubeLineSegmenter::ValidLine</definition>
+        <argsstring>(Pix *line_mask_pix, Box *line_box)</argsstring>
+        <name>ValidLine</name>
+        <param>
+          <type>Pix *</type>
+          <declname>line_mask_pix</declname>
+        </param>
+        <param>
+          <type>Box *</type>
+          <declname>line_box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="122" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="77" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1a3a60587500f6ed7cc6ec1189b55c958b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Pixa *</type>
+        <definition>Pixa * tesseract::CubeLineSegmenter::SplitLine</definition>
+        <argsstring>(Pix *line_mask_pix, Box *line_box)</argsstring>
+        <name>SplitLine</name>
+        <param>
+          <type>Pix *</type>
+          <declname>line_mask_pix</declname>
+        </param>
+        <param>
+          <type>Box *</type>
+          <declname>line_box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="124" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="234" bodyend="333"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1a49ebe258adb37322f8f18abca69366f6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Pixa *</type>
+        <definition>Pixa * tesseract::CubeLineSegmenter::CrackLine</definition>
+        <argsstring>(Pix *line_mask_pix, Box *line_box)</argsstring>
+        <name>CrackLine</name>
+        <param>
+          <type>Pix *</type>
+          <declname>line_mask_pix</declname>
+        </param>
+        <param>
+          <type>Box *</type>
+          <declname>line_box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="126" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="214" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1af258afb24384620123fe05bbb96f098f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Pixa *</type>
+        <definition>Pixa * tesseract::CubeLineSegmenter::CrackLine</definition>
+        <argsstring>(Pix *line_mask_pix, Box *line_box, int line_cnt)</argsstring>
+        <name>CrackLine</name>
+        <param>
+          <type>Pix *</type>
+          <declname>line_mask_pix</declname>
+        </param>
+        <param>
+          <type>Box *</type>
+          <declname>line_box</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line_cnt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="127" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="110" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1a02ceeb21c438170dafd47cb4c67ade71" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::CubeLineSegmenter::SmallLine</definition>
+        <argsstring>(Box *line_box)</argsstring>
+        <name>SmallLine</name>
+        <param>
+          <type>Box *</type>
+          <declname>line_box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="129" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="336" bodyend="338"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1ab76af08cd53b63f9fbfef4e75dd8d14e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Boxa *</type>
+        <definition>Boxa * tesseract::CubeLineSegmenter::ComputeLineConComps</definition>
+        <argsstring>(Pix *line_mask_pix, Box *line_box, Pixa **con_comps_pixa)</argsstring>
+        <name>ComputeLineConComps</name>
+        <param>
+          <type>Pix *</type>
+          <declname>line_mask_pix</declname>
+        </param>
+        <param>
+          <type>Box *</type>
+          <declname>line_box</declname>
+        </param>
+        <param>
+          <type>Pixa **</type>
+          <declname>con_comps_pixa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="131" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="341" bodyend="367"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1a30de85151d4994ab0013ed56d67f98b9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Pix *</type>
+        <definition>Pix * tesseract::CubeLineSegmenter::PixUnion</definition>
+        <argsstring>(Pix *dest_pix, Box *dest_box, Pix *src_pix, Box *src_box)</argsstring>
+        <name>PixUnion</name>
+        <param>
+          <type>Pix *</type>
+          <declname>dest_pix</declname>
+        </param>
+        <param>
+          <type>Box *</type>
+          <declname>dest_box</declname>
+        </param>
+        <param>
+          <type>Pix *</type>
+          <declname>src_pix</declname>
+        </param>
+        <param>
+          <type>Box *</type>
+          <declname>src_box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="134" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="370" bodyend="396"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1a318ebe2acca3082c08a1589e5d82c1eb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Pix *</type>
+        <definition>Pix * tesseract::CubeLineSegmenter::Pixa2Pix</definition>
+        <argsstring>(Pixa *pixa, Box **dest_box, int start_pix, int pix_cnt)</argsstring>
+        <name>Pixa2Pix</name>
+        <param>
+          <type>Pixa *</type>
+          <declname>pixa</declname>
+        </param>
+        <param>
+          <type>Box **</type>
+          <declname>dest_box</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start_pix</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pix_cnt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="136" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="399" bodyend="438"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1a3b398969ec1b2192182751f3999d7f6d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Pix *</type>
+        <definition>Pix * tesseract::CubeLineSegmenter::Pixa2Pix</definition>
+        <argsstring>(Pixa *pixa, Box **dest_box)</argsstring>
+        <name>Pixa2Pix</name>
+        <param>
+          <type>Pixa *</type>
+          <declname>pixa</declname>
+        </param>
+        <param>
+          <type>Box **</type>
+          <declname>dest_box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="138" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="441" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1a6226b62542c38c1f03f6d84cd3deb64b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::CubeLineSegmenter::MergeLine</definition>
+        <argsstring>(Pix *line_mask_pix, Box *line_box, Pixa *lines, Boxaa *lines_con_comps)</argsstring>
+        <name>MergeLine</name>
+        <param>
+          <type>Pix *</type>
+          <declname>line_mask_pix</declname>
+        </param>
+        <param>
+          <type>Box *</type>
+          <declname>line_box</declname>
+        </param>
+        <param>
+          <type>Pixa *</type>
+          <declname>lines</declname>
+        </param>
+        <param>
+          <type>Boxaa *</type>
+          <declname>lines_con_comps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="140" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="446" bodyend="517"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1ac979ba4e65ca6e56f39c3ccbf783998e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::CubeLineSegmenter::AddLines</definition>
+        <argsstring>(Pixa *lines)</argsstring>
+        <name>AddLines</name>
+        <param>
+          <type>Pixa *</type>
+          <declname>lines</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="143" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="520" bodyend="611"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1a07259f7d6ba3f4288dd9019d91c7cf1a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::CubeLineSegmenter::EstimateFontParams</definition>
+        <argsstring>()</argsstring>
+        <name>EstimateFontParams</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="145" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="733" bodyend="811"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1aff1805576b0ae7f1ba93341dfd4717b0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Pixa *</type>
+        <definition>Pixa * tesseract::CubeLineSegmenter::VerticalClosing</definition>
+        <argsstring>(Pix *pix, int thresold, Boxa **boxa)</argsstring>
+        <name>VerticalClosing</name>
+        <param>
+          <type>Pix *</type>
+          <declname>pix</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>thresold</declname>
+        </param>
+        <param>
+          <type>Boxa **</type>
+          <declname>boxa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="148" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="85" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1a42bede8b1905db5654c8eda68a942263" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int *</type>
+        <definition>int * tesseract::CubeLineSegmenter::IndexRTL</definition>
+        <argsstring>(Pixa *pixa)</argsstring>
+        <name>IndexRTL</name>
+        <param>
+          <type>Pixa *</type>
+          <declname>pixa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="150" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="614" bodyend="639"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_line_segmenter_1a3c739b4673014c828b9dfefdf6024a37" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::CubeLineSegmenter::FindLines</definition>
+        <argsstring>()</argsstring>
+        <name>FindLines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="152" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.cpp" bodystart="882" bodyend="943"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" line="34" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/cube_line_segmenter.h" bodystart="34" bodyend="153"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1ac979ba4e65ca6e56f39c3ccbf783998e" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>AddLines</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a5255e987650b68a40b7ac293872ff483" prot="public" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>AlefHgtEst</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a2f6f9d4e69600b0f884f2d0a3f632205" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>CleanUp</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1ad61d5af0e6684bf2339d4569efab8d59" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>cntxt_</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a55647b6872b4906c9ed8d36e4e820521" prot="public" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>Column</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a23d9c0c31944bca1b0784566b1a6c3a5" prot="public" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>ColumnCnt</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a96d754e73f37c2331b2bc04ace416e7c" prot="public" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>Columns</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a9251aaeec3ef034387e652df29a1f647" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>columns_</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1ab76af08cd53b63f9fbfef4e75dd8d14e" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>ComputeLineConComps</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a4827472b9dec63cb728b3a6d90f25d3c" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>con_comps_</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1aaff3aa5cbfe764ed5bf63ce8e2ce9803" prot="public" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>ConComps</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a49ebe258adb37322f8f18abca69366f6" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>CrackLine</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1af258afb24384620123fe05bbb96f098f" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>CrackLine</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a4eeec8dfa99e6155f609de8ae9b3e726" prot="public" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>CubeLineSegmenter</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a16227df8678fbcde918cc9ccce142f12" prot="public" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>DotHgtEst</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a237515f13078f1d5ea267e82c117354f" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>est_alef_hgt_</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a2a3dd21efa126fc1acd0b698ea8fbd7b" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>est_dot_hgt_</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a07259f7d6ba3f4288dd9019d91c7cf1a" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>EstimateFontParams</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a3c739b4673014c828b9dfefdf6024a37" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>FindLines</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1afd61484ab7742b2dad57d07e42d0fe52" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>img_</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a42bede8b1905db5654c8eda68a942263" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>IndexRTL</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1af773542fb289e38a6fefcaf9a147f7bb" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>Init</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a09490e73255204aa5fbd606269bb6d2f" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>init_</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1ada36929f17aa5b03ac3a9ed27572ed6a" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>kHgtBins</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1ac18667490589259bea1a58c2c866c544" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>kLineSepMorphMinHgt</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a0ca2982b663d4d6d35215b62516f8ba6" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>kMaxConnCompHgt</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a38925285e5775a609d93282670e9314a" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>kMaxConnCompWid</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1ac609e05f2fe2265e4a94e9e1574d6a62" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>kMaxHorzAspectRatio</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1af41cc9edfb6c8c986367f4aab7f09ff3" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>kMaxValidLineRatio</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1ae26da1ed0eca64bb4a9f27a57e20b723" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>kMaxVertAspectRatio</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1aef9d250a3a59b7e7da0d55710bae3f1d" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>kMinHgt</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a33822d1f3a46534dd4b965875ac88d11" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>kMinValidLineHgtRatio</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1ab60a29de69d2c3674555ee8a63a91945" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>kMinWid</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1abedfb2f940ad029c7c7b1450db7cc049" prot="public" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>Line</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a916cf7de5ef9a9c581846284bbc6de5e" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>line_cnt_</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1abd0643fb53d4b88c55d1a859237ab8d4" prot="public" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>LineCnt</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1ae8b3952428bd69f80f677c80df71dbd5" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>lines_pixa_</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a3a51932e357a37092d262dcf4b22fb06" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>LineSegment</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a6226b62542c38c1f03f6d84cd3deb64b" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>MergeLine</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1ae84038d15063c6a1c72edba77903b107" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>orig_img_</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a318ebe2acca3082c08a1589e5d82c1eb" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>Pixa2Pix</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a3b398969ec1b2192182751f3999d7f6d" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>Pixa2Pix</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a30de85151d4994ab0013ed56d67f98b9" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>PixUnion</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a0c0a6970c3f72afb3b6cd082e7211168" prot="public" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>PostProcessedImage</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a02ceeb21c438170dafd47cb4c67ade71" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>SmallLine</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a3a60587500f6ed7cc6ec1189b55c958b" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>SplitLine</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a70e18cb94df7bd768ca305745ff25763" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>ValidityRatio</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1a25dd0699e023593f623f436db3d4d16a" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>ValidLine</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1aff1805576b0ae7f1ba93341dfd4717b0" prot="private" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>VerticalClosing</name></member>
+      <member refid="classtesseract_1_1_cube_line_segmenter_1ac1873f1cd7f873c789c5c59bf3fd9f0b" prot="public" virt="non-virtual"><scope>tesseract::CubeLineSegmenter</scope><name>~CubeLineSegmenter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,493 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_neuron" kind="class" prot="public">
+    <compoundname>tesseract::Neuron</compoundname>
+    <includes refid="neuron_8h" local="no">neuron.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classtesseract_1_1_neuron_1aaca04e8e86b6305b6ef5cafa97a69ccc" prot="public" static="no">
+        <name>NeuronTypes</name>
+        <enumvalue id="classtesseract_1_1_neuron_1aaca04e8e86b6305b6ef5cafa97a69ccca8a5c16f1c34dd4b835bcbedfdcd2a8b3" prot="public">
+          <name>Unknown</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtesseract_1_1_neuron_1aaca04e8e86b6305b6ef5cafa97a69cccabf08baf29ab216392a1f0ad5c439d220" prot="public">
+          <name>Input</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtesseract_1_1_neuron_1aaca04e8e86b6305b6ef5cafa97a69ccca98cb3df28d5382cccc5471de1a31cc45" prot="public">
+          <name>Hidden</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtesseract_1_1_neuron_1aaca04e8e86b6305b6ef5cafa97a69ccca7763743f69f362cb5e9f885457389f14" prot="public">
+          <name>Output</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="27" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="27" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_neuron_1a4373a2ce8c99d78cb25cd9e68bc6b106" prot="protected" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_neuron_1aaca04e8e86b6305b6ef5cafa97a69ccc" kindref="member">NeuronTypes</ref></type>
+        <definition>NeuronTypes tesseract::Neuron::node_type_</definition>
+        <argsstring></argsstring>
+        <name>node_type_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="123" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_neuron_1acf182e566805bb493276be54e8b07b5a" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::Neuron::id_</definition>
+        <argsstring></argsstring>
+        <name>id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="125" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_neuron_1a51752dcc36486a7299eeb6ae3761fcd4" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float tesseract::Neuron::bias_</definition>
+        <argsstring></argsstring>
+        <name>bias_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="127" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_neuron_1af5b3c2c30dea3732624df7e23b62f8df" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float tesseract::Neuron::activation_</definition>
+        <argsstring></argsstring>
+        <name>activation_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="129" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_neuron_1aecec05557a84adbe5ebc74714bae0d93" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float tesseract::Neuron::output_</definition>
+        <argsstring></argsstring>
+        <name>output_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="131" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_neuron_1a94802e87a7f08527f75cb9e051cc0605" prot="protected" static="no" mutable="no">
+        <type>vector&lt; <ref refid="classtesseract_1_1_neuron" kindref="compound">Neuron</ref> * &gt;</type>
+        <definition>vector&lt;Neuron *&gt; tesseract::Neuron::fan_in_</definition>
+        <argsstring></argsstring>
+        <name>fan_in_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="133" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_neuron_1ad56351b172a4616dceec90f5d7fe984b" prot="protected" static="no" mutable="no">
+        <type>vector&lt; float * &gt;</type>
+        <definition>vector&lt;float *&gt; tesseract::Neuron::fan_in_weights_</definition>
+        <argsstring></argsstring>
+        <name>fan_in_weights_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="135" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_neuron_1a2b109732594a4fd6240995520eb9a225" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool tesseract::Neuron::frwd_dirty_</definition>
+        <argsstring></argsstring>
+        <name>frwd_dirty_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="141" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_neuron_1a3e21eafa1a7015d1a14a321621e724aa" prot="protected" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float tesseract::Neuron::kSigmoidTable</definition>
+        <argsstring>[]</argsstring>
+        <name>kSigmoidTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="138" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_neuron_1a7cad293101c8b65b5cc7330abd989cba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Neuron::Neuron</definition>
+        <argsstring>()</argsstring>
+        <name>Neuron</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="33" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.cpp" bodystart="17" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neuron_1aabed977ad58b676ecbbe061065d66f51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Neuron::~Neuron</definition>
+        <argsstring>()</argsstring>
+        <name>~Neuron</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="34" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.cpp" bodystart="22" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neuron_1a54f61762c8e4573804bea699ff7b9311" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Neuron::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="37" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neuron_1a2620b6621c27ccc5386978fabbc5d045" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class BuffType</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>template bool tesseract::Neuron::ReadBinary</definition>
+        <argsstring>(BuffType *input_buff)</argsstring>
+        <name>ReadBinary</name>
+        <param>
+          <type>BuffType *</type>
+          <declname>input_buff</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="42" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="42" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neuron_1a7363a0f331c6b0d493b05280fd9dab46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Neuron::AddFromConnection</definition>
+        <argsstring>(Neuron *neuron_vec, float *wts_offset, int from_cnt)</argsstring>
+        <name>AddFromConnection</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_neuron" kindref="compound">Neuron</ref> *</type>
+          <declname>neuron_vec</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>wts_offset</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>from_cnt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="81" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.cpp" bodystart="74" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neuron_1af4e0f355208188f9d6017166153d18f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Neuron::set_node_type</definition>
+        <argsstring>(NeuronTypes type)</argsstring>
+        <name>set_node_type</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_neuron_1aaca04e8e86b6305b6ef5cafa97a69ccc" kindref="member">NeuronTypes</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="85" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.cpp" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neuron_1aacf58b3d21f61bf84e2815931f869464" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Neuron::FeedForward</definition>
+        <argsstring>()</argsstring>
+        <name>FeedForward</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="88" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.cpp" bodystart="39" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neuron_1ac5d956e226190d1cf2d021493beeb1b8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float tesseract::Neuron::output</definition>
+        <argsstring>() const </argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="93" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="93" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neuron_1ab672142abe2db452d9085ecb6689e25d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Neuron::set_output</definition>
+        <argsstring>(float out_val)</argsstring>
+        <name>set_output</name>
+        <param>
+          <type>float</type>
+          <declname>out_val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="96" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="96" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neuron_1a0c1f2386bd491c36c87852b4a6bfa121" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::Neuron::id</definition>
+        <argsstring>() const </argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="99" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="99" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neuron_1a640f3c1af33401c7b7da18ccd49ee68e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::Neuron::fan_in_cnt</definition>
+        <argsstring>() const </argsstring>
+        <name>fan_in_cnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="102" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="102" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neuron_1a34a3470583c330d6e6c46a3e2a81c012" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtesseract_1_1_neuron" kindref="compound">Neuron</ref> *</type>
+        <definition>Neuron* tesseract::Neuron::fan_in</definition>
+        <argsstring>(int idx) const </argsstring>
+        <name>fan_in</name>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="105" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="105" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neuron_1ac92db227c777f36a8c6aee05c1f1d766" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float tesseract::Neuron::fan_in_wts</definition>
+        <argsstring>(int idx) const </argsstring>
+        <name>fan_in_wts</name>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="108" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="108" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neuron_1a29d8526568d7b1a5df75065712e03868" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Neuron::set_id</definition>
+        <argsstring>(int id)</argsstring>
+        <name>set_id</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="111" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="111" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neuron_1a76332b030bf687b40e64dda184e618a0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float tesseract::Neuron::bias</definition>
+        <argsstring>() const </argsstring>
+        <name>bias</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="114" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="114" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_neuron_1aa42ba2b8ca765112ad135ad4383e9a2f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtesseract_1_1_neuron_1aaca04e8e86b6305b6ef5cafa97a69ccc" kindref="member">Neuron::NeuronTypes</ref></type>
+        <definition>Neuron::NeuronTypes tesseract::Neuron::node_type</definition>
+        <argsstring>() const </argsstring>
+        <name>node_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="117" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="117" bodyend="119"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classtesseract_1_1_neuron_1a6b38598355a4ebd977f20f0582db3d49" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float tesseract::Neuron::Sigmoid</definition>
+        <argsstring>(float activation)</argsstring>
+        <name>Sigmoid</name>
+        <param>
+          <type>float</type>
+          <declname>activation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="91" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.cpp" bodystart="85" bodyend="93"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classtesseract_1_1_neuron_1aa7d2dbd60eb9b1658235231328d433f6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Neuron::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="143" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.cpp" bodystart="26" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" line="24" column="1" bodyfile="/Users/makoto/Desktop/trunk/neural_networks/runtime/neuron.h" bodystart="24" bodyend="144"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_neuron_1af5b3c2c30dea3732624df7e23b62f8df" prot="protected" virt="non-virtual"><scope>tesseract::Neuron</scope><name>activation_</name></member>
+      <member refid="classtesseract_1_1_neuron_1a7363a0f331c6b0d493b05280fd9dab46" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>AddFromConnection</name></member>
+      <member refid="classtesseract_1_1_neuron_1a76332b030bf687b40e64dda184e618a0" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>bias</name></member>
+      <member refid="classtesseract_1_1_neuron_1a51752dcc36486a7299eeb6ae3761fcd4" prot="protected" virt="non-virtual"><scope>tesseract::Neuron</scope><name>bias_</name></member>
+      <member refid="classtesseract_1_1_neuron_1a54f61762c8e4573804bea699ff7b9311" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>Clear</name></member>
+      <member refid="classtesseract_1_1_neuron_1a34a3470583c330d6e6c46a3e2a81c012" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>fan_in</name></member>
+      <member refid="classtesseract_1_1_neuron_1a94802e87a7f08527f75cb9e051cc0605" prot="protected" virt="non-virtual"><scope>tesseract::Neuron</scope><name>fan_in_</name></member>
+      <member refid="classtesseract_1_1_neuron_1a640f3c1af33401c7b7da18ccd49ee68e" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>fan_in_cnt</name></member>
+      <member refid="classtesseract_1_1_neuron_1ad56351b172a4616dceec90f5d7fe984b" prot="protected" virt="non-virtual"><scope>tesseract::Neuron</scope><name>fan_in_weights_</name></member>
+      <member refid="classtesseract_1_1_neuron_1ac92db227c777f36a8c6aee05c1f1d766" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>fan_in_wts</name></member>
+      <member refid="classtesseract_1_1_neuron_1aacf58b3d21f61bf84e2815931f869464" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>FeedForward</name></member>
+      <member refid="classtesseract_1_1_neuron_1a2b109732594a4fd6240995520eb9a225" prot="protected" virt="non-virtual"><scope>tesseract::Neuron</scope><name>frwd_dirty_</name></member>
+      <member refid="classtesseract_1_1_neuron_1aaca04e8e86b6305b6ef5cafa97a69ccca98cb3df28d5382cccc5471de1a31cc45" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>Hidden</name></member>
+      <member refid="classtesseract_1_1_neuron_1a0c1f2386bd491c36c87852b4a6bfa121" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>id</name></member>
+      <member refid="classtesseract_1_1_neuron_1acf182e566805bb493276be54e8b07b5a" prot="protected" virt="non-virtual"><scope>tesseract::Neuron</scope><name>id_</name></member>
+      <member refid="classtesseract_1_1_neuron_1aa7d2dbd60eb9b1658235231328d433f6" prot="protected" virt="non-virtual"><scope>tesseract::Neuron</scope><name>Init</name></member>
+      <member refid="classtesseract_1_1_neuron_1aaca04e8e86b6305b6ef5cafa97a69cccabf08baf29ab216392a1f0ad5c439d220" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>Input</name></member>
+      <member refid="classtesseract_1_1_neuron_1a3e21eafa1a7015d1a14a321621e724aa" prot="protected" virt="non-virtual"><scope>tesseract::Neuron</scope><name>kSigmoidTable</name></member>
+      <member refid="classtesseract_1_1_neuron_1a7cad293101c8b65b5cc7330abd989cba" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>Neuron</name></member>
+      <member refid="classtesseract_1_1_neuron_1aaca04e8e86b6305b6ef5cafa97a69ccc" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>NeuronTypes</name></member>
+      <member refid="classtesseract_1_1_neuron_1aa42ba2b8ca765112ad135ad4383e9a2f" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>node_type</name></member>
+      <member refid="classtesseract_1_1_neuron_1a4373a2ce8c99d78cb25cd9e68bc6b106" prot="protected" virt="non-virtual"><scope>tesseract::Neuron</scope><name>node_type_</name></member>
+      <member refid="classtesseract_1_1_neuron_1ac5d956e226190d1cf2d021493beeb1b8" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>output</name></member>
+      <member refid="classtesseract_1_1_neuron_1aaca04e8e86b6305b6ef5cafa97a69ccca7763743f69f362cb5e9f885457389f14" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>Output</name></member>
+      <member refid="classtesseract_1_1_neuron_1aecec05557a84adbe5ebc74714bae0d93" prot="protected" virt="non-virtual"><scope>tesseract::Neuron</scope><name>output_</name></member>
+      <member refid="classtesseract_1_1_neuron_1a2620b6621c27ccc5386978fabbc5d045" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>ReadBinary</name></member>
+      <member refid="classtesseract_1_1_neuron_1a29d8526568d7b1a5df75065712e03868" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>set_id</name></member>
+      <member refid="classtesseract_1_1_neuron_1af4e0f355208188f9d6017166153d18f9" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>set_node_type</name></member>
+      <member refid="classtesseract_1_1_neuron_1ab672142abe2db452d9085ecb6689e25d" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>set_output</name></member>
+      <member refid="classtesseract_1_1_neuron_1a6b38598355a4ebd977f20f0582db3d49" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>Sigmoid</name></member>
+      <member refid="classtesseract_1_1_neuron_1aaca04e8e86b6305b6ef5cafa97a69ccca8a5c16f1c34dd4b835bcbedfdcd2a8b3" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>Unknown</name></member>
+      <member refid="classtesseract_1_1_neuron_1aabed977ad58b676ecbbe061065d66f51" prot="public" virt="non-virtual"><scope>tesseract::Neuron</scope><name>~Neuron</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

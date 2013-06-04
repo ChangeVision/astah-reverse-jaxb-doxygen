@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="quadlsq_8h" kind="file">
+    <compoundname>quadlsq.h</compoundname>
+    <includes refid="points_8h" local="yes">points.h</includes>
+    <includedby refid="quadlsq_8cpp" local="yes">ccstruct/quadlsq.cpp</includedby>
+    <includedby refid="quspline_8cpp" local="yes">ccstruct/quspline.cpp</includedby>
+    <includedby refid="oldbasel_8cpp" local="yes">textord/oldbasel.cpp</includedby>
+    <incdepgraph>
+      <node id="10769">
+        <label>stdlib.h</label>
+      </node>
+      <node id="10766">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="10767" relation="include">
+        </childnode>
+      </node>
+      <node id="10768">
+        <label>serialis.h</label>
+        <link refid="serialis_8h"/>
+        <childnode refid="10769" relation="include">
+        </childnode>
+        <childnode refid="10770" relation="include">
+        </childnode>
+        <childnode refid="10762" relation="include">
+        </childnode>
+        <childnode refid="10771" relation="include">
+        </childnode>
+        <childnode refid="10773" relation="include">
+        </childnode>
+        <childnode refid="10774" relation="include">
+        </childnode>
+      </node>
+      <node id="10760">
+        <label>ccstruct/quadlsq.h</label>
+        <link refid="quadlsq.h"/>
+        <childnode refid="10761" relation="include">
+        </childnode>
+      </node>
+      <node id="10772">
+        <label>stddef.h</label>
+      </node>
+      <node id="10773">
+        <label>errcode.h</label>
+        <link refid="errcode_8h"/>
+        <childnode refid="10765" relation="include">
+        </childnode>
+      </node>
+      <node id="10767">
+        <label>limits.h</label>
+      </node>
+      <node id="10776">
+        <label>ipoints.h</label>
+        <link refid="ipoints_8h"/>
+        <childnode refid="10763" relation="include">
+        </childnode>
+      </node>
+      <node id="10770">
+        <label>string.h</label>
+      </node>
+      <node id="10774">
+        <label>fileerr.h</label>
+        <link refid="fileerr_8h"/>
+        <childnode refid="10773" relation="include">
+        </childnode>
+      </node>
+      <node id="10763">
+        <label>math.h</label>
+      </node>
+      <node id="10775">
+        <label>lsterr.h</label>
+        <link refid="lsterr_8h"/>
+        <childnode refid="10773" relation="include">
+        </childnode>
+      </node>
+      <node id="10771">
+        <label>memry.h</label>
+        <link refid="memry_8h"/>
+        <childnode refid="10772" relation="include">
+        </childnode>
+        <childnode refid="10765" relation="include">
+        </childnode>
+      </node>
+      <node id="10764">
+        <label>elst.h</label>
+        <link refid="elst_8h"/>
+        <childnode refid="10762" relation="include">
+        </childnode>
+        <childnode refid="10765" relation="include">
+        </childnode>
+        <childnode refid="10768" relation="include">
+        </childnode>
+        <childnode refid="10775" relation="include">
+        </childnode>
+      </node>
+      <node id="10761">
+        <label>points.h</label>
+        <link refid="points_8h"/>
+        <childnode refid="10762" relation="include">
+        </childnode>
+        <childnode refid="10763" relation="include">
+        </childnode>
+        <childnode refid="10764" relation="include">
+        </childnode>
+        <childnode refid="10776" relation="include">
+        </childnode>
+      </node>
+      <node id="10765">
+        <label>host.h</label>
+        <link refid="host_8h"/>
+        <childnode refid="10766" relation="include">
+        </childnode>
+      </node>
+      <node id="10762">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="10780">
+        <label>textord/oldbasel.cpp</label>
+        <link refid="oldbasel_8cpp"/>
+      </node>
+      <node id="10779">
+        <label>ccstruct/quspline.cpp</label>
+        <link refid="quspline_8cpp"/>
+      </node>
+      <node id="10777">
+        <label>ccstruct/quadlsq.h</label>
+        <link refid="quadlsq.h"/>
+        <childnode refid="10778" relation="include">
+        </childnode>
+        <childnode refid="10779" relation="include">
+        </childnode>
+        <childnode refid="10780" relation="include">
+        </childnode>
+      </node>
+      <node id="10778">
+        <label>ccstruct/quadlsq.cpp</label>
+        <link refid="quadlsq_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_q_l_s_q" prot="public">QLSQ</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>quadlsq.h<sp/><sp/>(Formerly<sp/>qlsq.h)</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Description:<sp/>Code<sp/>for<sp/>least<sp/>squares<sp/>approximation<sp/>of<sp/>quadratics.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Author:<sp/><sp/><sp/><sp/><sp/><sp/>Ray<sp/>Smith</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Created:<sp/><sp/><sp/><sp/><sp/>Wed<sp/>Oct<sp/><sp/>6<sp/>15:14:23<sp/>BST<sp/>1993</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>(C)<sp/>Copyright<sp/>1993,<sp/>Hewlett-Packard<sp/>Ltd.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>**<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>**<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>**<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>**<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>**<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>**<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>**<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>**<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>**<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>**********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QUADLSQ_H</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QUADLSQ_H</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;<ref refid="points_8h" kindref="compound">points.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="class_q_l_s_q" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_q_l_s_q" kindref="compound">QLSQ</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28" refid="class_q_l_s_q_1a397f12ae540c919ecd64f4fc17427501" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_q_l_s_q_1a397f12ae540c919ecd64f4fc17427501" kindref="member">QLSQ</ref>()<sp/>{<sp/><sp/></highlight><highlight class="comment">//constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_q_l_s_q_1a9f6ee88370df57093e248a2918ab20b2" kindref="member">clear</ref>();<sp/><sp/></highlight><highlight class="comment">//set<sp/>to<sp/>zeros</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_q_l_s_q_1a9f6ee88370df57093e248a2918ab20b2" kindref="member">clear</ref>();<sp/><sp/></highlight><highlight class="comment">//initialize</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_q_l_s_q_1adbbaa8f4d49392cc26b46fabc476cc88" kindref="member">add</ref>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//add<sp/>element</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/><sp/></highlight><highlight class="comment">//coords<sp/>to<sp/>add</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">remove</highlight><highlight class="normal">(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//delete<sp/>element</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/><sp/></highlight><highlight class="comment">//coords<sp/>to<sp/>delete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="39" refid="class_q_l_s_q_1a3ba6a079e2f2cea8c434393cfb0fcc61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/><ref refid="class_q_l_s_q_1a3ba6a079e2f2cea8c434393cfb0fcc61" kindref="member">count</ref>()<sp/>{<sp/><sp/></highlight><highlight class="comment">//no<sp/>of<sp/>elements</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>n;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_q_l_s_q_1a847b2fa0f918e971a56e8db0ce8ed18f" kindref="member">fit</ref>(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//fit<sp/>the<sp/>given</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>degree);<sp/><sp/></highlight><highlight class="comment">//return<sp/>actual</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="class_q_l_s_q_1a748cebc68a35dcb80970e2cfc1cace2d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_q_l_s_q_1a748cebc68a35dcb80970e2cfc1cace2d" kindref="member">get_a</ref>()<sp/>{<sp/><sp/></highlight><highlight class="comment">//get<sp/>x<sp/>squard</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48" refid="class_q_l_s_q_1ab8de83e0968609f28aa83854431e2593" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_q_l_s_q_1ab8de83e0968609f28aa83854431e2593" kindref="member">get_b</ref>()<sp/>{<sp/><sp/></highlight><highlight class="comment">//get<sp/>x<sp/>squard</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>b;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51" refid="class_q_l_s_q_1aeeedb9b168cef907167e4530dd4bf68a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_q_l_s_q_1aeeedb9b168cef907167e4530dd4bf68a" kindref="member">get_c</ref>()<sp/>{<sp/><sp/></highlight><highlight class="comment">//get<sp/>x<sp/>squard</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>c;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/>n;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//no<sp/>of<sp/>elements</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>a,<sp/>b,<sp/>c;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//result</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sigx;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//sum<sp/>of<sp/>x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sigy;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//sum<sp/>of<sp/>y</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sigxx;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//sum<sp/>x<sp/>squared</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sigxy;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//sum<sp/>of<sp/>xy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sigyy;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//sum<sp/>y<sp/>squared</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sigxxx;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//sum<sp/>x<sp/>cubed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sigxxy;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//sum<sp/>xsquared<sp/>y</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>sigxxxx;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//sum<sp/>x<sp/>fourth</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/ccstruct/quadlsq.h"/>
+  </compounddef>
+</doxygen>

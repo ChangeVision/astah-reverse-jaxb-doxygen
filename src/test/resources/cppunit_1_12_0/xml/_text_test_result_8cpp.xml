@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_text_test_result_8cpp" kind="file">
+    <compoundname>TextTestResult.cpp</compoundname>
+    <includes local="no">cppunit/Exception.h</includes>
+    <includes local="no">cppunit/Test.h</includes>
+    <includes local="no">cppunit/TestFailure.h</includes>
+    <includes local="no">cppunit/TextTestResult.h</includes>
+    <includes local="no">cppunit/TextOutputter.h</includes>
+    <includes local="no">cppunit/portability/Stream.h</includes>
+    <incdepgraph>
+      <node id="222">
+        <label>cppunit/TextOutputter.h</label>
+      </node>
+      <node id="217">
+        <label>src/cppunit/TextTestResult.cpp</label>
+        <link refid="TextTestResult.cpp"/>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="223" relation="include">
+        </childnode>
+      </node>
+      <node id="220">
+        <label>cppunit/TestFailure.h</label>
+      </node>
+      <node id="223">
+        <label>cppunit/portability/Stream.h</label>
+      </node>
+      <node id="218">
+        <label>cppunit/Exception.h</label>
+      </node>
+      <node id="221">
+        <label>cppunit/TextTestResult.h</label>
+      </node>
+      <node id="219">
+        <label>cppunit/Test.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_text_test_result_8cpp_1a8350942b5375090d78e25f0095883a5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>OStream &amp;</type>
+        <definition>OStream&amp; operator&lt;&lt;</definition>
+        <argsstring>(OStream &amp;stream, TextTestResult &amp;result)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>OStream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>TextTestResult &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TextTestResult.cpp" line="42" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TextTestResult.cpp" bodystart="43" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;cppunit/Exception.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cppunit/Test.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cppunit/TestFailure.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cppunit/TextTestResult.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cppunit/TextOutputter.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cppunit/portability/Stream.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">CPPUNIT_NS_BEGIN</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">TextTestResult::TextTestResult()</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>addListener(<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">TextTestResult::addFailure(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TestFailure<sp/>&amp;failure<sp/>)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>TestResultCollector::addFailure(<sp/>failure<sp/>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>stdCOut()<sp/>&lt;&lt;<sp/>(<sp/>failure.isError()<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;E&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;F&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">TextTestResult::startTest(<sp/>Test<sp/>*test<sp/>)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>TestResultCollector::startTest<sp/>(test);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>stdCOut()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">TextTestResult::print(<sp/>OStream<sp/>&amp;stream<sp/>)<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>TextOutputter<sp/>outputter(<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>stream<sp/>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>outputter.write();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">OStream<sp/>&amp;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><ref refid="_text_test_result_8cpp_1a8350942b5375090d78e25f0095883a5c" kindref="member">operator &lt;&lt;</ref>(<sp/>OStream<sp/>&amp;stream,<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TextTestResult<sp/>&amp;result<sp/>)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>result.print<sp/>(stream);<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stream;<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">CPPUNIT_NS_END</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/cppunit/TextTestResult.cpp"/>
+  </compounddef>
+</doxygen>

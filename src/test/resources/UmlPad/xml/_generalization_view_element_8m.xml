@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_generalization_view_element_8m" kind="file">
+    <compoundname>GeneralizationViewElement.m</compoundname>
+    <includes refid="_generalization_view_element_8h" local="yes">GeneralizationViewElement.h</includes>
+    <includes refid="_rect_helper_8h" local="yes">RectHelper.h</includes>
+    <incdepgraph>
+      <node id="1275">
+        <label>ViewElement.h</label>
+        <link refid="_view_element_8h"/>
+        <childnode refid="1273" relation="include">
+        </childnode>
+      </node>
+      <node id="1273">
+        <label>UIKit/UIKit.h</label>
+      </node>
+      <node id="1276">
+        <label>RectHelper.h</label>
+        <link refid="_rect_helper_8h"/>
+        <childnode refid="1271" relation="include">
+        </childnode>
+      </node>
+      <node id="1274">
+        <label>LinearViewElement.h</label>
+        <link refid="_linear_view_element_8h"/>
+        <childnode refid="1273" relation="include">
+        </childnode>
+        <childnode refid="1275" relation="include">
+        </childnode>
+      </node>
+      <node id="1271">
+        <label>Foundation/Foundation.h</label>
+      </node>
+      <node id="1272">
+        <label>ConnectorViewElement.h</label>
+        <link refid="_connector_view_element_8h"/>
+        <childnode refid="1273" relation="include">
+        </childnode>
+        <childnode refid="1274" relation="include">
+        </childnode>
+      </node>
+      <node id="1270">
+        <label>GeneralizationViewElement.h</label>
+        <link refid="_generalization_view_element_8h"/>
+        <childnode refid="1271" relation="include">
+        </childnode>
+        <childnode refid="1272" relation="include">
+        </childnode>
+      </node>
+      <node id="1269">
+        <label>Classes/GeneralizationViewElement.m</label>
+        <link refid="GeneralizationViewElement.m"/>
+        <childnode refid="1270" relation="include">
+        </childnode>
+        <childnode refid="1276" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>GeneralizationViewElement.m</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>UmlPad</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>梅田<sp/>政利<sp/>on<sp/>10/07/23.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>2010<sp/>Change<sp/>Vision.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_generalization_view_element_8h" kindref="compound">GeneralizationViewElement.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_rect_helper_8h" kindref="compound">RectHelper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">@implementation<sp/></highlight><highlight class="normal"><ref refid="interface_generalization_view_element" kindref="compound">GeneralizationViewElement</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">-<sp/>(void)drawRelatedStuff:(CGContextRef)context<sp/>rect:(CGRect)rect<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x1<sp/>=<sp/><ref refid="interface_connector_view_element_1a2c84fc15ba82de5ddbb75ebe33e562f7" kindref="member">target</ref>.center.x;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y1<sp/>=<sp/><ref refid="interface_connector_view_element_1a2c84fc15ba82de5ddbb75ebe33e562f7" kindref="member">target</ref>.center.y;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x2<sp/>=<sp/><ref refid="interface_connector_view_element_1a47e68c6b79ace67eb768e341ff0ea571" kindref="member">middle</ref>.x;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y2<sp/>=<sp/><ref refid="interface_connector_view_element_1a47e68c6b79ace67eb768e341ff0ea571" kindref="member">middle</ref>.y;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>CGPoint<sp/>intersect<sp/>=<sp/>[<ref refid="interface_rect_helper" kindref="compound">RectHelper</ref><sp/><ref refid="interface_rect_helper_1ae9eb93e64e16c21cb55c571a63daabec" kindref="member">getIntersection</ref>:target.frame<sp/><ref refid="interface_rect_helper_1ae9eb93e64e16c21cb55c571a63daabec" kindref="member">x1</ref>:x1<sp/><ref refid="interface_rect_helper_1ae9eb93e64e16c21cb55c571a63daabec" kindref="member">y1</ref>:y1<sp/><ref refid="interface_rect_helper_1ae9eb93e64e16c21cb55c571a63daabec" kindref="member">x2</ref>:x2<sp/><ref refid="interface_rect_helper_1ae9eb93e64e16c21cb55c571a63daabec" kindref="member">y2</ref>:y2];</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>intersect.x<sp/>-=<sp/>self.frame.origin.x;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>intersect.y<sp/>-=<sp/>self.frame.origin.y;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>theta<sp/>=<sp/>atan2(<ref refid="interface_connector_view_element_1a24251fe3f2ef33c3618c83ecee4167f4" kindref="member">targetPoint</ref>.y<sp/>-<sp/><ref refid="interface_connector_view_element_1afdff6e396fcb2711537e492dad777c95" kindref="member">middlePoint</ref>.y,<sp/><ref refid="interface_connector_view_element_1a24251fe3f2ef33c3618c83ecee4167f4" kindref="member">targetPoint</ref>.x<sp/>-<sp/><ref refid="interface_connector_view_element_1afdff6e396fcb2711537e492dad777c95" kindref="member">middlePoint</ref>.x);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>CGPoint<sp/>point<sp/>=<sp/>CGPointMake(intersect.x<sp/>-<sp/><ref refid="_connector_view_element_8h_1a23b80b90edf25fdbde707aaf4758a1ec" kindref="member">ARROW_SIZE</ref>,<sp/>intersect.y);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>theta1<sp/>=<sp/>theta<sp/>+<sp/>M_PI<sp/>/<sp/>6;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>theta2<sp/>=<sp/>theta<sp/>-<sp/>M_PI<sp/>/<sp/>6;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arrowX1<sp/>=<sp/>(point.x<sp/>-<sp/>intersect.x)<sp/>*<sp/>cos(theta1)<sp/>-<sp/>(point.y<sp/>-<sp/>intersect.y)<sp/>*<sp/>sin(theta1)<sp/>+<sp/>intersect.x;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arrowY1<sp/>=<sp/>(point.x<sp/>-<sp/>intersect.x)<sp/>*<sp/>sin(theta1)<sp/>+<sp/>(point.y<sp/>-<sp/>intersect.y)<sp/>*<sp/>cos(theta1)<sp/>+<sp/>intersect.y;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arrowX2<sp/>=<sp/>(point.x<sp/>-<sp/>intersect.x)<sp/>*<sp/>cos(theta2)<sp/>-<sp/>(point.y<sp/>-<sp/>intersect.y)<sp/>*<sp/>sin(theta2)<sp/>+<sp/>intersect.x;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>arrowY2<sp/>=<sp/>(point.x<sp/>-<sp/>intersect.x)<sp/>*<sp/>sin(theta2)<sp/>+<sp/>(point.y<sp/>-<sp/>intersect.y)<sp/>*<sp/>cos(theta2)<sp/>+<sp/>intersect.y;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>CGPoint<sp/>pointArray[]<sp/>=<sp/>{CGPointMake(arrowX1,<sp/>arrowY1),<sp/>intersect,<sp/>CGPointMake(arrowX2,<sp/>arrowY2),<sp/>CGPointMake(arrowX1,<sp/>arrowY1)};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>CGContextSetRGBFillColor(context,<sp/>1.0,<sp/>1.0,<sp/>1.0,<sp/>1.0);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>CGContextAddLines(context,<sp/>pointArray,<sp/>3);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>CGContextFillPath(context);<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>CGContextSetRGBStrokeColor(context,<sp/>0.0,<sp/>0.0,<sp/>0.0,<sp/>1.0);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>CGContextSetLineWidth(context,<sp/><ref refid="_view_element_8h_1a666201b429d62c0cc1bd9f464c0fafb3" kindref="member">LINE_WIDTH</ref>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>CGContextSetLineJoin(context,<sp/>kCGLineJoinMiter);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>CGContextSetLineCap(context,<sp/>kCGLineCapSquare);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>CGContextAddLines(context,<sp/>pointArray,<sp/>4);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>CGContextStrokePath(context);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/GeneralizationViewElement.m"/>
+  </compounddef>
+</doxygen>

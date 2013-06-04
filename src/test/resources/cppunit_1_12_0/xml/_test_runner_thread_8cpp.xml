@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_test_runner_thread_8cpp" kind="file">
+    <compoundname>TestRunnerThread.cpp</compoundname>
+    <includes refid="_test_runner_thread_8h" local="yes">TestRunnerThread.h</includes>
+    <includes refid="_test_runner_thread_finished_event_8h" local="yes">TestRunnerThreadFinishedEvent.h</includes>
+    <incdepgraph>
+      <node id="1496">
+        <label>TestRunnerThreadFinishedEvent.h</label>
+        <link refid="_test_runner_thread_finished_event_8h"/>
+        <childnode refid="1497" relation="include">
+        </childnode>
+      </node>
+      <node id="1497">
+        <label>TestRunnerThreadEvent.h</label>
+        <link refid="_test_runner_thread_event_8h"/>
+        <childnode refid="1498" relation="include">
+        </childnode>
+      </node>
+      <node id="1492">
+        <label>TestRunnerThread.h</label>
+        <link refid="_test_runner_thread_8h"/>
+        <childnode refid="1493" relation="include">
+        </childnode>
+        <childnode refid="1494" relation="include">
+        </childnode>
+        <childnode refid="1495" relation="include">
+        </childnode>
+      </node>
+      <node id="1498">
+        <label>qevent.h</label>
+      </node>
+      <node id="1495">
+        <label>cppunit/TestResult.h</label>
+      </node>
+      <node id="1493">
+        <label>qthread.h</label>
+      </node>
+      <node id="1491">
+        <label>src/qttestrunner/TestRunnerThread.cpp</label>
+        <link refid="TestRunnerThread.cpp"/>
+        <childnode refid="1492" relation="include">
+        </childnode>
+        <childnode refid="1496" relation="include">
+        </childnode>
+      </node>
+      <node id="1494">
+        <label>cppunit/Test.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>//////////////////////////////////////////////////////////////////////////</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Implementation<sp/>file<sp/>TestRunnerThread.cpp<sp/>for<sp/>class<sp/>TestRunnerThread</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(c)Copyright<sp/>2000,<sp/>Baptiste<sp/>Lepilleur.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created:<sp/>2001/09/22</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>//////////////////////////////////////////////////////////////////////////</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_test_runner_thread_8h" kindref="compound">TestRunnerThread.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_test_runner_thread_finished_event_8h" kindref="compound">TestRunnerThreadFinishedEvent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="class_test_runner_thread_1a95ee0edd6faa83cefe8f9812bcc84262" kindref="member">TestRunnerThread::TestRunnerThread</ref>(<sp/>CPPUNIT_NS::Test<sp/>*testToRun,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CPPUNIT_NS::TestResult<sp/>*result,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QObject<sp/>*eventTarget,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_runner_thread_finished_event" kindref="compound">TestRunnerThreadFinishedEvent</ref><sp/>*finishedEvent<sp/>)<sp/>:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>_testToRun(<sp/>testToRun<sp/>),</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>_result(<sp/>result<sp/>),</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>_eventTarget(<sp/>eventTarget<sp/>),</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>_finishedEvent(<sp/>finishedEvent<sp/>)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>start();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><ref refid="class_test_runner_thread_1aa6b6960a57f0153e5511dfb0cb89d7e9" kindref="member" tooltip="Destructor. ">TestRunnerThread::‾TestRunnerThread</ref>()</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">TestRunnerThread::run()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>_testToRun-&gt;run(<sp/>_result<sp/>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Signal<sp/>TestRunnerModel<sp/>GUI<sp/>thread</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>QThread::postEvent(<sp/>_eventTarget,<sp/>_finishedEvent<sp/>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>_eventTarget<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>_finishedEvent<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerThread.cpp"/>
+  </compounddef>
+</doxygen>

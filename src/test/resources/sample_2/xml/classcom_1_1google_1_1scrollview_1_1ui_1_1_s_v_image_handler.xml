@@ -1,0 +1,370 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler" kind="class" prot="public">
+    <compoundname>com::google::scrollview::ui::SVImageHandler</compoundname>
+      <sectiondef kind="package-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1acb563126b52587d32e1156c5d9d95a82" prot="package" static="yes" mutable="no">
+        <type>HashMap&lt; String, PImage &gt;</type>
+        <definition>HashMap&lt;String, PImage&gt; com.google.scrollview.ui.SVImageHandler.images</definition>
+        <argsstring></argsstring>
+        <name>images</name>
+        <initializer>= new HashMap&lt;String, PImage&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stores a mapping from the name of the string to its actual image. It enables us to re-use images without having to load or transmit them again </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" line="31" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1ababfad1e66b39e9bb0c2f6998c2ee190" prot="package" static="yes" mutable="no">
+        <type>boolean</type>
+        <definition>boolean com.google.scrollview.ui.SVImageHandler.readImageData</definition>
+        <argsstring></argsstring>
+        <name>readImageData</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A global flag stating whether we are currently expecting Image data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" line="34" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1ab37a878f5034f8a5987599e36505cdce" prot="package" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String com.google.scrollview.ui.SVImageHandler.imageName</definition>
+        <argsstring></argsstring>
+        <name>imageName</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>These are all values belonging to the image which is currently being read </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" line="38" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a61ea729cbd0e52d4b3456289c17a024b" prot="package" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int com.google.scrollview.ui.SVImageHandler.bytesRead</definition>
+        <argsstring></argsstring>
+        <name>bytesRead</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" line="39" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a01ff12d69b5f63dea35e73fe2a957098" prot="package" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int com.google.scrollview.ui.SVImageHandler.bpp</definition>
+        <argsstring></argsstring>
+        <name>bpp</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" line="40" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1aa6a6364b6286609dc253eb206b96fcfd" prot="package" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int com.google.scrollview.ui.SVImageHandler.pictureArray[]</definition>
+        <argsstring>[]</argsstring>
+        <name>pictureArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" line="41" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a2eb56f18bcd41021c69469a7666967d5" prot="package" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int com.google.scrollview.ui.SVImageHandler.bytePerPixel</definition>
+        <argsstring></argsstring>
+        <name>bytePerPixel</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" line="43" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a4b3324a0863e2b11e9859204af522ad3" prot="package" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int com.google.scrollview.ui.SVImageHandler.width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" line="45" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a4b52ffa369937cf5706a7711fc87bfb7" prot="package" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int com.google.scrollview.ui.SVImageHandler.height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" line="46" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a5bc797b8c91c14c67bd6ce7513613403" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.google.scrollview.ui.SVImageHandler.SVImageHandler</definition>
+        <argsstring>()</argsstring>
+        <name>SVImageHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" line="49" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" bodystart="49" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a9e4f39f4dfaf982fd2e4a3c8a719cf71" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>static int [] com.google.scrollview.ui.SVImageHandler.processBinaryImage</definition>
+        <argsstring>(String inputLine)</argsstring>
+        <name>processBinaryImage</name>
+        <param>
+          <type>String</type>
+          <declname>inputLine</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Takes a binary input string (consisting of &apos;0&apos; and &apos;1&apos; characters) and converts it to an integer representation usable as image data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" line="56" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" bodystart="56" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1aade09728b66a1146736e05e2f7273479" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>static int [] com.google.scrollview.ui.SVImageHandler.processGrayImage</definition>
+        <argsstring>(String inputLine)</argsstring>
+        <name>processGrayImage</name>
+        <param>
+          <type>String</type>
+          <declname>inputLine</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Takes an input string with pixel depth of 8 (represented by 2 bytes in hexadecimal format, e.g. FF for white) and converts it to an integer representation usable as image data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" line="83" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" bodystart="83" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a093185c9aaf0b41f77b931cf18906609" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>static int [] com.google.scrollview.ui.SVImageHandler.process32bppImage</definition>
+        <argsstring>(String inputLine)</argsstring>
+        <name>process32bppImage</name>
+        <param>
+          <type>String</type>
+          <declname>inputLine</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Takes an input string with pixel depth of 32 (represented by HTML-like colors in hexadecimal format, e.g. #00FF00 for green) and converts it to an integer representation usable as image data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" line="100" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" bodystart="100" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1afca8352a6cc992df0a0fc4eb1b6c4f7d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.google.scrollview.ui.SVImageHandler.closeImage</definition>
+        <argsstring>()</argsstring>
+        <name>closeImage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when all image data is transmitted. Generates the actual image used by java and puts it into the images-hashmap. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" line="116" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" bodystart="116" bodyend="143"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a86f7eba22aa97e4f3ed7fce24e6a22e5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.google.scrollview.ui.SVImageHandler.createImage</definition>
+        <argsstring>(String name, int width, int height, int bitsPerPixel)</argsstring>
+        <name>createImage</name>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bitsPerPixel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts creation of a new image. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" line="146" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" bodystart="146" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a5e86dc56c333b52333ceed3996e7677b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.google.scrollview.ui.SVImageHandler.openImage</definition>
+        <argsstring>(String location)</argsstring>
+        <name>openImage</name>
+        <param>
+          <type>String</type>
+          <declname>location</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Opens an Image from location. This means the image does not have to be actually transfered over the network. Thus, it is a lot faster than using the createImage method.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>location</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The (local) location from where to open the file. This is also the internal name associated with the image (if you want to draw it). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" line="183" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" bodystart="183" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1aaa60c2511aa95d830494f5c196ae2eb0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>PImage</type>
+        <definition>static PImage com.google.scrollview.ui.SVImageHandler.getImage</definition>
+        <argsstring>(String name)</argsstring>
+        <name>getImage</name>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Find the image corresponding to a given name </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" line="189" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" bodystart="189" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a15797ee62854070fadb2fdbf1cf1fec6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.google.scrollview.ui.SVImageHandler.parseData</definition>
+        <argsstring>(String inputLine)</argsstring>
+        <name>parseData</name>
+        <param>
+          <type>String</type>
+          <declname>inputLine</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets called while currently reading image data. Decides, how to process it (which image type, whether all data is there). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" line="197" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" bodystart="197" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1ae8bca7b74ae44c36798cfd4df2fe8cf7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>static boolean com.google.scrollview.ui.SVImageHandler.getReadImageData</definition>
+        <argsstring>()</argsstring>
+        <name>getReadImageData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether we a currently reading image data or not </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" line="220" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" bodystart="220" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a6e566ce3033bb85a12fa8d43cd62e252" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.google.scrollview.ui.SVImageHandler.getMissingRemainingBytes</definition>
+        <argsstring>()</argsstring>
+        <name>getMissingRemainingBytes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes how many bytes of the image data are still missing </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" line="225" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" bodystart="225" bodyend="227"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The ScrollViewImageHandler is a helper class which takes care of image processing. It is used to construct an Image from the message-stream and basically consists of a number of utility functions to process the input stream.</para><para><simplesect kind="author"><para><ulink url="mailto:wanke@google.com">wanke@google.com</ulink> </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="1960">
+        <label>HashMap&lt; String, PImage &gt;</label>
+      </node>
+      <node id="1959">
+        <label>com.google.scrollview.ui.SVImageHandler</label>
+        <link refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler"/>
+        <childnode refid="1960" relation="usage">
+          <edgelabel>images</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" line="26" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVImageHandler.java" bodystart="26" bodyend="228"/>
+    <listofallmembers>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a01ff12d69b5f63dea35e73fe2a957098" prot="package" virt="non-virtual"><scope>com::google::scrollview::ui::SVImageHandler</scope><name>bpp</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a2eb56f18bcd41021c69469a7666967d5" prot="package" virt="non-virtual"><scope>com::google::scrollview::ui::SVImageHandler</scope><name>bytePerPixel</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a61ea729cbd0e52d4b3456289c17a024b" prot="package" virt="non-virtual"><scope>com::google::scrollview::ui::SVImageHandler</scope><name>bytesRead</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1afca8352a6cc992df0a0fc4eb1b6c4f7d" prot="private" virt="non-virtual"><scope>com::google::scrollview::ui::SVImageHandler</scope><name>closeImage</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a86f7eba22aa97e4f3ed7fce24e6a22e5" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVImageHandler</scope><name>createImage</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1aaa60c2511aa95d830494f5c196ae2eb0" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVImageHandler</scope><name>getImage</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a6e566ce3033bb85a12fa8d43cd62e252" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVImageHandler</scope><name>getMissingRemainingBytes</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1ae8bca7b74ae44c36798cfd4df2fe8cf7" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVImageHandler</scope><name>getReadImageData</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a4b52ffa369937cf5706a7711fc87bfb7" prot="package" virt="non-virtual"><scope>com::google::scrollview::ui::SVImageHandler</scope><name>height</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1ab37a878f5034f8a5987599e36505cdce" prot="package" virt="non-virtual"><scope>com::google::scrollview::ui::SVImageHandler</scope><name>imageName</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1acb563126b52587d32e1156c5d9d95a82" prot="package" virt="non-virtual"><scope>com::google::scrollview::ui::SVImageHandler</scope><name>images</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a5e86dc56c333b52333ceed3996e7677b" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVImageHandler</scope><name>openImage</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a15797ee62854070fadb2fdbf1cf1fec6" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVImageHandler</scope><name>parseData</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1aa6a6364b6286609dc253eb206b96fcfd" prot="package" virt="non-virtual"><scope>com::google::scrollview::ui::SVImageHandler</scope><name>pictureArray</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a093185c9aaf0b41f77b931cf18906609" prot="private" virt="non-virtual"><scope>com::google::scrollview::ui::SVImageHandler</scope><name>process32bppImage</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a9e4f39f4dfaf982fd2e4a3c8a719cf71" prot="private" virt="non-virtual"><scope>com::google::scrollview::ui::SVImageHandler</scope><name>processBinaryImage</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1aade09728b66a1146736e05e2f7273479" prot="private" virt="non-virtual"><scope>com::google::scrollview::ui::SVImageHandler</scope><name>processGrayImage</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1ababfad1e66b39e9bb0c2f6998c2ee190" prot="package" virt="non-virtual"><scope>com::google::scrollview::ui::SVImageHandler</scope><name>readImageData</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a5bc797b8c91c14c67bd6ce7513613403" prot="private" virt="non-virtual"><scope>com::google::scrollview::ui::SVImageHandler</scope><name>SVImageHandler</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_image_handler_1a4b3324a0863e2b11e9859204af522ad3" prot="package" virt="non-virtual"><scope>com::google::scrollview::ui::SVImageHandler</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

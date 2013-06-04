@@ -1,0 +1,1076 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="class_test_runner_model" kind="class" prot="public">
+    <compoundname>TestRunnerModel</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QObject</basecompoundref>
+    <basecompoundref prot="private" virt="non-virtual">TestListener</basecompoundref>
+    <basecompoundref refid="class_test_runner_model_thread_interface" prot="private" virt="non-virtual">TestRunnerModelThreadInterface</basecompoundref>
+    <derivedcompoundref refid="class_test_plug_in_runner_model" prot="public" virt="non-virtual">TestPlugInRunnerModel</derivedcompoundref>
+    <includes refid="msvc6_2testrunner_2_test_runner_model_8h" local="no">TestRunnerModel.h</includes>
+    <innerclass refid="class_test_runner_model_1_1_lock_guard" prot="private">TestRunnerModel::LockGuard</innerclass>
+    <innerclass refid="struct_test_runner_model_1_1_settings" prot="public">TestRunnerModel::Settings</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_test_runner_model_1a81b3e71d164167b94c0ff686d37f8a4c" prot="public" static="no">
+        <type>::deque&lt; ::Test * &gt;</type>
+        <definition>typedef ::deque&lt; ::Test *&gt; TestRunnerModel::History</definition>
+        <argsstring></argsstring>
+        <name>History</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="32" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_test_runner_model_1a27206a66322c9fe42a2709776905d2ef" prot="public" static="yes" mutable="no">
+        <type>const CString</type>
+        <definition>const CString TestRunnerModel::settingKey</definition>
+        <argsstring></argsstring>
+        <name>settingKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="19" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_model_1ad372ff9068431cfffea9ef56e54243f3" prot="public" static="yes" mutable="no">
+        <type>const CString</type>
+        <definition>const CString TestRunnerModel::settingMainDialogKey</definition>
+        <argsstring></argsstring>
+        <name>settingMainDialogKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="20" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_model_1ac431acb0b47dc908dd1fc26d72de1d27" prot="public" static="yes" mutable="no">
+        <type>const CString</type>
+        <definition>const CString TestRunnerModel::settingBrowseDialogKey</definition>
+        <argsstring></argsstring>
+        <name>settingBrowseDialogKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="21" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_test_runner_model_1a3f5ad117905c1f0765b7848e9a0a807a" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_test_runner_model_1a81b3e71d164167b94c0ff686d37f8a4c" kindref="member">History</ref></type>
+        <definition>History TestRunnerModel::m_history</definition>
+        <argsstring></argsstring>
+        <name>m_history</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="75" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_model_1a70f4f090f67752ace3bf61aeaa86d187" prot="protected" static="no" mutable="no">
+        <type>::Test *</type>
+        <definition>::Test* TestRunnerModel::m_rootTest</definition>
+        <argsstring></argsstring>
+        <name>m_rootTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="77" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_test_runner_model_1ab299861f1542e32835d3ffb10fa6d5a7" prot="private" static="no" mutable="no">
+        <type>QMutex</type>
+        <definition>QMutex TestRunnerModel::_lock</definition>
+        <argsstring></argsstring>
+        <name>_lock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="137" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_model_1ab8be6f643b38d37aef1b158b6652c220" prot="private" static="no" mutable="no">
+        <type>::Test *</type>
+        <definition>::Test* TestRunnerModel::_rootTest</definition>
+        <argsstring></argsstring>
+        <name>_rootTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="138" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_model_1a0e4b78951235eac1360d421b48d330e2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TestRunnerModel::_numberOfTestCase</definition>
+        <argsstring></argsstring>
+        <name>_numberOfTestCase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="139" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_model_1ad1c812d2f9330250cf079877b00cd72a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TestRunnerModel::_numberOfTestCaseRun</definition>
+        <argsstring></argsstring>
+        <name>_numberOfTestCaseRun</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="140" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_model_1a7b9302f5665e5d90d880948b3c025edb" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TestRunnerModel::_numberOfTestCaseFailure</definition>
+        <argsstring></argsstring>
+        <name>_numberOfTestCaseFailure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="141" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_model_1abc6c9c1e6410d5415136f1f8600efeff" prot="private" static="no" mutable="no">
+        <type>QList&lt; <ref refid="class_test_failure_info" kindref="compound">TestFailureInfo</ref> &gt;</type>
+        <definition>QList&lt;TestFailureInfo&gt; TestRunnerModel::_failures</definition>
+        <argsstring></argsstring>
+        <name>_failures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="142" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_model_1af77c4802754c696c1b4b875fa176cd86" prot="private" static="no" mutable="no">
+        <type><ref refid="class_test_runner_thread" kindref="compound">TestRunnerThread</ref> *</type>
+        <definition>TestRunnerThread* TestRunnerModel::_runnerThread</definition>
+        <argsstring></argsstring>
+        <name>_runnerThread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="143" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_model_1add1c0a60ab5599c012841c5c288e100a" prot="private" static="no" mutable="no">
+        <type>::TestResult *</type>
+        <definition>::TestResult* TestRunnerModel::_result</definition>
+        <argsstring></argsstring>
+        <name>_result</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="144" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_test_runner_model_1a2f2ae919bdc31b1c2eb68c3320f32454" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TestRunnerModel::TestRunnerModel</definition>
+        <argsstring>(::Test *rootTest)</argsstring>
+        <name>TestRunnerModel</name>
+        <param>
+          <type>::Test *</type>
+          <declname>rootTest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <ref refid="class_test_runner_model" kindref="compound">TestRunnerModel</ref> object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="36" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.cpp" bodystart="27" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1a20e79c03f4f41826125d97579c543ae7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>TestRunnerModel::‾TestRunnerModel</definition>
+        <argsstring>()</argsstring>
+        <name>‾TestRunnerModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="40" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.cpp" bodystart="33" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1ac466063ed17be6d222e0d61aeedd212d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::setRootTest</definition>
+        <argsstring>(::Test *rootTest)</argsstring>
+        <name>setRootTest</name>
+        <param>
+          <type>::Test *</type>
+          <declname>rootTest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="42" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.cpp" bodystart="171" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1a605976438e1632dcb49bc85d3f9ca381" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::loadSettings</definition>
+        <argsstring>(Settings &amp;s)</argsstring>
+        <name>loadSettings</name>
+        <param>
+          <type><ref refid="struct_test_runner_model_1_1_settings" kindref="compound">Settings</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="44" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.cpp" bodystart="64" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1a20b9f9c923c5fcc65339a2373b1c770e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::saveSettings</definition>
+        <argsstring>(const Settings &amp;s)</argsstring>
+        <name>saveSettings</name>
+        <param>
+          <type>const <ref refid="struct_test_runner_model_1_1_settings" kindref="compound">Settings</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="45" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.cpp" bodystart="117" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1a9e651c7d811a705c0d99c3388c8214ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="class_test_runner_model_1a81b3e71d164167b94c0ff686d37f8a4c" kindref="member">History</ref> &amp;</type>
+        <definition>const TestRunnerModel::History &amp; TestRunnerModel::history</definition>
+        <argsstring>() const </argsstring>
+        <name>history</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="47" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.cpp" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1a8fd9e40972ba41df1de9b1cab4879bd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::selectHistoryTest</definition>
+        <argsstring>(::Test *test)</argsstring>
+        <name>selectHistoryTest</name>
+        <param>
+          <type>::Test *</type>
+          <declname>test</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="48" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.cpp" bodystart="45" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1a16785ac25efd8a40a353c8c8096cc4e0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>::Test *</type>
+        <definition>Test * TestRunnerModel::selectedTest</definition>
+        <argsstring>() const </argsstring>
+        <name>selectedTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="49" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.cpp" bodystart="55" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1a2fedcd7c1b636a966de81f8e974c57cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>::Test *</type>
+        <definition>Test * TestRunnerModel::rootTest</definition>
+        <argsstring>()</argsstring>
+        <name>rootTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="51" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.cpp" bodystart="164" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1a2f2ae919bdc31b1c2eb68c3320f32454" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TestRunnerModel::TestRunnerModel</definition>
+        <argsstring>(::Test *rootTest)</argsstring>
+        <name>TestRunnerModel</name>
+        <param>
+          <type>::Test *</type>
+          <declname>rootTest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <ref refid="class_test_runner_model" kindref="compound">TestRunnerModel</ref> object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1a92a36c0306ab49022d37e02fb771cdfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual TestRunnerModel::‾TestRunnerModel</definition>
+        <argsstring>()</argsstring>
+        <name>‾TestRunnerModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1a79852a70cd8022d68d10cdb5b8e34c21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>::Test *</type>
+        <definition>::Test* TestRunnerModel::rootTest</definition>
+        <argsstring>()</argsstring>
+        <name>rootTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1a301cbf5a744ee1570784e4333f1e18d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TestRunnerModel::numberOfTestCase</definition>
+        <argsstring>()</argsstring>
+        <name>numberOfTestCase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="46" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.cpp" bodystart="58" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1af8bac9178a37d93a92e03683193c81c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TestRunnerModel::numberOfTestCaseFailure</definition>
+        <argsstring>()</argsstring>
+        <name>numberOfTestCaseFailure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="47" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.cpp" bodystart="66" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1a1bed28ad2882d8f51fbcf2068319f2af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TestRunnerModel::numberOfTestCaseRun</definition>
+        <argsstring>()</argsstring>
+        <name>numberOfTestCaseRun</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="48" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.cpp" bodystart="74" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1af8f2ef06bf72ac0daecbb0418698238c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_test_failure_info" kindref="compound">TestFailureInfo</ref> *</type>
+        <definition>TestFailureInfo * TestRunnerModel::failureAt</definition>
+        <argsstring>(int index)</argsstring>
+        <name>failureAt</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="50" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.cpp" bodystart="82" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1a04d2b040a1a2e5ceac13ea0f6fdc1362" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TestRunnerModel::isTestRunning</definition>
+        <argsstring>()</argsstring>
+        <name>isTestRunning</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="53" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.cpp" bodystart="115" bodyend="119"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_test_runner_model_1a2899c30434225826bcde61fd91e4a39b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::loadHistory</definition>
+        <argsstring>()</argsstring>
+        <name>loadHistory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="54" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.cpp" bodystart="84" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1aad9a4cf41d1cdab248d18e6f66d9026d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>CString</type>
+        <definition>CString TestRunnerModel::loadHistoryEntry</definition>
+        <argsstring>(int idx)</argsstring>
+        <name>loadHistoryEntry</name>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="55" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.cpp" bodystart="107" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1aa707bd84af8c6558c1b8630a716e1056" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>::Test *</type>
+        <definition>Test * TestRunnerModel::findTestByName</definition>
+        <argsstring>(CString name) const </argsstring>
+        <name>findTestByName</name>
+        <param>
+          <type>CString</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="56" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.cpp" bodystart="178" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1a41a3554a5a9e7cd1b4ffabe1dca09150" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>::Test *</type>
+        <definition>Test * TestRunnerModel::findTestByNameFor</definition>
+        <argsstring>(const CString &amp;name,::Test *test) const </argsstring>
+        <name>findTestByNameFor</name>
+        <param>
+          <type>const CString &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>::Test *</type>
+          <declname>test</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="57" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.cpp" bodystart="185" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1ac9a783c34f5a687aa08fc4b6dae5def3" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::saveHistoryEntry</definition>
+        <argsstring>(int idx, CString testName)</argsstring>
+        <name>saveHistoryEntry</name>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <type>CString</type>
+          <declname>testName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="60" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.cpp" bodystart="142" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1afa625dcb8818460850d4aa6d4e138ee6" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CString</type>
+        <definition>CString TestRunnerModel::getHistoryEntryName</definition>
+        <argsstring>(int idx) const </argsstring>
+        <name>getHistoryEntryName</name>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="63" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.cpp" bodystart="155" bodyend="160"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="class_test_runner_model_1adf22d2e8dc18dbab484ebc67e1f61cce" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>::string</type>
+        <definition>string TestRunnerModel::toAnsiString</definition>
+        <argsstring>(const CString &amp;text)</argsstring>
+        <name>toAnsiString</name>
+        <param>
+          <type>const CString &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="65" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.cpp" bodystart="210" bodyend="230"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_test_runner_model_1ac48254bccb5c60be7cf61c18b24b19f1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TestRunnerModel::TestRunnerModel</definition>
+        <argsstring>(const TestRunnerModel &amp;copy)</argsstring>
+        <name>TestRunnerModel</name>
+        <param>
+          <type>const <ref refid="class_test_runner_model" kindref="compound">TestRunnerModel</ref> &amp;</type>
+          <declname>copy</declname>
+        </param>
+        <briefdescription>
+<para>Prevents the use of the copy constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1a998df3d9c922bcd6d10edc09a470f980" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_test_runner_model" kindref="compound">TestRunnerModel</ref> &amp;</type>
+        <definition>TestRunnerModel&amp; TestRunnerModel::operator=</definition>
+        <argsstring>(const TestRunnerModel &amp;copy)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_test_runner_model" kindref="compound">TestRunnerModel</ref> &amp;</type>
+          <declname>copy</declname>
+        </param>
+        <briefdescription>
+<para>Prevents the use of the copy operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1ac48254bccb5c60be7cf61c18b24b19f1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TestRunnerModel::TestRunnerModel</definition>
+        <argsstring>(const TestRunnerModel &amp;copy)</argsstring>
+        <name>TestRunnerModel</name>
+        <param>
+          <type>const <ref refid="class_test_runner_model" kindref="compound">TestRunnerModel</ref> &amp;</type>
+          <declname>copy</declname>
+        </param>
+        <briefdescription>
+<para>Prevents the use of the copy constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="82" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1ade5a2d7a75f455a475dd6f37514bf657" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::operator=</definition>
+        <argsstring>(const TestRunnerModel &amp;copy)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_test_runner_model" kindref="compound">TestRunnerModel</ref> &amp;</type>
+          <declname>copy</declname>
+        </param>
+        <briefdescription>
+<para>Prevents the use of the copy operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1a54371b4c0b46fee83fd66abfd8e461cb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::startTest</definition>
+        <argsstring>(::Test *test)</argsstring>
+        <name>startTest</name>
+        <param>
+          <type>::Test *</type>
+          <declname>test</declname>
+        </param>
+        <briefdescription>
+<para>Called from the <ref refid="class_test_runner_thread" kindref="compound">TestRunnerThread</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="88" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.cpp" bodystart="140" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1a5abee0340eab2b0e8537a4ddb79fea62" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::addFailure</definition>
+        <argsstring>(const ::TestFailure &amp;failure)</argsstring>
+        <name>addFailure</name>
+        <param>
+          <type>const ::TestFailure &amp;</type>
+          <declname>failure</declname>
+        </param>
+        <briefdescription>
+<para>Called from the <ref refid="class_test_runner_thread" kindref="compound">TestRunnerThread</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="91" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.cpp" bodystart="147" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1a2a913db82f9f35cd94b7f1297d8dec0f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::endTest</definition>
+        <argsstring>(::Test *test)</argsstring>
+        <name>endTest</name>
+        <param>
+          <type>::Test *</type>
+          <declname>test</declname>
+        </param>
+        <briefdescription>
+<para>Called from the <ref refid="class_test_runner_thread" kindref="compound">TestRunnerThread</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="94" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.cpp" bodystart="157" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1ad565924a9f8d4f511403451cef3d1bf6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::addFailureInfo</definition>
+        <argsstring>(TestFailureInfo *failure)</argsstring>
+        <name>addFailureInfo</name>
+        <param>
+          <type><ref refid="class_test_failure_info" kindref="compound">TestFailureInfo</ref> *</type>
+          <declname>failure</declname>
+        </param>
+        <briefdescription>
+<para>Called from the <ref refid="class_test_runner_thread" kindref="compound">TestRunnerThread</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="97" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.cpp" bodystart="173" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1aeeef35bbbef69a362f10a458482c36ad" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TestRunnerModel::event</definition>
+        <argsstring>(QEvent *event)</argsstring>
+        <name>event</name>
+        <param>
+          <type>QEvent *</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="99" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.cpp" bodystart="190" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1aaa0a9423ae73ed59fb906f7c57131b8a" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::eventNewFailure</definition>
+        <argsstring>(TestFailureInfo *failure, int numberOfFailure)</argsstring>
+        <name>eventNewFailure</name>
+        <reimplements refid="class_test_runner_model_thread_interface_1a36ebee6e0af16a0690a500a8b0a69bcc">eventNewFailure</reimplements>
+        <param>
+          <type><ref refid="class_test_failure_info" kindref="compound">TestFailureInfo</ref> *</type>
+          <declname>failure</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>numberOfFailure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Emits new failure signals. Called by the <ref refid="class_test_runner_thread_event" kindref="compound">TestRunnerThreadEvent</ref> from the GUI thread to emit the following signals:<itemizedlist>
+<listitem><para><ref refid="class_test_runner_model_1a07f9cf6026a3da6775a33ea44ec065b5" kindref="member">numberOfTestCaseFailureChanged()</ref></para></listitem><listitem><para><ref refid="class_test_runner_model_1af27247fc3045cf482243fc9ea24f476c" kindref="member">failureAdded()</ref> </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="107" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.cpp" bodystart="202" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1a921f9b67cab2bd7e74d43221286cf6ea" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::eventNumberOfTestRunChanged</definition>
+        <argsstring>(int numberOfRun)</argsstring>
+        <name>eventNumberOfTestRunChanged</name>
+        <reimplements refid="class_test_runner_model_thread_interface_1a61ad600bcb5954d43778c37f54e64695">eventNumberOfTestRunChanged</reimplements>
+        <param>
+          <type>int</type>
+          <declname>numberOfRun</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Emits <ref refid="class_test_runner_model_1a18fe973f0608a68de2a2041c35f91539" kindref="member">numberOfTestCaseRunChanged()</ref> signal. Called by the <ref refid="class_test_runner_thread_event" kindref="compound">TestRunnerThreadEvent</ref> from the GUI thread to emit the <ref refid="class_test_runner_model_1a18fe973f0608a68de2a2041c35f91539" kindref="member">numberOfTestCaseRunChanged()</ref> signal. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="114" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.cpp" bodystart="211" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_model_1abf732ccf1ca3d07247c31258a302dd5e" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::eventTestRunnerThreadFinished</definition>
+        <argsstring>()</argsstring>
+        <name>eventTestRunnerThreadFinished</name>
+        <reimplements refid="class_test_runner_model_thread_interface_1a1cefb3d0bbe98619022e4af20efbed69">eventTestRunnerThreadFinished</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="116" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.cpp" bodystart="218" bodyend="221"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="signal">
+      <memberdef kind="signal" id="class_test_runner_model_1a79d234aa44e5b404ea207ad52dfec5a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::numberOfTestCaseChanged</definition>
+        <argsstring>(int numberOfTestCase)</argsstring>
+        <name>numberOfTestCaseChanged</name>
+        <param>
+          <type>int</type>
+          <declname>numberOfTestCase</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="class_test_runner_model_1a18fe973f0608a68de2a2041c35f91539" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::numberOfTestCaseRunChanged</definition>
+        <argsstring>(int numberOfRun)</argsstring>
+        <name>numberOfTestCaseRunChanged</name>
+        <param>
+          <type>int</type>
+          <declname>numberOfRun</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="class_test_runner_model_1a07f9cf6026a3da6775a33ea44ec065b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::numberOfTestCaseFailureChanged</definition>
+        <argsstring>(int numberOfFailure)</argsstring>
+        <name>numberOfTestCaseFailureChanged</name>
+        <param>
+          <type>int</type>
+          <declname>numberOfFailure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="class_test_runner_model_1af27247fc3045cf482243fc9ea24f476c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::failureAdded</definition>
+        <argsstring>(TestFailureInfo *failure)</argsstring>
+        <name>failureAdded</name>
+        <param>
+          <type><ref refid="class_test_failure_info" kindref="compound">TestFailureInfo</ref> *</type>
+          <declname>failure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="class_test_runner_model_1aafe1ad61547e70ff4125e87daf7f1b7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::failuresCleared</definition>
+        <argsstring>()</argsstring>
+        <name>failuresCleared</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="class_test_runner_model_1a0e4ea44afd7a5f1efc51db1dc4a29f95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::testRunStarted</definition>
+        <argsstring>(::Test *runningTest,::TestResult *result)</argsstring>
+        <name>testRunStarted</name>
+        <param>
+          <type>::Test *</type>
+          <declname>runningTest</declname>
+        </param>
+        <param>
+          <type>::TestResult *</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="signal" id="class_test_runner_model_1a817f2450394a565c7d515a7bc7faeb6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::testRunFinished</definition>
+        <argsstring>()</argsstring>
+        <name>testRunFinished</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="63" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="class_test_runner_model_1a68afe76bf53d39cceed9d862f2749e8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::resetTestReportCounterFor</definition>
+        <argsstring>(::Test *testToRun)</argsstring>
+        <name>resetTestReportCounterFor</name>
+        <param>
+          <type>::Test *</type>
+          <declname>testToRun</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="66" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.cpp" bodystart="37" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_test_runner_model_1a49d16c99bfda83ed0531e645b1d8bad7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::runTest</definition>
+        <argsstring>(::Test *testToRun)</argsstring>
+        <name>runTest</name>
+        <param>
+          <type>::Test *</type>
+          <declname>testToRun</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Request to run the specified test. Returns immedialty. If a test is already running, then the run request is ignored. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="72" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.cpp" bodystart="90" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_test_runner_model_1a2b9116958a844166e69ef32e7f5da547" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerModel::stopRunningTest</definition>
+        <argsstring>()</argsstring>
+        <name>stopRunningTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Request to stop running test. This methods returns immediately. <ref refid="class_test_runner_model_1a817f2450394a565c7d515a7bc7faeb6d" kindref="member">testRunFinished()</ref> signal should be used to now when the test actually stopped running. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.h" line="78" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.cpp" bodystart="123" bodyend="135"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>¥class <ref refid="class_test_runner_model" kindref="compound">TestRunnerModel</ref> ¥brief This class represents a model for the test runner.</para><para>¥class <ref refid="class_test_runner_model" kindref="compound">TestRunnerModel</ref> ¥brief This class represents the model for the TestRunner.</para><para>Warning: methods that override CppUnit::TestListener are called from the TestRunner thread !</para><para>Warning: _lock is not recursive. Might want to introduce Doug Lea Thread Interface pattern for methods used while locked (<ref refid="class_test_runner_model_1a04d2b040a1a2e5ceac13ea0f6fdc1362" kindref="member">isTestRunning()</ref>).</para><para>Refactoring note: a large part of this object actually duplicate TestResult. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="339">
+        <label>QObject</label>
+      </node>
+      <node id="340">
+        <label>TestListener</label>
+      </node>
+      <node id="338">
+        <label>TestRunnerModel</label>
+        <link refid="class_test_runner_model"/>
+        <childnode refid="339" relation="public-inheritance">
+        </childnode>
+        <childnode refid="340" relation="private-inheritance">
+        </childnode>
+        <childnode refid="341" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="342">
+        <label>TestPlugInRunnerModel</label>
+        <link refid="class_test_plug_in_runner_model"/>
+        <childnode refid="338" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="341">
+        <label>TestRunnerModelThreadInterface</label>
+        <link refid="class_test_runner_model_thread_interface"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="344">
+        <label>QObject</label>
+      </node>
+      <node id="345">
+        <label>TestListener</label>
+      </node>
+      <node id="343">
+        <label>TestRunnerModel</label>
+        <link refid="class_test_runner_model"/>
+        <childnode refid="344" relation="public-inheritance">
+        </childnode>
+        <childnode refid="345" relation="private-inheritance">
+        </childnode>
+        <childnode refid="346" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="346">
+        <label>TestRunnerModelThreadInterface</label>
+        <link refid="class_test_runner_model_thread_interface"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" line="17" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerModel.h" bodystart="16" bodyend="78"/>
+    <listofallmembers>
+      <member refid="class_test_runner_model_1abc6c9c1e6410d5415136f1f8600efeff" prot="private" virt="non-virtual"><scope>TestRunnerModel</scope><name>_failures</name></member>
+      <member refid="class_test_runner_model_1ab299861f1542e32835d3ffb10fa6d5a7" prot="private" virt="non-virtual"><scope>TestRunnerModel</scope><name>_lock</name></member>
+      <member refid="class_test_runner_model_1a0e4b78951235eac1360d421b48d330e2" prot="private" virt="non-virtual"><scope>TestRunnerModel</scope><name>_numberOfTestCase</name></member>
+      <member refid="class_test_runner_model_1a7b9302f5665e5d90d880948b3c025edb" prot="private" virt="non-virtual"><scope>TestRunnerModel</scope><name>_numberOfTestCaseFailure</name></member>
+      <member refid="class_test_runner_model_1ad1c812d2f9330250cf079877b00cd72a" prot="private" virt="non-virtual"><scope>TestRunnerModel</scope><name>_numberOfTestCaseRun</name></member>
+      <member refid="class_test_runner_model_1add1c0a60ab5599c012841c5c288e100a" prot="private" virt="non-virtual"><scope>TestRunnerModel</scope><name>_result</name></member>
+      <member refid="class_test_runner_model_1ab8be6f643b38d37aef1b158b6652c220" prot="private" virt="non-virtual"><scope>TestRunnerModel</scope><name>_rootTest</name></member>
+      <member refid="class_test_runner_model_1af77c4802754c696c1b4b875fa176cd86" prot="private" virt="non-virtual"><scope>TestRunnerModel</scope><name>_runnerThread</name></member>
+      <member refid="class_test_runner_model_1a5abee0340eab2b0e8537a4ddb79fea62" prot="private" virt="non-virtual"><scope>TestRunnerModel</scope><name>addFailure</name></member>
+      <member refid="class_test_runner_model_1ad565924a9f8d4f511403451cef3d1bf6" prot="private" virt="non-virtual"><scope>TestRunnerModel</scope><name>addFailureInfo</name></member>
+      <member refid="class_test_runner_model_1a2a913db82f9f35cd94b7f1297d8dec0f" prot="private" virt="non-virtual"><scope>TestRunnerModel</scope><name>endTest</name></member>
+      <member refid="class_test_runner_model_1aeeef35bbbef69a362f10a458482c36ad" prot="private" virt="non-virtual"><scope>TestRunnerModel</scope><name>event</name></member>
+      <member refid="class_test_runner_model_1aaa0a9423ae73ed59fb906f7c57131b8a" prot="private" virt="virtual"><scope>TestRunnerModel</scope><name>eventNewFailure</name></member>
+      <member refid="class_test_runner_model_1a921f9b67cab2bd7e74d43221286cf6ea" prot="private" virt="virtual"><scope>TestRunnerModel</scope><name>eventNumberOfTestRunChanged</name></member>
+      <member refid="class_test_runner_model_1abf732ccf1ca3d07247c31258a302dd5e" prot="private" virt="virtual"><scope>TestRunnerModel</scope><name>eventTestRunnerThreadFinished</name></member>
+      <member refid="class_test_runner_model_1af27247fc3045cf482243fc9ea24f476c" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>failureAdded</name></member>
+      <member refid="class_test_runner_model_1af8f2ef06bf72ac0daecbb0418698238c" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>failureAt</name></member>
+      <member refid="class_test_runner_model_1aafe1ad61547e70ff4125e87daf7f1b7c" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>failuresCleared</name></member>
+      <member refid="class_test_runner_model_1aa707bd84af8c6558c1b8630a716e1056" prot="protected" virt="non-virtual"><scope>TestRunnerModel</scope><name>findTestByName</name></member>
+      <member refid="class_test_runner_model_1a41a3554a5a9e7cd1b4ffabe1dca09150" prot="protected" virt="non-virtual"><scope>TestRunnerModel</scope><name>findTestByNameFor</name></member>
+      <member refid="class_test_runner_model_1afa625dcb8818460850d4aa6d4e138ee6" prot="protected" virt="non-virtual"><scope>TestRunnerModel</scope><name>getHistoryEntryName</name></member>
+      <member refid="class_test_runner_model_1a81b3e71d164167b94c0ff686d37f8a4c" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>History</name></member>
+      <member refid="class_test_runner_model_1a9e651c7d811a705c0d99c3388c8214ef" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>history</name></member>
+      <member refid="class_test_runner_model_1a04d2b040a1a2e5ceac13ea0f6fdc1362" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>isTestRunning</name></member>
+      <member refid="class_test_runner_model_1a2899c30434225826bcde61fd91e4a39b" prot="protected" virt="non-virtual"><scope>TestRunnerModel</scope><name>loadHistory</name></member>
+      <member refid="class_test_runner_model_1aad9a4cf41d1cdab248d18e6f66d9026d" prot="protected" virt="non-virtual"><scope>TestRunnerModel</scope><name>loadHistoryEntry</name></member>
+      <member refid="class_test_runner_model_1a605976438e1632dcb49bc85d3f9ca381" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>loadSettings</name></member>
+      <member refid="class_test_runner_model_1a3f5ad117905c1f0765b7848e9a0a807a" prot="protected" virt="non-virtual"><scope>TestRunnerModel</scope><name>m_history</name></member>
+      <member refid="class_test_runner_model_1a70f4f090f67752ace3bf61aeaa86d187" prot="protected" virt="non-virtual"><scope>TestRunnerModel</scope><name>m_rootTest</name></member>
+      <member refid="class_test_runner_model_1a301cbf5a744ee1570784e4333f1e18d2" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>numberOfTestCase</name></member>
+      <member refid="class_test_runner_model_1a79d234aa44e5b404ea207ad52dfec5a1" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>numberOfTestCaseChanged</name></member>
+      <member refid="class_test_runner_model_1af8bac9178a37d93a92e03683193c81c8" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>numberOfTestCaseFailure</name></member>
+      <member refid="class_test_runner_model_1a07f9cf6026a3da6775a33ea44ec065b5" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>numberOfTestCaseFailureChanged</name></member>
+      <member refid="class_test_runner_model_1a1bed28ad2882d8f51fbcf2068319f2af" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>numberOfTestCaseRun</name></member>
+      <member refid="class_test_runner_model_1a18fe973f0608a68de2a2041c35f91539" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>numberOfTestCaseRunChanged</name></member>
+      <member refid="class_test_runner_model_1a998df3d9c922bcd6d10edc09a470f980" prot="private" virt="non-virtual"><scope>TestRunnerModel</scope><name>operator=</name></member>
+      <member refid="class_test_runner_model_1ade5a2d7a75f455a475dd6f37514bf657" prot="private" virt="non-virtual"><scope>TestRunnerModel</scope><name>operator=</name></member>
+      <member refid="class_test_runner_model_1a68afe76bf53d39cceed9d862f2749e8e" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>resetTestReportCounterFor</name></member>
+      <member refid="class_test_runner_model_1a2fedcd7c1b636a966de81f8e974c57cf" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>rootTest</name></member>
+      <member refid="class_test_runner_model_1a79852a70cd8022d68d10cdb5b8e34c21" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>rootTest</name></member>
+      <member refid="class_test_runner_model_1a49d16c99bfda83ed0531e645b1d8bad7" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>runTest</name></member>
+      <member refid="class_test_runner_model_1ac9a783c34f5a687aa08fc4b6dae5def3" prot="protected" virt="non-virtual"><scope>TestRunnerModel</scope><name>saveHistoryEntry</name></member>
+      <member refid="class_test_runner_model_1a20b9f9c923c5fcc65339a2373b1c770e" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>saveSettings</name></member>
+      <member refid="class_test_runner_model_1a16785ac25efd8a40a353c8c8096cc4e0" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>selectedTest</name></member>
+      <member refid="class_test_runner_model_1a8fd9e40972ba41df1de9b1cab4879bd3" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>selectHistoryTest</name></member>
+      <member refid="class_test_runner_model_1ac466063ed17be6d222e0d61aeedd212d" prot="public" virt="virtual"><scope>TestRunnerModel</scope><name>setRootTest</name></member>
+      <member refid="class_test_runner_model_1ac431acb0b47dc908dd1fc26d72de1d27" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>settingBrowseDialogKey</name></member>
+      <member refid="class_test_runner_model_1a27206a66322c9fe42a2709776905d2ef" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>settingKey</name></member>
+      <member refid="class_test_runner_model_1ad372ff9068431cfffea9ef56e54243f3" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>settingMainDialogKey</name></member>
+      <member refid="class_test_runner_model_1a54371b4c0b46fee83fd66abfd8e461cb" prot="private" virt="non-virtual"><scope>TestRunnerModel</scope><name>startTest</name></member>
+      <member refid="class_test_runner_model_1a2b9116958a844166e69ef32e7f5da547" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>stopRunningTest</name></member>
+      <member refid="class_test_runner_model_1a817f2450394a565c7d515a7bc7faeb6d" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>testRunFinished</name></member>
+      <member refid="class_test_runner_model_1a2f2ae919bdc31b1c2eb68c3320f32454" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>TestRunnerModel</name></member>
+      <member refid="class_test_runner_model_1ac48254bccb5c60be7cf61c18b24b19f1" prot="private" virt="non-virtual"><scope>TestRunnerModel</scope><name>TestRunnerModel</name></member>
+      <member refid="class_test_runner_model_1a2f2ae919bdc31b1c2eb68c3320f32454" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>TestRunnerModel</name></member>
+      <member refid="class_test_runner_model_1ac48254bccb5c60be7cf61c18b24b19f1" prot="private" virt="non-virtual"><scope>TestRunnerModel</scope><name>TestRunnerModel</name></member>
+      <member refid="class_test_runner_model_1a0e4ea44afd7a5f1efc51db1dc4a29f95" prot="public" virt="non-virtual"><scope>TestRunnerModel</scope><name>testRunStarted</name></member>
+      <member refid="class_test_runner_model_1adf22d2e8dc18dbab484ebc67e1f61cce" prot="protected" virt="non-virtual"><scope>TestRunnerModel</scope><name>toAnsiString</name></member>
+      <member refid="class_test_runner_model_1a20e79c03f4f41826125d97579c543ae7" prot="public" virt="virtual"><scope>TestRunnerModel</scope><name>‾TestRunnerModel</name></member>
+      <member refid="class_test_runner_model_1a92a36c0306ab49022d37e02fb771cdfa" prot="public" virt="virtual"><scope>TestRunnerModel</scope><name>‾TestRunnerModel</name></member>
+      <member refid="class_test_runner_model_thread_interface_1a148af4dd09105e1fe1094701d79ebb62" prot="private" virt="virtual"><scope>TestRunnerModel</scope><name>‾TestRunnerModelThreadInterface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

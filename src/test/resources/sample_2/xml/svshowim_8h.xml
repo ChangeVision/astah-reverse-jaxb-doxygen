@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="svshowim_8h" kind="file">
+    <compoundname>svshowim.h</compoundname>
+    <includes refid="host_8h" local="yes">host.h</includes>
+    <includes refid="img_8h" local="yes">img.h</includes>
+    <includedby refid="pgedit_8cpp" local="yes">ccmain/pgedit.cpp</includedby>
+    <includedby refid="pdblock_8cpp" local="yes">ccstruct/pdblock.cpp</includedby>
+    <includedby refid="svshowim_8cpp" local="yes">image/svshowim.cpp</includedby>
+    <incdepgraph>
+      <node id="36212">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="36213" relation="include">
+        </childnode>
+      </node>
+      <node id="36216">
+        <label>stddef.h</label>
+      </node>
+      <node id="36213">
+        <label>limits.h</label>
+      </node>
+      <node id="36215">
+        <label>memry.h</label>
+        <link refid="memry_8h"/>
+        <childnode refid="36216" relation="include">
+        </childnode>
+        <childnode refid="36211" relation="include">
+        </childnode>
+      </node>
+      <node id="36214">
+        <label>img.h</label>
+        <link refid="img_8h"/>
+        <childnode refid="36215" relation="include">
+        </childnode>
+      </node>
+      <node id="36211">
+        <label>host.h</label>
+        <link refid="host_8h"/>
+        <childnode refid="36212" relation="include">
+        </childnode>
+      </node>
+      <node id="36210">
+        <label>image/svshowim.h</label>
+        <link refid="svshowim.h"/>
+        <childnode refid="36211" relation="include">
+        </childnode>
+        <childnode refid="36214" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="36219">
+        <label>ccstruct/pdblock.cpp</label>
+        <link refid="pdblock_8cpp"/>
+      </node>
+      <node id="36220">
+        <label>image/svshowim.cpp</label>
+        <link refid="svshowim_8cpp"/>
+      </node>
+      <node id="36217">
+        <label>image/svshowim.h</label>
+        <link refid="svshowim.h"/>
+        <childnode refid="36218" relation="include">
+        </childnode>
+        <childnode refid="36219" relation="include">
+        </childnode>
+        <childnode refid="36220" relation="include">
+        </childnode>
+      </node>
+      <node id="36218">
+        <label>ccmain/pgedit.cpp</label>
+        <link refid="pgedit_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="svshowim_8h_1a655fa735103137a35abd8f1ca55e4795" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sv_show_sub_image</definition>
+        <argsstring>(IMAGE *source, inT32 xstart, inT32 ystart, inT32 xext, inT32 yext, ScrollView *win, inT32 xpos, inT32 ypos)</argsstring>
+        <name>sv_show_sub_image</name>
+        <param>
+          <type><ref refid="class_i_m_a_g_e" kindref="compound">IMAGE</ref> *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref></type>
+          <declname>xstart</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref></type>
+          <declname>ystart</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref></type>
+          <declname>xext</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref></type>
+          <declname>yext</declname>
+        </param>
+        <param>
+          <type><ref refid="class_scroll_view" kindref="compound">ScrollView</ref> *</type>
+          <declname>win</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref></type>
+          <declname>xpos</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref></type>
+          <declname>ypos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/image/svshowim.h" line="16" column="1" bodyfile="/Users/makoto/Desktop/trunk/image/svshowim.cpp" bodystart="19" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2006<sp/>Google<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>&lt;rays@google.com&gt;<sp/>(Ray<sp/>Smith)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>OCR_TESSERACT_SVSHOWIM_H__</highlight></codeline>
+<codeline lineno="6"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>OCR_TESSERACT_SVSHOWIM_H__</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="host_8h" kindref="compound">host.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="img_8h" kindref="compound">img.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_scroll_view" kindref="compound">ScrollView</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Override<sp/>of<sp/>a<sp/>tesseract<sp/>function<sp/>to<sp/>display<sp/>an<sp/>image<sp/>in<sp/>a<sp/>window.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>function<sp/>redirects<sp/>the<sp/>display<sp/>to<sp/>ScrollView<sp/>instead<sp/>of<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>stubbed-out<sp/>functions<sp/>in<sp/>tesseract.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="svshowim_8cpp_1acd0d4f7430cdfc6ec63577526195a25c" kindref="member">sv_show_sub_image</ref>(<ref refid="class_i_m_a_g_e" kindref="compound">IMAGE</ref>*<sp/><sp/><sp/><sp/>source,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Image<sp/>to<sp/>show.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/><sp/><sp/><sp/><sp/>xstart,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Bottom-left<sp/>coords.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/><sp/><sp/><sp/><sp/>ystart,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/><sp/><sp/><sp/><sp/>xext,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Size<sp/>of<sp/>rectangle<sp/>to<sp/>show.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/><sp/><sp/><sp/><sp/>yext,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_scroll_view" kindref="compound">ScrollView</ref>*<sp/><sp/><sp/><sp/>win,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Window<sp/>to<sp/>draw<sp/>in.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/><sp/><sp/><sp/><sp/>xpos,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Place<sp/>to<sp/>show<sp/>bottom-left.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/><sp/><sp/><sp/><sp/>ypos);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Y<sp/>position.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>OCR_TESSERACT_SVSHOWIM_H__</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/image/svshowim.h"/>
+  </compounddef>
+</doxygen>

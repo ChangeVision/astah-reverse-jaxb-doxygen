@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="qttestrunner_2_most_recent_tests_8cpp" kind="file">
+    <compoundname>MostRecentTests.cpp</compoundname>
+    <includes refid="qttestrunner_2_most_recent_tests_8h" local="yes">MostRecentTests.h</includes>
+    <incdepgraph>
+      <node id="1025">
+        <label>qstring.h</label>
+      </node>
+      <node id="1027">
+        <label>qobject.h</label>
+      </node>
+      <node id="1026">
+        <label>qlist.h</label>
+      </node>
+      <node id="1024">
+        <label>cppunit/Test.h</label>
+      </node>
+      <node id="1023">
+        <label>MostRecentTests.h</label>
+        <link refid="qttestrunner_2_most_recent_tests_8h"/>
+        <childnode refid="1024" relation="include">
+        </childnode>
+        <childnode refid="1025" relation="include">
+        </childnode>
+        <childnode refid="1026" relation="include">
+        </childnode>
+        <childnode refid="1027" relation="include">
+        </childnode>
+      </node>
+      <node id="1022">
+        <label>src/qttestrunner/MostRecentTests.cpp</label>
+        <link refid="qttestrunner/MostRecentTests.cpp"/>
+        <childnode refid="1023" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>//////////////////////////////////////////////////////////////////////////</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Implementation<sp/>file<sp/>MostRecentTests.cpp<sp/>for<sp/>class<sp/>MostRecentTests</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(c)Copyright<sp/>2000,<sp/>Baptiste<sp/>Lepilleur.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created:<sp/>2001/09/20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>//////////////////////////////////////////////////////////////////////////</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="qttestrunner_2_most_recent_tests_8h" kindref="compound">MostRecentTests.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="class_most_recent_tests_1a9f2c0f1332742fa07c101b0fc08142e8" kindref="member">MostRecentTests::MostRecentTests</ref>()</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><ref refid="class_most_recent_tests_1a27b17aa0aeaa12bcab6b20e869b448f1" kindref="member">MostRecentTests::‾MostRecentTests</ref>()</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><ref refid="class_most_recent_tests_1a04626bb96db56204160f9793089d377b" kindref="member">MostRecentTests::setTestToRun</ref>(<sp/>CPPUNIT_NS::Test<sp/>*test<sp/>)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>m_tests.removeRef(<sp/>test<sp/>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>m_tests.prepend(<sp/>test<sp/>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxRecentTest<sp/>=<sp/>20;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>m_tests.count()<sp/>&gt;<sp/>maxRecentTest<sp/>)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>m_tests.remove(<sp/>maxRecentTest<sp/>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>emit<sp/><ref refid="class_most_recent_tests_1a3368bd0fe0ef9f2be985832b34713c08" kindref="member">listChanged</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>emit<sp/><ref refid="class_most_recent_tests_1aa97eb03cb16eb6f0d6ab696b00374b80" kindref="member">testToRunChanged</ref>(<sp/><ref refid="class_most_recent_tests_1a04ad33fe2bc16b69509f4dcd4004606b" kindref="member">testToRun</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">CPPUNIT_NS::Test<sp/>*</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><ref refid="class_most_recent_tests_1a04ad33fe2bc16b69509f4dcd4004606b" kindref="member">MostRecentTests::testToRun</ref>()</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_most_recent_tests_1aa75b9c680b985e32860f8ba90126abff" kindref="member">testAt</ref>(<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><ref refid="class_most_recent_tests_1ae65dc9d41f764ae19291004d5e609b21" kindref="member">MostRecentTests::selectTestToRun</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>index<sp/>&lt;<sp/><ref refid="class_most_recent_tests_1acfd8d17b39432f74fc836980051ff59b" kindref="member">testCount</ref>()<sp/>)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_most_recent_tests_1a04626bb96db56204160f9793089d377b" kindref="member">setTestToRun</ref>(<sp/><ref refid="class_most_recent_tests_1aa75b9c680b985e32860f8ba90126abff" kindref="member">testAt</ref>(<sp/>index<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><ref refid="class_most_recent_tests_1acfd8d17b39432f74fc836980051ff59b" kindref="member">MostRecentTests::testCount</ref>()</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_tests.count();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">QString<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><ref refid="class_most_recent_tests_1a717e6eac754e22537512d37bd1e37144" kindref="member">MostRecentTests::testNameAt</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QString::fromLatin1(<sp/><ref refid="class_most_recent_tests_1aa75b9c680b985e32860f8ba90126abff" kindref="member">testAt</ref>(<sp/>index<sp/>)-&gt;getName().c_str()<sp/>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">CPPUNIT_NS::Test<sp/>*</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><ref refid="class_most_recent_tests_1aa75b9c680b985e32860f8ba90126abff" kindref="member">MostRecentTests::testAt</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_tests.at(<sp/>index<sp/>);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/MostRecentTests.cpp"/>
+  </compounddef>
+</doxygen>

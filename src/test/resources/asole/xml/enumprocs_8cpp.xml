@@ -1,0 +1,769 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="enumprocs_8cpp" kind="file">
+    <compoundname>enumprocs.cpp</compoundname>
+    <includes refid="stdafx_8h" local="yes">stdafx.h</includes>
+    <includes local="no">tlhelp32.h</includes>
+    <includes local="no">vdmdbg.h</includes>
+    <includes refid="enumprocs_8h" local="yes">enumprocs.h</includes>
+    <incdepgraph>
+      <node id="200">
+        <label>tlhelp32.h</label>
+      </node>
+      <node id="193">
+        <label>afxcmn.h</label>
+      </node>
+      <node id="198">
+        <label>float.h</label>
+      </node>
+      <node id="190">
+        <label>afxole.h</label>
+      </node>
+      <node id="189">
+        <label>afxext.h</label>
+      </node>
+      <node id="195">
+        <label>shlwapi.h</label>
+      </node>
+      <node id="197">
+        <label>atlimage.h</label>
+      </node>
+      <node id="194">
+        <label>afxsock.h</label>
+      </node>
+      <node id="196">
+        <label>atlpath.h</label>
+      </node>
+      <node id="202">
+        <label>enumprocs.h</label>
+        <link refid="enumprocs_8h"/>
+      </node>
+      <node id="185">
+        <label>enumprocs.cpp</label>
+        <link refid="enumprocs.cpp"/>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="200" relation="include">
+        </childnode>
+        <childnode refid="201" relation="include">
+        </childnode>
+        <childnode refid="202" relation="include">
+        </childnode>
+      </node>
+      <node id="186">
+        <label>stdafx.h</label>
+        <link refid="stdafx_8h"/>
+        <childnode refid="187" relation="include">
+        </childnode>
+        <childnode refid="188" relation="include">
+        </childnode>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="191" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="199" relation="include">
+        </childnode>
+      </node>
+      <node id="199">
+        <label>math.h</label>
+      </node>
+      <node id="191">
+        <label>afxdisp.h</label>
+      </node>
+      <node id="201">
+        <label>vdmdbg.h</label>
+      </node>
+      <node id="192">
+        <label>afxdtctl.h</label>
+      </node>
+      <node id="187">
+        <label>targetver.h</label>
+        <link refid="targetver_8h"/>
+      </node>
+      <node id="188">
+        <label>afxwin.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structvdminfo__t" prot="public">vdminfo_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="enumprocs_8cpp_1af548bbc8d66de8833a1ceb50724c2e05" prot="public" static="no">
+        <name>XBUF_NCS</name>
+        <initializer>(MAX_PATH + 16)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" line="101" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="enumprocs_8cpp_1a8c4b77b351e9f5878c586059b399bb37" prot="public" static="no">
+        <name>PIDBUF_SZ_MAX</name>
+        <initializer>(1024 * 1024 * sizeof(*pids))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" line="158" column="9"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="enumprocs_8cpp_1a833f22302d41d358e65bf647af1d8407" prot="public" static="no">
+        <type>HANDLE(WINAPI *</type>
+        <definition>typedef HANDLE(WINAPI * CreateToolhelp32Snapshot_t)(DWORD, DWORD)</definition>
+        <argsstring>)(DWORD, DWORD)</argsstring>
+        <name>CreateToolhelp32Snapshot_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" line="18" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="enumprocs_8cpp_1a9be168bffc8dc61d74ca266b9664b453" prot="public" static="no">
+        <type>BOOL(WINAPI *</type>
+        <definition>typedef BOOL(WINAPI * Process32First_t)(HANDLE, LPPROCESSENTRY32)</definition>
+        <argsstring>)(HANDLE, LPPROCESSENTRY32)</argsstring>
+        <name>Process32First_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" line="19" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="enumprocs_8cpp_1a7d59510b28ccc76d08b0108fb47dfd4f" prot="public" static="no">
+        <type>BOOL(WINAPI *</type>
+        <definition>typedef BOOL(WINAPI * Process32Next_t)(HANDLE, LPPROCESSENTRY32)</definition>
+        <argsstring>)(HANDLE, LPPROCESSENTRY32)</argsstring>
+        <name>Process32Next_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" line="20" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="enumprocs_8cpp_1ab3326b620d40a70eee7de8e54e1f8fd4" prot="public" static="no">
+        <type>BOOL(WINAPI *</type>
+        <definition>typedef BOOL(WINAPI * Module32First_t)(HANDLE, LPMODULEENTRY32)</definition>
+        <argsstring>)(HANDLE, LPMODULEENTRY32)</argsstring>
+        <name>Module32First_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" line="21" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="enumprocs_8cpp_1a1bbfbc57f57b14123bb2451f6fcbb0ee" prot="public" static="no">
+        <type>BOOL(WINAPI *</type>
+        <definition>typedef BOOL(WINAPI * Module32Next_t)(HANDLE, LPMODULEENTRY32)</definition>
+        <argsstring>)(HANDLE, LPMODULEENTRY32)</argsstring>
+        <name>Module32Next_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" line="22" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="enumprocs_8cpp_1aa77f11585f39023cc9f9c44ffa3fa993" prot="public" static="no">
+        <type>BOOL(WINAPI *</type>
+        <definition>typedef BOOL(WINAPI * EnumProcesses_t)(DWORD *, DWORD, DWORD *)</definition>
+        <argsstring>)(DWORD *, DWORD, DWORD *)</argsstring>
+        <name>EnumProcesses_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" line="26" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="enumprocs_8cpp_1a64d6344741db1aa3ad54cf3853732a95" prot="public" static="no">
+        <type>BOOL(WINAPI *</type>
+        <definition>typedef BOOL(WINAPI * EnumProcessModules_t)(HANDLE, HMODULE *, DWORD, LPDWORD)</definition>
+        <argsstring>)(HANDLE, HMODULE *, DWORD, LPDWORD)</argsstring>
+        <name>EnumProcessModules_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" line="27" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="enumprocs_8cpp_1a2360e90c4545a5a9d41f104f95dc0e59" prot="public" static="no">
+        <type>DWORD(WINAPI *</type>
+        <definition>typedef DWORD(WINAPI * GetModuleBaseName_t)(HANDLE, HMODULE, LPTSTR, DWORD)</definition>
+        <argsstring>)(HANDLE, HMODULE, LPTSTR, DWORD)</argsstring>
+        <name>GetModuleBaseName_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" line="28" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="enumprocs_8cpp_1a6d1ce1c34ddf8e7aeccbd4a846688e4f" prot="public" static="no">
+        <type>INT(WINAPI *</type>
+        <definition>typedef INT(WINAPI * VDMEnumTaskWOWEx_t)(DWORD, TASKENUMPROCEX, LPARAM)</definition>
+        <argsstring>)(DWORD, TASKENUMPROCEX, LPARAM)</argsstring>
+        <name>VDMEnumTaskWOWEx_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" line="32" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="enumprocs_8cpp_1a353e7e868d0103d52a811fb643160368" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL WINAPI</type>
+        <definition>static BOOL WINAPI enum16s</definition>
+        <argsstring>(DWORD thid, WORD hmod16, WORD htask16, PSZ modname, PSZ filename, LPARAM lparam)</argsstring>
+        <name>enum16s</name>
+        <param>
+          <type>DWORD</type>
+          <declname>thid</declname>
+        </param>
+        <param>
+          <type>WORD</type>
+          <declname>hmod16</declname>
+        </param>
+        <param>
+          <type>WORD</type>
+          <declname>htask16</declname>
+        </param>
+        <param>
+          <type>PSZ</type>
+          <declname>modname</declname>
+        </param>
+        <param>
+          <type>PSZ</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>LPARAM</type>
+          <declname>lparam</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum the 16-bit stuff. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" line="47" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" bodystart="47" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="enumprocs_8cpp_1a7a63c16609d0f54a99ea9615cf844f57" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>static BOOL EnumProcs_nt4</definition>
+        <argsstring>(PROCENUMPROC peproc, LPARAM lparam)</argsstring>
+        <name>EnumProcs_nt4</name>
+        <param>
+          <type><ref refid="enumprocs_8h_1a4f9aa8899be61a0306f4193208d9f35e" kindref="member">PROCENUMPROC</ref></type>
+          <declname>peproc</declname>
+        </param>
+        <param>
+          <type>LPARAM</type>
+          <declname>lparam</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>for Windows NT 4 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" line="85" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" bodystart="85" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="enumprocs_8cpp_1a99f33d9ef60adb981047b2c73b20a8fa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL</type>
+        <definition>static BOOL EnumProcs_oth</definition>
+        <argsstring>(PROCENUMPROC peproc, LPARAM lparam, const OSVERSIONINFO &amp;osver)</argsstring>
+        <name>EnumProcs_oth</name>
+        <param>
+          <type><ref refid="enumprocs_8h_1a4f9aa8899be61a0306f4193208d9f35e" kindref="member">PROCENUMPROC</ref></type>
+          <declname>peproc</declname>
+        </param>
+        <param>
+          <type>LPARAM</type>
+          <declname>lparam</declname>
+        </param>
+        <param>
+          <type>const OSVERSIONINFO &amp;</type>
+          <declname>osver</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If any OS other than Windows NT 4.0. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" line="271" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" bodystart="271" bodyend="387"/>
+      </memberdef>
+      <memberdef kind="function" id="enumprocs_8cpp_1a88e0660582ec5e0750a5dcc074307f6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BOOL WINAPI</type>
+        <definition>BOOL WINAPI EnumProcs</definition>
+        <argsstring>(PROCENUMPROC peproc, LPARAM lparam)</argsstring>
+        <name>EnumProcs</name>
+        <param>
+          <type><ref refid="enumprocs_8h_1a4f9aa8899be61a0306f4193208d9f35e" kindref="member">PROCENUMPROC</ref></type>
+          <declname>peproc</declname>
+        </param>
+        <param>
+          <type>LPARAM</type>
+          <declname>lparam</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The EnumProcs function takes a pointer to a callback function that will be called once per process with the process filename and process ID.</para><para>lpProc <ndash/> Address of callback routine.</para><para>lParam <ndash/> A user-defined LPARAM value to be passed to the callback routine.</para><para>Callback function definition: BOOL CALLBACK Proc(DWORD dw, WORD w, LPCSTR lpstr, LPARAM lParam);</para><para><ulink url="http://support.microsoft.com/kb/175030/ja">http://support.microsoft.com/kb/175030/ja</ulink> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" line="407" column="1" bodyfile="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp" bodystart="407" bodyend="435"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Copyright<sp/>(c)<sp/>2012<sp/>Change<sp/>Vision<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//#pragma<sp/>comment(exestr,<sp/>&quot;%Z%%Y%%M%<sp/>%I%<sp/>20%E%<sp/>%U%&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/><sp/><sp/>&quot;<ref refid="stdafx_8h" kindref="compound">stdafx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/><sp/><sp/>&lt;tlhelp32.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/><sp/><sp/>&lt;vdmdbg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/><sp/><sp/>&quot;<ref refid="enumprocs_8h" kindref="compound">enumprocs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/><sp/>_DEBUG</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>new<sp/>DEBUG_NEW</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ToolHelp<sp/>Function<sp/>Pointers.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>HANDLE<sp/>(WINAPI<sp/>*<ref refid="enumprocs_8cpp_1a833f22302d41d358e65bf647af1d8407" kindref="member">CreateToolhelp32Snapshot_t</ref>)(DWORD,<sp/>DWORD);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BOOL<sp/>(WINAPI<sp/>*<ref refid="enumprocs_8cpp_1a9be168bffc8dc61d74ca266b9664b453" kindref="member">Process32First_t</ref>)(HANDLE,<sp/>LPPROCESSENTRY32);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BOOL<sp/>(WINAPI<sp/>*<ref refid="enumprocs_8cpp_1a7d59510b28ccc76d08b0108fb47dfd4f" kindref="member">Process32Next_t</ref>)(HANDLE,<sp/>LPPROCESSENTRY32);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BOOL<sp/>(WINAPI<sp/>*<ref refid="enumprocs_8cpp_1ab3326b620d40a70eee7de8e54e1f8fd4" kindref="member">Module32First_t</ref>)(HANDLE,<sp/><sp/>LPMODULEENTRY32);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BOOL<sp/>(WINAPI<sp/>*<ref refid="enumprocs_8cpp_1a1bbfbc57f57b14123bb2451f6fcbb0ee" kindref="member">Module32Next_t</ref>)(HANDLE,<sp/><sp/>LPMODULEENTRY32);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>PSAPI<sp/>Function<sp/>Pointers.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BOOL<sp/>(WINAPI<sp/>*<ref refid="enumprocs_8cpp_1aa77f11585f39023cc9f9c44ffa3fa993" kindref="member">EnumProcesses_t</ref>)(DWORD<sp/>*,<sp/>DWORD,<sp/>DWORD<sp/>*);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BOOL<sp/>(WINAPI<sp/>*<ref refid="enumprocs_8cpp_1a64d6344741db1aa3ad54cf3853732a95" kindref="member">EnumProcessModules_t</ref>)(HANDLE,<sp/>HMODULE<sp/>*,<sp/>DWORD,<sp/>LPDWORD);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>DWORD<sp/>(WINAPI<sp/>*<ref refid="enumprocs_8cpp_1a2360e90c4545a5a9d41f104f95dc0e59" kindref="member">GetModuleBaseName_t</ref>)(HANDLE,<sp/>HMODULE,<sp/>LPTSTR,<sp/>DWORD);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>VDMDBG<sp/>Function<sp/>Pointers.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>INT<sp/>(WINAPI<sp/>*<ref refid="enumprocs_8cpp_1a6d1ce1c34ddf8e7aeccbd4a846688e4f" kindref="member">VDMEnumTaskWOWEx_t</ref>)(DWORD,<sp/>TASKENUMPROCEX,<sp/>LPARAM);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="structvdminfo__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="enumprocs_8h_1a4f9aa8899be61a0306f4193208d9f35e" kindref="member">PROCENUMPROC</ref><sp/><sp/><sp/><sp/>peproc;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>LPARAM<sp/><sp/><sp/><sp/><sp/><sp/>lparam;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>DWORD<sp/><sp/><sp/><sp/><sp/><sp/><sp/>pid;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>aborts;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}<sp/><ref refid="structvdminfo__t" kindref="compound">vdminfo_t</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>BOOL<sp/>WINAPI</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">enum16s(DWORD<sp/>thid,<sp/>WORD<sp/>hmod16,<sp/>WORD<sp/>htask16,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PSZ<sp/>modname,<sp/>PSZ<sp/>filename,<sp/>LPARAM<sp/>lparam)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structvdminfo__t" kindref="compound">vdminfo_t</ref><sp/><sp/><sp/>*info<sp/>=<sp/>(<ref refid="structvdminfo__t" kindref="compound">vdminfo_t</ref><sp/>*)lparam;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>BOOL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/><sp/>UNI_CODE</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>LPWSTR<sp/><sp/><sp/><sp/><sp/><sp/>wstr<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CString<sp/>に変換させてもよいかと</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(filename)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((wstr<sp/>=<sp/><ref refid="stdafx_8cpp_1a74298ba04a76c428f9d983f323da7b68" kindref="member">cstr2wstr</ref>(filename))<sp/>==<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info-&gt;<ref refid="structvdminfo__t_1a57faee841985bfd37f4c6a7ca03747c7" kindref="member">aborts</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>TRUE;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>(*info-&gt;<ref refid="structvdminfo__t_1acec15391e8887352e94361dd1e4299ce" kindref="member">peproc</ref>)(info-&gt;<ref refid="structvdminfo__t_1a7fc6b4fa51b233a4860f46fc9e37ffb5" kindref="member">pid</ref>,<sp/>htask16,<sp/>wstr,<sp/>info-&gt;<ref refid="structvdminfo__t_1a2c10d9922bb6dcc738551114361c7bf5" kindref="member">lparam</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="stdafx_8cpp_1a15634687fc57d437006658399cbf98b1" kindref="member">xfree</ref>(wstr);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="68"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>(*info-&gt;<ref refid="structvdminfo__t_1acec15391e8887352e94361dd1e4299ce" kindref="member">peproc</ref>)(info-&gt;<ref refid="structvdminfo__t_1a7fc6b4fa51b233a4860f46fc9e37ffb5" kindref="member">pid</ref>,<sp/>htask16,<sp/>filename,<sp/>info-&gt;<ref refid="structvdminfo__t_1a2c10d9922bb6dcc738551114361c7bf5" kindref="member">lparam</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="70"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ret)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info-&gt;<ref refid="structvdminfo__t_1a57faee841985bfd37f4c6a7ca03747c7" kindref="member">aborts</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>続行=false<sp/>つまり<sp/>peproc<sp/>と逆</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!ret;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>BOOL</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">EnumProcs_nt4(<ref refid="enumprocs_8h_1a4f9aa8899be61a0306f4193208d9f35e" kindref="member">PROCENUMPROC</ref><sp/>peproc,<sp/>LPARAM<sp/>lparam)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>BOOL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>done<sp/>=<sp/>FALSE;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>HMODULE<sp/><sp/><sp/><sp/><sp/>hlib1<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>HMODULE<sp/><sp/><sp/><sp/><sp/>hlib2<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>LPDWORD<sp/><sp/><sp/><sp/><sp/>pids<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="enumprocs_8cpp_1aa77f11585f39023cc9f9c44ffa3fa993" kindref="member">EnumProcesses_t</ref><sp/><sp/><sp/><sp/><sp/>enumProcesses<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="enumprocs_8cpp_1a64d6344741db1aa3ad54cf3853732a95" kindref="member">EnumProcessModules_t</ref><sp/><sp/><sp/><sp/>enumProcessModules<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="enumprocs_8cpp_1a2360e90c4545a5a9d41f104f95dc0e59" kindref="member">GetModuleBaseName_t</ref><sp/>getModuleBaseName<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="enumprocs_8cpp_1a6d1ce1c34ddf8e7aeccbd4a846688e4f" kindref="member">VDMEnumTaskWOWEx_t</ref><sp/><sp/>vdmEnumTaskWOWEx<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>DWORD<sp/><sp/><sp/><sp/><sp/><sp/><sp/>idx;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>DWORD<sp/><sp/><sp/><sp/><sp/><sp/><sp/>cnt;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>DWORD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdafx_8h_1aab9623b1a50fc803c490ba3df672035b" kindref="member">asz</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>HMODULE<sp/><sp/><sp/><sp/><sp/>hmod;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>HANDLE<sp/><sp/><sp/><sp/><sp/><sp/>hproc;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structvdminfo__t" kindref="compound">vdminfo_t</ref><sp/><sp/><sp/>info;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>XBUF_NCS<sp/><sp/><sp/><sp/>(MAX_PATH<sp/>+<sp/>16)</highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>TCHAR<sp/><sp/><sp/><sp/><sp/><sp/><sp/>xbuf[<ref refid="enumprocs_8cpp_1af548bbc8d66de8833a1ceb50724c2e05" kindref="member">XBUF_NCS</ref>];</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>procedure<sp/>addresses<sp/>explicitly.<sp/>We<sp/>do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>so<sp/>we<sp/>don&apos;t<sp/>have<sp/>to<sp/>worry<sp/>about<sp/>modules</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>failing<sp/>to<sp/>load<sp/>under<sp/>OSes<sp/>other<sp/>than<sp/>Windows<sp/>NT<sp/>4.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>because<sp/>references<sp/>to<sp/>PSAPI.DLL<sp/>can&apos;t<sp/>be<sp/>resolved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((hlib1<sp/>=<sp/>LoadLibrary(_T(</highlight><highlight class="stringliteral">&quot;PSAPI.DLL&quot;</highlight><highlight class="normal">)))<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((hlib2<sp/>=<sp/>LoadLibrary(_T(</highlight><highlight class="stringliteral">&quot;VDMDBG.DLL&quot;</highlight><highlight class="normal">)))<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>procedure<sp/>addresses.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>GetProcAddress<sp/>は<sp/>LPCSTR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>enumProcesses<sp/>=<sp/>(<ref refid="enumprocs_8cpp_1aa77f11585f39023cc9f9c44ffa3fa993" kindref="member">EnumProcesses_t</ref>)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GetProcAddress(hlib1,<sp/></highlight><highlight class="stringliteral">&quot;EnumProcesses&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>enumProcessModules<sp/>=<sp/>(<ref refid="enumprocs_8cpp_1a64d6344741db1aa3ad54cf3853732a95" kindref="member">EnumProcessModules_t</ref>)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GetProcAddress(hlib1,<sp/></highlight><highlight class="stringliteral">&quot;EnumProcessModules&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/><sp/>UNI_CODE</highlight></codeline>
+<codeline lineno="126"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>getModuleBaseName<sp/>=<sp/>(<ref refid="enumprocs_8cpp_1a2360e90c4545a5a9d41f104f95dc0e59" kindref="member">GetModuleBaseName_t</ref>)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GetProcAddress(hlib1,<sp/></highlight><highlight class="stringliteral">&quot;GetModuleBaseNameW&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="129"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>getModuleBaseName<sp/>=<sp/>(<ref refid="enumprocs_8cpp_1a2360e90c4545a5a9d41f104f95dc0e59" kindref="member">GetModuleBaseName_t</ref>)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GetProcAddress(hlib1,<sp/></highlight><highlight class="stringliteral">&quot;GetModuleBaseNameA&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="132"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>vdmEnumTaskWOWEx<sp/>=<sp/>(<ref refid="enumprocs_8cpp_1a6d1ce1c34ddf8e7aeccbd4a846688e4f" kindref="member">VDMEnumTaskWOWEx_t</ref>)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GetProcAddress(hlib2,<sp/></highlight><highlight class="stringliteral">&quot;VDMEnumTaskWOWEx&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>↑<sp/>これは<sp/>A<sp/>W<sp/>が無し<sp/>(PSZ<sp/>only)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!enumProcesses<sp/>||<sp/>!enumProcessModules<sp/>||</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!getModuleBaseName<sp/>||<sp/>!vdmEnumTaskWOWEx)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Call<sp/>the<sp/>PSAPI<sp/>function<sp/>EnumProcesses<sp/>to<sp/>get<sp/>all<sp/>of<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ProcID&apos;s<sp/>currently<sp/>in<sp/>the<sp/>system.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOTE:<sp/>In<sp/>the<sp/>documentation,<sp/>the<sp/>third<sp/>parameter<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>EnumProcesses<sp/>is<sp/>named<sp/>cbNeeded,<sp/>which<sp/>implies<sp/>that<sp/>you</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>can<sp/>call<sp/>the<sp/>function<sp/>once<sp/>to<sp/>find<sp/>out<sp/>how<sp/>much<sp/>space<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>allocate<sp/>for<sp/>a<sp/>buffer<sp/>and<sp/>again<sp/>to<sp/>fill<sp/>the<sp/>buffer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>not<sp/>the<sp/>case.<sp/>The<sp/>cbNeeded<sp/>parameter<sp/>returns</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>number<sp/>of<sp/>PIDs<sp/>returned,<sp/>so<sp/>if<sp/>your<sp/>buffer<sp/>size<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>zero<sp/>cbNeeded<sp/>returns<sp/>zero.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOTE:<sp/>The<sp/>&quot;HeapAlloc&quot;<sp/>loop<sp/>here<sp/>ensures<sp/>that<sp/>we</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>actually<sp/>allocate<sp/>a<sp/>buffer<sp/>large<sp/>enough<sp/>for<sp/>all<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>PIDs<sp/>in<sp/>the<sp/>system.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIDBUF_SZ_MAX<sp/><sp/><sp/>(1024<sp/>*<sp/>1024<sp/>*<sp/>sizeof(*pids))</highlight></codeline>
+<codeline lineno="159"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>cnt<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>asz<sp/>=<sp/>1024<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*pids);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pids)<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pids<sp/>=<sp/>(LPDWORD)<ref refid="stdafx_8cpp_1a15634687fc57d437006658399cbf98b1" kindref="member">xfree</ref>(pids);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(asz<sp/>&gt;=<sp/>PIDBUF_SZ_MAX)<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetLastError(<ref refid="stdafx_8h_1a54961a0fbdbd7e1d9aaa20d3bbfe3c11" kindref="member">OSE_NOMEM</ref>);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asz<sp/>+=<sp/>1024<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*pids);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((pids<sp/>=<sp/>(LPDWORD)<ref refid="stdafx_8cpp_1a5d3e095b3fb6561fc5773a572197880d" kindref="member">xmalloc</ref>(asz))<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cnt<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(*enumProcesses)(pids,<sp/>asz,<sp/>&amp;cnt))</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(cnt<sp/>&gt;=<sp/>asz);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>How<sp/>many<sp/>ProcID&apos;s<sp/>did<sp/>we<sp/>get?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>cnt<sp/>/=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*pids);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Loop<sp/>through<sp/>each<sp/>ProcID.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(&amp;info,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(info));</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(xbuf,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(xbuf));</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(idx<sp/>=<sp/>0;<sp/>idx<sp/>&lt;<sp/>cnt;<sp/>idx++)<sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xbuf[0]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Open<sp/>the<sp/>process<sp/>(if<sp/>we<sp/>can...<sp/>security<sp/>does<sp/>not</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>permit<sp/>every<sp/>process<sp/>in<sp/>the<sp/>system<sp/>to<sp/>be<sp/>opened).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hproc<sp/>=<sp/>OpenProcess(</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PROCESS_QUERY_INFORMATION<sp/>|<sp/>PROCESS_VM_READ,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FALSE,<sp/>pids[idx]);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hproc)<sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Here<sp/>we<sp/>call<sp/>EnumProcessModules<sp/>to<sp/>get<sp/>only<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>first<sp/>module<sp/>in<sp/>the<sp/>process.<sp/>This<sp/>will<sp/>be<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>EXE<sp/>module<sp/>for<sp/>which<sp/>we<sp/>will<sp/>retrieve<sp/>the<sp/>name.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hmod<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((*enumProcessModules)(hproc,<sp/>&amp;hmod,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(hmod),<sp/>&amp;asz))<sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>module<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(*getModuleBaseName)(hproc,<sp/>hmod,<sp/>xbuf,<sp/>XBUF_NCS))</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xbuf[0]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CloseHandle(hproc);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Regardless<sp/>of<sp/>OpenProcess<sp/>success<sp/>or<sp/>failure,<sp/>we</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>still<sp/>call<sp/>the<sp/>enum<sp/>func<sp/>with<sp/>the<sp/>ProcID.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xbuf[<ref refid="enumprocs_8cpp_1af548bbc8d66de8833a1ceb50724c2e05" kindref="member">XBUF_NCS</ref><sp/>-<sp/>1]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(*peproc)(pids[idx],<sp/>0,<sp/>xbuf,<sp/>lparam))</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Did<sp/>we<sp/>just<sp/>bump<sp/>into<sp/>an<sp/>NTVDM?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_tcsicmp(xbuf,<sp/>_T(</highlight><highlight class="stringliteral">&quot;NTVDM.EXE&quot;</highlight><highlight class="normal">))<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fill<sp/>in<sp/>some<sp/>info<sp/>for<sp/>the<sp/>16-bit<sp/>enum<sp/>proc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="structvdminfo__t_1acec15391e8887352e94361dd1e4299ce" kindref="member">peproc</ref><sp/>=<sp/>peproc;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="structvdminfo__t_1a2c10d9922bb6dcc738551114361c7bf5" kindref="member">lparam</ref><sp/>=<sp/>lparam;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="structvdminfo__t_1a7fc6b4fa51b233a4860f46fc9e37ffb5" kindref="member">pid</ref><sp/>=<sp/>pids[idx];</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="structvdminfo__t_1a57faee841985bfd37f4c6a7ca03747c7" kindref="member">aborts</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Enum<sp/>the<sp/>16-bit<sp/>stuff.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*vdmEnumTaskWOWEx)(pids[idx],<sp/>enum16s,<sp/>(LPARAM)&amp;info);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Did<sp/>our<sp/>main<sp/>enum<sp/>func<sp/>say<sp/>quit?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(info.<ref refid="structvdminfo__t_1a57faee841985bfd37f4c6a7ca03747c7" kindref="member">aborts</ref>)</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>done<sp/>=<sp/>TRUE;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/>out:</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pids)</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="stdafx_8cpp_1a15634687fc57d437006658399cbf98b1" kindref="member">xfree</ref>(pids);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hlib2)</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FreeLibrary(hlib2);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hlib1)</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FreeLibrary(hlib1);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>done;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="keyword">static</highlight><highlight class="normal"><sp/>BOOL</highlight></codeline>
+<codeline lineno="271"><highlight class="normal">EnumProcs_oth(<ref refid="enumprocs_8h_1a4f9aa8899be61a0306f4193208d9f35e" kindref="member">PROCENUMPROC</ref><sp/>peproc,<sp/>LPARAM<sp/>lparam,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>OSVERSIONINFO<sp/>&amp;osver)</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>BOOL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>done<sp/>=<sp/>FALSE;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>HMODULE<sp/><sp/><sp/><sp/><sp/>hlib1<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>HMODULE<sp/><sp/><sp/><sp/><sp/>hlib2<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>HANDLE<sp/><sp/><sp/><sp/><sp/><sp/>hsnap<sp/>=<sp/><ref refid="stdafx_8h_1ac4be7a3847d2f545e32ff98d6ef4fdd4" kindref="member">BAD_HANDLE</ref>;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="enumprocs_8cpp_1a833f22302d41d358e65bf647af1d8407" kindref="member">CreateToolhelp32Snapshot_t</ref><sp/><sp/>createToolhelp32Snapshot<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="enumprocs_8cpp_1a9be168bffc8dc61d74ca266b9664b453" kindref="member">Process32First_t</ref><sp/><sp/><sp/><sp/>trav32First<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="enumprocs_8cpp_1a7d59510b28ccc76d08b0108fb47dfd4f" kindref="member">Process32Next_t</ref><sp/><sp/><sp/><sp/><sp/>trav32Next<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="enumprocs_8cpp_1a6d1ce1c34ddf8e7aeccbd4a846688e4f" kindref="member">VDMEnumTaskWOWEx_t</ref><sp/><sp/>vdmEnumTaskWOWEx<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>BOOL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>avail;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structvdminfo__t" kindref="compound">vdminfo_t</ref><sp/><sp/><sp/>info;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>PROCESSENTRY32<sp/><sp/>ent;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((hlib1<sp/>=<sp/>LoadLibrary(_T(</highlight><highlight class="stringliteral">&quot;Kernel32.DLL&quot;</highlight><highlight class="normal">)))<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>NT-based<sp/>OS,<sp/>load<sp/>VDMDBG.DLL.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(osver.dwPlatformId<sp/>==<sp/>VER_PLATFORM_WIN32_NT)<sp/>{</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((hlib2<sp/>=<sp/>LoadLibrary(_T(</highlight><highlight class="stringliteral">&quot;VDMDBG.DLL&quot;</highlight><highlight class="normal">)))<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>procedure<sp/>addresses.<sp/>We<sp/>are<sp/>linking<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>these<sp/>functions<sp/>explicitly,<sp/>because<sp/>a<sp/>module<sp/>using</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>code<sp/>would<sp/>fail<sp/>to<sp/>load<sp/>under<sp/>Windows<sp/>NT,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>which<sp/>does<sp/>not<sp/>have<sp/>the<sp/>Toolhelp32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>functions<sp/>in<sp/>KERNEL32.DLL.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>createToolhelp32Snapshot<sp/>=<sp/>(<ref refid="enumprocs_8cpp_1a833f22302d41d358e65bf647af1d8407" kindref="member">CreateToolhelp32Snapshot_t</ref>)</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GetProcAddress(hlib1,<sp/></highlight><highlight class="stringliteral">&quot;CreateToolhelp32Snapshot&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/><sp/>UNI_CODE</highlight></codeline>
+<codeline lineno="305"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>trav32First<sp/>=<sp/>(<ref refid="enumprocs_8cpp_1a9be168bffc8dc61d74ca266b9664b453" kindref="member">Process32First_t</ref>)</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GetProcAddress(hlib1,<sp/></highlight><highlight class="stringliteral">&quot;Process32FirstW&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>trav32Next<sp/>=<sp/>(<ref refid="enumprocs_8cpp_1a7d59510b28ccc76d08b0108fb47dfd4f" kindref="member">Process32Next_t</ref>)</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GetProcAddress(hlib1,<sp/></highlight><highlight class="stringliteral">&quot;Process32NextW&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="310"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>trav32First<sp/>=<sp/>(<ref refid="enumprocs_8cpp_1a9be168bffc8dc61d74ca266b9664b453" kindref="member">Process32First_t</ref>)</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GetProcAddress(hlib1,<sp/></highlight><highlight class="stringliteral">&quot;Process32First&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>trav32Next<sp/>=<sp/>(<ref refid="enumprocs_8cpp_1a7d59510b28ccc76d08b0108fb47dfd4f" kindref="member">Process32Next_t</ref>)</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GetProcAddress(hlib1,<sp/></highlight><highlight class="stringliteral">&quot;Process32Next&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="315"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!createToolhelp32Snapshot<sp/>||<sp/>!trav32First<sp/>||<sp/>!trav32Next)</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hlib2)<sp/>{</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vdmEnumTaskWOWEx<sp/>=<sp/>(<ref refid="enumprocs_8cpp_1a6d1ce1c34ddf8e7aeccbd4a846688e4f" kindref="member">VDMEnumTaskWOWEx_t</ref>)</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GetProcAddress(hlib2,<sp/></highlight><highlight class="stringliteral">&quot;VDMEnumTaskWOWEx&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!vdmEnumTaskWOWEx)</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>a<sp/>handle<sp/>to<sp/>a<sp/>Toolhelp<sp/>snapshot<sp/>of<sp/>all<sp/>processes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>hsnap<sp/>=<sp/>(*createToolhelp32Snapshot)(TH32CS_SNAPPROCESS,<sp/>0);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hsnap<sp/>==<sp/><ref refid="stdafx_8h_1ac4be7a3847d2f545e32ff98d6ef4fdd4" kindref="member">BAD_HANDLE</ref>)</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>first<sp/>process&apos;<sp/>information.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(&amp;info,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(info));</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(&amp;ent,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(ent));</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/>ent.dwSize<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(ent);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/>avail<sp/>=<sp/>(*trav32First)(hsnap,<sp/>&amp;ent);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>While<sp/>there<sp/>are<sp/>processes,<sp/>keep<sp/>looping.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(avail)<sp/>{</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Call<sp/>the<sp/>enum<sp/>func<sp/>with<sp/>the<sp/>filename<sp/>and<sp/>ProcID.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(*peproc)(ent.th32ProcessID,<sp/>0,<sp/>ent.szExeFile,<sp/>lparam))</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Did<sp/>we<sp/>just<sp/>bump<sp/>into<sp/>an<sp/>NTVDM?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hlib2<sp/>&amp;&amp;<sp/>_tcsicmp(ent.szExeFile,<sp/>_T(</highlight><highlight class="stringliteral">&quot;NTVDM.EXE&quot;</highlight><highlight class="normal">))<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fill<sp/>in<sp/>some<sp/>info<sp/>for<sp/>the<sp/>16-bit<sp/>enum<sp/>proc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="structvdminfo__t_1acec15391e8887352e94361dd1e4299ce" kindref="member">peproc</ref><sp/>=<sp/>peproc;</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="structvdminfo__t_1a2c10d9922bb6dcc738551114361c7bf5" kindref="member">lparam</ref><sp/>=<sp/>lparam;</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="structvdminfo__t_1a7fc6b4fa51b233a4860f46fc9e37ffb5" kindref="member">pid</ref><sp/>=<sp/>ent.th32ProcessID;</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info.<ref refid="structvdminfo__t_1a57faee841985bfd37f4c6a7ca03747c7" kindref="member">aborts</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Enum<sp/>the<sp/>16-bit<sp/>stuff.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*vdmEnumTaskWOWEx)(info.<ref refid="structvdminfo__t_1a7fc6b4fa51b233a4860f46fc9e37ffb5" kindref="member">pid</ref>,<sp/>enum16s,<sp/>(LPARAM)&amp;info);</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Did<sp/>our<sp/>main<sp/>enum<sp/>func<sp/>say<sp/>quit?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(info.<ref refid="structvdminfo__t_1a57faee841985bfd37f4c6a7ca03747c7" kindref="member">aborts</ref>)</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">goto</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ent.dwSize<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(ent);</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>avail<sp/>=<sp/>(*trav32Next)(hsnap,<sp/>&amp;ent);</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/>done<sp/>=<sp/>TRUE;</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/>out:</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hsnap<sp/>!=<sp/><ref refid="stdafx_8h_1ac4be7a3847d2f545e32ff98d6ef4fdd4" kindref="member">BAD_HANDLE</ref>)</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CloseHandle(hsnap);</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hlib2)</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FreeLibrary(hlib2);</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hlib1)</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FreeLibrary(hlib1);</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>done;</highlight></codeline>
+<codeline lineno="387"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight></codeline>
+<codeline lineno="406"><highlight class="normal">BOOL<sp/>WINAPI</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><ref refid="enumprocs_8cpp_1a88e0660582ec5e0750a5dcc074307f6f" kindref="member">EnumProcs</ref>(<ref refid="enumprocs_8h_1a4f9aa8899be61a0306f4193208d9f35e" kindref="member">PROCENUMPROC</ref><sp/>peproc,<sp/>LPARAM<sp/>lparam)</highlight></codeline>
+<codeline lineno="408"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/>BOOL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>done<sp/>=<sp/>FALSE;</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/>OSVERSIONINFO<sp/><sp/><sp/>osver;</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Retrieve<sp/>the<sp/>OS<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(&amp;osver,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(osver));</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"></highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/>osver.dwOSVersionInfoSize<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(osver);</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"></highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!GetVersionEx(&amp;osver))</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FALSE;</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"></highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(osver.dwPlatformId<sp/>==<sp/>VER_PLATFORM_WIN32_NT<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>osver.dwMajorVersion<sp/>==<sp/>4)<sp/>{</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>Windows<sp/>NT<sp/>4.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>done<sp/>=<sp/>EnumProcs_nt4(peproc,<sp/>lparam);</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(osver.dwPlatformId<sp/>==<sp/>VER_PLATFORM_WIN32_WINDOWS<sp/>||</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(osver.dwPlatformId<sp/>==<sp/>VER_PLATFORM_WIN32_NT<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>osver.dwMajorVersion<sp/>&gt;<sp/>4))<sp/>{</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>any<sp/>OS<sp/>other<sp/>than<sp/>Windows<sp/>NT<sp/>4.0.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>done<sp/>=<sp/>EnumProcs_oth(peproc,<sp/>lparam,<sp/>osver);</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetLastError(<ref refid="stdafx_8h_1a18a2177f978dcca5e301eaaf1d936890" kindref="member">OSE_NXIO</ref>);</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"></highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>done;</highlight></codeline>
+<codeline lineno="435"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Documents/workspace/asole/AstahDiagram/AstahDiagram/enumprocs.cpp"/>
+  </compounddef>
+</doxygen>

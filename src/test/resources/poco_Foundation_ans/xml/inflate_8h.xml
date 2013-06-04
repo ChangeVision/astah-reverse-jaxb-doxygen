@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="inflate_8h" kind="file">
+    <compoundname>inflate.h</compoundname>
+    <includedby refid="infback_8c" local="yes">src/infback.c</includedby>
+    <includedby refid="inffast_8c" local="yes">src/inffast.c</includedby>
+    <includedby refid="inflate_8c" local="yes">src/inflate.c</includedby>
+    <invincdepgraph>
+      <node id="590">
+        <label>src/inffast.c</label>
+        <link refid="inffast_8c"/>
+      </node>
+      <node id="591">
+        <label>src/inflate.c</label>
+        <link refid="inflate_8c"/>
+      </node>
+      <node id="588">
+        <label>src/inflate.h</label>
+        <link refid="inflate.h"/>
+        <childnode refid="589" relation="include">
+        </childnode>
+        <childnode refid="590" relation="include">
+        </childnode>
+        <childnode refid="591" relation="include">
+        </childnode>
+      </node>
+      <node id="589">
+        <label>src/infback.c</label>
+        <link refid="infback_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structinflate__state" prot="public">inflate_state</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="inflate_8h_1af0307d655eac2167b3854ed5fc711295" prot="public" static="no">
+        <name>GUNZIP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/inflate.h" line="16" column="11" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/inflate.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99ecea" prot="public" static="no">
+        <name>inflate_mode</name>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa0b0955668575b21eb0ab2272aef49f76" prot="public">
+          <name>HEAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa3aee94eb5ff82fe30d1195f935903b4a" prot="public">
+          <name>FLAGS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaae9e4c627760f36823cdd153c24229157" prot="public">
+          <name>TIME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa48654532ac8a1eee6c255d77e3e1c406" prot="public">
+          <name>OS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa566a2c5006b8c3f014f20fc659c25e5b" prot="public">
+          <name>EXLEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaaffb2fb86309c5c698e319b5b6dd8ab3a" prot="public">
+          <name>EXTRA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa67bc2ced260a8e43805d2480a785d312" prot="public">
+          <name>NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaaae696377c19e507b64e16be78ce3bbdb" prot="public">
+          <name>COMMENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaae4d85856c8036a23b19e1d32ae0e6b90" prot="public">
+          <name>HCRC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa8139648a2f9b7edaba980ab309495f11" prot="public">
+          <name>DICTID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa14826de2bf5a66b660a8e338b6357133" prot="public">
+          <name>DICT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084" prot="public">
+          <name>TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa9e64f20508d4395d6f91237950664f6e" prot="public">
+          <name>TYPEDO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa77647f28a49007bb2c1f10fa36f33b55" prot="public">
+          <name>STORED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaabf17f496021fb9357faed8247beb3926" prot="public">
+          <name>COPY_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaaba6788019f0f871f0aefcd5644635785" prot="public">
+          <name>COPY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa2e160f29fc076de5496a2b9968be9cc1" prot="public">
+          <name>TABLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaaaeda44348e46a8bc21bd6122b3f3e0d5" prot="public">
+          <name>LENLENS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa77b9f2ec0ee4bb6570ef4f42d8f2a492" prot="public">
+          <name>CODELENS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaabcafe3c2154b6a611ba2cce131ca0f86" prot="public">
+          <name>LEN_</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaaff15d001decc8890fb72cc6065a1abba" prot="public">
+          <name>LEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaad604a1d898344e0470e0f68968c41d1c" prot="public">
+          <name>LENEXT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaac04fbbdf0d80a4ad25e565541deeebd7" prot="public">
+          <name>DIST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaafca1908d584fa781bde4cf8905c3bcab" prot="public">
+          <name>DISTEXT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa1155ee5305ebe5bb9407faa9d395ae93" prot="public">
+          <name>MATCH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa3b759690471ed29ecd243a8f36b93f60" prot="public">
+          <name>LIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaaed65b7dfe470f4e500b15f7074bb7fa2" prot="public">
+          <name>CHECK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa3418c365e56fa4587ae44612afc6fa48" prot="public">
+          <name>LENGTH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa9c954bcf443428c80b0f107b3bc48749" prot="public">
+          <name>DONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaafe29bdbfb6e2165eec29bf28af429856" prot="public">
+          <name>BAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa5c97a00bfd8be44565f64bcad8c179e2" prot="public">
+          <name>MEM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa447bfe7992c2fe70bfe561225f74d379" prot="public">
+          <name>SYNC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/inflate.h" line="20" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/inflate.h" bodystart="20" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>inflate.h<sp/>--<sp/>internal<sp/>inflate<sp/>state<sp/>definition</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>1995-2009<sp/>Mark<sp/>Adler</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>For<sp/>conditions<sp/>of<sp/>distribution<sp/>and<sp/>use,<sp/>see<sp/>copyright<sp/>notice<sp/>in<sp/>zlib.h</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>WARNING:<sp/>this<sp/>file<sp/>should<sp/>*not*<sp/>be<sp/>used<sp/>by<sp/>applications.<sp/>It<sp/>is</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/>part<sp/>of<sp/>the<sp/>implementation<sp/>of<sp/>the<sp/>compression<sp/>library<sp/>and<sp/>is</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/>subject<sp/>to<sp/>change.<sp/>Applications<sp/>should<sp/>only<sp/>use<sp/>zlib.h.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>define<sp/>NO_GZIP<sp/>when<sp/>compiling<sp/>if<sp/>you<sp/>want<sp/>to<sp/>disable<sp/>gzip<sp/>header<sp/>and</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/>trailer<sp/>decoding<sp/>by<sp/>inflate().<sp/><sp/>NO_GZIP<sp/>would<sp/>be<sp/>used<sp/>to<sp/>avoid<sp/>linking<sp/>in</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/>the<sp/>crc<sp/>code<sp/>when<sp/>it<sp/>is<sp/>not<sp/>needed.<sp/><sp/>For<sp/>shared<sp/>libraries,<sp/>gzip<sp/>decoding</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/>should<sp/>be<sp/>left<sp/>enabled.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>NO_GZIP</highlight></codeline>
+<codeline lineno="16" refid="inflate_8h_1af0307d655eac2167b3854ed5fc711295" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#<sp/><sp/>define<sp/>GUNZIP</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Possible<sp/>inflate<sp/>modes<sp/>between<sp/>inflate()<sp/>calls<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99ecea" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="21" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa0b0955668575b21eb0ab2272aef49f76" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa0b0955668575b21eb0ab2272aef49f76" kindref="member">HEAD</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>waiting<sp/>for<sp/>magic<sp/>header<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa3aee94eb5ff82fe30d1195f935903b4a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa3aee94eb5ff82fe30d1195f935903b4a" kindref="member">FLAGS</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>waiting<sp/>for<sp/>method<sp/>and<sp/>flags<sp/>(gzip)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaae9e4c627760f36823cdd153c24229157" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaae9e4c627760f36823cdd153c24229157" kindref="member">TIME</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>waiting<sp/>for<sp/>modification<sp/>time<sp/>(gzip)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa48654532ac8a1eee6c255d77e3e1c406" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa48654532ac8a1eee6c255d77e3e1c406" kindref="member">OS</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>waiting<sp/>for<sp/>extra<sp/>flags<sp/>and<sp/>operating<sp/>system<sp/>(gzip)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa566a2c5006b8c3f014f20fc659c25e5b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa566a2c5006b8c3f014f20fc659c25e5b" kindref="member">EXLEN</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>waiting<sp/>for<sp/>extra<sp/>length<sp/>(gzip)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaaffb2fb86309c5c698e319b5b6dd8ab3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaaffb2fb86309c5c698e319b5b6dd8ab3a" kindref="member">EXTRA</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>waiting<sp/>for<sp/>extra<sp/>bytes<sp/>(gzip)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa67bc2ced260a8e43805d2480a785d312" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa67bc2ced260a8e43805d2480a785d312" kindref="member">NAME</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>waiting<sp/>for<sp/>end<sp/>of<sp/>file<sp/>name<sp/>(gzip)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaaae696377c19e507b64e16be78ce3bbdb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaaae696377c19e507b64e16be78ce3bbdb" kindref="member">COMMENT</ref>,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>waiting<sp/>for<sp/>end<sp/>of<sp/>comment<sp/>(gzip)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaae4d85856c8036a23b19e1d32ae0e6b90" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaae4d85856c8036a23b19e1d32ae0e6b90" kindref="member">HCRC</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>waiting<sp/>for<sp/>header<sp/>crc<sp/>(gzip)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa8139648a2f9b7edaba980ab309495f11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa8139648a2f9b7edaba980ab309495f11" kindref="member">DICTID</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>waiting<sp/>for<sp/>dictionary<sp/>check<sp/>value<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa14826de2bf5a66b660a8e338b6357133" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa14826de2bf5a66b660a8e338b6357133" kindref="member">DICT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>waiting<sp/>for<sp/>inflateSetDictionary()<sp/>call<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaab47ea8bb955afd0adc0ef98517dd6084" kindref="member">TYPE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>waiting<sp/>for<sp/>type<sp/>bits,<sp/>including<sp/>last-flag<sp/>bit<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa9e64f20508d4395d6f91237950664f6e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa9e64f20508d4395d6f91237950664f6e" kindref="member">TYPEDO</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>same,<sp/>but<sp/>skip<sp/>check<sp/>to<sp/>exit<sp/>inflate<sp/>on<sp/>new<sp/>block<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa77647f28a49007bb2c1f10fa36f33b55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa77647f28a49007bb2c1f10fa36f33b55" kindref="member">STORED</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>waiting<sp/>for<sp/>stored<sp/>size<sp/>(length<sp/>and<sp/>complement)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaabf17f496021fb9357faed8247beb3926" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaabf17f496021fb9357faed8247beb3926" kindref="member">COPY_</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i/o:<sp/>same<sp/>as<sp/>COPY<sp/>below,<sp/>but<sp/>only<sp/>first<sp/>time<sp/>in<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaaba6788019f0f871f0aefcd5644635785" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaaba6788019f0f871f0aefcd5644635785" kindref="member">COPY</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i/o:<sp/>waiting<sp/>for<sp/>input<sp/>or<sp/>output<sp/>to<sp/>copy<sp/>stored<sp/>block<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa2e160f29fc076de5496a2b9968be9cc1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa2e160f29fc076de5496a2b9968be9cc1" kindref="member">TABLE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>waiting<sp/>for<sp/>dynamic<sp/>block<sp/>table<sp/>lengths<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaaaeda44348e46a8bc21bd6122b3f3e0d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaaaeda44348e46a8bc21bd6122b3f3e0d5" kindref="member">LENLENS</ref>,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>waiting<sp/>for<sp/>code<sp/>length<sp/>code<sp/>lengths<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa77b9f2ec0ee4bb6570ef4f42d8f2a492" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa77b9f2ec0ee4bb6570ef4f42d8f2a492" kindref="member">CODELENS</ref>,<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>waiting<sp/>for<sp/>length/lit<sp/>and<sp/>distance<sp/>code<sp/>lengths<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaabcafe3c2154b6a611ba2cce131ca0f86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaabcafe3c2154b6a611ba2cce131ca0f86" kindref="member">LEN_</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>same<sp/>as<sp/>LEN<sp/>below,<sp/>but<sp/>only<sp/>first<sp/>time<sp/>in<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaaff15d001decc8890fb72cc6065a1abba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaaff15d001decc8890fb72cc6065a1abba" kindref="member">LEN</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>waiting<sp/>for<sp/>length/lit/eob<sp/>code<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaad604a1d898344e0470e0f68968c41d1c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaad604a1d898344e0470e0f68968c41d1c" kindref="member">LENEXT</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>waiting<sp/>for<sp/>length<sp/>extra<sp/>bits<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaac04fbbdf0d80a4ad25e565541deeebd7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaac04fbbdf0d80a4ad25e565541deeebd7" kindref="member">DIST</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>waiting<sp/>for<sp/>distance<sp/>code<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaafca1908d584fa781bde4cf8905c3bcab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaafca1908d584fa781bde4cf8905c3bcab" kindref="member">DISTEXT</ref>,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>waiting<sp/>for<sp/>distance<sp/>extra<sp/>bits<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa1155ee5305ebe5bb9407faa9d395ae93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa1155ee5305ebe5bb9407faa9d395ae93" kindref="member">MATCH</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>o:<sp/>waiting<sp/>for<sp/>output<sp/>space<sp/>to<sp/>copy<sp/>string<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa3b759690471ed29ecd243a8f36b93f60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa3b759690471ed29ecd243a8f36b93f60" kindref="member">LIT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>o:<sp/>waiting<sp/>for<sp/>output<sp/>space<sp/>to<sp/>write<sp/>literal<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaaed65b7dfe470f4e500b15f7074bb7fa2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaaed65b7dfe470f4e500b15f7074bb7fa2" kindref="member">CHECK</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>waiting<sp/>for<sp/>32-bit<sp/>check<sp/>value<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa3418c365e56fa4587ae44612afc6fa48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa3418c365e56fa4587ae44612afc6fa48" kindref="member">LENGTH</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i:<sp/>waiting<sp/>for<sp/>32-bit<sp/>length<sp/>(gzip)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa9c954bcf443428c80b0f107b3bc48749" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa9c954bcf443428c80b0f107b3bc48749" kindref="member">DONE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>finished<sp/>check,<sp/>done<sp/>--<sp/>remain<sp/>here<sp/>until<sp/>reset<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaafe29bdbfb6e2165eec29bf28af429856" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaafe29bdbfb6e2165eec29bf28af429856" kindref="member">BAD</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>got<sp/>a<sp/>data<sp/>error<sp/>--<sp/>remain<sp/>here<sp/>until<sp/>reset<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa5c97a00bfd8be44565f64bcad8c179e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa5c97a00bfd8be44565f64bcad8c179e2" kindref="member">MEM</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>got<sp/>an<sp/>inflate()<sp/>memory<sp/>error<sp/>--<sp/>remain<sp/>here<sp/>until<sp/>reset<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa447bfe7992c2fe70bfe561225f74d379" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99eceaa447bfe7992c2fe70bfe561225f74d379" kindref="member">SYNC</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>looking<sp/>for<sp/>synchronization<sp/>bytes<sp/>to<sp/>restart<sp/>inflate()<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}<sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99ecea" kindref="member">inflate_mode</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/>State<sp/>transitions<sp/>between<sp/>above<sp/>modes<sp/>-</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"></highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/><sp/><sp/>(most<sp/>modes<sp/>can<sp/>go<sp/>to<sp/>BAD<sp/>or<sp/>MEM<sp/>on<sp/>error<sp/>--<sp/>not<sp/>shown<sp/>for<sp/>clarity)</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"></highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/><sp/><sp/><sp/>Process<sp/>header:</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HEAD<sp/>-&gt;<sp/>(gzip)<sp/>or<sp/>(zlib)<sp/>or<sp/>(raw)</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(gzip)<sp/>-&gt;<sp/>FLAGS<sp/>-&gt;<sp/>TIME<sp/>-&gt;<sp/>OS<sp/>-&gt;<sp/>EXLEN<sp/>-&gt;<sp/>EXTRA<sp/>-&gt;<sp/>NAME<sp/>-&gt;<sp/>COMMENT<sp/>-&gt;</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HCRC<sp/>-&gt;<sp/>TYPE</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(zlib)<sp/>-&gt;<sp/>DICTID<sp/>or<sp/>TYPE</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DICTID<sp/>-&gt;<sp/>DICT<sp/>-&gt;<sp/>TYPE</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(raw)<sp/>-&gt;<sp/>TYPEDO</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/><sp/><sp/><sp/>Read<sp/>deflate<sp/>blocks:</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TYPE<sp/>-&gt;<sp/>TYPEDO<sp/>-&gt;<sp/>STORED<sp/>or<sp/>TABLE<sp/>or<sp/>LEN_<sp/>or<sp/>CHECK</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>STORED<sp/>-&gt;<sp/>COPY_<sp/>-&gt;<sp/>COPY<sp/>-&gt;<sp/>TYPE</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TABLE<sp/>-&gt;<sp/>LENLENS<sp/>-&gt;<sp/>CODELENS<sp/>-&gt;<sp/>LEN_</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LEN_<sp/>-&gt;<sp/>LEN</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/><sp/><sp/><sp/>Read<sp/>deflate<sp/>codes<sp/>in<sp/>fixed<sp/>or<sp/>dynamic<sp/>block:</highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LEN<sp/>-&gt;<sp/>LENEXT<sp/>or<sp/>LIT<sp/>or<sp/>TYPE</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LENEXT<sp/>-&gt;<sp/>DIST<sp/>-&gt;<sp/>DISTEXT<sp/>-&gt;<sp/>MATCH<sp/>-&gt;<sp/>LEN</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LIT<sp/>-&gt;<sp/>LEN</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/><sp/><sp/><sp/>Process<sp/>trailer:</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CHECK<sp/>-&gt;<sp/>LENGTH<sp/>-&gt;<sp/>DONE</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>state<sp/>maintained<sp/>between<sp/>inflate()<sp/>calls.<sp/><sp/>Approximately<sp/>10K<sp/>bytes.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="structinflate__state" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structinflate__state" kindref="compound">inflate_state</ref><sp/>{</highlight></codeline>
+<codeline lineno="82" refid="structinflate__state_1a9c7906fee7eeeb450b13576531ca639d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="inflate_8h_1a164ea0159d5f0b5f12a646f25f99ecea" kindref="member">inflate_mode</ref><sp/><ref refid="structinflate__state_1a9c7906fee7eeeb450b13576531ca639d" kindref="member">mode</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>current<sp/>inflate<sp/>mode<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="structinflate__state_1ab3cbcd2c5ff3b0b8b34ef402a13afdf7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1ab3cbcd2c5ff3b0b8b34ef402a13afdf7" kindref="member">last</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>true<sp/>if<sp/>processing<sp/>last<sp/>block<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="structinflate__state_1a990d157b5c0d4ba178c3361de9ce6561" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1a990d157b5c0d4ba178c3361de9ce6561" kindref="member">wrap</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>bit<sp/>0<sp/>true<sp/>for<sp/>zlib,<sp/>bit<sp/>1<sp/>true<sp/>for<sp/>gzip<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="structinflate__state_1a2eb1cd634ed6baade952ffa5938ebcdc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1a2eb1cd634ed6baade952ffa5938ebcdc" kindref="member">havedict</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>true<sp/>if<sp/>dictionary<sp/>provided<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="structinflate__state_1a9dcf6151443750d75b2283d0a3e62c39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1a9dcf6151443750d75b2283d0a3e62c39" kindref="member">flags</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>gzip<sp/>header<sp/>method<sp/>and<sp/>flags<sp/>(0<sp/>if<sp/>zlib)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="structinflate__state_1ae3d433011714e673b22e82156acc4416" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1ae3d433011714e673b22e82156acc4416" kindref="member">dmax</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>zlib<sp/>header<sp/>max<sp/>distance<sp/>(INFLATE_STRICT)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="structinflate__state_1ae597e4f5c37b9f7881015384bf826371" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1ae597e4f5c37b9f7881015384bf826371" kindref="member">check</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>protected<sp/>copy<sp/>of<sp/>check<sp/>value<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="structinflate__state_1af9d1071eb75b1ee37a151ccec8dfee95" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1af9d1071eb75b1ee37a151ccec8dfee95" kindref="member">total</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>protected<sp/>copy<sp/>of<sp/>output<sp/>count<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="structinflate__state_1aac35b33a559009eb4bc0e2bdd8e9b5c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structgz__header__s" kindref="compound">gz_headerp</ref><sp/><ref refid="structinflate__state_1aac35b33a559009eb4bc0e2bdd8e9b5c6" kindref="member">head</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>where<sp/>to<sp/>save<sp/>gzip<sp/>header<sp/>information<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>sliding<sp/>window<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="structinflate__state_1a71f844b589ac450f17d69f3692a8c5cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1a71f844b589ac450f17d69f3692a8c5cc" kindref="member">wbits</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>log<sp/>base<sp/>2<sp/>of<sp/>requested<sp/>window<sp/>size<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="structinflate__state_1acca16ca86216760eaf307bf71e15e470" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1acca16ca86216760eaf307bf71e15e470" kindref="member">wsize</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>window<sp/>size<sp/>or<sp/>zero<sp/>if<sp/>not<sp/>using<sp/>window<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="structinflate__state_1a6b56aabe80412784eadc1068981c9d00" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1a6b56aabe80412784eadc1068981c9d00" kindref="member">whave</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>valid<sp/>bytes<sp/>in<sp/>the<sp/>window<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="structinflate__state_1a1c3ec583646b68713e5c92151064a6dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1a1c3ec583646b68713e5c92151064a6dd" kindref="member">wnext</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>window<sp/>write<sp/>index<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="structinflate__state_1a9cc4c0bde426383731394dcf91c40673" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="zconf_8h_1aef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*<ref refid="structinflate__state_1a9cc4c0bde426383731394dcf91c40673" kindref="member">window</ref>;<sp/><sp/></highlight><highlight class="comment">/*<sp/>allocated<sp/>sliding<sp/>window,<sp/>if<sp/>needed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>bit<sp/>accumulator<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="structinflate__state_1a5a91b1c59e52f1aa7eda75b86b05b843" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1a5a91b1c59e52f1aa7eda75b86b05b843" kindref="member">hold</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>input<sp/>bit<sp/>accumulator<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="structinflate__state_1ab37c3563f306f29e6ded8e933af14365" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1ab37c3563f306f29e6ded8e933af14365" kindref="member">bits</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>bits<sp/>in<sp/>&quot;in&quot;<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>for<sp/>string<sp/>and<sp/>stored<sp/>block<sp/>copying<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="structinflate__state_1a5179d4c9b332d976cce7c6cce6bdf3c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1a5179d4c9b332d976cce7c6cce6bdf3c1" kindref="member">length</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>literal<sp/>or<sp/>length<sp/>of<sp/>data<sp/>to<sp/>copy<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="structinflate__state_1af1e38258e8585b1a37854066ef9d939c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1af1e38258e8585b1a37854066ef9d939c" kindref="member">offset</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>distance<sp/>back<sp/>to<sp/>copy<sp/>string<sp/>from<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>for<sp/>table<sp/>and<sp/>code<sp/>decoding<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="structinflate__state_1a5b7b0be77d61e8468716c7f265dd0780" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1a5b7b0be77d61e8468716c7f265dd0780" kindref="member">extra</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>extra<sp/>bits<sp/>needed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>fixed<sp/>and<sp/>dynamic<sp/>code<sp/>tables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="structinflate__state_1a4560e1eb3318f7ea41896be84de0679a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structcode" kindref="compound">code</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="zconf_8h_1aef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*<ref refid="structinflate__state_1a4560e1eb3318f7ea41896be84de0679a" kindref="member">lencode</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>starting<sp/>table<sp/>for<sp/>length/literal<sp/>codes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="structinflate__state_1a19f7ae2fe2682cb1163860f6991a107f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structcode" kindref="compound">code</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="zconf_8h_1aef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*<ref refid="structinflate__state_1a19f7ae2fe2682cb1163860f6991a107f" kindref="member">distcode</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>starting<sp/>table<sp/>for<sp/>distance<sp/>codes<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="structinflate__state_1a3ff97e6b230d7551fc848ff9de0236e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1a3ff97e6b230d7551fc848ff9de0236e9" kindref="member">lenbits</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>index<sp/>bits<sp/>for<sp/>lencode<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="structinflate__state_1a98952f3f8f420a05b567f080aca0eb4b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1a98952f3f8f420a05b567f080aca0eb4b" kindref="member">distbits</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>index<sp/>bits<sp/>for<sp/>distcode<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>dynamic<sp/>table<sp/>building<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="structinflate__state_1a62b5ea8559856b315b6c89d9114c2109" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1a62b5ea8559856b315b6c89d9114c2109" kindref="member">ncode</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>code<sp/>length<sp/>code<sp/>lengths<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="structinflate__state_1a489b005f4fe214353cd80b77b4f23194" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1a489b005f4fe214353cd80b77b4f23194" kindref="member">nlen</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>length<sp/>code<sp/>lengths<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="structinflate__state_1a4415e5e51efdd0c8672e4c601caa4762" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1a4415e5e51efdd0c8672e4c601caa4762" kindref="member">ndist</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>distance<sp/>code<sp/>lengths<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="structinflate__state_1a4a2b15912256bcf7b39980e15095ba58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1a4a2b15912256bcf7b39980e15095ba58" kindref="member">have</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>number<sp/>of<sp/>code<sp/>lengths<sp/>in<sp/>lens[]<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="structinflate__state_1a872bf267d91efb4143e9cfb812e670bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structcode" kindref="compound">code</ref><sp/><ref refid="zconf_8h_1aef060b3456fdcc093a7210a762d5f2ed" kindref="member">FAR</ref><sp/>*<ref refid="structinflate__state_1a872bf267d91efb4143e9cfb812e670bb" kindref="member">next</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>next<sp/>available<sp/>space<sp/>in<sp/>codes[]<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="structinflate__state_1aa0620e64487c48635f6c3a11a0aeb99d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1aa0620e64487c48635f6c3a11a0aeb99d" kindref="member">lens</ref>[320];<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>temporary<sp/>storage<sp/>for<sp/>code<sp/>lengths<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="structinflate__state_1a85403907f7f5b9d355821ffa2591456c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1a85403907f7f5b9d355821ffa2591456c" kindref="member">work</ref>[288];<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>work<sp/>area<sp/>for<sp/>code<sp/>table<sp/>building<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="structinflate__state_1af9581f523a7d8d47fba6cdd73eaf1edc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structcode" kindref="compound">code</ref><sp/><ref refid="structinflate__state_1af9581f523a7d8d47fba6cdd73eaf1edc" kindref="member">codes</ref>[<ref refid="inftrees_8h_1acef2f42f16f168d23ec870bd60a3b5f1" kindref="member">ENOUGH</ref>];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>space<sp/>for<sp/>code<sp/>tables<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="structinflate__state_1a98b40fe23b7177bc8cd1d9d73edad593" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1a98b40fe23b7177bc8cd1d9d73edad593" kindref="member">sane</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>if<sp/>false,<sp/>allow<sp/>invalid<sp/>distance<sp/>too<sp/>far<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="structinflate__state_1ab666ce74a806fc77200ced9bc385cb0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1ab666ce74a806fc77200ced9bc385cb0b" kindref="member">back</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>bits<sp/>back<sp/>of<sp/>last<sp/>unprocessed<sp/>length/lit<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="structinflate__state_1a0e3af9175f6d3b30f83af69062ba4dec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structinflate__state_1a0e3af9175f6d3b30f83af69062ba4dec" kindref="member">was</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>initial<sp/>length<sp/>of<sp/>match<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/inflate.h"/>
+  </compounddef>
+</doxygen>

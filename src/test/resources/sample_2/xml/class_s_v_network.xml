@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="class_s_v_network" kind="class" prot="public">
+    <compoundname>SVNetwork</compoundname>
+    <includes refid="svutil_8h" local="no">svutil.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_v_network_1a03eefaddc92a1a18d6293b1ae1bba080" prot="private" static="no" mutable="no">
+        <type><ref refid="class_s_v_mutex" kindref="compound">SVMutex</ref> *</type>
+        <definition>SVMutex* SVNetwork::mutex_send_</definition>
+        <argsstring></argsstring>
+        <name>mutex_send_</name>
+        <briefdescription>
+<para>The mutex for access to <ref refid="class_s_v_network_1a2de9fb634926d1ffc46b617e87d129f6" kindref="member">Send()</ref> and <ref refid="class_s_v_network_1ad89f207ad0f1b7fa764e2edb37c0e2c0" kindref="member">Flush()</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/viewer/svutil.h" line="130" column="1" bodyfile="/Users/makoto/Desktop/trunk/viewer/svutil.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_network_1abab72c2414fb21c039741cffdcec7f7e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SVNetwork::stream_</definition>
+        <argsstring></argsstring>
+        <name>stream_</name>
+        <briefdescription>
+<para>The actual stream_ to the server. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/viewer/svutil.h" line="132" column="1" bodyfile="/Users/makoto/Desktop/trunk/viewer/svutil.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_network_1a12c031666ebda4721fe0edca165dfae5" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* SVNetwork::msg_buffer_in_</definition>
+        <argsstring></argsstring>
+        <name>msg_buffer_in_</name>
+        <briefdescription>
+<para>Stores the last received message-chunk from the server. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/viewer/svutil.h" line="134" column="1" bodyfile="/Users/makoto/Desktop/trunk/viewer/svutil.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_network_1a24b8bd0894e85be3c7c87e3d6d8f11a7" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string SVNetwork::msg_buffer_out_</definition>
+        <argsstring></argsstring>
+        <name>msg_buffer_out_</name>
+        <briefdescription>
+<para>Stores the messages which are supposed to go out. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/viewer/svutil.h" line="137" column="1" bodyfile="/Users/makoto/Desktop/trunk/viewer/svutil.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_network_1a241d3143a8c2e4fe5bdb5d83954a3802" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SVNetwork::has_content</definition>
+        <argsstring></argsstring>
+        <name>has_content</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/viewer/svutil.h" line="139" column="1" bodyfile="/Users/makoto/Desktop/trunk/viewer/svutil.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_v_network_1a8eb41f6378639149d345c6b7df2f3000" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* SVNetwork::buffer_ptr_</definition>
+        <argsstring></argsstring>
+        <name>buffer_ptr_</name>
+        <briefdescription>
+<para>Where we are at in our msg_buffer_in_. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/viewer/svutil.h" line="141" column="1" bodyfile="/Users/makoto/Desktop/trunk/viewer/svutil.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_v_network_1a72f0c73a7d3a610035043d10f552d462" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SVNetwork::SVNetwork</definition>
+        <argsstring>(const char *hostname, int port)</argsstring>
+        <name>SVNetwork</name>
+        <param>
+          <type>const char *</type>
+          <declname>hostname</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>port</declname>
+        </param>
+        <briefdescription>
+<para>Set up a connection to hostname on port. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/viewer/svutil.h" line="110" column="1" bodyfile="/Users/makoto/Desktop/trunk/viewer/svutil.cpp" bodystart="386" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_network_1a85f11ef0f1e673319ec4cdd740eddbfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SVNetwork::~SVNetwork</definition>
+        <argsstring>()</argsstring>
+        <name>~SVNetwork</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/viewer/svutil.h" line="113" column="1" bodyfile="/Users/makoto/Desktop/trunk/viewer/svutil.cpp" bodystart="445" bodyend="448"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_network_1a2de9fb634926d1ffc46b617e87d129f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVNetwork::Send</definition>
+        <argsstring>(const char *msg)</argsstring>
+        <name>Send</name>
+        <param>
+          <type>const char *</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Put a message in the messagebuffer to the server and try to send it. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/viewer/svutil.h" line="116" column="1" bodyfile="/Users/makoto/Desktop/trunk/viewer/svutil.cpp" bodystart="205" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_network_1a6cf1cd38c287bdce0ed8594ed9076c2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * SVNetwork::Receive</definition>
+        <argsstring>()</argsstring>
+        <name>Receive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Receive a message from the server. This will always return one line of char* (denoted by <linebreak/>
+). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/viewer/svutil.h" line="120" column="1" bodyfile="/Users/makoto/Desktop/trunk/viewer/svutil.cpp" bodystart="223" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_network_1ac42718fcb9311770b737210a5ab14b27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVNetwork::Close</definition>
+        <argsstring>()</argsstring>
+        <name>Close</name>
+        <briefdescription>
+<para>Close the connection to the server. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/viewer/svutil.h" line="123" column="1" bodyfile="/Users/makoto/Desktop/trunk/viewer/svutil.cpp" bodystart="271" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_v_network_1ad89f207ad0f1b7fa764e2edb37c0e2c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SVNetwork::Flush</definition>
+        <argsstring>()</argsstring>
+        <name>Flush</name>
+        <briefdescription>
+<para>Flush the buffer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/viewer/svutil.h" line="126" column="1" bodyfile="/Users/makoto/Desktop/trunk/viewer/svutil.cpp" bodystart="212" bodyend="219"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="class_s_v_network" kindref="compound">SVNetwork</ref> class takes care of the remote connection for <ref refid="class_scroll_view" kindref="compound">ScrollView</ref> This means setting up and maintaining a remote connection, sending and receiving messages and closing the connection. It is designed to work on both Linux and Windows. </para>    </detaileddescription>
+    <location file="/Users/makoto/Desktop/trunk/viewer/svutil.h" line="107" column="1" bodyfile="/Users/makoto/Desktop/trunk/viewer/svutil.h" bodystart="107" bodyend="142"/>
+    <listofallmembers>
+      <member refid="class_s_v_network_1a8eb41f6378639149d345c6b7df2f3000" prot="private" virt="non-virtual"><scope>SVNetwork</scope><name>buffer_ptr_</name></member>
+      <member refid="class_s_v_network_1ac42718fcb9311770b737210a5ab14b27" prot="public" virt="non-virtual"><scope>SVNetwork</scope><name>Close</name></member>
+      <member refid="class_s_v_network_1ad89f207ad0f1b7fa764e2edb37c0e2c0" prot="public" virt="non-virtual"><scope>SVNetwork</scope><name>Flush</name></member>
+      <member refid="class_s_v_network_1a241d3143a8c2e4fe5bdb5d83954a3802" prot="private" virt="non-virtual"><scope>SVNetwork</scope><name>has_content</name></member>
+      <member refid="class_s_v_network_1a12c031666ebda4721fe0edca165dfae5" prot="private" virt="non-virtual"><scope>SVNetwork</scope><name>msg_buffer_in_</name></member>
+      <member refid="class_s_v_network_1a24b8bd0894e85be3c7c87e3d6d8f11a7" prot="private" virt="non-virtual"><scope>SVNetwork</scope><name>msg_buffer_out_</name></member>
+      <member refid="class_s_v_network_1a03eefaddc92a1a18d6293b1ae1bba080" prot="private" virt="non-virtual"><scope>SVNetwork</scope><name>mutex_send_</name></member>
+      <member refid="class_s_v_network_1a6cf1cd38c287bdce0ed8594ed9076c2d" prot="public" virt="non-virtual"><scope>SVNetwork</scope><name>Receive</name></member>
+      <member refid="class_s_v_network_1a2de9fb634926d1ffc46b617e87d129f6" prot="public" virt="non-virtual"><scope>SVNetwork</scope><name>Send</name></member>
+      <member refid="class_s_v_network_1abab72c2414fb21c039741cffdcec7f7e" prot="private" virt="non-virtual"><scope>SVNetwork</scope><name>stream_</name></member>
+      <member refid="class_s_v_network_1a72f0c73a7d3a610035043d10f552d462" prot="public" virt="non-virtual"><scope>SVNetwork</scope><name>SVNetwork</name></member>
+      <member refid="class_s_v_network_1a85f11ef0f1e673319ec4cdd740eddbfa" prot="public" virt="non-virtual"><scope>SVNetwork</scope><name>~SVNetwork</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

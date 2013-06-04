@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="interface_select_connector_type_panel" kind="class" prot="public">
+    <compoundname>SelectConnectorTypePanel</compoundname>
+    <basecompoundref refid="interface_command_panel" prot="public" virt="non-virtual">CommandPanel</basecompoundref>
+    <includes refid="_select_connector_type_panel_8h" local="no">SelectConnectorTypePanel.h</includes>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_select_connector_type_panel_1ad76f99f7709724413aaf9b2d24ad538d" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type><ref refid="interface_create_relation_mode" kindref="compound">CreateRelationMode</ref> *</type>
+        <definition>CreateRelationMode * SelectConnectorTypePanel::panMode</definition>
+        <argsstring></argsstring>
+        <name>panMode</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/SelectConnectorTypePanel.h" line="15" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/SelectConnectorTypePanel.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_select_connector_type_panel_1ad14c1ba96d34519fc5360b43a80cde0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SelectConnectorTypePanel::setAngle:</definition>
+        <argsstring>(CGFloat angle)</argsstring>
+        <name>setAngle:</name>
+        <param>
+          <type>CGFloat</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/SelectConnectorTypePanel.h" line="18" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/SelectConnectorTypePanel.m" bodystart="47" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="729">
+        <label>SelectConnectorTypePanel</label>
+        <link refid="interface_select_connector_type_panel"/>
+        <childnode refid="730" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="730">
+        <label>CommandPanel</label>
+        <link refid="interface_command_panel"/>
+        <childnode refid="731" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="731">
+        <label>UIView</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="740">
+        <label>Command</label>
+        <link refid="interface_command"/>
+        <childnode refid="737" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="744">
+        <label>CreateNoteAnchorCommand</label>
+        <link refid="interface_create_note_anchor_command"/>
+        <childnode refid="739" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="739">
+        <label>CreateCommand</label>
+        <link refid="interface_create_command"/>
+        <childnode refid="740" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="732">
+        <label>SelectConnectorTypePanel</label>
+        <link refid="interface_select_connector_type_panel"/>
+        <childnode refid="733" relation="public-inheritance">
+        </childnode>
+        <childnode refid="735" relation="usage">
+          <edgelabel>panMode</edgelabel>
+        </childnode>
+      </node>
+      <node id="736">
+        <label>Mode</label>
+        <link refid="interface_mode"/>
+        <childnode refid="737" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="738">
+        <label>CreateAssociationCommand</label>
+        <link refid="interface_create_association_command"/>
+        <childnode refid="739" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="735">
+        <label>CreateRelationMode</label>
+        <link refid="interface_create_relation_mode"/>
+        <childnode refid="736" relation="public-inheritance">
+        </childnode>
+        <childnode refid="738" relation="usage">
+          <edgelabel>createAssociationCommand</edgelabel>
+        </childnode>
+        <childnode refid="741" relation="usage">
+          <edgelabel>tmpConnector</edgelabel>
+        </childnode>
+        <childnode refid="744" relation="usage">
+          <edgelabel>createNoteAnchorCommand</edgelabel>
+        </childnode>
+        <childnode refid="743" relation="usage">
+          <edgelabel>target</edgelabel>
+          <edgelabel>tmpTarget</edgelabel>
+          <edgelabel>source</edgelabel>
+        </childnode>
+      </node>
+      <node id="733">
+        <label>CommandPanel</label>
+        <link refid="interface_command_panel"/>
+        <childnode refid="734" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="741">
+        <label>ConnectorViewElement</label>
+        <link refid="interface_connector_view_element"/>
+        <childnode refid="742" relation="public-inheritance">
+        </childnode>
+        <childnode refid="743" relation="usage">
+          <edgelabel>target</edgelabel>
+          <edgelabel>source</edgelabel>
+        </childnode>
+      </node>
+      <node id="742">
+        <label>LinearViewElement</label>
+        <link refid="interface_linear_view_element"/>
+        <childnode refid="743" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="734">
+        <label>UIView</label>
+      </node>
+      <node id="737">
+        <label>NSObject</label>
+      </node>
+      <node id="743">
+        <label>ViewElement</label>
+        <link refid="interface_view_element"/>
+        <childnode refid="734" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/SelectConnectorTypePanel.h" line="14" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/SelectConnectorTypePanel.h" bodystart="14" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_command_panel_1a399053f4ffc9d5ca9c7d8a0e6a7db3c4" prot="public" virt="virtual"><scope>SelectConnectorTypePanel</scope><name>addPanelButton:x:y:command:</name></member>
+      <member refid="interface_select_connector_type_panel_1ad76f99f7709724413aaf9b2d24ad538d" prot="protected" virt="non-virtual"><scope>SelectConnectorTypePanel</scope><name>panMode</name></member>
+      <member refid="interface_select_connector_type_panel_1ad76f99f7709724413aaf9b2d24ad538d" prot="public" virt="non-virtual"><scope>SelectConnectorTypePanel</scope><name>panMode</name></member>
+      <member refid="interface_select_connector_type_panel_1ad14c1ba96d34519fc5360b43a80cde0d" prot="public" virt="virtual"><scope>SelectConnectorTypePanel</scope><name>setAngle:</name></member>
+      <member refid="interface_command_panel_1ad8ba7759168cbd92c7e488b4872bb3b4" prot="public" virt="virtual"><scope>SelectConnectorTypePanel</scope><name>showPanel</name></member>
+      <member refid="interface_command_panel_1a8040a5f373625a33d5e198cd0967f13b" prot="public" virt="virtual"><scope>SelectConnectorTypePanel</scope><name>showPanel:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="closed_8h" kind="file">
+    <compoundname>closed.h</compoundname>
+    <includes local="no">math.h</includes>
+    <includes refid="states_8h" local="yes">states.h</includes>
+    <includedby refid="bestfirst_8h" local="yes">wordrec/bestfirst.h</includedby>
+    <includedby refid="closed_8cpp" local="yes">wordrec/closed.cpp</includedby>
+    <incdepgraph>
+      <node id="43125">
+        <label>states.h</label>
+        <link refid="states_8h"/>
+        <childnode refid="43126" relation="include">
+        </childnode>
+        <childnode refid="43129" relation="include">
+        </childnode>
+      </node>
+      <node id="43127">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="43128" relation="include">
+        </childnode>
+      </node>
+      <node id="43133">
+        <label>stddef.h</label>
+      </node>
+      <node id="43128">
+        <label>limits.h</label>
+      </node>
+      <node id="43131">
+        <label>string.h</label>
+      </node>
+      <node id="43124">
+        <label>math.h</label>
+      </node>
+      <node id="43123">
+        <label>wordrec/closed.h</label>
+        <link refid="closed.h"/>
+        <childnode refid="43124" relation="include">
+        </childnode>
+        <childnode refid="43125" relation="include">
+        </childnode>
+      </node>
+      <node id="43132">
+        <label>memry.h</label>
+        <link refid="memry_8h"/>
+        <childnode refid="43133" relation="include">
+        </childnode>
+        <childnode refid="43126" relation="include">
+        </childnode>
+      </node>
+      <node id="43126">
+        <label>host.h</label>
+        <link refid="host_8h"/>
+        <childnode refid="43127" relation="include">
+        </childnode>
+      </node>
+      <node id="43130">
+        <label>stdio.h</label>
+      </node>
+      <node id="43129">
+        <label>strngs.h</label>
+        <link refid="strngs_8h"/>
+        <childnode refid="43130" relation="include">
+        </childnode>
+        <childnode refid="43131" relation="include">
+        </childnode>
+        <childnode refid="43127" relation="include">
+        </childnode>
+        <childnode refid="43132" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="43136">
+        <label>ccmain/output.cpp</label>
+        <link refid="output_8cpp"/>
+      </node>
+      <node id="43138">
+        <label>wordrec/heuristic.cpp</label>
+        <link refid="heuristic_8cpp"/>
+      </node>
+      <node id="43140">
+        <label>wordrec/closed.cpp</label>
+        <link refid="closed_8cpp"/>
+      </node>
+      <node id="43137">
+        <label>wordrec/bestfirst.cpp</label>
+        <link refid="bestfirst_8cpp"/>
+      </node>
+      <node id="43135">
+        <label>wordrec/bestfirst.h</label>
+        <link refid="bestfirst_8h"/>
+        <childnode refid="43136" relation="include">
+        </childnode>
+        <childnode refid="43137" relation="include">
+        </childnode>
+        <childnode refid="43138" relation="include">
+        </childnode>
+        <childnode refid="43139" relation="include">
+        </childnode>
+      </node>
+      <node id="43134">
+        <label>wordrec/closed.h</label>
+        <link refid="closed.h"/>
+        <childnode refid="43135" relation="include">
+        </childnode>
+        <childnode refid="43140" relation="include">
+        </childnode>
+      </node>
+      <node id="43139">
+        <label>wordrec/tface.cpp</label>
+        <link refid="tface_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="closed_8h_1a854af682e4205dfeddb86f4fd4875495" prot="public" static="no">
+        <name>NO_STATE</name>
+        <initializer>~0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/closed.h" line="33" column="9" bodyfile="/Users/makoto/Desktop/trunk/wordrec/closed.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="closed_8h_1a4075db38ca70b8f395dc47e7b6565979" prot="public" static="no">
+        <name>free_hash_table</name>
+        <param><defname>table</defname></param>
+        <initializer><ref refid="freelist_8h_1ab462a857e5edf360ae4881bcc92a0bcf" kindref="member">memfree</ref>(table)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/closed.h" line="35" column="9" bodyfile="/Users/makoto/Desktop/trunk/wordrec/closed.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="closed_8h_1a8c58d81ec903d9b388b5d576c8e2fa49" prot="public" static="no">
+        <type><ref refid="struct_s_t_a_t_e" kindref="compound">STATE</ref> *</type>
+        <definition>typedef STATE* HASH_TABLE</definition>
+        <argsstring></argsstring>
+        <name>HASH_TABLE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/closed.h" line="32" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/closed.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="closed_8h_1ab1be117d24d6b3f8e426fd172588c274" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hash_add</definition>
+        <argsstring>(HASH_TABLE state_table, STATE *state)</argsstring>
+        <name>hash_add</name>
+        <param>
+          <type><ref refid="closed_8h_1a8c58d81ec903d9b388b5d576c8e2fa49" kindref="member">HASH_TABLE</ref></type>
+          <declname>state_table</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_s_t_a_t_e" kindref="compound">STATE</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/closed.h" line="37" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/closed.cpp" bodystart="50" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="closed_8h_1af42fdf0836fd4f40c478a4c46f4148c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int hash_lookup</definition>
+        <argsstring>(HASH_TABLE state_table, STATE *state)</argsstring>
+        <name>hash_lookup</name>
+        <param>
+          <type><ref refid="closed_8h_1a8c58d81ec903d9b388b5d576c8e2fa49" kindref="member">HASH_TABLE</ref></type>
+          <declname>state_table</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_s_t_a_t_e" kindref="compound">STATE</ref> *</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/closed.h" line="39" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/closed.cpp" bodystart="86" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="closed_8h_1aa74a9d96d39b412ec05403353ba7d5a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="closed_8h_1a8c58d81ec903d9b388b5d576c8e2fa49" kindref="member">HASH_TABLE</ref></type>
+        <definition>HASH_TABLE new_hash_table</definition>
+        <argsstring>()</argsstring>
+        <name>new_hash_table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/closed.h" line="41" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/closed.cpp" bodystart="120" bodyend="130"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-C-*-</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>********************************************************************************</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>closed.h<sp/><sp/>(Formerly<sp/>closed.h)</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Description:<sp/><sp/>Hash<sp/>table<sp/>for<sp/>closed<sp/>search<sp/>states.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>Author:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mark<sp/>Seaman,<sp/>SW<sp/>Productivity</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Created:<sp/><sp/><sp/><sp/><sp/><sp/>Fri<sp/>Oct<sp/>16<sp/>14:37:00<sp/>1987</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>Modified:<sp/><sp/><sp/><sp/><sp/>Fri<sp/>May<sp/>25<sp/>11:27:11<sp/>1990<sp/>(Mark<sp/>Seaman)<sp/>marks@hpgrlt</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Language:<sp/><sp/><sp/><sp/><sp/>C</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Package:<sp/><sp/><sp/><sp/><sp/><sp/>N/A</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Status:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Reusable<sp/>Software<sp/>Component</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>(c)<sp/>Copyright<sp/>1987,<sp/>Hewlett-Packard<sp/>Company.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>**<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>**<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>**<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>**<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>**<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>**<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>**<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>**<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>**<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CLOSED_H</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CLOSED_H</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="states_8h" kindref="compound">states.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="closed_8h_1a8c58d81ec903d9b388b5d576c8e2fa49" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="struct_s_t_a_t_e" kindref="compound">STATE</ref><sp/>*<ref refid="closed_8h_1a8c58d81ec903d9b388b5d576c8e2fa49" kindref="member">HASH_TABLE</ref>;</highlight></codeline>
+<codeline lineno="33" refid="closed_8h_1a854af682e4205dfeddb86f4fd4875495" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NO_STATE<sp/>~0</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="closed_8h_1a4075db38ca70b8f395dc47e7b6565979" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>free_hash_table(table)<sp/>memfree(table)</highlight></codeline>
+<codeline lineno="36"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="closed_8cpp_1ab1be117d24d6b3f8e426fd172588c274" kindref="member">hash_add</ref>(<ref refid="struct_s_t_a_t_e" kindref="compound">HASH_TABLE</ref><sp/>state_table,<sp/><ref refid="struct_s_t_a_t_e" kindref="compound">STATE</ref><sp/>*state);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="closed_8cpp_1af42fdf0836fd4f40c478a4c46f4148c5" kindref="member">hash_lookup</ref>(<ref refid="struct_s_t_a_t_e" kindref="compound">HASH_TABLE</ref><sp/>state_table,<sp/><ref refid="struct_s_t_a_t_e" kindref="compound">STATE</ref><sp/>*state);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><ref refid="struct_s_t_a_t_e" kindref="compound">HASH_TABLE</ref><sp/><ref refid="closed_8cpp_1aa74a9d96d39b412ec05403353ba7d5a4" kindref="member">new_hash_table</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/wordrec/closed.h"/>
+  </compounddef>
+</doxygen>

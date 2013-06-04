@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="interface_move_mode" kind="class" prot="public">
+    <compoundname>MoveMode</compoundname>
+    <basecompoundref refid="interface_mode" prot="public" virt="non-virtual">Mode</basecompoundref>
+    <includes refid="_move_mode_8h" local="no">MoveMode.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="interface_move_mode_1abb6100c1d2874d4bdf612bd89bcd70a6" prot="protected" static="no" mutable="no">
+        <type><ref refid="interface_view_element" kindref="compound">ViewElement</ref> *</type>
+        <definition>ViewElement* MoveMode::source</definition>
+        <argsstring></argsstring>
+        <name>source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/MoveMode.h" line="16" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/MoveMode.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_move_mode_1a39e1dbdd15794146b45c19614396f95a" prot="protected" static="no" mutable="no">
+        <type>CGPoint</type>
+        <definition>CGPoint MoveMode::startPoint</definition>
+        <argsstring></argsstring>
+        <name>startPoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/MoveMode.h" line="17" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/MoveMode.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_move_mode_1af108ffa230f4f270dabf1eabdef0440e" prot="protected" static="no" mutable="no">
+        <type>CGPoint</type>
+        <definition>CGPoint MoveMode::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/MoveMode.h" line="18" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/MoveMode.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_move_mode_1a6f89d1651c75edf758a3fbbc87de3229" prot="protected" static="no" mutable="no">
+        <type><ref refid="interface_move_command" kindref="compound">MoveCommand</ref> *</type>
+        <definition>MoveCommand* MoveMode::moveCommand</definition>
+        <argsstring></argsstring>
+        <name>moveCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/MoveMode.h" line="19" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/MoveMode.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="602">
+        <label>MoveMode</label>
+        <link refid="interface_move_mode"/>
+        <childnode refid="603" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="603">
+        <label>Mode</label>
+        <link refid="interface_mode"/>
+        <childnode refid="604" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="604">
+        <label>NSObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="610">
+        <label>Command</label>
+        <link refid="interface_command"/>
+        <childnode refid="607" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="605">
+        <label>MoveMode</label>
+        <link refid="interface_move_mode"/>
+        <childnode refid="606" relation="public-inheritance">
+        </childnode>
+        <childnode refid="608" relation="usage">
+          <edgelabel>moveCommand</edgelabel>
+        </childnode>
+        <childnode refid="611" relation="usage">
+          <edgelabel>source</edgelabel>
+        </childnode>
+      </node>
+      <node id="608">
+        <label>MoveCommand</label>
+        <link refid="interface_move_command"/>
+        <childnode refid="609" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="609">
+        <label>ModifyCommand</label>
+        <link refid="interface_modify_command"/>
+        <childnode refid="610" relation="public-inheritance">
+        </childnode>
+        <childnode refid="611" relation="usage">
+          <edgelabel>viewElement</edgelabel>
+        </childnode>
+      </node>
+      <node id="606">
+        <label>Mode</label>
+        <link refid="interface_mode"/>
+        <childnode refid="607" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="612">
+        <label>UIView</label>
+      </node>
+      <node id="607">
+        <label>NSObject</label>
+      </node>
+      <node id="611">
+        <label>ViewElement</label>
+        <link refid="interface_view_element"/>
+        <childnode refid="612" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/MoveMode.h" line="15" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/MoveMode.h" bodystart="15" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_move_mode_1a6f89d1651c75edf758a3fbbc87de3229" prot="protected" virt="non-virtual"><scope>MoveMode</scope><name>moveCommand</name></member>
+      <member refid="interface_move_mode_1af108ffa230f4f270dabf1eabdef0440e" prot="protected" virt="non-virtual"><scope>MoveMode</scope><name>offset</name></member>
+      <member refid="interface_move_mode_1abb6100c1d2874d4bdf612bd89bcd70a6" prot="protected" virt="non-virtual"><scope>MoveMode</scope><name>source</name></member>
+      <member refid="interface_move_mode_1a39e1dbdd15794146b45c19614396f95a" prot="protected" virt="non-virtual"><scope>MoveMode</scope><name>startPoint</name></member>
+      <member refid="interface_mode_1adbde69693521f2e5dabf85a18b1411e4" prot="public" virt="virtual"><scope>MoveMode</scope><name>touchesBegan:</name></member>
+      <member refid="interface_mode_1ae28c9c16d6e6c6bd5579e52285d4cf46" prot="public" virt="virtual"><scope>MoveMode</scope><name>touchesCancelled:</name></member>
+      <member refid="interface_mode_1a38466dcc8f6d936ada36fa19ab762abc" prot="public" virt="virtual"><scope>MoveMode</scope><name>touchesEnded:</name></member>
+      <member refid="interface_mode_1a19d2f4c3dbd70c45075805160893fa81" prot="public" virt="virtual"><scope>MoveMode</scope><name>touchesMoved:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="interface_edit_association_pop_over_controller" kind="class" prot="public">
+    <compoundname>EditAssociationPopOverController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UIPopoverController</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">&lt;UIPopoverControllerDelegate&gt;</basecompoundref>
+    <includes refid="_edit_association_pop_over_controller_8h" local="no">EditAssociationPopOverController.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="interface_edit_association_pop_over_controller_1a5b2d1d16bcba4c09d4595fc6d58e867e" prot="protected" static="no" mutable="no">
+        <type><ref refid="interface_edit_association_controller" kindref="compound">EditAssociationController</ref> *</type>
+        <definition>EditAssociationController* EditAssociationPopOverController::edit</definition>
+        <argsstring></argsstring>
+        <name>edit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/EditAssociationPopOverController.h" line="17" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/EditAssociationPopOverController.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_edit_association_pop_over_controller_1aad1da679ed1e7155a9028f48c7e1fa53" prot="protected" static="no" mutable="no">
+        <type><ref refid="interface_set_association_param_command" kindref="compound">SetAssociationParamCommand</ref> *</type>
+        <definition>SetAssociationParamCommand* EditAssociationPopOverController::setCommand</definition>
+        <argsstring></argsstring>
+        <name>setCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/EditAssociationPopOverController.h" line="18" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/EditAssociationPopOverController.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="interface_edit_association_pop_over_controller_1a5473fb9229f5b4cf7036892ec07f84da" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EditAssociationPopOverController::show:viewElement:</definition>
+        <argsstring>(DiagramView *diagramView,[viewElement] AssociationViewElement *ve)</argsstring>
+        <name>show:viewElement:</name>
+        <param>
+          <type><ref refid="interface_diagram_view" kindref="compound">DiagramView</ref> *</type>
+          <declname>diagramView</declname>
+        </param>
+        <param>
+          <attributes>[viewElement]</attributes>
+          <type><ref refid="interface_association_view_element" kindref="compound">AssociationViewElement</ref> *</type>
+          <declname>ve</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/EditAssociationPopOverController.h" line="18" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/EditAssociationPopOverController.m" bodystart="29" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="330">
+        <label>EditAssociationPopOverController</label>
+        <link refid="interface_edit_association_pop_over_controller"/>
+        <childnode refid="331" relation="public-inheritance">
+        </childnode>
+        <childnode refid="332" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="332">
+        <label>&lt;UIPopoverControllerDelegate&gt;</label>
+      </node>
+      <node id="331">
+        <label>UIPopoverController</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="338">
+        <label>Command</label>
+        <link refid="interface_command"/>
+        <childnode refid="339" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="336">
+        <label>SetAssociationParamCommand</label>
+        <link refid="interface_set_association_param_command"/>
+        <childnode refid="337" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="345">
+        <label>AssociationViewElement</label>
+        <link refid="interface_association_view_element"/>
+        <childnode refid="346" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="337">
+        <label>ModifyCommand</label>
+        <link refid="interface_modify_command"/>
+        <childnode refid="338" relation="public-inheritance">
+        </childnode>
+        <childnode refid="340" relation="usage">
+          <edgelabel>viewElement</edgelabel>
+        </childnode>
+      </node>
+      <node id="333">
+        <label>EditAssociationPopOverController</label>
+        <link refid="interface_edit_association_pop_over_controller"/>
+        <childnode refid="334" relation="public-inheritance">
+        </childnode>
+        <childnode refid="335" relation="public-inheritance">
+        </childnode>
+        <childnode refid="336" relation="usage">
+          <edgelabel>setCommand</edgelabel>
+        </childnode>
+        <childnode refid="342" relation="usage">
+          <edgelabel>edit</edgelabel>
+        </childnode>
+      </node>
+      <node id="335">
+        <label>&lt;UIPopoverControllerDelegate&gt;</label>
+      </node>
+      <node id="334">
+        <label>UIPopoverController</label>
+      </node>
+      <node id="344">
+        <label>&lt;UITextFieldDelegate&gt;</label>
+      </node>
+      <node id="343">
+        <label>UIViewController</label>
+      </node>
+      <node id="348">
+        <label>TextFieldWithAccessoryKeyboard</label>
+        <link refid="interface_text_field_with_accessory_keyboard"/>
+        <childnode refid="349" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="346">
+        <label>ConnectorViewElement</label>
+        <link refid="interface_connector_view_element"/>
+        <childnode refid="347" relation="public-inheritance">
+        </childnode>
+        <childnode refid="340" relation="usage">
+          <edgelabel>target</edgelabel>
+          <edgelabel>source</edgelabel>
+        </childnode>
+      </node>
+      <node id="347">
+        <label>LinearViewElement</label>
+        <link refid="interface_linear_view_element"/>
+        <childnode refid="340" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="342">
+        <label>EditAssociationController</label>
+        <link refid="interface_edit_association_controller"/>
+        <childnode refid="343" relation="public-inheritance">
+        </childnode>
+        <childnode refid="344" relation="public-inheritance">
+        </childnode>
+        <childnode refid="345" relation="usage">
+          <edgelabel>viewElement</edgelabel>
+        </childnode>
+        <childnode refid="348" relation="usage">
+          <edgelabel>sourceMultiplicity</edgelabel>
+          <edgelabel>targetMultiplicity</edgelabel>
+        </childnode>
+      </node>
+      <node id="341">
+        <label>UIView</label>
+      </node>
+      <node id="339">
+        <label>NSObject</label>
+      </node>
+      <node id="340">
+        <label>ViewElement</label>
+        <link refid="interface_view_element"/>
+        <childnode refid="341" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="349">
+        <label>UITextField</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/EditAssociationPopOverController.h" line="16" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/EditAssociationPopOverController.h" bodystart="16" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_edit_association_pop_over_controller_1a5b2d1d16bcba4c09d4595fc6d58e867e" prot="protected" virt="non-virtual"><scope>EditAssociationPopOverController</scope><name>edit</name></member>
+      <member refid="interface_edit_association_pop_over_controller_1aad1da679ed1e7155a9028f48c7e1fa53" prot="protected" virt="non-virtual"><scope>EditAssociationPopOverController</scope><name>setCommand</name></member>
+      <member refid="interface_edit_association_pop_over_controller_1a5473fb9229f5b4cf7036892ec07f84da" prot="public" virt="virtual"><scope>EditAssociationPopOverController</scope><name>show:viewElement:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

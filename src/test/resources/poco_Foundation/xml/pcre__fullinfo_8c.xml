@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="pcre__fullinfo_8c" kind="file">
+    <compoundname>pcre_fullinfo.c</compoundname>
+    <includes refid="pcre__config_8h" local="yes">pcre_config.h</includes>
+    <includes refid="pcre__internal_8h" local="yes">pcre_internal.h</includes>
+    <incdepgraph>
+      <node id="1004">
+        <label>pcre_config.h</label>
+        <link refid="pcre__config_8h"/>
+      </node>
+      <node id="1013">
+        <label>stdarg.h</label>
+      </node>
+      <node id="1015">
+        <label>ucp.h</label>
+        <link refid="ucp_8h"/>
+      </node>
+      <node id="1010">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1012">
+        <label>setjmp.h</label>
+      </node>
+      <node id="1008">
+        <label>stddef.h</label>
+      </node>
+      <node id="1014">
+        <label>pcre.h</label>
+        <link refid="pcre_8h"/>
+        <childnode refid="1010" relation="include">
+        </childnode>
+      </node>
+      <node id="1007">
+        <label>limits.h</label>
+      </node>
+      <node id="1005">
+        <label>pcre_internal.h</label>
+        <link refid="pcre__internal_8h"/>
+        <childnode refid="1006" relation="include">
+        </childnode>
+        <childnode refid="1007" relation="include">
+        </childnode>
+        <childnode refid="1008" relation="include">
+        </childnode>
+        <childnode refid="1009" relation="include">
+        </childnode>
+        <childnode refid="1010" relation="include">
+        </childnode>
+        <childnode refid="1011" relation="include">
+        </childnode>
+        <childnode refid="1012" relation="include">
+        </childnode>
+        <childnode refid="1013" relation="include">
+        </childnode>
+        <childnode refid="1014" relation="include">
+        </childnode>
+        <childnode refid="1015" relation="include">
+        </childnode>
+      </node>
+      <node id="1011">
+        <label>string.h</label>
+      </node>
+      <node id="1006">
+        <label>ctype.h</label>
+      </node>
+      <node id="1003">
+        <label>src/pcre_fullinfo.c</label>
+        <link refid="pcre_fullinfo.c"/>
+        <childnode refid="1004" relation="include">
+        </childnode>
+        <childnode refid="1005" relation="include">
+        </childnode>
+      </node>
+      <node id="1009">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pcre__fullinfo_8c_1aba6a8bbabe43a89510545c775bc9609a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int pcre_fullinfo</definition>
+        <argsstring>(const pcre *argument_re, const pcre_extra *extra_data, int what, void *where)</argsstring>
+        <name>pcre_fullinfo</name>
+        <param>
+          <type><ref refid="zconf_8h_1a2c212835823e3c54a8ab6d95c652660e" kindref="member">const</ref> pcre *</type>
+          <declname>argument_re</declname>
+        </param>
+        <param>
+          <type><ref refid="zconf_8h_1a2c212835823e3c54a8ab6d95c652660e" kindref="member">const</ref> <ref refid="structpcre__extra" kindref="compound">pcre_extra</ref> *</type>
+          <declname>extra_data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>what</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>where</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/pcre_fullinfo.c" line="66" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/pcre_fullinfo.c" bodystart="66" bodyend="160"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/>Perl-Compatible<sp/>Regular<sp/>Expressions<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PCRE<sp/>is<sp/>a<sp/>library<sp/>of<sp/>functions<sp/>to<sp/>support<sp/>regular<sp/>expressions<sp/>whose<sp/>syntax</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">and<sp/>semantics<sp/>are<sp/>as<sp/>close<sp/>as<sp/>possible<sp/>to<sp/>those<sp/>of<sp/>the<sp/>Perl<sp/>5<sp/>language.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Written<sp/>by<sp/>Philip<sp/>Hazel</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>1997-2008<sp/>University<sp/>of<sp/>Cambridge</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">-----------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright<sp/>notice,</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"></highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"></highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>the<sp/>University<sp/>of<sp/>Cambridge<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS<sp/>&quot;AS<sp/>IS&quot;</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">CONTRACT,<sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">-----------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>module<sp/>contains<sp/>the<sp/>external<sp/>function<sp/>pcre_fullinfo(),<sp/>which<sp/>returns</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">information<sp/>about<sp/>a<sp/>compiled<sp/>pattern.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pcre__config_8h" kindref="compound">pcre_config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pcre__internal_8h" kindref="compound">pcre_internal.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">/*************************************************</highlight></codeline>
+<codeline lineno="50"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Return<sp/>info<sp/>about<sp/>compiled<sp/>pattern<sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">*************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>is<sp/>a<sp/>newer<sp/>&quot;info&quot;<sp/>function<sp/>which<sp/>has<sp/>an<sp/>extensible<sp/>interface<sp/>so</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">that<sp/>additional<sp/>items<sp/>can<sp/>be<sp/>added<sp/>compatibly.</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"></highlight></codeline>
+<codeline lineno="56"><highlight class="comment">Arguments:</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/>argument_re<sp/><sp/><sp/><sp/><sp/><sp/>points<sp/>to<sp/>compiled<sp/>code</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/>extra_data<sp/><sp/><sp/><sp/><sp/><sp/><sp/>points<sp/>extra<sp/>data,<sp/>or<sp/>NULL</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/>what<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>what<sp/>information<sp/>is<sp/>required</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/><sp/>where<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>where<sp/>to<sp/>put<sp/>the<sp/>information</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"></highlight></codeline>
+<codeline lineno="62"><highlight class="comment">Returns:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0<sp/>if<sp/>data<sp/>returned,<sp/>negative<sp/>on<sp/>error</highlight></codeline>
+<codeline lineno="63"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><ref refid="pcre__internal_8h_1a43f7c191f7b3645a85b184183534a961" kindref="member">PCRE_EXP_DEFN</ref><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="pcre__internal_8h_1a8696d535a0f4ad7b9fef8b2acc558ca0" kindref="member">PCRE_CALL_CONVENTION</ref></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><ref refid="pcre_8h_1ae8981199a44bbdffd27155ef98d0ddf9" kindref="member">pcre_fullinfo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>pcre<sp/>*argument_re,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpcre__extra" kindref="compound">pcre_extra</ref><sp/>*extra_data,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>what,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*where)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><ref refid="structreal__pcre" kindref="compound">real_pcre</ref><sp/>internal_re;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><ref refid="structpcre__study__data" kindref="compound">pcre_study_data</ref><sp/>internal_study;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structreal__pcre" kindref="compound">real_pcre</ref><sp/>*re<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structreal__pcre" kindref="compound">real_pcre</ref><sp/>*)argument_re;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpcre__study__data" kindref="compound">pcre_study_data</ref><sp/>*study<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(re<sp/>==<sp/>NULL<sp/>||<sp/>where<sp/>==<sp/>NULL)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="pcre_8h_1aa47d1a178fb529fed1b1f999ea98b0b9" kindref="member">PCRE_ERROR_NULL</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(extra_data<sp/>!=<sp/>NULL<sp/>&amp;&amp;<sp/>(extra_data-&gt;<ref refid="structpcre__extra_1a2a7957f7f9d15b3b69f8652b2f50ecb3" kindref="member">flags</ref><sp/>&amp;<sp/><ref refid="pcre_8h_1a2349a3ef318b1472ea1e862dea0e5d5f" kindref="member">PCRE_EXTRA_STUDY_DATA</ref>)<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>study<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpcre__study__data" kindref="compound">pcre_study_data</ref><sp/>*)extra_data-&gt;<ref refid="structpcre__extra_1a27f29bdf9c4526d5bb3fb8ee514ee8e8" kindref="member">study_data</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(re-&gt;<ref refid="structreal__pcre_1ac51622792c220cf763ff4c4f1b4849ff" kindref="member">magic_number</ref><sp/>!=<sp/><ref refid="pcre__internal_8h_1a54061e5993a5517320d425f44408cc86" kindref="member">MAGIC_NUMBER</ref>)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>re<sp/>=<sp/><ref refid="pcre__internal_8h_1aa0a2a98cc46934bcad306d90c844218e" kindref="member">_pcre_try_flipped</ref>(re,<sp/>&amp;internal_re,<sp/>study,<sp/>&amp;internal_study);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(re<sp/>==<sp/>NULL)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="pcre_8h_1a5c86cbd13e6c2770246f6da8a310f160" kindref="member">PCRE_ERROR_BADMAGIC</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(study<sp/>!=<sp/>NULL)<sp/>study<sp/>=<sp/>&amp;internal_study;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(what)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pcre_8h_1a0e76bf1b51c1f8ab9dfd41981244e77e" kindref="member">PCRE_INFO_OPTIONS</ref>:</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>*((</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*)where)<sp/>=<sp/>re-&gt;<ref refid="structreal__pcre_1a207ee9fc6eb9b13d7dca68f64d6df615" kindref="member">options</ref><sp/>&amp;<sp/><ref refid="pcre__internal_8h_1a5b7b03d337464e5fe3f7108c8a729830" kindref="member">PUBLIC_OPTIONS</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pcre_8h_1a157c504f78f237c14e1c46c762fc44c7" kindref="member">PCRE_INFO_SIZE</ref>:</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>*((</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*)where)<sp/>=<sp/>re-&gt;<ref refid="structreal__pcre_1a88003afa04d9f71b30ab4b1d1952585b" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pcre_8h_1aadf0ac007837039b0a52ea7d9495a40b" kindref="member">PCRE_INFO_STUDYSIZE</ref>:</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>*((</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*)where)<sp/>=<sp/>(study<sp/>==<sp/>NULL)?<sp/>0<sp/>:<sp/>study-&gt;<ref refid="structpcre__study__data_1ac994347d3d729eaf14eba590b65867a6" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pcre_8h_1a1e67f3dc26bcad0195ef42f9d5126d78" kindref="member">PCRE_INFO_CAPTURECOUNT</ref>:</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>*((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*)where)<sp/>=<sp/>re-&gt;<ref refid="structreal__pcre_1af472df9a98f69598b97c7fb7a29ee686" kindref="member">top_bracket</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pcre_8h_1a41f8636ef1964c07030820d46dfd8d0a" kindref="member">PCRE_INFO_BACKREFMAX</ref>:</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>*((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*)where)<sp/>=<sp/>re-&gt;<ref refid="structreal__pcre_1a5d0a06a9f2a717d4376717ba172cf55e" kindref="member">top_backref</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pcre_8h_1a653b7b37d2ffc7112a420dafed1dc074" kindref="member">PCRE_INFO_FIRSTBYTE</ref>:</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>*((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*)where)<sp/>=</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>((re-&gt;<ref refid="structreal__pcre_1a29901ed20ab7fd0bd22a7d99dd7350d5" kindref="member">flags</ref><sp/>&amp;<sp/><ref refid="pcre__internal_8h_1aa3860b4c31ee4275eaa19df78bc73590" kindref="member">PCRE_FIRSTSET</ref>)<sp/>!=<sp/>0)?<sp/>re-&gt;<ref refid="structreal__pcre_1a23e1355bfa424bc5f6337de0f677553d" kindref="member">first_byte</ref><sp/>:</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>((re-&gt;<ref refid="structreal__pcre_1a29901ed20ab7fd0bd22a7d99dd7350d5" kindref="member">flags</ref><sp/>&amp;<sp/><ref refid="pcre__internal_8h_1af24422b85f1b3c788a4703b61f18fe11" kindref="member">PCRE_STARTLINE</ref>)<sp/>!=<sp/>0)?<sp/>-1<sp/>:<sp/>-2;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Make<sp/>sure<sp/>we<sp/>pass<sp/>back<sp/>the<sp/>pointer<sp/>to<sp/>the<sp/>bit<sp/>vector<sp/>in<sp/>the<sp/>external</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/>block,<sp/>not<sp/>the<sp/>internal<sp/>copy<sp/>(with<sp/>flipped<sp/>integer<sp/>fields).<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pcre_8h_1a6967220a12ed19c6b461d28342825afb" kindref="member">PCRE_INFO_FIRSTTABLE</ref>:</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>*((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="pcre__internal_8h_1ac577b548c150a22e244584d01e177f9a" kindref="member">uschar</ref><sp/>**)where)<sp/>=</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>(study<sp/>!=<sp/>NULL<sp/>&amp;&amp;<sp/>(study-&gt;<ref refid="structpcre__study__data_1a506b45147cf530698b13eff5d124ecfe" kindref="member">options</ref><sp/>&amp;<sp/><ref refid="pcre__internal_8h_1a4bbaa1bde305f5aa75950082a6fa8870" kindref="member">PCRE_STUDY_MAPPED</ref>)<sp/>!=<sp/>0)?</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structpcre__study__data" kindref="compound">pcre_study_data</ref><sp/>*)extra_data-&gt;<ref refid="structpcre__extra_1a27f29bdf9c4526d5bb3fb8ee514ee8e8" kindref="member">study_data</ref>)-&gt;start_bits<sp/>:<sp/>NULL;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pcre_8h_1a174b32a9d716539c63f79bdb824e5a19" kindref="member">PCRE_INFO_LASTLITERAL</ref>:</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>*((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*)where)<sp/>=</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>((re-&gt;<ref refid="structreal__pcre_1a29901ed20ab7fd0bd22a7d99dd7350d5" kindref="member">flags</ref><sp/>&amp;<sp/><ref refid="pcre__internal_8h_1a6c85b22f5b731db51da6177b20aa0ebd" kindref="member">PCRE_REQCHSET</ref>)<sp/>!=<sp/>0)?<sp/>re-&gt;<ref refid="structreal__pcre_1a8917d12d1b71862c8c2fa502b63ad391" kindref="member">req_byte</ref><sp/>:<sp/>-1;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pcre_8h_1a0592f8d9db4d1d559ce7619b26dfe5f7" kindref="member">PCRE_INFO_NAMEENTRYSIZE</ref>:</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>*((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*)where)<sp/>=<sp/>re-&gt;<ref refid="structreal__pcre_1a2605c553619bcb99a83c9d676e2ab5e0" kindref="member">name_entry_size</ref>;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pcre_8h_1a65a1bccd2d8ae9390f58fbbd204604b4" kindref="member">PCRE_INFO_NAMECOUNT</ref>:</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>*((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*)where)<sp/>=<sp/>re-&gt;<ref refid="structreal__pcre_1a2c6d31e5c2514cfbf35bf84a7338a485" kindref="member">name_count</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pcre_8h_1a0268bee19c3c4f925dd10c320ad84dd2" kindref="member">PCRE_INFO_NAMETABLE</ref>:</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>*((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="pcre__internal_8h_1ac577b548c150a22e244584d01e177f9a" kindref="member">uschar</ref><sp/>**)where)<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="pcre__internal_8h_1ac577b548c150a22e244584d01e177f9a" kindref="member">uschar</ref><sp/>*)re<sp/>+<sp/>re-&gt;<ref refid="structreal__pcre_1a8335643ae4ddbf0590060e8620d8863c" kindref="member">name_table_offset</ref>;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pcre_8h_1ad69f733768ffcb1f36c66adc671ff95b" kindref="member">PCRE_INFO_DEFAULT_TABLES</ref>:</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>*((</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="pcre__internal_8h_1ac577b548c150a22e244584d01e177f9a" kindref="member">uschar</ref><sp/>**)where)<sp/>=<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="pcre__internal_8h_1ac577b548c150a22e244584d01e177f9a" kindref="member">uschar</ref><sp/>*)(<ref refid="pcre__chartables_8c_1a65111e9495c90b43f671dbae9beda27a" kindref="member">_pcre_default_tables</ref>);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pcre_8h_1ac2d31bd0f762c33882914adbd2fb7bd5" kindref="member">PCRE_INFO_OKPARTIAL</ref>:</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>*((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*)where)<sp/>=<sp/>(re-&gt;<ref refid="structreal__pcre_1a29901ed20ab7fd0bd22a7d99dd7350d5" kindref="member">flags</ref><sp/>&amp;<sp/><ref refid="pcre__internal_8h_1a7eada40373dcbebeba6d3d984530fa51" kindref="member">PCRE_NOPARTIAL</ref>)<sp/>==<sp/>0;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pcre_8h_1abcce93127f116fa34938a0dcbff153f1" kindref="member">PCRE_INFO_JCHANGED</ref>:</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>*((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*)where)<sp/>=<sp/>(re-&gt;<ref refid="structreal__pcre_1a29901ed20ab7fd0bd22a7d99dd7350d5" kindref="member">flags</ref><sp/>&amp;<sp/><ref refid="pcre__internal_8h_1ace1a0fedb1f4bdffcc0f0a97cc2f1489" kindref="member">PCRE_JCHANGED</ref>)<sp/>!=<sp/>0;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pcre_8h_1a4fe48f70c96771135e0f25eeadaabea6" kindref="member">PCRE_INFO_HASCRORLF</ref>:</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>*((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*)where)<sp/>=<sp/>(re-&gt;<ref refid="structreal__pcre_1a29901ed20ab7fd0bd22a7d99dd7350d5" kindref="member">flags</ref><sp/>&amp;<sp/><ref refid="pcre__internal_8h_1a812a945823796f9a6db7bd05bda219e7" kindref="member">PCRE_HASCRORLF</ref>)<sp/>!=<sp/>0;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="pcre_8h_1a2e1578015eb678450a1c8327c97509e7" kindref="member">PCRE_ERROR_BADOPTION</ref>;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>End<sp/>of<sp/>pcre_fullinfo.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/pcre_fullinfo.c"/>
+  </compounddef>
+</doxygen>

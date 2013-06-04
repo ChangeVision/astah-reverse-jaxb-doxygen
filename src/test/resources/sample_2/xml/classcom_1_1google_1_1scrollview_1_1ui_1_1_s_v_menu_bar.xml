@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_menu_bar" kind="class" prot="public">
+    <compoundname>com::google::scrollview::ui::SVMenuBar</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ActionListener</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_menu_bar_1acdcc51c12a54583da37ad24e34969f2b" prot="private" static="no" mutable="no">
+        <type>JMenuBar</type>
+        <definition>JMenuBar com.google.scrollview.ui.SVMenuBar.root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The root entry to add items to. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVMenuBar.java" line="33" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVMenuBar.java" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_menu_bar_1aa8493b338d7f5f4543bb8ced44a7f616" prot="private" static="no" mutable="no">
+        <type>HashMap&lt; String, SVAbstractMenuItem &gt;</type>
+        <definition>HashMap&lt;String, SVAbstractMenuItem&gt; com.google.scrollview.ui.SVMenuBar.items</definition>
+        <argsstring></argsstring>
+        <name>items</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Contains a map of item name to its actual entry. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVMenuBar.java" line="35" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVMenuBar.java" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_menu_bar_1ac4bdd9ff8bd12f464ce3735f5e8ad6f5" prot="private" static="no" mutable="no">
+        <type><ref refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window" kindref="compound">SVWindow</ref></type>
+        <definition>SVWindow com.google.scrollview.ui.SVMenuBar.svWindow</definition>
+        <argsstring></argsstring>
+        <name>svWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The window the menubar belongs to. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVMenuBar.java" line="37" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVMenuBar.java" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_menu_bar_1a2ba2e6826a19dfbf1ec040c0552a4bab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.google.scrollview.ui.SVMenuBar.SVMenuBar</definition>
+        <argsstring>(SVWindow scrollView)</argsstring>
+        <name>SVMenuBar</name>
+        <param>
+          <type><ref refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window" kindref="compound">SVWindow</ref></type>
+          <declname>scrollView</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new <ref refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_menu_bar" kindref="compound">SVMenuBar</ref> and place it at the top of the <ref refid="classcom_1_1google_1_1scrollview_1_1_scroll_view" kindref="compound">ScrollView</ref> window.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scrollView</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window our menubar belongs to. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVMenuBar.java" line="44" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVMenuBar.java" bodystart="44" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_menu_bar_1a78fa6997aa0d3baa6b228a223ad38d60" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVMenuBar.actionPerformed</definition>
+        <argsstring>(ActionEvent e)</argsstring>
+        <name>actionPerformed</name>
+        <param>
+          <type>ActionEvent</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A click on one of the items in our menubar has occured. Forward it to the item itself to let it decide what happens. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVMenuBar.java" line="56" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVMenuBar.java" bodystart="56" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_menu_bar_1a9f29f81c997dc2a252b3c68470c2ed25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVMenuBar.add</definition>
+        <argsstring>(String parent, String name, int id)</argsstring>
+        <name>add</name>
+        <param>
+          <type>String</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a new entry to the menubar.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The menu we add our new entry to (should have been defined before). If the parent is &quot;&quot;, we will add the entry to the root (top-level) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The caption of the new entry. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Id of the new entry. If it is -1, the entry will be treated as a menu. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVMenuBar.java" line="73" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVMenuBar.java" bodystart="73" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_menu_bar_1a96ef9e56ce4896c278e894eb0ec7306c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVMenuBar.add</definition>
+        <argsstring>(String parent, String name, int id, boolean b)</argsstring>
+        <name>add</name>
+        <param>
+          <type>String</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a new checkbox entry to the menubar.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The menu we add our new entry to (should have been defined before). If the parent is &quot;&quot;, we will add the entry to the root (top-level) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The caption of the new entry. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Id of the new entry. If it is -1, the entry will be treated as a menu. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the entry is initally flagged. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVMenuBar.java" line="118" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVMenuBar.java" bodystart="118" bodyend="128"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_menu_bar" kindref="compound">SVMenuBar</ref> class provides the functionality to add a menubar to <ref refid="classcom_1_1google_1_1scrollview_1_1_scroll_view" kindref="compound">ScrollView</ref>. Each menubar item gets associated with a (client-defined) command-id, which <ref refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_menu_bar" kindref="compound">SVMenuBar</ref> will return upon clicking it.</para><para><simplesect kind="author"><para><ulink url="mailto:wanke@google.com">wanke@google.com</ulink> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1962">
+        <label>ActionListener</label>
+      </node>
+      <node id="1961">
+        <label>com.google.scrollview.ui.SVMenuBar</label>
+        <link refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_menu_bar"/>
+        <childnode refid="1962" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1964">
+        <label>ActionListener</label>
+      </node>
+      <node id="1963">
+        <label>com.google.scrollview.ui.SVMenuBar</label>
+        <link refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_menu_bar"/>
+        <childnode refid="1964" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVMenuBar.java" line="31" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVMenuBar.java" bodystart="31" bodyend="130"/>
+    <listofallmembers>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_menu_bar_1a78fa6997aa0d3baa6b228a223ad38d60" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVMenuBar</scope><name>actionPerformed</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_menu_bar_1a9f29f81c997dc2a252b3c68470c2ed25" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVMenuBar</scope><name>add</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_menu_bar_1a96ef9e56ce4896c278e894eb0ec7306c" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVMenuBar</scope><name>add</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_menu_bar_1aa8493b338d7f5f4543bb8ced44a7f616" prot="private" virt="non-virtual"><scope>com::google::scrollview::ui::SVMenuBar</scope><name>items</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_menu_bar_1acdcc51c12a54583da37ad24e34969f2b" prot="private" virt="non-virtual"><scope>com::google::scrollview::ui::SVMenuBar</scope><name>root</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_menu_bar_1a2ba2e6826a19dfbf1ec040c0552a4bab" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVMenuBar</scope><name>SVMenuBar</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_menu_bar_1ac4bdd9ff8bd12f464ce3735f5e8ad6f5" prot="private" virt="non-virtual"><scope>com::google::scrollview::ui::SVMenuBar</scope><name>svWindow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

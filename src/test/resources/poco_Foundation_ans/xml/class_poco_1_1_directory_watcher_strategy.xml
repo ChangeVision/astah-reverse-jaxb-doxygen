@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="class_poco_1_1_directory_watcher_strategy" kind="class" prot="public" abstract="yes">
+    <compoundname>Poco::DirectoryWatcherStrategy</compoundname>
+    <derivedcompoundref refid="class_poco_1_1_polling_directory_watcher_strategy" prot="public" virt="non-virtual">Poco::PollingDirectoryWatcherStrategy</derivedcompoundref>
+    <innerclass refid="struct_poco_1_1_directory_watcher_strategy_1_1_item_info" prot="protected">Poco::DirectoryWatcherStrategy::ItemInfo</innerclass>
+      <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="class_poco_1_1_directory_watcher_strategy_1a8f7e3af99acf3357d9cbe5ac8fbf95d6" prot="protected" static="no">
+        <type>std::map&lt; std::string, <ref refid="struct_poco_1_1_directory_watcher_strategy_1_1_item_info" kindref="compound">ItemInfo</ref> &gt;</type>
+        <definition>typedef std::map&lt;std::string, ItemInfo&gt; Poco::DirectoryWatcherStrategy::ItemInfoMap</definition>
+        <argsstring></argsstring>
+        <name>ItemInfoMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" line="112" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_poco_1_1_directory_watcher_strategy_1aaf4d21e67546ce3206e00c72063c8acf" prot="private" static="no" mutable="no">
+        <type>DirectoryWatcher &amp;</type>
+        <definition>DirectoryWatcher&amp; Poco::DirectoryWatcherStrategy::_owner</definition>
+        <argsstring></argsstring>
+        <name>_owner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" line="166" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_poco_1_1_directory_watcher_strategy_1a2d9f8e022cef73442d7edbf0cb4899b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Poco::DirectoryWatcherStrategy::DirectoryWatcherStrategy</definition>
+        <argsstring>(DirectoryWatcher &amp;owner)</argsstring>
+        <name>DirectoryWatcherStrategy</name>
+        <param>
+          <type>DirectoryWatcher &amp;</type>
+          <declname>owner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" line="68" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_directory_watcher_strategy_1ad50546e8519eaa817a270a2139ba9b61" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Poco::DirectoryWatcherStrategy::~DirectoryWatcherStrategy</definition>
+        <argsstring>()</argsstring>
+        <name>~DirectoryWatcherStrategy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" line="73" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_directory_watcher_strategy_1a7a0e7b06ba9b3907fb8468677990ccd7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DirectoryWatcher &amp;</type>
+        <definition>DirectoryWatcher&amp; Poco::DirectoryWatcherStrategy::owner</definition>
+        <argsstring>()</argsstring>
+        <name>owner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" line="77" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_directory_watcher_strategy_1a3b28bba3d1c9a489c58cf8e940029b80" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Poco::DirectoryWatcherStrategy::run</definition>
+        <argsstring>()=0</argsstring>
+        <name>run</name>
+        <reimplementedby refid="class_poco_1_1_polling_directory_watcher_strategy_1a502c37fb568110aa2449a0b31357aa02">run</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" line="82" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_directory_watcher_strategy_1a66506387001a6be86e87edb702ec4a1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Poco::DirectoryWatcherStrategy::stop</definition>
+        <argsstring>()=0</argsstring>
+        <name>stop</name>
+        <reimplementedby refid="class_poco_1_1_polling_directory_watcher_strategy_1ab8bed94f0dac198746df599e4d6cdc86">stop</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" line="83" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_directory_watcher_strategy_1a760f9606dc06c6752a4cc624b9f015f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool Poco::DirectoryWatcherStrategy::supportsMoveEvents</definition>
+        <argsstring>() const =0</argsstring>
+        <name>supportsMoveEvents</name>
+        <reimplementedby refid="class_poco_1_1_polling_directory_watcher_strategy_1a127f2f1ae856729888b9babcc0c3d205">supportsMoveEvents</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" line="84" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_poco_1_1_directory_watcher_strategy_1a8b12b0956b467601dc05248cd051fbc8" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Poco::DirectoryWatcherStrategy::scan</definition>
+        <argsstring>(ItemInfoMap &amp;entries)</argsstring>
+        <name>scan</name>
+        <param>
+          <type><ref refid="class_poco_1_1_directory_watcher_strategy_1a8f7e3af99acf3357d9cbe5ac8fbf95d6" kindref="member">ItemInfoMap</ref> &amp;</type>
+          <declname>entries</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" line="114" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" bodystart="114" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_directory_watcher_strategy_1a46add1dc3242666248db4e3fce394ab4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Poco::DirectoryWatcherStrategy::compare</definition>
+        <argsstring>(ItemInfoMap &amp;oldEntries, ItemInfoMap &amp;newEntries)</argsstring>
+        <name>compare</name>
+        <param>
+          <type><ref refid="class_poco_1_1_directory_watcher_strategy_1a8f7e3af99acf3357d9cbe5ac8fbf95d6" kindref="member">ItemInfoMap</ref> &amp;</type>
+          <declname>oldEntries</declname>
+        </param>
+        <param>
+          <type><ref refid="class_poco_1_1_directory_watcher_strategy_1a8f7e3af99acf3357d9cbe5ac8fbf95d6" kindref="member">ItemInfoMap</ref> &amp;</type>
+          <declname>newEntries</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" line="125" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" bodystart="125" bodyend="159"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_poco_1_1_directory_watcher_strategy_1a6774f52d2950eb04e52809cc00b14151" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Poco::DirectoryWatcherStrategy::DirectoryWatcherStrategy</definition>
+        <argsstring>()</argsstring>
+        <name>DirectoryWatcherStrategy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" line="162" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_directory_watcher_strategy_1aaee071e793d84349cdbe44b82b00d808" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Poco::DirectoryWatcherStrategy::DirectoryWatcherStrategy</definition>
+        <argsstring>(const DirectoryWatcherStrategy &amp;)</argsstring>
+        <name>DirectoryWatcherStrategy</name>
+        <param>
+          <type><ref refid="zconf_8h_1a2c212835823e3c54a8ab6d95c652660e" kindref="member">const</ref> <ref refid="class_poco_1_1_directory_watcher_strategy" kindref="compound">DirectoryWatcherStrategy</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" line="163" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_poco_1_1_directory_watcher_strategy_1acb5834d9f6f15b131d4e77b3e6798806" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_poco_1_1_directory_watcher_strategy" kindref="compound">DirectoryWatcherStrategy</ref> &amp;</type>
+        <definition>DirectoryWatcherStrategy&amp; Poco::DirectoryWatcherStrategy::operator=</definition>
+        <argsstring>(const DirectoryWatcherStrategy &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="zconf_8h_1a2c212835823e3c54a8ab6d95c652660e" kindref="member">const</ref> <ref refid="class_poco_1_1_directory_watcher_strategy" kindref="compound">DirectoryWatcherStrategy</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" line="164" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="18">
+        <label>Poco::DirectoryWatcherStrategy</label>
+        <link refid="class_poco_1_1_directory_watcher_strategy"/>
+      </node>
+      <node id="19">
+        <label>Poco::PollingDirectoryWatcherStrategy</label>
+        <link refid="class_poco_1_1_polling_directory_watcher_strategy"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" line="66" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/DirectoryWatcher.cpp" bodystart="65" bodyend="167"/>
+    <listofallmembers>
+      <member refid="class_poco_1_1_directory_watcher_strategy_1aaf4d21e67546ce3206e00c72063c8acf" prot="private" virt="non-virtual"><scope>Poco::DirectoryWatcherStrategy</scope><name>_owner</name></member>
+      <member refid="class_poco_1_1_directory_watcher_strategy_1a46add1dc3242666248db4e3fce394ab4" prot="protected" virt="non-virtual"><scope>Poco::DirectoryWatcherStrategy</scope><name>compare</name></member>
+      <member refid="class_poco_1_1_directory_watcher_strategy_1a2d9f8e022cef73442d7edbf0cb4899b2" prot="public" virt="non-virtual"><scope>Poco::DirectoryWatcherStrategy</scope><name>DirectoryWatcherStrategy</name></member>
+      <member refid="class_poco_1_1_directory_watcher_strategy_1a6774f52d2950eb04e52809cc00b14151" prot="private" virt="non-virtual"><scope>Poco::DirectoryWatcherStrategy</scope><name>DirectoryWatcherStrategy</name></member>
+      <member refid="class_poco_1_1_directory_watcher_strategy_1aaee071e793d84349cdbe44b82b00d808" prot="private" virt="non-virtual"><scope>Poco::DirectoryWatcherStrategy</scope><name>DirectoryWatcherStrategy</name></member>
+      <member refid="class_poco_1_1_directory_watcher_strategy_1a8f7e3af99acf3357d9cbe5ac8fbf95d6" prot="protected" virt="non-virtual"><scope>Poco::DirectoryWatcherStrategy</scope><name>ItemInfoMap</name></member>
+      <member refid="class_poco_1_1_directory_watcher_strategy_1acb5834d9f6f15b131d4e77b3e6798806" prot="private" virt="non-virtual"><scope>Poco::DirectoryWatcherStrategy</scope><name>operator=</name></member>
+      <member refid="class_poco_1_1_directory_watcher_strategy_1a7a0e7b06ba9b3907fb8468677990ccd7" prot="public" virt="non-virtual"><scope>Poco::DirectoryWatcherStrategy</scope><name>owner</name></member>
+      <member refid="class_poco_1_1_directory_watcher_strategy_1a3b28bba3d1c9a489c58cf8e940029b80" prot="public" virt="pure-virtual"><scope>Poco::DirectoryWatcherStrategy</scope><name>run</name></member>
+      <member refid="class_poco_1_1_directory_watcher_strategy_1a8b12b0956b467601dc05248cd051fbc8" prot="protected" virt="non-virtual"><scope>Poco::DirectoryWatcherStrategy</scope><name>scan</name></member>
+      <member refid="class_poco_1_1_directory_watcher_strategy_1a66506387001a6be86e87edb702ec4a1d" prot="public" virt="pure-virtual"><scope>Poco::DirectoryWatcherStrategy</scope><name>stop</name></member>
+      <member refid="class_poco_1_1_directory_watcher_strategy_1a760f9606dc06c6752a4cc624b9f015f0" prot="public" virt="pure-virtual"><scope>Poco::DirectoryWatcherStrategy</scope><name>supportsMoveEvents</name></member>
+      <member refid="class_poco_1_1_directory_watcher_strategy_1ad50546e8519eaa817a270a2139ba9b61" prot="public" virt="virtual"><scope>Poco::DirectoryWatcherStrategy</scope><name>~DirectoryWatcherStrategy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

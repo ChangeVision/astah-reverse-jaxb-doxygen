@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_point_helper_8m" kind="file">
+    <compoundname>PointHelper.m</compoundname>
+    <includes refid="_point_helper_8h" local="yes">PointHelper.h</includes>
+    <includes refid="_connector_view_element_8h" local="yes">ConnectorViewElement.h</includes>
+    <incdepgraph>
+      <node id="1813">
+        <label>ViewElement.h</label>
+        <link refid="_view_element_8h"/>
+        <childnode refid="1811" relation="include">
+        </childnode>
+      </node>
+      <node id="1811">
+        <label>UIKit/UIKit.h</label>
+      </node>
+      <node id="1812">
+        <label>LinearViewElement.h</label>
+        <link refid="_linear_view_element_8h"/>
+        <childnode refid="1811" relation="include">
+        </childnode>
+        <childnode refid="1813" relation="include">
+        </childnode>
+      </node>
+      <node id="1809">
+        <label>Foundation/Foundation.h</label>
+      </node>
+      <node id="1810">
+        <label>ConnectorViewElement.h</label>
+        <link refid="_connector_view_element_8h"/>
+        <childnode refid="1811" relation="include">
+        </childnode>
+        <childnode refid="1812" relation="include">
+        </childnode>
+      </node>
+      <node id="1808">
+        <label>PointHelper.h</label>
+        <link refid="_point_helper_8h"/>
+        <childnode refid="1809" relation="include">
+        </childnode>
+      </node>
+      <node id="1807">
+        <label>Classes/PointHelper.m</label>
+        <link refid="PointHelper.m"/>
+        <childnode refid="1808" relation="include">
+        </childnode>
+        <childnode refid="1810" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>PointHelper.m</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>UmlPad</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>梅田<sp/>政利<sp/>on<sp/>10/10/27.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>2010<sp/>Change<sp/>Vision.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_point_helper_8h" kindref="compound">PointHelper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_connector_view_element_8h" kindref="compound">ConnectorViewElement.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">@implementation<sp/></highlight><highlight class="normal"><ref refid="interface_point_helper" kindref="compound">PointHelper</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">+<sp/>(BOOL)isPointOnLine:(CGPoint)point<sp/>from:(CGPoint)point1<sp/>to:(CGPoint)point2<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>theta<sp/>=<sp/>-atan2(point1.y<sp/>-<sp/>point2.y,<sp/>point1.x<sp/>-<sp/>point2.x);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>from側を中点とすること</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>point1を中心にpointを回転</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>movedX<sp/>=<sp/>(point.x<sp/>-<sp/>point1.x)<sp/>*<sp/>cos(theta)<sp/>-<sp/>(point.y<sp/>-<sp/>point1.y)<sp/>*<sp/>sin(theta)<sp/>+<sp/>point1.x;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>movedY<sp/>=<sp/>(point.x<sp/>-<sp/>point1.x)<sp/>*<sp/>sin(theta)<sp/>+<sp/>(point.y<sp/>-<sp/>point1.y)<sp/>*<sp/>cos(theta)<sp/>+<sp/>point1.y;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//NSLog(@&quot;moved(%lf,<sp/>%lf)&quot;,<sp/>movedX,<sp/>movedY);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(point1.y<sp/>+<sp/>30<sp/>&gt;<sp/>movedY<sp/>&amp;&amp;<sp/>point1.y<sp/>-<sp/>30<sp/>&lt;<sp/>movedY<sp/>&amp;&amp;<sp/>point1.x<sp/>+<sp/>30<sp/>&gt;<sp/>movedX)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NO;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">+<sp/>(BOOL)isPointOnLine:(<ref refid="interface_connector_view_element" kindref="compound">ConnectorViewElement</ref><sp/>*)connector<sp/>point:(CGPoint)point<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(connector.<ref refid="interface_connector_view_element_1ad3075cedbe1caf1bdaebe9be0699625a" kindref="member">useMiddle</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([<ref refid="interface_point_helper" kindref="compound">PointHelper</ref><sp/>isPointOnLine:point<sp/>from:connector.<ref refid="interface_connector_view_element_1a47e68c6b79ace67eb768e341ff0ea571" kindref="member">middle</ref><sp/>to:connector.<ref refid="interface_connector_view_element_1ac86658bccc5470e170c377cd04877840" kindref="member">source</ref>.center])<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([<ref refid="interface_point_helper" kindref="compound">PointHelper</ref><sp/>isPointOnLine:point<sp/>from:connector.<ref refid="interface_connector_view_element_1a47e68c6b79ace67eb768e341ff0ea571" kindref="member">middle</ref><sp/>to:connector.<ref refid="interface_connector_view_element_1a2c84fc15ba82de5ddbb75ebe33e562f7" kindref="member">target</ref>.center])<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([<ref refid="interface_point_helper" kindref="compound">PointHelper</ref><sp/>isPointOnLine:point<sp/>from:connector.<ref refid="interface_connector_view_element_1ac86658bccc5470e170c377cd04877840" kindref="member">source</ref>.center<sp/>to:connector.<ref refid="interface_connector_view_element_1a2c84fc15ba82de5ddbb75ebe33e562f7" kindref="member">target</ref>.center])<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NO;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/PointHelper.m"/>
+  </compounddef>
+</doxygen>

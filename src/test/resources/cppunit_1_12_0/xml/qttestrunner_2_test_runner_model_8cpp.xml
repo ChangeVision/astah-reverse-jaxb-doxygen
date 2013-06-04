@@ -1,0 +1,344 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="qttestrunner_2_test_runner_model_8cpp" kind="file">
+    <compoundname>TestRunnerModel.cpp</compoundname>
+    <includes local="no">cppunit/TestResult.h</includes>
+    <includes refid="_test_runner_failure_event_8h" local="yes">TestRunnerFailureEvent.h</includes>
+    <includes refid="qttestrunner_2_test_runner_model_8h" local="yes">TestRunnerModel.h</includes>
+    <includes refid="_test_runner_test_case_run_event_8h" local="yes">TestRunnerTestCaseRunEvent.h</includes>
+    <includes refid="_test_runner_thread_8h" local="yes">TestRunnerThread.h</includes>
+    <includes refid="_test_runner_thread_finished_event_8h" local="yes">TestRunnerThreadFinishedEvent.h</includes>
+    <incdepgraph>
+      <node id="1228">
+        <label>TestRunnerTestCaseRunEvent.h</label>
+        <link refid="_test_runner_test_case_run_event_8h"/>
+        <childnode refid="1217" relation="include">
+        </childnode>
+      </node>
+      <node id="1227">
+        <label>TestRunnerModelThreadInterface.h</label>
+        <link refid="_test_runner_model_thread_interface_8h"/>
+      </node>
+      <node id="1216">
+        <label>TestRunnerFailureEvent.h</label>
+        <link refid="_test_runner_failure_event_8h"/>
+        <childnode refid="1217" relation="include">
+        </childnode>
+      </node>
+      <node id="1223">
+        <label>qobject.h</label>
+      </node>
+      <node id="1219">
+        <label>TestRunnerModel.h</label>
+        <link refid="qttestrunner_2_test_runner_model_8h"/>
+        <childnode refid="1220" relation="include">
+        </childnode>
+        <childnode refid="1221" relation="include">
+        </childnode>
+        <childnode refid="1222" relation="include">
+        </childnode>
+        <childnode refid="1223" relation="include">
+        </childnode>
+        <childnode refid="1224" relation="include">
+        </childnode>
+        <childnode refid="1225" relation="include">
+        </childnode>
+        <childnode refid="1227" relation="include">
+        </childnode>
+      </node>
+      <node id="1226">
+        <label>cppunit/TestFailure.h</label>
+      </node>
+      <node id="1230">
+        <label>TestRunnerThreadFinishedEvent.h</label>
+        <link refid="_test_runner_thread_finished_event_8h"/>
+        <childnode refid="1217" relation="include">
+        </childnode>
+      </node>
+      <node id="1221">
+        <label>cppunit/TestListener.h</label>
+      </node>
+      <node id="1225">
+        <label>TestFailureInfo.h</label>
+        <link refid="_test_failure_info_8h"/>
+        <childnode refid="1226" relation="include">
+        </childnode>
+      </node>
+      <node id="1214">
+        <label>src/qttestrunner/TestRunnerModel.cpp</label>
+        <link refid="qttestrunner/TestRunnerModel.cpp"/>
+        <childnode refid="1215" relation="include">
+        </childnode>
+        <childnode refid="1216" relation="include">
+        </childnode>
+        <childnode refid="1219" relation="include">
+        </childnode>
+        <childnode refid="1228" relation="include">
+        </childnode>
+        <childnode refid="1229" relation="include">
+        </childnode>
+        <childnode refid="1230" relation="include">
+        </childnode>
+      </node>
+      <node id="1217">
+        <label>TestRunnerThreadEvent.h</label>
+        <link refid="_test_runner_thread_event_8h"/>
+        <childnode refid="1218" relation="include">
+        </childnode>
+      </node>
+      <node id="1222">
+        <label>qlist.h</label>
+      </node>
+      <node id="1229">
+        <label>TestRunnerThread.h</label>
+        <link refid="_test_runner_thread_8h"/>
+        <childnode refid="1224" relation="include">
+        </childnode>
+        <childnode refid="1220" relation="include">
+        </childnode>
+        <childnode refid="1215" relation="include">
+        </childnode>
+      </node>
+      <node id="1218">
+        <label>qevent.h</label>
+      </node>
+      <node id="1215">
+        <label>cppunit/TestResult.h</label>
+      </node>
+      <node id="1224">
+        <label>qthread.h</label>
+      </node>
+      <node id="1220">
+        <label>cppunit/Test.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>//////////////////////////////////////////////////////////////////////////</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Implementation<sp/>file<sp/>TestRunnerModel.cpp<sp/>for<sp/>class<sp/>TestRunnerModel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(c)Copyright<sp/>2000,<sp/>Baptiste<sp/>Lepilleur.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created:<sp/>2001/09/20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>//////////////////////////////////////////////////////////////////////////</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cppunit/TestResult.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_test_runner_failure_event_8h" kindref="compound">TestRunnerFailureEvent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="qttestrunner_2_test_runner_model_8h" kindref="compound">TestRunnerModel.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_test_runner_test_case_run_event_8h" kindref="compound">TestRunnerTestCaseRunEvent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_test_runner_thread_8h" kindref="compound">TestRunnerThread.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_test_runner_thread_finished_event_8h" kindref="compound">TestRunnerThreadFinishedEvent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><ref refid="class_test_runner_model_1a2f2ae919bdc31b1c2eb68c3320f32454" kindref="member">TestRunnerModel::TestRunnerModel</ref>(<sp/>CPPUNIT_NS::Test<sp/>*rootTest<sp/>)<sp/>:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>_rootTest(<sp/>rootTest<sp/>),</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>_runnerThread(<sp/>NULL<sp/>),</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>_result(<sp/>NULL<sp/>)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><ref refid="class_test_runner_model_1a20e79c03f4f41826125d97579c543ae7" kindref="member">TestRunnerModel::‾TestRunnerModel</ref>()</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>_runnerThread;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">CPPUNIT_NS::Test<sp/>*</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><ref refid="class_test_runner_model_1a2fedcd7c1b636a966de81f8e974c57cf" kindref="member">TestRunnerModel::rootTest</ref>()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_rootTest;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="class_test_runner_model_1a68afe76bf53d39cceed9d862f2749e8e" kindref="member">TestRunnerModel::resetTestReportCounterFor</ref>(<sp/>CPPUNIT_NS::Test<sp/>*testToRun<sp/>)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_test_runner_model_1a04d2b040a1a2e5ceac13ea0f6fdc1362" kindref="member">isTestRunning</ref>()<sp/>)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>LockGuard<sp/>guard(<sp/>_lock<sp/>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>_numberOfTestCase<sp/>=<sp/>testToRun-&gt;countTestCases();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>_numberOfTestCaseRun<sp/>=0;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>_numberOfTestCaseFailure<sp/>=0;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>_failures.clear();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>emit<sp/><ref refid="class_test_runner_model_1aafe1ad61547e70ff4125e87daf7f1b7c" kindref="member">failuresCleared</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>emit<sp/><ref refid="class_test_runner_model_1a79d234aa44e5b404ea207ad52dfec5a1" kindref="member">numberOfTestCaseChanged</ref>(<sp/>_numberOfTestCase<sp/>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>emit<sp/><ref refid="class_test_runner_model_1a18fe973f0608a68de2a2041c35f91539" kindref="member">numberOfTestCaseRunChanged</ref>(<sp/>_numberOfTestCaseRun<sp/>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>emit<sp/><ref refid="class_test_runner_model_1a07f9cf6026a3da6775a33ea44ec065b5" kindref="member">numberOfTestCaseFailureChanged</ref>(<sp/>_numberOfTestCaseFailure<sp/>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><ref refid="class_test_runner_model_1a301cbf5a744ee1570784e4333f1e18d2" kindref="member">TestRunnerModel::numberOfTestCase</ref>()</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>LockGuard<sp/>guard(<sp/>_lock<sp/>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_numberOfTestCase;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><ref refid="class_test_runner_model_1af8bac9178a37d93a92e03683193c81c8" kindref="member">TestRunnerModel::numberOfTestCaseFailure</ref>()</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>LockGuard<sp/>guard(<sp/>_lock<sp/>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_numberOfTestCaseFailure;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><ref refid="class_test_runner_model_1a1bed28ad2882d8f51fbcf2068319f2af" kindref="member">TestRunnerModel::numberOfTestCaseRun</ref>()</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>LockGuard<sp/>guard(<sp/>_lock<sp/>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_numberOfTestCaseRun;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><ref refid="class_test_failure_info" kindref="compound">TestFailureInfo</ref><sp/>*</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><ref refid="class_test_runner_model_1af8f2ef06bf72ac0daecbb0418698238c" kindref="member">TestRunnerModel::failureAt</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>LockGuard<sp/>guard(<sp/>_lock<sp/>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_failures.at(<sp/>index<sp/>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><ref refid="class_test_runner_model_1a49d16c99bfda83ed0531e645b1d8bad7" kindref="member">TestRunnerModel::runTest</ref>(<sp/>CPPUNIT_NS::Test<sp/>*testToRun<sp/>)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_test_runner_model_1a04d2b040a1a2e5ceac13ea0f6fdc1362" kindref="member">isTestRunning</ref>()<sp/>)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><ref refid="class_test_runner_model_1a68afe76bf53d39cceed9d862f2749e8e" kindref="member">resetTestReportCounterFor</ref>(<sp/>testToRun<sp/>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>LockGuard<sp/>guard(<sp/>_lock<sp/>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>_result;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>_result<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>CPPUNIT_NS::TestResult();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>_result-&gt;addListener(<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>emit<sp/><ref refid="class_test_runner_model_1a0e4ea44afd7a5f1efc51db1dc4a29f95" kindref="member">testRunStarted</ref>(<sp/>testToRun,<sp/>_result<sp/>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>LockGuard<sp/>guard(<sp/>_lock<sp/>);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>_runnerThread<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_test_runner_thread" kindref="compound">TestRunnerThread</ref>(<sp/>testToRun,<sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_result,<sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_test_runner_thread_finished_event" kindref="compound">TestRunnerThreadFinishedEvent</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><ref refid="class_test_runner_model_1a04d2b040a1a2e5ceac13ea0f6fdc1362" kindref="member">TestRunnerModel::isTestRunning</ref>()</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>LockGuard<sp/>guard(<sp/>_lock<sp/>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_runnerThread<sp/>!=<sp/>NULL<sp/><sp/>&amp;&amp;<sp/><sp/>_runnerThread-&gt;running();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><ref refid="class_test_runner_model_1a2b9116958a844166e69ef32e7f5da547" kindref="member">TestRunnerModel::stopRunningTest</ref>()</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>LockGuard<sp/>guard(<sp/>_lock<sp/>);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>_result<sp/>==<sp/>NULL<sp/>)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_test_runner_model_1a04d2b040a1a2e5ceac13ea0f6fdc1362" kindref="member">isTestRunning</ref>()<sp/>)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>LockGuard<sp/>guard(<sp/>_lock<sp/>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>_result-&gt;stop();</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Called<sp/>from<sp/>the<sp/>TestRunnerThread.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="normal">TestRunnerModel::startTest(<sp/>CPPUNIT_NS::Test<sp/>*<sp/></highlight><highlight class="comment">/*test*/</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Called<sp/>from<sp/>the<sp/>TestRunnerThread.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal">TestRunnerModel::addFailure(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CPPUNIT_NS::TestFailure<sp/>&amp;failure<sp/>)</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>addFailureInfo(<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_test_failure_info" kindref="compound">TestFailureInfo</ref>(<sp/>failure.failedTest(),<sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>failure.thrownException(),</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>failure.isError()<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Called<sp/>from<sp/>the<sp/>TestRunnerThread.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="157"><highlight class="normal">TestRunnerModel::endTest(<sp/>CPPUNIT_NS::Test<sp/>*<sp/></highlight><highlight class="comment">/*test*/</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_test_runner_model_1a1bed28ad2882d8f51fbcf2068319f2af" kindref="member">numberOfTestCaseRun</ref>;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>LockGuard<sp/>guard(<sp/>_lock<sp/>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>numberOfTestCaseRun<sp/>=<sp/>++_numberOfTestCaseRun;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>emit<sp/>signal<sp/>asynchronously</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/>QThread::postEvent(<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_test_runner_test_case_run_event" kindref="compound">TestRunnerTestCaseRunEvent</ref>(<sp/>numberOfTestCaseRun<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Called<sp/>from<sp/>the<sp/>TestRunnerThread.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="173"><highlight class="normal">TestRunnerModel::addFailureInfo(<sp/><ref refid="class_test_failure_info" kindref="compound">TestFailureInfo</ref><sp/>*failure<sp/>)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_test_runner_model_1af8bac9178a37d93a92e03683193c81c8" kindref="member">numberOfTestCaseFailure</ref>;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>LockGuard<sp/>guard(<sp/>_lock<sp/>);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>_failures.append(<sp/>failure<sp/>);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>numberOfTestCaseFailure<sp/>=<sp/>++_numberOfTestCaseFailure;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>emit<sp/>signals<sp/>asynchronously</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>QThread::postEvent(<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_test_runner_failure_event" kindref="compound">TestRunnerFailureEvent</ref>(<sp/>failure,</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>numberOfTestCaseFailure<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="190"><highlight class="normal">TestRunnerModel::event(<sp/>QEvent<sp/>*event<sp/>)</highlight></codeline>
+<codeline lineno="191"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>event-&gt;type()<sp/>!=<sp/>QEvent::User<sp/>)</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><ref refid="class_test_runner_thread_event" kindref="compound">TestRunnerThreadEvent</ref><sp/>*threadEvent<sp/>=<sp/>(<ref refid="class_test_runner_thread_event" kindref="compound">TestRunnerThreadEvent</ref><sp/>*)event;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/>threadEvent-&gt;<ref refid="class_test_runner_thread_event_1a07a00f7da095922d7a629ab53f27c72b" kindref="member">process</ref>(<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="202"><highlight class="normal">TestRunnerModel::eventNewFailure(<sp/><ref refid="class_test_failure_info" kindref="compound">TestFailureInfo</ref><sp/>*failure,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numberOfFailure<sp/>)</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/>emit<sp/><ref refid="class_test_runner_model_1a07f9cf6026a3da6775a33ea44ec065b5" kindref="member">numberOfTestCaseFailureChanged</ref>(<sp/>numberOfFailure<sp/>);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/>emit<sp/><ref refid="class_test_runner_model_1af27247fc3045cf482243fc9ea24f476c" kindref="member">failureAdded</ref>(<sp/>failure<sp/>);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="211"><highlight class="normal">TestRunnerModel::eventNumberOfTestRunChanged(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numberOfRun<sp/>)</highlight></codeline>
+<codeline lineno="212"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/>emit<sp/><ref refid="class_test_runner_model_1a18fe973f0608a68de2a2041c35f91539" kindref="member">numberOfTestCaseRunChanged</ref>(<sp/>numberOfRun<sp/>);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="218"><highlight class="normal">TestRunnerModel::eventTestRunnerThreadFinished()</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/>emit<sp/><ref refid="class_test_runner_model_1a817f2450394a565c7d515a7bc7faeb6d" kindref="member">testRunFinished</ref>();</highlight></codeline>
+<codeline lineno="221"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerModel.cpp"/>
+  </compounddef>
+</doxygen>

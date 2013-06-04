@@ -1,0 +1,2399 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="namespacemozilla" kind="namespace">
+    <compoundname>mozilla</compoundname>
+    <innerclass refid="classmozilla_1_1ns_audio_available_event_runner" prot="public">mozilla::nsAudioAvailableEventRunner</innerclass>
+    <innerclass refid="classmozilla_1_1ns_native_audio_stream" prot="public">mozilla::nsNativeAudioStream</innerclass>
+    <innerclass refid="classmozilla_1_1_async_shutdown_playback_thread" prot="public">mozilla::AsyncShutdownPlaybackThread</innerclass>
+    <innerclass refid="classmozilla_1_1_m_o_z___f_i_n_a_l" prot="public">mozilla::MOZ_FINAL</innerclass>
+    <innerclass refid="classmozilla_1_1_media_cache" prot="public">mozilla::MediaCache</innerclass>
+    <innerclass refid="classmozilla_1_1_update_event" prot="public">mozilla::UpdateEvent</innerclass>
+    <innerclass refid="classmozilla_1_1_media_memory_reporter" prot="public">mozilla::MediaMemoryReporter</innerclass>
+    <innerclass refid="classmozilla_1_1ns_audio_metadata_event_runner" prot="public">mozilla::nsAudioMetadataEventRunner</innerclass>
+    <innerclass refid="classmozilla_1_1_state_machine_tracker" prot="public">mozilla::StateMachineTracker</innerclass>
+    <innerclass refid="classmozilla_1_1ns_decoder_dispose_event" prot="public">mozilla::nsDecoderDisposeEvent</innerclass>
+    <innerclass refid="classmozilla_1_1ns_dispatch_dispose_event" prot="public">mozilla::nsDispatchDisposeEvent</innerclass>
+    <innerclass refid="structmozilla_1_1_copy_segment_closure" prot="public">mozilla::CopySegmentClosure</innerclass>
+    <innerclass refid="classmozilla_1_1_data_ended" prot="public">mozilla::DataEnded</innerclass>
+    <innerclass refid="classmozilla_1_1_file_media_resource" prot="public">mozilla::FileMediaResource</innerclass>
+    <innerclass refid="classmozilla_1_1_loaded_event" prot="public">mozilla::LoadedEvent</innerclass>
+    <innerclass refid="classmozilla_1_1_media_stream_graph_impl" prot="public">mozilla::MediaStreamGraphImpl</innerclass>
+    <innerclass refid="structmozilla_1_1ns_auto_ogg_sync_state" prot="public">mozilla::nsAutoOggSyncState</innerclass>
+    <innerclass refid="classmozilla_1_1_get_int_pref_event" prot="public">mozilla::GetIntPrefEvent</innerclass>
+    <innernamespace refid="namespacemozilla_1_1dom">mozilla::dom</innernamespace>
+    <innernamespace refid="namespacemozilla_1_1layers">mozilla::layers</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacemozilla_1a380d85b52c4ebe24f67ac775a0f84860" prot="public" static="no">
+        <name>PlayFlags</name>
+        <enumvalue id="namespacemozilla_1a380d85b52c4ebe24f67ac775a0f84860afaf51a520e57e5908bd135d23e653349" prot="public">
+          <name>GST_PLAY_FLAG_VIDEO</name>
+          <initializer>= (1 &lt;&lt; 0)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemozilla_1a380d85b52c4ebe24f67ac775a0f84860a0fe892f70d60142d22723a2cce0db4d1" prot="public">
+          <name>GST_PLAY_FLAG_AUDIO</name>
+          <initializer>= (1 &lt;&lt; 1)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemozilla_1a380d85b52c4ebe24f67ac775a0f84860a8bf950fd4baefdb733a9e3baead7c047" prot="public">
+          <name>GST_PLAY_FLAG_TEXT</name>
+          <initializer>= (1 &lt;&lt; 2)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemozilla_1a380d85b52c4ebe24f67ac775a0f84860a2b2176c13ae44b87ffd08114b6493815" prot="public">
+          <name>GST_PLAY_FLAG_VIS</name>
+          <initializer>= (1 &lt;&lt; 3)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemozilla_1a380d85b52c4ebe24f67ac775a0f84860ad755f1d60e0ffc1cff288fe0cd292c0c" prot="public">
+          <name>GST_PLAY_FLAG_SOFT_VOLUME</name>
+          <initializer>= (1 &lt;&lt; 4)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemozilla_1a380d85b52c4ebe24f67ac775a0f84860a448ee4b0cdc0e039565c868feb07a85f" prot="public">
+          <name>GST_PLAY_FLAG_NATIVE_AUDIO</name>
+          <initializer>= (1 &lt;&lt; 5)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemozilla_1a380d85b52c4ebe24f67ac775a0f84860a478d042920280234c67860995431cdea" prot="public">
+          <name>GST_PLAY_FLAG_NATIVE_VIDEO</name>
+          <initializer>= (1 &lt;&lt; 6)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemozilla_1a380d85b52c4ebe24f67ac775a0f84860a103a4d5985303e60a73d6896581e4469" prot="public">
+          <name>GST_PLAY_FLAG_DOWNLOAD</name>
+          <initializer>= (1 &lt;&lt; 7)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemozilla_1a380d85b52c4ebe24f67ac775a0f84860aa30805baca8cbd0d982e2efe134d07e4" prot="public">
+          <name>GST_PLAY_FLAG_BUFFERING</name>
+          <initializer>= (1 &lt;&lt; 8)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemozilla_1a380d85b52c4ebe24f67ac775a0f84860aa319ac44d0a4374e88e560021006a907" prot="public">
+          <name>GST_PLAY_FLAG_DEINTERLACE</name>
+          <initializer>= (1 &lt;&lt; 9)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemozilla_1a380d85b52c4ebe24f67ac775a0f84860abe649eaacbc2392936b222e7b4e07710" prot="public">
+          <name>GST_PLAY_FLAG_SOFT_COLORBALANCE</name>
+          <initializer>= (1 &lt;&lt; 10)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/gstreamer/GStreamerReader.cpp" line="36" bodyfile="C:/tools/mozilla-release/content/media/gstreamer/GStreamerReader.cpp" bodystart="36" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacemozilla_1a99b0b7e8a2f3555fb2d8638c031dac7c" prot="public" static="no">
+        <name>StreamAction</name>
+        <enumvalue id="namespacemozilla_1a99b0b7e8a2f3555fb2d8638c031dac7cab35eaa236d736df8ca9befce6e0d30ce" prot="public">
+          <name>NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemozilla_1a99b0b7e8a2f3555fb2d8638c031dac7ca227a816ec51b25b4c9d0ccc4c2df40b8" prot="public">
+          <name>SEEK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemozilla_1a99b0b7e8a2f3555fb2d8638c031dac7ca57e0419d3df5ff8d6ae76776114f7bea" prot="public">
+          <name>SEEK_AND_RESUME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemozilla_1a99b0b7e8a2f3555fb2d8638c031dac7ca5ef30c55f299d131cbe7bfd94e4aac78" prot="public">
+          <name>RESUME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemozilla_1a99b0b7e8a2f3555fb2d8638c031dac7cae022a1009cf0873e07611792e3ef4a0f" prot="public">
+          <name>SUSPEND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="982" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="982" bodyend="982"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacemozilla_1a1555847be04235bf37277e0d7a71a71f" prot="public" static="no">
+        <name>PageSyncResult</name>
+        <enumvalue id="namespacemozilla_1a1555847be04235bf37277e0d7a71a71facf23733c1685e90397d1ed4af52ea66f" prot="public">
+          <name>PAGE_SYNC_ERROR</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemozilla_1a1555847be04235bf37277e0d7a71a71fa233d4a182dc3d1ee7467c3a6d825b4ab" prot="public">
+          <name>PAGE_SYNC_END_OF_RANGE</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacemozilla_1a1555847be04235bf37277e0d7a71a71fa1df42fc6c88f100fd72692e4394a55d6" prot="public">
+          <name>PAGE_SYNC_OK</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggReader.cpp" line="58" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggReader.cpp" bodystart="58" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacemozilla_1a739f43ac055d703335aae32d8755818d" prot="public" static="no">
+        <type>WebRtc_Word16</type>
+        <definition>typedef WebRtc_Word16 mozilla::sample</definition>
+        <argsstring></argsstring>
+        <name>sample</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/webrtc/MediaEngineWebRTCAudio.cpp" line="261" bodyfile="C:/tools/mozilla-release/content/media/webrtc/MediaEngineWebRTCAudio.cpp" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacemozilla_1a58f5efd65f8bbad06630c917263b4256" prot="public" static="yes" mutable="no">
+        <type>const nsTArray&lt; nsCOMPtr&lt; nsIRunnable &gt; &gt;::size_type</type>
+        <definition>const nsTArray&lt; nsCOMPtr&lt;nsIRunnable&gt; &gt;::size_type mozilla::MAX_PENDING_EVENTS</definition>
+        <argsstring></argsstring>
+        <name>MAX_PENDING_EVENTS</name>
+        <initializer>= 100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/AudioAvailableEventManager.cpp" line="14" bodyfile="C:/tools/mozilla-release/content/media/AudioAvailableEventManager.cpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a126f3feb8edecca4179bc9f8f8e2b72e" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int mozilla::STATIC_AUDIO_SAMPLES</definition>
+        <argsstring></argsstring>
+        <name>STATIC_AUDIO_SAMPLES</name>
+        <initializer>= 10000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/AudioSegment.cpp" line="95" bodyfile="C:/tools/mozilla-release/content/media/AudioSegment.cpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1abfc86c2215f960e800880d07cc49bb0c" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t mozilla::FAKE_BUFFER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>FAKE_BUFFER_SIZE</name>
+        <initializer>= 176400</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/AudioStream.cpp" line="58" bodyfile="C:/tools/mozilla-release/content/media/AudioStream.cpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a46e99edc6445e513e17a85c4210b55e2" prot="public" static="yes" mutable="no">
+        <type>const int64_t</type>
+        <definition>const int64_t mozilla::MS_PER_S</definition>
+        <argsstring></argsstring>
+        <name>MS_PER_S</name>
+        <initializer>= 1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/AudioStream.cpp" line="61" bodyfile="C:/tools/mozilla-release/content/media/AudioStream.cpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1ad409e33faea2f3b2170d52792348d87d" prot="public" static="yes" mutable="no">
+        <type>Mutex *</type>
+        <definition>Mutex* mozilla::gAudioPrefsLock</definition>
+        <argsstring></argsstring>
+        <name>gAudioPrefsLock</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/AudioStream.cpp" line="294" bodyfile="C:/tools/mozilla-release/content/media/AudioStream.cpp" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a4524b2255a578d94bc6323ebe99164a0" prot="public" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double mozilla::gVolumeScale</definition>
+        <argsstring></argsstring>
+        <name>gVolumeScale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/AudioStream.cpp" line="295" bodyfile="C:/tools/mozilla-release/content/media/AudioStream.cpp" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a7a5ab5c89215da341caba9082756a6b5" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool mozilla::gUseCubeb</definition>
+        <argsstring></argsstring>
+        <name>gUseCubeb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/AudioStream.cpp" line="296" bodyfile="C:/tools/mozilla-release/content/media/AudioStream.cpp" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a89679c31a01ac52af0f185d19d49b280" prot="public" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t mozilla::gCubebLatency</definition>
+        <argsstring></argsstring>
+        <name>gCubebLatency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/AudioStream.cpp" line="297" bodyfile="C:/tools/mozilla-release/content/media/AudioStream.cpp" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a39e958bd86f73040cb6a77d9b62a84b9" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int mozilla::MAX_CHANNELS</definition>
+        <argsstring></argsstring>
+        <name>MAX_CHANNELS</name>
+        <initializer>= 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/gstreamer/GStreamerReader.cpp" line="30" bodyfile="C:/tools/mozilla-release/content/media/gstreamer/GStreamerReader.cpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a1950b958d77b853966830251f4eb9399" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int mozilla::SHORT_FILE_SIZE</definition>
+        <argsstring></argsstring>
+        <name>SHORT_FILE_SIZE</name>
+        <initializer>= 1024 * 1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/gstreamer/GStreamerReader.cpp" line="32" bodyfile="C:/tools/mozilla-release/content/media/gstreamer/GStreamerReader.cpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a5e3d23d66405bca5e2ba48c18fccd835" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int mozilla::DEFAULT_SOURCE_READ_SIZE</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_SOURCE_READ_SIZE</name>
+        <initializer>= 50 * 1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/gstreamer/GStreamerReader.cpp" line="34" bodyfile="C:/tools/mozilla-release/content/media/gstreamer/GStreamerReader.cpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a46a134028369007fb390dab2ea60fc5b" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double mozilla::NONSEEKABLE_READAHEAD_MAX</definition>
+        <argsstring></argsstring>
+        <name>NONSEEKABLE_READAHEAD_MAX</name>
+        <initializer>= 0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="36" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1adb47b43179bc19f6a2074b43959b5ea5" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t mozilla::REPLAY_DELAY</definition>
+        <argsstring></argsstring>
+        <name>REPLAY_DELAY</name>
+        <initializer>= 30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="42" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a36b8b8a97cd54b035e372da45e6ccd67" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t mozilla::FREE_BLOCK_SCAN_LIMIT</definition>
+        <argsstring></argsstring>
+        <name>FREE_BLOCK_SCAN_LIMIT</name>
+        <initializer>= 16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="49" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1acf700a9fce28f59286a18f623ca0002e" prot="public" static="yes" mutable="no">
+        <type><ref refid="classmozilla_1_1_media_cache" kindref="compound">MediaCache</ref> *</type>
+        <definition>MediaCache* mozilla::gMediaCache</definition>
+        <argsstring></argsstring>
+        <name>gMediaCache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="59" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1ae3fb8bd18d745e5ffec9090631d034dd" prot="public" static="yes" mutable="no">
+        <type>MediaCacheFlusher *</type>
+        <definition>MediaCacheFlusher* mozilla::gMediaCacheFlusher</definition>
+        <argsstring></argsstring>
+        <name>gMediaCacheFlusher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="72" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1ad9bb42718e853cf7b23557861616faf0" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t mozilla::PROGRESS_MS</definition>
+        <argsstring></argsstring>
+        <name>PROGRESS_MS</name>
+        <initializer>= 350</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoder.cpp" line="30" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoder.cpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1adf636404d76a9b1fbddd93dfa3ae41ba" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t mozilla::STALL_MS</definition>
+        <argsstring></argsstring>
+        <name>STALL_MS</name>
+        <initializer>= 3000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoder.cpp" line="33" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoder.cpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1aef558cfa0058919adfed595f592fbfcc" prot="public" static="yes" mutable="no">
+        <type>const int64_t</type>
+        <definition>const int64_t mozilla::CAN_PLAY_THROUGH_MARGIN</definition>
+        <argsstring></argsstring>
+        <name>CAN_PLAY_THROUGH_MARGIN</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoder.cpp" line="41" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoder.cpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1ae68372f6325cf1e88cdc856c01c65ab4" prot="public" static="no" mutable="no">
+        <type>explicit media decoded</type>
+        <definition>explicit media decoded mozilla::audio</definition>
+        <argsstring></argsstring>
+        <name>audio</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoder.cpp" line="1569" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoder.cpp" bodystart="1569" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1aa7ea514aa16a21ad1fcee92a189b7d12" prot="public" static="no" mutable="no">
+        <type>explicit media decoded</type>
+        <definition>explicit media decoded mozilla::KIND_HEAP</definition>
+        <argsstring></argsstring>
+        <name>KIND_HEAP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoder.cpp" line="1570" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoder.cpp" bodystart="1569" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a8e3888d659eae192f6674e5bd10110d6" prot="public" static="no" mutable="no">
+        <type>explicit media decoded</type>
+        <definition>explicit media decoded mozilla::UNITS_BYTES</definition>
+        <argsstring></argsstring>
+        <name>UNITS_BYTES</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoder.cpp" line="1571" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoder.cpp" bodystart="1569" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1ac3237b6803463395768f5bc650c65cb6" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t mozilla::BUFFERING_WAIT_S</definition>
+        <argsstring></argsstring>
+        <name>BUFFERING_WAIT_S</name>
+        <initializer>= 30</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="40" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a3413f6bed2cba2fc0100c77f1644c3f5" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t mozilla::LOW_AUDIO_USECS</definition>
+        <argsstring></argsstring>
+        <name>LOW_AUDIO_USECS</name>
+        <initializer>= 300000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="46" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a3c2123600744d75a85a1ad7fd15e7db5" prot="public" static="no" mutable="no">
+        <type>const int64_t</type>
+        <definition>const int64_t mozilla::AMPLE_AUDIO_USECS</definition>
+        <argsstring></argsstring>
+        <name>AMPLE_AUDIO_USECS</name>
+        <initializer>= 1000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="52" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a88032b041f8da3a7265b5b8b539ae4a9" prot="public" static="no" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t mozilla::SILENCE_BYTES_CHUNK</definition>
+        <argsstring></argsstring>
+        <name>SILENCE_BYTES_CHUNK</name>
+        <initializer>= 32 * 1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="59" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a464453c7e27552e79b2ba03fad9a29be" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t mozilla::LOW_VIDEO_FRAMES</definition>
+        <argsstring></argsstring>
+        <name>LOW_VIDEO_FRAMES</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="64" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a9b8f2bc0fedb249d12e9ecc700abc608" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int mozilla::AUDIO_DURATION_USECS</definition>
+        <argsstring></argsstring>
+        <name>AUDIO_DURATION_USECS</name>
+        <initializer>= 40000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="67" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1ac75124e741b07136a70ab00b7dde430f" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int mozilla::THRESHOLD_FACTOR</definition>
+        <argsstring></argsstring>
+        <name>THRESHOLD_FACTOR</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="73" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1afb8363fef7ef2a91f2bce923b8187444" prot="public" static="yes" mutable="no">
+        <type>const int64_t</type>
+        <definition>const int64_t mozilla::LOW_DATA_THRESHOLD_USECS</definition>
+        <argsstring></argsstring>
+        <name>LOW_DATA_THRESHOLD_USECS</name>
+        <initializer>= 5000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="79" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1abb502447d3d0fd0eb7745fdf0c6603bb" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t mozilla::EXHAUSTED_DATA_MARGIN_USECS</definition>
+        <argsstring></argsstring>
+        <name>EXHAUSTED_DATA_MARGIN_USECS</name>
+        <initializer>= 60000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="86" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a7bf19bc0621f68738ac34eca44b96fc2" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t mozilla::QUICK_BUFFER_THRESHOLD_USECS</definition>
+        <argsstring></argsstring>
+        <name>QUICK_BUFFER_THRESHOLD_USECS</name>
+        <initializer>= 2000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="97" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a5d27913e3b3981f6b511f55c88eb2dce" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t mozilla::QUICK_BUFFERING_LOW_DATA_USECS</definition>
+        <argsstring></argsstring>
+        <name>QUICK_BUFFERING_LOW_DATA_USECS</name>
+        <initializer>= 1000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="101" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1ac6a3cfb2e2cd2c7afa48e5f98c2a59ee" prot="public" static="yes" mutable="no">
+        <type>const TrackID</type>
+        <definition>const TrackID mozilla::TRACK_AUDIO</definition>
+        <argsstring></argsstring>
+        <name>TRACK_AUDIO</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="581" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="581" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1ab15da9c110dc1cd9c20bb71abd04a7ac" prot="public" static="yes" mutable="no">
+        <type>const TrackID</type>
+        <definition>const TrackID mozilla::TRACK_VIDEO</definition>
+        <argsstring></argsstring>
+        <name>TRACK_VIDEO</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="582" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="582" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a697f97c05b9e377cb094848a6607bc83" prot="public" static="yes" mutable="no">
+        <type>const TrackRate</type>
+        <definition>const TrackRate mozilla::RATE_VIDEO</definition>
+        <argsstring></argsstring>
+        <name>RATE_VIDEO</name>
+        <initializer>= USECS_PER_S</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="583" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="583" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a184170aa6157692cfca5610dc6f11aef" prot="public" static="yes" mutable="no">
+        <type><ref refid="classmozilla_1_1_media_stream_graph_impl" kindref="compound">MediaStreamGraphImpl</ref> *</type>
+        <definition>MediaStreamGraphImpl* mozilla::gGraph</definition>
+        <argsstring></argsstring>
+        <name>gGraph</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The singleton graph instance. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="515" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="515" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a3ab8f23fff298dc40199b7244cd73b90" prot="public" static="yes" mutable="no">
+        <type>const int32_t</type>
+        <definition>const int32_t mozilla::INITIAL_CURRENT_TIME</definition>
+        <argsstring></argsstring>
+        <name>INITIAL_CURRENT_TIME</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>We make the initial mCurrentTime nonzero so that zero times can have special meaning if necessary. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="2261" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="2261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1ad602dbd9cf2a9c306003686545df2908" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool mozilla::gShutdownObserverRegistered</definition>
+        <argsstring></argsstring>
+        <name>gShutdownObserverRegistered</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="2288" bodyfile="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" bodystart="2288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1af379d147b400eb5e742d393ef6880647" prot="public" static="yes" mutable="no">
+        <type>const long</type>
+        <definition>const long mozilla::SKELETON_MIN_HEADER_LEN</definition>
+        <argsstring></argsstring>
+        <name>SKELETON_MIN_HEADER_LEN</name>
+        <initializer>= 28</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="1254" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="1254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a946432f90a6b05e3959e974b25ed3f52" prot="public" static="yes" mutable="no">
+        <type>const long</type>
+        <definition>const long mozilla::SKELETON_4_0_MIN_HEADER_LEN</definition>
+        <argsstring></argsstring>
+        <name>SKELETON_4_0_MIN_HEADER_LEN</name>
+        <initializer>= 80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="1255" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="1255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1afd4bc8b2fe1947704a8af2c57b375380" prot="public" static="yes" mutable="no">
+        <type>const long</type>
+        <definition>const long mozilla::SKELETON_4_0_MIN_INDEX_LEN</definition>
+        <argsstring></argsstring>
+        <name>SKELETON_4_0_MIN_INDEX_LEN</name>
+        <initializer>= 42</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="1258" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="1258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a1f1fb61ebb5ca5b50707a7907ac29ee0" prot="public" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t mozilla::MIN_KEY_POINT_SIZE</definition>
+        <argsstring></argsstring>
+        <name>MIN_KEY_POINT_SIZE</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="1261" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="1261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1ab5904251e012b65750a907bba7961f56" prot="public" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t mozilla::SKELETON_VERSION_MAJOR_OFFSET</definition>
+        <argsstring></argsstring>
+        <name>SKELETON_VERSION_MAJOR_OFFSET</name>
+        <initializer>= 8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="1265" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="1265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a1bcbaf74778143396f0b3119b0d11bf8" prot="public" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t mozilla::SKELETON_VERSION_MINOR_OFFSET</definition>
+        <argsstring></argsstring>
+        <name>SKELETON_VERSION_MINOR_OFFSET</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="1266" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="1266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1ac1896379c9796212c429b11ee9be1109" prot="public" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t mozilla::SKELETON_PRESENTATION_TIME_NUMERATOR_OFFSET</definition>
+        <argsstring></argsstring>
+        <name>SKELETON_PRESENTATION_TIME_NUMERATOR_OFFSET</name>
+        <initializer>= 12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="1269" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="1269" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a79686fcccc17c54b1eff434e86c7019e" prot="public" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t mozilla::SKELETON_PRESENTATION_TIME_DENOMINATOR_OFFSET</definition>
+        <argsstring></argsstring>
+        <name>SKELETON_PRESENTATION_TIME_DENOMINATOR_OFFSET</name>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="1270" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="1270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a616455cd859bffc752ea8aadbc65860c" prot="public" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t mozilla::SKELETON_FILE_LENGTH_OFFSET</definition>
+        <argsstring></argsstring>
+        <name>SKELETON_FILE_LENGTH_OFFSET</name>
+        <initializer>= 64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="1273" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="1273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a17a61e40d46642521759b4d53d3d1d21" prot="public" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t mozilla::INDEX_SERIALNO_OFFSET</definition>
+        <argsstring></argsstring>
+        <name>INDEX_SERIALNO_OFFSET</name>
+        <initializer>= 6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="1276" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="1276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a12f6a6113af0705810da997319e83501" prot="public" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t mozilla::INDEX_NUM_KEYPOINTS_OFFSET</definition>
+        <argsstring></argsstring>
+        <name>INDEX_NUM_KEYPOINTS_OFFSET</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="1277" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="1277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1ad3fa7071a33ef87cd5a83a219a434e5e" prot="public" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t mozilla::INDEX_TIME_DENOM_OFFSET</definition>
+        <argsstring></argsstring>
+        <name>INDEX_TIME_DENOM_OFFSET</name>
+        <initializer>= 18</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="1278" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="1278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a4f813af93fb44fffa626aa71ae53d777" prot="public" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t mozilla::INDEX_FIRST_NUMER_OFFSET</definition>
+        <argsstring></argsstring>
+        <name>INDEX_FIRST_NUMER_OFFSET</name>
+        <initializer>= 26</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="1279" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="1279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a26452399a78ce831b8b047dbf15b2853" prot="public" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t mozilla::INDEX_LAST_NUMER_OFFSET</definition>
+        <argsstring></argsstring>
+        <name>INDEX_LAST_NUMER_OFFSET</name>
+        <initializer>= 34</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="1280" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="1280" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a26db0e8a197d8f00555abcaf8015ad99" prot="public" static="yes" mutable="no">
+        <type>const size_t</type>
+        <definition>const size_t mozilla::INDEX_KEYPOINT_OFFSET</definition>
+        <argsstring></argsstring>
+        <name>INDEX_KEYPOINT_OFFSET</name>
+        <initializer>= 42</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="1281" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="1281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a53cae9d3ebcb3a4b0f56a53a442238c8" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t mozilla::SEEK_FUZZ_USECS</definition>
+        <argsstring></argsstring>
+        <name>SEEK_FUZZ_USECS</name>
+        <initializer>= 500000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggReader.cpp" line="52" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggReader.cpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1af18e455c6e91efbc0219abe60a223875" prot="public" static="yes" mutable="no">
+        <type>const int64_t</type>
+        <definition>const int64_t mozilla::SEEK_OPUS_PREROLL</definition>
+        <argsstring></argsstring>
+        <name>SEEK_OPUS_PREROLL</name>
+        <initializer>= 80 * USECS_PER_MS</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggReader.cpp" line="56" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggReader.cpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a4b34d266fcfef44a2ad8f04185dfd7c5" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int mozilla::PAGE_STEP</definition>
+        <argsstring></argsstring>
+        <name>PAGE_STEP</name>
+        <initializer>= 8192</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggReader.cpp" line="76" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggReader.cpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1ad86c144c1bf2e2f39f004e79bb3764b6" prot="public" static="yes" mutable="no">
+        <type>PluginHost</type>
+        <definition>PluginHost mozilla::sPluginHost</definition>
+        <argsstring></argsstring>
+        <name>sPluginHost</name>
+        <initializer>= {
+  Read,
+  GetLength,
+  SetMetaDataReadMode,
+  SetPlaybackReadMode,
+  GetIntPref
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/plugins/MediaPluginHost.cpp" line="94" bodyfile="C:/tools/mozilla-release/content/media/plugins/MediaPluginHost.cpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a68ee5da96561fa01976c2bddbb55e0ed" prot="public" static="no" mutable="no">
+        <type>MediaPluginHost *</type>
+        <definition>MediaPluginHost* mozilla::sMediaPluginHost</definition>
+        <argsstring></argsstring>
+        <name>sMediaPluginHost</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/plugins/MediaPluginHost.cpp" line="193" bodyfile="C:/tools/mozilla-release/content/media/plugins/MediaPluginHost.cpp" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a76b3d753b54c634bcfd4e52c8ab5850a" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t mozilla::RIFF_CHUNK_MAGIC</definition>
+        <argsstring></argsstring>
+        <name>RIFF_CHUNK_MAGIC</name>
+        <initializer>= 0x52494646</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" line="35" bodyfile="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a2690512051c5dfb826e62909699a8b0e" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t mozilla::WAVE_CHUNK_MAGIC</definition>
+        <argsstring></argsstring>
+        <name>WAVE_CHUNK_MAGIC</name>
+        <initializer>= 0x57415645</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" line="36" bodyfile="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a1d07631427d54a18108f6b13b30b887f" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t mozilla::FRMT_CHUNK_MAGIC</definition>
+        <argsstring></argsstring>
+        <name>FRMT_CHUNK_MAGIC</name>
+        <initializer>= 0x666d7420</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" line="37" bodyfile="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a5b52ca2bb55d776ffc9125d51a8a0fa2" prot="public" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t mozilla::DATA_CHUNK_MAGIC</definition>
+        <argsstring></argsstring>
+        <name>DATA_CHUNK_MAGIC</name>
+        <initializer>= 0x64617461</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" line="38" bodyfile="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a6deef69d94a72d12ba00be76eaff51af" prot="public" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t mozilla::RIFF_CHUNK_HEADER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>RIFF_CHUNK_HEADER_SIZE</name>
+        <initializer>= 8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" line="41" bodyfile="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a0f0b2da7ec4252abbb4d4d11b234ec4e" prot="public" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t mozilla::RIFF_INITIAL_SIZE</definition>
+        <argsstring></argsstring>
+        <name>RIFF_INITIAL_SIZE</name>
+        <initializer>= RIFF_CHUNK_HEADER_SIZE + 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" line="44" bodyfile="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a2612c46483b3acec00da19ec99bf8c98" prot="public" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t mozilla::WAVE_FORMAT_CHUNK_SIZE</definition>
+        <argsstring></argsstring>
+        <name>WAVE_FORMAT_CHUNK_SIZE</name>
+        <initializer>= 16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" line="48" bodyfile="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a57819dd40952fec901b8166c98318bd4" prot="public" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t mozilla::WAVE_FORMAT_ENCODING_PCM</definition>
+        <argsstring></argsstring>
+        <name>WAVE_FORMAT_ENCODING_PCM</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" line="52" bodyfile="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a1df69ed44e057c71017bf7f2d723fa06" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t mozilla::MAX_CHANNELS</definition>
+        <argsstring></argsstring>
+        <name>MAX_CHANNELS</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" line="55" bodyfile="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1ae2a4c7b0c5c3df603861456900e31d88" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double mozilla::NS_PER_S</definition>
+        <argsstring></argsstring>
+        <name>NS_PER_S</name>
+        <initializer>= 1e9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/webm/WebMBufferedParser.cpp" line="14" bodyfile="C:/tools/mozilla-release/content/media/webm/WebMBufferedParser.cpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1af85befa6a644ebc9d7f0aa89d28dadc3" prot="public" static="yes" mutable="no">
+        <type>const unsigned</type>
+        <definition>const unsigned mozilla::NS_PER_USEC</definition>
+        <argsstring></argsstring>
+        <name>NS_PER_USEC</name>
+        <initializer>= 1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/webm/WebMReader.cpp" line="49" bodyfile="C:/tools/mozilla-release/content/media/webm/WebMReader.cpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1ae2a4c7b0c5c3df603861456900e31d88" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double mozilla::NS_PER_S</definition>
+        <argsstring></argsstring>
+        <name>NS_PER_S</name>
+        <initializer>= 1e9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/webm/WebMReader.cpp" line="50" bodyfile="C:/tools/mozilla-release/content/media/webm/WebMReader.cpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemozilla_1a7ad04fb6bb9c2f7fbf81d1f088d6eaab" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int mozilla::SEEK_DECODE_MARGIN</definition>
+        <argsstring></argsstring>
+        <name>SEEK_DECODE_MARGIN</name>
+        <initializer>= 250000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/webm/WebMReader.cpp" line="55" bodyfile="C:/tools/mozilla-release/content/media/webm/WebMReader.cpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacemozilla_1a7efe46226440d6a18348957a9df0800a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class SrcT</type>
+          </param>
+          <param>
+            <type>class DestT</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void mozilla::InterleaveAndConvertBuffer</definition>
+        <argsstring>(const SrcT *aSource, int32_t aSourceLength, int32_t aLength, float aVolume, int32_t aChannels, DestT *aOutput)</argsstring>
+        <name>InterleaveAndConvertBuffer</name>
+        <param>
+          <type>const SrcT *</type>
+          <declname>aSource</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aSourceLength</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aLength</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>aVolume</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aChannels</declname>
+        </param>
+        <param>
+          <type>DestT *</type>
+          <declname>aOutput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/AudioSegment.cpp" line="19" bodyfile="C:/tools/mozilla-release/content/media/AudioSegment.cpp" bodystart="14" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a82e8c1f1ef54734d9b8fc3e1f266f6eb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mozilla::InterleaveAndConvertBuffer</definition>
+        <argsstring>(const int16_t *aSource, int32_t aSourceLength, int32_t aLength, float aVolume, int32_t aChannels, int16_t *aOutput)</argsstring>
+        <name>InterleaveAndConvertBuffer</name>
+        <param>
+          <type>const int16_t *</type>
+          <declname>aSource</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aSourceLength</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aLength</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>aVolume</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aChannels</declname>
+        </param>
+        <param>
+          <type>int16_t *</type>
+          <declname>aOutput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/AudioSegment.cpp" line="36" bodyfile="C:/tools/mozilla-release/content/media/AudioSegment.cpp" bodystart="31" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a6ca11386860834afb156617543e29315" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mozilla::InterleaveAndConvertBuffer</definition>
+        <argsstring>(const void *aSource, AudioSampleFormat aSourceFormat, int32_t aSourceLength, int32_t aOffset, int32_t aLength, float aVolume, int32_t aChannels, AudioDataValue *aOutput)</argsstring>
+        <name>InterleaveAndConvertBuffer</name>
+        <param>
+          <type>const void *</type>
+          <declname>aSource</declname>
+        </param>
+        <param>
+          <type>AudioSampleFormat</type>
+          <declname>aSourceFormat</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aSourceLength</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aOffset</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aLength</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>aVolume</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aChannels</declname>
+        </param>
+        <param>
+          <type>AudioDataValue *</type>
+          <declname>aOutput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/AudioSegment.cpp" line="66" bodyfile="C:/tools/mozilla-release/content/media/AudioSegment.cpp" bodystart="60" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1af1ebd340ec1898626130c4a69e878ec1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int mozilla::PrefChanged</definition>
+        <argsstring>(const char *aPref, void *aClosure)</argsstring>
+        <name>PrefChanged</name>
+        <param>
+          <type>const char *</type>
+          <declname>aPref</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>aClosure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/AudioStream.cpp" line="300" bodyfile="C:/tools/mozilla-release/content/media/AudioStream.cpp" bodystart="299" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a81e300581c073d9e3b150fec3feafc7f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>static double mozilla::GetVolumeScale</definition>
+        <argsstring>()</argsstring>
+        <name>GetVolumeScale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/AudioStream.cpp" line="330" bodyfile="C:/tools/mozilla-release/content/media/AudioStream.cpp" bodystart="329" bodyend="333"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1adf854fdaf414f904cafa6dca07568b4c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>sa_stream_type_t</type>
+        <definition>static sa_stream_type_t mozilla::ConvertChannelToSAType</definition>
+        <argsstring>(AudioChannelType aType)</argsstring>
+        <name>ConvertChannelToSAType</name>
+        <param>
+          <type>AudioChannelType</type>
+          <declname>aType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/AudioStream.cpp" line="363" bodyfile="C:/tools/mozilla-release/content/media/AudioStream.cpp" bodystart="362" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a4a1c3279f2313928c260230629d722b2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mozilla::UpdateSwappedBlockIndex</definition>
+        <argsstring>(int32_t *aBlockIndex, int32_t aBlock1Index, int32_t aBlock2Index)</argsstring>
+        <name>UpdateSwappedBlockIndex</name>
+        <param>
+          <type>int32_t *</type>
+          <declname>aBlockIndex</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aBlock1Index</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>aBlock2Index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="448" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="446" bodyend="455"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1af0b5754768964d3b7166f079ff3a416c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mozilla::InitMediaCache</definition>
+        <argsstring>()</argsstring>
+        <name>InitMediaCache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="589" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="588" bodyend="602"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a45810993a7275086d6a8e6114a6813b5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>static int32_t mozilla::GetMaxBlocks</definition>
+        <argsstring>()</argsstring>
+        <name>GetMaxBlocks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaCache.cpp" line="640" bodyfile="C:/tools/mozilla-release/content/media/MediaCache.cpp" bodystart="639" bodyend="648"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a18f7bcfe248e6607e02b9ad57e69f0c1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool mozilla::IsInRanges</definition>
+        <argsstring>(nsTimeRanges &amp;aRanges, double aValue, int32_t &amp;aIntervalIndex)</argsstring>
+        <name>IsInRanges</name>
+        <param>
+          <type>nsTimeRanges &amp;</type>
+          <declname>aRanges</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>aValue</declname>
+        </param>
+        <param>
+          <type>int32_t &amp;</type>
+          <declname>aIntervalIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true if aValue is inside a range of aRanges, and put the range index in aIntervalIndex if it is not null. If aValue is not inside a range, false is returned, and aIntervalIndex, if not null, is set to the index of the range which ends immediately before aValue (and can be -1 if aValue is before aRanges.Start(0)). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoder.cpp" line="503" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoder.cpp" bodystart="503" bodyend="521"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a5e637b1060a96ea1208101ba7fa580a2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mozilla::ProgressCallback</definition>
+        <argsstring>(nsITimer *aTimer, void *aClosure)</argsstring>
+        <name>ProgressCallback</name>
+        <param>
+          <type>nsITimer *</type>
+          <declname>aTimer</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>aClosure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoder.cpp" line="1371" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoder.cpp" bodystart="1370" bodyend="1374"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1ac5a563ae23786c53d1c3d4b804c5acae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mozilla::NS_MEMORY_REPORTER_IMPLEMENT</definition>
+        <argsstring>(MediaDecodedVideoMemory,&quot;explicit/media/decoded-video&quot;, KIND_HEAP, UNITS_BYTES, MediaMemoryReporter::GetDecodedVideoMemory,&quot;Memory used by decoded video frames.&quot;) NS_MEMORY_REPORTER_IMPLEMENT(MediaDecodedAudioMemory</argsstring>
+        <name>NS_MEMORY_REPORTER_IMPLEMENT</name>
+        <param>
+          <type>MediaDecodedVideoMemory</type>
+        </param>
+        <param>
+          <type>&quot;explicit/media/decoded-video&quot;</type>
+        </param>
+        <param>
+          <type>KIND_HEAP</type>
+        </param>
+        <param>
+          <type>UNITS_BYTES</type>
+        </param>
+        <param>
+          <type>MediaMemoryReporter::GetDecodedVideoMemory</type>
+        </param>
+        <param>
+          <type>&quot;Memory used by decoded video frames.&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoder.cpp" line="1568"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1ad6c51e9290aa07bde2eefde5b8a0716a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mozilla::PR_STATIC_ASSERT</definition>
+        <argsstring>(MAX_VIDEO_WIDTH&lt; PlanarYCbCrImage::MAX_DIMENSION)</argsstring>
+        <name>PR_STATIC_ASSERT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderReader.cpp" line="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a837ffdaa50371eba3aa8b26ff4a5b55f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool mozilla::ValidatePlane</definition>
+        <argsstring>(const VideoData::YCbCrBuffer::Plane &amp;aPlane)</argsstring>
+        <name>ValidatePlane</name>
+        <param>
+          <type>const VideoData::YCbCrBuffer::Plane &amp;</type>
+          <declname>aPlane</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderReader.cpp" line="61" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderReader.cpp" bodystart="60" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a536382054eece37c2274faa224d29b5e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool mozilla::IsYV12Format</definition>
+        <argsstring>(const VideoData::YCbCrBuffer::Plane &amp;aYPlane, const VideoData::YCbCrBuffer::Plane &amp;aCbPlane, const VideoData::YCbCrBuffer::Plane &amp;aCrPlane)</argsstring>
+        <name>IsYV12Format</name>
+        <param>
+          <type>const VideoData::YCbCrBuffer::Plane &amp;</type>
+          <declname>aYPlane</declname>
+        </param>
+        <param>
+          <type>const VideoData::YCbCrBuffer::Plane &amp;</type>
+          <declname>aCbPlane</declname>
+        </param>
+        <param>
+          <type>const VideoData::YCbCrBuffer::Plane &amp;</type>
+          <declname>aCrPlane</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderReader.cpp" line="72" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderReader.cpp" bodystart="69" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a2e383a02bd42997c91c7e7996c71da8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mozilla::PR_STATIC_ASSERT</definition>
+        <argsstring>(LOW_DATA_THRESHOLD_USECS &gt; AMPLE_AUDIO_USECS)</argsstring>
+        <name>PR_STATIC_ASSERT</name>
+        <param>
+          <type>LOW_DATA_THRESHOLD_USECS</type>
+        </param>
+        <param>
+          <type>AMPLE_AUDIO_USECS</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="83"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1acf455270a711b298f15497be63d00c03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mozilla::PR_STATIC_ASSERT</definition>
+        <argsstring>(QUICK_BUFFERING_LOW_DATA_USECS&lt;=AMPLE_AUDIO_USECS)</argsstring>
+        <name>PR_STATIC_ASSERT</name>
+        <param>
+          <type>QUICK_BUFFERING_LOW_DATA_USECS&lt;=</type>
+          <declname>AMPLE_AUDIO_USECS</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="107"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1ad2e537c51bf7ddb29a3e65c0a5cba36c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TimeDuration</type>
+        <definition>static TimeDuration mozilla::UsecsToDuration</definition>
+        <argsstring>(int64_t aUsecs)</argsstring>
+        <name>UsecsToDuration</name>
+        <param>
+          <type>int64_t</type>
+          <declname>aUsecs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="109" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="109" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1abb885fa4fe9e6b1fef8c91ea5f6d14ba" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>static int64_t mozilla::DurationToUsecs</definition>
+        <argsstring>(TimeDuration aDuration)</argsstring>
+        <name>DurationToUsecs</name>
+        <param>
+          <type>TimeDuration</type>
+          <declname>aDuration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="113" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="113" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1af546acda0ee622eee2d01a0d6b0df2ed" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mozilla::WriteVideoToMediaStream</definition>
+        <argsstring>(mozilla::layers::Image *aImage, int64_t aDuration, const gfxIntSize &amp;aIntrinsicSize, VideoSegment *aOutput)</argsstring>
+        <name>WriteVideoToMediaStream</name>
+        <param>
+          <type>mozilla::layers::Image *</type>
+          <declname>aImage</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>aDuration</declname>
+        </param>
+        <param>
+          <type>const gfxIntSize &amp;</type>
+          <declname>aIntrinsicSize</declname>
+        </param>
+        <param>
+          <type>VideoSegment *</type>
+          <declname>aOutput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="576" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="573" bodyend="579"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a4fe260d202562782d279f81d18265622" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mozilla::WriteSilence</definition>
+        <argsstring>(AudioStream *aStream, uint32_t aFrames)</argsstring>
+        <name>WriteSilence</name>
+        <param>
+          <type>AudioStream *</type>
+          <declname>aStream</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>aFrames</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="962" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="961" bodyend="968"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1aca755cbe40def720e4c0cf82d21eaeb1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mozilla::TimeoutExpired</definition>
+        <argsstring>(nsITimer *aTimer, void *aClosure)</argsstring>
+        <name>TimeoutExpired</name>
+        <param>
+          <type>nsITimer *</type>
+          <declname>aTimer</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>aClosure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" line="2550" bodyfile="C:/tools/mozilla-release/content/media/MediaDecoderStateMachine.cpp" bodystart="2550" bodyend="2555"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1afbbf5524eeba166c71c9648341d9f971" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mozilla::NS_IMPL_ISUPPORTS4</definition>
+        <argsstring>(ChannelMediaResource::Listener, nsIRequestObserver, nsIStreamListener, nsIChannelEventSink, nsIInterfaceRequestor) nsresult ChannelMediaResource</argsstring>
+        <name>NS_IMPL_ISUPPORTS4</name>
+        <param>
+          <type>ChannelMediaResource::Listener</type>
+        </param>
+        <param>
+          <type>nsIRequestObserver</type>
+        </param>
+        <param>
+          <type>nsIStreamListener</type>
+        </param>
+        <param>
+          <type>nsIChannelEventSink</type>
+        </param>
+        <param>
+          <type>nsIInterfaceRequestor</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaResource.cpp" line="92" bodyfile="C:/tools/mozilla-release/content/media/MediaResource.cpp" bodystart="85" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1ac5bfb4ec1ba3b0017bfedec5021ca936" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static mozilla::NS_DEFINE_CID</definition>
+        <argsstring>(kAppShellCID, NS_APPSHELL_CID)</argsstring>
+        <name>NS_DEFINE_CID</name>
+        <param>
+          <type>kAppShellCID</type>
+        </param>
+        <param>
+          <type>NS_APPSHELL_CID</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/MediaStreamGraph.cpp" line="1685"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a21179978e10cffda0e1f3a9bcc3565f1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t mozilla::LEUint32</definition>
+        <argsstring>(const unsigned char *p)</argsstring>
+        <name>LEUint32</name>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="28" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="27" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a6e043a5c76b5c393331da4bd0464f707" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>static int64_t mozilla::LEInt64</definition>
+        <argsstring>(const unsigned char *p)</argsstring>
+        <name>LEInt64</name>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="37" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="36" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1ae24bb89915555842a462bc5d657db5fb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>static uint16_t mozilla::LEUint16</definition>
+        <argsstring>(const unsigned char *p)</argsstring>
+        <name>LEUint16</name>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="45" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1ac040abe237facb4971c96b7b27f2fc94" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int16_t</type>
+        <definition>static int16_t mozilla::LEInt16</definition>
+        <argsstring>(const unsigned char *p)</argsstring>
+        <name>LEInt16</name>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="51" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a9eba3dac1d19e7e7215110e1f81e09e1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ogg_packet *</type>
+        <definition>static ogg_packet* mozilla::Clone</definition>
+        <argsstring>(ogg_packet *aPacket)</argsstring>
+        <name>Clone</name>
+        <param>
+          <type>ogg_packet *</type>
+          <declname>aPacket</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="183" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="183" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a2891acc99097c0e0116bf3b69660f5af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mozilla::TheoraVersion</definition>
+        <argsstring>(th_info *info, unsigned char maj, unsigned char min, unsigned char sub)</argsstring>
+        <name>TheoraVersion</name>
+        <param>
+          <type>th_info *</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>maj</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>sub</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="444" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="440" bodyend="450"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a95ceb6795b290d0f4982e2d10ec0e47a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool mozilla::IsSkeletonBOS</definition>
+        <argsstring>(ogg_packet *aPacket)</argsstring>
+        <name>IsSkeletonBOS</name>
+        <param>
+          <type>ogg_packet *</type>
+          <declname>aPacket</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="1284" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="1283" bodyend="1287"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a31aa536ce7cc3336f247c2d050867f24" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool mozilla::IsSkeletonIndex</definition>
+        <argsstring>(ogg_packet *aPacket)</argsstring>
+        <name>IsSkeletonIndex</name>
+        <param>
+          <type>ogg_packet *</type>
+          <declname>aPacket</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="1290" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="1289" bodyend="1293"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a466108230c21730d02c6da510e06aca0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const unsigned char *</type>
+        <definition>static const unsigned char* mozilla::ReadVariableLengthInt</definition>
+        <argsstring>(const unsigned char *p, const unsigned char *aLimit, int64_t &amp;n)</argsstring>
+        <name>ReadVariableLengthInt</name>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const unsigned char *</type>
+          <declname>aLimit</declname>
+        </param>
+        <param>
+          <type>int64_t &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" line="1300" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggCodecState.cpp" bodystart="1297" bodyend="1314"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1ace0027a3bdde39d6b5bc490602960053" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>PageSyncResult</type>
+        <definition>static PageSyncResult mozilla::PageSync</definition>
+        <argsstring>(MediaResource *aResource, ogg_sync_state *aState, bool aCachedDataOnly, int64_t aOffset, int64_t aEndOffset, ogg_page *aPage, int &amp;aSkippedBytes)</argsstring>
+        <name>PageSync</name>
+        <param>
+          <type>MediaResource *</type>
+          <declname>aResource</declname>
+        </param>
+        <param>
+          <type>ogg_sync_state *</type>
+          <declname>aState</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>aCachedDataOnly</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>aOffset</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>aEndOffset</declname>
+        </param>
+        <param>
+          <type>ogg_page *</type>
+          <declname>aPage</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>aSkippedBytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggReader.cpp" line="72" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggReader.cpp" bodystart="1277" bodyend="1339"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a395f5d2a05045abc251e43916642570e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ogg_uint32_t</type>
+        <definition>static ogg_uint32_t mozilla::GetChecksum</definition>
+        <argsstring>(ogg_page *page)</argsstring>
+        <name>GetChecksum</name>
+        <param>
+          <type>ogg_page *</type>
+          <declname>page</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/ogg/OggReader.cpp" line="786" bodyfile="C:/tools/mozilla-release/content/media/ogg/OggReader.cpp" bodystart="785" bodyend="796"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1ae20ac005197d808a6267937343fb0c12" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>static uint64_t mozilla::BytesToTime</definition>
+        <argsstring>(int64_t offset, uint64_t length, uint64_t durationUs)</argsstring>
+        <name>BytesToTime</name>
+        <param>
+          <type>int64_t</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>durationUs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/omx/MediaOmxReader.cpp" line="325" bodyfile="C:/tools/mozilla-release/content/media/omx/MediaOmxReader.cpp" bodystart="325" bodyend="330"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1ad61c52518a15555bc3dd9f355e40ccff" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MediaResource *</type>
+        <definition>static MediaResource* mozilla::GetResource</definition>
+        <argsstring>(Decoder *aDecoder)</argsstring>
+        <name>GetResource</name>
+        <param>
+          <type>Decoder *</type>
+          <declname>aDecoder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/plugins/MediaPluginHost.cpp" line="31" bodyfile="C:/tools/mozilla-release/content/media/plugins/MediaPluginHost.cpp" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1acb8c224dfafee296d672d2eddfc8aa9d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool mozilla::Read</definition>
+        <argsstring>(Decoder *aDecoder, char *aBuffer, int64_t aOffset, uint32_t aCount, uint32_t *aBytes)</argsstring>
+        <name>Read</name>
+        <param>
+          <type>Decoder *</type>
+          <declname>aDecoder</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>aBuffer</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>aOffset</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>aCount</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>aBytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/plugins/MediaPluginHost.cpp" line="36" bodyfile="C:/tools/mozilla-release/content/media/plugins/MediaPluginHost.cpp" bodystart="35" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a74cc6ba36bb51c41a03415e19e84787c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>static uint64_t mozilla::GetLength</definition>
+        <argsstring>(Decoder *aDecoder)</argsstring>
+        <name>GetLength</name>
+        <param>
+          <type>Decoder *</type>
+          <declname>aDecoder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/plugins/MediaPluginHost.cpp" line="52" bodyfile="C:/tools/mozilla-release/content/media/plugins/MediaPluginHost.cpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1aad5cd697c12258daade28272c18f022e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mozilla::SetMetaDataReadMode</definition>
+        <argsstring>(Decoder *aDecoder)</argsstring>
+        <name>SetMetaDataReadMode</name>
+        <param>
+          <type>Decoder *</type>
+          <declname>aDecoder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/plugins/MediaPluginHost.cpp" line="57" bodyfile="C:/tools/mozilla-release/content/media/plugins/MediaPluginHost.cpp" bodystart="56" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a5cd639bca52173338506726df96ee141" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void mozilla::SetPlaybackReadMode</definition>
+        <argsstring>(Decoder *aDecoder)</argsstring>
+        <name>SetPlaybackReadMode</name>
+        <param>
+          <type>Decoder *</type>
+          <declname>aDecoder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/plugins/MediaPluginHost.cpp" line="62" bodyfile="C:/tools/mozilla-release/content/media/plugins/MediaPluginHost.cpp" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a8fc220152a436c04e17d71310dba8325" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool mozilla::GetIntPref</definition>
+        <argsstring>(const char *aPref, int32_t *aResult)</argsstring>
+        <name>GetIntPref</name>
+        <param>
+          <type>const char *</type>
+          <declname>aPref</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>aResult</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/plugins/MediaPluginHost.cpp" line="79" bodyfile="C:/tools/mozilla-release/content/media/plugins/MediaPluginHost.cpp" bodystart="78" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a4963b2337dfcd1e654d57ccfd065b603" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MediaPluginHost *</type>
+        <definition>MediaPluginHost* mozilla::GetMediaPluginHost</definition>
+        <argsstring>()</argsstring>
+        <name>GetMediaPluginHost</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/plugins/MediaPluginHost.cpp" line="195" bodyfile="C:/tools/mozilla-release/content/media/plugins/MediaPluginHost.cpp" bodystart="194" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1ab8bf2efec253eedba769e0ce65195724" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T mozilla::UnsignedByteToAudioSample</definition>
+        <argsstring>(uint8_t aValue)</argsstring>
+        <name>UnsignedByteToAudioSample</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>aValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" line="150"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a27737ca54982fd6ced7eacdfca1e1699" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T mozilla::SignedShortToAudioSample</definition>
+        <argsstring>(int16_t aValue)</argsstring>
+        <name>SignedShortToAudioSample</name>
+        <param>
+          <type>int16_t</type>
+          <declname>aValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" line="151"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a94ec21c707ac8ae028db101c2f9effbf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>float</type>
+        <definition>float mozilla::UnsignedByteToAudioSample&lt; float &gt;</definition>
+        <argsstring>(uint8_t aValue)</argsstring>
+        <name>UnsignedByteToAudioSample&lt; float &gt;</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>aValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" line="155" bodyfile="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" bodystart="154" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a17f54375eaf79e9bb1e1e671a2e065cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>int16_t</type>
+        <definition>int16_t mozilla::UnsignedByteToAudioSample&lt; int16_t &gt;</definition>
+        <argsstring>(uint8_t aValue)</argsstring>
+        <name>UnsignedByteToAudioSample&lt; int16_t &gt;</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>aValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" line="160" bodyfile="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" bodystart="159" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a7e8816fdd263a7e6673617d68f81acc4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>float</type>
+        <definition>float mozilla::SignedShortToAudioSample&lt; float &gt;</definition>
+        <argsstring>(int16_t aValue)</argsstring>
+        <name>SignedShortToAudioSample&lt; float &gt;</name>
+        <param>
+          <type>int16_t</type>
+          <declname>aValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" line="166" bodyfile="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" bodystart="165" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a76c44af0c982ab745f6bfa488cc48261" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>int16_t</type>
+        <definition>int16_t mozilla::SignedShortToAudioSample&lt; int16_t &gt;</definition>
+        <argsstring>(int16_t aValue)</argsstring>
+        <name>SignedShortToAudioSample&lt; int16_t &gt;</name>
+        <param>
+          <type>int16_t</type>
+          <declname>aValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" line="171" bodyfile="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" bodystart="170" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a3fdc02843ca57283c987fbb807a57602" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>static double mozilla::RoundToUsecs</definition>
+        <argsstring>(double aSeconds)</argsstring>
+        <name>RoundToUsecs</name>
+        <param>
+          <type>double</type>
+          <declname>aSeconds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" line="256" bodyfile="C:/tools/mozilla-release/content/media/wave/WaveReader.cpp" bodystart="256" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a87747102da6394df807bcae7736fdbdc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>static uint32_t mozilla::VIntLength</definition>
+        <argsstring>(unsigned char aFirstByte, uint32_t *aMask)</argsstring>
+        <name>VIntLength</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>aFirstByte</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>aMask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/webm/WebMBufferedParser.cpp" line="18" bodyfile="C:/tools/mozilla-release/content/media/webm/WebMBufferedParser.cpp" bodystart="17" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a5602fd8d37bb9660ab5afa15e4edacd0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int mozilla::webm_read</definition>
+        <argsstring>(void *aBuffer, size_t aLength, void *aUserData)</argsstring>
+        <name>webm_read</name>
+        <param>
+          <type>void *</type>
+          <declname>aBuffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>aLength</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>aUserData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/webm/WebMReader.cpp" line="61" bodyfile="C:/tools/mozilla-release/content/media/webm/WebMReader.cpp" bodystart="60" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a2f8cafb7d24d882a999b511e3bd212d7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int mozilla::webm_seek</definition>
+        <argsstring>(int64_t aOffset, int aWhence, void *aUserData)</argsstring>
+        <name>webm_seek</name>
+        <param>
+          <type>int64_t</type>
+          <declname>aOffset</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>aWhence</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>aUserData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/webm/WebMReader.cpp" line="87" bodyfile="C:/tools/mozilla-release/content/media/webm/WebMReader.cpp" bodystart="86" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemozilla_1a3f360c56158f8592e460b2157b03f5f9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>static int64_t mozilla::webm_tell</definition>
+        <argsstring>(void *aUserData)</argsstring>
+        <name>webm_tell</name>
+        <param>
+          <type>void *</type>
+          <declname>aUserData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/tools/mozilla-release/content/media/webm/WebMReader.cpp" line="97" bodyfile="C:/tools/mozilla-release/content/media/webm/WebMReader.cpp" bodystart="96" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/tools/mozilla-release/content/media/AudioAvailableEventManager.cpp" line="12"/>
+  </compounddef>
+</doxygen>

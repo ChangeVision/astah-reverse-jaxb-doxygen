@@ -1,0 +1,2052 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classcdx_c_dynamic_wnd" kind="class" prot="public">
+    <compoundname>cdxCDynamicWnd</compoundname>
+    <derivedcompoundref refid="classcdx_c_dynamic_form_view" prot="public" virt="non-virtual">cdxCDynamicFormView</derivedcompoundref>
+    <derivedcompoundref refid="classcdx_c_dynamic_prop_page" prot="public" virt="non-virtual">cdxCDynamicPropPage</derivedcompoundref>
+    <derivedcompoundref refid="classcdx_c_dynamic_wnd_ex" prot="public" virt="non-virtual">cdxCDynamicWndEx</derivedcompoundref>
+    <includes refid="cdx_c_dynamic_wnd_8h" local="no">cdxCDynamicWnd.h</includes>
+    <innerclass refid="structcdx_c_dynamic_wnd_1_1____dyn_entry" prot="public">cdxCDynamicWnd::__dynEntry</innerclass>
+    <innerclass refid="classcdx_c_dynamic_wnd_1_1_position" prot="public">cdxCDynamicWnd::Position</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855" prot="public" static="no">
+        <name>Mode</name>
+        <enumvalue id="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855a75188eab2b611945a8002c37b594f71c" prot="public">
+          <name>mdNone</name>
+          <initializer>=	0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855ac89e0019f91dc08bd456db7a4f913f3e" prot="public">
+          <name>mdResize</name>
+          <initializer>=	1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855a1f27dab35aa9c3507af936030b812292" prot="public">
+          <name>mdRepos</name>
+          <initializer>=	2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855a31f82e1d1c49158a7e6c7e56ebbd32fb" prot="public">
+          <name>mdRelative</name>
+          <initializer>=	3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="169" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="168" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="enum" id="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523" prot="public" static="no">
+        <name>Freedom</name>
+        <enumvalue id="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523ab87a000bd5b35d19177e58e7eeb2d373" prot="public">
+          <name>fdNone</name>
+          <initializer>=	0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523a446647e558e2b2b2b8406725bf73acf0" prot="public">
+          <name>fdHoriz</name>
+          <initializer>=	0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523aea6a28ab13873a68a3471972adf1c138" prot="public">
+          <name>fdVert</name>
+          <initializer>=	0x02</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523a047c9f61ce107a24a32982c0cd4f64c6" prot="public">
+          <name>fdAll</name>
+          <initializer>=	fdHoriz|fdVert</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523a068a709f5c5afe1f3d1b2d5bec20770d" prot="public">
+          <name>fdHorz</name>
+          <initializer>=	fdHoriz</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523a64f6ce145c4107e1dfba9790e04a6dda" prot="public">
+          <name>fdX</name>
+          <initializer>=	fdHoriz</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523a2bc7b3d8a9d922a28fc37f32d14e11e2" prot="public">
+          <name>fdY</name>
+          <initializer>=	fdVert</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="179" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="178" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="enum" id="classcdx_c_dynamic_wnd_1a209cd190df6079d1df9d6d471625fd37" prot="public" static="no">
+        <name>Flags</name>
+        <enumvalue id="classcdx_c_dynamic_wnd_1a209cd190df6079d1df9d6d471625fd37afca2f061d84afe1937a1ee07d50fecb6" prot="public">
+          <name>flSizeIcon</name>
+          <initializer>=	0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_wnd_1a209cd190df6079d1df9d6d471625fd37a3a484e61f57772086c6a5b0374e8417b" prot="public">
+          <name>flAntiFlicker</name>
+          <initializer>=	0x02</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_wnd_1a209cd190df6079d1df9d6d471625fd37a86c8c0531b8f31da081f9703a9d3230a" prot="public">
+          <name>flSWPCopyBits</name>
+          <initializer>=	0x04</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_wnd_1a209cd190df6079d1df9d6d471625fd37a26cfb1773db5ed1bfa251627fc497a63" prot="public">
+          <name>_fl_reserved_</name>
+          <initializer>=	0x0000ffff</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_wnd_1a209cd190df6079d1df9d6d471625fd37a1009da08a89114d3152e7461f595ee06" prot="public">
+          <name>_fl_freeuse_</name>
+          <initializer>=	0xffff0000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="193" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="192" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="enum" id="classcdx_c_dynamic_wnd_1af23eb9763fa6dedb458e5cdaa3e1386c" prot="public" static="no">
+        <name>@6</name>
+        <enumvalue id="classcdx_c_dynamic_wnd_1af23eb9763fa6dedb458e5cdaa3e1386ca87f5f41ad6344bc93e2289bd781057ca" prot="public">
+          <name>DEFAULT_TIMER_ID</name>
+          <initializer>=	0x7164</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="206" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="205" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="enum" id="classcdx_c_dynamic_wnd_1a45aa0a593bfba63bd38a08aed4968b2b" prot="public" static="no">
+        <name>@7</name>
+        <enumvalue id="classcdx_c_dynamic_wnd_1a45aa0a593bfba63bd38a08aed4968b2bad14be392a1a4daa80e29d58062d92bd9" prot="public">
+          <name>X1</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_wnd_1a45aa0a593bfba63bd38a08aed4968b2bacaa84713e18b9e66e1e0e3eeb86a5d7b" prot="public">
+          <name>Y1</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_wnd_1a45aa0a593bfba63bd38a08aed4968b2bac892f5f7c34f6f9cf77b61d9dbf7363d" prot="public">
+          <name>X2</name>
+          <initializer>=2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_wnd_1a45aa0a593bfba63bd38a08aed4968b2ba945a86c19287f7545df7d23acd4a7146" prot="public">
+          <name>Y2</name>
+          <initializer>=3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="212" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="212" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="enum" id="classcdx_c_dynamic_wnd_1a8cb440b70f58c7d7bf44860e4ea5e24b" prot="public" static="no">
+        <name>__dynEntryType</name>
+        <enumvalue id="classcdx_c_dynamic_wnd_1a8cb440b70f58c7d7bf44860e4ea5e24baea61688347aeb8720a4d703403716ee4" prot="public">
+          <name>__end</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_wnd_1a8cb440b70f58c7d7bf44860e4ea5e24baa14ee2438f2d5240d817405e3ab41b14" prot="public">
+          <name>__bytes</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classcdx_c_dynamic_wnd_1a8cb440b70f58c7d7bf44860e4ea5e24ba6a8d0d8bc8df7d960dc26be7d16eaf04" prot="public">
+          <name>__modes</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="403" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="402" bodyend="407"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" prot="public" static="no">
+        <type>signed char</type>
+        <definition>typedef signed char cdxCDynamicWnd::SBYTE</definition>
+        <argsstring></argsstring>
+        <name>SBYTE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="214" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classcdx_c_dynamic_wnd_1ab6e26117c4c3f077c5ab1392b6377198" prot="public" static="no">
+        <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref></type>
+        <definition>typedef SBYTE cdxCDynamicWnd::SBYTES[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>SBYTES</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="215" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcdx_c_dynamic_wnd_1a7e3ba2561aac0550b604ec0eb18f2c50" prot="private" static="no" mutable="no">
+        <type>CWnd *</type>
+        <definition>CWnd* cdxCDynamicWnd::m_pWnd</definition>
+        <argsstring></argsstring>
+        <name>m_pWnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="240" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_wnd_1a850268de32ee78dc7fd5dac5b13fe6fe" prot="private" static="no" mutable="no">
+        <type><ref refid="classcdx_c_size_icon_ctrl" kindref="compound">cdxCSizeIconCtrl</ref> *</type>
+        <definition>cdxCSizeIconCtrl* cdxCDynamicWnd::m_pSizeIcon</definition>
+        <argsstring></argsstring>
+        <name>m_pSizeIcon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="241" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_wnd_1aa2479df842145138722360f346dc63e6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::m_bIsAntiFlickering</definition>
+        <argsstring></argsstring>
+        <name>m_bIsAntiFlickering</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="242" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcdx_c_dynamic_wnd_1a291eb8192ff1949ec31c630c61bfe5d9" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cdxCDynamicWnd::m_iDisabled</definition>
+        <argsstring></argsstring>
+        <name>m_iDisabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="245" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_wnd_1aadbc3a537c859c5773c6071c146434b8" prot="protected" static="no" mutable="no">
+        <type>DWORD</type>
+        <definition>DWORD cdxCDynamicWnd::m_dwClassStyle</definition>
+        <argsstring></argsstring>
+        <name>m_dwClassStyle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="246" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_wnd_1a9de5a0a34e39491a688b48f263255cba" prot="protected" static="no" mutable="no">
+        <type>CMap&lt; HWND, HWND, <ref refid="classcdx_c_dynamic_wnd_1_1_position" kindref="compound">Position</ref>, const <ref refid="classcdx_c_dynamic_wnd_1_1_position" kindref="compound">Position</ref> &amp; &gt;</type>
+        <definition>CMap&lt;HWND,HWND,Position,const Position &amp;&gt; cdxCDynamicWnd::m_Map</definition>
+        <argsstring></argsstring>
+        <name>m_Map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="248" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcdx_c_dynamic_wnd_1adc137a9ae3de104ae48e2b4175329c55" prot="public" static="no" mutable="no">
+        <type><ref refid="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523" kindref="member">Freedom</ref></type>
+        <definition>Freedom cdxCDynamicWnd::m_Freedom</definition>
+        <argsstring></argsstring>
+        <name>m_Freedom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="251" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_wnd_1a8e8d745f5390dda688d39a17a786e07e" prot="public" static="no" mutable="no">
+        <type>UINT</type>
+        <definition>UINT cdxCDynamicWnd::m_nFlags</definition>
+        <argsstring></argsstring>
+        <name>m_nFlags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="252" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_wnd_1ade0b344a14887598c7aa0e23b2787eb9" prot="public" static="no" mutable="no">
+        <type>CSize</type>
+        <definition>CSize cdxCDynamicWnd::m_szInitial</definition>
+        <argsstring></argsstring>
+        <name>m_szInitial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="253" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_wnd_1af0c40f692587fe02a27043d86d679dc2" prot="public" static="no" mutable="no">
+        <type>CSize</type>
+        <definition>CSize cdxCDynamicWnd::m_szMin</definition>
+        <argsstring></argsstring>
+        <name>m_szMin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="254" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_wnd_1a5ffdf1c91d4ca43f8482d04830652e66" prot="public" static="no" mutable="no">
+        <type>CSize</type>
+        <definition>CSize cdxCDynamicWnd::m_szMax</definition>
+        <argsstring></argsstring>
+        <name>m_szMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="255" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_wnd_1adb58cf0172fbd972bcf7e6de385310c5" prot="public" static="no" mutable="no">
+        <type>UINT</type>
+        <definition>UINT cdxCDynamicWnd::m_idSizeIcon</definition>
+        <argsstring></argsstring>
+        <name>m_idSizeIcon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="256" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_wnd_1a194ff1b726344a8803053019e38077ab" prot="public" static="no" mutable="no">
+        <type>UINT</type>
+        <definition>UINT cdxCDynamicWnd::m_nMyTimerID</definition>
+        <argsstring></argsstring>
+        <name>m_nMyTimerID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="257" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_wnd_1afe99cfbd91c71277f182f493ea2744bd" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::m_bUseScrollPos</definition>
+        <argsstring></argsstring>
+        <name>m_bUseScrollPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="258" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcdx_c_dynamic_wnd_1ae393b53883608d05a33d922e8aff7599" prot="public" static="yes" mutable="no">
+        <type>const CSize</type>
+        <definition>const CSize cdxCDynamicWnd::M_szNull</definition>
+        <argsstring></argsstring>
+        <name>M_szNull</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="418" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_wnd_1a87f6311004037445eb3be8352b461f18" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="classcdx_c_dynamic_wnd_1ab6e26117c4c3f077c5ab1392b6377198" kindref="member">SBYTES</ref></type>
+        <definition>const cdxCDynamicWnd::SBYTES cdxCDynamicWnd::TopLeft</definition>
+        <argsstring></argsstring>
+        <name>TopLeft</name>
+        <initializer>=	{ 0,0,0,0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="419" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_wnd_1a0592db8f40d92a8da4e2da5c701db43f" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="classcdx_c_dynamic_wnd_1ab6e26117c4c3f077c5ab1392b6377198" kindref="member">SBYTES</ref></type>
+        <definition>const cdxCDynamicWnd::SBYTES cdxCDynamicWnd::TopRight</definition>
+        <argsstring></argsstring>
+        <name>TopRight</name>
+        <initializer>=	{ 100,0,100,0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="420" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_wnd_1afbccd30af1112326f5a9a8891f7b687a" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="classcdx_c_dynamic_wnd_1ab6e26117c4c3f077c5ab1392b6377198" kindref="member">SBYTES</ref></type>
+        <definition>const cdxCDynamicWnd::SBYTES cdxCDynamicWnd::BotLeft</definition>
+        <argsstring></argsstring>
+        <name>BotLeft</name>
+        <initializer>=	{ 0,100,0,100 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="421" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcdx_c_dynamic_wnd_1a115797b56f0521394d0c4845d045e3f7" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="classcdx_c_dynamic_wnd_1ab6e26117c4c3f077c5ab1392b6377198" kindref="member">SBYTES</ref></type>
+        <definition>const cdxCDynamicWnd::SBYTES cdxCDynamicWnd::BotRight</definition>
+        <argsstring></argsstring>
+        <name>BotRight</name>
+        <initializer>=	{ 100,100,100,100 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="422" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a0f495c0a7a0386caeb3bd794a12c2cdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cdxCDynamicWnd::cdxCDynamicWnd</definition>
+        <argsstring>(Freedom fd, UINT nFlags)</argsstring>
+        <name>cdxCDynamicWnd</name>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523" kindref="member">Freedom</ref></type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>UINT</type>
+          <declname>nFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="261" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.cpp" bodystart="98" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a79028fa09a3bab1875ff39b672a23ec9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual cdxCDynamicWnd::‾cdxCDynamicWnd</definition>
+        <argsstring>()</argsstring>
+        <name>‾cdxCDynamicWnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="262" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="262" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1acca8cafe3f58a45d0c39f87fc7375e3a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::IsValid</definition>
+        <argsstring>() const </argsstring>
+        <name>IsValid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="268" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="268" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1aff6e5b3178956b7d7c8336cdea6e444c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::IsWindow</definition>
+        <argsstring>() const </argsstring>
+        <name>IsWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="269" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="269" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1af3718c00a67d24cc37022aa3be49728b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::IsUp</definition>
+        <argsstring>() const </argsstring>
+        <name>IsUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="270" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="270" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1aecef8119146c6d907b405b52d636d2ac" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::IsDisabled</definition>
+        <argsstring>() const </argsstring>
+        <name>IsDisabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="271" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="271" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a65185ac2d1250c42f81a5fdc3d59aa6d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>CWnd *</type>
+        <definition>CWnd* cdxCDynamicWnd::Window</definition>
+        <argsstring>() const </argsstring>
+        <name>Window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="272" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="272" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a87a885941634470e482f0a1f5a9a054c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>UINT</type>
+        <definition>virtual UINT cdxCDynamicWnd::GetCtrlCount</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCtrlCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="274" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="274" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a2dcadbccbe1949355aaa591cb7851db3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::Enable</definition>
+        <argsstring>()</argsstring>
+        <name>Enable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="280" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="280" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1acc189b0c834b68a5236eb75eff03ece0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicWnd::Disable</definition>
+        <argsstring>()</argsstring>
+        <name>Disable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="281" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="281" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1aae7be733ddfc4bd04c19a5dfe24013ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>UINT</type>
+        <definition>UINT cdxCDynamicWnd::ModifyFlags</definition>
+        <argsstring>(UINT nAdd, UINT nRem=0)</argsstring>
+        <name>ModifyFlags</name>
+        <param>
+          <type>UINT</type>
+          <declname>nAdd</declname>
+        </param>
+        <param>
+          <type>UINT</type>
+          <declname>nRem</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="282" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="282" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1ac269ff1d3bf900884e5ad0dd00bc0918" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>UINT</type>
+        <definition>UINT cdxCDynamicWnd::GetFlags</definition>
+        <argsstring>() const </argsstring>
+        <name>GetFlags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="283" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="283" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1acec8627cfedd0903f889915b9000b4f6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>CSize</type>
+        <definition>virtual CSize cdxCDynamicWnd::GetCurrentClientSize</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCurrentClientSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="289" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1afba9bc280dc4d2d5113c43117c2b8bdf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>CSize</type>
+        <definition>CSize cdxCDynamicWnd::GetBorderSize</definition>
+        <argsstring>() const </argsstring>
+        <name>GetBorderSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="290" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a0c115b5a4edc04fae7f17e62ab39a794" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::AddSzXControl</definition>
+        <argsstring>(HWND hwnd, SBYTE x1, SBYTE x2, const CSize &amp;szMin=M_szNull, bool bReposNow=true)</argsstring>
+        <name>AddSzXControl</name>
+        <param>
+          <type>HWND</type>
+          <declname>hwnd</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref></type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref></type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>const CSize &amp;</type>
+          <declname>szMin</declname>
+          <defval><ref refid="classcdx_c_dynamic_wnd_1ae393b53883608d05a33d922e8aff7599" kindref="member">M_szNull</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReposNow</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="296" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="296" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a6babf8fca527abb78e55f4469bbacd34" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::AddSzXControl</definition>
+        <argsstring>(HWND hwnd, Mode md, const CSize &amp;szMin=M_szNull, bool bReposNow=true)</argsstring>
+        <name>AddSzXControl</name>
+        <param>
+          <type>HWND</type>
+          <declname>hwnd</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855" kindref="member">Mode</ref></type>
+          <declname>md</declname>
+        </param>
+        <param>
+          <type>const CSize &amp;</type>
+          <declname>szMin</declname>
+          <defval><ref refid="classcdx_c_dynamic_wnd_1ae393b53883608d05a33d922e8aff7599" kindref="member">M_szNull</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReposNow</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="297" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="297" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a6a068413bfbfbc94401ea13855b2f5f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::AddSzYControl</definition>
+        <argsstring>(HWND hwnd, SBYTE y1, SBYTE y2, const CSize &amp;szMin=M_szNull, bool bReposNow=true)</argsstring>
+        <name>AddSzYControl</name>
+        <param>
+          <type>HWND</type>
+          <declname>hwnd</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref></type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref></type>
+          <declname>y2</declname>
+        </param>
+        <param>
+          <type>const CSize &amp;</type>
+          <declname>szMin</declname>
+          <defval><ref refid="classcdx_c_dynamic_wnd_1ae393b53883608d05a33d922e8aff7599" kindref="member">M_szNull</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReposNow</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="298" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="298" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a74e23b6d05c0b0d8d57e8923bfdf239f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::AddSzYControl</definition>
+        <argsstring>(HWND hwnd, Mode md, const CSize &amp;szMin=M_szNull, bool bReposNow=true)</argsstring>
+        <name>AddSzYControl</name>
+        <param>
+          <type>HWND</type>
+          <declname>hwnd</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855" kindref="member">Mode</ref></type>
+          <declname>md</declname>
+        </param>
+        <param>
+          <type>const CSize &amp;</type>
+          <declname>szMin</declname>
+          <defval><ref refid="classcdx_c_dynamic_wnd_1ae393b53883608d05a33d922e8aff7599" kindref="member">M_szNull</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReposNow</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="299" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="299" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1aab501afa53878046aa6e669156000453" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::AddSzControl</definition>
+        <argsstring>(HWND hwnd, Mode mdX, Mode mdY, const CSize &amp;szMin=M_szNull, bool bReposNow=true)</argsstring>
+        <name>AddSzControl</name>
+        <param>
+          <type>HWND</type>
+          <declname>hwnd</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855" kindref="member">Mode</ref></type>
+          <declname>mdX</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855" kindref="member">Mode</ref></type>
+          <declname>mdY</declname>
+        </param>
+        <param>
+          <type>const CSize &amp;</type>
+          <declname>szMin</declname>
+          <defval><ref refid="classcdx_c_dynamic_wnd_1ae393b53883608d05a33d922e8aff7599" kindref="member">M_szNull</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReposNow</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="301" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a8bb690a2e0aa26e0b7f9fc86122fe18d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::AddSzControl</definition>
+        <argsstring>(HWND hwnd, SBYTE x1, SBYTE y1, SBYTE x2, SBYTE y2, const CSize &amp;szMin=M_szNull, bool bReposNow=true)</argsstring>
+        <name>AddSzControl</name>
+        <param>
+          <type>HWND</type>
+          <declname>hwnd</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref></type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref></type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref></type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref></type>
+          <declname>y2</declname>
+        </param>
+        <param>
+          <type>const CSize &amp;</type>
+          <declname>szMin</declname>
+          <defval><ref refid="classcdx_c_dynamic_wnd_1ae393b53883608d05a33d922e8aff7599" kindref="member">M_szNull</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReposNow</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="302" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a2e5efce36fb39f4091397c74d510af79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::AddSzControl</definition>
+        <argsstring>(HWND hwnd, HWND hLikeThis, bool bReposNow=true)</argsstring>
+        <name>AddSzControl</name>
+        <param>
+          <type>HWND</type>
+          <declname>hwnd</declname>
+        </param>
+        <param>
+          <type>HWND</type>
+          <declname>hLikeThis</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReposNow</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="304" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a4810e665431d0d6b7c8edc443c263878" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::AddSzControl</definition>
+        <argsstring>(HWND hwnd, const SBYTES &amp;bytes, const CSize &amp;szMin=M_szNull, bool bReposNow=true)</argsstring>
+        <name>AddSzControl</name>
+        <param>
+          <type>HWND</type>
+          <declname>hwnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classcdx_c_dynamic_wnd_1ab6e26117c4c3f077c5ab1392b6377198" kindref="member">SBYTES</ref> &amp;</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>const CSize &amp;</type>
+          <declname>szMin</declname>
+          <defval><ref refid="classcdx_c_dynamic_wnd_1ae393b53883608d05a33d922e8aff7599" kindref="member">M_szNull</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReposNow</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="305" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a53d1388d7831bc1ff243be446bd9de34" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::AddSzControl</definition>
+        <argsstring>(HWND hwnd, const Position &amp;pos, bool bReposNow=true)</argsstring>
+        <name>AddSzControl</name>
+        <param>
+          <type>HWND</type>
+          <declname>hwnd</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classcdx_c_dynamic_wnd_1_1_position" kindref="compound">Position</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReposNow</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="307" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.cpp" bodystart="131" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a63521884773cdfeeaa56b905e91c8465" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::AddSzXControl</definition>
+        <argsstring>(UINT id, SBYTE x1, SBYTE x2, const CSize &amp;szMin=M_szNull, bool bReposNow=true)</argsstring>
+        <name>AddSzXControl</name>
+        <param>
+          <type>UINT</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref></type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref></type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>const CSize &amp;</type>
+          <declname>szMin</declname>
+          <defval><ref refid="classcdx_c_dynamic_wnd_1ae393b53883608d05a33d922e8aff7599" kindref="member">M_szNull</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReposNow</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="313" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="313" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a3965768809f11c35d988494360825423" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::AddSzXControl</definition>
+        <argsstring>(UINT id, Mode md, const CSize &amp;szMin=M_szNull, bool bReposNow=true)</argsstring>
+        <name>AddSzXControl</name>
+        <param>
+          <type>UINT</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855" kindref="member">Mode</ref></type>
+          <declname>md</declname>
+        </param>
+        <param>
+          <type>const CSize &amp;</type>
+          <declname>szMin</declname>
+          <defval><ref refid="classcdx_c_dynamic_wnd_1ae393b53883608d05a33d922e8aff7599" kindref="member">M_szNull</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReposNow</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="314" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="314" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a31440ac2c8907ad76eaaf99ea0d58866" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::AddSzYControl</definition>
+        <argsstring>(UINT id, SBYTE y1, SBYTE y2, const CSize &amp;szMin=M_szNull, bool bReposNow=true)</argsstring>
+        <name>AddSzYControl</name>
+        <param>
+          <type>UINT</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref></type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref></type>
+          <declname>y2</declname>
+        </param>
+        <param>
+          <type>const CSize &amp;</type>
+          <declname>szMin</declname>
+          <defval><ref refid="classcdx_c_dynamic_wnd_1ae393b53883608d05a33d922e8aff7599" kindref="member">M_szNull</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReposNow</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="315" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="315" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1aac5636d646d40d15f06b28b1699dfed8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::AddSzYControl</definition>
+        <argsstring>(UINT id, Mode md, const CSize &amp;szMin=M_szNull, bool bReposNow=true)</argsstring>
+        <name>AddSzYControl</name>
+        <param>
+          <type>UINT</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855" kindref="member">Mode</ref></type>
+          <declname>md</declname>
+        </param>
+        <param>
+          <type>const CSize &amp;</type>
+          <declname>szMin</declname>
+          <defval><ref refid="classcdx_c_dynamic_wnd_1ae393b53883608d05a33d922e8aff7599" kindref="member">M_szNull</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReposNow</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="316" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="316" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a39d64b93d42abc51c6fe0fd81c8f846a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::AddSzControl</definition>
+        <argsstring>(UINT id, Mode mdX, Mode mdY, const CSize &amp;szMin=M_szNull, bool bReposNow=true)</argsstring>
+        <name>AddSzControl</name>
+        <param>
+          <type>UINT</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855" kindref="member">Mode</ref></type>
+          <declname>mdX</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855" kindref="member">Mode</ref></type>
+          <declname>mdY</declname>
+        </param>
+        <param>
+          <type>const CSize &amp;</type>
+          <declname>szMin</declname>
+          <defval><ref refid="classcdx_c_dynamic_wnd_1ae393b53883608d05a33d922e8aff7599" kindref="member">M_szNull</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReposNow</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="318" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="318" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a4f13901923cfc534e6a831eaedfb4bb5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::AddSzControl</definition>
+        <argsstring>(UINT id, SBYTE x1, SBYTE y1, SBYTE x2, SBYTE y2, const CSize &amp;szMin=M_szNull, bool bReposNow=true)</argsstring>
+        <name>AddSzControl</name>
+        <param>
+          <type>UINT</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref></type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref></type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref></type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref></type>
+          <declname>y2</declname>
+        </param>
+        <param>
+          <type>const CSize &amp;</type>
+          <declname>szMin</declname>
+          <defval><ref refid="classcdx_c_dynamic_wnd_1ae393b53883608d05a33d922e8aff7599" kindref="member">M_szNull</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReposNow</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="319" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="319" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1af4d12231ea6c63cd1151ac89808b6472" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::AddSzControl</definition>
+        <argsstring>(UINT id, HWND hLikeThis, bool bReposNow=true)</argsstring>
+        <name>AddSzControl</name>
+        <param>
+          <type>UINT</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>HWND</type>
+          <declname>hLikeThis</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReposNow</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="321" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="321" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1ae2ba6440bf459b4baffbca0b9d3d5136" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::AddSzControl</definition>
+        <argsstring>(UINT id, const SBYTES &amp;bytes, const CSize &amp;szMin=M_szNull, bool bReposNow=true)</argsstring>
+        <name>AddSzControl</name>
+        <param>
+          <type>UINT</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classcdx_c_dynamic_wnd_1ab6e26117c4c3f077c5ab1392b6377198" kindref="member">SBYTES</ref> &amp;</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>const CSize &amp;</type>
+          <declname>szMin</declname>
+          <defval><ref refid="classcdx_c_dynamic_wnd_1ae393b53883608d05a33d922e8aff7599" kindref="member">M_szNull</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReposNow</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="322" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="322" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a3a16b4e5a7341ec13c843478e5bf3195" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::AddSzControl</definition>
+        <argsstring>(UINT id, const Position &amp;pos, bool bReposNow=true)</argsstring>
+        <name>AddSzControl</name>
+        <param>
+          <type>UINT</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classcdx_c_dynamic_wnd_1_1_position" kindref="compound">Position</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReposNow</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="324" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="324" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a643e0aa33fe77df2cc35136c7f158244" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicWnd::AllControls</definition>
+        <argsstring>(Mode mdX, Mode mdY, bool bOverwrite=false, bool bReposNow=true)</argsstring>
+        <name>AllControls</name>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855" kindref="member">Mode</ref></type>
+          <declname>mdX</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855" kindref="member">Mode</ref></type>
+          <declname>mdY</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bOverwrite</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReposNow</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="330" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a171830f5fc94e6caf1e446e6e0f64881" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicWnd::AllControls</definition>
+        <argsstring>(SBYTE x1, SBYTE y1, SBYTE x2, SBYTE y2, bool bOverwrite=false, bool bReposNow=true)</argsstring>
+        <name>AllControls</name>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref></type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref></type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref></type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref></type>
+          <declname>y2</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bOverwrite</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReposNow</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="331" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a4898a33234ff3067f432aca8785a328d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicWnd::AllControls</definition>
+        <argsstring>(const SBYTES &amp;bytes, bool bOverwrite=false, bool bReposNow=true)</argsstring>
+        <name>AllControls</name>
+        <param>
+          <type>const <ref refid="classcdx_c_dynamic_wnd_1ab6e26117c4c3f077c5ab1392b6377198" kindref="member">SBYTES</ref> &amp;</type>
+          <declname>bytes</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bOverwrite</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bReposNow</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="332" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.cpp" bodystart="164" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a51532e50b61af233c180660cac383653" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::GetControlPosition</definition>
+        <argsstring>(HWND hwnd, Position &amp;pos)</argsstring>
+        <name>GetControlPosition</name>
+        <param>
+          <type>HWND</type>
+          <declname>hwnd</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1_1_position" kindref="compound">Position</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="336" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="336" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a6ecc7ae946991c459d46944110b6b42e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::RemSzControl</definition>
+        <argsstring>(HWND hwnd, bool bMoveToInitialPos=false)</argsstring>
+        <name>RemSzControl</name>
+        <param>
+          <type>HWND</type>
+          <declname>hwnd</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>bMoveToInitialPos</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="337" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.cpp" bodystart="194" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a06ad3c21badc7826d205513e9404ee64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::UpdateControlPosition</definition>
+        <argsstring>(HWND hwnd)</argsstring>
+        <name>UpdateControlPosition</name>
+        <param>
+          <type>HWND</type>
+          <declname>hwnd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="338" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.cpp" bodystart="221" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a3f84b2f5c8d84c1b5ec66c8aaa983a60" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicWnd::Layout</definition>
+        <argsstring>()</argsstring>
+        <name>Layout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="344" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.cpp" bodystart="288" bodyend="382"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a955d0d32e1de903be74488ab21a0bf89" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicWnd::StartAntiFlickering</definition>
+        <argsstring>(bool bIsBotRight)</argsstring>
+        <name>StartAntiFlickering</name>
+        <param>
+          <type>bool</type>
+          <declname>bIsBotRight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="379" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.cpp" bodystart="651" bodyend="670"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1ae160b85235d5dc030b796a4643c7f829" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>HWND</type>
+        <definition>HWND cdxCDynamicWnd::GetSafeChildHWND</definition>
+        <argsstring>(UINT nID)</argsstring>
+        <name>GetSafeChildHWND</name>
+        <param>
+          <type>UINT</type>
+          <declname>nID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="380" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1af4dae0c274990e10378725ee31d643d0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>cdxCDynamicWnd::operator CWnd *</definition>
+        <argsstring>() const </argsstring>
+        <name>operator CWnd *</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="386" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="386" bodyend="386"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1ae09c493eb2cea0ea929d1fc78fe05572" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicWnd::DoInitWindow</definition>
+        <argsstring>(CWnd &amp;rWnd, const CSize &amp;szInitial)</argsstring>
+        <name>DoInitWindow</name>
+        <param>
+          <type>CWnd &amp;</type>
+          <declname>rWnd</declname>
+        </param>
+        <param>
+          <type>const CSize &amp;</type>
+          <declname>szInitial</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="351" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.cpp" bodystart="480" bodyend="580"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1aa11379c24ea89e9b89d6591a132ef626" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicWnd::DoInitWindow</definition>
+        <argsstring>(CWnd &amp;rWnd)</argsstring>
+        <name>DoInitWindow</name>
+        <param>
+          <type>CWnd &amp;</type>
+          <declname>rWnd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="352" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.cpp" bodystart="472" bodyend="478"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1aeeb4fe858b3857d9a86ad2bd4dd407b9" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicWnd::DoOnDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>DoOnDestroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="353" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.cpp" bodystart="589" bodyend="605"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a1bebb6d2cd1a2bc825d98bc2ef724791" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicWnd::DoOnParentNotify</definition>
+        <argsstring>(UINT message, LPARAM lParam)</argsstring>
+        <name>DoOnParentNotify</name>
+        <param>
+          <type>UINT</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>LPARAM</type>
+          <declname>lParam</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="355" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.cpp" bodystart="738" bodyend="744"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a0e0fa2b4821e8cc01d6dbf7351668254" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicWnd::DoOnTimer</definition>
+        <argsstring>(UINT nIDEvent)</argsstring>
+        <name>DoOnTimer</name>
+        <param>
+          <type>UINT</type>
+          <declname>nIDEvent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="356" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.cpp" bodystart="679" bodyend="690"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a541e25f36db561daee7bb2b9f6dd5490" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicWnd::DoOnSize</definition>
+        <argsstring>(UINT nType, int cx, int cy)</argsstring>
+        <name>DoOnSize</name>
+        <param>
+          <type>UINT</type>
+          <declname>nType</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="357" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.cpp" bodystart="617" bodyend="625"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1af0371cc499541f0dfb5ef85896fc41c6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicWnd::DoOnSizing</definition>
+        <argsstring>(UINT fwSide, LPRECT pRect)</argsstring>
+        <name>DoOnSizing</name>
+        <param>
+          <type>UINT</type>
+          <declname>fwSide</declname>
+        </param>
+        <param>
+          <type>LPRECT</type>
+          <declname>pRect</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="358" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.cpp" bodystart="634" bodyend="640"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a926a4d342335bd47de50cbee6bfc2cd6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicWnd::DoOnGetMinMaxInfo</definition>
+        <argsstring>(MINMAXINFO FAR *lpMMI)</argsstring>
+        <name>DoOnGetMinMaxInfo</name>
+        <param>
+          <type>MINMAXINFO FAR *</type>
+          <declname>lpMMI</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="359" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.cpp" bodystart="702" bodyend="727"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1acd13ca5d1e2ecc4f7b2876d4e4a43abd" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool cdxCDynamicWnd::DoMoveCtrl</definition>
+        <argsstring>(HWND hwnd, UINT id, CRect &amp;rectNewPos, const cdxCDynamicLayoutInfo &amp;li)</argsstring>
+        <name>DoMoveCtrl</name>
+        <param>
+          <type>HWND</type>
+          <declname>hwnd</declname>
+        </param>
+        <param>
+          <type>UINT</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>CRect &amp;</type>
+          <declname>rectNewPos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classcdx_c_dynamic_layout_info" kindref="compound">cdxCDynamicLayoutInfo</ref> &amp;</type>
+          <declname>li</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="366" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.cpp" bodystart="421" bodyend="430"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1ab7b1c0521d0c97cad286b5e02561915c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicWnd::DoDestroyCtrl</definition>
+        <argsstring>(HWND hwnd)</argsstring>
+        <name>DoDestroyCtrl</name>
+        <param>
+          <type>HWND</type>
+          <declname>hwnd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="367" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.cpp" bodystart="439" bodyend="442"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1adae6e97b8ff7b02581ae9af5c2109922" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void cdxCDynamicWnd::OnInitialized</definition>
+        <argsstring>()</argsstring>
+        <name>OnInitialized</name>
+        <reimplementedby refid="classcdx_c_dynamic_wnd_ex_1a1482d3b7bc2f80ad73749fb4396533ab">OnInitialized</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="369" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="369" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a1c9cca5d7fc5a9ed4618dcf581182b88" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void cdxCDynamicWnd::OnDestroying</definition>
+        <argsstring>()</argsstring>
+        <name>OnDestroying</name>
+        <reimplementedby refid="classcdx_c_dynamic_wnd_ex_1a67cafc47f4c4cfd1f612e7a24b487c60">OnDestroying</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="370" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="370" bodyend="370"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a374e0021789552da4760212c8c73c91b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classcdx_c_dynamic_layout_info" kindref="compound">cdxCDynamicLayoutInfo</ref> *</type>
+        <definition>virtual cdxCDynamicLayoutInfo* cdxCDynamicWnd::DoCreateLayoutInfo</definition>
+        <argsstring>()</argsstring>
+        <name>DoCreateLayoutInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="372" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="372" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a9696427151275459e615e611479ff767" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const <ref refid="structcdx_c_dynamic_wnd_1_1____dyn_entry" kindref="compound">__dynEntry</ref> *</type>
+        <definition>virtual const __dynEntry* cdxCDynamicWnd::__getDynMap</definition>
+        <argsstring>(const __dynEntry *pLast) const </argsstring>
+        <name>__getDynMap</name>
+        <param>
+          <type>const <ref refid="structcdx_c_dynamic_wnd_1_1____dyn_entry" kindref="compound">__dynEntry</ref> *</type>
+          <declname>pLast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="415" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="415" bodyend="415"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a97bd567753286f07a11a043f2f26a496" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>cdxCDynamicWnd::cdxCDynamicWnd</definition>
+        <argsstring>(const cdxCDynamicWnd &amp;w)</argsstring>
+        <name>cdxCDynamicWnd</name>
+        <param>
+          <type>const <ref refid="classcdx_c_dynamic_wnd" kindref="compound">cdxCDynamicWnd</ref> &amp;</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="393" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="393" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a3d2f7832aa71b077c2dfae183737ebfc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicWnd::operator=</definition>
+        <argsstring>(const cdxCDynamicWnd &amp;w)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classcdx_c_dynamic_wnd" kindref="compound">cdxCDynamicWnd</ref> &amp;</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="394" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="394" bodyend="394"/>
+      </memberdef>
+      <memberdef kind="function" id="classcdx_c_dynamic_wnd_1a48bd11b9bafb5f963e099064f41844af" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cdxCDynamicWnd::_translate</definition>
+        <argsstring>(Mode md, SBYTE &amp;b1, SBYTE &amp;b2)</argsstring>
+        <name>_translate</name>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855" kindref="member">Mode</ref></type>
+          <declname>md</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref> &amp;</type>
+          <declname>b1</declname>
+        </param>
+        <param>
+          <type><ref refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" kindref="member">SBYTE</ref> &amp;</type>
+          <declname>b2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="396" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="113">
+        <label>TestRunnerDlg</label>
+        <link refid="class_test_runner_dlg"/>
+        <childnode refid="110" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="107">
+        <label>cdxCDynamicFormView</label>
+        <link refid="classcdx_c_dynamic_form_view"/>
+        <childnode refid="106" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="110">
+        <label>cdxCDynamicDialog</label>
+        <link refid="classcdx_c_dynamic_dialog"/>
+        <childnode refid="109" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="108">
+        <label>cdxCDynamicPropPage</label>
+        <link refid="classcdx_c_dynamic_prop_page"/>
+        <childnode refid="106" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="115">
+        <label>TreeHierarchyDlg</label>
+        <link refid="class_tree_hierarchy_dlg"/>
+        <childnode refid="110" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="112">
+        <label>cdxCDynamicBarDlg</label>
+        <link refid="classcdx_c_dynamic_bar_dlg"/>
+        <childnode refid="111" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="111">
+        <label>cdxCDynamicChildDlg</label>
+        <link refid="classcdx_c_dynamic_child_dlg"/>
+        <childnode refid="110" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="109">
+        <label>cdxCDynamicWndEx</label>
+        <link refid="classcdx_c_dynamic_wnd_ex"/>
+        <childnode refid="106" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="106">
+        <label>cdxCDynamicWnd</label>
+        <link refid="classcdx_c_dynamic_wnd"/>
+      </node>
+      <node id="114">
+        <label>TestPlugInRunnerDlg</label>
+        <link refid="class_test_plug_in_runner_dlg"/>
+        <childnode refid="113" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="116">
+        <label>cdxCDynamicPropSheet</label>
+        <link refid="classcdx_c_dynamic_prop_sheet"/>
+        <childnode refid="109" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" line="164" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/DynamicWindow/cdxCDynamicWnd.h" bodystart="163" bodyend="423"/>
+    <listofallmembers>
+      <member refid="classcdx_c_dynamic_wnd_1a8cb440b70f58c7d7bf44860e4ea5e24baa14ee2438f2d5240d817405e3ab41b14" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>__bytes</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a8cb440b70f58c7d7bf44860e4ea5e24b" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>__dynEntryType</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a8cb440b70f58c7d7bf44860e4ea5e24baea61688347aeb8720a4d703403716ee4" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>__end</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a9696427151275459e615e611479ff767" prot="protected" virt="virtual"><scope>cdxCDynamicWnd</scope><name>__getDynMap</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a8cb440b70f58c7d7bf44860e4ea5e24ba6a8d0d8bc8df7d960dc26be7d16eaf04" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>__modes</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a209cd190df6079d1df9d6d471625fd37a1009da08a89114d3152e7461f595ee06" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>_fl_freeuse_</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a209cd190df6079d1df9d6d471625fd37a26cfb1773db5ed1bfa251627fc497a63" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>_fl_reserved_</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a48bd11b9bafb5f963e099064f41844af" prot="private" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>_translate</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aab501afa53878046aa6e669156000453" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>AddSzControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a8bb690a2e0aa26e0b7f9fc86122fe18d" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>AddSzControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a2e5efce36fb39f4091397c74d510af79" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>AddSzControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a4810e665431d0d6b7c8edc443c263878" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>AddSzControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a53d1388d7831bc1ff243be446bd9de34" prot="public" virt="virtual"><scope>cdxCDynamicWnd</scope><name>AddSzControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a39d64b93d42abc51c6fe0fd81c8f846a" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>AddSzControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a4f13901923cfc534e6a831eaedfb4bb5" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>AddSzControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1af4d12231ea6c63cd1151ac89808b6472" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>AddSzControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1ae2ba6440bf459b4baffbca0b9d3d5136" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>AddSzControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a3a16b4e5a7341ec13c843478e5bf3195" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>AddSzControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a0c115b5a4edc04fae7f17e62ab39a794" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>AddSzXControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a6babf8fca527abb78e55f4469bbacd34" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>AddSzXControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a63521884773cdfeeaa56b905e91c8465" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>AddSzXControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a3965768809f11c35d988494360825423" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>AddSzXControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a6a068413bfbfbc94401ea13855b2f5f5" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>AddSzYControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a74e23b6d05c0b0d8d57e8923bfdf239f" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>AddSzYControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a31440ac2c8907ad76eaaf99ea0d58866" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>AddSzYControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aac5636d646d40d15f06b28b1699dfed8" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>AddSzYControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a643e0aa33fe77df2cc35136c7f158244" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>AllControls</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a171830f5fc94e6caf1e446e6e0f64881" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>AllControls</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a4898a33234ff3067f432aca8785a328d" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>AllControls</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1afbccd30af1112326f5a9a8891f7b687a" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>BotLeft</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a115797b56f0521394d0c4845d045e3f7" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>BotRight</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a0f495c0a7a0386caeb3bd794a12c2cdd" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>cdxCDynamicWnd</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a97bd567753286f07a11a043f2f26a496" prot="private" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>cdxCDynamicWnd</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1af23eb9763fa6dedb458e5cdaa3e1386ca87f5f41ad6344bc93e2289bd781057ca" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>DEFAULT_TIMER_ID</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1acc189b0c834b68a5236eb75eff03ece0" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>Disable</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a374e0021789552da4760212c8c73c91b" prot="protected" virt="virtual"><scope>cdxCDynamicWnd</scope><name>DoCreateLayoutInfo</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1ab7b1c0521d0c97cad286b5e02561915c" prot="protected" virt="virtual"><scope>cdxCDynamicWnd</scope><name>DoDestroyCtrl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1ae09c493eb2cea0ea929d1fc78fe05572" prot="protected" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>DoInitWindow</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aa11379c24ea89e9b89d6591a132ef626" prot="protected" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>DoInitWindow</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1acd13ca5d1e2ecc4f7b2876d4e4a43abd" prot="protected" virt="virtual"><scope>cdxCDynamicWnd</scope><name>DoMoveCtrl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aeeb4fe858b3857d9a86ad2bd4dd407b9" prot="protected" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>DoOnDestroy</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a926a4d342335bd47de50cbee6bfc2cd6" prot="protected" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>DoOnGetMinMaxInfo</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a1bebb6d2cd1a2bc825d98bc2ef724791" prot="protected" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>DoOnParentNotify</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a541e25f36db561daee7bb2b9f6dd5490" prot="protected" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>DoOnSize</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1af0371cc499541f0dfb5ef85896fc41c6" prot="protected" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>DoOnSizing</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a0e0fa2b4821e8cc01d6dbf7351668254" prot="protected" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>DoOnTimer</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a2dcadbccbe1949355aaa591cb7851db3" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>Enable</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523a047c9f61ce107a24a32982c0cd4f64c6" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>fdAll</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523a446647e558e2b2b2b8406725bf73acf0" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>fdHoriz</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523a068a709f5c5afe1f3d1b2d5bec20770d" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>fdHorz</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523ab87a000bd5b35d19177e58e7eeb2d373" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>fdNone</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523aea6a28ab13873a68a3471972adf1c138" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>fdVert</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523a64f6ce145c4107e1dfba9790e04a6dda" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>fdX</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523a2bc7b3d8a9d922a28fc37f32d14e11e2" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>fdY</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a209cd190df6079d1df9d6d471625fd37" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>Flags</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a209cd190df6079d1df9d6d471625fd37a3a484e61f57772086c6a5b0374e8417b" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>flAntiFlicker</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a209cd190df6079d1df9d6d471625fd37afca2f061d84afe1937a1ee07d50fecb6" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>flSizeIcon</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a209cd190df6079d1df9d6d471625fd37a86c8c0531b8f31da081f9703a9d3230a" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>flSWPCopyBits</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>Freedom</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1afba9bc280dc4d2d5113c43117c2b8bdf" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>GetBorderSize</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a51532e50b61af233c180660cac383653" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>GetControlPosition</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a87a885941634470e482f0a1f5a9a054c" prot="public" virt="virtual"><scope>cdxCDynamicWnd</scope><name>GetCtrlCount</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1acec8627cfedd0903f889915b9000b4f6" prot="public" virt="virtual"><scope>cdxCDynamicWnd</scope><name>GetCurrentClientSize</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1ac269ff1d3bf900884e5ad0dd00bc0918" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>GetFlags</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1ae160b85235d5dc030b796a4643c7f829" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>GetSafeChildHWND</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aecef8119146c6d907b405b52d636d2ac" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>IsDisabled</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1af3718c00a67d24cc37022aa3be49728b" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>IsUp</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1acca8cafe3f58a45d0c39f87fc7375e3a" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>IsValid</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aff6e5b3178956b7d7c8336cdea6e444c" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>IsWindow</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a3f84b2f5c8d84c1b5ec66c8aaa983a60" prot="public" virt="virtual"><scope>cdxCDynamicWnd</scope><name>Layout</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aa2479df842145138722360f346dc63e6" prot="private" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>m_bIsAntiFlickering</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1afe99cfbd91c71277f182f493ea2744bd" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>m_bUseScrollPos</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aadbc3a537c859c5773c6071c146434b8" prot="protected" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>m_dwClassStyle</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1adc137a9ae3de104ae48e2b4175329c55" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>m_Freedom</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a291eb8192ff1949ec31c630c61bfe5d9" prot="protected" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>m_iDisabled</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1adb58cf0172fbd972bcf7e6de385310c5" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>m_idSizeIcon</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a9de5a0a34e39491a688b48f263255cba" prot="protected" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>m_Map</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a8e8d745f5390dda688d39a17a786e07e" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>m_nFlags</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a194ff1b726344a8803053019e38077ab" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>m_nMyTimerID</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a850268de32ee78dc7fd5dac5b13fe6fe" prot="private" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>m_pSizeIcon</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a7e3ba2561aac0550b604ec0eb18f2c50" prot="private" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>m_pWnd</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1ade0b344a14887598c7aa0e23b2787eb9" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>m_szInitial</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a5ffdf1c91d4ca43f8482d04830652e66" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>m_szMax</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1af0c40f692587fe02a27043d86d679dc2" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>m_szMin</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1ae393b53883608d05a33d922e8aff7599" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>M_szNull</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855a75188eab2b611945a8002c37b594f71c" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>mdNone</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855a31f82e1d1c49158a7e6c7e56ebbd32fb" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>mdRelative</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855a1f27dab35aa9c3507af936030b812292" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>mdRepos</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855ac89e0019f91dc08bd456db7a4f913f3e" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>mdResize</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>Mode</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aae7be733ddfc4bd04c19a5dfe24013ba" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>ModifyFlags</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a1c9cca5d7fc5a9ed4618dcf581182b88" prot="protected" virt="virtual"><scope>cdxCDynamicWnd</scope><name>OnDestroying</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1adae6e97b8ff7b02581ae9af5c2109922" prot="protected" virt="virtual"><scope>cdxCDynamicWnd</scope><name>OnInitialized</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1af4dae0c274990e10378725ee31d643d0" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>operator CWnd *</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a3d2f7832aa71b077c2dfae183737ebfc" prot="private" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>operator=</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a6ecc7ae946991c459d46944110b6b42e" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>RemSzControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>SBYTE</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1ab6e26117c4c3f077c5ab1392b6377198" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>SBYTES</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a955d0d32e1de903be74488ab21a0bf89" prot="public" virt="virtual"><scope>cdxCDynamicWnd</scope><name>StartAntiFlickering</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a87f6311004037445eb3be8352b461f18" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>TopLeft</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a0592db8f40d92a8da4e2da5c701db43f" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>TopRight</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a06ad3c21badc7826d205513e9404ee64" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>UpdateControlPosition</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a65185ac2d1250c42f81a5fdc3d59aa6d" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>Window</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a45aa0a593bfba63bd38a08aed4968b2bad14be392a1a4daa80e29d58062d92bd9" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>X1</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a45aa0a593bfba63bd38a08aed4968b2bac892f5f7c34f6f9cf77b61d9dbf7363d" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>X2</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a45aa0a593bfba63bd38a08aed4968b2bacaa84713e18b9e66e1e0e3eeb86a5d7b" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>Y1</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a45aa0a593bfba63bd38a08aed4968b2ba945a86c19287f7545df7d23acd4a7146" prot="public" virt="non-virtual"><scope>cdxCDynamicWnd</scope><name>Y2</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a79028fa09a3bab1875ff39b672a23ec9" prot="public" virt="virtual"><scope>cdxCDynamicWnd</scope><name>‾cdxCDynamicWnd</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

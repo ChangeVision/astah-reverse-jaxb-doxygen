@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.4"/>
+<title>My Project: src/msvc6/testrunner/TestResultDecorator.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 作成： Doxygen 1.8.4 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>メインページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_160ca355bc0c1b9b707bdc17a072703c.html">msvc6</a></li><li class="navelem"><a class="el" href="dir_ea05cf39121f9fa04750d7742262a3f6.html">testrunner</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">TestResultDecorator.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_test_result_decorator_8h.html">説明を見る。</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CPP_UNIT_TESTRESULTDECORATOR_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CPP_UNIT_TESTRESULTDECORATOR_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;TestResult.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="code" href="class_test_result_decorator.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_test_result_decorator.html">TestResultDecorator</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                                <a class="code" href="class_test_result_decorator.html#ad6cc88d83fff20691d6dddd947b49001">TestResultDecorator</a> (TestResult *result);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">virtual</span>                     <a class="code" href="class_test_result_decorator.html#ae65ec697d07218b95c86db733a936e85">‾TestResultDecorator</a> ();</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span>                <a class="code" href="class_test_result_decorator.html#adf006a2a46fa80b6eb678ca2e3d79e96">shouldStop</a>  ();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>                <a class="code" href="class_test_result_decorator.html#abd6eae48a8963aca6b0da355dfbaba83">addError</a>    (Test *test, CppUnitException *e);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>                <a class="code" href="class_test_result_decorator.html#a26dd53a1e35c64ad63dd6b8c8384b763">addFailure</a>  (Test *test, CppUnitException *e);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>                <a class="code" href="class_test_result_decorator.html#a8c5d58e7793f3ef4a63a2da828202750">startTest</a>   (Test *test);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>                <a class="code" href="class_test_result_decorator.html#a28e9fc30a2fc0ac0f0a55fe149e6c425">endTest</a>     (Test *test);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span>                 <a class="code" href="class_test_result_decorator.html#ab94403932b2dc1a90fd84b30a7f5f6ea">runTests</a>    ();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span>                 <a class="code" href="class_test_result_decorator.html#aae03615c4b72a5721de5758984f85d0a">testErrors</a>  ();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span>                 <a class="code" href="class_test_result_decorator.html#a8377ba89ef027e71bc71a4b14c945a90">testFailures</a> ();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span>                <a class="code" href="class_test_result_decorator.html#a08d6b21754b79741bfd63e569c52d25b">wasSuccessful</a> ();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>                <a class="code" href="class_test_result_decorator.html#a78bba6a5c926e99b66ef403932dc506b">stop</a> ();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    vector&lt;TestFailure *&gt;&amp;      <a class="code" href="class_test_result_decorator.html#a5cacfc1a463094923ed1d85b0c6bfca7">errors</a> ();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    vector&lt;TestFailure *&gt;&amp;      <a class="code" href="class_test_result_decorator.html#a5312059bc110d2503b24aef4d3095fc9">failures</a> ();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="class_test_result_decorator.html#ae07db84f57b53e72c2e04922e2029e02">   28</a></span>&#160;    TestResult                  *<a class="code" href="class_test_result_decorator.html#ae07db84f57b53e72c2e04922e2029e02">m_result</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="code" href="class_test_result_decorator.html#ad6cc88d83fff20691d6dddd947b49001">   32</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="class_test_result_decorator.html#ad6cc88d83fff20691d6dddd947b49001">TestResultDecorator::TestResultDecorator</a> (TestResult *result)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;: m_result (result) {}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="class_test_result_decorator.html#ae65ec697d07218b95c86db733a936e85">   35</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="class_test_result_decorator.html#ae65ec697d07218b95c86db733a936e85">TestResultDecorator::‾TestResultDecorator</a> ()</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// Returns whether the test should stop</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="class_test_result_decorator.html#adf006a2a46fa80b6eb678ca2e3d79e96">   39</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_test_result_decorator.html#adf006a2a46fa80b6eb678ca2e3d79e96">TestResultDecorator::shouldStop</a> ()</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="class_test_result_decorator.html#ae07db84f57b53e72c2e04922e2029e02">m_result</a>-&gt;shouldStop (); }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">// Adds an error to the list of errors. The passed in exception</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">// caused the error</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="class_test_result_decorator.html#abd6eae48a8963aca6b0da355dfbaba83">   45</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_test_result_decorator.html#abd6eae48a8963aca6b0da355dfbaba83">TestResultDecorator::addError</a> (Test *test, CppUnitException *e)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{ <a class="code" href="class_test_result_decorator.html#ae07db84f57b53e72c2e04922e2029e02">m_result</a>-&gt;addError (test, e); }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">// Adds a failure to the list of failures. The passed in exception</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">// caused the failure.</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="class_test_result_decorator.html#a26dd53a1e35c64ad63dd6b8c8384b763">   51</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_test_result_decorator.html#a26dd53a1e35c64ad63dd6b8c8384b763">TestResultDecorator::addFailure</a> (Test *test, CppUnitException *e)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{ <a class="code" href="class_test_result_decorator.html#ae07db84f57b53e72c2e04922e2029e02">m_result</a>-&gt;addFailure (test, e); }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">// Informs the result that a test will be started.</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="code" href="class_test_result_decorator.html#a8c5d58e7793f3ef4a63a2da828202750">   56</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_test_result_decorator.html#a8c5d58e7793f3ef4a63a2da828202750">TestResultDecorator::startTest</a> (Test *test)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{ <a class="code" href="class_test_result_decorator.html#ae07db84f57b53e72c2e04922e2029e02">m_result</a>-&gt;startTest (test); }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">// Informs the result that a test was completed.</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="class_test_result_decorator.html#a28e9fc30a2fc0ac0f0a55fe149e6c425">   61</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_test_result_decorator.html#a28e9fc30a2fc0ac0f0a55fe149e6c425">TestResultDecorator::endTest</a> (Test *test)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{ <a class="code" href="class_test_result_decorator.html#ae07db84f57b53e72c2e04922e2029e02">m_result</a>-&gt;endTest (test); }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">// Gets the number of run tests.</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="code" href="class_test_result_decorator.html#ab94403932b2dc1a90fd84b30a7f5f6ea">   66</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="class_test_result_decorator.html#ab94403932b2dc1a90fd84b30a7f5f6ea">TestResultDecorator::runTests</a> ()</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="class_test_result_decorator.html#ae07db84f57b53e72c2e04922e2029e02">m_result</a>-&gt;runTests (); }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">// Gets the number of detected errors.</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="code" href="class_test_result_decorator.html#aae03615c4b72a5721de5758984f85d0a">   71</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="class_test_result_decorator.html#aae03615c4b72a5721de5758984f85d0a">TestResultDecorator::testErrors</a> ()</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="class_test_result_decorator.html#ae07db84f57b53e72c2e04922e2029e02">m_result</a>-&gt;testErrors (); }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">// Gets the number of detected failures.</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="code" href="class_test_result_decorator.html#a8377ba89ef027e71bc71a4b14c945a90">   76</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="class_test_result_decorator.html#a8377ba89ef027e71bc71a4b14c945a90">TestResultDecorator::testFailures</a> ()</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="class_test_result_decorator.html#ae07db84f57b53e72c2e04922e2029e02">m_result</a>-&gt;testFailures (); }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">// Returns whether the entire test was successful or not.</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="code" href="class_test_result_decorator.html#a08d6b21754b79741bfd63e569c52d25b">   81</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="class_test_result_decorator.html#a08d6b21754b79741bfd63e569c52d25b">TestResultDecorator::wasSuccessful</a> ()</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="class_test_result_decorator.html#ae07db84f57b53e72c2e04922e2029e02">m_result</a>-&gt;wasSuccessful (); }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">// Marks that the test run should stop.</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="code" href="class_test_result_decorator.html#a78bba6a5c926e99b66ef403932dc506b">   86</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_test_result_decorator.html#a78bba6a5c926e99b66ef403932dc506b">TestResultDecorator::stop</a> ()</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{ <a class="code" href="class_test_result_decorator.html#ae07db84f57b53e72c2e04922e2029e02">m_result</a>-&gt;stop (); }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">// Returns a vector of the errors.</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="code" href="class_test_result_decorator.html#a5cacfc1a463094923ed1d85b0c6bfca7">   91</a></span>&#160;<span class="keyword">inline</span> vector&lt;TestFailure *&gt;&amp; <a class="code" href="class_test_result_decorator.html#a5cacfc1a463094923ed1d85b0c6bfca7">TestResultDecorator::errors</a> ()</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="class_test_result_decorator.html#ae07db84f57b53e72c2e04922e2029e02">m_result</a>-&gt;errors (); }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">// Returns a vector of the failures.</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="code" href="class_test_result_decorator.html#a5312059bc110d2503b24aef4d3095fc9">   96</a></span>&#160;<span class="keyword">inline</span> vector&lt;TestFailure *&gt;&amp; <a class="code" href="class_test_result_decorator.html#a5312059bc110d2503b24aef4d3095fc9">TestResultDecorator::failures</a> ()</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="class_test_result_decorator.html#ae07db84f57b53e72c2e04922e2029e02">m_result</a>-&gt;failures (); }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+My Projectに対してThu May 23 2013 16:14:58に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.4
+</small></address>
+</body>
+</html>

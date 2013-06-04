@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="class_sort_helper" kind="class" prot="public">
+    <compoundname>SortHelper</compoundname>
+    <includes refid="sorthelper_8h" local="no">sorthelper.h</includes>
+    <innerclass refid="struct_sort_helper_1_1_sort_pair" prot="public">SortHelper::SortPair</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sort_helper_1ae5cb3196451a09f9f363d77e99cad804" prot="private" static="no" mutable="no">
+        <type><ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; <ref refid="struct_sort_helper_1_1_sort_pair" kindref="compound">SortPair</ref>&lt; T &gt; &gt;</type>
+        <definition>GenericVector&lt;SortPair&lt;T&gt; &gt; SortHelper&lt; T &gt;::counts_</definition>
+        <argsstring></argsstring>
+        <name>counts_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/sorthelper.h" line="102" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/sorthelper.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_sort_helper_1a9e9db15e0bee9d0ab2e3242b80da3bc9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int SortHelper&lt; T &gt;::SortPairsByCount</definition>
+        <argsstring>(const void *v1, const void *v2)</argsstring>
+        <name>SortPairsByCount</name>
+        <param>
+          <type>const void *</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/sorthelper.h" line="44" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/sorthelper.h" bodystart="44" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sort_helper_1a591276ff047bdfced90d62f4b0ea69c2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int SortHelper&lt; T &gt;::SortPairsByValue</definition>
+        <argsstring>(const void *v1, const void *v2)</argsstring>
+        <name>SortPairsByValue</name>
+        <param>
+          <type>const void *</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>v2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/sorthelper.h" line="50" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/sorthelper.h" bodystart="50" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sort_helper_1a75727b521fe47303bafd1931ac7df857" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SortHelper&lt; T &gt;::SortHelper</definition>
+        <argsstring>(int sizehint)</argsstring>
+        <name>SortHelper</name>
+        <param>
+          <type>int</type>
+          <declname>sizehint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/sorthelper.h" line="59" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/sorthelper.h" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sort_helper_1a2844aee5a8b3f6f90835033fd2a049d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SortHelper&lt; T &gt;::Add</definition>
+        <argsstring>(T value, int count)</argsstring>
+        <name>Add</name>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/sorthelper.h" line="63" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/sorthelper.h" bodystart="63" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sort_helper_1ae3b338e17717ea13a51e453b529a858b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int SortHelper&lt; T &gt;::MaxCount</definition>
+        <argsstring>(T *max_value) const </argsstring>
+        <name>MaxCount</name>
+        <param>
+          <type>T *</type>
+          <declname>max_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/sorthelper.h" line="78" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/sorthelper.h" bodystart="78" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sort_helper_1a05890a598111521d5e37e0888665b3eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; <ref refid="struct_sort_helper_1_1_sort_pair" kindref="compound">SortPair</ref>&lt; T &gt; &gt; &amp;</type>
+        <definition>const GenericVector&lt;SortPair&lt;T&gt; &gt;&amp; SortHelper&lt; T &gt;::SortByCount</definition>
+        <argsstring>()</argsstring>
+        <name>SortByCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/sorthelper.h" line="91" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/sorthelper.h" bodystart="91" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sort_helper_1ab292cf216cbf832150365c9e261aff65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; <ref refid="struct_sort_helper_1_1_sort_pair" kindref="compound">SortPair</ref>&lt; T &gt; &gt; &amp;</type>
+        <definition>const GenericVector&lt;SortPair&lt;T&gt; &gt;&amp; SortHelper&lt; T &gt;::SortByValue</definition>
+        <argsstring>()</argsstring>
+        <name>SortByValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccutil/sorthelper.h" line="96" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/sorthelper.h" bodystart="96" bodyend="99"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/makoto/Desktop/trunk/ccutil/sorthelper.h" line="36" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccutil/sorthelper.h" bodystart="36" bodyend="103"/>
+    <listofallmembers>
+      <member refid="class_sort_helper_1a2844aee5a8b3f6f90835033fd2a049d0" prot="public" virt="non-virtual"><scope>SortHelper</scope><name>Add</name></member>
+      <member refid="class_sort_helper_1ae5cb3196451a09f9f363d77e99cad804" prot="private" virt="non-virtual"><scope>SortHelper</scope><name>counts_</name></member>
+      <member refid="class_sort_helper_1ae3b338e17717ea13a51e453b529a858b" prot="public" virt="non-virtual"><scope>SortHelper</scope><name>MaxCount</name></member>
+      <member refid="class_sort_helper_1a05890a598111521d5e37e0888665b3eb" prot="public" virt="non-virtual"><scope>SortHelper</scope><name>SortByCount</name></member>
+      <member refid="class_sort_helper_1ab292cf216cbf832150365c9e261aff65" prot="public" virt="non-virtual"><scope>SortHelper</scope><name>SortByValue</name></member>
+      <member refid="class_sort_helper_1a75727b521fe47303bafd1931ac7df857" prot="public" virt="non-virtual"><scope>SortHelper</scope><name>SortHelper</name></member>
+      <member refid="class_sort_helper_1a9e9db15e0bee9d0ab2e3242b80da3bc9" prot="public" virt="non-virtual"><scope>SortHelper</scope><name>SortPairsByCount</name></member>
+      <member refid="class_sort_helper_1a591276ff047bdfced90d62f4b0ea69c2" prot="public" virt="non-virtual"><scope>SortHelper</scope><name>SortPairsByValue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

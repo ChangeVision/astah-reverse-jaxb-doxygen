@@ -1,0 +1,1274 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window" kind="class" prot="public">
+    <compoundname>com::google::scrollview::ui::SVWindow</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">JFrame</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a98112f61804c99eb45409f59fbfdbc66" prot="private" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int com.google.scrollview.ui.SVWindow.MAX_WINDOW_X</definition>
+        <argsstring></argsstring>
+        <name>MAX_WINDOW_X</name>
+        <initializer>= 1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constants defining the maximum initial size of the window. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="58" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a78d93fbe75352340ab4bc1e7a65aa635" prot="private" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int com.google.scrollview.ui.SVWindow.MAX_WINDOW_Y</definition>
+        <argsstring></argsstring>
+        <name>MAX_WINDOW_Y</name>
+        <initializer>= 800</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="59" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a8484172b7e4a2e80549065252f20600f" prot="private" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int com.google.scrollview.ui.SVWindow.DEF_MESSAGEBOX_HEIGHT</definition>
+        <argsstring></argsstring>
+        <name>DEF_MESSAGEBOX_HEIGHT</name>
+        <initializer>= 200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="62" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1ab4bfd9dc2dd26b3dcb8ce27dc919a87f" prot="public" static="yes" mutable="no">
+        <type>final double</type>
+        <definition>final double com.google.scrollview.ui.SVWindow.SCALING_FACTOR</definition>
+        <argsstring></argsstring>
+        <name>SCALING_FACTOR</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constant defining the &quot;speed&quot; at which to zoom in and out. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="65" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a6f1a73825025d315cac5cccbd44ae0b6" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int com.google.scrollview.ui.SVWindow.nrWindows</definition>
+        <argsstring></argsstring>
+        <name>nrWindows</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The total number of created Windows. If this ever reaches 0 (apart from the beginning), quit the server. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="105" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1aed72a76cc9b322ec184c4aa506bf36f9" prot="package" static="no" mutable="no">
+        <type>PLayer</type>
+        <definition>PLayer com.google.scrollview.ui.SVWindow.layer</definition>
+        <argsstring></argsstring>
+        <name>layer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The top level layer we add our PNodes to (root node). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="68" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1af927e4e513dea50b75824b0af505b64c" prot="package" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color com.google.scrollview.ui.SVWindow.currentPenColor</definition>
+        <argsstring></argsstring>
+        <name>currentPenColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current color of the pen. It is used to draw edges, text, etc. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="71" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a4f664b721f39af5caffbf9b39911a3cf" prot="package" static="no" mutable="no">
+        <type>Color</type>
+        <definition>Color com.google.scrollview.ui.SVWindow.currentBrushColor</definition>
+        <argsstring></argsstring>
+        <name>currentBrushColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current color of the brush. It is used to draw the interior of primitives. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="77" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1ae10fe8e557197887c7a25ac1c8151e4e" prot="package" static="no" mutable="no">
+        <type>Font</type>
+        <definition>Font com.google.scrollview.ui.SVWindow.currentFont</definition>
+        <argsstring></argsstring>
+        <name>currentFont</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The system name of the current font we are using (e.g. &quot;Times New Roman&quot;). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="81" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1ab03aecbc14fdf51972fa3ae84c207274" prot="package" static="no" mutable="no">
+        <type>BasicStroke</type>
+        <definition>BasicStroke com.google.scrollview.ui.SVWindow.stroke</definition>
+        <argsstring></argsstring>
+        <name>stroke</name>
+        <initializer>= new BasicStroke(0.5f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The stroke width to be used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="93" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1aea901b0201b39bf786b849dfa6fbf7f1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.google.scrollview.ui.SVWindow.hash</definition>
+        <argsstring></argsstring>
+        <name>hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A unique representation for the window, also known by the client. It is used when sending messages from server to client to identify him. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="99" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a139a5a8fb2c4b7924c08bd50a6ce7901" prot="public" static="no" mutable="no">
+        <type><ref refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu" kindref="compound">SVPopupMenu</ref></type>
+        <definition>SVPopupMenu com.google.scrollview.ui.SVWindow.svPuMenu</definition>
+        <argsstring></argsstring>
+        <name>svPuMenu</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="114" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1aa819a7350e2004d9e67f7948f5e96321" prot="public" static="no" mutable="no">
+        <type>PCanvas</type>
+        <definition>PCanvas com.google.scrollview.ui.SVWindow.canvas</definition>
+        <argsstring></argsstring>
+        <name>canvas</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="115" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a510710b511a124be8d019d63712cc5a4" prot="private" static="no" mutable="no">
+        <type><ref refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_handler" kindref="compound">SVEventHandler</ref></type>
+        <definition>SVEventHandler com.google.scrollview.ui.SVWindow.svEventHandler</definition>
+        <argsstring></argsstring>
+        <name>svEventHandler</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The Canvas, MessageBox, EventHandler, Menubar and Popupmenu associated with this window. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="111" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a3b69369edbdb1ffc0ff743efb7182839" prot="private" static="no" mutable="no">
+        <type><ref refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_menu_bar" kindref="compound">SVMenuBar</ref></type>
+        <definition>SVMenuBar com.google.scrollview.ui.SVWindow.svMenuBar</definition>
+        <argsstring></argsstring>
+        <name>svMenuBar</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="112" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a0c21f8911f3e266ff53c033321d0b287" prot="private" static="no" mutable="no">
+        <type>TextArea</type>
+        <definition>TextArea com.google.scrollview.ui.SVWindow.ta</definition>
+        <argsstring></argsstring>
+        <name>ta</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="113" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1ad6accb0ab3a1eb41f7464812a5dd0bc1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.google.scrollview.ui.SVWindow.winSizeX</definition>
+        <argsstring></argsstring>
+        <name>winSizeX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="116" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a9d50be41d9fc4ddd725c8cd89827507f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.google.scrollview.ui.SVWindow.winSizeY</definition>
+        <argsstring></argsstring>
+        <name>winSizeY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="117" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a41910329679b9584f3f79b6f077c4327" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.brush</definition>
+        <argsstring>(int red, int green, int blue)</argsstring>
+        <name>brush</name>
+        <param>
+          <type>int</type>
+          <declname>red</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>green</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the brush to an RGB color </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="120" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="120" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a38ba7fe1d210601f8d5818da94fb387a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.brush</definition>
+        <argsstring>(int red, int green, int blue, int alpha)</argsstring>
+        <name>brush</name>
+        <param>
+          <type>int</type>
+          <declname>red</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>green</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blue</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the brush to an RGBA color </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="125" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="125" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a2b2333329e3dfed7b716fbec67b85055" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Erase all content from the window, but do not destroy it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="135" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="135" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1afa7991b0b4354b92790b96c5647e7492" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.createImage</definition>
+        <argsstring>(String internalName, int width, int height, int bitsPerPixel)</argsstring>
+        <name>createImage</name>
+        <param>
+          <type>String</type>
+          <declname>internalName</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bitsPerPixel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Start setting up a new image. The server will now expect image data until the image is complete.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>internalName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique name of the new image </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image width </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Image height </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bitsPerPixel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bit depth (currently supported: 1 (binary) and 32 (ARGB)) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="149" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="149" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a0dd2fc75f412ad61d1a28db23b202460" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.createPolyline</definition>
+        <argsstring>(int length)</argsstring>
+        <name>createPolyline</name>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Start setting up a new polyline. The server will now expect polyline data until the polyline is complete.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of coordinate pairs </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="160" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="160" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a9d5d6190b20f7f0f98acb4f17ee2a772" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.drawPolyline</definition>
+        <argsstring>()</argsstring>
+        <name>drawPolyline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Draw the now complete polyline. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="170" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="170" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a4ab1f138910166ed9fe164ca81333ae3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.google.scrollview.ui.SVWindow.SVWindow</definition>
+        <argsstring>(String name, int hash, int posX, int posY, int sizeX, int sizeY, int canvasSizeX, int canvasSizeY)</argsstring>
+        <name>SVWindow</name>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>posX</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>posY</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeX</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sizeY</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>canvasSizeX</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>canvasSizeY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct a new <ref refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window" kindref="compound">SVWindow</ref> and set it visible.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of the window. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hash</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unique internal representation. This has to be the same as defined by the client, as they use this to refer to the windows. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X position of where to draw the window (upper left). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y position of where to draw the window (upper left). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sizeX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the window. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sizeY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The height of the window. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>canvasSizeX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The canvas width of the window. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>canvasSizeY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The canvas height of the window. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="193" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="193" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1ad9d3f0e630729a8af6b949ea87981384" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.addMessageBox</definition>
+        <argsstring>()</argsstring>
+        <name>addMessageBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convenience function to add a message box to the window which can be used to output debug information. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="286" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="286" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a75383fd0ec18a38f91915b8fbd76b60e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.setStrokeWidth</definition>
+        <argsstring>(float width)</argsstring>
+        <name>setStrokeWidth</name>
+        <param>
+          <type>float</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows you to specify the thickness with which to draw lines, recantgles and ellipses. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new thickness. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="302" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="302" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a81d1e3351bf847670cbaa313a59f5a10" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.drawEllipse</definition>
+        <argsstring>(int x, int y, int width, int height)</argsstring>
+        <name>drawEllipse</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Draw an ellipse at (x,y) with given width and height, using the current stroke, the current brush color to fill it and the current pen color for the outline. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="313" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="313" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a61ef21a00eadde0b63cf0c92001fe47a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.drawImage</definition>
+        <argsstring>(String internalName, int x_pos, int y_pos)</argsstring>
+        <name>drawImage</name>
+        <param>
+          <type>String</type>
+          <declname>internalName</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x_pos</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y_pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Draw the image with the given name at (x,y). Any image loaded stays in memory, so if you intend to redraw an image, you do not have to use createImage again. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="326" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="326" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a137acbe889e1563247931a281a5c51da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.drawLine</definition>
+        <argsstring>(int x1, int y1, int x2, int y2)</argsstring>
+        <name>drawLine</name>
+        <param>
+          <type>int</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Draw a line from (x1,y1) to (x2,y2) using the current pen color and stroke. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="336" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="336" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a682911a0edf13c33e0c6d09ea2255023" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.drawRectangle</definition>
+        <argsstring>(int x1, int y1, int x2, int y2)</argsstring>
+        <name>drawRectangle</name>
+        <param>
+          <type>int</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Draw a rectangle given the two points (x1,y1) and (x2,y2) using the current stroke, pen color for the border and the brush to fill the interior. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="351" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="351" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1ae94a674d1f2b282be218b4d1a7282caa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.drawText</definition>
+        <argsstring>(int x, int y, String text)</argsstring>
+        <name>drawText</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Draw some text at (x,y) using the current pen color and text attributes. If the current font does NOT support at least one character, it tries to find a font which is capable of displaying it and use that to render the text. Note: If the font says it can render a glyph, but in reality it turns out to be crap, there is nothing we can do about it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="378" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="378" bodyend="412"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a8f9bfdbfa43c92cf515f7b7fffaa5029" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.pen</definition>
+        <argsstring>(int red, int green, int blue)</argsstring>
+        <name>pen</name>
+        <param>
+          <type>int</type>
+          <declname>red</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>green</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the pen color to an RGB value </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="415" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="415" bodyend="417"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a113554fca0b37e1d7808f208fc67569e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.pen</definition>
+        <argsstring>(int red, int green, int blue, int alpha)</argsstring>
+        <name>pen</name>
+        <param>
+          <type>int</type>
+          <declname>red</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>green</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blue</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the pen color to an RGBA value </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="420" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="420" bodyend="422"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a048014e314af2eb0b25ff51e983560e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.textAttributes</definition>
+        <argsstring>(String font, int pixelSize, boolean bold, boolean italic, boolean underlined)</argsstring>
+        <name>textAttributes</name>
+        <param>
+          <type>String</type>
+          <declname>font</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pixelSize</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>bold</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>italic</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>underlined</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Define how to display text. Note: underlined is not currently not supported </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="427" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="427" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1ae0f2b73bcb8c7fd9ce68fd327ecd333c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.zoomRectangle</definition>
+        <argsstring>(int x1, int y1, int x2, int y2)</argsstring>
+        <name>zoomRectangle</name>
+        <param>
+          <type>int</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Zoom the window to the rectangle given the two points (x1,y1) and (x2,y2), which must be greater than (x1,y1). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="449" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="449" bodyend="467"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1abde7d029a0ae5028aa1a4d6428a5f5b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flush buffers and update display.</para><para>Only actually reacts if there are no more messages in the stack, to prevent the canvas from flickering. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="475" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="475" bodyend="490"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a9e8cc8aa2ba4f7e080d105292a02eb13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.addMenuBarItem</definition>
+        <argsstring>(String parent, String name, int id, boolean checked)</argsstring>
+        <name>addMenuBarItem</name>
+        <param>
+          <type>String</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>checked</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a checkbox entry to the menubar, c.f. SVMenubar.add(...) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="493" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="493" bodyend="496"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a9f08e10d5ac6033324e3ff24d77800e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.addMenuBarItem</definition>
+        <argsstring>(String parent, String name)</argsstring>
+        <name>addMenuBarItem</name>
+        <param>
+          <type>String</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a submenu to the menubar, c.f. SVMenubar.add(...) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="499" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="499" bodyend="501"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a23d17f20a454f51f1bdb9fe4395a4158" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.addMenuBarItem</definition>
+        <argsstring>(String parent, String name, int id)</argsstring>
+        <name>addMenuBarItem</name>
+        <param>
+          <type>String</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a new entry to the menubar, c.f. SVMenubar.add(...) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="504" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="504" bodyend="510"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1af7e718442d8c4f71720c1d1bb60a845b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.addMessage</definition>
+        <argsstring>(String message)</argsstring>
+        <name>addMessage</name>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a message to the message box. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="513" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="513" bodyend="519"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a5123c30975aff1918d3724560daefba0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.showInputDialog</definition>
+        <argsstring>(String msg, String def, int id, SVEventType evtype)</argsstring>
+        <name>showInputDialog</name>
+        <param>
+          <type>String</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>def</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="enumcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event_type" kindref="compound">SVEventType</ref></type>
+          <declname>evtype</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Show a modal input dialog. The answer by the dialog is then send to the client, together with the associated menu id, as SVET_POPUP</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text that is displayed in the dialog. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>def</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The default value of the dialog. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The associated commandId </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>evtype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The event this is associated with (usually SVET_MENU or SVET_POPUP) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="561" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="561" bodyend="574"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1ac9bd24e457b91afbaec45a3bbaeaa251" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.showInputDialog</definition>
+        <argsstring>(String msg)</argsstring>
+        <name>showInputDialog</name>
+        <param>
+          <type>String</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Shows a modal input dialog to the user. The return value is automatically sent to the client as SVET_INPUT event (with command id -1).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text of the dialog. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="583" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="583" bodyend="585"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a412dd4700ae8cec0b138da6a51adde3d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.showYesNoDialog</definition>
+        <argsstring>(String msg)</argsstring>
+        <name>showYesNoDialog</name>
+        <param>
+          <type>String</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Shows a dialog presenting &quot;Yes&quot; and &quot;No&quot; as answers and returns either a &quot;y&quot; or &quot;n&quot; to the client.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text that is displayed in the dialog. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="593" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="593" bodyend="606"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1ac17a1d88f11020dba84020c8aa29a2e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.addPopupMenuItem</definition>
+        <argsstring>(String parent, String name)</argsstring>
+        <name>addPopupMenuItem</name>
+        <param>
+          <type>String</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a submenu to the popup menu, c.f. <ref refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu_1aab6cd8f94f4fef10391dd62950a0e1c7" kindref="member">SVPopupMenu.add</ref>(...) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="609" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="609" bodyend="614"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a06c68a63a81f9bbb5df1f51c37fbc2b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.addPopupMenuItem</definition>
+        <argsstring>(String parent, String name, int cmdEvent, String value, String desc)</argsstring>
+        <name>addPopupMenuItem</name>
+        <param>
+          <type>String</type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cmdEvent</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>desc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a new menu entry to the popup menu, c.f. <ref refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu_1aab6cd8f94f4fef10391dd62950a0e1c7" kindref="member">SVPopupMenu.add</ref>(...) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="617" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="617" bodyend="623"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a1a18e074cfbbeeb99356b77f0a007d42" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.destroy</definition>
+        <argsstring>()</argsstring>
+        <name>destroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroys a window. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="626" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="626" bodyend="631"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a1b5a952dc71272500c1ee277426e44d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.google.scrollview.ui.SVWindow.openImage</definition>
+        <argsstring>(String filename)</argsstring>
+        <name>openImage</name>
+        <param>
+          <type>String</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Open an image from a given file location and store it in memory. Pro: Faster than createImage. Con: Works only on the local file system.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the image. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="639" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="639" bodyend="641"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1ae9f17ad30fd15d28b9cf7827e4637153" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String com.google.scrollview.ui.SVWindow.convertIntegerStringToUnicodeString</definition>
+        <argsstring>(String input)</argsstring>
+        <name>convertIntegerStringToUnicodeString</name>
+        <param>
+          <type>String</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method converts a string which might contain hexadecimal values to a string which contains the respective unicode counterparts.</para><para>For example, Hall0x0094chen returns Hall&lt;o umlaut&gt;chen encoded as utf8.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The original string, containing 0x values </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The converted string which has the replaced unicode symbols </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="531" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="531" bodyend="549"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window" kindref="compound">SVWindow</ref> is the top-level ui class. It should get instantiated whenever the user intends to create a new window. It contains helper functions to draw on the canvas, add new menu items, show modal dialogs etc.</para><para><simplesect kind="author"><para><ulink url="mailto:wanke@google.com">wanke@google.com</ulink> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1997">
+        <label>JFrame</label>
+      </node>
+      <node id="1996">
+        <label>com.google.scrollview.ui.SVWindow</label>
+        <link refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window"/>
+        <childnode refid="1997" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2000">
+        <label>com.google.scrollview.ui.SVPopupMenu</label>
+        <link refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_popup_menu"/>
+        <childnode refid="2001" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2006">
+        <label>BasicStroke</label>
+      </node>
+      <node id="2001">
+        <label>ActionListener</label>
+      </node>
+      <node id="2004">
+        <label>Font</label>
+      </node>
+      <node id="1999">
+        <label>JFrame</label>
+      </node>
+      <node id="2002">
+        <label>PLayer</label>
+      </node>
+      <node id="2005">
+        <label>PCanvas</label>
+      </node>
+      <node id="2003">
+        <label>Color</label>
+      </node>
+      <node id="1998">
+        <label>com.google.scrollview.ui.SVWindow</label>
+        <link refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window"/>
+        <childnode refid="1999" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2000" relation="usage">
+          <edgelabel>svPuMenu</edgelabel>
+        </childnode>
+        <childnode refid="2002" relation="usage">
+          <edgelabel>layer</edgelabel>
+        </childnode>
+        <childnode refid="2003" relation="usage">
+          <edgelabel>currentPenColor</edgelabel>
+          <edgelabel>currentBrushColor</edgelabel>
+        </childnode>
+        <childnode refid="2004" relation="usage">
+          <edgelabel>currentFont</edgelabel>
+        </childnode>
+        <childnode refid="2005" relation="usage">
+          <edgelabel>canvas</edgelabel>
+        </childnode>
+        <childnode refid="2006" relation="usage">
+          <edgelabel>stroke</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" line="54" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ui/SVWindow.java" bodystart="54" bodyend="643"/>
+    <listofallmembers>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a9e8cc8aa2ba4f7e080d105292a02eb13" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>addMenuBarItem</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a9f08e10d5ac6033324e3ff24d77800e0" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>addMenuBarItem</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a23d17f20a454f51f1bdb9fe4395a4158" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>addMenuBarItem</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1af7e718442d8c4f71720c1d1bb60a845b" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>addMessage</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1ad9d3f0e630729a8af6b949ea87981384" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>addMessageBox</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1ac17a1d88f11020dba84020c8aa29a2e1" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>addPopupMenuItem</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a06c68a63a81f9bbb5df1f51c37fbc2b2" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>addPopupMenuItem</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a41910329679b9584f3f79b6f077c4327" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>brush</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a38ba7fe1d210601f8d5818da94fb387a" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>brush</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1aa819a7350e2004d9e67f7948f5e96321" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>canvas</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a2b2333329e3dfed7b716fbec67b85055" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>clear</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1ae9f17ad30fd15d28b9cf7827e4637153" prot="private" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>convertIntegerStringToUnicodeString</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1afa7991b0b4354b92790b96c5647e7492" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>createImage</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a0dd2fc75f412ad61d1a28db23b202460" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>createPolyline</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a4f664b721f39af5caffbf9b39911a3cf" prot="package" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>currentBrushColor</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1ae10fe8e557197887c7a25ac1c8151e4e" prot="package" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>currentFont</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1af927e4e513dea50b75824b0af505b64c" prot="package" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>currentPenColor</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a8484172b7e4a2e80549065252f20600f" prot="private" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>DEF_MESSAGEBOX_HEIGHT</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a1a18e074cfbbeeb99356b77f0a007d42" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>destroy</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a81d1e3351bf847670cbaa313a59f5a10" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>drawEllipse</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a61ef21a00eadde0b63cf0c92001fe47a" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>drawImage</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a137acbe889e1563247931a281a5c51da" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>drawLine</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a9d5d6190b20f7f0f98acb4f17ee2a772" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>drawPolyline</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a682911a0edf13c33e0c6d09ea2255023" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>drawRectangle</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1ae94a674d1f2b282be218b4d1a7282caa" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>drawText</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1aea901b0201b39bf786b849dfa6fbf7f1" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>hash</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1aed72a76cc9b322ec184c4aa506bf36f9" prot="package" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>layer</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a98112f61804c99eb45409f59fbfdbc66" prot="private" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>MAX_WINDOW_X</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a78d93fbe75352340ab4bc1e7a65aa635" prot="private" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>MAX_WINDOW_Y</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a6f1a73825025d315cac5cccbd44ae0b6" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>nrWindows</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a1b5a952dc71272500c1ee277426e44d2" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>openImage</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a8f9bfdbfa43c92cf515f7b7fffaa5029" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>pen</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a113554fca0b37e1d7808f208fc67569e" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>pen</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1ab4bfd9dc2dd26b3dcb8ce27dc919a87f" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>SCALING_FACTOR</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a75383fd0ec18a38f91915b8fbd76b60e" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>setStrokeWidth</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a5123c30975aff1918d3724560daefba0" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>showInputDialog</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1ac9bd24e457b91afbaec45a3bbaeaa251" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>showInputDialog</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a412dd4700ae8cec0b138da6a51adde3d" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>showYesNoDialog</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1ab03aecbc14fdf51972fa3ae84c207274" prot="package" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>stroke</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a510710b511a124be8d019d63712cc5a4" prot="private" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>svEventHandler</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a3b69369edbdb1ffc0ff743efb7182839" prot="private" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>svMenuBar</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a139a5a8fb2c4b7924c08bd50a6ce7901" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>svPuMenu</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a4ab1f138910166ed9fe164ca81333ae3" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>SVWindow</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a0c21f8911f3e266ff53c033321d0b287" prot="private" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>ta</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a048014e314af2eb0b25ff51e983560e2" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>textAttributes</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1abde7d029a0ae5028aa1a4d6428a5f5b8" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>update</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1ad6accb0ab3a1eb41f7464812a5dd0bc1" prot="private" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>winSizeX</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1a9d50be41d9fc4ddd725c8cd89827507f" prot="private" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>winSizeY</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window_1ae0f2b73bcb8c7fd9ce68fd327ecd333c" prot="public" virt="non-virtual"><scope>com::google::scrollview::ui::SVWindow</scope><name>zoomRectangle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

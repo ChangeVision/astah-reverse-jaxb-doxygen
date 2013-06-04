@@ -1,0 +1,594 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.2">
+  <compounddef id="_audio_available_event_manager_8cpp" kind="file">
+    <compoundname>AudioAvailableEventManager.cpp</compoundname>
+    <includes local="yes">nsTArray.h</includes>
+    <includes local="yes">AudioAvailableEventManager.h</includes>
+    <includes local="yes">nsCOMPtr.h</includes>
+    <includes local="yes">nsIRunnable.h</includes>
+    <includes local="yes">C:/tools/mozilla-release/content/media/MediaDecoder.h</includes>
+    <includes local="yes">nsISupports.h</includes>
+    <includes local="yes">nsIThread.h</includes>
+    <includes local="yes">nsIChannel.h</includes>
+    <includes local="yes">nsIObserver.h</includes>
+    <includes local="yes">nsAutoPtr.h</includes>
+    <includes local="yes">nsSize.h</includes>
+    <includes local="yes">prlog.h</includes>
+    <includes local="yes">gfxContext.h</includes>
+    <includes local="yes">gfxRect.h</includes>
+    <includes local="yes">C:/tools/mozilla-release/content/media/MediaResource.h</includes>
+    <includes local="yes">mozilla/Mutex.h</includes>
+    <includes local="yes">mozilla/XPCOM.h</includes>
+    <includes local="yes">mozilla/ReentrantMonitor.h</includes>
+    <includes local="yes">nsIHttpChannel.h</includes>
+    <includes local="yes">nsIPrincipal.h</includes>
+    <includes local="yes">nsIURI.h</includes>
+    <includes local="yes">nsIStreamListener.h</includes>
+    <includes local="yes">nsIChannelEventSink.h</includes>
+    <includes local="yes">nsIInterfaceRequestor.h</includes>
+    <includes local="yes">C:/tools/mozilla-release/content/media/MediaCache.h</includes>
+    <includes local="yes">mozilla/Attributes.h</includes>
+    <includes local="yes">C:/tools/mozilla-release/content/media/MediaStreamGraph.h</includes>
+    <includes local="yes">C:/tools/mozilla-release/content/media/AudioStream.h</includes>
+    <includes local="yes">nscore.h</includes>
+    <includes local="yes">nsISupportsImpl.h</includes>
+    <includes local="yes">C:/tools/mozilla-release/content/media/AudioSampleFormat.h</includes>
+    <includes local="yes">nsAlgorithm.h</includes>
+    <includes local="yes">AudioChannelCommon.h</includes>
+    <includes local="yes">C:/tools/mozilla-release/content/media/StreamBuffer.h</includes>
+    <includes local="yes">mozilla/Util.h</includes>
+    <includes local="yes">C:/tools/mozilla-release/content/media/MediaSegment.h</includes>
+    <includes local="yes">C:/tools/mozilla-release/content/media/TimeVarying.h</includes>
+    <includes local="yes">C:/tools/mozilla-release/content/media/VideoFrameContainer.h</includes>
+    <includes local="yes">mozilla/TimeStamp.h</includes>
+    <includes local="yes">gfxPoint.h</includes>
+    <includes local="yes">C:/tools/mozilla-release/content/media/VideoSegment.h</includes>
+    <includes local="yes">ImageContainer.h</includes>
+    <includes local="yes">nsThreadUtils.h</includes>
+    <includes local="yes">C:/tools/mozilla-release/content/media/MediaDecoderOwner.h</includes>
+    <includes local="yes">C:/tools/mozilla-release/content/media/MediaDecoderReader.h</includes>
+    <includes local="no">nsDeque.h</includes>
+    <includes local="yes">C:/tools/mozilla-release/content/media/SharedBuffer.h</includes>
+    <includes local="yes">mozilla/mozalloc.h</includes>
+    <includes local="yes">ImageLayers.h</includes>
+    <includes local="yes">nsHTMLMediaElement.h</includes>
+    <includes local="yes">VideoUtils.h</includes>
+    <includes local="yes">mozilla/CheckedInt.h</includes>
+    <includes local="yes">nsRect.h</includes>
+    <includes local="yes">nsIThreadManager.h</includes>
+    <incdepgraph>
+      <node id="11">
+        <label>nsSize.h</label>
+      </node>
+      <node id="44">
+        <label>C:/tools/mozilla-release/content/media/MediaDecoderOwner.h</label>
+      </node>
+      <node id="26">
+        <label>mozilla/Attributes.h</label>
+      </node>
+      <node id="49">
+        <label>ImageLayers.h</label>
+      </node>
+      <node id="54">
+        <label>nsIThreadManager.h</label>
+      </node>
+      <node id="41">
+        <label>C:/tools/mozilla-release/content/media/VideoSegment.h</label>
+      </node>
+      <node id="5">
+        <label>C:/tools/mozilla-release/content/media/MediaDecoder.h</label>
+      </node>
+      <node id="35">
+        <label>mozilla/Util.h</label>
+      </node>
+      <node id="0">
+        <label>C:/tools/mozilla-release/content/media/AudioAvailableEventManager.cpp</label>
+        <link refid="AudioAvailableEventManager.cpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>C:/tools/mozilla-release/content/media/AudioSampleFormat.h</label>
+      </node>
+      <node id="43">
+        <label>nsThreadUtils.h</label>
+      </node>
+      <node id="19">
+        <label>nsIHttpChannel.h</label>
+      </node>
+      <node id="40">
+        <label>gfxPoint.h</label>
+      </node>
+      <node id="21">
+        <label>nsIURI.h</label>
+      </node>
+      <node id="48">
+        <label>mozilla/mozalloc.h</label>
+      </node>
+      <node id="2">
+        <label>AudioAvailableEventManager.h</label>
+      </node>
+      <node id="42">
+        <label>ImageContainer.h</label>
+      </node>
+      <node id="25">
+        <label>C:/tools/mozilla-release/content/media/MediaCache.h</label>
+      </node>
+      <node id="45">
+        <label>C:/tools/mozilla-release/content/media/MediaDecoderReader.h</label>
+      </node>
+      <node id="9">
+        <label>nsIObserver.h</label>
+      </node>
+      <node id="16">
+        <label>mozilla/Mutex.h</label>
+      </node>
+      <node id="37">
+        <label>C:/tools/mozilla-release/content/media/TimeVarying.h</label>
+      </node>
+      <node id="8">
+        <label>nsIChannel.h</label>
+      </node>
+      <node id="52">
+        <label>mozilla/CheckedInt.h</label>
+      </node>
+      <node id="51">
+        <label>VideoUtils.h</label>
+      </node>
+      <node id="34">
+        <label>C:/tools/mozilla-release/content/media/StreamBuffer.h</label>
+      </node>
+      <node id="46">
+        <label>nsDeque.h</label>
+      </node>
+      <node id="27">
+        <label>C:/tools/mozilla-release/content/media/MediaStreamGraph.h</label>
+      </node>
+      <node id="14">
+        <label>gfxRect.h</label>
+      </node>
+      <node id="24">
+        <label>nsIInterfaceRequestor.h</label>
+      </node>
+      <node id="20">
+        <label>nsIPrincipal.h</label>
+      </node>
+      <node id="36">
+        <label>C:/tools/mozilla-release/content/media/MediaSegment.h</label>
+      </node>
+      <node id="50">
+        <label>nsHTMLMediaElement.h</label>
+      </node>
+      <node id="22">
+        <label>nsIStreamListener.h</label>
+      </node>
+      <node id="7">
+        <label>nsIThread.h</label>
+      </node>
+      <node id="32">
+        <label>nsAlgorithm.h</label>
+      </node>
+      <node id="12">
+        <label>prlog.h</label>
+      </node>
+      <node id="13">
+        <label>gfxContext.h</label>
+      </node>
+      <node id="39">
+        <label>mozilla/TimeStamp.h</label>
+      </node>
+      <node id="3">
+        <label>nsCOMPtr.h</label>
+      </node>
+      <node id="18">
+        <label>mozilla/ReentrantMonitor.h</label>
+      </node>
+      <node id="29">
+        <label>nscore.h</label>
+      </node>
+      <node id="1">
+        <label>nsTArray.h</label>
+      </node>
+      <node id="6">
+        <label>nsISupports.h</label>
+      </node>
+      <node id="30">
+        <label>nsISupportsImpl.h</label>
+      </node>
+      <node id="23">
+        <label>nsIChannelEventSink.h</label>
+      </node>
+      <node id="53">
+        <label>nsRect.h</label>
+      </node>
+      <node id="4">
+        <label>nsIRunnable.h</label>
+      </node>
+      <node id="15">
+        <label>C:/tools/mozilla-release/content/media/MediaResource.h</label>
+      </node>
+      <node id="10">
+        <label>nsAutoPtr.h</label>
+      </node>
+      <node id="33">
+        <label>AudioChannelCommon.h</label>
+      </node>
+      <node id="17">
+        <label>mozilla/XPCOM.h</label>
+      </node>
+      <node id="28">
+        <label>C:/tools/mozilla-release/content/media/AudioStream.h</label>
+      </node>
+      <node id="47">
+        <label>C:/tools/mozilla-release/content/media/SharedBuffer.h</label>
+      </node>
+      <node id="38">
+        <label>C:/tools/mozilla-release/content/media/VideoFrameContainer.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classmozilla_1_1ns_audio_available_event_runner" prot="public">mozilla::nsAudioAvailableEventRunner</innerclass>
+    <innernamespace refid="namespacemozilla">mozilla</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>Mode:<sp/>C++;<sp/>tab-width:<sp/>2;<sp/>indent-tabs-mode:<sp/>nil;<sp/>c-basic-offset:<sp/>2<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>vim:set<sp/>ts=2<sp/>sw=2<sp/>sts=2<sp/>et<sp/>cindent:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>Source<sp/>Code<sp/>Form<sp/>is<sp/>subject<sp/>to<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>Mozilla<sp/>Public</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>License,<sp/>v.<sp/>2.0.<sp/>If<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>MPL<sp/>was<sp/>not<sp/>distributed<sp/>with<sp/>this</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>file,<sp/>You<sp/>can<sp/>obtain<sp/>one<sp/>at<sp/>http://mozilla.org/MPL/2.0/.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;nsTArray.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;AudioAvailableEventManager.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;VideoUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">mozilla<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>nsTArray&lt;<sp/>nsCOMPtr&lt;nsIRunnable&gt;<sp/>&gt;::size_type<sp/>MAX_PENDING_EVENTS<sp/>=<sp/>100;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="classmozilla_1_1ns_audio_available_event_runner" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmozilla_1_1ns_audio_available_event_runner" kindref="compound">nsAudioAvailableEventRunner</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>nsRunnable</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>nsCOMPtr&lt;MediaDecoder&gt;<sp/>mDecoder;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>nsAutoArrayPtr&lt;float&gt;<sp/>mFrameBuffer;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><ref refid="classmozilla_1_1ns_audio_available_event_runner" kindref="compound">nsAudioAvailableEventRunner</ref>(MediaDecoder*<sp/>aDecoder,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>aFrameBuffer,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>aFrameBufferLength,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>aTime)<sp/>:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>mDecoder(aDecoder),</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>mFrameBuffer(aFrameBuffer),</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>mFrameBufferLength(aFrameBufferLength),</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>mTime(aTime)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>MOZ_COUNT_CTOR(<ref refid="classmozilla_1_1ns_audio_available_event_runner" kindref="compound">nsAudioAvailableEventRunner</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>~<ref refid="classmozilla_1_1ns_audio_available_event_runner" kindref="compound">nsAudioAvailableEventRunner</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>MOZ_COUNT_DTOR(<ref refid="classmozilla_1_1ns_audio_available_event_runner" kindref="compound">nsAudioAvailableEventRunner</ref>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>NS_IMETHOD<sp/>Run()</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>mDecoder-&gt;AudioAvailable(mFrameBuffer.forget(),<sp/>mFrameBufferLength,<sp/>mTime);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NS_OK;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>mFrameBufferLength;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>time<sp/>of<sp/>the<sp/>buffer<sp/>data<sp/>(in<sp/>seconds).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>mTime;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">AudioAvailableEventManager::AudioAvailableEventManager(MediaDecoder*<sp/>aDecoder)<sp/>:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>mDecoder(aDecoder),</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>mSignalBuffer(new<sp/>float[mDecoder-&gt;GetFrameBufferLength()]),</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>mSignalBufferLength(mDecoder-&gt;GetFrameBufferLength()),</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>mNewSignalBufferLength(mSignalBufferLength),</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>mSignalBufferPosition(0),</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>mReentrantMonitor(</highlight><highlight class="stringliteral">&quot;media.audioavailableeventmanager&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>mHasListener(false)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>MOZ_COUNT_CTOR(AudioAvailableEventManager);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">AudioAvailableEventManager::~AudioAvailableEventManager()</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>MOZ_COUNT_DTOR(AudioAvailableEventManager);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>AudioAvailableEventManager::Init(uint32_t<sp/>aChannels,<sp/>uint32_t<sp/>aRate)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>NS_ASSERTION(aChannels<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>aRate<sp/>!=<sp/>0,<sp/></highlight><highlight class="stringliteral">&quot;Audio<sp/>metadata<sp/>not<sp/>known.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>mSamplesPerSecond<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(aChannels<sp/>*<sp/>aRate);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>AudioAvailableEventManager::DispatchPendingEvents(uint64_t<sp/>aCurrentTime)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>ReentrantMonitorAutoEnter<sp/>mon(mReentrantMonitor);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mHasListener)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(mPendingEvents.Length()<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>nsAudioAvailableEventRunner*<sp/>e<sp/>=</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(nsAudioAvailableEventRunner*)mPendingEvents[0].</highlight><highlight class="keyword">get</highlight><highlight class="normal">();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(e-&gt;mTime<sp/>*<sp/>USECS_PER_S<sp/>&gt;<sp/>aCurrentTime)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>nsCOMPtr&lt;nsIRunnable&gt;<sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal"><sp/>=<sp/>mPendingEvents[0];</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>mPendingEvents.RemoveElementAt(0);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>NS_DispatchToMainThread(event,<sp/>NS_DISPATCH_NORMAL);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>AudioAvailableEventManager::QueueWrittenAudioData(AudioDataValue*<sp/>aAudioData,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>aAudioDataLength,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/>aEndTimeSampleOffset)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>ReentrantMonitorAutoEnter<sp/>mon(mReentrantMonitor);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mHasListener)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>uint32_t<sp/>currentBufferSize<sp/>=<sp/>mNewSignalBufferLength;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(currentBufferSize<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>NS_WARNING(</highlight><highlight class="stringliteral">&quot;Decoder<sp/>framebuffer<sp/>length<sp/>not<sp/>set.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mSignalBuffer<sp/>||</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(mSignalBufferPosition<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>mSignalBufferLength<sp/>!=<sp/>currentBufferSize))<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mSignalBuffer<sp/>||<sp/>(mSignalBufferLength<sp/>&lt;<sp/>currentBufferSize))<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Only<sp/>resize<sp/>if<sp/>buffer<sp/>is<sp/>empty<sp/>or<sp/>smaller.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>mSignalBuffer<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">[currentBufferSize];</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>mSignalBufferLength<sp/>=<sp/>currentBufferSize;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>AudioDataValue*<sp/>audioData<sp/>=<sp/>aAudioData;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>uint32_t<sp/>audioDataLength<sp/>=<sp/>aAudioDataLength;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>uint32_t<sp/>signalBufferTail<sp/>=<sp/>mSignalBufferLength<sp/>-<sp/>mSignalBufferPosition;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Group<sp/>audio<sp/>samples<sp/>into<sp/>optimal<sp/>size<sp/>for<sp/>event<sp/>dispatch,<sp/>and<sp/>queue.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(signalBufferTail<sp/>&lt;=<sp/>audioDataLength)<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>time<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Guard<sp/>against<sp/>unsigned<sp/>number<sp/>overflow<sp/>during<sp/>first<sp/>frame<sp/>time<sp/>calculation.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(aEndTimeSampleOffset<sp/>&gt;<sp/>mSignalBufferPosition<sp/>+<sp/>audioDataLength)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>time<sp/>=<sp/>(aEndTimeSampleOffset<sp/>-<sp/>mSignalBufferPosition<sp/>-<sp/>audioDataLength)<sp/>/<sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mSamplesPerSecond;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fill<sp/>the<sp/>signalBuffer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>i;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*signalBuffer<sp/>=<sp/>mSignalBuffer.get()<sp/>+<sp/>mSignalBufferPosition;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(audioData)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>signalBufferTail;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>signalBuffer[i]<sp/>=<sp/>AudioSampleToFloat(audioData[i]);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>memset(signalBuffer,<sp/>0,<sp/>signalBufferTail*</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(signalBuffer[0]));</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(audioData)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>audioData<sp/>+=<sp/>signalBufferTail;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>NS_ASSERTION(audioDataLength<sp/>&gt;=<sp/>signalBufferTail,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;audioDataLength<sp/>about<sp/>to<sp/>wrap<sp/>past<sp/>zero<sp/>to<sp/>+infinity!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>audioDataLength<sp/>-=<sp/>signalBufferTail;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mPendingEvents.Length()<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>last<sp/>event<sp/>timecode<sp/>to<sp/>make<sp/>sure<sp/>that<sp/>all<sp/>queued<sp/>events</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>are<sp/>in<sp/>non-descending<sp/>sequence.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nsAudioAvailableEventRunner*<sp/>lastPendingEvent<sp/>=</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(nsAudioAvailableEventRunner*)mPendingEvents[mPendingEvents.Length()<sp/>-<sp/>1].get();</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(lastPendingEvent-&gt;mTime<sp/>&gt;<sp/>time)<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>queue<sp/>to<sp/>start<sp/>a<sp/>fresh<sp/>sequence.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mPendingEvents.Clear();</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mPendingEvents.Length()<sp/>&gt;=<sp/>MAX_PENDING_EVENTS)<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NS_WARNING(</highlight><highlight class="stringliteral">&quot;Hit<sp/>audio<sp/>event<sp/>queue<sp/>max.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mPendingEvents.RemoveElementsAt(0,<sp/>mPendingEvents.Length()<sp/>-<sp/>MAX_PENDING_EVENTS<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Inform<sp/>the<sp/>element<sp/>that<sp/>we&apos;ve<sp/>written<sp/>audio<sp/>data.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>nsCOMPtr&lt;nsIRunnable&gt;<sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal"><sp/>=</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>nsAudioAvailableEventRunner(mDecoder,<sp/>mSignalBuffer.forget(),</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mSignalBufferLength,<sp/>time);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>mPendingEvents.AppendElement(event);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reset<sp/>the<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>mSignalBufferLength<sp/>=<sp/>currentBufferSize;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>mSignalBuffer<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">[currentBufferSize];</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>mSignalBufferPosition<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>signalBufferTail<sp/>=<sp/>currentBufferSize;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>NS_ASSERTION(mSignalBufferPosition<sp/>+<sp/>audioDataLength<sp/>&lt;<sp/>mSignalBufferLength,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Intermediate<sp/>signal<sp/>buffer<sp/>must<sp/>fit<sp/>at<sp/>least<sp/>one<sp/>more<sp/>item.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(audioDataLength<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>data<sp/>to<sp/>the<sp/>signalBuffer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>i;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*signalBuffer<sp/>=<sp/>mSignalBuffer.get()<sp/>+<sp/>mSignalBufferPosition;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(audioData)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>audioDataLength;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>signalBuffer[i]<sp/>=<sp/>AudioSampleToFloat(audioData[i]);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>memset(signalBuffer,<sp/>0,<sp/>audioDataLength*</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(signalBuffer[0]));</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>mSignalBufferPosition<sp/>+=<sp/>audioDataLength;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>AudioAvailableEventManager::Clear()</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/>ReentrantMonitorAutoEnter<sp/>mon(mReentrantMonitor);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/>mPendingEvents.Clear();</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/>mSignalBufferPosition<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>AudioAvailableEventManager::Drain(uint64_t<sp/>aEndTime)</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/>ReentrantMonitorAutoEnter<sp/>mon(mReentrantMonitor);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!mHasListener)<sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Force<sp/>all<sp/>pending<sp/>events<sp/>to<sp/>go<sp/>now.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>mPendingEvents.Length();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>nsCOMPtr&lt;nsIRunnable&gt;<sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal"><sp/>=<sp/>mPendingEvents[i];</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>NS_DispatchToMainThread(event,<sp/>NS_DISPATCH_NORMAL);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/>mPendingEvents.Clear();</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>there<sp/>is<sp/>anything<sp/>left<sp/>in<sp/>the<sp/>signal<sp/>buffer,<sp/>put<sp/>it<sp/>in<sp/>an<sp/>event<sp/>and<sp/>fire.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(0<sp/>==<sp/>mSignalBufferPosition)</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Zero-pad<sp/>the<sp/>end<sp/>of<sp/>the<sp/>signal<sp/>buffer<sp/>so<sp/>it&apos;s<sp/>complete.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/>memset(mSignalBuffer.get()<sp/>+<sp/>mSignalBufferPosition,<sp/>0,</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(mSignalBufferLength<sp/>-<sp/>mSignalBufferPosition)<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Force<sp/>this<sp/>last<sp/>event<sp/>to<sp/>go<sp/>now.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>time<sp/>=<sp/>(aEndTime<sp/>/<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(USECS_PER_S))<sp/>-<sp/></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(mSignalBufferPosition<sp/>/<sp/>mSamplesPerSecond);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/>nsCOMPtr&lt;nsIRunnable&gt;<sp/>lastEvent<sp/>=</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>nsAudioAvailableEventRunner(mDecoder,<sp/>mSignalBuffer.forget(),</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mSignalBufferLength,<sp/>time);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/>NS_DispatchToMainThread(lastEvent,<sp/>NS_DISPATCH_NORMAL);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/>mSignalBufferPosition<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>AudioAvailableEventManager::SetSignalBufferLength(uint32_t<sp/>aLength)</highlight></codeline>
+<codeline lineno="235"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/>ReentrantMonitorAutoEnter<sp/>mon(mReentrantMonitor);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/>mNewSignalBufferLength<sp/>=<sp/>aLength;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>AudioAvailableEventManager::NotifyAudioAvailableListener()</highlight></codeline>
+<codeline lineno="242"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/>ReentrantMonitorAutoEnter<sp/>mon(mReentrantMonitor);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/>mHasListener<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>mozilla</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/tools/mozilla-release/content/media/AudioAvailableEventManager.cpp"/>
+  </compounddef>
+</doxygen>

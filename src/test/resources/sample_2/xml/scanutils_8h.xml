@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="scanutils_8h" kind="file">
+    <compoundname>scanutils.h</compoundname>
+    <includedby refid="reject_8cpp" local="yes">ccmain/reject.cpp</includedby>
+    <includedby refid="blread_8cpp" local="yes">ccstruct/blread.cpp</includedby>
+    <includedby refid="params_8cpp" local="yes">ccutil/params.cpp</includedby>
+    <includedby refid="serialis_8cpp" local="yes">ccutil/serialis.cpp</includedby>
+    <includedby refid="clusttool_8cpp" local="yes">classify/clusttool.cpp</includedby>
+    <includedby refid="cutoffs_8cpp" local="yes">classify/cutoffs.cpp</includedby>
+    <includedby refid="featdefs_8cpp" local="yes">classify/featdefs.cpp</includedby>
+    <includedby refid="normmatch_8cpp" local="yes">classify/normmatch.cpp</includedby>
+    <includedby refid="ocrfeatures_8cpp" local="yes">classify/ocrfeatures.cpp</includedby>
+    <includedby refid="protos_8cpp" local="yes">classify/protos.cpp</includedby>
+    <includedby refid="stopper_8cpp" local="yes">dict/stopper.cpp</includedby>
+    <invincdepgraph>
+      <node id="19803">
+        <label>classify/protos.cpp</label>
+        <link refid="protos_8cpp"/>
+      </node>
+      <node id="19793">
+        <label>ccutil/scanutils.h</label>
+        <link refid="scanutils.h"/>
+        <childnode refid="19794" relation="include">
+        </childnode>
+        <childnode refid="19795" relation="include">
+        </childnode>
+        <childnode refid="19796" relation="include">
+        </childnode>
+        <childnode refid="19797" relation="include">
+        </childnode>
+        <childnode refid="19798" relation="include">
+        </childnode>
+        <childnode refid="19799" relation="include">
+        </childnode>
+        <childnode refid="19800" relation="include">
+        </childnode>
+        <childnode refid="19801" relation="include">
+        </childnode>
+        <childnode refid="19802" relation="include">
+        </childnode>
+        <childnode refid="19803" relation="include">
+        </childnode>
+        <childnode refid="19804" relation="include">
+        </childnode>
+      </node>
+      <node id="19796">
+        <label>ccutil/params.cpp</label>
+        <link refid="params_8cpp"/>
+      </node>
+      <node id="19794">
+        <label>ccmain/reject.cpp</label>
+        <link refid="reject_8cpp"/>
+      </node>
+      <node id="19801">
+        <label>classify/normmatch.cpp</label>
+        <link refid="normmatch_8cpp"/>
+      </node>
+      <node id="19799">
+        <label>classify/cutoffs.cpp</label>
+        <link refid="cutoffs_8cpp"/>
+      </node>
+      <node id="19798">
+        <label>classify/clusttool.cpp</label>
+        <link refid="clusttool_8cpp"/>
+      </node>
+      <node id="19800">
+        <label>classify/featdefs.cpp</label>
+        <link refid="featdefs_8cpp"/>
+      </node>
+      <node id="19804">
+        <label>dict/stopper.cpp</label>
+        <link refid="stopper_8cpp"/>
+      </node>
+      <node id="19802">
+        <label>classify/ocrfeatures.cpp</label>
+        <link refid="ocrfeatures_8cpp"/>
+      </node>
+      <node id="19795">
+        <label>ccstruct/blread.cpp</label>
+        <link refid="blread_8cpp"/>
+      </node>
+      <node id="19797">
+        <label>ccutil/serialis.cpp</label>
+        <link refid="serialis_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2006<sp/>Google<sp/>Inc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>renn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Contains<sp/>file<sp/>io<sp/>functions<sp/>(mainly<sp/>for<sp/>file<sp/>parsing),<sp/>that<sp/>might<sp/>not<sp/>be<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>available,<sp/>on<sp/>embedded<sp/>devices,<sp/>or<sp/>that<sp/>have<sp/>an<sp/>incomplete<sp/>implementation<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>there.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TESSERACT_CCUTIL_SCANUTILS_H_</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TESSERACT_CCUTIL_SCANUTILS_H_</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>EMBEDDED</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&lt;klibc/extern.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/stat.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Attempts<sp/>to<sp/>parse<sp/>the<sp/>given<sp/>file<sp/>stream<sp/>s<sp/>as<sp/>an<sp/>integer<sp/>of<sp/>the<sp/>base</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>&apos;base&apos;.<sp/>Returns<sp/>the<sp/>first<sp/>successfully<sp/>parsed<sp/>integer<sp/>as<sp/>a<sp/>uintmax_t,<sp/>or</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>0,<sp/>if<sp/>none<sp/>was<sp/>found.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">uintmax_t<sp/>streamtoumax(FILE*<sp/>s,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>base);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Parse<sp/>a<sp/>file<sp/>stream<sp/>according<sp/>to<sp/>the<sp/>given<sp/>format.<sp/>See<sp/>the<sp/>fscanf<sp/>manpage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>for<sp/>more<sp/>information,<sp/>as<sp/>this<sp/>function<sp/>attempts<sp/>to<sp/>mimic<sp/>its<sp/>behavior.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Note<sp/>that<sp/>scientific<sp/>loating-point<sp/>notation<sp/>is<sp/>not<sp/>supported.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fscanf(FILE*<sp/>stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*format,<sp/>...);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Parse<sp/>a<sp/>file<sp/>stream<sp/>according<sp/>to<sp/>the<sp/>given<sp/>format.<sp/>See<sp/>the<sp/>fscanf<sp/>manpage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/>for<sp/>more<sp/>information,<sp/>as<sp/>this<sp/>function<sp/>attempts<sp/>to<sp/>mimic<sp/>its<sp/>behavior.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Note<sp/>that<sp/>scientific<sp/>loating-point<sp/>notation<sp/>is<sp/>not<sp/>supported.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>vfscanf(FILE*<sp/>stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*format,<sp/>va_list<sp/>ap);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>file<sp/>at<sp/>the<sp/>specified<sp/>path.<sp/>See<sp/>the<sp/>creat<sp/>manpage<sp/>for<sp/>more<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>information,<sp/>as<sp/>this<sp/>function<sp/>attempts<sp/>to<sp/>mimic<sp/>its<sp/>behavior.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>creat(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pathname,<sp/>mode_t<sp/><ref refid="pgedit_8cpp_1afc03cf3e39248c2e339fee4d31f5f750" kindref="member">mode</ref>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Convert<sp/>the<sp/>specified<sp/>C-String<sp/>to<sp/>a<sp/>float.<sp/>Returns<sp/>the<sp/>first<sp/>parsed<sp/>float,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>or<sp/>0.0<sp/>if<sp/>no<sp/>floating<sp/>point<sp/>value<sp/>could<sp/>be<sp/>found.<sp/>Note<sp/>that<sp/>scientific</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/>floating-point<sp/>notation<sp/>is<sp/>not<sp/>supported.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>strtofloat(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>s);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>EMBEDDED</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>TESSERACT_CCUTIL_SCANUTILS_H_</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/ccutil/scanutils.h"/>
+  </compounddef>
+</doxygen>

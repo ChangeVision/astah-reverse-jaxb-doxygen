@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_conv_net_char_classifier" kind="class" prot="public">
+    <compoundname>tesseract::ConvNetCharClassifier</compoundname>
+    <basecompoundref refid="classtesseract_1_1_char_classifier" prot="public" virt="non-virtual">tesseract::CharClassifier</basecompoundref>
+    <includes refid="conv__net__classifier_8h" local="no">conv_net_classifier.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_conv_net_char_classifier_1a1de0a83b8ac375ea82ce536a37ec9a49" prot="private" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_neural_net" kindref="compound">tesseract::NeuralNet</ref> *</type>
+        <definition>tesseract::NeuralNet* tesseract::ConvNetCharClassifier::char_net_</definition>
+        <argsstring></argsstring>
+        <name>char_net_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.h" line="74" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_conv_net_char_classifier_1a54e41bd573492ef484975bf8895d6f2d" prot="private" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* tesseract::ConvNetCharClassifier::net_input_</definition>
+        <argsstring></argsstring>
+        <name>net_input_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.h" line="76" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_conv_net_char_classifier_1a2cf43269ea02a940a01a0524a10a711b" prot="private" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* tesseract::ConvNetCharClassifier::net_output_</definition>
+        <argsstring></argsstring>
+        <name>net_output_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.h" line="77" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_conv_net_char_classifier_1a1ee09e5790b8d690fe995f3235ca0f14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::ConvNetCharClassifier::ConvNetCharClassifier</definition>
+        <argsstring>(CharSet *char_set, TuningParams *params, FeatureBase *feat_extract)</argsstring>
+        <name>ConvNetCharClassifier</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_char_set" kindref="compound">CharSet</ref> *</type>
+          <declname>char_set</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_tuning_params" kindref="compound">TuningParams</ref> *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_feature_base" kindref="compound">FeatureBase</ref> *</type>
+          <declname>feat_extract</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.h" line="50" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.cpp" bodystart="38" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_conv_net_char_classifier_1a70d83d9eecbde1c1aca3e3682aa05c09" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>tesseract::ConvNetCharClassifier::~ConvNetCharClassifier</definition>
+        <argsstring>()</argsstring>
+        <name>~ConvNetCharClassifier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.h" line="52" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.cpp" bodystart="47" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_conv_net_char_classifier_1a451b0a0301ad22b5644e554dc65a6279" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::ConvNetCharClassifier::Train</definition>
+        <argsstring>(CharSamp *char_samp, int ClassID)</argsstring>
+        <name>Train</name>
+        <reimplements refid="classtesseract_1_1_char_classifier_1a3ee7b00c9999051a92426b6de0bc7e5d">Train</reimplements>
+        <param>
+          <type><ref refid="classtesseract_1_1_char_samp" kindref="compound">CharSamp</ref> *</type>
+          <declname>char_samp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ClassID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.h" line="56" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.cpp" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_conv_net_char_classifier_1ab3552a6a9eae46ff0cdd99c3118a2343" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::ConvNetCharClassifier::SetLearnParam</definition>
+        <argsstring>(char *var_name, float val)</argsstring>
+        <name>SetLearnParam</name>
+        <reimplements refid="classtesseract_1_1_char_classifier_1ab2c1ff04d245d64d7900afefae9ef842">SetLearnParam</reimplements>
+        <param>
+          <type>char *</type>
+          <declname>var_name</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.h" line="60" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.cpp" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_conv_net_char_classifier_1a15f44fc0bf7d6dd5cdd25608a84a239b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ConvNetCharClassifier::SetNet</definition>
+        <argsstring>(tesseract::NeuralNet *net)</argsstring>
+        <name>SetNet</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_neural_net" kindref="compound">tesseract::NeuralNet</ref> *</type>
+          <declname>net</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.h" line="62" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.cpp" bodystart="211" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_conv_net_char_classifier_1a9de324fdc6f2b71fd546ad9cd281223b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classtesseract_1_1_char_alt_list" kindref="compound">CharAltList</ref> *</type>
+        <definition>CharAltList * tesseract::ConvNetCharClassifier::Classify</definition>
+        <argsstring>(CharSamp *char_samp)</argsstring>
+        <name>Classify</name>
+        <reimplements refid="classtesseract_1_1_char_classifier_1ae133c2172d9bc6ae1726ae9a436755f1">Classify</reimplements>
+        <param>
+          <type><ref refid="classtesseract_1_1_char_samp" kindref="compound">CharSamp</ref> *</type>
+          <declname>char_samp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.h" line="66" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.cpp" bodystart="186" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_conv_net_char_classifier_1a6199a4f98c310f0b2593e95e860eacfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int tesseract::ConvNetCharClassifier::CharCost</definition>
+        <argsstring>(CharSamp *char_samp)</argsstring>
+        <name>CharCost</name>
+        <reimplements refid="classtesseract_1_1_char_classifier_1aa447f4775f256d36dab382f1bbb7b56c">CharCost</reimplements>
+        <param>
+          <type><ref refid="classtesseract_1_1_char_samp" kindref="compound">CharSamp</ref> *</type>
+          <declname>char_samp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.h" line="69" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.cpp" bodystart="177" bodyend="182"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtesseract_1_1_conv_net_char_classifier_1a0921c2dae9c3ab8521f0fc899ec82cb9" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::ConvNetCharClassifier::Init</definition>
+        <argsstring>(const string &amp;data_file_path, const string &amp;lang, LangModel *lang_mod)</argsstring>
+        <name>Init</name>
+        <reimplements refid="classtesseract_1_1_char_classifier_1a64532c78a06560da1fb9ed7d54d9309f">Init</reimplements>
+        <param>
+          <type>const string &amp;</type>
+          <declname>data_file_path</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>lang</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_lang_model" kindref="compound">LangModel</ref> *</type>
+          <declname>lang_mod</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.h" line="80" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.cpp" bodystart="288" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_conv_net_char_classifier_1a94258f5cc93e80ab684ea6fca0a262d6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::ConvNetCharClassifier::LoadNets</definition>
+        <argsstring>(const string &amp;data_file_path, const string &amp;lang)</argsstring>
+        <name>LoadNets</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>data_file_path</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>lang</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.h" line="83" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.cpp" bodystart="314" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_conv_net_char_classifier_1a8f1dba81ca28c3dfbb7845df72c22b64" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::ConvNetCharClassifier::LoadFoldingSets</definition>
+        <argsstring>(const string &amp;data_file_path, const string &amp;lang, LangModel *lang_mod)</argsstring>
+        <name>LoadFoldingSets</name>
+        <reimplements refid="classtesseract_1_1_char_classifier_1ada1bba5a3763258805be98302083eb8e">LoadFoldingSets</reimplements>
+        <param>
+          <type>const string &amp;</type>
+          <declname>data_file_path</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>lang</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_lang_model" kindref="compound">LangModel</ref> *</type>
+          <declname>lang_mod</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.h" line="85" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.cpp" bodystart="221" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_conv_net_char_classifier_1a5e8669b8dc206840e2fdbc5f61bf1653" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void tesseract::ConvNetCharClassifier::Fold</definition>
+        <argsstring>()</argsstring>
+        <name>Fold</name>
+        <reimplements refid="classtesseract_1_1_char_classifier_1a38059a0e194a7e1ab1099f15bb0c4a87">Fold</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.h" line="89" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.cpp" bodystart="80" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_conv_net_char_classifier_1a00ffbd5d2fee641b5aba60f30c068acb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::ConvNetCharClassifier::RunNets</definition>
+        <argsstring>(CharSamp *char_samp)</argsstring>
+        <name>RunNets</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_char_samp" kindref="compound">CharSamp</ref> *</type>
+          <declname>char_samp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.h" line="91" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.cpp" bodystart="130" bodyend="174"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="642">
+        <label>tesseract::ConvNetCharClassifier</label>
+        <link refid="classtesseract_1_1_conv_net_char_classifier"/>
+        <childnode refid="643" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="643">
+        <label>tesseract::CharClassifier</label>
+        <link refid="classtesseract_1_1_char_classifier"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="646">
+        <label>tesseract::TuningParams</label>
+        <link refid="classtesseract_1_1_tuning_params"/>
+      </node>
+      <node id="644">
+        <label>tesseract::ConvNetCharClassifier</label>
+        <link refid="classtesseract_1_1_conv_net_char_classifier"/>
+        <childnode refid="645" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="645">
+        <label>tesseract::CharClassifier</label>
+        <link refid="classtesseract_1_1_char_classifier"/>
+        <childnode refid="646" relation="usage">
+          <edgelabel>params_</edgelabel>
+        </childnode>
+        <childnode refid="647" relation="usage">
+          <edgelabel>feat_extract_</edgelabel>
+        </childnode>
+        <childnode refid="648" relation="usage">
+          <edgelabel>char_set_</edgelabel>
+        </childnode>
+      </node>
+      <node id="648">
+        <label>tesseract::CharSet</label>
+        <link refid="classtesseract_1_1_char_set"/>
+      </node>
+      <node id="647">
+        <label>tesseract::FeatureBase</label>
+        <link refid="classtesseract_1_1_feature_base"/>
+        <childnode refid="646" relation="usage">
+          <edgelabel>params_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.h" line="48" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/conv_net_classifier.h" bodystart="48" bodyend="92"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_char_classifier_1aaabb1acf1d7ebcd2b66e1f9796cc49dc" prot="protected" virt="non-virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>case_sensitive_</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1ac985e2cf1310211262590b0952ab2fa9" prot="public" virt="non-virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>CaseSensitive</name></member>
+      <member refid="classtesseract_1_1_conv_net_char_classifier_1a1de0a83b8ac375ea82ce536a37ec9a49" prot="private" virt="non-virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>char_net_</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1afbe25062436573d4a3b8c9e9936f6013" prot="protected" virt="non-virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>char_set_</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1a08c3672c2062828c840d830c7a16639b" prot="public" virt="non-virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>CharClassifier</name></member>
+      <member refid="classtesseract_1_1_conv_net_char_classifier_1a6199a4f98c310f0b2593e95e860eacfc" prot="public" virt="virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>CharCost</name></member>
+      <member refid="classtesseract_1_1_conv_net_char_classifier_1a9de324fdc6f2b71fd546ad9cd281223b" prot="public" virt="virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>Classify</name></member>
+      <member refid="classtesseract_1_1_conv_net_char_classifier_1a1ee09e5790b8d690fe995f3235ca0f14" prot="public" virt="non-virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>ConvNetCharClassifier</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1ab8e30443f3f9a1d1e9ca5640608a47a8" prot="protected" virt="non-virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>feat_extract_</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1ae68e84dfd759cb08e82d2cee97abd3b2" prot="public" virt="non-virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>FeatureExtractor</name></member>
+      <member refid="classtesseract_1_1_conv_net_char_classifier_1a5e8669b8dc206840e2fdbc5f61bf1653" prot="private" virt="virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>Fold</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1aa00adf41e98123f259e463b037908db7" prot="protected" virt="non-virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>fold_set_cnt_</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1a883ce8cb0ee930611abcd061153a3be2" prot="protected" virt="non-virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>fold_set_len_</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1ad7acb8330f63320bb636c66d31b815dc" prot="protected" virt="non-virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>fold_sets_</name></member>
+      <member refid="classtesseract_1_1_conv_net_char_classifier_1a0921c2dae9c3ab8521f0fc899ec82cb9" prot="private" virt="virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>Init</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1ac5b9df929e2570650b263f0a1504125b" prot="protected" virt="non-virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>init_</name></member>
+      <member refid="classtesseract_1_1_conv_net_char_classifier_1a8f1dba81ca28c3dfbb7845df72c22b64" prot="private" virt="virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>LoadFoldingSets</name></member>
+      <member refid="classtesseract_1_1_conv_net_char_classifier_1a94258f5cc93e80ab684ea6fca0a262d6" prot="private" virt="non-virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>LoadNets</name></member>
+      <member refid="classtesseract_1_1_conv_net_char_classifier_1a54e41bd573492ef484975bf8895d6f2d" prot="private" virt="non-virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>net_input_</name></member>
+      <member refid="classtesseract_1_1_conv_net_char_classifier_1a2cf43269ea02a940a01a0524a10a711b" prot="private" virt="non-virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>net_output_</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1af2e7491d921d252957ae0ea4cdaf9aff" prot="protected" virt="non-virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>params_</name></member>
+      <member refid="classtesseract_1_1_conv_net_char_classifier_1a00ffbd5d2fee641b5aba60f30c068acb" prot="private" virt="non-virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>RunNets</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1a5480d01debdf57b4d2d2189c2c499e2d" prot="public" virt="non-virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>SetCaseSensitive</name></member>
+      <member refid="classtesseract_1_1_conv_net_char_classifier_1ab3552a6a9eae46ff0cdd99c3118a2343" prot="public" virt="virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>SetLearnParam</name></member>
+      <member refid="classtesseract_1_1_conv_net_char_classifier_1a15f44fc0bf7d6dd5cdd25608a84a239b" prot="public" virt="non-virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>SetNet</name></member>
+      <member refid="classtesseract_1_1_conv_net_char_classifier_1a451b0a0301ad22b5644e554dc65a6279" prot="public" virt="virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>Train</name></member>
+      <member refid="classtesseract_1_1_char_classifier_1afac874bedbc52b288b5e064bed170dce" prot="public" virt="virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>~CharClassifier</name></member>
+      <member refid="classtesseract_1_1_conv_net_char_classifier_1a70d83d9eecbde1c1aca3e3682aa05c09" prot="public" virt="virtual"><scope>tesseract::ConvNetCharClassifier</scope><name>~ConvNetCharClassifier</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,302 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_error_counter" kind="class" prot="public">
+    <compoundname>tesseract::ErrorCounter</compoundname>
+    <includes refid="errorcounter_8h" local="no">errorcounter.h</includes>
+    <innerclass refid="structtesseract_1_1_error_counter_1_1_counts" prot="private">tesseract::ErrorCounter::Counts</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_error_counter_1aa80a36a9f875a96a8f2856857950f2c6" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double tesseract::ErrorCounter::scaled_error_</definition>
+        <argsstring></argsstring>
+        <name>scaled_error_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/classify/errorcounter.h" line="188" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/errorcounter.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_error_counter_1a7b0fc88d57a137149b56837f109aacd4" prot="private" static="no" mutable="no">
+        <type><ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; Counts &gt;</type>
+        <definition>GenericVector&lt;Counts&gt; tesseract::ErrorCounter::font_counts_</definition>
+        <argsstring></argsstring>
+        <name>font_counts_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/classify/errorcounter.h" line="190" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/errorcounter.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_error_counter_1a534528cb319463cb4726612364b8227e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_g_e_n_e_r_i_c__2_d___a_r_r_a_y" kindref="compound">GENERIC_2D_ARRAY</ref>&lt; int &gt;</type>
+        <definition>GENERIC_2D_ARRAY&lt;int&gt; tesseract::ErrorCounter::unichar_counts_</definition>
+        <argsstring></argsstring>
+        <name>unichar_counts_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/classify/errorcounter.h" line="193" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/errorcounter.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classtesseract_1_1_error_counter_1acb9b56ec04616c94320adaad8add95a8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double tesseract::ErrorCounter::ComputeErrorRate</definition>
+        <argsstring>(ShapeClassifier *classifier, int report_level, CountTypes boosting_mode, const UnicityTable&lt; FontInfo &gt; &amp;fontinfo_table, const GenericVector&lt; Pix * &gt; &amp;page_images, SampleIterator *it, double *unichar_error, double *scaled_error, STRING *fonts_report)</argsstring>
+        <name>ComputeErrorRate</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_shape_classifier" kindref="compound">ShapeClassifier</ref> *</type>
+          <declname>classifier</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>report_level</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1acb0bc20d78b75745c9aa3832a619f4fd" kindref="member">CountTypes</ref></type>
+          <declname>boosting_mode</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_unicity_table" kindref="compound">UnicityTable</ref>&lt; <ref refid="structtesseract_1_1_font_info" kindref="compound">FontInfo</ref> &gt; &amp;</type>
+          <declname>fontinfo_table</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; Pix * &gt; &amp;</type>
+          <declname>page_images</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_sample_iterator" kindref="compound">SampleIterator</ref> *</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>unichar_error</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>scaled_error</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_t_r_i_n_g" kindref="compound">STRING</ref> *</type>
+          <declname>fonts_report</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/classify/errorcounter.h" line="116" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/errorcounter.cpp" bodystart="36" bodyend="90"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtesseract_1_1_error_counter_1addd5d73f8875872bbf185f2411779eab" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::ErrorCounter::ErrorCounter</definition>
+        <argsstring>(int charsetsize, int shapesize, int fontsize)</argsstring>
+        <name>ErrorCounter</name>
+        <param>
+          <type>int</type>
+          <declname>charsetsize</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>shapesize</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fontsize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/classify/errorcounter.h" line="137" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/errorcounter.cpp" bodystart="94" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_error_counter_1a3141539f9e005ff6d611d91bf3201753" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::ErrorCounter::~ErrorCounter</definition>
+        <argsstring>()</argsstring>
+        <name>~ErrorCounter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/classify/errorcounter.h" line="138" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/errorcounter.cpp" bodystart="99" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_error_counter_1a325fb246b9afa752cd9a49cdb56375c4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::ErrorCounter::AccumulateErrors</definition>
+        <argsstring>(bool debug, CountTypes boosting_mode, const UnicityTable&lt; FontInfo &gt; &amp;font_table, const ShapeTable &amp;shape_table, const GenericVector&lt; ShapeRating &gt; &amp;results, TrainingSample *sample)</argsstring>
+        <name>AccumulateErrors</name>
+        <param>
+          <type>bool</type>
+          <declname>debug</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1acb0bc20d78b75745c9aa3832a619f4fd" kindref="member">CountTypes</ref></type>
+          <declname>boosting_mode</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_unicity_table" kindref="compound">UnicityTable</ref>&lt; <ref refid="structtesseract_1_1_font_info" kindref="compound">FontInfo</ref> &gt; &amp;</type>
+          <declname>font_table</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classtesseract_1_1_shape_table" kindref="compound">ShapeTable</ref> &amp;</type>
+          <declname>shape_table</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; <ref refid="structtesseract_1_1_shape_rating" kindref="compound">ShapeRating</ref> &gt; &amp;</type>
+          <declname>results</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_training_sample" kindref="compound">TrainingSample</ref> *</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/classify/errorcounter.h" line="147" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/errorcounter.cpp" bodystart="109" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_error_counter_1a57a2b7fa3929c02daf0c61671b400f1c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ErrorCounter::AccumulateJunk</definition>
+        <argsstring>(const ShapeTable &amp;shape_table, const GenericVector&lt; ShapeRating &gt; &amp;results, TrainingSample *sample)</argsstring>
+        <name>AccumulateJunk</name>
+        <param>
+          <type>const <ref refid="classtesseract_1_1_shape_table" kindref="compound">ShapeTable</ref> &amp;</type>
+          <declname>shape_table</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; <ref refid="structtesseract_1_1_shape_rating" kindref="compound">ShapeRating</ref> &gt; &amp;</type>
+          <declname>results</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_training_sample" kindref="compound">TrainingSample</ref> *</type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/classify/errorcounter.h" line="155" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/errorcounter.cpp" bodystart="207" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_error_counter_1a6c3a300b8fcdcde7322c638a4464ebdd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double tesseract::ErrorCounter::ReportErrors</definition>
+        <argsstring>(int report_level, CountTypes boosting_mode, const UnicityTable&lt; FontInfo &gt; &amp;fontinfo_table, const SampleIterator &amp;it, double *unichar_error, STRING *fonts_report)</argsstring>
+        <name>ReportErrors</name>
+        <param>
+          <type>int</type>
+          <declname>report_level</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1acb0bc20d78b75745c9aa3832a619f4fd" kindref="member">CountTypes</ref></type>
+          <declname>boosting_mode</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_unicity_table" kindref="compound">UnicityTable</ref>&lt; <ref refid="structtesseract_1_1_font_info" kindref="compound">FontInfo</ref> &gt; &amp;</type>
+          <declname>fontinfo_table</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classtesseract_1_1_sample_iterator" kindref="compound">SampleIterator</ref> &amp;</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>unichar_error</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_t_r_i_n_g" kindref="compound">STRING</ref> *</type>
+          <declname>fonts_report</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/classify/errorcounter.h" line="171" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/errorcounter.cpp" bodystart="241" bodyend="307"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classtesseract_1_1_error_counter_1a3b1887bb6b42c987343dda306d424ed4" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::ErrorCounter::ReportString</definition>
+        <argsstring>(const Counts &amp;counts, STRING *report)</argsstring>
+        <name>ReportString</name>
+        <param>
+          <type>const Counts &amp;</type>
+          <declname>counts</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_t_r_i_n_g" kindref="compound">STRING</ref> *</type>
+          <declname>report</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/classify/errorcounter.h" line="180" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/errorcounter.cpp" bodystart="312" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_error_counter_1ab4222c2d9894873a79fa75439ae8ed85" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::ErrorCounter::ComputeRates</definition>
+        <argsstring>(const Counts &amp;counts, double rates[CT_SIZE])</argsstring>
+        <name>ComputeRates</name>
+        <param>
+          <type>const Counts &amp;</type>
+          <declname>counts</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rates</declname>
+          <array>[CT_SIZE]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/classify/errorcounter.h" line="184" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/errorcounter.cpp" bodystart="352" bodyend="369"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/makoto/Desktop/trunk/classify/errorcounter.h" line="88" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/errorcounter.h" bodystart="88" bodyend="194"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_error_counter_1a325fb246b9afa752cd9a49cdb56375c4" prot="private" virt="non-virtual"><scope>tesseract::ErrorCounter</scope><name>AccumulateErrors</name></member>
+      <member refid="classtesseract_1_1_error_counter_1a57a2b7fa3929c02daf0c61671b400f1c" prot="private" virt="non-virtual"><scope>tesseract::ErrorCounter</scope><name>AccumulateJunk</name></member>
+      <member refid="classtesseract_1_1_error_counter_1acb9b56ec04616c94320adaad8add95a8" prot="public" virt="non-virtual"><scope>tesseract::ErrorCounter</scope><name>ComputeErrorRate</name></member>
+      <member refid="classtesseract_1_1_error_counter_1ab4222c2d9894873a79fa75439ae8ed85" prot="private" virt="non-virtual"><scope>tesseract::ErrorCounter</scope><name>ComputeRates</name></member>
+      <member refid="classtesseract_1_1_error_counter_1addd5d73f8875872bbf185f2411779eab" prot="private" virt="non-virtual"><scope>tesseract::ErrorCounter</scope><name>ErrorCounter</name></member>
+      <member refid="classtesseract_1_1_error_counter_1a7b0fc88d57a137149b56837f109aacd4" prot="private" virt="non-virtual"><scope>tesseract::ErrorCounter</scope><name>font_counts_</name></member>
+      <member refid="classtesseract_1_1_error_counter_1a6c3a300b8fcdcde7322c638a4464ebdd" prot="private" virt="non-virtual"><scope>tesseract::ErrorCounter</scope><name>ReportErrors</name></member>
+      <member refid="classtesseract_1_1_error_counter_1a3b1887bb6b42c987343dda306d424ed4" prot="private" virt="non-virtual"><scope>tesseract::ErrorCounter</scope><name>ReportString</name></member>
+      <member refid="classtesseract_1_1_error_counter_1aa80a36a9f875a96a8f2856857950f2c6" prot="private" virt="non-virtual"><scope>tesseract::ErrorCounter</scope><name>scaled_error_</name></member>
+      <member refid="classtesseract_1_1_error_counter_1a534528cb319463cb4726612364b8227e" prot="private" virt="non-virtual"><scope>tesseract::ErrorCounter</scope><name>unichar_counts_</name></member>
+      <member refid="classtesseract_1_1_error_counter_1a3141539f9e005ff6d611d91bf3201753" prot="private" virt="non-virtual"><scope>tesseract::ErrorCounter</scope><name>~ErrorCounter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

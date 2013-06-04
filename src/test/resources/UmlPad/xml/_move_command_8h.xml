@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_move_command_8h" kind="file">
+    <compoundname>MoveCommand.h</compoundname>
+    <includes local="no">Foundation/Foundation.h</includes>
+    <includes refid="_modify_command_8h" local="yes">ModifyCommand.h</includes>
+    <includedby refid="_create_relation_mode_8m" local="yes">Classes/CreateRelationMode.m</includedby>
+    <includedby refid="_move_command_8m" local="yes">Classes/MoveCommand.m</includedby>
+    <includedby refid="_move_mode_8m" local="yes">Classes/MoveMode.m</includedby>
+    <incdepgraph>
+      <node id="1595">
+        <label>ModifyCommand.h</label>
+        <link refid="_modify_command_8h"/>
+        <childnode refid="1594" relation="include">
+        </childnode>
+        <childnode refid="1596" relation="include">
+        </childnode>
+        <childnode refid="1597" relation="include">
+        </childnode>
+      </node>
+      <node id="1597">
+        <label>ViewElement.h</label>
+        <link refid="_view_element_8h"/>
+        <childnode refid="1598" relation="include">
+        </childnode>
+      </node>
+      <node id="1598">
+        <label>UIKit/UIKit.h</label>
+      </node>
+      <node id="1594">
+        <label>Foundation/Foundation.h</label>
+      </node>
+      <node id="1596">
+        <label>Command.h</label>
+        <link refid="_command_8h"/>
+        <childnode refid="1594" relation="include">
+        </childnode>
+      </node>
+      <node id="1593">
+        <label>Classes/MoveCommand.h</label>
+        <link refid="MoveCommand.h"/>
+        <childnode refid="1594" relation="include">
+        </childnode>
+        <childnode refid="1595" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1602">
+        <label>Classes/MoveMode.m</label>
+        <link refid="_move_mode_8m"/>
+      </node>
+      <node id="1600">
+        <label>Classes/CreateRelationMode.m</label>
+        <link refid="_create_relation_mode_8m"/>
+      </node>
+      <node id="1599">
+        <label>Classes/MoveCommand.h</label>
+        <link refid="MoveCommand.h"/>
+        <childnode refid="1600" relation="include">
+        </childnode>
+        <childnode refid="1601" relation="include">
+        </childnode>
+        <childnode refid="1602" relation="include">
+        </childnode>
+      </node>
+      <node id="1601">
+        <label>Classes/MoveCommand.m</label>
+        <link refid="_move_command_8m"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="interface_move_command" prot="public">MoveCommand</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>MoveCommand.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>UmlPad</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>梅田<sp/>政利<sp/>on<sp/>10/06/17.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>2010<sp/>Change<sp/>Vision.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;Foundation/Foundation.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;<ref refid="_modify_command_8h" kindref="compound">ModifyCommand.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="interface_move_command" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_move_command" kindref="compound">MoveCommand</ref><sp/>:<sp/><ref refid="interface_modify_command" kindref="compound">ModifyCommand</ref><sp/>{</highlight></codeline>
+<codeline lineno="13" refid="interface_move_command_1a9fe095bf2ff12336affbe5cd1ce82e5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGPoint<sp/><ref refid="interface_move_command_1a9fe095bf2ff12336affbe5cd1ce82e5d" kindref="member">from</ref>;</highlight></codeline>
+<codeline lineno="14" refid="interface_move_command_1a699117d940224feddbec913bc61941a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>CGPoint<sp/><ref refid="interface_move_command_1a699117d940224feddbec913bc61941a2" kindref="member">to</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(nonatomic)<sp/>CGPoint<sp/>from;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(nonatomic)<sp/>CGPoint<sp/>to;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">-<sp/>(void)move:(<ref refid="interface_view_element" kindref="compound">ViewElement</ref><sp/>*)ve<sp/>from:(CGPoint)fromPoint<sp/>to:(CGPoint)toPoint;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/MoveCommand.h"/>
+  </compounddef>
+</doxygen>

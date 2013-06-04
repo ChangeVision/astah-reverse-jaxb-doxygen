@@ -1,0 +1,352 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classcom_1_1google_1_1scrollview_1_1_scroll_view" kind="class" prot="public">
+    <compoundname>com::google::scrollview::ScrollView</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1_scroll_view_1a43b2942a0675f6f9dcc57217d55f9cbc" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int com.google.scrollview.ScrollView.SERVER_PORT</definition>
+        <argsstring></argsstring>
+        <name>SERVER_PORT</name>
+        <initializer>= 8461</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The port our server listens at. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" line="35" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1_scroll_view_1aac16ae2d03b26eee5bd288ad91812204" prot="public" static="yes" mutable="no">
+        <type>BufferedReader</type>
+        <definition>BufferedReader com.google.scrollview.ScrollView.in</definition>
+        <argsstring></argsstring>
+        <name>in</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" line="44" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1_scroll_view_1ab284c4c9152023eebcf656c630cb92a3" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float com.google.scrollview.ScrollView.polylineXCoords[]</definition>
+        <argsstring>[]</argsstring>
+        <name>polylineXCoords</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" line="45" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1_scroll_view_1af604d688c6ab97996e604463307dceff" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float com.google.scrollview.ScrollView.polylineYCoords[]</definition>
+        <argsstring>[]</argsstring>
+        <name>polylineYCoords</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" line="46" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1_scroll_view_1a816aefc61caabff276d9b071dde33af3" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int com.google.scrollview.ScrollView.polylineSize</definition>
+        <argsstring></argsstring>
+        <name>polylineSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" line="47" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1_scroll_view_1a1e56734197aec76d9d7f07d3a9197efe" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int com.google.scrollview.ScrollView.polylineScanned</definition>
+        <argsstring></argsstring>
+        <name>polylineScanned</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" line="48" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1_scroll_view_1abc24469621f6ecdbec844ec2b68cf144" prot="private" static="yes" mutable="no">
+        <type>Socket</type>
+        <definition>Socket com.google.scrollview.ScrollView.socket</definition>
+        <argsstring></argsstring>
+        <name>socket</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>All SVWindow objects share the same connection stream. The socket is needed to detect when the connection got closed, in/out are used to send and receive messages. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" line="42" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1_scroll_view_1a0a5217fedbe957264772e37f229f64a2" prot="private" static="yes" mutable="no">
+        <type>PrintStream</type>
+        <definition>PrintStream com.google.scrollview.ScrollView.out</definition>
+        <argsstring></argsstring>
+        <name>out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" line="43" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1_scroll_view_1a9e5a73debbd48334b98541cf1458c785" prot="private" static="yes" mutable="no">
+        <type>ArrayList&lt; <ref refid="classcom_1_1google_1_1scrollview_1_1ui_1_1_s_v_window" kindref="compound">SVWindow</ref> &gt;</type>
+        <definition>ArrayList&lt;SVWindow&gt; com.google.scrollview.ScrollView.windows</definition>
+        <argsstring></argsstring>
+        <name>windows</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" line="49" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1_scroll_view_1a9c6d984515c29926d7a9d7d9f600d4cd" prot="private" static="yes" mutable="no">
+        <type>Pattern</type>
+        <definition>Pattern com.google.scrollview.ScrollView.intPattern</definition>
+        <argsstring></argsstring>
+        <name>intPattern</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" line="50" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1_scroll_view_1af6adb01fc2e8c5409db1aa77b50550fb" prot="private" static="yes" mutable="no">
+        <type>Pattern</type>
+        <definition>Pattern com.google.scrollview.ScrollView.floatPattern</definition>
+        <argsstring></argsstring>
+        <name>floatPattern</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" line="51" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1_scroll_view_1ae45271fa8d10c43f7ec273bb2f4fc633" prot="package" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int com.google.scrollview.ScrollView.nrInputLines</definition>
+        <argsstring></argsstring>
+        <name>nrInputLines</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Keeps track of the number of messages received. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" line="54" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1google_1_1scrollview_1_1_scroll_view_1af8c407440cb634642792ab2aad1e85e5" prot="package" static="yes" mutable="no">
+        <type>boolean</type>
+        <definition>boolean com.google.scrollview.ScrollView.debugViewNetworkTraffic</definition>
+        <argsstring></argsstring>
+        <name>debugViewNetworkTraffic</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints all received messages to the console if true. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" line="57" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1_scroll_view_1aa8095da786782f4a59fa7113f42c84b7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.google.scrollview.ScrollView.addMessage</definition>
+        <argsstring>(SVEvent e)</argsstring>
+        <name>addMessage</name>
+        <param>
+          <type><ref refid="classcom_1_1google_1_1scrollview_1_1events_1_1_s_v_event" kindref="compound">SVEvent</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a new message to the outgoing queue </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" line="60" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" bodystart="60" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1_scroll_view_1a3ccb05a47d9c521d7fc6932b0e3ef5c8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String com.google.scrollview.ScrollView.receiveMessage</definition>
+        <argsstring>()</argsstring>
+        <name>receiveMessage</name>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read one message from client (assuming there are any). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" line="83" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" bodystart="83" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1_scroll_view_1a290dda667770c72642610da70332d5e0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.google.scrollview.ScrollView.exit</definition>
+        <argsstring>()</argsstring>
+        <name>exit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called from the client to make the server exit. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" line="379" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" bodystart="379" bodyend="381"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1_scroll_view_1ae740a4c5b154eef9c9d6831dec5fda7d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.google.scrollview.ScrollView.main</definition>
+        <argsstring>(String[] args)</argsstring>
+        <name>main</name>
+        <param>
+          <type>String[]</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The main function. Sets up LUA and the server connection and then calls the IOLoop. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" line="387" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" bodystart="387" bodyend="420"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1_scroll_view_1ad492c23ea08e79847dd678add9ade9a7" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.google.scrollview.ScrollView.IOLoop</definition>
+        <argsstring>()</argsstring>
+        <name>IOLoop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The main program loop. Basically loops trough receiving messages and processing them and then sending messages (if there are any). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" line="91" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" bodystart="91" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1_scroll_view_1a8796110839c343a021ef8efa46980a72" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.google.scrollview.ScrollView.parseArguments</definition>
+        <argsstring>(String argList, ArrayList&lt; Integer &gt; intList, ArrayList&lt; Float &gt; floatList, ArrayList&lt; String &gt; stringList, ArrayList&lt; Boolean &gt; boolList)</argsstring>
+        <name>parseArguments</name>
+        <param>
+          <type>String</type>
+          <declname>argList</declname>
+        </param>
+        <param>
+          <type>ArrayList&lt; Integer &gt;</type>
+          <declname>intList</declname>
+        </param>
+        <param>
+          <type>ArrayList&lt; Float &gt;</type>
+          <declname>floatList</declname>
+        </param>
+        <param>
+          <type>ArrayList&lt; String &gt;</type>
+          <declname>stringList</declname>
+        </param>
+        <param>
+          <type>ArrayList&lt; Boolean &gt;</type>
+          <declname>boolList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" line="160" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" bodystart="160" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1google_1_1scrollview_1_1_scroll_view_1add72add1b37f50a30acc83d5ef977e64" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.google.scrollview.ScrollView.processInput</definition>
+        <argsstring>(String inputLine)</argsstring>
+        <name>processInput</name>
+        <param>
+          <type>String</type>
+          <declname>inputLine</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Executes the LUA command parsed as parameter. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" line="230" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" bodystart="230" bodyend="376"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="classcom_1_1google_1_1scrollview_1_1_scroll_view" kindref="compound">ScrollView</ref> class is the main class which gets started from the command line. It sets up LUA and handles the network processing. <simplesect kind="author"><para><ulink url="mailto:wanke@google.com">wanke@google.com</ulink> </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="1806">
+        <label>BufferedReader</label>
+      </node>
+      <node id="1805">
+        <label>com.google.scrollview.ScrollView</label>
+        <link refid="classcom_1_1google_1_1scrollview_1_1_scroll_view"/>
+        <childnode refid="1806" relation="usage">
+          <edgelabel>in</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" line="32" column="1" bodyfile="/Users/makoto/Desktop/trunk/java/com/google/scrollview/ScrollView.java" bodystart="32" bodyend="421"/>
+    <listofallmembers>
+      <member refid="classcom_1_1google_1_1scrollview_1_1_scroll_view_1aa8095da786782f4a59fa7113f42c84b7" prot="public" virt="non-virtual"><scope>com::google::scrollview::ScrollView</scope><name>addMessage</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1_scroll_view_1af8c407440cb634642792ab2aad1e85e5" prot="package" virt="non-virtual"><scope>com::google::scrollview::ScrollView</scope><name>debugViewNetworkTraffic</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1_scroll_view_1a290dda667770c72642610da70332d5e0" prot="public" virt="non-virtual"><scope>com::google::scrollview::ScrollView</scope><name>exit</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1_scroll_view_1af6adb01fc2e8c5409db1aa77b50550fb" prot="private" virt="non-virtual"><scope>com::google::scrollview::ScrollView</scope><name>floatPattern</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1_scroll_view_1aac16ae2d03b26eee5bd288ad91812204" prot="public" virt="non-virtual"><scope>com::google::scrollview::ScrollView</scope><name>in</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1_scroll_view_1a9c6d984515c29926d7a9d7d9f600d4cd" prot="private" virt="non-virtual"><scope>com::google::scrollview::ScrollView</scope><name>intPattern</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1_scroll_view_1ad492c23ea08e79847dd678add9ade9a7" prot="private" virt="non-virtual"><scope>com::google::scrollview::ScrollView</scope><name>IOLoop</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1_scroll_view_1ae740a4c5b154eef9c9d6831dec5fda7d" prot="public" virt="non-virtual"><scope>com::google::scrollview::ScrollView</scope><name>main</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1_scroll_view_1ae45271fa8d10c43f7ec273bb2f4fc633" prot="package" virt="non-virtual"><scope>com::google::scrollview::ScrollView</scope><name>nrInputLines</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1_scroll_view_1a0a5217fedbe957264772e37f229f64a2" prot="private" virt="non-virtual"><scope>com::google::scrollview::ScrollView</scope><name>out</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1_scroll_view_1a8796110839c343a021ef8efa46980a72" prot="private" virt="non-virtual"><scope>com::google::scrollview::ScrollView</scope><name>parseArguments</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1_scroll_view_1a1e56734197aec76d9d7f07d3a9197efe" prot="public" virt="non-virtual"><scope>com::google::scrollview::ScrollView</scope><name>polylineScanned</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1_scroll_view_1a816aefc61caabff276d9b071dde33af3" prot="public" virt="non-virtual"><scope>com::google::scrollview::ScrollView</scope><name>polylineSize</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1_scroll_view_1ab284c4c9152023eebcf656c630cb92a3" prot="public" virt="non-virtual"><scope>com::google::scrollview::ScrollView</scope><name>polylineXCoords</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1_scroll_view_1af604d688c6ab97996e604463307dceff" prot="public" virt="non-virtual"><scope>com::google::scrollview::ScrollView</scope><name>polylineYCoords</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1_scroll_view_1add72add1b37f50a30acc83d5ef977e64" prot="private" virt="non-virtual"><scope>com::google::scrollview::ScrollView</scope><name>processInput</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1_scroll_view_1a3ccb05a47d9c521d7fc6932b0e3ef5c8" prot="public" virt="non-virtual"><scope>com::google::scrollview::ScrollView</scope><name>receiveMessage</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1_scroll_view_1a43b2942a0675f6f9dcc57217d55f9cbc" prot="public" virt="non-virtual"><scope>com::google::scrollview::ScrollView</scope><name>SERVER_PORT</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1_scroll_view_1abc24469621f6ecdbec844ec2b68cf144" prot="private" virt="non-virtual"><scope>com::google::scrollview::ScrollView</scope><name>socket</name></member>
+      <member refid="classcom_1_1google_1_1scrollview_1_1_scroll_view_1a9e5a73debbd48334b98541cf1458c785" prot="private" virt="non-virtual"><scope>com::google::scrollview::ScrollView</scope><name>windows</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

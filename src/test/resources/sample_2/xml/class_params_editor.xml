@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="class_params_editor" kind="class" prot="public">
+    <compoundname>ParamsEditor</compoundname>
+    <basecompoundref refid="class_s_v_event_handler" prot="public" virt="non-virtual">SVEventHandler</basecompoundref>
+    <includes refid="paramsd_8h" local="no">paramsd.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_params_editor_1a537ce522b8661498ca6fcd5cd5129cdf" prot="private" static="no" mutable="no">
+        <type><ref refid="class_scroll_view" kindref="compound">ScrollView</ref> *</type>
+        <definition>ScrollView* ParamsEditor::sv_window_</definition>
+        <argsstring></argsstring>
+        <name>sv_window_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/paramsd.h" line="120" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/paramsd.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_params_editor_1a2d617405ae4bcdfc977aa7d77e4ea27a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ParamsEditor::ParamsEditor</definition>
+        <argsstring>(tesseract::Tesseract *, ScrollView *sv=NULL)</argsstring>
+        <name>ParamsEditor</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_tesseract" kindref="compound">tesseract::Tesseract</ref> *</type>
+          <defname>tess</defname>
+        </param>
+        <param>
+          <type><ref refid="class_scroll_view" kindref="compound">ScrollView</ref> *</type>
+          <declname>sv</declname>
+          <defval><ref refid="host_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/paramsd.h" line="96" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/paramsd.cpp" bodystart="289" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="class_params_editor_1abdb6c0426283a5270066c358c638489c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ParamsEditor::Notify</definition>
+        <argsstring>(const SVEvent *sve)</argsstring>
+        <name>Notify</name>
+        <reimplements refid="class_s_v_event_handler_1a7f4f886aeca11e15ceab97833f070887">Notify</reimplements>
+        <param>
+          <type>const <ref refid="struct_s_v_event" kindref="compound">SVEvent</ref> *</type>
+          <declname>sve</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/paramsd.h" line="99" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/paramsd.cpp" bodystart="269" bodyend="284"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_params_editor_1abb57f6f08d1e22a5809aa2e0a56b4a6d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParamsEditor::GetPrefixes</definition>
+        <argsstring>(const char *s, STRING *level_one, STRING *level_two, STRING *level_three)</argsstring>
+        <name>GetPrefixes</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_t_r_i_n_g" kindref="compound">STRING</ref> *</type>
+          <declname>level_one</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_t_r_i_n_g" kindref="compound">STRING</ref> *</type>
+          <declname>level_two</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_t_r_i_n_g" kindref="compound">STRING</ref> *</type>
+          <declname>level_three</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/paramsd.h" line="104" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/paramsd.cpp" bodystart="171" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="class_params_editor_1a1e3c320505c4f609ecc784a6c6d4d550" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParamsEditor::GetFirstWords</definition>
+        <argsstring>(const char *s, int n, char *t)</argsstring>
+        <name>GetFirstWords</name>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/paramsd.h" line="109" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/paramsd.cpp" bodystart="97" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_params_editor_1a7c13da028f7e31b342257e41a0aadb7b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_s_v_menu_node" kindref="compound">SVMenuNode</ref> *</type>
+        <definition>SVMenuNode * ParamsEditor::BuildListOfAllLeaves</definition>
+        <argsstring>(tesseract::Tesseract *tess)</argsstring>
+        <name>BuildListOfAllLeaves</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_tesseract" kindref="compound">tesseract::Tesseract</ref> *</type>
+          <declname>tess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/paramsd.h" line="115" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/paramsd.cpp" bodystart="196" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="class_params_editor_1a2acdd18b256f68e5a7465083cf3b01a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParamsEditor::WriteParams</definition>
+        <argsstring>(char *filename, bool changes_only)</argsstring>
+        <name>WriteParams</name>
+        <param>
+          <type>char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>changes_only</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/paramsd.h" line="118" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/paramsd.cpp" bodystart="323" bodyend="352"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1598">
+        <label>ParamsEditor</label>
+        <link refid="class_params_editor"/>
+        <childnode refid="1599" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1599">
+        <label>SVEventHandler</label>
+        <link refid="class_s_v_event_handler"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1600">
+        <label>ParamsEditor</label>
+        <link refid="class_params_editor"/>
+        <childnode refid="1601" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1601">
+        <label>SVEventHandler</label>
+        <link refid="class_s_v_event_handler"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/ccmain/paramsd.h" line="91" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/paramsd.h" bodystart="91" bodyend="121"/>
+    <listofallmembers>
+      <member refid="class_params_editor_1a7c13da028f7e31b342257e41a0aadb7b" prot="private" virt="non-virtual"><scope>ParamsEditor</scope><name>BuildListOfAllLeaves</name></member>
+      <member refid="class_params_editor_1a1e3c320505c4f609ecc784a6c6d4d550" prot="private" virt="non-virtual"><scope>ParamsEditor</scope><name>GetFirstWords</name></member>
+      <member refid="class_params_editor_1abb57f6f08d1e22a5809aa2e0a56b4a6d" prot="private" virt="non-virtual"><scope>ParamsEditor</scope><name>GetPrefixes</name></member>
+      <member refid="class_params_editor_1abdb6c0426283a5270066c358c638489c" prot="public" virt="virtual"><scope>ParamsEditor</scope><name>Notify</name></member>
+      <member refid="class_params_editor_1a2d617405ae4bcdfc977aa7d77e4ea27a" prot="public" virt="non-virtual"><scope>ParamsEditor</scope><name>ParamsEditor</name></member>
+      <member refid="class_params_editor_1a537ce522b8661498ca6fcd5cd5129cdf" prot="private" virt="non-virtual"><scope>ParamsEditor</scope><name>sv_window_</name></member>
+      <member refid="class_params_editor_1a2acdd18b256f68e5a7465083cf3b01a5" prot="private" virt="non-virtual"><scope>ParamsEditor</scope><name>WriteParams</name></member>
+      <member refid="class_s_v_event_handler_1a6e870a3288bdb825a875b3a7fe79f861" prot="public" virt="virtual"><scope>ParamsEditor</scope><name>~SVEventHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

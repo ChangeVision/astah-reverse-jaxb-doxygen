@@ -1,0 +1,733 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_tess_lang_model" kind="class" prot="public">
+    <compoundname>tesseract::TessLangModel</compoundname>
+    <basecompoundref refid="classtesseract_1_1_lang_model" prot="public" virt="non-virtual">tesseract::LangModel</basecompoundref>
+    <includes refid="tess__lang__model_8h" local="no">tess_lang_model.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_tess_lang_model_1a71332fca63ec2b5e9b98e7552eb20409" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="classtesseract_1_1_dawg" kindref="compound">Dawg</ref> *</type>
+        <definition>const Dawg * tesseract::TessLangModel::ood_dawg_</definition>
+        <argsstring></argsstring>
+        <name>ood_dawg_</name>
+        <initializer>= reinterpret_cast&lt;<ref refid="classtesseract_1_1_dawg" kindref="compound">Dawg</ref> *&gt;( 0 )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="76" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tess_lang_model_1a7d4bc89c805031418f7c76502daf053f" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="classtesseract_1_1_dawg" kindref="compound">Dawg</ref> *</type>
+        <definition>const Dawg * tesseract::TessLangModel::number_dawg_</definition>
+        <argsstring></argsstring>
+        <name>number_dawg_</name>
+        <initializer>= reinterpret_cast&lt;<ref refid="classtesseract_1_1_dawg" kindref="compound">Dawg</ref> *&gt;( 1 )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="77" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tess_lang_model_1a5974d88f50469f801180f783e785f49a" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::TessLangModel::num_state_machine_</definition>
+        <argsstring>[kStateCnt][kNumLiteralCnt]</argsstring>
+        <name>num_state_machine_</name>
+        <initializer>= {
+  {0, 1, 1,  -99 ,  -99 },
+  { -99 , 1, 1, 3, 2},
+  { -99 ,  -99 , 1,  -99 , 2},
+  { -99 ,  -99 , 3,  -99 , 2},
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="78" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tess_lang_model_1a829943e6c456d67f70ec4a3662f0718d" prot="private" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::TessLangModel::num_max_repeat_</definition>
+        <argsstring>[kStateCnt]</argsstring>
+        <name>num_max_repeat_</name>
+        <initializer>= {3, 32, 8, 3}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="79" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tess_lang_model_1aae9e28e0eabdf275a590f29754b63c17" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::TessLangModel::max_edge_</definition>
+        <argsstring></argsstring>
+        <name>max_edge_</name>
+        <initializer>= 4096</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="86" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tess_lang_model_1ad5ef3080e26ff8b68ff62e2dcf51cd31" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int tesseract::TessLangModel::max_ood_shape_cost_</definition>
+        <argsstring></argsstring>
+        <name>max_ood_shape_cost_</name>
+        <initializer>= <ref refid="classtesseract_1_1_cube_utils_1a0983096f5ebcb35879a1e0e6038c32f8" kindref="member">CubeUtils::Prob2Cost</ref>(1e-4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="87" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_tess_lang_model_1a9c12d2b0992fbb45ab71b0c72f30e357" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetesseract_1a8dc259fa09d9302b96f5b3d2aad10c9f" kindref="member">DawgVector</ref> *</type>
+        <definition>DawgVector* tesseract::TessLangModel::word_dawgs_</definition>
+        <argsstring></argsstring>
+        <name>word_dawgs_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="84" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tess_lang_model_1a93cf6e1120937af430280bc8eec6f69e" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string tesseract::TessLangModel::lead_punc_</definition>
+        <argsstring></argsstring>
+        <name>lead_punc_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="91" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tess_lang_model_1aabebfc7d0972cba25f46df3c05ac93f5" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string tesseract::TessLangModel::trail_punc_</definition>
+        <argsstring></argsstring>
+        <name>trail_punc_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="92" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tess_lang_model_1a2091686cd77cc3209e02c9712fb32354" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string tesseract::TessLangModel::num_lead_punc_</definition>
+        <argsstring></argsstring>
+        <name>num_lead_punc_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="93" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tess_lang_model_1ae9deca50dd41929720afdb962070772f" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string tesseract::TessLangModel::num_trail_punc_</definition>
+        <argsstring></argsstring>
+        <name>num_trail_punc_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="94" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tess_lang_model_1ade1dc382f493896d86f1872eee01e7df" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string tesseract::TessLangModel::operators_</definition>
+        <argsstring></argsstring>
+        <name>operators_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="95" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tess_lang_model_1aae68f57290cc45e1473471b742092d08" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string tesseract::TessLangModel::digits_</definition>
+        <argsstring></argsstring>
+        <name>digits_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="96" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tess_lang_model_1ae8e6b414844e2c5fb92659049aad6b48" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string tesseract::TessLangModel::alphas_</definition>
+        <argsstring></argsstring>
+        <name>alphas_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="97" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tess_lang_model_1a39898c4d34b504380a3fb541bb4c7790" prot="private" static="no" mutable="no">
+        <type>string *</type>
+        <definition>string* tesseract::TessLangModel::literal_str_[kNumLiteralCnt]</definition>
+        <argsstring>[kNumLiteralCnt]</argsstring>
+        <name>literal_str_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="101" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tess_lang_model_1a5564eb509d70006f56345516954d7790" prot="private" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_cube_reco_context" kindref="compound">CubeRecoContext</ref> *</type>
+        <definition>CubeRecoContext* tesseract::TessLangModel::cntxt_</definition>
+        <argsstring></argsstring>
+        <name>cntxt_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="104" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_tess_lang_model_1af9f81f39f35e0832c79d732edfba5050" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool tesseract::TessLangModel::has_case_</definition>
+        <argsstring></argsstring>
+        <name>has_case_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="105" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_tess_lang_model_1a23d5290b102bb43428957c4c4a96e6d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::TessLangModel::TessLangModel</definition>
+        <argsstring>(const string &amp;lm_params, const string &amp;data_file_path, bool load_system_dawg, TessdataManager *tessdata_manager, CubeRecoContext *cntxt)</argsstring>
+        <name>TessLangModel</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>lm_params</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>data_file_path</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>load_system_dawg</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_tessdata_manager" kindref="compound">TessdataManager</ref> *</type>
+          <declname>tessdata_manager</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_cube_reco_context" kindref="compound">CubeRecoContext</ref> *</type>
+          <declname>cntxt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="40" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.cpp" bodystart="60" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tess_lang_model_1a3976ab4c324b005b9165609e3b077dbc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::TessLangModel::~TessLangModel</definition>
+        <argsstring>()</argsstring>
+        <name>~TessLangModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="45" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" bodystart="45" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tess_lang_model_1a939ea7ad8b064d8167b3c7019bf82d9f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classtesseract_1_1_tess_lang_mod_edge" kindref="compound">TessLangModEdge</ref> *</type>
+        <definition>TessLangModEdge* tesseract::TessLangModel::Root</definition>
+        <argsstring>()</argsstring>
+        <name>Root</name>
+        <reimplements refid="classtesseract_1_1_lang_model_1a46178bf09d08aa9c8048adb0a8561b75">Root</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="53" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" bodystart="53" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tess_lang_model_1abd9a2fc77fe18caeb4a8f17020b460a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classtesseract_1_1_lang_mod_edge" kindref="compound">LangModEdge</ref> **</type>
+        <definition>LangModEdge ** tesseract::TessLangModel::GetEdges</definition>
+        <argsstring>(CharAltList *alt_list, LangModEdge *edge, int *edge_cnt)</argsstring>
+        <name>GetEdges</name>
+        <reimplements refid="classtesseract_1_1_lang_model_1a61071a0736427f808d7134aeeb456701">GetEdges</reimplements>
+        <param>
+          <type><ref refid="classtesseract_1_1_char_alt_list" kindref="compound">CharAltList</ref> *</type>
+          <declname>alt_list</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_lang_mod_edge" kindref="compound">LangModEdge</ref> *</type>
+          <declname>edge</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>edge_cnt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="60" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.cpp" bodystart="169" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tess_lang_model_1a2c303d6052f7b99c6b65a497592e5e2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TessLangModel::IsValidSequence</definition>
+        <argsstring>(const char_32 *sequence, bool eow_flag, LangModEdge **final_edge=NULL)</argsstring>
+        <name>IsValidSequence</name>
+        <reimplements refid="classtesseract_1_1_lang_model_1a8b2edb01fa6b82d7a0eba6fb28717494">IsValidSequence</reimplements>
+        <param>
+          <type>const <ref refid="namespacetesseract_1aea2c6172b0ca77907e29cd018595b425" kindref="member">char_32</ref> *</type>
+          <declname>sequence</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>eow_flag</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_lang_mod_edge" kindref="compound">LangModEdge</ref> **</type>
+          <declname>final_edge</declname>
+          <defval><ref refid="host_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="67" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.cpp" bodystart="145" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tess_lang_model_1ae012b6f6dec52e66ccc7b78fa8975b10" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TessLangModel::IsLeadingPunc</definition>
+        <argsstring>(char_32 ch)</argsstring>
+        <name>IsLeadingPunc</name>
+        <reimplements refid="classtesseract_1_1_lang_model_1ade13ad9a3c3f6bb19a1071aa20bffb4b">IsLeadingPunc</reimplements>
+        <param>
+          <type><ref refid="namespacetesseract_1aea2c6172b0ca77907e29cd018595b425" kindref="member">char_32</ref></type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="69" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.cpp" bodystart="154" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tess_lang_model_1aed986e1547e8faf18a522ef074e0413a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TessLangModel::IsTrailingPunc</definition>
+        <argsstring>(char_32 ch)</argsstring>
+        <name>IsTrailingPunc</name>
+        <reimplements refid="classtesseract_1_1_lang_model_1a0235bd607e1d0cd00082661e0b71d495">IsTrailingPunc</reimplements>
+        <param>
+          <type><ref refid="namespacetesseract_1aea2c6172b0ca77907e29cd018595b425" kindref="member">char_32</ref></type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="70" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.cpp" bodystart="158" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tess_lang_model_1a69d61128a73ddf1e9ce709a3808c6530" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TessLangModel::IsDigit</definition>
+        <argsstring>(char_32 ch)</argsstring>
+        <name>IsDigit</name>
+        <reimplements refid="classtesseract_1_1_lang_model_1aae119709c73d00d731c65588be763a1d">IsDigit</reimplements>
+        <param>
+          <type><ref refid="namespacetesseract_1aea2c6172b0ca77907e29cd018595b425" kindref="member">char_32</ref></type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="71" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.cpp" bodystart="162" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tess_lang_model_1a1fc3e4c81803a84dba0ff7dd1e0ec936" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessLangModel::RemoveInvalidCharacters</definition>
+        <argsstring>(string *lm_str)</argsstring>
+        <name>RemoveInvalidCharacters</name>
+        <param>
+          <type>string *</type>
+          <declname>lm_str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="73" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.cpp" bodystart="482" bodyend="505"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtesseract_1_1_tess_lang_model_1a0095e6183b6ab03424379b46d76c2527" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::TessLangModel::FanOut</definition>
+        <argsstring>(CharAltList *alt_list, const Dawg *dawg, EDGE_REF edge_ref, EDGE_REF edge_ref_mask, const char_32 *str, bool root_flag, LangModEdge **edge_array)</argsstring>
+        <name>FanOut</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_char_alt_list" kindref="compound">CharAltList</ref> *</type>
+          <declname>alt_list</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classtesseract_1_1_dawg" kindref="compound">Dawg</ref> *</type>
+          <declname>dawg</declname>
+        </param>
+        <param>
+          <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+          <declname>edge_ref</declname>
+        </param>
+        <param>
+          <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+          <declname>edge_ref_mask</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacetesseract_1aea2c6172b0ca77907e29cd018595b425" kindref="member">char_32</ref> *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>root_flag</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_lang_mod_edge" kindref="compound">LangModEdge</ref> **</type>
+          <declname>edge_array</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="108" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.cpp" bodystart="279" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tess_lang_model_1a72510f085662c8330517355a19639d74" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::TessLangModel::Edges</definition>
+        <argsstring>(const char *strng, const Dawg *dawg, EDGE_REF edge_ref, EDGE_REF edge_ref_mask, LangModEdge **edge_array)</argsstring>
+        <name>Edges</name>
+        <param>
+          <type>const char *</type>
+          <declname>strng</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classtesseract_1_1_dawg" kindref="compound">Dawg</ref> *</type>
+          <declname>dawg</declname>
+        </param>
+        <param>
+          <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+          <declname>edge_ref</declname>
+        </param>
+        <param>
+          <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+          <declname>edge_ref_mask</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_lang_mod_edge" kindref="compound">LangModEdge</ref> **</type>
+          <declname>edge_array</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="113" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.cpp" bodystart="231" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tess_lang_model_1a7324140a685252afe68afc20c54f2c65" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::TessLangModel::NumberEdges</definition>
+        <argsstring>(EDGE_REF edge_ref, LangModEdge **edge_array)</argsstring>
+        <name>NumberEdges</name>
+        <param>
+          <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+          <declname>edge_ref</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_lang_mod_edge" kindref="compound">LangModEdge</ref> **</type>
+          <declname>edge_array</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="117" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.cpp" bodystart="386" bodyend="432"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tess_lang_model_1ad76a1943ddf97defa7904cbe030b166d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::TessLangModel::OODEdges</definition>
+        <argsstring>(CharAltList *alt_list, EDGE_REF edge_ref, EDGE_REF edge_ref_mask, LangModEdge **edge_array)</argsstring>
+        <name>OODEdges</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_char_alt_list" kindref="compound">CharAltList</ref> *</type>
+          <declname>alt_list</declname>
+        </param>
+        <param>
+          <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+          <declname>edge_ref</declname>
+        </param>
+        <param>
+          <type><ref refid="dawg_8h_1a178eb445f9820b58d062f0c988a6f54f" kindref="member">EDGE_REF</ref></type>
+          <declname>edge_ref_mask</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_lang_mod_edge" kindref="compound">LangModEdge</ref> **</type>
+          <declname>edge_array</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="119" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.cpp" bodystart="257" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tess_lang_model_1a7baacaa7817107f69df20f977b22f46f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::TessLangModel::FreeEdges</definition>
+        <argsstring>(int edge_cnt, LangModEdge **edge_array)</argsstring>
+        <name>FreeEdges</name>
+        <param>
+          <type>int</type>
+          <declname>edge_cnt</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_lang_mod_edge" kindref="compound">LangModEdge</ref> **</type>
+          <declname>edge_array</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="122" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.cpp" bodystart="87" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tess_lang_model_1afba1d05b59af889257d6e0fa671e6839" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TessLangModel::IsValidSequence</definition>
+        <argsstring>(LangModEdge *edge, const char_32 *sequence, bool eow_flag, LangModEdge **final_edge)</argsstring>
+        <name>IsValidSequence</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_lang_mod_edge" kindref="compound">LangModEdge</ref> *</type>
+          <declname>edge</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacetesseract_1aea2c6172b0ca77907e29cd018595b425" kindref="member">char_32</ref> *</type>
+          <declname>sequence</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>eow_flag</declname>
+        </param>
+        <param>
+          <type><ref refid="classtesseract_1_1_lang_mod_edge" kindref="compound">LangModEdge</ref> **</type>
+          <declname>final_edge</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="127" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.cpp" bodystart="102" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tess_lang_model_1a554a36ab4c9e6668bbe660e8ae2e625c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::TessLangModel::LoadLangModelElements</definition>
+        <argsstring>(const string &amp;lm_params)</argsstring>
+        <name>LoadLangModelElements</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>lm_params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="131" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.cpp" bodystart="435" bodyend="480"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tess_lang_model_1a9f30fff5bc2f4e7d210119813928191b" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::TessLangModel::NumDawgs</definition>
+        <argsstring>() const </argsstring>
+        <name>NumDawgs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="134" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.cpp" bodystart="507" bodyend="510"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_tess_lang_model_1ad497654903dd8eac0f69a17c6f34af14" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classtesseract_1_1_dawg" kindref="compound">Dawg</ref> *</type>
+        <definition>const Dawg * tesseract::TessLangModel::GetDawg</definition>
+        <argsstring>(int index) const </argsstring>
+        <name>GetDawg</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="138" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.cpp" bodystart="514" bodyend="522"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2249">
+        <label>tesseract::TessLangModel</label>
+        <link refid="classtesseract_1_1_tess_lang_model"/>
+        <childnode refid="2250" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2250">
+        <label>tesseract::LangModel</label>
+        <link refid="classtesseract_1_1_lang_model"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2251">
+        <label>tesseract::TessLangModel</label>
+        <link refid="classtesseract_1_1_tess_lang_model"/>
+        <childnode refid="2252" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2252">
+        <label>tesseract::LangModel</label>
+        <link refid="classtesseract_1_1_lang_model"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" line="38" column="1" bodyfile="/Users/makoto/Desktop/trunk/cube/tess_lang_model.h" bodystart="38" bodyend="139"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_tess_lang_model_1ae8e6b414844e2c5fb92659049aad6b48" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>alphas_</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1a5564eb509d70006f56345516954d7790" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>cntxt_</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1aae68f57290cc45e1473471b742092d08" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>digits_</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1a72510f085662c8330517355a19639d74" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>Edges</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1a0095e6183b6ab03424379b46d76c2527" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>FanOut</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1a7baacaa7817107f69df20f977b22f46f" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>FreeEdges</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1ad497654903dd8eac0f69a17c6f34af14" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>GetDawg</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1abd9a2fc77fe18caeb4a8f17020b460a4" prot="public" virt="virtual"><scope>tesseract::TessLangModel</scope><name>GetEdges</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1af9f81f39f35e0832c79d732edfba5050" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>has_case_</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1a69d61128a73ddf1e9ce709a3808c6530" prot="public" virt="virtual"><scope>tesseract::TessLangModel</scope><name>IsDigit</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1ae012b6f6dec52e66ccc7b78fa8975b10" prot="public" virt="virtual"><scope>tesseract::TessLangModel</scope><name>IsLeadingPunc</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1aed986e1547e8faf18a522ef074e0413a" prot="public" virt="virtual"><scope>tesseract::TessLangModel</scope><name>IsTrailingPunc</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1a2c303d6052f7b99c6b65a497592e5e2e" prot="public" virt="virtual"><scope>tesseract::TessLangModel</scope><name>IsValidSequence</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1afba1d05b59af889257d6e0fa671e6839" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>IsValidSequence</name></member>
+      <member refid="classtesseract_1_1_lang_model_1abf2f207148aa4563bedc41dbd650bc10" prot="public" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>LangModel</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1a93cf6e1120937af430280bc8eec6f69e" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>lead_punc_</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1a39898c4d34b504380a3fb541bb4c7790" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>literal_str_</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1a554a36ab4c9e6668bbe660e8ae2e625c" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>LoadLangModelElements</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1aae9e28e0eabdf275a590f29754b63c17" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>max_edge_</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1ad5ef3080e26ff8b68ff62e2dcf51cd31" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>max_ood_shape_cost_</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1a2091686cd77cc3209e02c9712fb32354" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>num_lead_punc_</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1a829943e6c456d67f70ec4a3662f0718d" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>num_max_repeat_</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1a5974d88f50469f801180f783e785f49a" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>num_state_machine_</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1ae9deca50dd41929720afdb962070772f" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>num_trail_punc_</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1a7d4bc89c805031418f7c76502daf053f" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>number_dawg_</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1a7324140a685252afe68afc20c54f2c65" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>NumberEdges</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1a9f30fff5bc2f4e7d210119813928191b" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>NumDawgs</name></member>
+      <member refid="classtesseract_1_1_lang_model_1a99ff66ba44ba88d7b5e47ef779b4844d" prot="public" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>Numeric</name></member>
+      <member refid="classtesseract_1_1_lang_model_1a877e0ae377a2c2b3b2950b497ff1b772" prot="protected" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>numeric_enabled_</name></member>
+      <member refid="classtesseract_1_1_lang_model_1adf7be83dc2b85f86e126ca31ddf7e744" prot="public" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>OOD</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1a71332fca63ec2b5e9b98e7552eb20409" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>ood_dawg_</name></member>
+      <member refid="classtesseract_1_1_lang_model_1aafdf3a806f6fe7ffbe75d257ecbede56" prot="protected" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>ood_enabled_</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1ad76a1943ddf97defa7904cbe030b166d" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>OODEdges</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1ade1dc382f493896d86f1872eee01e7df" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>operators_</name></member>
+      <member refid="classtesseract_1_1_lang_model_1a3a8c70497813e15dbfc42f9990952b19" prot="public" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>Punc</name></member>
+      <member refid="classtesseract_1_1_lang_model_1a70621f842de37a67dd00e7c5a2d97877" prot="protected" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>punc_enabled_</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1a1fc3e4c81803a84dba0ff7dd1e0ec936" prot="public" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>RemoveInvalidCharacters</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1a939ea7ad8b064d8167b3c7019bf82d9f" prot="public" virt="virtual"><scope>tesseract::TessLangModel</scope><name>Root</name></member>
+      <member refid="classtesseract_1_1_lang_model_1a7612159b5eca3fd43eedfa9f68d3b79c" prot="public" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>SetNumeric</name></member>
+      <member refid="classtesseract_1_1_lang_model_1a6c4a21482e846de85722a7208240da66" prot="public" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>SetOOD</name></member>
+      <member refid="classtesseract_1_1_lang_model_1ab467aec7089e513e1e891828c7f9b4d3" prot="public" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>SetPunc</name></member>
+      <member refid="classtesseract_1_1_lang_model_1af2d51a52e748886fca42fa6b6f3d2b78" prot="public" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>SetWordList</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1a23d5290b102bb43428957c4c4a96e6d6" prot="public" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>TessLangModel</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1aabebfc7d0972cba25f46df3c05ac93f5" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>trail_punc_</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1a9c12d2b0992fbb45ab71b0c72f30e357" prot="private" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>word_dawgs_</name></member>
+      <member refid="classtesseract_1_1_lang_model_1aa62a12331a5be9099c7744b74eddeff2" prot="protected" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>word_list_enabled_</name></member>
+      <member refid="classtesseract_1_1_lang_model_1abd7c96a934e736cd3487f6340a1d4433" prot="public" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>WordList</name></member>
+      <member refid="classtesseract_1_1_lang_model_1afff28be0aa6c2451e8a0e32e7c88331f" prot="public" virt="virtual"><scope>tesseract::TessLangModel</scope><name>~LangModel</name></member>
+      <member refid="classtesseract_1_1_tess_lang_model_1a3976ab4c324b005b9165609e3b077dbc" prot="public" virt="non-virtual"><scope>tesseract::TessLangModel</scope><name>~TessLangModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

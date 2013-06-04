@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="indexmapbidi_8cpp" kind="file">
+    <compoundname>indexmapbidi.cpp</compoundname>
+    <includes refid="indexmapbidi_8h" local="yes">indexmapbidi.h</includes>
+    <incdepgraph>
+      <node id="17229">
+        <label>ndminx.h</label>
+        <link refid="ndminx_8h"/>
+      </node>
+      <node id="17221">
+        <label>stdlib.h</label>
+      </node>
+      <node id="17224">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="17225" relation="include">
+        </childnode>
+      </node>
+      <node id="17226">
+        <label>errcode.h</label>
+        <link refid="errcode_8h"/>
+        <childnode refid="17223" relation="include">
+        </childnode>
+      </node>
+      <node id="17225">
+        <label>limits.h</label>
+      </node>
+      <node id="17228">
+        <label>string.h</label>
+      </node>
+      <node id="17222">
+        <label>tesscallback.h</label>
+        <link refid="tesscallback_8h"/>
+        <childnode refid="17223" relation="include">
+        </childnode>
+      </node>
+      <node id="17220">
+        <label>genericvector.h</label>
+        <link refid="genericvector_8h"/>
+        <childnode refid="17219" relation="include">
+        </childnode>
+        <childnode refid="17221" relation="include">
+        </childnode>
+        <childnode refid="17222" relation="include">
+        </childnode>
+        <childnode refid="17226" relation="include">
+        </childnode>
+        <childnode refid="17227" relation="include">
+        </childnode>
+        <childnode refid="17229" relation="include">
+        </childnode>
+      </node>
+      <node id="17217">
+        <label>ccutil/indexmapbidi.cpp</label>
+        <link refid="indexmapbidi.cpp"/>
+        <childnode refid="17218" relation="include">
+        </childnode>
+      </node>
+      <node id="17223">
+        <label>host.h</label>
+        <link refid="host_8h"/>
+        <childnode refid="17224" relation="include">
+        </childnode>
+      </node>
+      <node id="17219">
+        <label>stdio.h</label>
+      </node>
+      <node id="17218">
+        <label>indexmapbidi.h</label>
+        <link refid="indexmapbidi_8h"/>
+        <childnode refid="17219" relation="include">
+        </childnode>
+        <childnode refid="17220" relation="include">
+        </childnode>
+      </node>
+      <node id="17227">
+        <label>helpers.h</label>
+        <link refid="helpers_8h"/>
+        <childnode refid="17219" relation="include">
+        </childnode>
+        <childnode refid="17228" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacetesseract">tesseract</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>indexmapbidi.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Description:<sp/>Bi-directional<sp/>mapping<sp/>between<sp/>a<sp/>sparse<sp/>and<sp/>compact<sp/>space.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/><sp/><sp/><sp/><sp/><sp/>rays@google.com<sp/>(Ray<sp/>Smith)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created:<sp/><sp/><sp/><sp/><sp/>Tue<sp/>Apr<sp/>06<sp/>11:33:59<sp/>PDT<sp/>2010</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(C)<sp/>Copyright<sp/>2010,<sp/>Google<sp/>Inc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="indexmapbidi_8h" kindref="compound">indexmapbidi.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetesseract-c__api-demo_1afed58feacb84df2de88bdd613cfdba6d" kindref="member">tesseract</ref><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SparseToCompact<sp/>takes<sp/>a<sp/>sparse<sp/>index<sp/>to<sp/>an<sp/>index<sp/>in<sp/>the<sp/>compact<sp/>space.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Uses<sp/>a<sp/>binary<sp/>search<sp/>to<sp/>find<sp/>the<sp/>result.<sp/>For<sp/>faster<sp/>speed<sp/>use</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>IndexMapBiDi,<sp/>but<sp/>that<sp/>takes<sp/>more<sp/>memory.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_index_map_1af6d980041372e85befb238aae69192c0" kindref="member">IndexMap::SparseToCompact</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sparse_index)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>result<sp/>=<sp/><ref refid="classtesseract_1_1_index_map_1a5089b80f1c2f365c07dc075da232aa89" kindref="member">compact_map_</ref>.<ref refid="class_generic_vector_1a2eaa0df35abb2c00571bb1d6e5d73377" kindref="member">binary_search</ref>(sparse_index);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_index_map_1a5089b80f1c2f365c07dc075da232aa89" kindref="member">compact_map_</ref>[result]<sp/>==<sp/>sparse_index<sp/>?<sp/>result<sp/>:<sp/>-1;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copy<sp/>from<sp/>the<sp/>input.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_index_map_1a838d73d3bb8c7e8a1b43761cf99f337d" kindref="member">IndexMap::CopyFrom</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>IndexMap&amp;<sp/>src)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_index_map_1ae3ff257a84297cf8c67ee4bb27e54194" kindref="member">sparse_size_</ref><sp/>=<sp/>src.sparse_size_;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_index_map_1a5089b80f1c2f365c07dc075da232aa89" kindref="member">compact_map_</ref><sp/>=<sp/>src.compact_map_;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_index_map_1a838d73d3bb8c7e8a1b43761cf99f337d" kindref="member">IndexMap::CopyFrom</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>IndexMapBiDi&amp;<sp/>src)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_index_map_1ae3ff257a84297cf8c67ee4bb27e54194" kindref="member">sparse_size_</ref><sp/>=<sp/>src.SparseSize();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_index_map_1a5089b80f1c2f365c07dc075da232aa89" kindref="member">compact_map_</ref><sp/>=<sp/>src.compact_map_;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Writes<sp/>to<sp/>the<sp/>given<sp/>file.<sp/>Returns<sp/>false<sp/>in<sp/>case<sp/>of<sp/>error.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_index_map_1a067894b455dcd2e3d013a9449e1aae7d" kindref="member">IndexMap::Serialize</ref>(FILE*<sp/>fp)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/>sparse_size<sp/>=<sp/><ref refid="classtesseract_1_1_index_map_1ae3ff257a84297cf8c67ee4bb27e54194" kindref="member">sparse_size_</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fwrite(&amp;sparse_size,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(sparse_size),<sp/>1,<sp/>fp)<sp/>!=<sp/>1)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classtesseract_1_1_index_map_1a5089b80f1c2f365c07dc075da232aa89" kindref="member">compact_map_</ref>.<ref refid="class_generic_vector_1a51aeec27092537323abc7174af1c16ef" kindref="member">Serialize</ref>(fp))<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Reads<sp/>from<sp/>the<sp/>given<sp/>file.<sp/>Returns<sp/>false<sp/>in<sp/>case<sp/>of<sp/>error.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>swap<sp/>is<sp/>true,<sp/>assumes<sp/>a<sp/>big/little-endian<sp/>swap<sp/>is<sp/>needed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_index_map_1a74a60120500f7ced59f2cea3bc42138f" kindref="member">IndexMap::DeSerialize</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>swap,<sp/>FILE*<sp/>fp)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref><sp/>sparse_size;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fread(&amp;sparse_size,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(sparse_size),<sp/>1,<sp/>fp)<sp/>!=<sp/>1)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(swap)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="helpers_8h_1ae7eeeca49954d4b13d269729f2fecd5a" kindref="member">ReverseN</ref>(&amp;sparse_size,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(sparse_size));</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_index_map_1ae3ff257a84297cf8c67ee4bb27e54194" kindref="member">sparse_size_</ref><sp/>=<sp/>sparse_size;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classtesseract_1_1_index_map_1a5089b80f1c2f365c07dc075da232aa89" kindref="member">compact_map_</ref>.<ref refid="class_generic_vector_1aa4f5b1bc0d044fbd1fc77363b798c39c" kindref="member">DeSerialize</ref>(swap,<sp/>fp))<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Top-level<sp/>init<sp/>function<sp/>in<sp/>a<sp/>single<sp/>call<sp/>to<sp/>initialize<sp/>a<sp/>map<sp/>to<sp/>select</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//<sp/>a<sp/>single<sp/>contiguous<sp/>subrange<sp/>[start,<sp/>end)<sp/>of<sp/>the<sp/>sparse<sp/>space<sp/>to<sp/>be<sp/>mapped</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">//<sp/>1<sp/>to<sp/>1<sp/>to<sp/>the<sp/>compact<sp/>space,<sp/>with<sp/>all<sp/>other<sp/>elements<sp/>of<sp/>the<sp/>sparse<sp/>space</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>left<sp/>unmapped.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">//<sp/>No<sp/>need<sp/>to<sp/>call<sp/>Setup<sp/>after<sp/>this.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_index_map_bi_di_1aa33022e109d31768150283cfd9530f6c" kindref="member">IndexMapBiDi::InitAndSetupRange</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sparse_size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_index_map_bi_di_1a165b8de5eeba0557d206f76b556793d9" kindref="member">Init</ref>(sparse_size,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>start;<sp/>i<sp/>&lt;<sp/>end;<sp/>++i)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtesseract_1_1_index_map_bi_di_1a3b4579cc4934a996ea688de031e758f2" kindref="member">SetMap</ref>(i,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_index_map_bi_di_1a909e48dddc1488311f4d7083544eca56" kindref="member">Setup</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Initializes<sp/>just<sp/>the<sp/>sparse_map_<sp/>to<sp/>the<sp/>given<sp/>size<sp/>with<sp/>either<sp/>all</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">//<sp/>forward<sp/>indices<sp/>mapped<sp/>(all_mapped<sp/>=<sp/>true)<sp/>or<sp/>none<sp/>(all_mapped<sp/>=<sp/>false).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Call<sp/>Setup<sp/>immediately<sp/>after,<sp/>or<sp/>make<sp/>calls<sp/>to<sp/>SetMap<sp/>first<sp/>to<sp/>adjust<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//<sp/>mapping<sp/>and<sp/>then<sp/>call<sp/>Setup<sp/>before<sp/>using<sp/>the<sp/>map.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_index_map_bi_di_1a165b8de5eeba0557d206f76b556793d9" kindref="member">IndexMapBiDi::Init</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>all_mapped)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>sparse_map_.<ref refid="class_generic_vector_1a6751521fd3eb461d81fc83ef93a0def3" kindref="member">init_to_size</ref>(size,<sp/>-1);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(all_mapped)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>size;<sp/>++i)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sparse_map_[i]<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Sets<sp/>a<sp/>given<sp/>index<sp/>in<sp/>the<sp/>sparse_map_<sp/>to<sp/>be<sp/>mapped<sp/>or<sp/>not.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_index_map_bi_di_1a3b4579cc4934a996ea688de031e758f2" kindref="member">IndexMapBiDi::SetMap</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sparse_index,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>mapped)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>sparse_map_[sparse_index]<sp/>=<sp/>mapped<sp/>?<sp/>0<sp/>:<sp/>-1;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Sets<sp/>up<sp/>the<sp/>sparse_map_<sp/>and<sp/>compact_map_<sp/>properly<sp/>after<sp/>Init<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//<sp/>some<sp/>calls<sp/>to<sp/>SetMap.<sp/>Assumes<sp/>an<sp/>ordered<sp/>1-1<sp/>map<sp/>from<sp/>set<sp/>indices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">//<sp/>in<sp/>the<sp/>forward<sp/>map<sp/>to<sp/>the<sp/>compact<sp/>space.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_index_map_bi_di_1a909e48dddc1488311f4d7083544eca56" kindref="member">IndexMapBiDi::Setup</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>compact_size<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>sparse_map_.<ref refid="class_generic_vector_1a111b51dd0bf1324cfb69ef70703d8e70" kindref="member">size</ref>();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sparse_map_[i]<sp/>&gt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sparse_map_[i]<sp/>=<sp/>compact_size++;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_index_map_1a5089b80f1c2f365c07dc075da232aa89" kindref="member">compact_map_</ref>.<ref refid="class_generic_vector_1a6751521fd3eb461d81fc83ef93a0def3" kindref="member">init_to_size</ref>(compact_size,<sp/>-1);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>sparse_map_.<ref refid="class_generic_vector_1a111b51dd0bf1324cfb69ef70703d8e70" kindref="member">size</ref>();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sparse_map_[i]<sp/>&gt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtesseract_1_1_index_map_1a5089b80f1c2f365c07dc075da232aa89" kindref="member">compact_map_</ref>[sparse_map_[i]]<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_index_map_1ae3ff257a84297cf8c67ee4bb27e54194" kindref="member">sparse_size_</ref><sp/>=<sp/>sparse_map_.<ref refid="class_generic_vector_1a111b51dd0bf1324cfb69ef70703d8e70" kindref="member">size</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copy<sp/>from<sp/>the<sp/>input.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_index_map_bi_di_1a2b5e065b41a3a58f83b28b8d6df05185" kindref="member">IndexMapBiDi::CopyFrom</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>IndexMapBiDi&amp;<sp/>src)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>sparse_map_<sp/>=<sp/>src.sparse_map_;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_index_map_1a5089b80f1c2f365c07dc075da232aa89" kindref="member">compact_map_</ref><sp/>=<sp/>src.compact_map_;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_index_map_1ae3ff257a84297cf8c67ee4bb27e54194" kindref="member">sparse_size_</ref><sp/>=<sp/>sparse_map_.<ref refid="class_generic_vector_1a111b51dd0bf1324cfb69ef70703d8e70" kindref="member">size</ref>();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Merges<sp/>the<sp/>two<sp/>compact<sp/>space<sp/>indices.<sp/>May<sp/>be<sp/>called<sp/>many<sp/>times,<sp/>but</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>merges<sp/>must<sp/>be<sp/>concluded<sp/>by<sp/>a<sp/>call<sp/>to<sp/>CompleteMerges.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Returns<sp/>true<sp/>if<sp/>a<sp/>merge<sp/>was<sp/>actually<sp/>performed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_index_map_bi_di_1a2065aea120b8bbad4afc135bc3473044" kindref="member">IndexMapBiDi::Merge</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>compact_index1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>compact_index2)<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Find<sp/>the<sp/>current<sp/>master<sp/>index<sp/>for<sp/>index1<sp/>and<sp/>index2.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>compact_index1<sp/>=<sp/>MasterCompactIndex(compact_index1);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>compact_index2<sp/>=<sp/>MasterCompactIndex(compact_index2);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Be<sp/>sure<sp/>that<sp/>index1<sp/>&lt;<sp/>index2.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(compact_index1<sp/>&gt;<sp/>compact_index2)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tmp<sp/>=<sp/>compact_index1;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>compact_index1<sp/>=<sp/>compact_index2;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>compact_index2<sp/>=<sp/>tmp;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(compact_index1<sp/>==<sp/>compact_index2)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>To<sp/>save<sp/>iterating<sp/>over<sp/>all<sp/>sparse_map_<sp/>entries,<sp/>simply<sp/>make<sp/>the<sp/>master</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>entry<sp/>for<sp/>index2<sp/>point<sp/>to<sp/>index1.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>leaves<sp/>behind<sp/>a<sp/>potential<sp/>chain<sp/>of<sp/>parents<sp/>that<sp/>needs<sp/>to<sp/>be<sp/>chased,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>as<sp/>above.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>sparse_map_[<ref refid="classtesseract_1_1_index_map_1a5089b80f1c2f365c07dc075da232aa89" kindref="member">compact_map_</ref>[compact_index2]]<sp/>=<sp/>compact_index1;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(compact_index1<sp/>&gt;=<sp/>0)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>compact_map_[compact_index2]<sp/>=<sp/>compact_map_[compact_index1];</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Completes<sp/>one<sp/>or<sp/>more<sp/>Merge<sp/>operations<sp/>by<sp/>further<sp/>compacting<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="comment">//<sp/>compact<sp/>space.<sp/>Unused<sp/>compact<sp/>space<sp/>indices<sp/>are<sp/>removed,<sp/>and<sp/>the<sp/>used</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ones<sp/>above<sp/>shuffled<sp/>down<sp/>to<sp/>fill<sp/>the<sp/>gaps.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Example:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Input<sp/>sparse_map_:<sp/>(x<sp/>indicates<sp/>-1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="comment">//<sp/>x<sp/>x<sp/>0<sp/>x<sp/>2<sp/>x<sp/>x<sp/>4<sp/>x<sp/>0<sp/>x<sp/>2<sp/>x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Output<sp/>sparse_map_:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="comment">//<sp/>x<sp/>x<sp/>0<sp/>x<sp/>1<sp/>x<sp/>x<sp/>2<sp/>x<sp/>0<sp/>x<sp/>1<sp/>x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Output<sp/>compact_map_:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="comment">//<sp/>2<sp/>4<sp/>7.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_index_map_bi_di_1ab809f6fe92e0f3a7bce25eeb183ab120" kindref="member">IndexMapBiDi::CompleteMerges</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Ensure<sp/>each<sp/>sparse_map_entry<sp/>contains<sp/>a<sp/>master<sp/>compact_map_<sp/>index.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>compact_size<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>sparse_map_.<ref refid="class_generic_vector_1a111b51dd0bf1324cfb69ef70703d8e70" kindref="member">size</ref>();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>compact_index<sp/>=<sp/>MasterCompactIndex(sparse_map_[i]);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>sparse_map_[i]<sp/>=<sp/>compact_index;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(compact_index<sp/>&gt;=<sp/>compact_size)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>compact_size<sp/>=<sp/>compact_index<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Re-generate<sp/>the<sp/>compact_map<sp/>leaving<sp/>holes<sp/>for<sp/>unused<sp/>indices.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/>compact_map_.<ref refid="class_generic_vector_1a6751521fd3eb461d81fc83ef93a0def3" kindref="member">init_to_size</ref>(compact_size,<sp/>-1);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>sparse_map_.<ref refid="class_generic_vector_1a111b51dd0bf1324cfb69ef70703d8e70" kindref="member">size</ref>();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sparse_map_[i]<sp/>&gt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(compact_map_[sparse_map_[i]]<sp/>==<sp/>-1)</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>compact_map_[sparse_map_[i]]<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Compact<sp/>the<sp/>compact_map,<sp/>leaving<sp/>tmp_compact_map<sp/>saying<sp/>where<sp/>each</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>index<sp/>went<sp/>to<sp/>in<sp/>the<sp/>compacted<sp/>map.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><ref refid="class_generic_vector" kindref="compound">GenericVector&lt;inT32&gt;</ref><sp/>tmp_compact_map;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/>tmp_compact_map.<ref refid="class_generic_vector_1a6751521fd3eb461d81fc83ef93a0def3" kindref="member">init_to_size</ref>(compact_size,<sp/>-1);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>compact_size<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>compact_map_.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(compact_map_[i]<sp/>&gt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>tmp_compact_map[i]<sp/>=<sp/>compact_size;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>compact_map_[compact_size++]<sp/>=<sp/>compact_map_[i];</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/>compact_map_.<ref refid="class_generic_vector_1af1793745c45178626c9afe48c7a1e140" kindref="member">truncate</ref>(compact_size);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>modify<sp/>the<sp/>entries<sp/>in<sp/>the<sp/>sparse<sp/>map<sp/>to<sp/>point<sp/>to<sp/>the<sp/>new<sp/>locations.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>sparse_map_.<ref refid="class_generic_vector_1a111b51dd0bf1324cfb69ef70703d8e70" kindref="member">size</ref>();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sparse_map_[i]<sp/>&gt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sparse_map_[i]<sp/>=<sp/>tmp_compact_map[sparse_map_[i]];</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Writes<sp/>to<sp/>the<sp/>given<sp/>file.<sp/>Returns<sp/>false<sp/>in<sp/>case<sp/>of<sp/>error.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_index_map_bi_di_1aa92b1c868939853b0e20c6842ece0f1a" kindref="member">IndexMapBiDi::Serialize</ref>(FILE*<sp/>fp)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classtesseract_1_1_index_map_1a067894b455dcd2e3d013a9449e1aae7d" kindref="member">IndexMap::Serialize</ref>(fp))<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>a<sp/>vector<sp/>containing<sp/>the<sp/>rest<sp/>of<sp/>the<sp/>map.<sp/>If<sp/>the<sp/>map<sp/>is<sp/>many-to-one</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>then<sp/>each<sp/>additional<sp/>sparse<sp/>entry<sp/>needs<sp/>to<sp/>be<sp/>stored.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Normally<sp/>we<sp/>store<sp/>only<sp/>the<sp/>compact<sp/>map<sp/>to<sp/>save<sp/>space.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><ref refid="class_generic_vector" kindref="compound">GenericVector&lt;inT32&gt;</ref><sp/>remaining_pairs;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>sparse_map_.<ref refid="class_generic_vector_1a111b51dd0bf1324cfb69ef70703d8e70" kindref="member">size</ref>();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sparse_map_[i]<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>compact_map_[sparse_map_[i]]<sp/>!=<sp/>i)<sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>remaining_pairs.<ref refid="class_generic_vector_1a0dc89fe2a365b04a61017f9d78c1a303" kindref="member">push_back</ref>(i);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>remaining_pairs.<ref refid="class_generic_vector_1a0dc89fe2a365b04a61017f9d78c1a303" kindref="member">push_back</ref>(sparse_map_[i]);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!remaining_pairs.<ref refid="class_generic_vector_1a51aeec27092537323abc7174af1c16ef" kindref="member">Serialize</ref>(fp))<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Reads<sp/>from<sp/>the<sp/>given<sp/>file.<sp/>Returns<sp/>false<sp/>in<sp/>case<sp/>of<sp/>error.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>swap<sp/>is<sp/>true,<sp/>assumes<sp/>a<sp/>big/little-endian<sp/>swap<sp/>is<sp/>needed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_index_map_bi_di_1ad54cf4a1295408ec26e87ce377a8747d" kindref="member">IndexMapBiDi::DeSerialize</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>swap,<sp/>FILE*<sp/>fp)<sp/>{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classtesseract_1_1_index_map_1a74a60120500f7ced59f2cea3bc42138f" kindref="member">IndexMap::DeSerialize</ref>(swap,<sp/>fp))<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><ref refid="class_generic_vector" kindref="compound">GenericVector&lt;inT32&gt;</ref><sp/>remaining_pairs;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!remaining_pairs.<ref refid="class_generic_vector_1aa4f5b1bc0d044fbd1fc77363b798c39c" kindref="member">DeSerialize</ref>(swap,<sp/>fp))<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/>sparse_map_.<ref refid="class_generic_vector_1a6751521fd3eb461d81fc83ef93a0def3" kindref="member">init_to_size</ref>(<ref refid="classtesseract_1_1_index_map_1ae3ff257a84297cf8c67ee4bb27e54194" kindref="member">sparse_size_</ref>,<sp/>-1);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>compact_map_.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>sparse_map_[compact_map_[i]]<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>remaining_pairs.<ref refid="class_generic_vector_1a111b51dd0bf1324cfb69ef70703d8e70" kindref="member">size</ref>();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sparse_index<sp/>=<sp/>remaining_pairs[i++];</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>sparse_map_[sparse_index]<sp/>=<sp/>remaining_pairs[i];</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Bulk<sp/>calls<sp/>to<sp/>SparseToCompact.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Maps<sp/>the<sp/>given<sp/>array<sp/>of<sp/>sparse<sp/>indices<sp/>to<sp/>an<sp/>array<sp/>of<sp/>compact<sp/>indices.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Assumes<sp/>the<sp/>input<sp/>is<sp/>sorted.<sp/>The<sp/>output<sp/>indices<sp/>are<sp/>sorted<sp/>and<sp/>uniqued.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Return<sp/>value<sp/>is<sp/>the<sp/>number<sp/>of<sp/>&quot;missed&quot;<sp/>features,<sp/>being<sp/>features<sp/>that</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="comment">//<sp/>don&apos;t<sp/>map<sp/>to<sp/>the<sp/>compact<sp/>feature<sp/>space.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_index_map_bi_di_1a3114a55998f2e854a406d79650d83747" kindref="member">IndexMapBiDi::MapFeatures</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_generic_vector" kindref="compound">GenericVector&lt;int&gt;</ref>&amp;<sp/>sparse,</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_generic_vector" kindref="compound">GenericVector&lt;int&gt;</ref>*<sp/>compact)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/>compact-&gt;<ref refid="class_generic_vector_1af1793745c45178626c9afe48c7a1e140" kindref="member">truncate</ref>(0);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num_features<sp/>=<sp/>sparse.<ref refid="class_generic_vector_1a111b51dd0bf1324cfb69ef70703d8e70" kindref="member">size</ref>();</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>missed_features<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prev_good_feature<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="imgscale_8cpp_1a469169df397b589e709dc744f1346831" kindref="member">f</ref><sp/>=<sp/>0;<sp/><ref refid="imgscale_8cpp_1a469169df397b589e709dc744f1346831" kindref="member">f</ref><sp/>&lt;<sp/>num_features;<sp/>++<ref refid="imgscale_8cpp_1a469169df397b589e709dc744f1346831" kindref="member">f</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>feature<sp/>=<sp/>sparse_map_[sparse[<ref refid="imgscale_8cpp_1a469169df397b589e709dc744f1346831" kindref="member">f</ref>]];</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(feature<sp/>&gt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(feature<sp/>!=<sp/>prev_good_feature)<sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>compact-&gt;<ref refid="class_generic_vector_1a0dc89fe2a365b04a61017f9d78c1a303" kindref="member">push_back</ref>(feature);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>prev_good_feature<sp/>=<sp/>feature;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>++missed_features;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>missed_features;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>tesseract.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/ccutil/indexmapbidi.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_result_iterator" kind="class" prot="public">
+    <compoundname>tesseract::ResultIterator</compoundname>
+    <basecompoundref refid="classtesseract_1_1_l_t_r_result_iterator" prot="public" virt="non-virtual">tesseract::LTRResultIterator</basecompoundref>
+    <derivedcompoundref refid="classtesseract_1_1_mutable_iterator" prot="public" virt="non-virtual">tesseract::MutableIterator</derivedcompoundref>
+    <includes refid="resultiterator_8h" local="no">resultiterator.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_result_iterator_1a1c97324553ea1b897dfb5404e0f9e315" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::ResultIterator::kMinorRunStart</definition>
+        <argsstring></argsstring>
+        <name>kMinorRunStart</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="127" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_result_iterator_1a15e95d21ce320a7c282c5a8d61fe73ee" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::ResultIterator::kMinorRunEnd</definition>
+        <argsstring></argsstring>
+        <name>kMinorRunEnd</name>
+        <initializer>= -2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="128" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_result_iterator_1ad23440ad1059127afadd17c18fbf93ad" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int tesseract::ResultIterator::kComplexWord</definition>
+        <argsstring></argsstring>
+        <name>kComplexWord</name>
+        <initializer>= -3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="129" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_result_iterator_1ab0795f3f27c9826ec8327300f317d091" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool tesseract::ResultIterator::current_paragraph_is_ltr_</definition>
+        <argsstring></argsstring>
+        <name>current_paragraph_is_ltr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="223" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_result_iterator_1a466aa30e3c929ace67e35450c4e16779" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool tesseract::ResultIterator::at_beginning_of_minor_run_</definition>
+        <argsstring></argsstring>
+        <name>at_beginning_of_minor_run_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Is the currently pointed-at character at the beginning of a minor-direction run? </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="229" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_result_iterator_1a5e067101b620da84b63d08790a0bd8dc" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool tesseract::ResultIterator::in_minor_direction_</definition>
+        <argsstring></argsstring>
+        <name>in_minor_direction_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Is the currently pointed-at character in a minor-direction sequence? </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="232" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1a961e7ee57edae85e855332a301cccacf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtesseract_1_1_result_iterator" kindref="compound">ResultIterator</ref> *</type>
+        <definition>ResultIterator * tesseract::ResultIterator::StartOfParagraph</definition>
+        <argsstring>(const LTRResultIterator &amp;resit)</argsstring>
+        <name>StartOfParagraph</name>
+        <param>
+          <type>const <ref refid="classtesseract_1_1_l_t_r_result_iterator" kindref="compound">LTRResultIterator</ref> &amp;</type>
+          <declname>resit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="39" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1a10ba7f1e30387d13b518fc1ccdcbfe06" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ResultIterator::CalculateTextlineOrder</definition>
+        <argsstring>(bool paragraph_is_ltr, const GenericVector&lt; StrongScriptDirection &gt; &amp;word_dirs, GenericVectorEqEq&lt; int &gt; *reading_order)</argsstring>
+        <name>CalculateTextlineOrder</name>
+        <param>
+          <type>bool</type>
+          <declname>paragraph_is_ltr</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; <ref refid="unichar_8h_1abc3119a959ecd5cffc1d9b9d57479dba" kindref="member">StrongScriptDirection</ref> &gt; &amp;</type>
+          <declname>word_dirs</declname>
+        </param>
+        <param>
+          <type><ref refid="class_generic_vector_eq_eq" kindref="compound">GenericVectorEqEq</ref>&lt; int &gt; *</type>
+          <declname>reading_order</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Yields the reading order as a sequence of indices and (optional) meta-marks for a set of words (given left-to-right). The meta marks are passed as negative values: kMinorRunStart Start of minor direction text. kMinorRunEnd End of minor direction text. kComplexWord The next indexed word contains both left-to-right and right-to-left characters and was treated as neutral.</para><para>For example, suppose we have five words in a text line, indexed [0,1,2,3,4] from the leftmost side of the text line. The following are all believable reading_orders:</para><para>Left-to-Right (in ltr paragraph): { 0, 1, 2, 3, 4 } Left-to-Right (in rtl paragraph): { kMinorRunStart, 0, 1, 2, 3, 4, kMinorRunEnd } Right-to-Left (in rtl paragraph): { 4, 3, 2, 1, 0 } Left-to-Right except for an RTL phrase in words 2, 3 in an ltr paragraph: { 0, 1, kMinorRunStart, 3, 2, kMinorRunEnd, 4 } </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="122" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="248" bodyend="317"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1a15c5061a86ff73f0198a102e20f0d493" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual tesseract::ResultIterator::~ResultIterator</definition>
+        <argsstring>()</argsstring>
+        <name>~ResultIterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classtesseract_1_1_result_iterator" kindref="compound">ResultIterator</ref> is copy constructible! The default copy constructor works just fine for us. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="45" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1a36e6fd5587628440bb19b84648645676" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void tesseract::ResultIterator::Begin</definition>
+        <argsstring>()</argsstring>
+        <name>Begin</name>
+        <reimplements refid="classtesseract_1_1_page_iterator_1a5cc369eb577150a3a677f9c342ce1240">Begin</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Moves the iterator to point to the start of the page to begin an iteration. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="52" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="408" bodyend="414"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1abd8987e2387f1945b53cf23f99b663e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::ResultIterator::Next</definition>
+        <argsstring>(PageIteratorLevel level)</argsstring>
+        <name>Next</name>
+        <reimplements refid="classtesseract_1_1_page_iterator_1a415ea7c61e24868bc67e676184be0bb9">Next</reimplements>
+        <param>
+          <type><ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Moves to the start of the next object at the given level in the page hierarchy in the appropriate reading order and returns false if the end of the page was reached. NOTE that RIL_SYMBOL will skip non-text blocks, but all other PageIteratorLevel level values will visit each non-text block once. Think of non text blocks as containing a single para, with a single line, with a single imaginary word. Calls to Next with different levels may be freely intermixed. This function iterates words in right-to-left scripts correctly, if the appropriate language has been loaded into <ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="66" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="416" bodyend="489"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1a983b601204f2fee0428213c4fca779e1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::ResultIterator::IsAtBeginningOf</definition>
+        <argsstring>(PageIteratorLevel level) const </argsstring>
+        <name>IsAtBeginningOf</name>
+        <reimplements refid="classtesseract_1_1_page_iterator_1ad822e0b706ebba5c8ea55505438b4dee">IsAtBeginningOf</reimplements>
+        <param>
+          <type><ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classtesseract_1_1_result_iterator_1a983b601204f2fee0428213c4fca779e1" kindref="member">IsAtBeginningOf()</ref> returns whether we&apos;re at the logical beginning of the given level. (as opposed to <ref refid="classtesseract_1_1_result_iterator" kindref="compound">ResultIterator</ref>&apos;s left-to-right top-to-bottom order). Otherwise, this acts the same as <ref refid="classtesseract_1_1_page_iterator_1ad822e0b706ebba5c8ea55505438b4dee" kindref="member">PageIterator::IsAtBeginningOf()</ref>. For a full description, see <ref refid="pageiterator_8h" kindref="compound">pageiterator.h</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="74" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="491" bodyend="520"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1a4ba47a7d01d3bc7f0fbf777605f8297d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool tesseract::ResultIterator::IsAtFinalElement</definition>
+        <argsstring>(PageIteratorLevel level, PageIteratorLevel element) const </argsstring>
+        <name>IsAtFinalElement</name>
+        <reimplements refid="classtesseract_1_1_page_iterator_1af9db4780e93dd192f7cee28f11476cce">IsAtFinalElement</reimplements>
+        <param>
+          <type><ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref></type>
+          <declname>element</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implement <ref refid="classtesseract_1_1_page_iterator" kindref="compound">PageIterator</ref>&apos;s IsAtFinalElement correctly in a BiDi context. For instance, IsAtFinalElement(RIL_PARA, RIL_WORD) returns whether we point at the last word in a paragraph. See <ref refid="classtesseract_1_1_page_iterator" kindref="compound">PageIterator</ref> for full comment.</para><para>NOTE! This is an exact copy of <ref refid="classtesseract_1_1_page_iterator_1af9db4780e93dd192f7cee28f11476cce" kindref="member">PageIterator::IsAtFinalElement</ref> with the change that the variable next is now a <ref refid="classtesseract_1_1_result_iterator" kindref="compound">ResultIterator</ref> instead of a <ref refid="classtesseract_1_1_page_iterator" kindref="compound">PageIterator</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="81" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="527" bodyend="545"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1a7a35dd667c73efeeaf7457df90c6199a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>char *</type>
+        <definition>char * tesseract::ResultIterator::GetUTF8Text</definition>
+        <argsstring>(PageIteratorLevel level) const </argsstring>
+        <name>GetUTF8Text</name>
+        <param>
+          <type><ref refid="namespacetesseract_1aa26c22b65cc9765a0e747120f4287fd7" kindref="member">PageIteratorLevel</ref></type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the null terminated UTF-8 encoded text string for the current object at the given level. Use delete [] to free after use. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="90" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="551" bodyend="592"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1a71525d396c6cdeea89f576adca599474" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::ResultIterator::ParagraphIsLtr</definition>
+        <argsstring>() const </argsstring>
+        <name>ParagraphIsLtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return whether the current paragraph&apos;s dominant reading direction is left-to-right (as opposed to right-to-left). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="96" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1aa0f6c0e15c83e9ed718d80d736865c3f" prot="protected" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type><ref refid="platform_8h_1aefcd819eeed9085ef0eeeff0f4cac64f" kindref="member">TESS_LOCAL</ref></type>
+        <definition>tesseract::ResultIterator::ResultIterator</definition>
+        <argsstring>(const LTRResultIterator &amp;resit)</argsstring>
+        <name>ResultIterator</name>
+        <param>
+          <type>const <ref refid="classtesseract_1_1_l_t_r_result_iterator" kindref="compound">LTRResultIterator</ref> &amp;</type>
+          <declname>resit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>We presume the data associated with the given iterator will outlive us. NB: This is private because it does something that is non-obvious: it resets to the beginning of the paragraph instead of staying wherever resit might have pointed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="138" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="33" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1a75ae60ced2b4a358a73f73ca017d12c7" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::ResultIterator::CurrentParagraphIsLtr</definition>
+        <argsstring>() const </argsstring>
+        <name>CurrentParagraphIsLtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the current paragraph&apos;s dominant writing direction. Typically, members should use current_paragraph_ltr_ instead. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="145" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="50" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1ad5c58bf137242d3c540f410673f4fd8a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ResultIterator::CalculateTextlineOrder</definition>
+        <argsstring>(bool paragraph_is_ltr, const LTRResultIterator &amp;resit, GenericVectorEqEq&lt; int &gt; *indices) const </argsstring>
+        <name>CalculateTextlineOrder</name>
+        <param>
+          <type>bool</type>
+          <declname>paragraph_is_ltr</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classtesseract_1_1_l_t_r_result_iterator" kindref="compound">LTRResultIterator</ref> &amp;</type>
+          <declname>resit</declname>
+        </param>
+        <param>
+          <type><ref refid="class_generic_vector_eq_eq" kindref="compound">GenericVectorEqEq</ref>&lt; int &gt; *</type>
+          <declname>indices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns word indices as measured from resit-&gt;<ref refid="classtesseract_1_1_page_iterator_1a2df743d478df34f1a239cf9675f82be0" kindref="member">RestartRow()</ref> = index 0 for the reading order of words within a textline given an iterator into the middle of the text line. In addition to non-negative word indices, the following negative values may be inserted: kMinorRunStart Start of minor direction text. kMinorRunEnd End of minor direction text. kComplexWord The previous word contains both left-to-right and right-to-left characters and was treated as neutral. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="158" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="218" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1a83b9b746357ee2e8d8f059a3692ac5d8" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ResultIterator::CalculateTextlineOrder</definition>
+        <argsstring>(bool paragraph_is_ltr, const LTRResultIterator &amp;resit, GenericVector&lt; StrongScriptDirection &gt; *ssd, GenericVectorEqEq&lt; int &gt; *indices) const </argsstring>
+        <name>CalculateTextlineOrder</name>
+        <param>
+          <type>bool</type>
+          <declname>paragraph_is_ltr</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classtesseract_1_1_l_t_r_result_iterator" kindref="compound">LTRResultIterator</ref> &amp;</type>
+          <declname>resit</declname>
+        </param>
+        <param>
+          <type><ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; <ref refid="unichar_8h_1abc3119a959ecd5cffc1d9b9d57479dba" kindref="member">StrongScriptDirection</ref> &gt; *</type>
+          <declname>ssd</declname>
+        </param>
+        <param>
+          <type><ref refid="class_generic_vector_eq_eq" kindref="compound">GenericVectorEqEq</ref>&lt; int &gt; *</type>
+          <declname>indices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Same as above, but the caller&apos;s ssd gets filled in if ssd != NULL. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="162" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="226" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1a15b8d3c2dd2f5ce5812c40b6eb1b79ae" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::ResultIterator::LTRWordIndex</definition>
+        <argsstring>() const </argsstring>
+        <name>LTRWordIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>What is the index of the current word in a strict left-to-right reading of the row? </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="171" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="319" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1aefece073147029720e5493f6189ba2a1" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ResultIterator::CalculateBlobOrder</definition>
+        <argsstring>(GenericVector&lt; int &gt; *blob_indices) const </argsstring>
+        <name>CalculateBlobOrder</name>
+        <param>
+          <type><ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; int &gt; *</type>
+          <declname>blob_indices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Given an iterator pointing at a word, returns the logical reading order of blob indices for the word. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="177" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="107" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1aa989b7f87c3398eec8c41a8888dbda29" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ResultIterator::MoveToLogicalStartOfTextline</definition>
+        <argsstring>()</argsstring>
+        <name>MoveToLogicalStartOfTextline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Precondition: current_paragraph_is_ltr_ is set. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="180" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="388" bodyend="406"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1a013bf569b5cc0f3f19fc1a46e2947e06" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ResultIterator::MoveToLogicalStartOfWord</definition>
+        <argsstring>()</argsstring>
+        <name>MoveToLogicalStartOfWord</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Precondition: current_paragraph_is_ltr_ and in_minor_direction_ are set. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="186" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="330" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1a16c1f632f054c114ae3ee3d4d50a8383" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::ResultIterator::IsAtFinalSymbolOfWord</definition>
+        <argsstring>() const </argsstring>
+        <name>IsAtFinalSymbolOfWord</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Are we pointing at the final (reading order) symbol of the word? </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="189" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="341" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1aa83759ff317eb0cfc720b45ac4a09999" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::ResultIterator::IsAtFirstSymbolOfWord</definition>
+        <argsstring>() const </argsstring>
+        <name>IsAtFirstSymbolOfWord</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Are we pointing at the first (reading order) symbol of the word? </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="192" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="348" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1af0a90d64005eb8ede941178c35bb3eac" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ResultIterator::AppendSuffixMarks</definition>
+        <argsstring>(STRING *text) const </argsstring>
+        <name>AppendSuffixMarks</name>
+        <param>
+          <type><ref refid="class_s_t_r_i_n_g" kindref="compound">STRING</ref> *</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Append any extra marks that should be appended to this word when printed. Mostly, these are Unicode BiDi control characters. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="198" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="355" bodyend="386"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1a6452359a1ef82c3916408856611b8c1d" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ResultIterator::AppendUTF8WordText</definition>
+        <argsstring>(STRING *text) const </argsstring>
+        <name>AppendUTF8WordText</name>
+        <param>
+          <type><ref refid="class_s_t_r_i_n_g" kindref="compound">STRING</ref> *</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Appends the current word in reading order to the given buffer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="201" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="594" bodyend="609"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1a496d8b85c536023afc7bd0f6665ea237" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ResultIterator::IterateAndAppendUTF8TextlineText</definition>
+        <argsstring>(STRING *text)</argsstring>
+        <name>IterateAndAppendUTF8TextlineText</name>
+        <param>
+          <type><ref refid="class_s_t_r_i_n_g" kindref="compound">STRING</ref> *</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Appends the text of the current text line, <emphasis>assuming this iterator is positioned at the beginning of the text line</emphasis> This function updates the iterator to point to the first position past the text line. Each textline is terminated in a single newline character. If the textline ends a paragraph, it gets a second terminal newline. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="210" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="611" bodyend="646"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1af3e0a354c0f2881e44c1b722701a8c96" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::ResultIterator::AppendUTF8ParagraphText</definition>
+        <argsstring>(STRING *text) const </argsstring>
+        <name>AppendUTF8ParagraphText</name>
+        <param>
+          <type><ref refid="class_s_t_r_i_n_g" kindref="compound">STRING</ref> *</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Appends the text of the current paragraph in reading order to the given buffer. Each textline is terminated in a single newline character, and the paragraph gets an extra newline at the end. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="218" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="648" bodyend="656"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_result_iterator_1a4c10f6610796fec9c25f252b2ca160c5" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::ResultIterator::BidiDebug</definition>
+        <argsstring>(int min_level) const </argsstring>
+        <name>BidiDebug</name>
+        <param>
+          <type>int</type>
+          <declname>min_level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether the bidi_debug flag is set to at least min_level. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="221" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.cpp" bodystart="658" bodyend="665"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1703">
+        <label>tesseract::ResultIterator</label>
+        <link refid="classtesseract_1_1_result_iterator"/>
+        <childnode refid="1704" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1705">
+        <label>tesseract::PageIterator</label>
+        <link refid="classtesseract_1_1_page_iterator"/>
+      </node>
+      <node id="1706">
+        <label>tesseract::MutableIterator</label>
+        <link refid="classtesseract_1_1_mutable_iterator"/>
+        <childnode refid="1703" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1704">
+        <label>tesseract::LTRResultIterator</label>
+        <link refid="classtesseract_1_1_l_t_r_result_iterator"/>
+        <childnode refid="1705" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1711">
+        <label>tesseract::Wordrec</label>
+        <link refid="classtesseract_1_1_wordrec"/>
+        <childnode refid="1712" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1747" relation="usage">
+          <edgelabel>prev_word_best_choice_</edgelabel>
+        </childnode>
+        <childnode refid="1748" relation="usage">
+          <edgelabel>last_segmentation</edgelabel>
+        </childnode>
+        <childnode refid="1749" relation="usage">
+          <edgelabel>blob_match_table</edgelabel>
+        </childnode>
+        <childnode refid="1750" relation="usage">
+          <edgelabel>language_model_</edgelabel>
+        </childnode>
+        <childnode refid="1761" relation="usage">
+          <edgelabel>blame_reasons_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1730">
+        <label>list_rec</label>
+        <link refid="structlist__rec"/>
+        <childnode refid="1730" relation="usage">
+          <edgelabel>node</edgelabel>
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+      <node id="1764">
+        <label>WERD</label>
+        <link refid="class_w_e_r_d"/>
+        <childnode refid="1765" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1729">
+        <label>TEMP_CONFIG_STRUCT</label>
+        <link refid="struct_t_e_m_p___c_o_n_f_i_g___s_t_r_u_c_t"/>
+        <childnode refid="1730" relation="usage">
+          <edgelabel>ContextsSeen</edgelabel>
+        </childnode>
+      </node>
+      <node id="1718">
+        <label>STRING</label>
+        <link refid="class_s_t_r_i_n_g"/>
+      </node>
+      <node id="1759">
+        <label>TessResultCallback2&lt; bool, bool *const &amp;, bool *const &amp; &gt;</label>
+        <link refid="class_tess_result_callback2"/>
+      </node>
+      <node id="1768">
+        <label>GenericVector&lt; STRING &gt;</label>
+        <link refid="class_generic_vector"/>
+        <childnode refid="1718" relation="usage">
+          <edgelabel>data_</edgelabel>
+        </childnode>
+        <childnode refid="1769" relation="usage">
+          <edgelabel>clear_cb_</edgelabel>
+        </childnode>
+        <childnode refid="1770" relation="usage">
+          <edgelabel>compare_cb_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1736">
+        <label>NORM_PROTOS</label>
+        <link refid="struct_n_o_r_m___p_r_o_t_o_s"/>
+        <childnode refid="1730" relation="usage">
+          <edgelabel>Protos</edgelabel>
+        </childnode>
+        <childnode refid="1737" relation="usage">
+          <edgelabel>ParamDesc</edgelabel>
+        </childnode>
+      </node>
+      <node id="1728">
+        <label>PERM_CONFIG_STRUCT</label>
+        <link refid="struct_p_e_r_m___c_o_n_f_i_g___s_t_r_u_c_t"/>
+      </node>
+      <node id="1751">
+        <label>tesseract::Dict</label>
+        <link refid="classtesseract_1_1_dict"/>
+      </node>
+      <node id="1707">
+        <label>tesseract::ResultIterator</label>
+        <link refid="classtesseract_1_1_result_iterator"/>
+        <childnode refid="1708" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1766">
+        <label>PAGE_RES_IT</label>
+        <link refid="class_p_a_g_e___r_e_s___i_t"/>
+        <childnode refid="1767" relation="usage">
+          <edgelabel>page_res</edgelabel>
+        </childnode>
+      </node>
+      <node id="1744">
+        <label>FEATURE_STRUCT</label>
+        <link refid="struct_f_e_a_t_u_r_e___s_t_r_u_c_t"/>
+        <childnode refid="1745" relation="usage">
+          <edgelabel>Type</edgelabel>
+        </childnode>
+      </node>
+      <node id="1739">
+        <label>tesseract::ShapeTable</label>
+        <link refid="classtesseract_1_1_shape_table"/>
+      </node>
+      <node id="1715">
+        <label>tesseract::CCUtil</label>
+        <link refid="classtesseract_1_1_c_c_util"/>
+        <childnode refid="1716" relation="usage">
+          <edgelabel>use_definite_ambigs_for_classifier</edgelabel>
+          <edgelabel>use_ambigs_for_adaption</edgelabel>
+        </childnode>
+        <childnode refid="1718" relation="usage">
+          <edgelabel>directory</edgelabel>
+          <edgelabel>language_data_path_prefix</edgelabel>
+          <edgelabel>imagebasename</edgelabel>
+          <edgelabel>datadir</edgelabel>
+          <edgelabel>imagefile</edgelabel>
+          <edgelabel>lang</edgelabel>
+        </childnode>
+        <childnode refid="1719" relation="usage">
+          <edgelabel>unicharset</edgelabel>
+        </childnode>
+        <childnode refid="1720" relation="usage">
+          <edgelabel>tessdata_manager</edgelabel>
+        </childnode>
+        <childnode refid="1721" relation="usage">
+          <edgelabel>m_data_sub_dir</edgelabel>
+        </childnode>
+        <childnode refid="1722" relation="usage">
+          <edgelabel>unichar_ambigs</edgelabel>
+        </childnode>
+        <childnode refid="1723" relation="usage">
+          <edgelabel>ambigs_debug_level</edgelabel>
+        </childnode>
+      </node>
+      <node id="1745">
+        <label>FEATURE_DESC_STRUCT</label>
+        <link refid="struct_f_e_a_t_u_r_e___d_e_s_c___s_t_r_u_c_t"/>
+        <childnode refid="1737" relation="usage">
+          <edgelabel>ParamDesc</edgelabel>
+        </childnode>
+      </node>
+      <node id="1758">
+        <label>GenericVector&lt; bool * &gt;</label>
+        <link refid="class_generic_vector"/>
+        <childnode refid="1759" relation="usage">
+          <edgelabel>compare_cb_</edgelabel>
+        </childnode>
+        <childnode refid="1760" relation="usage">
+          <edgelabel>clear_cb_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1748">
+        <label>EVALUATION_RECORD</label>
+        <link refid="struct_e_v_a_l_u_a_t_i_o_n___r_e_c_o_r_d"/>
+      </node>
+      <node id="1720">
+        <label>tesseract::TessdataManager</label>
+        <link refid="classtesseract_1_1_tessdata_manager"/>
+      </node>
+      <node id="1747">
+        <label>WERD_CHOICE</label>
+        <link refid="class_w_e_r_d___c_h_o_i_c_e"/>
+      </node>
+      <node id="1733">
+        <label>PROTO_SET_STRUCT</label>
+        <link refid="struct_p_r_o_t_o___s_e_t___s_t_r_u_c_t"/>
+        <childnode refid="1734" relation="usage">
+          <edgelabel>Protos</edgelabel>
+        </childnode>
+      </node>
+      <node id="1743">
+        <label>FEATURE_SET_STRUCT</label>
+        <link refid="struct_f_e_a_t_u_r_e___s_e_t___s_t_r_u_c_t"/>
+        <childnode refid="1744" relation="usage">
+          <edgelabel>Features</edgelabel>
+        </childnode>
+      </node>
+      <node id="1713">
+        <label>tesseract::CCStruct</label>
+        <link refid="classtesseract_1_1_c_c_struct"/>
+        <childnode refid="1714" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1724" relation="usage">
+          <edgelabel>image_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1752">
+        <label>tesseract::DawgInfoVector</label>
+        <link refid="classtesseract_1_1_dawg_info_vector"/>
+        <childnode refid="1753" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1760">
+        <label>TessCallback1&lt; bool * &gt;</label>
+        <link refid="class_tess_callback1"/>
+      </node>
+      <node id="1769">
+        <label>TessCallback1&lt; STRING &gt;</label>
+        <link refid="class_tess_callback1"/>
+      </node>
+      <node id="1762">
+        <label>TessResultCallback2&lt; bool, intconst &amp;, intconst &amp; &gt;</label>
+        <link refid="class_tess_result_callback2"/>
+      </node>
+      <node id="1754">
+        <label>tesseract::DawgInfo</label>
+        <link refid="structtesseract_1_1_dawg_info"/>
+      </node>
+      <node id="1709">
+        <label>tesseract::PageIterator</label>
+        <link refid="classtesseract_1_1_page_iterator"/>
+        <childnode refid="1710" relation="usage">
+          <edgelabel>tesseract_</edgelabel>
+        </childnode>
+        <childnode refid="1764" relation="usage">
+          <edgelabel>word_</edgelabel>
+        </childnode>
+        <childnode refid="1766" relation="usage">
+          <edgelabel>it_</edgelabel>
+        </childnode>
+        <childnode refid="1767" relation="usage">
+          <edgelabel>page_res_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1742">
+        <label>FEATURE_EXT_STRUCT</label>
+        <link refid="struct_f_e_a_t_u_r_e___e_x_t___s_t_r_u_c_t"/>
+        <childnode refid="1743" relation="usage">
+          <edgelabel>Extractor</edgelabel>
+        </childnode>
+      </node>
+      <node id="1757">
+        <label>tesseract::DawgArgs</label>
+        <link refid="structtesseract_1_1_dawg_args"/>
+        <childnode refid="1752" relation="usage">
+          <edgelabel>updated_active_dawgs</edgelabel>
+          <edgelabel>constraints</edgelabel>
+          <edgelabel>updated_constraints</edgelabel>
+          <edgelabel>active_dawgs</edgelabel>
+        </childnode>
+      </node>
+      <node id="1763">
+        <label>TessCallback1&lt; int &gt;</label>
+        <link refid="class_tess_callback1"/>
+      </node>
+      <node id="1741">
+        <label>FEATURE_DEFS_STRUCT</label>
+        <link refid="struct_f_e_a_t_u_r_e___d_e_f_s___s_t_r_u_c_t"/>
+        <childnode refid="1742" relation="usage">
+          <edgelabel>FeatureExtractors</edgelabel>
+        </childnode>
+        <childnode refid="1745" relation="usage">
+          <edgelabel>FeatureDesc</edgelabel>
+        </childnode>
+      </node>
+      <node id="1750">
+        <label>tesseract::LanguageModel</label>
+        <link refid="classtesseract_1_1_language_model"/>
+        <childnode refid="1751" relation="usage">
+          <edgelabel>dict_</edgelabel>
+        </childnode>
+        <childnode refid="1718" relation="usage">
+          <edgelabel>prev_word_str_</edgelabel>
+        </childnode>
+        <childnode refid="1752" relation="usage">
+          <edgelabel>fixed_length_beginning_active_dawgs_</edgelabel>
+          <edgelabel>empty_dawg_info_vec_</edgelabel>
+          <edgelabel>beginning_active_dawgs_</edgelabel>
+          <edgelabel>beginning_constraints_</edgelabel>
+        </childnode>
+        <childnode refid="1757" relation="usage">
+          <edgelabel>dawg_args_</edgelabel>
+        </childnode>
+        <childnode refid="1758" relation="usage">
+          <edgelabel>updated_flags_</edgelabel>
+        </childnode>
+        <childnode refid="1740" relation="usage">
+          <edgelabel>fontinfo_table_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1717">
+        <label>tesseract::Param</label>
+        <link refid="classtesseract_1_1_param"/>
+      </node>
+      <node id="1714">
+        <label>tesseract::CUtil</label>
+        <link refid="classtesseract_1_1_c_util"/>
+        <childnode refid="1715" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1712">
+        <label>tesseract::Classify</label>
+        <link refid="classtesseract_1_1_classify"/>
+        <childnode refid="1713" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1725" relation="usage">
+          <edgelabel>AdaptedTemplates</edgelabel>
+        </childnode>
+        <childnode refid="1731" relation="usage">
+          <edgelabel>PreTrainedTemplates</edgelabel>
+        </childnode>
+        <childnode refid="1736" relation="usage">
+          <edgelabel>NormProtos</edgelabel>
+        </childnode>
+        <childnode refid="1738" relation="usage">
+          <edgelabel>fontset_table_</edgelabel>
+        </childnode>
+        <childnode refid="1739" relation="usage">
+          <edgelabel>shape_table_</edgelabel>
+        </childnode>
+        <childnode refid="1740" relation="usage">
+          <edgelabel>fontinfo_table_</edgelabel>
+        </childnode>
+        <childnode refid="1741" relation="usage">
+          <edgelabel>feature_defs_</edgelabel>
+        </childnode>
+        <childnode refid="1746" relation="usage">
+          <edgelabel>im_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1737">
+        <label>PARAM_DESC</label>
+        <link refid="struct_p_a_r_a_m___d_e_s_c"/>
+      </node>
+      <node id="1765">
+        <label>ELIST2_LINK</label>
+        <link refid="class_e_l_i_s_t2___l_i_n_k"/>
+      </node>
+      <node id="1756">
+        <label>TessResultCallback2&lt; bool, DawgInfoconst &amp;, DawgInfoconst &amp; &gt;</label>
+        <link refid="class_tess_result_callback2"/>
+      </node>
+      <node id="1734">
+        <label>INT_PROTO_STRUCT</label>
+        <link refid="struct_i_n_t___p_r_o_t_o___s_t_r_u_c_t"/>
+      </node>
+      <node id="1725">
+        <label>ADAPT_TEMPLATES_STRUCT</label>
+        <link refid="struct_a_d_a_p_t___t_e_m_p_l_a_t_e_s___s_t_r_u_c_t"/>
+        <childnode refid="1726" relation="usage">
+          <edgelabel>Class</edgelabel>
+        </childnode>
+        <childnode refid="1731" relation="usage">
+          <edgelabel>Templates</edgelabel>
+        </childnode>
+      </node>
+      <node id="1753">
+        <label>GenericVector&lt; DawgInfo &gt;</label>
+        <link refid="class_generic_vector"/>
+        <childnode refid="1754" relation="usage">
+          <edgelabel>data_</edgelabel>
+        </childnode>
+        <childnode refid="1755" relation="usage">
+          <edgelabel>clear_cb_</edgelabel>
+        </childnode>
+        <childnode refid="1756" relation="usage">
+          <edgelabel>compare_cb_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1722">
+        <label>tesseract::UnicharAmbigs</label>
+        <link refid="classtesseract_1_1_unichar_ambigs"/>
+      </node>
+      <node id="1721">
+        <label>tesseract::StringParam</label>
+        <link refid="classtesseract_1_1_string_param"/>
+        <childnode refid="1717" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1755">
+        <label>TessCallback1&lt; DawgInfo &gt;</label>
+        <link refid="class_tess_callback1"/>
+      </node>
+      <node id="1731">
+        <label>INT_TEMPLATES_STRUCT</label>
+        <link refid="struct_i_n_t___t_e_m_p_l_a_t_e_s___s_t_r_u_c_t"/>
+        <childnode refid="1732" relation="usage">
+          <edgelabel>Class</edgelabel>
+        </childnode>
+        <childnode refid="1735" relation="usage">
+          <edgelabel>ClassPruners</edgelabel>
+        </childnode>
+      </node>
+      <node id="1710">
+        <label>tesseract::Tesseract</label>
+        <link refid="classtesseract_1_1_tesseract"/>
+        <childnode refid="1711" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1719">
+        <label>UNICHARSET</label>
+        <link refid="class_u_n_i_c_h_a_r_s_e_t"/>
+      </node>
+      <node id="1716">
+        <label>tesseract::BoolParam</label>
+        <link refid="classtesseract_1_1_bool_param"/>
+        <childnode refid="1717" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1761">
+        <label>GenericVector&lt; int &gt;</label>
+        <link refid="class_generic_vector"/>
+        <childnode refid="1762" relation="usage">
+          <edgelabel>compare_cb_</edgelabel>
+        </childnode>
+        <childnode refid="1763" relation="usage">
+          <edgelabel>clear_cb_</edgelabel>
+        </childnode>
+      </node>
+      <node id="1723">
+        <label>tesseract::IntParam</label>
+        <link refid="classtesseract_1_1_int_param"/>
+        <childnode refid="1717" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1726">
+        <label>ADAPT_CLASS_STRUCT</label>
+        <link refid="struct_a_d_a_p_t___c_l_a_s_s___s_t_r_u_c_t"/>
+        <childnode refid="1727" relation="usage">
+          <edgelabel>Config</edgelabel>
+        </childnode>
+        <childnode refid="1730" relation="usage">
+          <edgelabel>TempProtos</edgelabel>
+        </childnode>
+      </node>
+      <node id="1749">
+        <label>tesseract::BlobMatchTable</label>
+        <link refid="classtesseract_1_1_blob_match_table"/>
+      </node>
+      <node id="1727">
+        <label>ADAPTED_CONFIG</label>
+        <link refid="union_a_d_a_p_t_e_d___c_o_n_f_i_g"/>
+        <childnode refid="1728" relation="usage">
+          <edgelabel>Perm</edgelabel>
+        </childnode>
+        <childnode refid="1729" relation="usage">
+          <edgelabel>Temp</edgelabel>
+        </childnode>
+      </node>
+      <node id="1724">
+        <label>tesseract::Image</label>
+        <link refid="classtesseract_1_1_image"/>
+      </node>
+      <node id="1708">
+        <label>tesseract::LTRResultIterator</label>
+        <link refid="classtesseract_1_1_l_t_r_result_iterator"/>
+        <childnode refid="1709" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1740">
+        <label>UnicityTable&lt; tesseract::FontInfo &gt;</label>
+        <link refid="class_unicity_table"/>
+      </node>
+      <node id="1770">
+        <label>TessResultCallback2&lt; bool, STRINGconst &amp;, STRINGconst &amp; &gt;</label>
+        <link refid="class_tess_result_callback2"/>
+      </node>
+      <node id="1732">
+        <label>INT_CLASS_STRUCT</label>
+        <link refid="struct_i_n_t___c_l_a_s_s___s_t_r_u_c_t"/>
+        <childnode refid="1733" relation="usage">
+          <edgelabel>ProtoSets</edgelabel>
+        </childnode>
+      </node>
+      <node id="1767">
+        <label>PAGE_RES</label>
+        <link refid="class_p_a_g_e___r_e_s"/>
+        <childnode refid="1747" relation="usage">
+          <edgelabel>prev_word_best_choice</edgelabel>
+        </childnode>
+        <childnode refid="1768" relation="usage">
+          <edgelabel>misadaption_log</edgelabel>
+        </childnode>
+        <childnode refid="1761" relation="usage">
+          <edgelabel>blame_reasons</edgelabel>
+        </childnode>
+      </node>
+      <node id="1735">
+        <label>CLASS_PRUNER_STRUCT</label>
+        <link refid="struct_c_l_a_s_s___p_r_u_n_e_r___s_t_r_u_c_t"/>
+      </node>
+      <node id="1746">
+        <label>IntegerMatcher</label>
+        <link refid="class_integer_matcher"/>
+      </node>
+      <node id="1738">
+        <label>UnicityTable&lt; tesseract::FontSet &gt;</label>
+        <link refid="class_unicity_table"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" line="37" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/resultiterator.h" bodystart="37" bodyend="233"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_result_iterator_1af0a90d64005eb8ede941178c35bb3eac" prot="private" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>AppendSuffixMarks</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1af3e0a354c0f2881e44c1b722701a8c96" prot="private" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>AppendUTF8ParagraphText</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1a6452359a1ef82c3916408856611b8c1d" prot="private" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>AppendUTF8WordText</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1a466aa30e3c929ace67e35450c4e16779" prot="private" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>at_beginning_of_minor_run_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a7a9cd753bf6a74e5fd953a93930c242f" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>Baseline</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1a36e6fd5587628440bb19b84648645676" prot="public" virt="virtual"><scope>tesseract::ResultIterator</scope><name>Begin</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a9075e98e75619ca5e1270a0a6eb2c352" prot="protected" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>BeginWord</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1a4c10f6610796fec9c25f252b2ca160c5" prot="private" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>BidiDebug</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a98d81a4da55f06637a0db60ac33cc814" prot="protected" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>blob_index_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a26c0bc6c991feaf5615f2941b13d0977" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>BlockType</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a38f6d7da2a9b9ef8983286383729fa73" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>BoundingBox</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a2351fffe02706e3cd35b97cb89e6242d" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>BoundingBoxInternal</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1aefece073147029720e5493f6189ba2a1" prot="private" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>CalculateBlobOrder</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1a10ba7f1e30387d13b518fc1ccdcbfe06" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>CalculateTextlineOrder</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1ad5c58bf137242d3c540f410673f4fd8a" prot="private" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>CalculateTextlineOrder</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1a83b9b746357ee2e8d8f059a3692ac5d8" prot="private" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>CalculateTextlineOrder</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a4ea0a38b584bbc0047792ebe6b0294ce" prot="protected" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>cblob_it_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a81ff358816d9532f550ee3620d7eb18a" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>Cmp</name></member>
+      <member refid="classtesseract_1_1_l_t_r_result_iterator_1a8accedf05e11e8ce3f738fff8524e9a9" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>Confidence</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1ab0795f3f27c9826ec8327300f317d091" prot="private" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>current_paragraph_is_ltr_</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1a75ae60ced2b4a358a73f73ca017d12c7" prot="private" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>CurrentParagraphIsLtr</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1ae1d2f1725fabeafb6e235ccb482d47d6" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>Empty</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1ad8fb0c95849e23f3c67ab1e765e50ae8" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>GetBinaryImage</name></member>
+      <member refid="classtesseract_1_1_l_t_r_result_iterator_1aedeb847f950b8f081b3120ddc0fdc723" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>GetBlamerDebug</name></member>
+      <member refid="classtesseract_1_1_l_t_r_result_iterator_1ae3c65daed28ec1b98d147e22598c3421" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>GetBlamerMisadaptionDebug</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1ae2a030573b6488da77f8e7c4d7bc89ab" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>GetImage</name></member>
+      <member refid="classtesseract_1_1_l_t_r_result_iterator_1accb3240a23c7fd7fb180eebd96b78e95" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>GetParamsTrainingBundle</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1a7a35dd667c73efeeaf7457df90c6199a" prot="public" virt="virtual"><scope>tesseract::ResultIterator</scope><name>GetUTF8Text</name></member>
+      <member refid="classtesseract_1_1_l_t_r_result_iterator_1a4da676fcf68cb6dbc6e4197ed4bee76d" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>HasBlamerInfo</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1a5e067101b620da84b63d08790a0bd8dc" prot="private" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>in_minor_direction_</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1a983b601204f2fee0428213c4fca779e1" prot="public" virt="virtual"><scope>tesseract::ResultIterator</scope><name>IsAtBeginningOf</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1a4ba47a7d01d3bc7f0fbf777605f8297d" prot="public" virt="virtual"><scope>tesseract::ResultIterator</scope><name>IsAtFinalElement</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1a16c1f632f054c114ae3ee3d4d50a8383" prot="private" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>IsAtFinalSymbolOfWord</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1aa83759ff317eb0cfc720b45ac4a09999" prot="private" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>IsAtFirstSymbolOfWord</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a16925fbe4a6264cda66fc901d74e1c8b" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>IsWithinFirstTextlineOfParagraph</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a42df7b8e352be1e5a140787109419f93" prot="protected" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>it_</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1a496d8b85c536023afc7bd0f6665ea237" prot="private" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>IterateAndAppendUTF8TextlineText</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1ad23440ad1059127afadd17c18fbf93ad" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>kComplexWord</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1a15e95d21ce320a7c282c5a8d61fe73ee" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>kMinorRunEnd</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1a1c97324553ea1b897dfb5404e0f9e315" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>kMinorRunStart</name></member>
+      <member refid="classtesseract_1_1_l_t_r_result_iterator_1ae1b5b360d5bf55c0cd0eb336de37ea8b" prot="protected" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>line_separator_</name></member>
+      <member refid="classtesseract_1_1_l_t_r_result_iterator_1a51a228fb5f12fca58db098ae9d9c9d5d" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>LTRResultIterator</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1a15b8d3c2dd2f5ce5812c40b6eb1b79ae" prot="private" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>LTRWordIndex</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1aa989b7f87c3398eec8c41a8888dbda29" prot="private" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>MoveToLogicalStartOfTextline</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1a013bf569b5cc0f3f19fc1a46e2947e06" prot="private" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>MoveToLogicalStartOfWord</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1abd8987e2387f1945b53cf23f99b663e1" prot="public" virt="virtual"><scope>tesseract::ResultIterator</scope><name>Next</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a8c00d22a9b005df7b9d00e91e54f6c07" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>operator=</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a4e7bfaa12388753931a788ef688cc958" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>Orientation</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a480fee3b9cf81df1745ab671c5f28788" prot="protected" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>page_res_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1ad9f7980a1c4b008c90bb860d5aa82f48" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>PageIterator</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a578df2b00868be69cad7b8237400fb38" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>PageIterator</name></member>
+      <member refid="classtesseract_1_1_l_t_r_result_iterator_1a1c6e431ccea8aaad26d9e8d6b9ca2f60" prot="protected" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>paragraph_separator_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a49778d4f782c34d1f466623a6b454a24" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>ParagraphInfo</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1a71525d396c6cdeea89f576adca599474" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>ParagraphIsLtr</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a482f7760a270137905bebb530df2ef46" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>PositionedAtSameWord</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a66e96ed36eeed8b9da723c397910f9e9" prot="protected" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>rect_height_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a2e33ff0e1d949366720fe29a7203f57e" prot="protected" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>rect_left_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a7c33ac80eda9144c2b857963457ace9c" prot="protected" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>rect_top_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1aa8eba0c6367dd6349fe903ac7c3860a4" prot="protected" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>rect_width_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a7da35cf3d398285ff9d0d0bcc277c9af" prot="public" virt="virtual"><scope>tesseract::ResultIterator</scope><name>RestartParagraph</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a2df743d478df34f1a239cf9675f82be0" prot="public" virt="virtual"><scope>tesseract::ResultIterator</scope><name>RestartRow</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1aa0f6c0e15c83e9ed718d80d736865c3f" prot="protected" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>ResultIterator</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1ae72a89d863ac231b9cfbab4c6004ad3d" prot="protected" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>scale_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a43f0c51fac0f0e60139487d5868812a3" prot="protected" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>scaled_yres_</name></member>
+      <member refid="classtesseract_1_1_l_t_r_result_iterator_1a4e995910210b544773f37889e45bf4f7" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>SetLineSeparator</name></member>
+      <member refid="classtesseract_1_1_l_t_r_result_iterator_1a62090e46efc1c10d745f64758ba017f6" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>SetParagraphSeparator</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1a961e7ee57edae85e855332a301cccacf" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>StartOfParagraph</name></member>
+      <member refid="classtesseract_1_1_l_t_r_result_iterator_1a4c73103c353301e9df609a2e89c3593d" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>SymbolIsDropcap</name></member>
+      <member refid="classtesseract_1_1_l_t_r_result_iterator_1a818b709017bb696e2d86361ace7f493c" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>SymbolIsSubscript</name></member>
+      <member refid="classtesseract_1_1_l_t_r_result_iterator_1a647bf45778e338f528cbc55d50a2e467" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>SymbolIsSuperscript</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1acca34c1adcf494eca7dfefe74258f991" prot="protected" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>tesseract_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a409db505129bcd894cbe20b77f7663bb" prot="protected" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>word_</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1a5bcc04bef9fefefc856440bcfe15d9ab" prot="protected" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>word_length_</name></member>
+      <member refid="classtesseract_1_1_l_t_r_result_iterator_1a95496fbd3bf9634585cae793237595df" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>WordDirection</name></member>
+      <member refid="classtesseract_1_1_l_t_r_result_iterator_1ad38e4b44797617e01ad4aab01765720e" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>WordFontAttributes</name></member>
+      <member refid="classtesseract_1_1_l_t_r_result_iterator_1a7ed3ddebcc19f716b4867bb4cb2b43c1" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>WordIsFromDictionary</name></member>
+      <member refid="classtesseract_1_1_l_t_r_result_iterator_1a4f4b6b081bd1f9b0d5e66756b1261297" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>WordIsNumeric</name></member>
+      <member refid="classtesseract_1_1_l_t_r_result_iterator_1aac7fd52a615e52c44cc57ab4e8932cf6" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>WordLattice</name></member>
+      <member refid="classtesseract_1_1_l_t_r_result_iterator_1aaa90986eff784899c4a7e538c792ce86" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>WordRecognitionLanguage</name></member>
+      <member refid="classtesseract_1_1_l_t_r_result_iterator_1add8e469476df2a43e8ca01cdd3968076" prot="public" virt="non-virtual"><scope>tesseract::ResultIterator</scope><name>WordTruthUTF8Text</name></member>
+      <member refid="classtesseract_1_1_l_t_r_result_iterator_1aeed22b9e16361965a8c29fa3dbb23ab4" prot="public" virt="virtual"><scope>tesseract::ResultIterator</scope><name>~LTRResultIterator</name></member>
+      <member refid="classtesseract_1_1_page_iterator_1acc314df15e768cffeef57957038e3bf5" prot="public" virt="virtual"><scope>tesseract::ResultIterator</scope><name>~PageIterator</name></member>
+      <member refid="classtesseract_1_1_result_iterator_1a15c5061a86ff73f0198a102e20f0d493" prot="public" virt="virtual"><scope>tesseract::ResultIterator</scope><name>~ResultIterator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

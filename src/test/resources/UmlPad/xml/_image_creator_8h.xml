@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_image_creator_8h" kind="file">
+    <compoundname>ImageCreator.h</compoundname>
+    <includes local="no">Foundation/Foundation.h</includes>
+    <includedby refid="_diagram_info_8m" local="yes">Classes/DiagramInfo.m</includedby>
+    <includedby refid="_image_creator_8m" local="yes">Classes/ImageCreator.m</includedby>
+    <includedby refid="_persistence_8m" local="yes">Classes/Persistence.m</includedby>
+    <includedby refid="_save_to_photos_command_8m" local="yes">Classes/SaveToPhotosCommand.m</includedby>
+    <includedby refid="_send_mail_command_8m" local="yes">Classes/SendMailCommand.m</includedby>
+    <includedby refid="_x_m_l_creater_8m" local="yes">Classes/XMLCreater.m</includedby>
+    <incdepgraph>
+      <node id="1359">
+        <label>Classes/ImageCreator.h</label>
+        <link refid="ImageCreator.h"/>
+        <childnode refid="1360" relation="include">
+        </childnode>
+      </node>
+      <node id="1360">
+        <label>Foundation/Foundation.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1366">
+        <label>Classes/SendMailCommand.m</label>
+        <link refid="_send_mail_command_8m"/>
+      </node>
+      <node id="1362">
+        <label>Classes/DiagramInfo.m</label>
+        <link refid="_diagram_info_8m"/>
+      </node>
+      <node id="1365">
+        <label>Classes/SaveToPhotosCommand.m</label>
+        <link refid="_save_to_photos_command_8m"/>
+      </node>
+      <node id="1367">
+        <label>Classes/XMLCreater.m</label>
+        <link refid="_x_m_l_creater_8m"/>
+      </node>
+      <node id="1364">
+        <label>Classes/Persistence.m</label>
+        <link refid="_persistence_8m"/>
+      </node>
+      <node id="1361">
+        <label>Classes/ImageCreator.h</label>
+        <link refid="ImageCreator.h"/>
+        <childnode refid="1362" relation="include">
+        </childnode>
+        <childnode refid="1363" relation="include">
+        </childnode>
+        <childnode refid="1364" relation="include">
+        </childnode>
+        <childnode refid="1365" relation="include">
+        </childnode>
+        <childnode refid="1366" relation="include">
+        </childnode>
+        <childnode refid="1367" relation="include">
+        </childnode>
+      </node>
+      <node id="1363">
+        <label>Classes/ImageCreator.m</label>
+        <link refid="_image_creator_8m"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="interface_image_creator" prot="public">ImageCreator</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>ImageCreator.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>UmlPad</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>梅田<sp/>政利<sp/>on<sp/>10/07/13.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>2010<sp/>Change<sp/>Vision.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;Foundation/Foundation.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_diagram_view" kindref="compound">DiagramView</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_diagram_info" kindref="compound">DiagramInfo</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="interface_image_creator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_image_creator" kindref="compound">ImageCreator</ref><sp/>:<sp/>NSObject<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">+<sp/>(CGRect)getMinRect;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">+<sp/>(UIImage<sp/>*)createClippedDiagramImage:(<ref refid="interface_diagram_view" kindref="compound">DiagramView</ref><sp/>*)view;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">+<sp/>(UIImage<sp/>*)createThumbnail:(<ref refid="interface_diagram_view" kindref="compound">DiagramView</ref><sp/>*)view;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">+<sp/>(void)savePngFile:(NSString<sp/>*)fileName<sp/>image:(UIImage<sp/>*)image;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/ImageCreator.h"/>
+  </compounddef>
+</doxygen>

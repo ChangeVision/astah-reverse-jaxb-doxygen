@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="bitvector_8h" kind="file">
+    <compoundname>bitvector.h</compoundname>
+    <includes local="no">assert.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes refid="host_8h" local="yes">host.h</includes>
+    <includedby refid="bitvector_8cpp" local="yes">ccutil/bitvector.cpp</includedby>
+    <includedby refid="trainingsampleset_8h" local="yes">classify/trainingsampleset.h</includedby>
+    <incdepgraph>
+      <node id="13792">
+        <label>assert.h</label>
+      </node>
+      <node id="13795">
+        <label>platform.h</label>
+        <link refid="platform_8h"/>
+        <childnode refid="13796" relation="include">
+        </childnode>
+      </node>
+      <node id="13791">
+        <label>ccutil/bitvector.h</label>
+        <link refid="bitvector.h"/>
+        <childnode refid="13792" relation="include">
+        </childnode>
+        <childnode refid="13793" relation="include">
+        </childnode>
+        <childnode refid="13794" relation="include">
+        </childnode>
+      </node>
+      <node id="13796">
+        <label>limits.h</label>
+      </node>
+      <node id="13794">
+        <label>host.h</label>
+        <link refid="host_8h"/>
+        <childnode refid="13795" relation="include">
+        </childnode>
+      </node>
+      <node id="13793">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="13807">
+        <label>classify/sampleiterator.cpp</label>
+        <link refid="sampleiterator_8cpp"/>
+      </node>
+      <node id="13798">
+        <label>ccutil/bitvector.cpp</label>
+        <link refid="bitvector_8cpp"/>
+      </node>
+      <node id="13802">
+        <label>classify/mastertrainer.cpp</label>
+        <link refid="mastertrainer_8cpp"/>
+      </node>
+      <node id="13804">
+        <label>training/commontraining.cpp</label>
+        <link refid="commontraining_8cpp"/>
+      </node>
+      <node id="13797">
+        <label>ccutil/bitvector.h</label>
+        <link refid="bitvector.h"/>
+        <childnode refid="13798" relation="include">
+        </childnode>
+        <childnode refid="13799" relation="include">
+        </childnode>
+      </node>
+      <node id="13800">
+        <label>classify/errorcounter.cpp</label>
+        <link refid="errorcounter_8cpp"/>
+      </node>
+      <node id="13805">
+        <label>training/mftraining.cpp</label>
+        <link refid="mftraining_8cpp"/>
+      </node>
+      <node id="13808">
+        <label>classify/trainingsampleset.cpp</label>
+        <link refid="trainingsampleset_8cpp"/>
+      </node>
+      <node id="13799">
+        <label>classify/trainingsampleset.h</label>
+        <link refid="trainingsampleset_8h"/>
+        <childnode refid="13800" relation="include">
+        </childnode>
+        <childnode refid="13801" relation="include">
+        </childnode>
+        <childnode refid="13807" relation="include">
+        </childnode>
+        <childnode refid="13808" relation="include">
+        </childnode>
+      </node>
+      <node id="13806">
+        <label>training/shapeclustering.cpp</label>
+        <link refid="shapeclustering_8cpp"/>
+      </node>
+      <node id="13803">
+        <label>training/classifier_tester.cpp</label>
+        <link refid="classifier__tester_8cpp"/>
+      </node>
+      <node id="13801">
+        <label>classify/mastertrainer.h</label>
+        <link refid="mastertrainer_8h"/>
+        <childnode refid="13802" relation="include">
+        </childnode>
+        <childnode refid="13803" relation="include">
+        </childnode>
+        <childnode refid="13804" relation="include">
+        </childnode>
+        <childnode refid="13805" relation="include">
+        </childnode>
+        <childnode refid="13806" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classtesseract_1_1_bit_vector" prot="public">tesseract::BitVector</innerclass>
+    <innernamespace refid="namespacetesseract">tesseract</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2011<sp/>Google<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>rays@google.com<sp/>(Ray<sp/>Smith)</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight><highlight class="comment">//<sp/>File:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bitvector.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Description:<sp/>Class<sp/>replacement<sp/>for<sp/>BITVECTOR.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/><sp/><sp/><sp/><sp/><sp/>Ray<sp/>Smith</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created:<sp/><sp/><sp/><sp/><sp/>Mon<sp/>Jan<sp/>10<sp/>17:44:01<sp/>PST<sp/>2011</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(C)<sp/>Copyright<sp/>2011,<sp/>Google<sp/>Inc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TESSERACT_CCUTIL_BITVECTOR_H__</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>TESSERACT_CCUTIL_BITVECTOR_H__</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="host_8h" kindref="compound">host.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetesseract-c__api-demo_1afed58feacb84df2de88bdd613cfdba6d" kindref="member">tesseract</ref><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Trivial<sp/>class<sp/>to<sp/>encapsulate<sp/>a<sp/>fixed-length<sp/>array<sp/>of<sp/>bits,<sp/>with</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Serialize/DeSerialize.<sp/>Replaces<sp/>the<sp/>old<sp/>macros.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classtesseract_1_1_bit_vector" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtesseract_1_1_bit_vector" kindref="compound">BitVector</ref><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_bit_vector_1ae869bc2e81021629f614abb4f7c0d731" kindref="member">BitVector</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Initializes<sp/>the<sp/>array<sp/>to<sp/>length<sp/>*<sp/>false.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_bit_vector_1ae869bc2e81021629f614abb4f7c0d731" kindref="member">BitVector</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_bit_vector_1ae869bc2e81021629f614abb4f7c0d731" kindref="member">BitVector</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_bit_vector" kindref="compound">BitVector</ref>&amp;<sp/>src);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_bit_vector" kindref="compound">BitVector</ref>&amp;<sp/><ref refid="classtesseract_1_1_bit_vector_1a44d093e6d5dee82e8e844962ba0aa6d1" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_bit_vector" kindref="compound">BitVector</ref>&amp;<sp/>src);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><ref refid="classtesseract_1_1_bit_vector_1abaac78f6716fcda984a3087a41c8191e" kindref="member">~BitVector</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Initializes<sp/>the<sp/>array<sp/>to<sp/>length<sp/>*<sp/>false.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_bit_vector_1a0ceccf66ec4f2b0f13aff1e75d63e0c0" kindref="member">Init</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Returns<sp/>the<sp/>number<sp/>of<sp/>bits<sp/>that<sp/>are<sp/>accessible<sp/>in<sp/>the<sp/>vector.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classtesseract_1_1_bit_vector_1aea871d60730329ecb7fcdbcd2c6b477e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_bit_vector_1aea871d60730329ecb7fcdbcd2c6b477e" kindref="member">size</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>bit_size_;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Writes<sp/>to<sp/>the<sp/>given<sp/>file.<sp/>Returns<sp/>false<sp/>in<sp/>case<sp/>of<sp/>error.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_bit_vector_1a027f35099cf9263c5191b935ab961aca" kindref="member">Serialize</ref>(FILE*<sp/>fp)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Reads<sp/>from<sp/>the<sp/>given<sp/>file.<sp/>Returns<sp/>false<sp/>in<sp/>case<sp/>of<sp/>error.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>swap<sp/>is<sp/>true,<sp/>assumes<sp/>a<sp/>big/little-endian<sp/>swap<sp/>is<sp/>needed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_bit_vector_1aa6297555dfd6c1cf27bebda8ba4eb4db" kindref="member">DeSerialize</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>swap,<sp/>FILE*<sp/>fp);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_bit_vector_1a4bede8726b27fe3c1f484468ff1139ce" kindref="member">SetAllFalse</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_bit_vector_1a519c6ee34d017759138ac0f86c302974" kindref="member">SetAllTrue</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Accessors<sp/>to<sp/>set/reset/get<sp/>bits.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>range<sp/>of<sp/>index<sp/>is<sp/>[0,<sp/>size()-1].</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>There<sp/>is<sp/>debug-only<sp/>bounds<sp/>checking.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classtesseract_1_1_bit_vector_1a7a1176795ee1fe2536888aa3a57da86c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_bit_vector_1a7a1176795ee1fe2536888aa3a57da86c" kindref="member">SetBit</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>array_[WordIndex(index)]<sp/>|=<sp/>BitMask(index);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66" refid="classtesseract_1_1_bit_vector_1ae6dd67c965f39c1d269c059945f353f9" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_bit_vector_1ae6dd67c965f39c1d269c059945f353f9" kindref="member">ResetBit</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>array_[WordIndex(index)]<sp/>&amp;=<sp/>~BitMask(index);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69" refid="classtesseract_1_1_bit_vector_1a3d6d5a77e3e00ca36f15e9d86022dc29" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_bit_vector_1a3d6d5a77e3e00ca36f15e9d86022dc29" kindref="member">SetValue</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtesseract_1_1_bit_vector_1a7a1176795ee1fe2536888aa3a57da86c" kindref="member">SetBit</ref>(index);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtesseract_1_1_bit_vector_1ae6dd67c965f39c1d269c059945f353f9" kindref="member">ResetBit</ref>(index);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75" refid="classtesseract_1_1_bit_vector_1ace1f1c3b5ce0744ae11b17345478de8e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_bit_vector_1ace1f1c3b5ce0744ae11b17345478de8e" kindref="member">At</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(array_[WordIndex(index)]<sp/>&amp;<sp/>BitMask(index))<sp/>!=<sp/>0;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78" refid="classtesseract_1_1_bit_vector_1ad928667b25daa82bbe064d976197afba" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classtesseract_1_1_bit_vector_1ad928667b25daa82bbe064d976197afba" kindref="member">operator[]</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(array_[WordIndex(index)]<sp/>&amp;<sp/>BitMask(index))<sp/>!=<sp/>0;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Allocates<sp/>memory<sp/>for<sp/>a<sp/>vector<sp/>of<sp/>the<sp/>given<sp/>length.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Alloc(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Computes<sp/>the<sp/>index<sp/>to<sp/>array_<sp/>for<sp/>the<sp/>given<sp/>index,<sp/>with<sp/>debug<sp/>range</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>checking.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>WordIndex(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(0<sp/>&lt;=<sp/>index<sp/>&amp;&amp;<sp/>index<sp/>&lt;<sp/>bit_size_);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>index<sp/>/<sp/>kBitFactor;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Returns<sp/>a<sp/>mask<sp/>to<sp/>select<sp/>the<sp/>appropriate<sp/>bit<sp/>for<sp/>the<sp/>given<sp/>index.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><ref refid="host_8h_1afc8530b39ebe0b6df1e19159d2508d15" kindref="member">uinT32</ref><sp/>BitMask(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1<sp/>&lt;&lt;<sp/>(index<sp/>&amp;<sp/>(kBitFactor<sp/>-<sp/>1));</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Returns<sp/>the<sp/>number<sp/>of<sp/>array<sp/>elements<sp/>needed<sp/>to<sp/>represent<sp/>the<sp/>current</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>bit_size_.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>WordLength()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(bit_size_<sp/>+<sp/>kBitFactor<sp/>-<sp/>1)<sp/>/<sp/>kBitFactor;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Returns<sp/>the<sp/>number<sp/>of<sp/>bytes<sp/>consumed<sp/>by<sp/>the<sp/>array_.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ByteLength()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>WordLength()<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(*array_);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>bits<sp/>in<sp/>this<sp/>BitVector.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><ref refid="host_8h_1afc8530b39ebe0b6df1e19159d2508d15" kindref="member">uinT32</ref><sp/>bit_size_;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Array<sp/>of<sp/>words<sp/>used<sp/>to<sp/>pack<sp/>the<sp/>bits.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><ref refid="host_8h_1afc8530b39ebe0b6df1e19159d2508d15" kindref="member">uinT32</ref>*<sp/>array_;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>bits<sp/>in<sp/>an<sp/>array_<sp/>element.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>kBitFactor<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="host_8h_1afc8530b39ebe0b6df1e19159d2508d15" kindref="member">uinT32</ref>)<sp/>*<sp/>8;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>tesseract.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>TESSERACT_CCUTIL_BITVECTOR_H__</highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/trunk/ccutil/bitvector.h"/>
+  </compounddef>
+</doxygen>

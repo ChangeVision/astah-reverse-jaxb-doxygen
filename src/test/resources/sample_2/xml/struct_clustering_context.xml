@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="struct_clustering_context" kind="struct" prot="public">
+    <compoundname>ClusteringContext</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_clustering_context_1a411623fe2aa0ed365290e1f0c8ac81a4" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_h_e_a_p" kindref="compound">HEAP</ref> *</type>
+        <definition>HEAP* ClusteringContext::heap</definition>
+        <argsstring></argsstring>
+        <name>heap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/classify/cluster.cpp" line="193" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/cluster.cpp" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_clustering_context_1abcdf0ba8732036cb540bb470956186d3" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_t_e_m_p_c_l_u_s_t_e_r" kindref="compound">TEMPCLUSTER</ref> *</type>
+        <definition>TEMPCLUSTER* ClusteringContext::candidates</definition>
+        <argsstring></argsstring>
+        <name>candidates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/classify/cluster.cpp" line="194" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/cluster.cpp" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_clustering_context_1a6414b57292a4e25bfe1af8bd47258817" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_k_d_t_r_e_e" kindref="compound">KDTREE</ref> *</type>
+        <definition>KDTREE* ClusteringContext::tree</definition>
+        <argsstring></argsstring>
+        <name>tree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/classify/cluster.cpp" line="195" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/cluster.cpp" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_clustering_context_1a6e7e68c81c4925fb0cc24fa90d1fa358" prot="public" static="no" mutable="no">
+        <type><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref></type>
+        <definition>inT32 ClusteringContext::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/classify/cluster.cpp" line="196" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/cluster.cpp" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="599">
+        <label>TEMPCLUSTER</label>
+        <link refid="struct_t_e_m_p_c_l_u_s_t_e_r"/>
+        <childnode refid="600" relation="usage">
+          <edgelabel>Neighbor</edgelabel>
+          <edgelabel>Cluster</edgelabel>
+        </childnode>
+      </node>
+      <node id="603">
+        <label>KDNODE</label>
+        <link refid="struct_k_d_n_o_d_e"/>
+        <childnode refid="603" relation="usage">
+          <edgelabel>Left</edgelabel>
+          <edgelabel>Right</edgelabel>
+        </childnode>
+      </node>
+      <node id="601">
+        <label>KDTREE</label>
+        <link refid="struct_k_d_t_r_e_e"/>
+        <childnode refid="602" relation="usage">
+          <edgelabel>KeyDesc</edgelabel>
+        </childnode>
+        <childnode refid="603" relation="usage">
+          <edgelabel>Root</edgelabel>
+        </childnode>
+      </node>
+      <node id="602">
+        <label>PARAM_DESC</label>
+        <link refid="struct_p_a_r_a_m___d_e_s_c"/>
+      </node>
+      <node id="600">
+        <label>sample</label>
+        <link refid="structsample"/>
+        <childnode refid="600" relation="usage">
+          <edgelabel>Left</edgelabel>
+          <edgelabel>Right</edgelabel>
+        </childnode>
+      </node>
+      <node id="598">
+        <label>ClusteringContext</label>
+        <link refid="struct_clustering_context"/>
+        <childnode refid="599" relation="usage">
+          <edgelabel>candidates</edgelabel>
+        </childnode>
+        <childnode refid="601" relation="usage">
+          <edgelabel>tree</edgelabel>
+        </childnode>
+        <childnode refid="604" relation="usage">
+          <edgelabel>heap</edgelabel>
+        </childnode>
+      </node>
+      <node id="605">
+        <label>HEAPENTRY</label>
+        <link refid="struct_h_e_a_p_e_n_t_r_y"/>
+      </node>
+      <node id="604">
+        <label>HEAP</label>
+        <link refid="struct_h_e_a_p"/>
+        <childnode refid="605" relation="usage">
+          <edgelabel>Entry</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/classify/cluster.cpp" line="192" column="1" bodyfile="/Users/makoto/Desktop/trunk/classify/cluster.cpp" bodystart="192" bodyend="197"/>
+    <listofallmembers>
+      <member refid="struct_clustering_context_1abcdf0ba8732036cb540bb470956186d3" prot="public" virt="non-virtual"><scope>ClusteringContext</scope><name>candidates</name></member>
+      <member refid="struct_clustering_context_1a411623fe2aa0ed365290e1f0c8ac81a4" prot="public" virt="non-virtual"><scope>ClusteringContext</scope><name>heap</name></member>
+      <member refid="struct_clustering_context_1a6e7e68c81c4925fb0cc24fa90d1fa358" prot="public" virt="non-virtual"><scope>ClusteringContext</scope><name>next</name></member>
+      <member refid="struct_clustering_context_1a6414b57292a4e25bfe1af8bd47258817" prot="public" virt="non-virtual"><scope>ClusteringContext</scope><name>tree</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

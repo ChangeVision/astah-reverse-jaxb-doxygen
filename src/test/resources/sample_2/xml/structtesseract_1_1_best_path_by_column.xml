@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="structtesseract_1_1_best_path_by_column" kind="struct" prot="public">
+    <compoundname>tesseract::BestPathByColumn</compoundname>
+    <includes refid="language__model_8h" local="no">language_model.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtesseract_1_1_best_path_by_column_1a796bfd0c93f113f47ae4c1ab727a4ed1" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float tesseract::BestPathByColumn::avg_cost</definition>
+        <argsstring></argsstring>
+        <name>avg_cost</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="257" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtesseract_1_1_best_path_by_column_1a57f94e53a46d6669768c88daab8a071d" prot="public" static="no" mutable="no">
+        <type><ref refid="structtesseract_1_1_viterbi_state_entry" kindref="compound">ViterbiStateEntry</ref> *</type>
+        <definition>ViterbiStateEntry* tesseract::BestPathByColumn::best_vse</definition>
+        <argsstring></argsstring>
+        <name>best_vse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="258" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structtesseract_1_1_best_path_by_column_1ab7ed2c2005113d82334d74d3ef32ba35" prot="public" static="no" mutable="no">
+        <type><ref refid="class_b_l_o_b___c_h_o_i_c_e" kindref="compound">BLOB_CHOICE</ref> *</type>
+        <definition>BLOB_CHOICE* tesseract::BestPathByColumn::best_b</definition>
+        <argsstring></argsstring>
+        <name>best_b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="259" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="232">
+        <label>tesseract::LanguageModelNgramInfo</label>
+        <link refid="structtesseract_1_1_language_model_ngram_info"/>
+        <childnode refid="233" relation="usage">
+          <edgelabel>context</edgelabel>
+        </childnode>
+      </node>
+      <node id="223">
+        <label>tesseract::AssociateStats</label>
+        <link refid="structtesseract_1_1_associate_stats"/>
+      </node>
+      <node id="233">
+        <label>STRING</label>
+        <link refid="class_s_t_r_i_n_g"/>
+      </node>
+      <node id="221">
+        <label>tesseract::ViterbiStateEntry</label>
+        <link refid="structtesseract_1_1_viterbi_state_entry"/>
+        <childnode refid="222" relation="public-inheritance">
+        </childnode>
+        <childnode refid="223" relation="usage">
+          <edgelabel>associate_stats</edgelabel>
+        </childnode>
+        <childnode refid="224" relation="usage">
+          <edgelabel>consistency_info</edgelabel>
+        </childnode>
+        <childnode refid="221" relation="usage">
+          <edgelabel>parent_vse</edgelabel>
+        </childnode>
+        <childnode refid="225" relation="usage">
+          <edgelabel>dawg_info</edgelabel>
+        </childnode>
+        <childnode refid="231" relation="usage">
+          <edgelabel>parent_b</edgelabel>
+        </childnode>
+        <childnode refid="232" relation="usage">
+          <edgelabel>ngram_info</edgelabel>
+        </childnode>
+      </node>
+      <node id="226">
+        <label>tesseract::DawgInfoVector</label>
+        <link refid="classtesseract_1_1_dawg_info_vector"/>
+        <childnode refid="227" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="224">
+        <label>tesseract::LanguageModelConsistencyInfo</label>
+        <link refid="structtesseract_1_1_language_model_consistency_info"/>
+      </node>
+      <node id="228">
+        <label>tesseract::DawgInfo</label>
+        <link refid="structtesseract_1_1_dawg_info"/>
+      </node>
+      <node id="225">
+        <label>tesseract::LanguageModelDawgInfo</label>
+        <link refid="structtesseract_1_1_language_model_dawg_info"/>
+        <childnode refid="226" relation="usage">
+          <edgelabel>constraints</edgelabel>
+          <edgelabel>active_dawgs</edgelabel>
+        </childnode>
+      </node>
+      <node id="230">
+        <label>TessResultCallback2&lt; bool, DawgInfoconst &amp;, DawgInfoconst &amp; &gt;</label>
+        <link refid="class_tess_result_callback2"/>
+      </node>
+      <node id="227">
+        <label>GenericVector&lt; DawgInfo &gt;</label>
+        <link refid="class_generic_vector"/>
+        <childnode refid="228" relation="usage">
+          <edgelabel>data_</edgelabel>
+        </childnode>
+        <childnode refid="229" relation="usage">
+          <edgelabel>clear_cb_</edgelabel>
+        </childnode>
+        <childnode refid="230" relation="usage">
+          <edgelabel>compare_cb_</edgelabel>
+        </childnode>
+      </node>
+      <node id="229">
+        <label>TessCallback1&lt; DawgInfo &gt;</label>
+        <link refid="class_tess_callback1"/>
+      </node>
+      <node id="231">
+        <label>BLOB_CHOICE</label>
+        <link refid="class_b_l_o_b___c_h_o_i_c_e"/>
+        <childnode refid="222" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="220">
+        <label>tesseract::BestPathByColumn</label>
+        <link refid="structtesseract_1_1_best_path_by_column"/>
+        <childnode refid="221" relation="usage">
+          <edgelabel>best_vse</edgelabel>
+        </childnode>
+        <childnode refid="231" relation="usage">
+          <edgelabel>best_b</edgelabel>
+        </childnode>
+      </node>
+      <node id="222">
+        <label>ELIST_LINK</label>
+        <link refid="class_e_l_i_s_t___l_i_n_k"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/wordrec/language_model.h" line="256" column="1" bodyfile="/Users/makoto/Desktop/trunk/wordrec/language_model.h" bodystart="256" bodyend="260"/>
+    <listofallmembers>
+      <member refid="structtesseract_1_1_best_path_by_column_1a796bfd0c93f113f47ae4c1ab727a4ed1" prot="public" virt="non-virtual"><scope>tesseract::BestPathByColumn</scope><name>avg_cost</name></member>
+      <member refid="structtesseract_1_1_best_path_by_column_1ab7ed2c2005113d82334d74d3ef32ba35" prot="public" virt="non-virtual"><scope>tesseract::BestPathByColumn</scope><name>best_b</name></member>
+      <member refid="structtesseract_1_1_best_path_by_column_1a57f94e53a46d6669768c88daab8a071d" prot="public" virt="non-virtual"><scope>tesseract::BestPathByColumn</scope><name>best_vse</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="class_p_g_event_handler" kind="class" prot="public">
+    <compoundname>PGEventHandler</compoundname>
+    <basecompoundref refid="class_s_v_event_handler" prot="public" virt="non-virtual">SVEventHandler</basecompoundref>
+    <includes refid="pgedit_8h" local="no">pgedit.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_p_g_event_handler_1abff80884ebff9916d98751efbdd8681c" prot="private" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_tesseract" kindref="compound">tesseract::Tesseract</ref> *</type>
+        <definition>tesseract::Tesseract* PGEventHandler::tess_</definition>
+        <argsstring></argsstring>
+        <name>tess_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pgedit.h" line="43" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pgedit.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_p_g_event_handler_1a9d9d15673f7d24bf751d3d67ea63ddd8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PGEventHandler::PGEventHandler</definition>
+        <argsstring>(tesseract::Tesseract *tess)</argsstring>
+        <name>PGEventHandler</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_tesseract" kindref="compound">tesseract::Tesseract</ref> *</type>
+          <declname>tess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pgedit.h" line="39" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pgedit.h" bodystart="39" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_g_event_handler_1a12be356045e7f4b06670afd16df62862" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PGEventHandler::Notify</definition>
+        <argsstring>(const SVEvent *sve)</argsstring>
+        <name>Notify</name>
+        <reimplements refid="class_s_v_event_handler_1a7f4f886aeca11e15ceab97833f070887">Notify</reimplements>
+        <param>
+          <type>const <ref refid="struct_s_v_event" kindref="compound">SVEvent</ref> *</type>
+          <declname>sve</declname>
+          <defname>event</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>notify()</para><para>Event handler that processes incoming events, either forwarding them to process_cmd_win_event or process_image_event. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/pgedit.h" line="41" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pgedit.cpp" bodystart="234" bodyend="248"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1646">
+        <label>PGEventHandler</label>
+        <link refid="class_p_g_event_handler"/>
+        <childnode refid="1647" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1647">
+        <label>SVEventHandler</label>
+        <link refid="class_s_v_event_handler"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1648">
+        <label>PGEventHandler</label>
+        <link refid="class_p_g_event_handler"/>
+        <childnode refid="1649" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1649">
+        <label>SVEventHandler</label>
+        <link refid="class_s_v_event_handler"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/ccmain/pgedit.h" line="37" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/pgedit.h" bodystart="37" bodyend="44"/>
+    <listofallmembers>
+      <member refid="class_p_g_event_handler_1a12be356045e7f4b06670afd16df62862" prot="public" virt="virtual"><scope>PGEventHandler</scope><name>Notify</name></member>
+      <member refid="class_p_g_event_handler_1a9d9d15673f7d24bf751d3d67ea63ddd8" prot="public" virt="non-virtual"><scope>PGEventHandler</scope><name>PGEventHandler</name></member>
+      <member refid="class_p_g_event_handler_1abff80884ebff9916d98751efbdd8681c" prot="private" virt="non-virtual"><scope>PGEventHandler</scope><name>tess_</name></member>
+      <member refid="class_s_v_event_handler_1a6e870a3288bdb825a875b3a7fe79f861" prot="public" virt="virtual"><scope>PGEventHandler</scope><name>~SVEventHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_diagram_info_view_8h" kind="file">
+    <compoundname>DiagramInfoView.h</compoundname>
+    <includes local="no">UIKit/UIKit.h</includes>
+    <includedby refid="_diagram_info_view_8m" local="yes">Classes/DiagramInfoView.m</includedby>
+    <includedby refid="_home_view_8m" local="yes">Classes/HomeView.m</includedby>
+    <incdepgraph>
+      <node id="1040">
+        <label>UIKit/UIKit.h</label>
+      </node>
+      <node id="1039">
+        <label>Classes/DiagramInfoView.h</label>
+        <link refid="DiagramInfoView.h"/>
+        <childnode refid="1040" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1043">
+        <label>Classes/HomeView.m</label>
+        <link refid="_home_view_8m"/>
+      </node>
+      <node id="1041">
+        <label>Classes/DiagramInfoView.h</label>
+        <link refid="DiagramInfoView.h"/>
+        <childnode refid="1042" relation="include">
+        </childnode>
+        <childnode refid="1043" relation="include">
+        </childnode>
+      </node>
+      <node id="1042">
+        <label>Classes/DiagramInfoView.m</label>
+        <link refid="_diagram_info_view_8m"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="interface_diagram_info_view" prot="public">DiagramInfoView</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>DiagramInfoView.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>UmlPad</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>梅田<sp/>政利<sp/>on<sp/>10/08/06.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Copyright<sp/>2010<sp/>Change<sp/>Vision.<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;UIKit/UIKit.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_diagram_info" kindref="compound">DiagramInfo</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_home_view_controller" kindref="compound">HomeViewController</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="interface_diagram_info_view" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_diagram_info_view" kindref="compound">DiagramInfoView</ref><sp/>:<sp/>UIImageView<sp/>{</highlight></codeline>
+<codeline lineno="15" refid="interface_diagram_info_view_1a543ebc109701f2cc7742bc2f9399fbc8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="interface_diagram_info" kindref="compound">DiagramInfo</ref><sp/>*<ref refid="interface_diagram_info_view_1a543ebc109701f2cc7742bc2f9399fbc8" kindref="member">diagramInfo</ref>;</highlight></codeline>
+<codeline lineno="16" refid="interface_diagram_info_view_1a7928e9d5b9e960a1a9023705a7a9151e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>UITextField<sp/>*<ref refid="interface_diagram_info_view_1a7928e9d5b9e960a1a9023705a7a9151e" kindref="member">diagramNameLabel</ref>;</highlight></codeline>
+<codeline lineno="17" refid="interface_diagram_info_view_1a0fbd0051fb9f36a620a489f4f11bd083" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>UIImageView<sp/>*<ref refid="interface_diagram_info_view_1a0fbd0051fb9f36a620a489f4f11bd083" kindref="member">closeButton</ref>;</highlight></codeline>
+<codeline lineno="18" refid="interface_diagram_info_view_1af19c584f0be0f43c63959cec910f45e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>UIImageView<sp/>*<ref refid="interface_diagram_info_view_1af19c584f0be0f43c63959cec910f45e6" kindref="member">thumbnailView</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(nonatomic,<sp/>retain)<sp/><ref refid="interface_diagram_info" kindref="compound">DiagramInfo</ref><sp/>*diagramInfo;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(nonatomic,<sp/>readonly)<sp/>UIImageView<sp/>*closeButton;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(nonatomic,<sp/>readonly)<sp/>UITextField<sp/>*diagramNameLabel;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">@property</highlight><highlight class="normal"><sp/>(nonatomic,<sp/>readonly)<sp/>UIImageView<sp/>*thumbnailView;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">-<sp/>(id)initWithDiagramInfo:(<ref refid="interface_diagram_info" kindref="compound">DiagramInfo</ref><sp/>*)info;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">-<sp/>(void)updateView;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/DiagramInfoView.h"/>
+  </compounddef>
+</doxygen>

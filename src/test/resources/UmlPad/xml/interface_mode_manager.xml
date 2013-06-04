@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="interface_mode_manager" kind="class" prot="public">
+    <compoundname>ModeManager</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes refid="_mode_manager_8h" local="no">ModeManager.h</includes>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_mode_manager_1a391fd66accbea489480e3fafa2f5983f" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type><ref refid="interface_tap_mode" kindref="compound">TapMode</ref> *</type>
+        <definition>TapMode * ModeManager::tapMode</definition>
+        <argsstring></argsstring>
+        <name>tapMode</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/ModeManager.h" line="17" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/ModeManager.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_mode_manager_1a55b161c8f2b37c9a36ebe1b5c4cdd35a" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type><ref refid="interface_create_relation_mode" kindref="compound">CreateRelationMode</ref> *</type>
+        <definition>CreateRelationMode * ModeManager::createRelationMode</definition>
+        <argsstring></argsstring>
+        <name>createRelationMode</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/ModeManager.h" line="18" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/ModeManager.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_mode_manager_1a3f4d153c84eb9ba351fd0a241917de62" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type><ref refid="interface_move_mode" kindref="compound">MoveMode</ref> *</type>
+        <definition>MoveMode * ModeManager::moveMode</definition>
+        <argsstring></argsstring>
+        <name>moveMode</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/ModeManager.h" line="19" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/ModeManager.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_mode_manager_1a5ffb93820bd77ac4be2c99abf151913b" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type><ref refid="interface_modify_relation_mode" kindref="compound">ModifyRelationMode</ref> *</type>
+        <definition>ModifyRelationMode * ModeManager::modifyRelationMode</definition>
+        <argsstring></argsstring>
+        <name>modifyRelationMode</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/ModeManager.h" line="20" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/ModeManager.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="interface_mode_manager_1a7a7bff178c146dcf0efc166054c6923a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id ModeManager::instance</definition>
+        <argsstring>()</argsstring>
+        <name>instance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/ModeManager.h" line="26" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/ModeManager.m" bodystart="17" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="525">
+        <label>ModeManager</label>
+        <link refid="interface_mode_manager"/>
+        <childnode refid="526" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="526">
+        <label>NSObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="533">
+        <label>Command</label>
+        <link refid="interface_command"/>
+        <childnode refid="528" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="542">
+        <label>MoveMode</label>
+        <link refid="interface_move_mode"/>
+        <childnode refid="530" relation="public-inheritance">
+        </childnode>
+        <childnode refid="543" relation="usage">
+          <edgelabel>moveCommand</edgelabel>
+        </childnode>
+        <childnode refid="536" relation="usage">
+          <edgelabel>source</edgelabel>
+        </childnode>
+      </node>
+      <node id="543">
+        <label>MoveCommand</label>
+        <link refid="interface_move_command"/>
+        <childnode refid="541" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="540">
+        <label>MoveMiddlePointCommand</label>
+        <link refid="interface_move_middle_point_command"/>
+        <childnode refid="541" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="538">
+        <label>CreateNoteAnchorCommand</label>
+        <link refid="interface_create_note_anchor_command"/>
+        <childnode refid="532" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="532">
+        <label>CreateCommand</label>
+        <link refid="interface_create_command"/>
+        <childnode refid="533" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="527">
+        <label>ModeManager</label>
+        <link refid="interface_mode_manager"/>
+        <childnode refid="528" relation="public-inheritance">
+        </childnode>
+        <childnode refid="529" relation="usage">
+          <edgelabel>createRelationMode</edgelabel>
+        </childnode>
+        <childnode refid="539" relation="usage">
+          <edgelabel>modifyRelationMode</edgelabel>
+        </childnode>
+        <childnode refid="542" relation="usage">
+          <edgelabel>moveMode</edgelabel>
+        </childnode>
+        <childnode refid="544" relation="usage">
+          <edgelabel>tapMode</edgelabel>
+        </childnode>
+      </node>
+      <node id="541">
+        <label>ModifyCommand</label>
+        <link refid="interface_modify_command"/>
+        <childnode refid="533" relation="public-inheritance">
+        </childnode>
+        <childnode refid="536" relation="usage">
+          <edgelabel>viewElement</edgelabel>
+        </childnode>
+      </node>
+      <node id="530">
+        <label>Mode</label>
+        <link refid="interface_mode"/>
+        <childnode refid="528" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="531">
+        <label>CreateAssociationCommand</label>
+        <link refid="interface_create_association_command"/>
+        <childnode refid="532" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="529">
+        <label>CreateRelationMode</label>
+        <link refid="interface_create_relation_mode"/>
+        <childnode refid="530" relation="public-inheritance">
+        </childnode>
+        <childnode refid="531" relation="usage">
+          <edgelabel>createAssociationCommand</edgelabel>
+        </childnode>
+        <childnode refid="534" relation="usage">
+          <edgelabel>tmpConnector</edgelabel>
+        </childnode>
+        <childnode refid="538" relation="usage">
+          <edgelabel>createNoteAnchorCommand</edgelabel>
+        </childnode>
+        <childnode refid="536" relation="usage">
+          <edgelabel>target</edgelabel>
+          <edgelabel>tmpTarget</edgelabel>
+          <edgelabel>source</edgelabel>
+        </childnode>
+      </node>
+      <node id="534">
+        <label>ConnectorViewElement</label>
+        <link refid="interface_connector_view_element"/>
+        <childnode refid="535" relation="public-inheritance">
+        </childnode>
+        <childnode refid="536" relation="usage">
+          <edgelabel>target</edgelabel>
+          <edgelabel>source</edgelabel>
+        </childnode>
+      </node>
+      <node id="539">
+        <label>ModifyRelationMode</label>
+        <link refid="interface_modify_relation_mode"/>
+        <childnode refid="530" relation="public-inheritance">
+        </childnode>
+        <childnode refid="540" relation="usage">
+          <edgelabel>moveMiddlePointCommand</edgelabel>
+        </childnode>
+        <childnode refid="534" relation="usage">
+          <edgelabel>viewElement</edgelabel>
+        </childnode>
+      </node>
+      <node id="535">
+        <label>LinearViewElement</label>
+        <link refid="interface_linear_view_element"/>
+        <childnode refid="536" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="537">
+        <label>UIView</label>
+      </node>
+      <node id="528">
+        <label>NSObject</label>
+      </node>
+      <node id="536">
+        <label>ViewElement</label>
+        <link refid="interface_view_element"/>
+        <childnode refid="537" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="544">
+        <label>TapMode</label>
+        <link refid="interface_tap_mode"/>
+        <childnode refid="530" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/ModeManager.h" line="16" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/ModeManager.h" bodystart="16" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_mode_manager_1a55b161c8f2b37c9a36ebe1b5c4cdd35a" prot="protected" virt="non-virtual"><scope>ModeManager</scope><name>createRelationMode</name></member>
+      <member refid="interface_mode_manager_1a55b161c8f2b37c9a36ebe1b5c4cdd35a" prot="public" virt="non-virtual"><scope>ModeManager</scope><name>createRelationMode</name></member>
+      <member refid="interface_mode_manager_1a7a7bff178c146dcf0efc166054c6923a" prot="public" virt="virtual"><scope>ModeManager</scope><name>instance</name></member>
+      <member refid="interface_mode_manager_1a5ffb93820bd77ac4be2c99abf151913b" prot="protected" virt="non-virtual"><scope>ModeManager</scope><name>modifyRelationMode</name></member>
+      <member refid="interface_mode_manager_1a5ffb93820bd77ac4be2c99abf151913b" prot="public" virt="non-virtual"><scope>ModeManager</scope><name>modifyRelationMode</name></member>
+      <member refid="interface_mode_manager_1a3f4d153c84eb9ba351fd0a241917de62" prot="protected" virt="non-virtual"><scope>ModeManager</scope><name>moveMode</name></member>
+      <member refid="interface_mode_manager_1a3f4d153c84eb9ba351fd0a241917de62" prot="public" virt="non-virtual"><scope>ModeManager</scope><name>moveMode</name></member>
+      <member refid="interface_mode_manager_1a391fd66accbea489480e3fafa2f5983f" prot="protected" virt="non-virtual"><scope>ModeManager</scope><name>tapMode</name></member>
+      <member refid="interface_mode_manager_1a391fd66accbea489480e3fafa2f5983f" prot="public" virt="non-virtual"><scope>ModeManager</scope><name>tapMode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

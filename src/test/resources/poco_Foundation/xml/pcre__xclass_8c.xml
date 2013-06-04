@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="pcre__xclass_8c" kind="file">
+    <compoundname>pcre_xclass.c</compoundname>
+    <includes refid="pcre__config_8h" local="yes">pcre_config.h</includes>
+    <includes refid="pcre__internal_8h" local="yes">pcre_internal.h</includes>
+    <incdepgraph>
+      <node id="1171">
+        <label>pcre_config.h</label>
+        <link refid="pcre__config_8h"/>
+      </node>
+      <node id="1180">
+        <label>stdarg.h</label>
+      </node>
+      <node id="1182">
+        <label>ucp.h</label>
+        <link refid="ucp_8h"/>
+      </node>
+      <node id="1177">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1179">
+        <label>setjmp.h</label>
+      </node>
+      <node id="1170">
+        <label>src/pcre_xclass.c</label>
+        <link refid="pcre_xclass.c"/>
+        <childnode refid="1171" relation="include">
+        </childnode>
+        <childnode refid="1172" relation="include">
+        </childnode>
+      </node>
+      <node id="1175">
+        <label>stddef.h</label>
+      </node>
+      <node id="1181">
+        <label>pcre.h</label>
+        <link refid="pcre_8h"/>
+        <childnode refid="1177" relation="include">
+        </childnode>
+      </node>
+      <node id="1174">
+        <label>limits.h</label>
+      </node>
+      <node id="1172">
+        <label>pcre_internal.h</label>
+        <link refid="pcre__internal_8h"/>
+        <childnode refid="1173" relation="include">
+        </childnode>
+        <childnode refid="1174" relation="include">
+        </childnode>
+        <childnode refid="1175" relation="include">
+        </childnode>
+        <childnode refid="1176" relation="include">
+        </childnode>
+        <childnode refid="1177" relation="include">
+        </childnode>
+        <childnode refid="1178" relation="include">
+        </childnode>
+        <childnode refid="1179" relation="include">
+        </childnode>
+        <childnode refid="1180" relation="include">
+        </childnode>
+        <childnode refid="1181" relation="include">
+        </childnode>
+        <childnode refid="1182" relation="include">
+        </childnode>
+      </node>
+      <node id="1178">
+        <label>string.h</label>
+      </node>
+      <node id="1173">
+        <label>ctype.h</label>
+      </node>
+      <node id="1176">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="pcre__xclass_8c_1a0cfc124f55564dd17990881807649044" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="pcre__internal_8h_1a050c65e107f0c828f856a231f4b4e788" kindref="member">BOOL</ref></type>
+        <definition>BOOL _pcre_xclass</definition>
+        <argsstring>(int c, const uschar *data)</argsstring>
+        <name>_pcre_xclass</name>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type><ref refid="zconf_8h_1a2c212835823e3c54a8ab6d95c652660e" kindref="member">const</ref> <ref refid="pcre__internal_8h_1ac577b548c150a22e244584d01e177f9a" kindref="member">uschar</ref> *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/pcre_xclass.c" line="65" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/pcre_xclass.c" bodystart="65" bodyend="142"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/>Perl-Compatible<sp/>Regular<sp/>Expressions<sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>PCRE<sp/>is<sp/>a<sp/>library<sp/>of<sp/>functions<sp/>to<sp/>support<sp/>regular<sp/>expressions<sp/>whose<sp/>syntax</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">and<sp/>semantics<sp/>are<sp/>as<sp/>close<sp/>as<sp/>possible<sp/>to<sp/>those<sp/>of<sp/>the<sp/>Perl<sp/>5<sp/>language.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Written<sp/>by<sp/>Philip<sp/>Hazel</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Copyright<sp/>(c)<sp/>1997-2008<sp/>University<sp/>of<sp/>Cambridge</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">-----------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">Redistribution<sp/>and<sp/>use<sp/>in<sp/>source<sp/>and<sp/>binary<sp/>forms,<sp/>with<sp/>or<sp/>without</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">modification,<sp/>are<sp/>permitted<sp/>provided<sp/>that<sp/>the<sp/>following<sp/>conditions<sp/>are<sp/>met:</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>Redistributions<sp/>of<sp/>source<sp/>code<sp/>must<sp/>retain<sp/>the<sp/>above<sp/>copyright<sp/>notice,</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"></highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>Redistributions<sp/>in<sp/>binary<sp/>form<sp/>must<sp/>reproduce<sp/>the<sp/>above<sp/>copyright</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>notice,<sp/>this<sp/>list<sp/>of<sp/>conditions<sp/>and<sp/>the<sp/>following<sp/>disclaimer<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>documentation<sp/>and/or<sp/>other<sp/>materials<sp/>provided<sp/>with<sp/>the<sp/>distribution.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"></highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/><sp/>*<sp/>Neither<sp/>the<sp/>name<sp/>of<sp/>the<sp/>University<sp/>of<sp/>Cambridge<sp/>nor<sp/>the<sp/>names<sp/>of<sp/>its</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>contributors<sp/>may<sp/>be<sp/>used<sp/>to<sp/>endorse<sp/>or<sp/>promote<sp/>products<sp/>derived<sp/>from</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>this<sp/>software<sp/>without<sp/>specific<sp/>prior<sp/>written<sp/>permission.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"></highlight></codeline>
+<codeline lineno="26"><highlight class="comment">THIS<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>BY<sp/>THE<sp/>COPYRIGHT<sp/>HOLDERS<sp/>AND<sp/>CONTRIBUTORS<sp/>&quot;AS<sp/>IS&quot;</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">AND<sp/>ANY<sp/>EXPRESS<sp/>OR<sp/>IMPLIED<sp/>WARRANTIES,<sp/>INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>THE</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">IMPLIED<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY<sp/>AND<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">ARE<sp/>DISCLAIMED.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>COPYRIGHT<sp/>OWNER<sp/>OR<sp/>CONTRIBUTORS<sp/>BE</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">LIABLE<sp/>FOR<sp/>ANY<sp/>DIRECT,<sp/>INDIRECT,<sp/>INCIDENTAL,<sp/>SPECIAL,<sp/>EXEMPLARY,<sp/>OR</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">CONSEQUENTIAL<sp/>DAMAGES<sp/>(INCLUDING,<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO,<sp/>PROCUREMENT<sp/>OF</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">SUBSTITUTE<sp/>GOODS<sp/>OR<sp/>SERVICES;<sp/>LOSS<sp/>OF<sp/>USE,<sp/>DATA,<sp/>OR<sp/>PROFITS;<sp/>OR<sp/>BUSINESS</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">INTERRUPTION)<sp/>HOWEVER<sp/>CAUSED<sp/>AND<sp/>ON<sp/>ANY<sp/>THEORY<sp/>OF<sp/>LIABILITY,<sp/>WHETHER<sp/>IN</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">CONTRACT,<sp/>STRICT<sp/>LIABILITY,<sp/>OR<sp/>TORT<sp/>(INCLUDING<sp/>NEGLIGENCE<sp/>OR<sp/>OTHERWISE)</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">ARISING<sp/>IN<sp/>ANY<sp/>WAY<sp/>OUT<sp/>OF<sp/>THE<sp/>USE<sp/>OF<sp/>THIS<sp/>SOFTWARE,<sp/>EVEN<sp/>IF<sp/>ADVISED<sp/>OF<sp/>THE</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">POSSIBILITY<sp/>OF<sp/>SUCH<sp/>DAMAGE.</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">-----------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>module<sp/>contains<sp/>an<sp/>internal<sp/>function<sp/>that<sp/>is<sp/>used<sp/>to<sp/>match<sp/>an<sp/>extended</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">class<sp/>(one<sp/>that<sp/>contains<sp/>characters<sp/>whose<sp/>values<sp/>are<sp/>&gt;<sp/>255).<sp/>It<sp/>is<sp/>used<sp/>by<sp/>both</highlight></codeline>
+<codeline lineno="43"><highlight class="comment">pcre_exec()<sp/>and<sp/>pcre_def_exec().<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pcre__config_8h" kindref="compound">pcre_config.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="pcre__internal_8h" kindref="compound">pcre_internal.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">/*************************************************</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Match<sp/>character<sp/>against<sp/>an<sp/>XCLASS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">*************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>function<sp/>is<sp/>called<sp/>to<sp/>match<sp/>a<sp/>character<sp/>against<sp/>an<sp/>extended<sp/>class<sp/>that</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">might<sp/>contain<sp/>values<sp/>&gt;<sp/>255.</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"></highlight></codeline>
+<codeline lineno="57"><highlight class="comment">Arguments:</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/>c<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>the<sp/>character</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/>data<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>points<sp/>to<sp/>the<sp/>flag<sp/>byte<sp/>of<sp/>the<sp/>XCLASS<sp/>data</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"></highlight></codeline>
+<codeline lineno="61"><highlight class="comment">Returns:<sp/><sp/><sp/><sp/><sp/><sp/>TRUE<sp/>if<sp/>character<sp/>matches,<sp/>else<sp/>FALSE</highlight></codeline>
+<codeline lineno="62"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><ref refid="pcre__internal_8h_1a050c65e107f0c828f856a231f4b4e788" kindref="member">BOOL</ref></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><ref refid="pcre__internal_8h_1ac22f9be5b401a434181df0fcc1d32810" kindref="member">_pcre_xclass</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="pcre__internal_8h_1ac577b548c150a22e244584d01e177f9a" kindref="member">uschar</ref><sp/>*data)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>t;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><ref refid="pcre__internal_8h_1a050c65e107f0c828f856a231f4b4e788" kindref="member">BOOL</ref><sp/>negated<sp/>=<sp/>(*data<sp/>&amp;<sp/><ref refid="pcre__internal_8h_1a67239aceb7a3a46c22ce32c9e17b4d78" kindref="member">XCL_NOT</ref>)<sp/>!=<sp/>0;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Character<sp/>values<sp/>&lt;<sp/>256<sp/>are<sp/>matched<sp/>against<sp/>a<sp/>bitmap,<sp/>if<sp/>one<sp/>is<sp/>present.<sp/>If</highlight></codeline>
+<codeline lineno="71"><highlight class="comment">not,<sp/>we<sp/>still<sp/>carry<sp/>on,<sp/>because<sp/>there<sp/>may<sp/>be<sp/>ranges<sp/>that<sp/>start<sp/>below<sp/>256<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="72"><highlight class="comment">additional<sp/>data.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c<sp/>&lt;<sp/>256)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((*data<sp/>&amp;<sp/><ref refid="pcre__internal_8h_1ae1fdbc9124ca5c922fe49dbcb07ac9c0" kindref="member">XCL_MAP</ref>)<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>(data[1<sp/>+<sp/>c/8]<sp/>&amp;<sp/>(1<sp/>&lt;&lt;<sp/>(c&amp;7)))<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!negated;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>char<sp/>found<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>First<sp/>skip<sp/>the<sp/>bit<sp/>map<sp/>if<sp/>present.<sp/>Then<sp/>match<sp/>against<sp/>the<sp/>list<sp/>of<sp/>Unicode</highlight></codeline>
+<codeline lineno="81"><highlight class="comment">properties<sp/>or<sp/>large<sp/>chars<sp/>or<sp/>ranges<sp/>that<sp/>end<sp/>with<sp/>a<sp/>large<sp/>char.<sp/>We<sp/>won&apos;t<sp/>ever</highlight></codeline>
+<codeline lineno="82"><highlight class="comment">encounter<sp/>XCL_PROP<sp/>or<sp/>XCL_NOTPROP<sp/>when<sp/>UCP<sp/>support<sp/>is<sp/>not<sp/>compiled.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((*data++<sp/>&amp;<sp/><ref refid="pcre__internal_8h_1ae1fdbc9124ca5c922fe49dbcb07ac9c0" kindref="member">XCL_MAP</ref>)<sp/>!=<sp/>0)<sp/>data<sp/>+=<sp/>32;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((t<sp/>=<sp/>*data++)<sp/>!=<sp/><ref refid="pcre__internal_8h_1a04b5e33bae61968528821a82fd464b34" kindref="member">XCL_END</ref>)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/>y;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(t<sp/>==<sp/><ref refid="pcre__internal_8h_1af43a3d4893ab8f30efec6b29d942ed86" kindref="member">XCL_SINGLE</ref>)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pcre__internal_8h_1adfb348264f16106d98a89bb0c4a1a974" kindref="member">GETCHARINC</ref>(x,<sp/>data);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c<sp/>==<sp/>x)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!negated;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(t<sp/>==<sp/><ref refid="pcre__internal_8h_1a8cf9b4e27fdd6615271ba4aa9cc20850" kindref="member">XCL_RANGE</ref>)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pcre__internal_8h_1adfb348264f16106d98a89bb0c4a1a974" kindref="member">GETCHARINC</ref>(x,<sp/>data);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="pcre__internal_8h_1adfb348264f16106d98a89bb0c4a1a974" kindref="member">GETCHARINC</ref>(y,<sp/>data);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c<sp/>&gt;=<sp/>x<sp/>&amp;&amp;<sp/>c<sp/>&lt;=<sp/>y)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!negated;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SUPPORT_UCP</highlight></codeline>
+<codeline lineno="102"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>XCL_PROP<sp/>&amp;<sp/>XCL_NOTPROP<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structucd__record" kindref="compound">ucd_record</ref><sp/>*<sp/>prop<sp/>=<sp/><ref refid="pcre__internal_8h_1ae838548f1a0be53d7cd524342099bb94" kindref="member">GET_UCD</ref>(c);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(*data)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pcre__internal_8h_1a2b70caadabc5cb8f1eecb8fcb7c93bf3" kindref="member">PT_ANY</ref>:</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(t<sp/>==<sp/><ref refid="pcre__internal_8h_1aa52c6e4343ace7a216e24f5fef2dcca2" kindref="member">XCL_PROP</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!negated;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pcre__internal_8h_1ac1511a02c7c29972d567c75464dc0101" kindref="member">PT_LAMP</ref>:</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((prop-&gt;<ref refid="structucd__record_1a4002a76895e2fccb7a736e006286ae80" kindref="member">chartype</ref><sp/>==<sp/><ref refid="ucp_8h_1abed82baf7f470b522273a3e37c24c600aa91571a6fb7acb1f54030e21a08daee6" kindref="member">ucp_Lu</ref><sp/>||<sp/>prop-&gt;<ref refid="structucd__record_1a4002a76895e2fccb7a736e006286ae80" kindref="member">chartype</ref><sp/>==<sp/><ref refid="ucp_8h_1abed82baf7f470b522273a3e37c24c600ae4cf7944372cb4fb33e37b2a2a805668" kindref="member">ucp_Ll</ref><sp/>||<sp/>prop-&gt;<ref refid="structucd__record_1a4002a76895e2fccb7a736e006286ae80" kindref="member">chartype</ref><sp/>==<sp/><ref refid="ucp_8h_1abed82baf7f470b522273a3e37c24c600acda9743631d99fad94b2c3c92adf7a40" kindref="member">ucp_Lt</ref>)<sp/>==</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(t<sp/>==<sp/><ref refid="pcre__internal_8h_1aa52c6e4343ace7a216e24f5fef2dcca2" kindref="member">XCL_PROP</ref>))<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!negated;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pcre__internal_8h_1a2f7085c26213b28e56e64d1c76660747" kindref="member">PT_GC</ref>:</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((data[1]<sp/>==<sp/><ref refid="pcre__internal_8h_1a7b6c82d0d679bd91d6197d8eb1b672d4" kindref="member">_pcre_ucp_gentype</ref>[prop-&gt;<ref refid="structucd__record_1a4002a76895e2fccb7a736e006286ae80" kindref="member">chartype</ref>])<sp/>==<sp/>(t<sp/>==<sp/><ref refid="pcre__internal_8h_1aa52c6e4343ace7a216e24f5fef2dcca2" kindref="member">XCL_PROP</ref>))<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!negated;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pcre__internal_8h_1a0fb3d1c359ca1053a40197d544307fa3" kindref="member">PT_PC</ref>:</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((data[1]<sp/>==<sp/>prop-&gt;<ref refid="structucd__record_1a4002a76895e2fccb7a736e006286ae80" kindref="member">chartype</ref>)<sp/>==<sp/>(t<sp/>==<sp/><ref refid="pcre__internal_8h_1aa52c6e4343ace7a216e24f5fef2dcca2" kindref="member">XCL_PROP</ref>))<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!negated;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="pcre__internal_8h_1a9434cda22bceb7edd2a9864e204ee41c" kindref="member">PT_SC</ref>:</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((data[1]<sp/>==<sp/>prop-&gt;<ref refid="structucd__record_1a2ca72dabbe0201c3f9ba980962b445ec" kindref="member">script</ref>)<sp/>==<sp/>(t<sp/>==<sp/><ref refid="pcre__internal_8h_1aa52c6e4343ace7a216e24f5fef2dcca2" kindref="member">XCL_PROP</ref>))<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!negated;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>This<sp/>should<sp/>never<sp/>occur,<sp/>but<sp/>compilers<sp/>may<sp/>mutter<sp/>if<sp/>there<sp/>is<sp/>no</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>default.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="pcre__internal_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>data<sp/>+=<sp/>2;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">/*<sp/>SUPPORT_UCP<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="139"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>negated;<sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>char<sp/>did<sp/>not<sp/>match<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>End<sp/>of<sp/>pcre_xclass.c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/poco-1.4.6p1/Foundation/src/pcre_xclass.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,3235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_textord" kind="class" prot="public">
+    <compoundname>tesseract::Textord</compoundname>
+    <includes refid="textord_8h" local="no">textord.h</includes>
+      <sectiondef kind="user-defined">
+      <header>compute_row_xheight</header>
+      <description><para>Estimate the xheight of this row. Compute the ascender rise and descender drop at the same time. Set xheigh_evidence to the number of blobs with the chosen xheight that appear in this row. </para></description>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1aa5342d14436274e648b545a522705eab" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::compute_row_xheight</definition>
+        <argsstring>(TO_ROW *row, const FCOORD &amp;rotation, float gradient, int block_line_size)</argsstring>
+        <name>compute_row_xheight</name>
+        <param>
+          <type><ref refid="class_t_o___r_o_w" kindref="compound">TO_ROW</ref> *</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref> &amp;</type>
+          <declname>rotation</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gradient</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>block_line_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="101" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/makerow.cpp" bodystart="1486" bodyend="1516"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_textord_1aff46570ac05e8112733bca9df353df77" prot="private" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_c_c_struct" kindref="compound">CCStruct</ref> *</type>
+        <definition>CCStruct* tesseract::Textord::ccstruct_</definition>
+        <argsstring></argsstring>
+        <name>ccstruct_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="77" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/textord.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_textord_1a8a6c09da1cccfbcb53af421c3245ac0f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_i_c_o_o_r_d" kindref="compound">ICOORD</ref></type>
+        <definition>ICOORD tesseract::Textord::page_tr_</definition>
+        <argsstring></argsstring>
+        <name>page_tr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="80" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/textord.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_textord_1ac4cac60363a6717a099efa74443d1a23" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool tesseract::Textord::use_cjk_fp_model_</definition>
+        <argsstring></argsstring>
+        <name>use_cjk_fp_model_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="82" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/textord.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_textord_1aefff593dc9593239325054507c5cfaa8" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::Textord</definition>
+        <argsstring>(CCStruct *ccstruct)</argsstring>
+        <name>Textord</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_c_c_struct" kindref="compound">CCStruct</ref> *</type>
+          <declname>ccstruct</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="41" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/textord.cpp" bodystart="34" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ab6aec7eec28ee2ea9083e1788064bd3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::~Textord</definition>
+        <argsstring>()</argsstring>
+        <name>~Textord</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="42" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/textord.cpp" bodystart="261" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a640828031af476306b7b506fc8264444" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::TextordPage</definition>
+        <argsstring>(PageSegMode pageseg_mode, int width, int height, Pix *pix, BLOCK_LIST *blocks, TO_BLOCK_LIST *to_blocks)</argsstring>
+        <name>TextordPage</name>
+        <param>
+          <type><ref refid="namespacetesseract_1a338d4c8b5d497b5ec3e6e4269d8ac66a" kindref="member">PageSegMode</ref></type>
+          <declname>pageseg_mode</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>Pix *</type>
+          <declname>pix</declname>
+        </param>
+        <param>
+          <type>BLOCK_LIST *</type>
+          <declname>blocks</declname>
+        </param>
+        <param>
+          <type>TO_BLOCK_LIST *</type>
+          <declname>to_blocks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="45" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/textord.cpp" bodystart="265" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a8ad2a2ff59d9dcbd82217076d4466344" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::CleanupSingleRowResult</definition>
+        <argsstring>(PageSegMode pageseg_mode, PAGE_RES *page_res)</argsstring>
+        <name>CleanupSingleRowResult</name>
+        <param>
+          <type><ref refid="namespacetesseract_1a338d4c8b5d497b5ec3e6e4269d8ac66a" kindref="member">PageSegMode</ref></type>
+          <declname>pageseg_mode</declname>
+        </param>
+        <param>
+          <type><ref refid="class_p_a_g_e___r_e_s" kindref="compound">PAGE_RES</ref> *</type>
+          <declname>page_res</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="51" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/textord.cpp" bodystart="339" bodyend="368"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a778130fceaedd598d138b25d8272e63c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool tesseract::Textord::use_cjk_fp_model</definition>
+        <argsstring>() const </argsstring>
+        <name>use_cjk_fp_model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="53" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/textord.h" bodystart="53" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a7ec043fe83e21e8f8f12cfa863bd979d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::set_use_cjk_fp_model</definition>
+        <argsstring>(bool flag)</argsstring>
+        <name>set_use_cjk_fp_model</name>
+        <param>
+          <type>bool</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="56" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/textord.h" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a68f2d3489fecd72bd8817a888752edb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::to_spacing</definition>
+        <argsstring>(ICOORD page_tr, TO_BLOCK_LIST *blocks)</argsstring>
+        <name>to_spacing</name>
+        <param>
+          <type><ref refid="class_i_c_o_o_r_d" kindref="compound">ICOORD</ref></type>
+          <declname>page_tr</declname>
+        </param>
+        <param>
+          <type>TO_BLOCK_LIST *</type>
+          <declname>blocks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="61" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tospace.cpp" bodystart="35" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a511e66f00128f6e4240f44c047730d72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_r_o_w" kindref="compound">ROW</ref> *</type>
+        <definition>ROW * tesseract::Textord::make_prop_words</definition>
+        <argsstring>(TO_ROW *row, FCOORD rotation)</argsstring>
+        <name>make_prop_words</name>
+        <param>
+          <type><ref refid="class_t_o___r_o_w" kindref="compound">TO_ROW</ref> *</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type><ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref></type>
+          <declname>rotation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="65" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tospace.cpp" bodystart="886" bodyend="1175"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1aca1e7ae6c3a435f0bf2b8260a2ca13e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_r_o_w" kindref="compound">ROW</ref> *</type>
+        <definition>ROW * tesseract::Textord::make_blob_words</definition>
+        <argsstring>(TO_ROW *row, FCOORD rotation)</argsstring>
+        <name>make_blob_words</name>
+        <param>
+          <type><ref refid="class_t_o___r_o_w" kindref="compound">TO_ROW</ref> *</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type><ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref></type>
+          <declname>rotation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="68" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tospace.cpp" bodystart="1183" bodyend="1259"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ab478029b49bf4efadd59a547565327a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::find_components</definition>
+        <argsstring>(Pix *pix, BLOCK_LIST *blocks, TO_BLOCK_LIST *to_blocks)</argsstring>
+        <name>find_components</name>
+        <param>
+          <type>Pix *</type>
+          <declname>pix</declname>
+        </param>
+        <param>
+          <type>BLOCK_LIST *</type>
+          <declname>blocks</declname>
+        </param>
+        <param>
+          <type>TO_BLOCK_LIST *</type>
+          <declname>to_blocks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="72" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tordmain.cpp" bodystart="208" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1acaed60ac5b5ef00751e3d307347aa0e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::filter_blobs</definition>
+        <argsstring>(ICOORD page_tr, TO_BLOCK_LIST *blocks, BOOL8 testing_on)</argsstring>
+        <name>filter_blobs</name>
+        <param>
+          <type><ref refid="class_i_c_o_o_r_d" kindref="compound">ICOORD</ref></type>
+          <declname>page_tr</declname>
+        </param>
+        <param>
+          <type>TO_BLOCK_LIST *</type>
+          <declname>blocks</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a7712a7e28433d0ade59219a129549b6f" kindref="member">BOOL8</ref></type>
+          <declname>testing_on</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="73" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tordmain.cpp" bodystart="239" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a1c273bccb7dbeac3867f2536da4d3f9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(textord_single_height_mode, false,&quot;Script has no xheight, so use a single mode for horizontal text&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>textord_single_height_mode</type>
+        </param>
+        <param>
+          <type>false</type>
+        </param>
+        <param>
+          <type>&quot;Script has no</type>
+          <declname>xheight</declname>
+        </param>
+        <param>
+          <type>so use a single <ref refid="pgedit_8cpp_1afc03cf3e39248c2e339fee4d31f5f750" kindref="member">mode</ref> for horizontal text&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="213" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a351c8f9b398a11b10a307b7d68ae03dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(tosp_old_to_method, false,&quot;Space stats use prechopping?&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>tosp_old_to_method</type>
+        </param>
+        <param>
+          <type>false</type>
+        </param>
+        <param>
+          <type>&quot;Space stats use prechopping?&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="216" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a30258d84b6c42a5b5b7ee06541c20d6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(tosp_old_to_constrain_sp_kn, false,&quot;Constrain relative values of inter and intra-word gaps for &quot;&quot;old_to_method.&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>tosp_old_to_constrain_sp_kn</type>
+        </param>
+        <param>
+          <type>false</type>
+        </param>
+        <param>
+          <type>&quot;Constrain relative values of inter and intra-word gaps for &quot;&quot;old_to_method.&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="217" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a7da1e38df6493f427c48c9e50ac9588c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(tosp_only_use_prop_rows, true,&quot;Block stats to use fixed pitch rows?&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>tosp_only_use_prop_rows</type>
+        </param>
+        <param>
+          <type>true</type>
+        </param>
+        <param>
+          <type>&quot;Block stats to use fixed pitch rows?&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="220" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a32d1e89effcd1744d3ab12a1b5ad85be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(tosp_force_wordbreak_on_punct, false,&quot;Force word breaks on punct to break long lines in non-space &quot;&quot;delimited langs&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>tosp_force_wordbreak_on_punct</type>
+        </param>
+        <param>
+          <type>false</type>
+        </param>
+        <param>
+          <type>&quot;Force word breaks on punct to break long lines in non-space &quot;&quot;delimited langs&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="222" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a246b30968321f44956bc549d94b31aa3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(tosp_use_pre_chopping, false,&quot;Space stats use prechopping?&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>tosp_use_pre_chopping</type>
+        </param>
+        <param>
+          <type>false</type>
+        </param>
+        <param>
+          <type>&quot;Space stats use prechopping?&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="225" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a29ae0da9a5ff681578d8f9925e8a3ab8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(tosp_old_to_bug_fix, false,&quot;Fix suspected bug in old code&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>tosp_old_to_bug_fix</type>
+        </param>
+        <param>
+          <type>false</type>
+        </param>
+        <param>
+          <type>&quot;Fix suspected bug in old code&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="227" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a08bc9efbd5bb09bc0f38940e534f2f73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(tosp_block_use_cert_spaces, true,&quot;Only stat OBVIOUS spaces&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>tosp_block_use_cert_spaces</type>
+        </param>
+        <param>
+          <type>true</type>
+        </param>
+        <param>
+          <type>&quot;Only stat OBVIOUS spaces&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="229" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ac25cfa01b7dfed3cbfd695122c4f5646" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(tosp_row_use_cert_spaces, true,&quot;Only stat OBVIOUS spaces&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>tosp_row_use_cert_spaces</type>
+        </param>
+        <param>
+          <type>true</type>
+        </param>
+        <param>
+          <type>&quot;Only stat OBVIOUS spaces&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="231" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a4ecbd64f27640bb1be83b57670fd5c8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(tosp_narrow_blobs_not_cert, true,&quot;Only stat OBVIOUS spaces&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>tosp_narrow_blobs_not_cert</type>
+        </param>
+        <param>
+          <type>true</type>
+        </param>
+        <param>
+          <type>&quot;Only stat OBVIOUS spaces&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="233" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ab85df853ed86720f7ade14192ab18caa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(tosp_row_use_cert_spaces1, true,&quot;Only stat OBVIOUS spaces&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>tosp_row_use_cert_spaces1</type>
+        </param>
+        <param>
+          <type>true</type>
+        </param>
+        <param>
+          <type>&quot;Only stat OBVIOUS spaces&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="235" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ac8b31edc108fe7ac6c95c73144081b52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(tosp_recovery_isolated_row_stats, true,&quot;Use row alone when inadequate cert spaces&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>tosp_recovery_isolated_row_stats</type>
+        </param>
+        <param>
+          <type>true</type>
+        </param>
+        <param>
+          <type>&quot;Use row alone when inadequate cert spaces&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="237" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a9a8772b4afcba620633a1d5d4ff8da9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(tosp_only_small_gaps_for_kern, false,&quot;Better guess&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>tosp_only_small_gaps_for_kern</type>
+        </param>
+        <param>
+          <type>false</type>
+        </param>
+        <param>
+          <type>&quot;Better guess&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="239" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a614621667824fd1825b3d9d4bfa1bf16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(tosp_all_flips_fuzzy, false,&quot;Pass ANY flip to context?&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>tosp_all_flips_fuzzy</type>
+        </param>
+        <param>
+          <type>false</type>
+        </param>
+        <param>
+          <type>&quot;Pass ANY flip to context?&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="240" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a8535f898c2ed08e6e236de1e0e96cb45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(tosp_fuzzy_limit_all, true,&quot;Dont restrict kn-&gt;sp fuzzy limit to tables&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>tosp_fuzzy_limit_all</type>
+        </param>
+        <param>
+          <type>true</type>
+        </param>
+        <param>
+          <type>&quot;Dont restrict kn-&gt;sp fuzzy limit to tables&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="241" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a1686b00fb772812aa259f05d0122e716" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(tosp_stats_use_xht_gaps, true,&quot;Use within xht gap for wd breaks&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>tosp_stats_use_xht_gaps</type>
+        </param>
+        <param>
+          <type>true</type>
+        </param>
+        <param>
+          <type>&quot;Use within xht gap for wd breaks&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="243" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ab333a05c1260715f2fe1b0f03a2e0184" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(tosp_use_xht_gaps, true,&quot;Use within xht gap for wd breaks&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>tosp_use_xht_gaps</type>
+        </param>
+        <param>
+          <type>true</type>
+        </param>
+        <param>
+          <type>&quot;Use within xht gap for wd breaks&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="245" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1acd87efb76a745227ebc4b280bf83430e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(tosp_only_use_xht_gaps, false,&quot;Only use within xht gap for wd breaks&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>tosp_only_use_xht_gaps</type>
+        </param>
+        <param>
+          <type>false</type>
+        </param>
+        <param>
+          <type>&quot;Only use within xht gap for wd breaks&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="247" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a911585df9df245e43a322902b2208a59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(tosp_rule_9_test_punct, false,&quot;Dont chng kn to space next to punct&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>tosp_rule_9_test_punct</type>
+        </param>
+        <param>
+          <type>false</type>
+        </param>
+        <param>
+          <type>&quot;Dont chng kn to space next to punct&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="249" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ad6550bf5c46dda3c172ec0afa8a7184a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(tosp_flip_fuzz_kn_to_sp, true,&quot;Default flip&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>tosp_flip_fuzz_kn_to_sp</type>
+        </param>
+        <param>
+          <type>true</type>
+        </param>
+        <param>
+          <type>&quot;Default flip&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="251" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ab74e1292ea66d36a6b36f8613347bf88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(tosp_flip_fuzz_sp_to_kn, true,&quot;Default flip&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>tosp_flip_fuzz_sp_to_kn</type>
+        </param>
+        <param>
+          <type>true</type>
+        </param>
+        <param>
+          <type>&quot;Default flip&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="252" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a784bf1a4965b8483362ccdd2b6ed1899" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(tosp_improve_thresh, false,&quot;Enable improvement heuristic&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>tosp_improve_thresh</type>
+        </param>
+        <param>
+          <type>false</type>
+        </param>
+        <param>
+          <type>&quot;Enable improvement heuristic&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="253" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a703dfdfd1b347889068a1fc4c02e3b08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::INT_VAR_H</definition>
+        <argsstring>(tosp_debug_level, 0,&quot;Debug data&quot;)</argsstring>
+        <name>INT_VAR_H</name>
+        <param>
+          <type>tosp_debug_level</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>&quot;Debug data&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="255" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a190c188234f1131d71d5df59b3811dd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::INT_VAR_H</definition>
+        <argsstring>(tosp_enough_space_samples_for_median, 3,&quot;or should we use mean&quot;)</argsstring>
+        <name>INT_VAR_H</name>
+        <param>
+          <type>tosp_enough_space_samples_for_median</type>
+        </param>
+        <param>
+          <type>3</type>
+        </param>
+        <param>
+          <type>&quot;or should we use mean&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="256" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1af4348629d0957496aeda51dfbc5318f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::INT_VAR_H</definition>
+        <argsstring>(tosp_redo_kern_limit, 10,&quot;No.samples reqd to reestimate for row&quot;)</argsstring>
+        <name>INT_VAR_H</name>
+        <param>
+          <type>tosp_redo_kern_limit</type>
+        </param>
+        <param>
+          <type>10</type>
+        </param>
+        <param>
+          <type>&quot;No.samples reqd to reestimate for row&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="258" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a3a45abaca7b0dcd7e01481548d7fa875" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::INT_VAR_H</definition>
+        <argsstring>(tosp_few_samples, 40,&quot;No.gaps reqd with 1 large gap to treat as a table&quot;)</argsstring>
+        <name>INT_VAR_H</name>
+        <param>
+          <type>tosp_few_samples</type>
+        </param>
+        <param>
+          <type>40</type>
+        </param>
+        <param>
+          <type>&quot;No.gaps reqd with 1 large gap to treat as a table&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="260" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a6a77bf0b5a833f4f3ca342e0f111aed8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::INT_VAR_H</definition>
+        <argsstring>(tosp_short_row, 20,&quot;No.gaps reqd with few cert spaces to use certs&quot;)</argsstring>
+        <name>INT_VAR_H</name>
+        <param>
+          <type>tosp_short_row</type>
+        </param>
+        <param>
+          <type>20</type>
+        </param>
+        <param>
+          <type>&quot;No.gaps reqd with few cert spaces to use certs&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="262" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a2067788e75499074ae053ed2d74706f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::INT_VAR_H</definition>
+        <argsstring>(tosp_sanity_method, 1,&quot;How to avoid being silly&quot;)</argsstring>
+        <name>INT_VAR_H</name>
+        <param>
+          <type>tosp_sanity_method</type>
+        </param>
+        <param>
+          <type>1</type>
+        </param>
+        <param>
+          <type>&quot;How to avoid being silly&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="264" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a072ecab778f106b0452dae3eae035800" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_old_sp_kn_th_factor, 2.0,&quot;Factor for defining space threshold in terms of space and &quot;&quot;kern sizes&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_old_sp_kn_th_factor</type>
+        </param>
+        <param>
+          <type>2.</type>
+          <declname>0</declname>
+        </param>
+        <param>
+          <type>&quot;Factor for defining space threshold in terms of space and &quot;&quot;kern sizes&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="265" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a60b847755fa79c2dd176068ddf465a6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_threshold_bias1, 0,&quot;how far between kern and space?&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_threshold_bias1</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>&quot;how far between kern and space?&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="268" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ad4de37b070c382c91c4053729dabdbc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_threshold_bias2, 0,&quot;how far between kern and space?&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_threshold_bias2</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>&quot;how far between kern and space?&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="270" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a5840576fab94ae58cffc59ce88c69255" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_narrow_fraction, 0.3,&quot;Fract of xheight for narrow&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_narrow_fraction</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>3</declname>
+        </param>
+        <param>
+          <type>&quot;Fract of xheight for narrow&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="272" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a224f579dc5795ec109243333400f84bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_narrow_aspect_ratio, 0.48,&quot;narrow if w/h less than this&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_narrow_aspect_ratio</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>48</declname>
+        </param>
+        <param>
+          <type>&quot;narrow if w/h less than this&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="274" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1aa11ce7ea297051114f9ed14f3b0fd098" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_wide_fraction, 0.52,&quot;Fract of xheight for wide&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_wide_fraction</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>52</declname>
+        </param>
+        <param>
+          <type>&quot;Fract of xheight for wide&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="276" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1aa879ed2be5c8aa9504b7ebfdf9251315" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_wide_aspect_ratio, 0.0,&quot;wide if w/h less than this&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_wide_aspect_ratio</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>0</declname>
+        </param>
+        <param>
+          <type>&quot;wide if w/h less than this&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="277" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a6b640b9f6a9cd4cbdda0578baae0af4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_fuzzy_space_factor, 0.6,&quot;Fract of xheight for fuzz sp&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_fuzzy_space_factor</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>6</declname>
+        </param>
+        <param>
+          <type>&quot;Fract of xheight for fuzz sp&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="279" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a9f64ba25f35a7b7b4f7a610e73ccf1f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_fuzzy_space_factor1, 0.5,&quot;Fract of xheight for fuzz sp&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_fuzzy_space_factor1</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>5</declname>
+        </param>
+        <param>
+          <type>&quot;Fract of xheight for fuzz sp&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="281" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a6a33a1ad6014c773dabbca630213aa3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_fuzzy_space_factor2, 0.72,&quot;Fract of xheight for fuzz sp&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_fuzzy_space_factor2</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>72</declname>
+        </param>
+        <param>
+          <type>&quot;Fract of xheight for fuzz sp&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="283" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a2c63edcba6981cc6ee0fb8a7b132fa1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_gap_factor, 0.83,&quot;gap ratio to flip sp-&gt;kern&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_gap_factor</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>83</declname>
+        </param>
+        <param>
+          <type>&quot;gap ratio to flip sp-&gt;kern&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="285" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1acf9b612fd967cc55653eb00e52ac295a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_kern_gap_factor1, 2.0,&quot;gap ratio to flip kern-&gt;sp&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_kern_gap_factor1</type>
+        </param>
+        <param>
+          <type>2.</type>
+          <declname>0</declname>
+        </param>
+        <param>
+          <type>&quot;gap ratio to flip kern-&gt;sp&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="286" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a32838879c6c0b49993df538f0ef0c66b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_kern_gap_factor2, 1.3,&quot;gap ratio to flip kern-&gt;sp&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_kern_gap_factor2</type>
+        </param>
+        <param>
+          <type>1.</type>
+          <declname>3</declname>
+        </param>
+        <param>
+          <type>&quot;gap ratio to flip kern-&gt;sp&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="288" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a6821e0d47c17950e75c05ec1ed30bb81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_kern_gap_factor3, 2.5,&quot;gap ratio to flip kern-&gt;sp&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_kern_gap_factor3</type>
+        </param>
+        <param>
+          <type>2.</type>
+          <declname>5</declname>
+        </param>
+        <param>
+          <type>&quot;gap ratio to flip kern-&gt;sp&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="290" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a514bb68fb64c0bd72649731ad04290de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_ignore_big_gaps,-1,&quot;xht multiplier&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_ignore_big_gaps</type>
+        </param>
+        <param>
+          <type>-</type>
+          <declname>1</declname>
+        </param>
+        <param>
+          <type>&quot;xht multiplier&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="292" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1aaf954649dd8117dff66fcfba92b8d078" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_ignore_very_big_gaps, 3.5,&quot;xht multiplier&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_ignore_very_big_gaps</type>
+        </param>
+        <param>
+          <type>3.</type>
+          <declname>5</declname>
+        </param>
+        <param>
+          <type>&quot;xht multiplier&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="293" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a1a523fccc685cf8b0d56fabe9a361505" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_rep_space, 1.6,&quot;rep gap multiplier for space&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_rep_space</type>
+        </param>
+        <param>
+          <type>1.</type>
+          <declname>6</declname>
+        </param>
+        <param>
+          <type>&quot;rep gap multiplier for space&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="294" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a5d65437a1648e9f2ac2164e494eb3ff4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_enough_small_gaps, 0.65,&quot;Fract of kerns reqd for isolated row stats&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_enough_small_gaps</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>65</declname>
+        </param>
+        <param>
+          <type>&quot;Fract of kerns reqd for isolated row stats&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="295" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1accce705eec3454c5a8785d54b5dfb24f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_table_kn_sp_ratio, 2.25,&quot;Min difference of kn &amp; sp in table&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_table_kn_sp_ratio</type>
+        </param>
+        <param>
+          <type>2.</type>
+          <declname>25</declname>
+        </param>
+        <param>
+          <type>&quot;Min difference of kn &amp; sp in table&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="297" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a745d191cd9fecb1340e4f870f84ded3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_table_xht_sp_ratio, 0.33,&quot;Expect spaces bigger than this&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_table_xht_sp_ratio</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>33</declname>
+        </param>
+        <param>
+          <type>&quot;Expect spaces bigger than this&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="299" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a4196597dc57f451783d2b017bc5e059a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_table_fuzzy_kn_sp_ratio, 3.0,&quot;Fuzzy if less than this&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_table_fuzzy_kn_sp_ratio</type>
+        </param>
+        <param>
+          <type>3.</type>
+          <declname>0</declname>
+        </param>
+        <param>
+          <type>&quot;Fuzzy if less than this&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="301" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a3ddb9881fbe4fc4f335fa35e3a5ee6d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_fuzzy_kn_fraction, 0.5,&quot;New fuzzy kn alg&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_fuzzy_kn_fraction</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>5</declname>
+        </param>
+        <param>
+          <type>&quot;New fuzzy kn alg&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="303" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a7b73381feb907e75091f5f0440835d87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_fuzzy_sp_fraction, 0.5,&quot;New fuzzy sp alg&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_fuzzy_sp_fraction</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>5</declname>
+        </param>
+        <param>
+          <type>&quot;New fuzzy sp alg&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="304" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a6365b8925259f0220c1e72e6c477c87a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_min_sane_kn_sp, 1.5,&quot;Dont trust spaces less than this time kn&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_min_sane_kn_sp</type>
+        </param>
+        <param>
+          <type>1.</type>
+          <declname>5</declname>
+        </param>
+        <param>
+          <type>&quot;Dont trust spaces less than this time kn&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="305" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a4eb7517e3491c5c1e9a630927cf355b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_init_guess_kn_mult, 2.2,&quot;Thresh guess - mult kn by this&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_init_guess_kn_mult</type>
+        </param>
+        <param>
+          <type>2.</type>
+          <declname>2</declname>
+        </param>
+        <param>
+          <type>&quot;Thresh guess - mult kn by this&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="307" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a1d58aced30d05547c3e058aa564a1442" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_init_guess_xht_mult, 0.28,&quot;Thresh guess - mult xht by this&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_init_guess_xht_mult</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>28</declname>
+        </param>
+        <param>
+          <type>&quot;Thresh guess - mult xht by this&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="309" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1adbe0ac062b0348484740530df3a2308e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_max_sane_kn_thresh, 5.0,&quot;Multiplier on kn to limit thresh&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_max_sane_kn_thresh</type>
+        </param>
+        <param>
+          <type>5.</type>
+          <declname>0</declname>
+        </param>
+        <param>
+          <type>&quot;Multiplier on kn to limit thresh&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="311" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a9746431d01cb8547faa1b941bba98f0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_flip_caution, 0.0,&quot;Dont autoflip kn to sp when large separation&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_flip_caution</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>0</declname>
+        </param>
+        <param>
+          <type>&quot;Dont autoflip kn to sp when large separation&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="313" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a0ea8fda0ba59e5c3bb8d62135cf030a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_large_kerning, 0.19,&quot;Limit use of xht gap with large kns&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_large_kerning</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>19</declname>
+        </param>
+        <param>
+          <type>&quot;Limit use of xht gap with large kns&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="315" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1acf826a250a0e0d4655fb59d0040d0030" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_dont_fool_with_small_kerns,-1,&quot;Limit use of xht gap with odd small kns&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_dont_fool_with_small_kerns</type>
+        </param>
+        <param>
+          <type>-</type>
+          <declname>1</declname>
+        </param>
+        <param>
+          <type>&quot;Limit use of xht gap with odd small kns&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="317" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a474762e3bdc7bafdb2dc64e7c7b15a1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_near_lh_edge, 0,&quot;Dont reduce box if the top left is non blank&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_near_lh_edge</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>&quot;Dont reduce box if the top left is non blank&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="319" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a6085e45426d30f5280ce3303c051e464" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_silly_kn_sp_gap, 0.2,&quot;Dont let sp minus kn get too small&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_silly_kn_sp_gap</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>2</declname>
+        </param>
+        <param>
+          <type>&quot;Dont let sp minus kn get too small&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="321" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a7f073257f5a29bbfdd02a2defe0edbdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(tosp_pass_wide_fuzz_sp_to_context, 0.75,&quot;How wide fuzzies need context&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>tosp_pass_wide_fuzz_sp_to_context</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>75</declname>
+        </param>
+        <param>
+          <type>&quot;How wide fuzzies need context&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="323" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a99e08247e4778bd8ca7e53a0aa3578b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(textord_no_rejects, false,&quot;Don&apos;t remove noise blobs&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>textord_no_rejects</type>
+        </param>
+        <param>
+          <type>false</type>
+        </param>
+        <param>
+          <type>&quot;Don&apos;t remove noise blobs&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="326" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ac7c0af522a5f3cb4e06d1a5dd2e18ff5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(textord_show_blobs, false,&quot;Display unsorted blobs&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>textord_show_blobs</type>
+        </param>
+        <param>
+          <type>false</type>
+        </param>
+        <param>
+          <type>&quot;Display unsorted blobs&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="327" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a3b3244ba64555e10dbf723dfbecbf684" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(textord_show_boxes, false,&quot;Display boxes&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>textord_show_boxes</type>
+        </param>
+        <param>
+          <type>false</type>
+        </param>
+        <param>
+          <type>&quot;Display boxes&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="328" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a138d4169250a983002733578285a95ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::INT_VAR_H</definition>
+        <argsstring>(textord_max_noise_size, 7,&quot;Pixel size of noise&quot;)</argsstring>
+        <name>INT_VAR_H</name>
+        <param>
+          <type>textord_max_noise_size</type>
+        </param>
+        <param>
+          <type>7</type>
+        </param>
+        <param>
+          <type>&quot;Pixel size of noise&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="329" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ab11848385c8dc9aad92301debeb696e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(textord_blob_size_bigile, 95,&quot;Percentile for large blobs&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>textord_blob_size_bigile</type>
+        </param>
+        <param>
+          <type>95</type>
+        </param>
+        <param>
+          <type>&quot;Percentile for large blobs&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="330" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1aed700e4e9ab3b75e74558db9ee987187" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(textord_noise_area_ratio, 0.7,&quot;Fraction of bounding box for noise&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>textord_noise_area_ratio</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>7</declname>
+        </param>
+        <param>
+          <type>&quot;Fraction of bounding box for noise&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="331" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a268089b4d0f554911ac829acf51bdd9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(textord_blob_size_smallile, 20,&quot;Percentile for small blobs&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>textord_blob_size_smallile</type>
+        </param>
+        <param>
+          <type>20</type>
+        </param>
+        <param>
+          <type>&quot;Percentile for small blobs&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="333" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a57d9786b77ed388a06bbdbd729e72699" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(textord_initialx_ile, 0.75,&quot;Ile of sizes for xheight guess&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>textord_initialx_ile</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>75</declname>
+        </param>
+        <param>
+          <type>&quot;Ile of sizes for xheight guess&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="334" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1aeea3833bb9c44ffe4ef5b587d474c87c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(textord_initialasc_ile, 0.90,&quot;Ile of sizes for xheight guess&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>textord_initialasc_ile</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>90</declname>
+        </param>
+        <param>
+          <type>&quot;Ile of sizes for xheight guess&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="335" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a11c62a9e6a6ef31f736d62787aabee92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::INT_VAR_H</definition>
+        <argsstring>(textord_noise_sizefraction, 10,&quot;Fraction of size for maxima&quot;)</argsstring>
+        <name>INT_VAR_H</name>
+        <param>
+          <type>textord_noise_sizefraction</type>
+        </param>
+        <param>
+          <type>10</type>
+        </param>
+        <param>
+          <type>&quot;Fraction of size for maxima&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="336" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1abfc0d26729a570ea7ea0e8ea0ed43b35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(textord_noise_sizelimit, 0.5,&quot;Fraction of x for big t count&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>textord_noise_sizelimit</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>5</declname>
+        </param>
+        <param>
+          <type>&quot;Fraction of x for big t <ref refid="oldlist_8h_1acd4ea858d7133e40518e0832ff9d94b2" kindref="member">count</ref>&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="337" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a95ecd15253b541c1255898443dc2e4f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::INT_VAR_H</definition>
+        <argsstring>(textord_noise_translimit, 16,&quot;Transitions for normal blob&quot;)</argsstring>
+        <name>INT_VAR_H</name>
+        <param>
+          <type>textord_noise_translimit</type>
+        </param>
+        <param>
+          <type>16</type>
+        </param>
+        <param>
+          <type>&quot;Transitions for <ref refid="cluster_8h_1ade80fdcd8f2dde57393f56d0cdfaeed0aebc81705969b8c5ae986b0b2ec08d1d5" kindref="member">normal</ref> blob&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="338" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ad88376abe5f9c253a4e7af6308072bb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(textord_noise_normratio, 2.0,&quot;Dot to norm ratio for deletion&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>textord_noise_normratio</type>
+        </param>
+        <param>
+          <type>2.</type>
+          <declname>0</declname>
+        </param>
+        <param>
+          <type>&quot;Dot to norm ratio for deletion&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="339" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a40a10e851e4eb8b8b061cb012678d432" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(textord_noise_rejwords, true,&quot;Reject noise-like words&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>textord_noise_rejwords</type>
+        </param>
+        <param>
+          <type>true</type>
+        </param>
+        <param>
+          <type>&quot;Reject noise-like words&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="340" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1aacfce5d72fe07f8e42a6d66f26ca79a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(textord_noise_rejrows, true,&quot;Reject noise-like rows&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>textord_noise_rejrows</type>
+        </param>
+        <param>
+          <type>true</type>
+        </param>
+        <param>
+          <type>&quot;Reject noise-like rows&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="341" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a072350e534a431ec9d34576c03bf62dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(textord_noise_syfract, 0.2,&quot;xh fract error for norm blobs&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>textord_noise_syfract</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>2</declname>
+        </param>
+        <param>
+          <type>&quot;xh fract error for norm blobs&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="342" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1aaa266aa0b5abc8a13dcd492dbb2a8a6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(textord_noise_sxfract, 0.4,&quot;xh fract width error for norm blobs&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>textord_noise_sxfract</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>4</declname>
+        </param>
+        <param>
+          <type>&quot;xh fract width error for norm blobs&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="343" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a0cecb9d3fbbe257d6bd7c5189bfdc015" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(textord_noise_hfract, 1.0/64,&quot;Height fraction to discard outlines as speckle noise&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>textord_noise_hfract</type>
+        </param>
+        <param>
+          <type>1.0/</type>
+          <declname>64</declname>
+        </param>
+        <param>
+          <type>&quot;Height fraction to discard outlines as speckle noise&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="345" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a53d2ec729d621bc00d947558a1fd734b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::INT_VAR_H</definition>
+        <argsstring>(textord_noise_sncount, 1,&quot;super norm blobs to save row&quot;)</argsstring>
+        <name>INT_VAR_H</name>
+        <param>
+          <type>textord_noise_sncount</type>
+        </param>
+        <param>
+          <type>1</type>
+        </param>
+        <param>
+          <type>&quot;super norm blobs to save row&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="347" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a258e941c940913ef1ff677ab498c0301" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(textord_noise_rowratio, 6.0,&quot;Dot to norm ratio for deletion&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>textord_noise_rowratio</type>
+        </param>
+        <param>
+          <type>6.</type>
+          <declname>0</declname>
+        </param>
+        <param>
+          <type>&quot;Dot to norm ratio for deletion&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="348" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ae8d14e5299a1c84150b9b0b487cf6709" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::BOOL_VAR_H</definition>
+        <argsstring>(textord_noise_debug, FALSE,&quot;Debug row garbage detector&quot;)</argsstring>
+        <name>BOOL_VAR_H</name>
+        <param>
+          <type>textord_noise_debug</type>
+        </param>
+        <param>
+          <type><ref refid="cutil_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref></type>
+        </param>
+        <param>
+          <type>&quot;Debug row garbage detector&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="349" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a05872a48dbfa3d74a015cbb49c3bdec9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(textord_blshift_maxshift, 0.00,&quot;Max baseline shift&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>textord_blshift_maxshift</type>
+        </param>
+        <param>
+          <type>0.</type>
+          <declname>00</declname>
+        </param>
+        <param>
+          <type>&quot;Max <ref refid="mfoutline_8h_1a2a4b69f9a2827dc98bc4cbc233118865a83297de004f4e58b9be2108c6cd08a23" kindref="member">baseline</ref> shift&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="350" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a565e01b3b9d1c873599889b789a26a6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::Textord::double_VAR_H</definition>
+        <argsstring>(textord_blshift_xfraction, 9.99,&quot;Min size of baseline shift&quot;)</argsstring>
+        <name>double_VAR_H</name>
+        <param>
+          <type>textord_blshift_xfraction</type>
+        </param>
+        <param>
+          <type>9.</type>
+          <declname>99</declname>
+        </param>
+        <param>
+          <type>&quot;Min size of <ref refid="mfoutline_8h_1a2a4b69f9a2827dc98bc4cbc233118865a83297de004f4e58b9be2108c6cd08a23" kindref="member">baseline</ref> shift&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="351" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a1f6e382176b2f93d07d01f1e18e284cd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::MakeRows</definition>
+        <argsstring>(PageSegMode pageseg_mode, const FCOORD &amp;skew, int width, int height, TO_BLOCK_LIST *to_blocks)</argsstring>
+        <name>MakeRows</name>
+        <param>
+          <type><ref refid="namespacetesseract_1a338d4c8b5d497b5ec3e6e4269d8ac66a" kindref="member">PageSegMode</ref></type>
+          <declname>pageseg_mode</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref> &amp;</type>
+          <declname>skew</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>TO_BLOCK_LIST *</type>
+          <declname>to_blocks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="86" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a123d200f00ff84838e8bba19459bbca2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::MakeBlockRows</definition>
+        <argsstring>(int min_spacing, int max_spacing, const FCOORD &amp;skew, TO_BLOCK *block, ScrollView *win)</argsstring>
+        <name>MakeBlockRows</name>
+        <param>
+          <type>int</type>
+          <declname>min_spacing</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_spacing</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref> &amp;</type>
+          <declname>skew</declname>
+        </param>
+        <param>
+          <type><ref refid="class_t_o___b_l_o_c_k" kindref="compound">TO_BLOCK</ref> *</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type><ref refid="class_scroll_view" kindref="compound">ScrollView</ref> *</type>
+          <declname>win</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a991860fc24fe517dd0ba69d53bd66368" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::fit_rows</definition>
+        <argsstring>(float gradient, ICOORD page_tr, TO_BLOCK_LIST *blocks)</argsstring>
+        <name>fit_rows</name>
+        <param>
+          <type>float</type>
+          <declname>gradient</declname>
+        </param>
+        <param>
+          <type><ref refid="class_i_c_o_o_r_d" kindref="compound">ICOORD</ref></type>
+          <declname>page_tr</declname>
+        </param>
+        <param>
+          <type>TO_BLOCK_LIST *</type>
+          <declname>blocks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="93" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/makerow.cpp" bodystart="220" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ab81f4a01f065ce9bbe862795119081ac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::cleanup_rows_fitting</definition>
+        <argsstring>(ICOORD page_tr, TO_BLOCK *block, float gradient, FCOORD rotation, inT32 block_edge, BOOL8 testing_on)</argsstring>
+        <name>cleanup_rows_fitting</name>
+        <param>
+          <type><ref refid="class_i_c_o_o_r_d" kindref="compound">ICOORD</ref></type>
+          <declname>page_tr</declname>
+        </param>
+        <param>
+          <type><ref refid="class_t_o___b_l_o_c_k" kindref="compound">TO_BLOCK</ref> *</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gradient</declname>
+        </param>
+        <param>
+          <type><ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref></type>
+          <declname>rotation</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref></type>
+          <declname>block_edge</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a7712a7e28433d0ade59219a129549b6f" kindref="member">BOOL8</ref></type>
+          <declname>testing_on</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="94" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/makerow.cpp" bodystart="584" bodyend="658"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ae256bbff96a055ef49a86fbba393c98a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::compute_block_xheight</definition>
+        <argsstring>(TO_BLOCK *block, float gradient)</argsstring>
+        <name>compute_block_xheight</name>
+        <param>
+          <type><ref refid="class_t_o___b_l_o_c_k" kindref="compound">TO_BLOCK</ref> *</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gradient</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="100" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/makerow.cpp" bodystart="1374" bodyend="1476"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1aa0edb3eb2e12cc276b92734f5f556c1a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::make_spline_rows</definition>
+        <argsstring>(TO_BLOCK *block, float gradient, FCOORD rotation, inT32 block_edge, BOOL8 testing_on)</argsstring>
+        <name>make_spline_rows</name>
+        <param>
+          <type><ref refid="class_t_o___b_l_o_c_k" kindref="compound">TO_BLOCK</ref> *</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gradient</declname>
+        </param>
+        <param>
+          <type><ref refid="class_f_c_o_o_r_d" kindref="compound">FCOORD</ref></type>
+          <declname>rotation</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref></type>
+          <declname>block_edge</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a7712a7e28433d0ade59219a129549b6f" kindref="member">BOOL8</ref></type>
+          <declname>testing_on</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="105" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/makerow.cpp" bodystart="2123" bodyend="2166"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ac9f7c434bd83abc01087729becd854ce" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::make_old_baselines</definition>
+        <argsstring>(TO_BLOCK *block, BOOL8 testing_on, float gradient)</argsstring>
+        <name>make_old_baselines</name>
+        <param>
+          <type><ref refid="class_t_o___b_l_o_c_k" kindref="compound">TO_BLOCK</ref> *</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a7712a7e28433d0ade59219a129549b6f" kindref="member">BOOL8</ref></type>
+          <declname>testing_on</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gradient</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="112" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/oldbasel.cpp" bodystart="84" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a7a67b4313d5f0f0e9a3c2dd0ad45fb36" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::correlate_lines</definition>
+        <argsstring>(TO_BLOCK *block, float gradient)</argsstring>
+        <name>correlate_lines</name>
+        <param>
+          <type><ref refid="class_t_o___b_l_o_c_k" kindref="compound">TO_BLOCK</ref> *</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gradient</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="115" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/oldbasel.cpp" bodystart="122" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ace29a1d7be1f87f11fd4a870d6e47c7d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::correlate_neighbours</definition>
+        <argsstring>(TO_BLOCK *block, TO_ROW **rows, int rowcount)</argsstring>
+        <name>correlate_neighbours</name>
+        <param>
+          <type><ref refid="class_t_o___b_l_o_c_k" kindref="compound">TO_BLOCK</ref> *</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type><ref refid="class_t_o___r_o_w" kindref="compound">TO_ROW</ref> **</type>
+          <declname>rows</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rowcount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="116" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/oldbasel.cpp" bodystart="164" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a28639b1d527ca80e602b92af36bc6c63" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int tesseract::Textord::correlate_with_stats</definition>
+        <argsstring>(TO_ROW **rows, int rowcount, TO_BLOCK *block)</argsstring>
+        <name>correlate_with_stats</name>
+        <param>
+          <type><ref refid="class_t_o___r_o_w" kindref="compound">TO_ROW</ref> **</type>
+          <declname>rows</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rowcount</declname>
+        </param>
+        <param>
+          <type><ref refid="class_t_o___b_l_o_c_k" kindref="compound">TO_BLOCK</ref> *</type>
+          <declname>block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="119" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/oldbasel.cpp" bodystart="220" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a4982acad40ec4ddee46dfbaebc68341a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::find_textlines</definition>
+        <argsstring>(TO_BLOCK *block, TO_ROW *row, int degree, QSPLINE *spline)</argsstring>
+        <name>find_textlines</name>
+        <param>
+          <type><ref refid="class_t_o___b_l_o_c_k" kindref="compound">TO_BLOCK</ref> *</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type><ref refid="class_t_o___r_o_w" kindref="compound">TO_ROW</ref> *</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>degree</declname>
+        </param>
+        <param>
+          <type><ref refid="class_q_s_p_l_i_n_e" kindref="compound">QSPLINE</ref> *</type>
+          <declname>spline</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="122" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/oldbasel.cpp" bodystart="334" bodyend="435"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ab36f9ce6ef62ddb67911e15b6daf8529" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::block_spacing_stats</definition>
+        <argsstring>(TO_BLOCK *block, GAPMAP *gapmap, BOOL8 &amp;old_text_ord_proportional, inT16 &amp;block_space_gap_width, inT16 &amp;block_non_space_gap_width)</argsstring>
+        <name>block_spacing_stats</name>
+        <param>
+          <type><ref refid="class_t_o___b_l_o_c_k" kindref="compound">TO_BLOCK</ref> *</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type><ref refid="class_g_a_p_m_a_p" kindref="compound">GAPMAP</ref> *</type>
+          <declname>gapmap</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a7712a7e28433d0ade59219a129549b6f" kindref="member">BOOL8</ref> &amp;</type>
+          <declname>old_text_ord_proportional</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref> &amp;</type>
+          <declname>block_space_gap_width</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref> &amp;</type>
+          <declname>block_non_space_gap_width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="128" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tospace.cpp" bodystart="112" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1aebfdaa4194f319a575cf0bba1150b227" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::row_spacing_stats</definition>
+        <argsstring>(TO_ROW *row, GAPMAP *gapmap, inT16 block_idx, inT16 row_idx, inT16 block_space_gap_width, inT16 block_non_space_gap_width)</argsstring>
+        <name>row_spacing_stats</name>
+        <param>
+          <type><ref refid="class_t_o___r_o_w" kindref="compound">TO_ROW</ref> *</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type><ref refid="class_g_a_p_m_a_p" kindref="compound">GAPMAP</ref> *</type>
+          <declname>gapmap</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+          <declname>block_idx</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+          <declname>row_idx</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+          <declname>block_space_gap_width</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+          <declname>block_non_space_gap_width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="136" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tospace.cpp" bodystart="285" bodyend="579"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a0f7aab457580df1df98439840733ecb3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::old_to_method</definition>
+        <argsstring>(TO_ROW *row, STATS *all_gap_stats, STATS *space_gap_stats, STATS *small_gap_stats, inT16 block_space_gap_width, inT16 block_non_space_gap_width)</argsstring>
+        <name>old_to_method</name>
+        <param>
+          <type><ref refid="class_t_o___r_o_w" kindref="compound">TO_ROW</ref> *</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_t_a_t_s" kindref="compound">STATS</ref> *</type>
+          <declname>all_gap_stats</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_t_a_t_s" kindref="compound">STATS</ref> *</type>
+          <declname>space_gap_stats</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_t_a_t_s" kindref="compound">STATS</ref> *</type>
+          <declname>small_gap_stats</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+          <declname>block_space_gap_width</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+          <declname>block_non_space_gap_width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="145" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tospace.cpp" bodystart="581" bodyend="665"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ad5e4732e21439124af3d9a411082c0f9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="host_8h_1a7712a7e28433d0ade59219a129549b6f" kindref="member">BOOL8</ref></type>
+        <definition>BOOL8 tesseract::Textord::isolated_row_stats</definition>
+        <argsstring>(TO_ROW *row, GAPMAP *gapmap, STATS *all_gap_stats, BOOL8 suspected_table, inT16 block_idx, inT16 row_idx)</argsstring>
+        <name>isolated_row_stats</name>
+        <param>
+          <type><ref refid="class_t_o___r_o_w" kindref="compound">TO_ROW</ref> *</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type><ref refid="class_g_a_p_m_a_p" kindref="compound">GAPMAP</ref> *</type>
+          <declname>gapmap</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_t_a_t_s" kindref="compound">STATS</ref> *</type>
+          <declname>all_gap_stats</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a7712a7e28433d0ade59219a129549b6f" kindref="member">BOOL8</ref></type>
+          <declname>suspected_table</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+          <declname>block_idx</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+          <declname>row_idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="153" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tospace.cpp" bodystart="672" bodyend="785"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a2dbd2328b1500f075958b53b67ebf494" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+        <definition>inT16 tesseract::Textord::stats_count_under</definition>
+        <argsstring>(STATS *stats, inT16 threshold)</argsstring>
+        <name>stats_count_under</name>
+        <param>
+          <type><ref refid="class_s_t_a_t_s" kindref="compound">STATS</ref> *</type>
+          <declname>stats</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+          <declname>threshold</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="159" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tospace.cpp" bodystart="787" bodyend="794"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1af15b19236e367d7fca9b13d252143733" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::improve_row_threshold</definition>
+        <argsstring>(TO_ROW *row, STATS *all_gap_stats)</argsstring>
+        <name>improve_row_threshold</name>
+        <param>
+          <type><ref refid="class_t_o___r_o_w" kindref="compound">TO_ROW</ref> *</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type><ref refid="class_s_t_a_t_s" kindref="compound">STATS</ref> *</type>
+          <declname>all_gap_stats</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="160" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tospace.cpp" bodystart="812" bodyend="878"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1aada8660ce4ea86b4f364d475614911b2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="host_8h_1a7712a7e28433d0ade59219a129549b6f" kindref="member">BOOL8</ref></type>
+        <definition>BOOL8 tesseract::Textord::make_a_word_break</definition>
+        <argsstring>(TO_ROW *row, TBOX blob_box, inT16 prev_gap, TBOX prev_blob_box, inT16 real_current_gap, inT16 within_xht_current_gap, TBOX next_blob_box, inT16 next_gap, uinT8 &amp;blanks, BOOL8 &amp;fuzzy_sp, BOOL8 &amp;fuzzy_non, BOOL8 &amp;prev_gap_was_a_space, BOOL8 &amp;break_at_next_gap)</argsstring>
+        <name>make_a_word_break</name>
+        <param>
+          <type><ref refid="class_t_o___r_o_w" kindref="compound">TO_ROW</ref> *</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type><ref refid="class_t_b_o_x" kindref="compound">TBOX</ref></type>
+          <declname>blob_box</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+          <declname>prev_gap</declname>
+        </param>
+        <param>
+          <type><ref refid="class_t_b_o_x" kindref="compound">TBOX</ref></type>
+          <declname>prev_blob_box</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+          <declname>real_current_gap</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+          <declname>within_xht_current_gap</declname>
+        </param>
+        <param>
+          <type><ref refid="class_t_b_o_x" kindref="compound">TBOX</ref></type>
+          <declname>next_blob_box</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+          <declname>next_gap</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a458fe97f82495945f8071bb3c18d1783" kindref="member">uinT8</ref> &amp;</type>
+          <declname>blanks</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a7712a7e28433d0ade59219a129549b6f" kindref="member">BOOL8</ref> &amp;</type>
+          <declname>fuzzy_sp</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a7712a7e28433d0ade59219a129549b6f" kindref="member">BOOL8</ref> &amp;</type>
+          <declname>fuzzy_non</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a7712a7e28433d0ade59219a129549b6f" kindref="member">BOOL8</ref> &amp;</type>
+          <declname>prev_gap_was_a_space</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a7712a7e28433d0ade59219a129549b6f" kindref="member">BOOL8</ref> &amp;</type>
+          <declname>break_at_next_gap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="161" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tospace.cpp" bodystart="1261" bodyend="1566"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a019af8bc835f36d770e3a8f23346d4db" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="host_8h_1a7712a7e28433d0ade59219a129549b6f" kindref="member">BOOL8</ref></type>
+        <definition>BOOL8 tesseract::Textord::narrow_blob</definition>
+        <argsstring>(TO_ROW *row, TBOX blob_box)</argsstring>
+        <name>narrow_blob</name>
+        <param>
+          <type><ref refid="class_t_o___r_o_w" kindref="compound">TO_ROW</ref> *</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type><ref refid="class_t_b_o_x" kindref="compound">TBOX</ref></type>
+          <declname>blob_box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="174" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tospace.cpp" bodystart="1568" bodyend="1574"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a050dc2debf2d875526348ab7a5dbf19f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="host_8h_1a7712a7e28433d0ade59219a129549b6f" kindref="member">BOOL8</ref></type>
+        <definition>BOOL8 tesseract::Textord::wide_blob</definition>
+        <argsstring>(TO_ROW *row, TBOX blob_box)</argsstring>
+        <name>wide_blob</name>
+        <param>
+          <type><ref refid="class_t_o___r_o_w" kindref="compound">TO_ROW</ref> *</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type><ref refid="class_t_b_o_x" kindref="compound">TBOX</ref></type>
+          <declname>blob_box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="175" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tospace.cpp" bodystart="1576" bodyend="1589"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a262cce062f1c80ce22f92cc2900fc3c9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="host_8h_1a7712a7e28433d0ade59219a129549b6f" kindref="member">BOOL8</ref></type>
+        <definition>BOOL8 tesseract::Textord::suspected_punct_blob</definition>
+        <argsstring>(TO_ROW *row, TBOX box)</argsstring>
+        <name>suspected_punct_blob</name>
+        <param>
+          <type><ref refid="class_t_o___r_o_w" kindref="compound">TO_ROW</ref> *</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type><ref refid="class_t_b_o_x" kindref="compound">TBOX</ref></type>
+          <declname>box</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="176" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tospace.cpp" bodystart="1591" bodyend="1603"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a2986495cbcc564beaa674fc4c73ad2ba" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::peek_at_next_gap</definition>
+        <argsstring>(TO_ROW *row, BLOBNBOX_IT box_it, TBOX &amp;next_blob_box, inT16 &amp;next_gap, inT16 &amp;next_within_xht_gap)</argsstring>
+        <name>peek_at_next_gap</name>
+        <param>
+          <type><ref refid="class_t_o___r_o_w" kindref="compound">TO_ROW</ref> *</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>BLOBNBOX_IT</type>
+          <declname>box_it</declname>
+        </param>
+        <param>
+          <type><ref refid="class_t_b_o_x" kindref="compound">TBOX</ref> &amp;</type>
+          <declname>next_blob_box</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref> &amp;</type>
+          <declname>next_gap</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref> &amp;</type>
+          <declname>next_within_xht_gap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="177" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tospace.cpp" bodystart="1606" bodyend="1628"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ab2279e5b33aa6592498d019052dea7bb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::mark_gap</definition>
+        <argsstring>(TBOX blob, inT16 rule, inT16 prev_gap, inT16 prev_blob_width, inT16 current_gap, inT16 next_blob_width, inT16 next_gap)</argsstring>
+        <name>mark_gap</name>
+        <param>
+          <type><ref refid="class_t_b_o_x" kindref="compound">TBOX</ref></type>
+          <declname>blob</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+          <declname>rule</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+          <declname>prev_gap</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+          <declname>prev_blob_width</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+          <declname>current_gap</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+          <declname>next_blob_width</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+          <declname>next_gap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="182" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tospace.cpp" bodystart="1632" bodyend="1703"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a99899b2a240b713017e2a0fd5e9efbce" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float tesseract::Textord::find_mean_blob_spacing</definition>
+        <argsstring>(WERD *word)</argsstring>
+        <name>find_mean_blob_spacing</name>
+        <param>
+          <type><ref refid="class_w_e_r_d" kindref="compound">WERD</ref> *</type>
+          <declname>word</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="189" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tospace.cpp" bodystart="1706" bodyend="1730"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a6d48b0ce968a7cb3e238fe2238bb65e8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="host_8h_1a7712a7e28433d0ade59219a129549b6f" kindref="member">BOOL8</ref></type>
+        <definition>BOOL8 tesseract::Textord::ignore_big_gap</definition>
+        <argsstring>(TO_ROW *row, inT32 row_length, GAPMAP *gapmap, inT16 left, inT16 right)</argsstring>
+        <name>ignore_big_gap</name>
+        <param>
+          <type><ref refid="class_t_o___r_o_w" kindref="compound">TO_ROW</ref> *</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1aba1f582fd0168f3ff9225d8c90fa9eb8" kindref="member">inT32</ref></type>
+          <declname>row_length</declname>
+        </param>
+        <param>
+          <type><ref refid="class_g_a_p_m_a_p" kindref="compound">GAPMAP</ref> *</type>
+          <declname>gapmap</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="190" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tospace.cpp" bodystart="1733" bodyend="1761"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ab7bbf526f4fca04305658c5ae3a0050d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_t_b_o_x" kindref="compound">TBOX</ref></type>
+        <definition>TBOX tesseract::Textord::reduced_box_next</definition>
+        <argsstring>(TO_ROW *row, BLOBNBOX_IT *it)</argsstring>
+        <name>reduced_box_next</name>
+        <param>
+          <type><ref refid="class_t_o___r_o_w" kindref="compound">TO_ROW</ref> *</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>BLOBNBOX_IT *</type>
+          <declname>it</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="196" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tospace.cpp" bodystart="1772" bodyend="1823"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a8ecfd5c09b194312b8a402b689ba5d14" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_t_b_o_x" kindref="compound">TBOX</ref></type>
+        <definition>TBOX tesseract::Textord::reduced_box_for_blob</definition>
+        <argsstring>(BLOBNBOX *blob, TO_ROW *row, inT16 *left_above_xht)</argsstring>
+        <name>reduced_box_for_blob</name>
+        <param>
+          <type><ref refid="class_b_l_o_b_n_b_o_x" kindref="compound">BLOBNBOX</ref> *</type>
+          <declname>blob</declname>
+        </param>
+        <param>
+          <type><ref refid="class_t_o___r_o_w" kindref="compound">TO_ROW</ref> *</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type><ref refid="host_8h_1a8d41499d38c24d39b221ab0c158fe5a8" kindref="member">inT16</ref> *</type>
+          <declname>left_above_xht</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="199" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tospace.cpp" bodystart="1846" bodyend="1898"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a7149e8d28c637408d0a8613b2b305ab6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float tesseract::Textord::filter_noise_blobs</definition>
+        <argsstring>(BLOBNBOX_LIST *src_list, BLOBNBOX_LIST *noise_list, BLOBNBOX_LIST *small_list, BLOBNBOX_LIST *large_list)</argsstring>
+        <name>filter_noise_blobs</name>
+        <param>
+          <type>BLOBNBOX_LIST *</type>
+          <declname>src_list</declname>
+        </param>
+        <param>
+          <type>BLOBNBOX_LIST *</type>
+          <declname>noise_list</declname>
+        </param>
+        <param>
+          <type>BLOBNBOX_LIST *</type>
+          <declname>small_list</declname>
+        </param>
+        <param>
+          <type>BLOBNBOX_LIST *</type>
+          <declname>large_list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="201" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tordmain.cpp" bodystart="289" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a280f1ce9acc7b6044f5fe529868e326c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::cleanup_blocks</definition>
+        <argsstring>(BLOCK_LIST *blocks)</argsstring>
+        <name>cleanup_blocks</name>
+        <param>
+          <type>BLOCK_LIST *</type>
+          <declname>blocks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="205" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tordmain.cpp" bodystart="364" bodyend="410"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1ac3fc3e5e31f4625cf2da28cb03e867cb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="host_8h_1a7712a7e28433d0ade59219a129549b6f" kindref="member">BOOL8</ref></type>
+        <definition>BOOL8 tesseract::Textord::clean_noise_from_row</definition>
+        <argsstring>(ROW *row)</argsstring>
+        <name>clean_noise_from_row</name>
+        <param>
+          <type><ref refid="class_r_o_w" kindref="compound">ROW</ref> *</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="206" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tordmain.cpp" bodystart="419" bodyend="519"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a8fb37e06735c6db1bc5c5eb09eb627c2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::clean_noise_from_words</definition>
+        <argsstring>(ROW *row)</argsstring>
+        <name>clean_noise_from_words</name>
+        <param>
+          <type><ref refid="class_r_o_w" kindref="compound">ROW</ref> *</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="207" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tordmain.cpp" bodystart="527" bodyend="636"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_textord_1a536e998c01b95ebc1713977ff8c42885" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void tesseract::Textord::clean_small_noise_from_words</definition>
+        <argsstring>(ROW *row)</argsstring>
+        <name>clean_small_noise_from_words</name>
+        <param>
+          <type><ref refid="class_r_o_w" kindref="compound">ROW</ref> *</type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="210" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/tordmain.cpp" bodystart="640" bodyend="670"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/makoto/Desktop/trunk/textord/textord.h" line="39" column="1" bodyfile="/Users/makoto/Desktop/trunk/textord/textord.h" bodystart="39" bodyend="352"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_textord_1ab36f9ce6ef62ddb67911e15b6daf8529" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>block_spacing_stats</name></member>
+      <member refid="classtesseract_1_1_textord_1a1c273bccb7dbeac3867f2536da4d3f9b" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a351c8f9b398a11b10a307b7d68ae03dc" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a30258d84b6c42a5b5b7ee06541c20d6b" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a7da1e38df6493f427c48c9e50ac9588c" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a32d1e89effcd1744d3ab12a1b5ad85be" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a246b30968321f44956bc549d94b31aa3" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a29ae0da9a5ff681578d8f9925e8a3ab8" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a08bc9efbd5bb09bc0f38940e534f2f73" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1ac25cfa01b7dfed3cbfd695122c4f5646" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a4ecbd64f27640bb1be83b57670fd5c8a" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1ab85df853ed86720f7ade14192ab18caa" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1ac8b31edc108fe7ac6c95c73144081b52" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a9a8772b4afcba620633a1d5d4ff8da9d" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a614621667824fd1825b3d9d4bfa1bf16" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a8535f898c2ed08e6e236de1e0e96cb45" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a1686b00fb772812aa259f05d0122e716" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1ab333a05c1260715f2fe1b0f03a2e0184" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1acd87efb76a745227ebc4b280bf83430e" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a911585df9df245e43a322902b2208a59" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1ad6550bf5c46dda3c172ec0afa8a7184a" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1ab74e1292ea66d36a6b36f8613347bf88" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a784bf1a4965b8483362ccdd2b6ed1899" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a99e08247e4778bd8ca7e53a0aa3578b9" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1ac7c0af522a5f3cb4e06d1a5dd2e18ff5" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a3b3244ba64555e10dbf723dfbecbf684" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a40a10e851e4eb8b8b061cb012678d432" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1aacfce5d72fe07f8e42a6d66f26ca79a8" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1ae8d14e5299a1c84150b9b0b487cf6709" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>BOOL_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1aff46570ac05e8112733bca9df353df77" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>ccstruct_</name></member>
+      <member refid="classtesseract_1_1_textord_1ac3fc3e5e31f4625cf2da28cb03e867cb" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>clean_noise_from_row</name></member>
+      <member refid="classtesseract_1_1_textord_1a8fb37e06735c6db1bc5c5eb09eb627c2" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>clean_noise_from_words</name></member>
+      <member refid="classtesseract_1_1_textord_1a536e998c01b95ebc1713977ff8c42885" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>clean_small_noise_from_words</name></member>
+      <member refid="classtesseract_1_1_textord_1a280f1ce9acc7b6044f5fe529868e326c" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>cleanup_blocks</name></member>
+      <member refid="classtesseract_1_1_textord_1ab81f4a01f065ce9bbe862795119081ac" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>cleanup_rows_fitting</name></member>
+      <member refid="classtesseract_1_1_textord_1a8ad2a2ff59d9dcbd82217076d4466344" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>CleanupSingleRowResult</name></member>
+      <member refid="classtesseract_1_1_textord_1ae256bbff96a055ef49a86fbba393c98a" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>compute_block_xheight</name></member>
+      <member refid="classtesseract_1_1_textord_1aa5342d14436274e648b545a522705eab" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>compute_row_xheight</name></member>
+      <member refid="classtesseract_1_1_textord_1a7a67b4313d5f0f0e9a3c2dd0ad45fb36" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>correlate_lines</name></member>
+      <member refid="classtesseract_1_1_textord_1ace29a1d7be1f87f11fd4a870d6e47c7d" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>correlate_neighbours</name></member>
+      <member refid="classtesseract_1_1_textord_1a28639b1d527ca80e602b92af36bc6c63" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>correlate_with_stats</name></member>
+      <member refid="classtesseract_1_1_textord_1a072ecab778f106b0452dae3eae035800" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a60b847755fa79c2dd176068ddf465a6f" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1ad4de37b070c382c91c4053729dabdbc7" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a5840576fab94ae58cffc59ce88c69255" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a224f579dc5795ec109243333400f84bb" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1aa11ce7ea297051114f9ed14f3b0fd098" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1aa879ed2be5c8aa9504b7ebfdf9251315" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a6b640b9f6a9cd4cbdda0578baae0af4b" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a9f64ba25f35a7b7b4f7a610e73ccf1f2" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a6a33a1ad6014c773dabbca630213aa3b" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a2c63edcba6981cc6ee0fb8a7b132fa1e" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1acf9b612fd967cc55653eb00e52ac295a" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a32838879c6c0b49993df538f0ef0c66b" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a6821e0d47c17950e75c05ec1ed30bb81" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a514bb68fb64c0bd72649731ad04290de" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1aaf954649dd8117dff66fcfba92b8d078" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a1a523fccc685cf8b0d56fabe9a361505" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a5d65437a1648e9f2ac2164e494eb3ff4" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1accce705eec3454c5a8785d54b5dfb24f" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a745d191cd9fecb1340e4f870f84ded3d" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a4196597dc57f451783d2b017bc5e059a" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a3ddb9881fbe4fc4f335fa35e3a5ee6d7" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a7b73381feb907e75091f5f0440835d87" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a6365b8925259f0220c1e72e6c477c87a" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a4eb7517e3491c5c1e9a630927cf355b7" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a1d58aced30d05547c3e058aa564a1442" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1adbe0ac062b0348484740530df3a2308e" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a9746431d01cb8547faa1b941bba98f0c" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a0ea8fda0ba59e5c3bb8d62135cf030a9" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1acf826a250a0e0d4655fb59d0040d0030" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a474762e3bdc7bafdb2dc64e7c7b15a1e" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a6085e45426d30f5280ce3303c051e464" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a7f073257f5a29bbfdd02a2defe0edbdf" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1ab11848385c8dc9aad92301debeb696e9" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1aed700e4e9ab3b75e74558db9ee987187" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a268089b4d0f554911ac829acf51bdd9b" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a57d9786b77ed388a06bbdbd729e72699" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1aeea3833bb9c44ffe4ef5b587d474c87c" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1abfc0d26729a570ea7ea0e8ea0ed43b35" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1ad88376abe5f9c253a4e7af6308072bb3" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a072350e534a431ec9d34576c03bf62dd" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1aaa266aa0b5abc8a13dcd492dbb2a8a6f" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a0cecb9d3fbbe257d6bd7c5189bfdc015" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a258e941c940913ef1ff677ab498c0301" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a05872a48dbfa3d74a015cbb49c3bdec9" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a565e01b3b9d1c873599889b789a26a6d" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>double_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1acaed60ac5b5ef00751e3d307347aa0e9" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>filter_blobs</name></member>
+      <member refid="classtesseract_1_1_textord_1a7149e8d28c637408d0a8613b2b305ab6" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>filter_noise_blobs</name></member>
+      <member refid="classtesseract_1_1_textord_1ab478029b49bf4efadd59a547565327a7" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>find_components</name></member>
+      <member refid="classtesseract_1_1_textord_1a99899b2a240b713017e2a0fd5e9efbce" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>find_mean_blob_spacing</name></member>
+      <member refid="classtesseract_1_1_textord_1a4982acad40ec4ddee46dfbaebc68341a" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>find_textlines</name></member>
+      <member refid="classtesseract_1_1_textord_1a991860fc24fe517dd0ba69d53bd66368" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>fit_rows</name></member>
+      <member refid="classtesseract_1_1_textord_1a6d48b0ce968a7cb3e238fe2238bb65e8" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>ignore_big_gap</name></member>
+      <member refid="classtesseract_1_1_textord_1af15b19236e367d7fca9b13d252143733" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>improve_row_threshold</name></member>
+      <member refid="classtesseract_1_1_textord_1a703dfdfd1b347889068a1fc4c02e3b08" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>INT_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a190c188234f1131d71d5df59b3811dd6" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>INT_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1af4348629d0957496aeda51dfbc5318f0" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>INT_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a3a45abaca7b0dcd7e01481548d7fa875" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>INT_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a6a77bf0b5a833f4f3ca342e0f111aed8" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>INT_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a2067788e75499074ae053ed2d74706f8" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>INT_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a138d4169250a983002733578285a95ce" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>INT_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a11c62a9e6a6ef31f736d62787aabee92" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>INT_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a95ecd15253b541c1255898443dc2e4f8" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>INT_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1a53d2ec729d621bc00d947558a1fd734b" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>INT_VAR_H</name></member>
+      <member refid="classtesseract_1_1_textord_1ad5e4732e21439124af3d9a411082c0f9" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>isolated_row_stats</name></member>
+      <member refid="classtesseract_1_1_textord_1aada8660ce4ea86b4f364d475614911b2" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>make_a_word_break</name></member>
+      <member refid="classtesseract_1_1_textord_1aca1e7ae6c3a435f0bf2b8260a2ca13e9" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>make_blob_words</name></member>
+      <member refid="classtesseract_1_1_textord_1ac9f7c434bd83abc01087729becd854ce" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>make_old_baselines</name></member>
+      <member refid="classtesseract_1_1_textord_1a511e66f00128f6e4240f44c047730d72" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>make_prop_words</name></member>
+      <member refid="classtesseract_1_1_textord_1aa0edb3eb2e12cc276b92734f5f556c1a" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>make_spline_rows</name></member>
+      <member refid="classtesseract_1_1_textord_1a123d200f00ff84838e8bba19459bbca2" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>MakeBlockRows</name></member>
+      <member refid="classtesseract_1_1_textord_1a1f6e382176b2f93d07d01f1e18e284cd" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>MakeRows</name></member>
+      <member refid="classtesseract_1_1_textord_1ab2279e5b33aa6592498d019052dea7bb" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>mark_gap</name></member>
+      <member refid="classtesseract_1_1_textord_1a019af8bc835f36d770e3a8f23346d4db" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>narrow_blob</name></member>
+      <member refid="classtesseract_1_1_textord_1a0f7aab457580df1df98439840733ecb3" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>old_to_method</name></member>
+      <member refid="classtesseract_1_1_textord_1a8a6c09da1cccfbcb53af421c3245ac0f" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>page_tr_</name></member>
+      <member refid="classtesseract_1_1_textord_1a2986495cbcc564beaa674fc4c73ad2ba" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>peek_at_next_gap</name></member>
+      <member refid="classtesseract_1_1_textord_1a8ecfd5c09b194312b8a402b689ba5d14" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>reduced_box_for_blob</name></member>
+      <member refid="classtesseract_1_1_textord_1ab7bbf526f4fca04305658c5ae3a0050d" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>reduced_box_next</name></member>
+      <member refid="classtesseract_1_1_textord_1aebfdaa4194f319a575cf0bba1150b227" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>row_spacing_stats</name></member>
+      <member refid="classtesseract_1_1_textord_1a7ec043fe83e21e8f8f12cfa863bd979d" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>set_use_cjk_fp_model</name></member>
+      <member refid="classtesseract_1_1_textord_1a2dbd2328b1500f075958b53b67ebf494" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>stats_count_under</name></member>
+      <member refid="classtesseract_1_1_textord_1a262cce062f1c80ce22f92cc2900fc3c9" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>suspected_punct_blob</name></member>
+      <member refid="classtesseract_1_1_textord_1aefff593dc9593239325054507c5cfaa8" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>Textord</name></member>
+      <member refid="classtesseract_1_1_textord_1a640828031af476306b7b506fc8264444" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>TextordPage</name></member>
+      <member refid="classtesseract_1_1_textord_1a68f2d3489fecd72bd8817a888752edb3" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>to_spacing</name></member>
+      <member refid="classtesseract_1_1_textord_1a778130fceaedd598d138b25d8272e63c" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>use_cjk_fp_model</name></member>
+      <member refid="classtesseract_1_1_textord_1ac4cac60363a6717a099efa74443d1a23" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>use_cjk_fp_model_</name></member>
+      <member refid="classtesseract_1_1_textord_1a050dc2debf2d875526348ab7a5dbf19f" prot="private" virt="non-virtual"><scope>tesseract::Textord</scope><name>wide_blob</name></member>
+      <member refid="classtesseract_1_1_textord_1ab6aec7eec28ee2ea9083e1788064bd3e" prot="public" virt="non-virtual"><scope>tesseract::Textord</scope><name>~Textord</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

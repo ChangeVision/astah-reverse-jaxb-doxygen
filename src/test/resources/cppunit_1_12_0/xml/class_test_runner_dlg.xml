@@ -1,0 +1,1804 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="class_test_runner_dlg" kind="class" prot="public">
+    <compoundname>TestRunnerDlg</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">TestRunnerDlgBase</basecompoundref>
+    <basecompoundref refid="classcdx_c_dynamic_dialog" prot="public" virt="non-virtual">cdxCDynamicDialog</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">TestListener</basecompoundref>
+    <derivedcompoundref refid="class_test_plug_in_runner_dlg" prot="public" virt="non-virtual">TestPlugInRunnerDlg</derivedcompoundref>
+    <includes refid="_test_runner_dlg_8h" local="no">TestRunnerDlg.h</includes>
+      <sectiondef kind="protected-type">
+      <memberdef kind="enum" id="class_test_runner_dlg_1aebdb967f6046a75dccc9dcf83a5acd01" prot="protected" static="no">
+        <name>ErrorTypeBitmaps</name>
+        <enumvalue id="class_test_runner_dlg_1aebdb967f6046a75dccc9dcf83a5acd01a33fd747dec4c251c0becd05851e25462" prot="protected">
+          <name>errorTypeFailure</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_test_runner_dlg_1aebdb967f6046a75dccc9dcf83a5acd01ab48db16c442f075e9e08db8f761f51ab" prot="protected">
+          <name>errorTypeError</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="119" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="118" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_test_runner_dlg_1a1ab72581036aa7794590ff546e2cb68f" prot="protected" static="no">
+        <type>::vector&lt; ::Test * &gt;</type>
+        <definition>typedef ::vector&lt; ::Test *&gt; TestRunnerDlg::Tests</definition>
+        <argsstring></argsstring>
+        <name>Tests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="100" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_test_runner_dlg_1a50285dd4e8af732cc42e9203060cdc85" prot="private" static="no">
+        <name>Columns</name>
+        <enumvalue id="class_test_runner_dlg_1a50285dd4e8af732cc42e9203060cdc85a60412651e6c435986a388dc441d05254" prot="private">
+          <name>indexType</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_test_runner_dlg_1a50285dd4e8af732cc42e9203060cdc85a5fef8dd751b5c9050d06a291b9365f40" prot="private">
+          <name>indexTestName</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_test_runner_dlg_1a50285dd4e8af732cc42e9203060cdc85aaef0546630dc9ca7eae617f62b0e5117" prot="private">
+          <name>indexMessage</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_test_runner_dlg_1a50285dd4e8af732cc42e9203060cdc85a8aa9bb436064fe6f816796192f47a314" prot="private">
+          <name>indexFilename</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_test_runner_dlg_1a50285dd4e8af732cc42e9203060cdc85ada60a2ddb3ff07116da75d230ae59cea" prot="private">
+          <name>indexLineNumber</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" line="46" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" bodystart="45" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_test_runner_dlg_1acdaba97edb566ab4e0522aee3201092b" prot="public" static="no" mutable="no">
+        <type>CEdit</type>
+        <definition>CEdit TestRunnerDlg::m_details</definition>
+        <argsstring></argsstring>
+        <name>m_details</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="68" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1a0a11f175b805fda35a5bef4bd40b806a" prot="public" static="no" mutable="no">
+        <type><ref refid="class_ms_dev_caller_list_ctrl" kindref="compound">MsDevCallerListCtrl</ref></type>
+        <definition>MsDevCallerListCtrl TestRunnerDlg::m_listCtrl</definition>
+        <argsstring></argsstring>
+        <name>m_listCtrl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="69" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1a284fb79a58913f46d4a1d5bd1c1b7a38" prot="public" static="no" mutable="no">
+        <type>CButton</type>
+        <definition>CButton TestRunnerDlg::m_buttonClose</definition>
+        <argsstring></argsstring>
+        <name>m_buttonClose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="70" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1a50d05f1875b9cc4aa539e45301f8c8f4" prot="public" static="no" mutable="no">
+        <type>CButton</type>
+        <definition>CButton TestRunnerDlg::m_buttonStop</definition>
+        <argsstring></argsstring>
+        <name>m_buttonStop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="71" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1a24cffe139b423fde2a5bc7480d29b271" prot="public" static="no" mutable="no">
+        <type>CButton</type>
+        <definition>CButton TestRunnerDlg::m_buttonRun</definition>
+        <argsstring></argsstring>
+        <name>m_buttonRun</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="72" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1aaa78c62d9671c9de2d74bbca01792cf8" prot="public" static="no" mutable="no">
+        <type>CButton</type>
+        <definition>CButton TestRunnerDlg::m_buttonBrowse</definition>
+        <argsstring></argsstring>
+        <name>m_buttonBrowse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="73" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1a697061c28015226cb67a94a6804e3b8e" prot="public" static="no" mutable="no">
+        <type>BOOL</type>
+        <definition>BOOL TestRunnerDlg::m_bAutorunAtStartup</definition>
+        <argsstring></argsstring>
+        <name>m_bAutorunAtStartup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="74" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_test_runner_dlg_1a49951e2f37b31a2cfa86938a57c1a56a" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_progress_bar" kindref="compound">ProgressBar</ref> *</type>
+        <definition>ProgressBar* TestRunnerDlg::m_testsProgress</definition>
+        <argsstring></argsstring>
+        <name>m_testsProgress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="101" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1a9267ad5bb86e258e43e9da0edeef106b" prot="protected" static="no" mutable="no">
+        <type>::Test *</type>
+        <definition>::Test* TestRunnerDlg::m_selectedTest</definition>
+        <argsstring></argsstring>
+        <name>m_selectedTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="102" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1a239d4e3df5ba406db3d2c973f7860b23" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_active_test" kindref="compound">ActiveTest</ref> *</type>
+        <definition>ActiveTest* TestRunnerDlg::m_activeTest</definition>
+        <argsstring></argsstring>
+        <name>m_activeTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="103" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1a74ec4056ab784d14ea84fe64d547aa4a" prot="protected" static="no" mutable="no">
+        <type>::TestResult *</type>
+        <definition>::TestResult* TestRunnerDlg::m_testObserver</definition>
+        <argsstring></argsstring>
+        <name>m_testObserver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="104" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1a39158a72c89e3fd58ec0cee3a58612ff" prot="protected" static="no" mutable="no">
+        <type>::TestResultCollector *</type>
+        <definition>::TestResultCollector* TestRunnerDlg::m_result</definition>
+        <argsstring></argsstring>
+        <name>m_result</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="105" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1aa481d53964cb0af4c5b5585fe0700f8e" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TestRunnerDlg::m_testsRun</definition>
+        <argsstring></argsstring>
+        <name>m_testsRun</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="106" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1ac2a4d6b195179e70ca00267af1e6a593" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TestRunnerDlg::m_errors</definition>
+        <argsstring></argsstring>
+        <name>m_errors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="107" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1a3a8203958756107cc72ac26c810418ec" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TestRunnerDlg::m_failures</definition>
+        <argsstring></argsstring>
+        <name>m_failures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="108" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1a47a2f4c82f52235b432b003833bccb2e" prot="protected" static="no" mutable="no">
+        <type>DWORD</type>
+        <definition>DWORD TestRunnerDlg::m_testStartTime</definition>
+        <argsstring></argsstring>
+        <name>m_testStartTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="109" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1a099ba53f2e76b5e92f156ee11f471b52" prot="protected" static="no" mutable="no">
+        <type>DWORD</type>
+        <definition>DWORD TestRunnerDlg::m_testEndTime</definition>
+        <argsstring></argsstring>
+        <name>m_testEndTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="110" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1a2fc6368672be3e86609b089554f1473e" prot="protected" static="no" mutable="no">
+        <type>HACCEL</type>
+        <definition>HACCEL TestRunnerDlg::m_hAccelerator</definition>
+        <argsstring></argsstring>
+        <name>m_hAccelerator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="112" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1a24285b85522ba6137232e2cb8618677b" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TestRunnerDlg::m_bIsRunning</definition>
+        <argsstring></argsstring>
+        <name>m_bIsRunning</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="113" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1ac5be804f9ee1d0e259d1b701a4ea70ed" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_test_runner_model" kindref="compound">TestRunnerModel</ref> *</type>
+        <definition>TestRunnerModel* TestRunnerDlg::m_model</definition>
+        <argsstring></argsstring>
+        <name>m_model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="114" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1af00ad458fae2cdab2a938ec14149c35c" prot="protected" static="no" mutable="no">
+        <type>CImageList</type>
+        <definition>CImageList TestRunnerDlg::m_errorListBitmap</definition>
+        <argsstring></argsstring>
+        <name>m_errorListBitmap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="115" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1a1debd490530748ce4cd5bb8f32b5e6eb" prot="protected" static="no" mutable="no">
+        <type>CFont</type>
+        <definition>CFont TestRunnerDlg::m_fixedSizeFont</definition>
+        <argsstring></argsstring>
+        <name>m_fixedSizeFont</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="116" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_test_runner_dlg_1afab22b13b42942a71616936ac4243a0b" prot="protected" static="yes" mutable="no">
+        <type>const CString</type>
+        <definition>const CString TestRunnerDlg::ms_cppunitKey</definition>
+        <argsstring></argsstring>
+        <name>ms_cppunitKey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="111" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_test_runner_dlg_1a6177261707deafe78cdc8108cc0c9964" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_test_runner_model_1_1_settings" kindref="compound">TestRunnerModel::Settings</ref></type>
+        <definition>TestRunnerModel::Settings TestRunnerDlg::m_settings</definition>
+        <argsstring></argsstring>
+        <name>m_settings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="159" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1af445fc530658a6d174b51a16f0230900" prot="private" static="no" mutable="no">
+        <type><ref refid="class_test_runner_model" kindref="compound">TestRunnerModel</ref> *</type>
+        <definition>TestRunnerModel* TestRunnerDlg::_model</definition>
+        <argsstring></argsstring>
+        <name>_model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" line="54" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_runner_dlg_1a05d95e6dd4243a952dc7a5b36ac26918" prot="private" static="no" mutable="no">
+        <type><ref refid="class_most_recent_tests" kindref="compound">MostRecentTests</ref> *</type>
+        <definition>MostRecentTests* TestRunnerDlg::_recentTests</definition>
+        <argsstring></argsstring>
+        <name>_recentTests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" line="55" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_test_runner_dlg_1a1c8ff5e8f47eb011d3363666722de4d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TestRunnerDlg::TestRunnerDlg</definition>
+        <argsstring>(TestRunnerModel *model, int nDialogResourceId, CWnd *pParent=NULL)</argsstring>
+        <name>TestRunnerDlg</name>
+        <param>
+          <type><ref refid="class_test_runner_model" kindref="compound">TestRunnerModel</ref> *</type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nDialogResourceId</declname>
+        </param>
+        <param>
+          <type>CWnd *</type>
+          <declname>pParent</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="53" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="38" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a4992fbb58cba779cb5e612de98bab7da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TestRunnerDlg::TestRunnerDlg</definition>
+        <argsstring>(TestRunnerModel *model, const TCHAR *szDialogResourceId=NULL, CWnd *pParent=NULL)</argsstring>
+        <name>TestRunnerDlg</name>
+        <param>
+          <type><ref refid="class_test_runner_model" kindref="compound">TestRunnerModel</ref> *</type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type>const TCHAR *</type>
+          <declname>szDialogResourceId</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>CWnd *</type>
+          <declname>pParent</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="56" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="48" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a13e1e9a4db9361c70b4e0ad866e3577a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>TestRunnerDlg::‾TestRunnerDlg</definition>
+        <argsstring>()</argsstring>
+        <name>‾TestRunnerDlg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="59" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="177" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a242540817497d352f0932f2895c7e43e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::startTest</definition>
+        <argsstring>(::Test *test)</argsstring>
+        <name>startTest</name>
+        <param>
+          <type>::Test *</type>
+          <declname>test</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="62" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="270" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a1ff1cba1544d51d2f5cd53ea9fd8786e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::addFailure</definition>
+        <argsstring>(const ::TestFailure &amp;failure)</argsstring>
+        <name>addFailure</name>
+        <param>
+          <type>const ::TestFailure &amp;</type>
+          <declname>failure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="63" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="279" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a29a8fb178cf1ee9f4a1ed75db7567e26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::endTest</definition>
+        <argsstring>(::Test *test)</argsstring>
+        <name>endTest</name>
+        <param>
+          <type>::Test *</type>
+          <declname>test</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="64" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="292" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a31a999095d8f5a937b6ca29ea3b08882" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>BOOL</type>
+        <definition>BOOL TestRunnerDlg::PreTranslateMessage</definition>
+        <argsstring>(MSG *pMsg)</argsstring>
+        <name>PreTranslateMessage</name>
+        <param>
+          <type>MSG *</type>
+          <declname>pMsg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="79" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="492" bodyend="501"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a9e835da8039c2de9b53fa28e9de7e0db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TestRunnerDlg::TestRunnerDlg</definition>
+        <argsstring>(QWidget *parent=0, const char *name=0, bool modal=FALSE, WFlags fl=0)</argsstring>
+        <name>TestRunnerDlg</name>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>modal</declname>
+          <defval>FALSE</defval>
+        </param>
+        <param>
+          <type>WFlags</type>
+          <declname>fl</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" line="16" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.cpp" bodystart="23" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a13e1e9a4db9361c70b4e0ad866e3577a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TestRunnerDlg::‾TestRunnerDlg</definition>
+        <argsstring>()</argsstring>
+        <name>‾TestRunnerDlg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" line="20" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1ae0f14a1822b53bfe9d3de531d78f777d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::setModel</definition>
+        <argsstring>(TestRunnerModel *model, bool autorunTest)</argsstring>
+        <name>setModel</name>
+        <param>
+          <type><ref refid="class_test_runner_model" kindref="compound">TestRunnerModel</ref> *</type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>autorunTest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" line="22" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.cpp" bodystart="42" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_test_runner_dlg_1a7fb999c970c8355dd5d4c20c1d012e81" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::DoDataExchange</definition>
+        <argsstring>(CDataExchange *pDX)</argsstring>
+        <name>DoDataExchange</name>
+        <reimplementedby refid="class_test_plug_in_runner_dlg_1a28bc2a077d503ec6886a205bdc4e3239">DoDataExchange</reimplementedby>
+        <param>
+          <type>CDataExchange *</type>
+          <declname>pDX</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="81" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="80" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a8d94121ccc2f479b1a41a9724d9e1423" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>BOOL</type>
+        <definition>BOOL TestRunnerDlg::OnInitDialog</definition>
+        <argsstring>()</argsstring>
+        <name>OnInitDialog</name>
+        <reimplements refid="classcdx_c_dynamic_dialog_1a30717db3da910f64e258488d4b6abd82">OnInitDialog</reimplements>
+        <reimplementedby refid="class_test_plug_in_runner_dlg_1aa771d57c85e84241553c53601af48877">OnInitDialog</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="87" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="112" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a30b8c255bb218a590f31ad65fd2cf787" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg void</type>
+        <definition>void TestRunnerDlg::OnRun</definition>
+        <argsstring>()</argsstring>
+        <name>OnRun</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="88" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="185" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1aabda8c67f88fcd3d3294f7fc430fd915" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg void</type>
+        <definition>void TestRunnerDlg::OnStop</definition>
+        <argsstring>()</argsstring>
+        <name>OnStop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="89" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="407" bodyend="413"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1ab327ef57751c085b242a9db60f071ec1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::OnOK</definition>
+        <argsstring>()</argsstring>
+        <name>OnOK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="90" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="417" bodyend="426"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a664e3fffecbd1a4350a151680cdb078f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg void</type>
+        <definition>void TestRunnerDlg::OnBrowseTest</definition>
+        <argsstring>()</argsstring>
+        <name>OnBrowseTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="91" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="479" bodyend="488"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a76022a09defeb98fb4c91af6fcbb0b1e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg void</type>
+        <definition>void TestRunnerDlg::OnQuitApplication</definition>
+        <argsstring>()</argsstring>
+        <name>OnQuitApplication</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="92" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="542" bodyend="553"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a79a7758e0876423f82e1a9fa21cc4a5f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg void</type>
+        <definition>void TestRunnerDlg::OnClose</definition>
+        <argsstring>()</argsstring>
+        <name>OnClose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="93" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="565" bodyend="568"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a75dad8882711c8e2798517624eb572c1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg void</type>
+        <definition>void TestRunnerDlg::OnSize</definition>
+        <argsstring>(UINT nType, int cx, int cy)</argsstring>
+        <name>OnSize</name>
+        <param>
+          <type>UINT</type>
+          <declname>nType</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="94" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="618" bodyend="622"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a2801d6dab02d16e841517dc93a3d17e6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg void</type>
+        <definition>void TestRunnerDlg::OnSelectedFailureChange</definition>
+        <argsstring>(NMHDR *pNMHDR, LRESULT *pResult)</argsstring>
+        <name>OnSelectedFailureChange</name>
+        <param>
+          <type>NMHDR *</type>
+          <declname>pNMHDR</declname>
+        </param>
+        <param>
+          <type>LRESULT *</type>
+          <declname>pResult</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="95" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="644" bodyend="653"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a510b1c037d91ad24bf6e1a9dc4251eff" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>afx_msg void</type>
+        <definition>void TestRunnerDlg::OnSelectTestInHistoryCombo</definition>
+        <argsstring>()</argsstring>
+        <name>OnSelectTestInHistoryCombo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="96" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="430" bodyend="444"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a7d6c545b09cfb5a04b1f7e76228f10df" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::addListEntry</definition>
+        <argsstring>(const ::TestFailure &amp;failure)</argsstring>
+        <name>addListEntry</name>
+        <param>
+          <type>const ::TestFailure &amp;</type>
+          <declname>failure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="124" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="220" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a3eec0d7bf685d10c7f9750a69bae2c0c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::beIdle</definition>
+        <argsstring>()</argsstring>
+        <name>beIdle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="125" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="324" bodyend="333"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a84a48f468a333488a22cb0c0c67269d7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::beRunning</definition>
+        <argsstring>()</argsstring>
+        <name>beRunning</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="126" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="311" bodyend="320"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a8d99591468acea3cb3117499833019d8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::beRunDisabled</definition>
+        <argsstring>()</argsstring>
+        <name>beRunDisabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="127" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="337" bodyend="347"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a4e8fb39fbbe24c81b3c7d8c3409acb2b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="128" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="363" bodyend="378"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a7ebd752eb34a84b79e883de00e4a8cfb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::freeState</definition>
+        <argsstring>()</argsstring>
+        <name>freeState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="129" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="351" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a1d28474f28291d2b0c08ecbb68d27271" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::updateCountsDisplay</definition>
+        <argsstring>()</argsstring>
+        <name>updateCountsDisplay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="130" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="382" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a08fdb113e4ff8f90d9844ffe6193a107" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::setupHistoryCombo</definition>
+        <argsstring>()</argsstring>
+        <name>setupHistoryCombo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="131" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a54807113449d7c20bb1446abca61979a" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>::Test *</type>
+        <definition>::Test* TestRunnerDlg::findTestByName</definition>
+        <argsstring>(::string name) const </argsstring>
+        <name>findTestByName</name>
+        <param>
+          <type>::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="132" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1afdaaab6227e66371db1ac82d87bb9ab4" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>::Test *</type>
+        <definition>::Test* TestRunnerDlg::findTestByNameFor</definition>
+        <argsstring>(const ::string &amp;name,::Test *test) const </argsstring>
+        <name>findTestByNameFor</name>
+        <param>
+          <type>const ::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>::Test *</type>
+          <declname>test</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="133" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a3fdb8ba53d886a4612a8e27cabb767a4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::addNewTestToHistory</definition>
+        <argsstring>(::Test *test)</argsstring>
+        <name>addNewTestToHistory</name>
+        <param>
+          <type>::Test *</type>
+          <declname>test</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="135" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a30b4da8ce5aa908630d5cc3fd94d6efd" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::addTestToHistoryCombo</definition>
+        <argsstring>(::Test *test, int idx=-1)</argsstring>
+        <name>addTestToHistoryCombo</name>
+        <param>
+          <type>::Test *</type>
+          <declname>test</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="136" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a79d31e391a61b8303e23825cc07171d1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::removeTestFromHistory</definition>
+        <argsstring>(::Test *test)</argsstring>
+        <name>removeTestFromHistory</name>
+        <param>
+          <type>::Test *</type>
+          <declname>test</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="138" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a9e5bbaf58b3bfeb71161898d8d0dbf4b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>CComboBox *</type>
+        <definition>CComboBox * TestRunnerDlg::getHistoryCombo</definition>
+        <argsstring>()</argsstring>
+        <name>getHistoryCombo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="139" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="505" bodyend="510"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a7d4d47123dddf4c6ed48f66aea982876" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::updateSelectedItem</definition>
+        <argsstring>()</argsstring>
+        <name>updateSelectedItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="140" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a5e3e18332d017164cb1967fb1883349d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::saveHistory</definition>
+        <argsstring>()</argsstring>
+        <name>saveHistory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="141" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a469839f3ad0e96bccced378ba71585be" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::loadSettings</definition>
+        <argsstring>()</argsstring>
+        <name>loadSettings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="142" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="514" bodyend="522"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a3ce3646fc3ac88cebc7f3aab637e4656" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::saveSettings</definition>
+        <argsstring>()</argsstring>
+        <name>saveSettings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="143" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="526" bodyend="538"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a6e1fbdb43053d7b831bd996dc4de0ad0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_test_runner_model" kindref="compound">TestRunnerModel</ref> &amp;</type>
+        <definition>TestRunnerModel &amp; TestRunnerDlg::model</definition>
+        <argsstring>()</argsstring>
+        <name>model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="144" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="557" bodyend="561"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a3150bbfc508ab4654ccba13cd57ae653" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::updateHistoryCombo</definition>
+        <argsstring>()</argsstring>
+        <name>updateHistoryCombo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="145" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="448" bodyend="475"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1ab0334c9551dbaea9364b8219ef807256" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::displayFailureDetailsFor</definition>
+        <argsstring>(unsigned int failureIndex)</argsstring>
+        <name>displayFailureDetailsFor</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>failureIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="146" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="657" bodyend="666"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a6a37bdbdf685aa2de98ecc5969824d53" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>CRect</type>
+        <definition>CRect TestRunnerDlg::getItemWindowRect</definition>
+        <argsstring>(unsigned int itemId)</argsstring>
+        <name>getItemWindowRect</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>itemId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="148" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="572" bodyend="579"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a60dc05c4c2593e6dbcd49974b49f1671" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>CRect</type>
+        <definition>CRect TestRunnerDlg::getItemClientRect</definition>
+        <argsstring>(unsigned int itemId)</argsstring>
+        <name>getItemClientRect</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>itemId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="149" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="583" bodyend="594"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a051bdb46dd8714ae6b69523fc7697c5e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::initializeLayout</definition>
+        <argsstring>()</argsstring>
+        <name>initializeLayout</name>
+        <reimplementedby refid="class_test_plug_in_runner_dlg_1a9c0c0433fc73c5b1330d487ca590b747">initializeLayout</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="153" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="598" bodyend="614"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a432d37b8852bf526091b0c01bb9a8974" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::updateListColumnSize</definition>
+        <argsstring>()</argsstring>
+        <name>updateListColumnSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="154" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="626" bodyend="640"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_runner_dlg_1a71a54fb9ecd80269013e386b3cda69ea" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::initializeFixedSizeFont</definition>
+        <argsstring>()</argsstring>
+        <name>initializeFixedSizeFont</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="155" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="670" bodyend="677"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_test_runner_dlg_1adceb7cb667725b457d4bdd3c52c45975" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::init</definition>
+        <argsstring>(TestRunnerModel *model)</argsstring>
+        <name>init</name>
+        <param>
+          <type><ref refid="class_test_runner_model" kindref="compound">TestRunnerModel</ref> *</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>do all initialization, that is usually done in the constructor, so that the code is not duplicated in the two constructors </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="163" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.cpp" bodystart="60" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="class_test_runner_dlg_1a9edd138dc4a89c06a042ba8b3576da1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::refreshRecentTests</definition>
+        <argsstring>()</argsstring>
+        <name>refreshRecentTests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" line="26" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.cpp" bodystart="149" bodyend="154"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-slot">
+      <memberdef kind="slot" id="class_test_runner_dlg_1ad9a8bd003fee37a6d731a857763fd991" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::browseForTest</definition>
+        <argsstring>()</argsstring>
+        <name>browseForTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" line="29" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.cpp" bodystart="108" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_test_runner_dlg_1a7ea8bea3d292a30b83c3857e4db715b7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::runTest</definition>
+        <argsstring>()</argsstring>
+        <name>runTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" line="30" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.cpp" bodystart="123" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_test_runner_dlg_1aa1203e183b37f2a57181cc960e7a25cf" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::stopTest</definition>
+        <argsstring>()</argsstring>
+        <name>stopTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" line="31" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.cpp" bodystart="133" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_test_runner_dlg_1a1d8408ec6ced68723a609e196809c2fd" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::setNumberOfTestCase</definition>
+        <argsstring>(int numberOfTestCase)</argsstring>
+        <name>setNumberOfTestCase</name>
+        <param>
+          <type>int</type>
+          <declname>numberOfTestCase</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" line="32" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.cpp" bodystart="158" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_test_runner_dlg_1a4208d7b5f238b04fe9531b47cf119b1a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::setNumberOfTestCaseRun</definition>
+        <argsstring>(int numberOfRun)</argsstring>
+        <name>setNumberOfTestCaseRun</name>
+        <param>
+          <type>int</type>
+          <declname>numberOfRun</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" line="33" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.cpp" bodystart="165" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_test_runner_dlg_1ac87ebced746acc945d713e25d40772e7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::setNumberOfTestCaseFailure</definition>
+        <argsstring>(int numberOfFailure)</argsstring>
+        <name>setNumberOfTestCaseFailure</name>
+        <param>
+          <type>int</type>
+          <declname>numberOfFailure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" line="34" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.cpp" bodystart="172" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_test_runner_dlg_1a0d1b7363badd407de9121d30c4dc33eb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::clearTestFailureList</definition>
+        <argsstring>()</argsstring>
+        <name>clearTestFailureList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" line="35" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.cpp" bodystart="142" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_test_runner_dlg_1a8163e5064f6d5d88ae8dbf5ce42a31e6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::clearFailureDetail</definition>
+        <argsstring>()</argsstring>
+        <name>clearFailureDetail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" line="36" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.cpp" bodystart="223" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_test_runner_dlg_1a04c81c7bb178f3833f8ec8ec7ebd009e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::reportFailure</definition>
+        <argsstring>(TestFailureInfo *failure)</argsstring>
+        <name>reportFailure</name>
+        <param>
+          <type><ref refid="class_test_failure_info" kindref="compound">TestFailureInfo</ref> *</type>
+          <declname>failure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" line="37" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.cpp" bodystart="179" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_test_runner_dlg_1a3b81b4fcb6473fa8149a1eab098a6b69" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::showFailureDetailAt</definition>
+        <argsstring>(QListViewItem *selection)</argsstring>
+        <name>showFailureDetailAt</name>
+        <param>
+          <type>QListViewItem *</type>
+          <declname>selection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" line="38" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.cpp" bodystart="204" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_test_runner_dlg_1a506b0524469ba974448529905572d605" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::beCanRunTest</definition>
+        <argsstring>()</argsstring>
+        <name>beCanRunTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" line="39" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.cpp" bodystart="232" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_test_runner_dlg_1a8361a583091016ced9905a6b61110419" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::beRunningTest</definition>
+        <argsstring>()</argsstring>
+        <name>beRunningTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" line="40" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.cpp" bodystart="244" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_test_runner_dlg_1aeab3964041ac425ecb8d5c3283c9f67f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestRunnerDlg::beStoppingTest</definition>
+        <argsstring>()</argsstring>
+        <name>beStoppingTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.h" line="41" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/qttestrunner/TestRunnerDlgImpl.cpp" bodystart="256" bodyend="260"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="308">
+        <label>TestRunnerDlg</label>
+        <link refid="class_test_runner_dlg"/>
+        <childnode refid="309" relation="public-inheritance">
+        </childnode>
+        <childnode refid="310" relation="public-inheritance">
+        </childnode>
+        <childnode refid="314" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="310">
+        <label>cdxCDynamicDialog</label>
+        <link refid="classcdx_c_dynamic_dialog"/>
+        <childnode refid="311" relation="public-inheritance">
+        </childnode>
+        <childnode refid="312" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="314">
+        <label>TestListener</label>
+      </node>
+      <node id="309">
+        <label>TestRunnerDlgBase</label>
+      </node>
+      <node id="312">
+        <label>cdxCDynamicWndEx</label>
+        <link refid="classcdx_c_dynamic_wnd_ex"/>
+        <childnode refid="313" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="313">
+        <label>cdxCDynamicWnd</label>
+        <link refid="classcdx_c_dynamic_wnd"/>
+      </node>
+      <node id="311">
+        <label>CDialog</label>
+      </node>
+      <node id="315">
+        <label>TestPlugInRunnerDlg</label>
+        <link refid="class_test_plug_in_runner_dlg"/>
+        <childnode refid="308" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="324">
+        <label>QObject</label>
+      </node>
+      <node id="316">
+        <label>TestRunnerDlg</label>
+        <link refid="class_test_runner_dlg"/>
+        <childnode refid="317" relation="public-inheritance">
+        </childnode>
+        <childnode refid="318" relation="public-inheritance">
+        </childnode>
+        <childnode refid="322" relation="public-inheritance">
+        </childnode>
+        <childnode refid="323" relation="usage">
+          <edgelabel>m_model</edgelabel>
+        </childnode>
+        <childnode refid="326" relation="usage">
+          <edgelabel>m_testsProgress</edgelabel>
+        </childnode>
+        <childnode refid="328" relation="usage">
+          <edgelabel>m_listCtrl</edgelabel>
+        </childnode>
+        <childnode refid="330" relation="usage">
+          <edgelabel>m_activeTest</edgelabel>
+        </childnode>
+      </node>
+      <node id="318">
+        <label>cdxCDynamicDialog</label>
+        <link refid="classcdx_c_dynamic_dialog"/>
+        <childnode refid="319" relation="public-inheritance">
+        </childnode>
+        <childnode refid="320" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="326">
+        <label>ProgressBar</label>
+        <link refid="class_progress_bar"/>
+        <childnode refid="327" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="328">
+        <label>MsDevCallerListCtrl</label>
+        <link refid="class_ms_dev_caller_list_ctrl"/>
+        <childnode refid="329" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="322">
+        <label>TestListener</label>
+      </node>
+      <node id="330">
+        <label>ActiveTest</label>
+        <link refid="class_active_test"/>
+        <childnode refid="331" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="323">
+        <label>TestRunnerModel</label>
+        <link refid="class_test_runner_model"/>
+        <childnode refid="324" relation="public-inheritance">
+        </childnode>
+        <childnode refid="322" relation="private-inheritance">
+        </childnode>
+        <childnode refid="325" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="329">
+        <label>CListCtrl</label>
+      </node>
+      <node id="317">
+        <label>TestRunnerDlgBase</label>
+      </node>
+      <node id="320">
+        <label>cdxCDynamicWndEx</label>
+        <link refid="classcdx_c_dynamic_wnd_ex"/>
+        <childnode refid="321" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="321">
+        <label>cdxCDynamicWnd</label>
+        <link refid="classcdx_c_dynamic_wnd"/>
+      </node>
+      <node id="319">
+        <label>CDialog</label>
+      </node>
+      <node id="331">
+        <label>TestDecorator</label>
+      </node>
+      <node id="327">
+        <label>CWnd</label>
+      </node>
+      <node id="325">
+        <label>TestRunnerModelThreadInterface</label>
+        <link refid="class_test_runner_model_thread_interface"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" line="51" column="1" bodyfile="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/TestRunnerDlg.h" bodystart="49" bodyend="164"/>
+    <listofallmembers>
+      <member refid="classcdx_c_dynamic_wnd_1a8cb440b70f58c7d7bf44860e4ea5e24baa14ee2438f2d5240d817405e3ab41b14" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>__bytes</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a8cb440b70f58c7d7bf44860e4ea5e24b" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>__dynEntryType</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a8cb440b70f58c7d7bf44860e4ea5e24baea61688347aeb8720a4d703403716ee4" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>__end</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a9696427151275459e615e611479ff767" prot="protected" virt="virtual"><scope>TestRunnerDlg</scope><name>__getDynMap</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a8cb440b70f58c7d7bf44860e4ea5e24ba6a8d0d8bc8df7d960dc26be7d16eaf04" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>__modes</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a209cd190df6079d1df9d6d471625fd37a1009da08a89114d3152e7461f595ee06" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>_fl_freeuse_</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a209cd190df6079d1df9d6d471625fd37a26cfb1773db5ed1bfa251627fc497a63" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>_fl_reserved_</name></member>
+      <member refid="class_test_runner_dlg_1af445fc530658a6d174b51a16f0230900" prot="private" virt="non-virtual"><scope>TestRunnerDlg</scope><name>_model</name></member>
+      <member refid="class_test_runner_dlg_1a05d95e6dd4243a952dc7a5b36ac26918" prot="private" virt="non-virtual"><scope>TestRunnerDlg</scope><name>_recentTests</name></member>
+      <member refid="classcdx_c_dynamic_wnd_ex_1ae2ddd894f84f71e8058314552401c77d" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>ActivateAutoPos</name></member>
+      <member refid="classcdx_c_dynamic_wnd_ex_1a1d0573ada96d4056e8e4cfa97f95daf4" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>ActivateAutoPos</name></member>
+      <member refid="class_test_runner_dlg_1a1ff1cba1544d51d2f5cd53ea9fd8786e" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>addFailure</name></member>
+      <member refid="class_test_runner_dlg_1a7d6c545b09cfb5a04b1f7e76228f10df" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>addListEntry</name></member>
+      <member refid="class_test_runner_dlg_1a3fdb8ba53d886a4612a8e27cabb767a4" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>addNewTestToHistory</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aab501afa53878046aa6e669156000453" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>AddSzControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a8bb690a2e0aa26e0b7f9fc86122fe18d" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>AddSzControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a2e5efce36fb39f4091397c74d510af79" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>AddSzControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a4810e665431d0d6b7c8edc443c263878" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>AddSzControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a53d1388d7831bc1ff243be446bd9de34" prot="public" virt="virtual"><scope>TestRunnerDlg</scope><name>AddSzControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a39d64b93d42abc51c6fe0fd81c8f846a" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>AddSzControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a4f13901923cfc534e6a831eaedfb4bb5" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>AddSzControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1af4d12231ea6c63cd1151ac89808b6472" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>AddSzControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1ae2ba6440bf459b4baffbca0b9d3d5136" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>AddSzControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a3a16b4e5a7341ec13c843478e5bf3195" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>AddSzControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a0c115b5a4edc04fae7f17e62ab39a794" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>AddSzXControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a6babf8fca527abb78e55f4469bbacd34" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>AddSzXControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a63521884773cdfeeaa56b905e91c8465" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>AddSzXControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a3965768809f11c35d988494360825423" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>AddSzXControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a6a068413bfbfbc94401ea13855b2f5f5" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>AddSzYControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a74e23b6d05c0b0d8d57e8923bfdf239f" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>AddSzYControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a31440ac2c8907ad76eaaf99ea0d58866" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>AddSzYControl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aac5636d646d40d15f06b28b1699dfed8" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>AddSzYControl</name></member>
+      <member refid="class_test_runner_dlg_1a30b4da8ce5aa908630d5cc3fd94d6efd" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>addTestToHistoryCombo</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a643e0aa33fe77df2cc35136c7f158244" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>AllControls</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a171830f5fc94e6caf1e446e6e0f64881" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>AllControls</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a4898a33234ff3067f432aca8785a328d" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>AllControls</name></member>
+      <member refid="class_test_runner_dlg_1a506b0524469ba974448529905572d605" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>beCanRunTest</name></member>
+      <member refid="class_test_runner_dlg_1a3eec0d7bf685d10c7f9750a69bae2c0c" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>beIdle</name></member>
+      <member refid="class_test_runner_dlg_1a8d99591468acea3cb3117499833019d8" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>beRunDisabled</name></member>
+      <member refid="class_test_runner_dlg_1a84a48f468a333488a22cb0c0c67269d7" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>beRunning</name></member>
+      <member refid="class_test_runner_dlg_1a8361a583091016ced9905a6b61110419" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>beRunningTest</name></member>
+      <member refid="class_test_runner_dlg_1aeab3964041ac425ecb8d5c3283c9f67f" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>beStoppingTest</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1afbccd30af1112326f5a9a8891f7b687a" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>BotLeft</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a115797b56f0521394d0c4845d045e3f7" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>BotRight</name></member>
+      <member refid="class_test_runner_dlg_1ad9a8bd003fee37a6d731a857763fd991" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>browseForTest</name></member>
+      <member refid="classcdx_c_dynamic_dialog_1a01e7d28f3e79982b13dfee1353325439" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>cdxCDynamicDialog</name></member>
+      <member refid="classcdx_c_dynamic_dialog_1ac45fd71136e56780cd6e80f31fb6c2db" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>cdxCDynamicDialog</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a0f495c0a7a0386caeb3bd794a12c2cdd" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>cdxCDynamicWnd</name></member>
+      <member refid="classcdx_c_dynamic_wnd_ex_1a4f8b3c91430e9c86adfac2755b02932a" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>cdxCDynamicWndEx</name></member>
+      <member refid="class_test_runner_dlg_1a8163e5064f6d5d88ae8dbf5ce42a31e6" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>clearFailureDetail</name></member>
+      <member refid="class_test_runner_dlg_1a0d1b7363badd407de9121d30c4dc33eb" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>clearTestFailureList</name></member>
+      <member refid="class_test_runner_dlg_1a50285dd4e8af732cc42e9203060cdc85" prot="private" virt="non-virtual"><scope>TestRunnerDlg</scope><name>Columns</name></member>
+      <member refid="classcdx_c_dynamic_dialog_1a3e8f71847aa7bbe19233ebf285549906" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>DECLARE_MESSAGE_MAP</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1af23eb9763fa6dedb458e5cdaa3e1386ca87f5f41ad6344bc93e2289bd781057ca" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>DEFAULT_TIMER_ID</name></member>
+      <member refid="classcdx_c_dynamic_dialog_1a39e06619fffd1716b3cff5183264259c" prot="public" virt="virtual"><scope>TestRunnerDlg</scope><name>DestroyWindow</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1acc189b0c834b68a5236eb75eff03ece0" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>Disable</name></member>
+      <member refid="class_test_runner_dlg_1ab0334c9551dbaea9364b8219ef807256" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>displayFailureDetailsFor</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a374e0021789552da4760212c8c73c91b" prot="protected" virt="virtual"><scope>TestRunnerDlg</scope><name>DoCreateLayoutInfo</name></member>
+      <member refid="class_test_runner_dlg_1a7fb999c970c8355dd5d4c20c1d012e81" prot="protected" virt="virtual"><scope>TestRunnerDlg</scope><name>DoDataExchange</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1ab7b1c0521d0c97cad286b5e02561915c" prot="protected" virt="virtual"><scope>TestRunnerDlg</scope><name>DoDestroyCtrl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1ae09c493eb2cea0ea929d1fc78fe05572" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>DoInitWindow</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aa11379c24ea89e9b89d6591a132ef626" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>DoInitWindow</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1acd13ca5d1e2ecc4f7b2876d4e4a43abd" prot="protected" virt="virtual"><scope>TestRunnerDlg</scope><name>DoMoveCtrl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aeeb4fe858b3857d9a86ad2bd4dd407b9" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>DoOnDestroy</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a926a4d342335bd47de50cbee6bfc2cd6" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>DoOnGetMinMaxInfo</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a1bebb6d2cd1a2bc825d98bc2ef724791" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>DoOnParentNotify</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a541e25f36db561daee7bb2b9f6dd5490" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>DoOnSize</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1af0371cc499541f0dfb5ef85896fc41c6" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>DoOnSizing</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a0e0fa2b4821e8cc01d6dbf7351668254" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>DoOnTimer</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a2dcadbccbe1949355aaa591cb7851db3" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>Enable</name></member>
+      <member refid="class_test_runner_dlg_1a29a8fb178cf1ee9f4a1ed75db7567e26" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>endTest</name></member>
+      <member refid="class_test_runner_dlg_1aebdb967f6046a75dccc9dcf83a5acd01" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>ErrorTypeBitmaps</name></member>
+      <member refid="class_test_runner_dlg_1aebdb967f6046a75dccc9dcf83a5acd01ab48db16c442f075e9e08db8f761f51ab" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>errorTypeError</name></member>
+      <member refid="class_test_runner_dlg_1aebdb967f6046a75dccc9dcf83a5acd01a33fd747dec4c251c0becd05851e25462" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>errorTypeFailure</name></member>
+      <member refid="classcdx_c_dynamic_wnd_ex_1a5974e89c90e8dc066ff38413a162b8a3" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>ExFlags</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523a047c9f61ce107a24a32982c0cd4f64c6" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>fdAll</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523a446647e558e2b2b2b8406725bf73acf0" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>fdHoriz</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523a068a709f5c5afe1f3d1b2d5bec20770d" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>fdHorz</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523ab87a000bd5b35d19177e58e7eeb2d373" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>fdNone</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523aea6a28ab13873a68a3471972adf1c138" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>fdVert</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523a64f6ce145c4107e1dfba9790e04a6dda" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>fdX</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523a2bc7b3d8a9d922a28fc37f32d14e11e2" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>fdY</name></member>
+      <member refid="class_test_runner_dlg_1a54807113449d7c20bb1446abca61979a" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>findTestByName</name></member>
+      <member refid="class_test_runner_dlg_1afdaaab6227e66371db1ac82d87bb9ab4" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>findTestByNameFor</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a209cd190df6079d1df9d6d471625fd37" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>Flags</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a209cd190df6079d1df9d6d471625fd37a3a484e61f57772086c6a5b0374e8417b" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>flAntiFlicker</name></member>
+      <member refid="classcdx_c_dynamic_wnd_ex_1a5974e89c90e8dc066ff38413a162b8a3ad7a0586d126f94eed0a54aa6b7264278" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>flAutoPos</name></member>
+      <member refid="classcdx_c_dynamic_dialog_1a933e9cb5c2cc8e18df20fbecea3e7e88a93ade8fcf87f7ea0f131748410216fab" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>flDefault</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a209cd190df6079d1df9d6d471625fd37afca2f061d84afe1937a1ee07d50fecb6" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>flSizeIcon</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a209cd190df6079d1df9d6d471625fd37a86c8c0531b8f31da081f9703a9d3230a" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>flSWPCopyBits</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aa85afbebbe1e1d4bd91738e38ad7a523" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>Freedom</name></member>
+      <member refid="class_test_runner_dlg_1a7ebd752eb34a84b79e883de00e4a8cfb" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>freeState</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1afba9bc280dc4d2d5113c43117c2b8bdf" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>GetBorderSize</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a51532e50b61af233c180660cac383653" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>GetControlPosition</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a87a885941634470e482f0a1f5a9a054c" prot="public" virt="virtual"><scope>TestRunnerDlg</scope><name>GetCtrlCount</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1acec8627cfedd0903f889915b9000b4f6" prot="public" virt="virtual"><scope>TestRunnerDlg</scope><name>GetCurrentClientSize</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1ac269ff1d3bf900884e5ad0dd00bc0918" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>GetFlags</name></member>
+      <member refid="class_test_runner_dlg_1a9e5bbaf58b3bfeb71161898d8d0dbf4b" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>getHistoryCombo</name></member>
+      <member refid="class_test_runner_dlg_1a60dc05c4c2593e6dbcd49974b49f1671" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>getItemClientRect</name></member>
+      <member refid="class_test_runner_dlg_1a6a37bdbdf685aa2de98ecc5969824d53" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>getItemWindowRect</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1ae160b85235d5dc030b796a4643c7f829" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>GetSafeChildHWND</name></member>
+      <member refid="class_test_runner_dlg_1a50285dd4e8af732cc42e9203060cdc85a8aa9bb436064fe6f816796192f47a314" prot="private" virt="non-virtual"><scope>TestRunnerDlg</scope><name>indexFilename</name></member>
+      <member refid="class_test_runner_dlg_1a50285dd4e8af732cc42e9203060cdc85ada60a2ddb3ff07116da75d230ae59cea" prot="private" virt="non-virtual"><scope>TestRunnerDlg</scope><name>indexLineNumber</name></member>
+      <member refid="class_test_runner_dlg_1a50285dd4e8af732cc42e9203060cdc85aaef0546630dc9ca7eae617f62b0e5117" prot="private" virt="non-virtual"><scope>TestRunnerDlg</scope><name>indexMessage</name></member>
+      <member refid="class_test_runner_dlg_1a50285dd4e8af732cc42e9203060cdc85a5fef8dd751b5c9050d06a291b9365f40" prot="private" virt="non-virtual"><scope>TestRunnerDlg</scope><name>indexTestName</name></member>
+      <member refid="class_test_runner_dlg_1a50285dd4e8af732cc42e9203060cdc85a60412651e6c435986a388dc441d05254" prot="private" virt="non-virtual"><scope>TestRunnerDlg</scope><name>indexType</name></member>
+      <member refid="class_test_runner_dlg_1adceb7cb667725b457d4bdd3c52c45975" prot="private" virt="non-virtual"><scope>TestRunnerDlg</scope><name>init</name></member>
+      <member refid="class_test_runner_dlg_1a71a54fb9ecd80269013e386b3cda69ea" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>initializeFixedSizeFont</name></member>
+      <member refid="class_test_runner_dlg_1a051bdb46dd8714ae6b69523fc7697c5e" prot="protected" virt="virtual"><scope>TestRunnerDlg</scope><name>initializeLayout</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aecef8119146c6d907b405b52d636d2ac" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>IsDisabled</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1af3718c00a67d24cc37022aa3be49728b" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>IsUp</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1acca8cafe3f58a45d0c39f87fc7375e3a" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>IsValid</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aff6e5b3178956b7d7c8336cdea6e444c" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>IsWindow</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a3f84b2f5c8d84c1b5ec66c8aaa983a60" prot="public" virt="virtual"><scope>TestRunnerDlg</scope><name>Layout</name></member>
+      <member refid="class_test_runner_dlg_1a469839f3ad0e96bccced378ba71585be" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>loadSettings</name></member>
+      <member refid="class_test_runner_dlg_1a239d4e3df5ba406db3d2c973f7860b23" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_activeTest</name></member>
+      <member refid="class_test_runner_dlg_1a697061c28015226cb67a94a6804e3b8e" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_bAutorunAtStartup</name></member>
+      <member refid="class_test_runner_dlg_1a24285b85522ba6137232e2cb8618677b" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_bIsRunning</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1afe99cfbd91c71277f182f493ea2744bd" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_bUseScrollPos</name></member>
+      <member refid="class_test_runner_dlg_1aaa78c62d9671c9de2d74bbca01792cf8" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_buttonBrowse</name></member>
+      <member refid="class_test_runner_dlg_1a284fb79a58913f46d4a1d5bd1c1b7a38" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_buttonClose</name></member>
+      <member refid="class_test_runner_dlg_1a24cffe139b423fde2a5bc7480d29b271" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_buttonRun</name></member>
+      <member refid="class_test_runner_dlg_1a50d05f1875b9cc4aa539e45301f8c8f4" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_buttonStop</name></member>
+      <member refid="class_test_runner_dlg_1acdaba97edb566ab4e0522aee3201092b" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_details</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aadbc3a537c859c5773c6071c146434b8" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_dwClassStyle</name></member>
+      <member refid="class_test_runner_dlg_1af00ad458fae2cdab2a938ec14149c35c" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_errorListBitmap</name></member>
+      <member refid="class_test_runner_dlg_1ac2a4d6b195179e70ca00267af1e6a593" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_errors</name></member>
+      <member refid="class_test_runner_dlg_1a3a8203958756107cc72ac26c810418ec" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_failures</name></member>
+      <member refid="class_test_runner_dlg_1a1debd490530748ce4cd5bb8f32b5e6eb" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_fixedSizeFont</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1adc137a9ae3de104ae48e2b4175329c55" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_Freedom</name></member>
+      <member refid="class_test_runner_dlg_1a2fc6368672be3e86609b089554f1473e" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_hAccelerator</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a291eb8192ff1949ec31c630c61bfe5d9" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_iDisabled</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1adb58cf0172fbd972bcf7e6de385310c5" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_idSizeIcon</name></member>
+      <member refid="class_test_runner_dlg_1a0a11f175b805fda35a5bef4bd40b806a" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_listCtrl</name></member>
+      <member refid="classcdx_c_dynamic_wnd_ex_1abe9e2867acd7b90c974222b6af4a1483" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>M_lpszAutoPosProfileSection</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a9de5a0a34e39491a688b48f263255cba" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_Map</name></member>
+      <member refid="class_test_runner_dlg_1ac5be804f9ee1d0e259d1b701a4ea70ed" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_model</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a8e8d745f5390dda688d39a17a786e07e" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_nFlags</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a194ff1b726344a8803053019e38077ab" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_nMyTimerID</name></member>
+      <member refid="class_test_runner_dlg_1a39158a72c89e3fd58ec0cee3a58612ff" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_result</name></member>
+      <member refid="class_test_runner_dlg_1a9267ad5bb86e258e43e9da0edeef106b" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_selectedTest</name></member>
+      <member refid="class_test_runner_dlg_1a6177261707deafe78cdc8108cc0c9964" prot="private" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_settings</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1ade0b344a14887598c7aa0e23b2787eb9" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_szInitial</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a5ffdf1c91d4ca43f8482d04830652e66" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_szMax</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1af0c40f692587fe02a27043d86d679dc2" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_szMin</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1ae393b53883608d05a33d922e8aff7599" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>M_szNull</name></member>
+      <member refid="class_test_runner_dlg_1a099ba53f2e76b5e92f156ee11f471b52" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_testEndTime</name></member>
+      <member refid="class_test_runner_dlg_1a74ec4056ab784d14ea84fe64d547aa4a" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_testObserver</name></member>
+      <member refid="class_test_runner_dlg_1a49951e2f37b31a2cfa86938a57c1a56a" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_testsProgress</name></member>
+      <member refid="class_test_runner_dlg_1aa481d53964cb0af4c5b5585fe0700f8e" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_testsRun</name></member>
+      <member refid="class_test_runner_dlg_1a47a2f4c82f52235b432b003833bccb2e" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>m_testStartTime</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855a75188eab2b611945a8002c37b594f71c" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>mdNone</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855a31f82e1d1c49158a7e6c7e56ebbd32fb" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>mdRelative</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855a1f27dab35aa9c3507af936030b812292" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>mdRepos</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855ac89e0019f91dc08bd456db7a4f913f3e" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>mdResize</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aef5dd409b72bb63a44a6917fe848e855" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>Mode</name></member>
+      <member refid="class_test_runner_dlg_1a6e1fbdb43053d7b831bd996dc4de0ad0" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>model</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1aae7be733ddfc4bd04c19a5dfe24013ba" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>ModifyFlags</name></member>
+      <member refid="class_test_runner_dlg_1afab22b13b42942a71616936ac4243a0b" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>ms_cppunitKey</name></member>
+      <member refid="classcdx_c_dynamic_wnd_ex_1ac6d5ae225658beed21423230145a12c7" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>NoAutoPos</name></member>
+      <member refid="class_test_runner_dlg_1a664e3fffecbd1a4350a151680cdb078f" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>OnBrowseTest</name></member>
+      <member refid="class_test_runner_dlg_1a79a7758e0876423f82e1a9fa21cc4a5f" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>OnClose</name></member>
+      <member refid="classcdx_c_dynamic_dialog_1a20beb6fc123186cf081c5f9fec373ee1" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>OnDestroy</name></member>
+      <member refid="classcdx_c_dynamic_wnd_ex_1a67cafc47f4c4cfd1f612e7a24b487c60" prot="protected" virt="virtual"><scope>TestRunnerDlg</scope><name>OnDestroying</name></member>
+      <member refid="classcdx_c_dynamic_dialog_1a48d0cd08e4ca253fa9fc459278fb332c" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>OnGetMinMaxInfo</name></member>
+      <member refid="class_test_runner_dlg_1a8d94121ccc2f479b1a41a9724d9e1423" prot="protected" virt="virtual"><scope>TestRunnerDlg</scope><name>OnInitDialog</name></member>
+      <member refid="classcdx_c_dynamic_wnd_ex_1a1482d3b7bc2f80ad73749fb4396533ab" prot="protected" virt="virtual"><scope>TestRunnerDlg</scope><name>OnInitialized</name></member>
+      <member refid="class_test_runner_dlg_1ab327ef57751c085b242a9db60f071ec1" prot="protected" virt="virtual"><scope>TestRunnerDlg</scope><name>OnOK</name></member>
+      <member refid="classcdx_c_dynamic_dialog_1a4a4bd08ac7c35de584deee425e88412b" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>OnParentNotify</name></member>
+      <member refid="class_test_runner_dlg_1a76022a09defeb98fb4c91af6fcbb0b1e" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>OnQuitApplication</name></member>
+      <member refid="class_test_runner_dlg_1a30b8c255bb218a590f31ad65fd2cf787" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>OnRun</name></member>
+      <member refid="class_test_runner_dlg_1a2801d6dab02d16e841517dc93a3d17e6" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>OnSelectedFailureChange</name></member>
+      <member refid="class_test_runner_dlg_1a510b1c037d91ad24bf6e1a9dc4251eff" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>OnSelectTestInHistoryCombo</name></member>
+      <member refid="class_test_runner_dlg_1a75dad8882711c8e2798517624eb572c1" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>OnSize</name></member>
+      <member refid="classcdx_c_dynamic_dialog_1a108b4a8859ecb6686a7488272a1ad7f4" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>OnSizing</name></member>
+      <member refid="class_test_runner_dlg_1aabda8c67f88fcd3d3294f7fc430fd915" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>OnStop</name></member>
+      <member refid="classcdx_c_dynamic_dialog_1a23ad8f1dd881c8fa11786bbc17925c52" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>OnTimer</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1af4dae0c274990e10378725ee31d643d0" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>operator CWnd *</name></member>
+      <member refid="class_test_runner_dlg_1a31a999095d8f5a937b6ca29ea3b08882" prot="public" virt="virtual"><scope>TestRunnerDlg</scope><name>PreTranslateMessage</name></member>
+      <member refid="class_test_runner_dlg_1a9edd138dc4a89c06a042ba8b3576da1b" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>refreshRecentTests</name></member>
+      <member refid="class_test_runner_dlg_1a79d31e391a61b8303e23825cc07171d1" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>removeTestFromHistory</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a6ecc7ae946991c459d46944110b6b42e" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>RemSzControl</name></member>
+      <member refid="class_test_runner_dlg_1a04c81c7bb178f3833f8ec8ec7ebd009e" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>reportFailure</name></member>
+      <member refid="class_test_runner_dlg_1a4e8fb39fbbe24c81b3c7d8c3409acb2b" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>reset</name></member>
+      <member refid="classcdx_c_dynamic_wnd_ex_1a71d426cfe5335a36f4f455d670d2b550" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>RestoreFlags</name></member>
+      <member refid="classcdx_c_dynamic_wnd_ex_1a827b16886b50bf46fdaacf3c2d96dcc6" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>RestoreWindowPosition</name></member>
+      <member refid="classcdx_c_dynamic_wnd_ex_1a71d426cfe5335a36f4f455d670d2b550a1780bdd59d28b9e65d4cfd589eb153f0" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>rflg_all</name></member>
+      <member refid="classcdx_c_dynamic_wnd_ex_1a71d426cfe5335a36f4f455d670d2b550ab9e55ca61ec5722bbf3b323b880955ce" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>rflg_none</name></member>
+      <member refid="classcdx_c_dynamic_wnd_ex_1a71d426cfe5335a36f4f455d670d2b550a894a54cf52a4d0ec5d4176ea6874b1e3" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>rflg_state</name></member>
+      <member refid="classcdx_c_dynamic_wnd_ex_1a71d426cfe5335a36f4f455d670d2b550a96c47307e9f14383c07d28f0a8b5195b" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>rflg_visibility</name></member>
+      <member refid="class_test_runner_dlg_1a7ea8bea3d292a30b83c3857e4db715b7" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>runTest</name></member>
+      <member refid="class_test_runner_dlg_1a5e3e18332d017164cb1967fb1883349d" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>saveHistory</name></member>
+      <member refid="class_test_runner_dlg_1a3ce3646fc3ac88cebc7f3aab637e4656" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>saveSettings</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a826db4eb60dd51851d0152578d63b7d9" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>SBYTE</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1ab6e26117c4c3f077c5ab1392b6377198" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>SBYTES</name></member>
+      <member refid="class_test_runner_dlg_1ae0f14a1822b53bfe9d3de531d78f777d" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>setModel</name></member>
+      <member refid="class_test_runner_dlg_1a1d8408ec6ced68723a609e196809c2fd" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>setNumberOfTestCase</name></member>
+      <member refid="class_test_runner_dlg_1ac87ebced746acc945d713e25d40772e7" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>setNumberOfTestCaseFailure</name></member>
+      <member refid="class_test_runner_dlg_1a4208d7b5f238b04fe9531b47cf119b1a" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>setNumberOfTestCaseRun</name></member>
+      <member refid="class_test_runner_dlg_1a08fdb113e4ff8f90d9844ffe6193a107" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>setupHistoryCombo</name></member>
+      <member refid="class_test_runner_dlg_1a3b81b4fcb6473fa8149a1eab098a6b69" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>showFailureDetailAt</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a955d0d32e1de903be74488ab21a0bf89" prot="public" virt="virtual"><scope>TestRunnerDlg</scope><name>StartAntiFlickering</name></member>
+      <member refid="class_test_runner_dlg_1a242540817497d352f0932f2895c7e43e" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>startTest</name></member>
+      <member refid="class_test_runner_dlg_1aa1203e183b37f2a57181cc960e7a25cf" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>stopTest</name></member>
+      <member refid="classcdx_c_dynamic_wnd_ex_1a49c2a39c30eb6a362116199c8075f17e" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>StoreWindowPosition</name></member>
+      <member refid="classcdx_c_dynamic_wnd_ex_1a2553916ac779ce37e244ccd94c08b3e6" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>StretchWindow</name></member>
+      <member refid="classcdx_c_dynamic_wnd_ex_1a62669852c71b2e75f323ce96d64f15a8" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>StretchWindow</name></member>
+      <member refid="class_test_runner_dlg_1a1c8ff5e8f47eb011d3363666722de4d4" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>TestRunnerDlg</name></member>
+      <member refid="class_test_runner_dlg_1a4992fbb58cba779cb5e612de98bab7da" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>TestRunnerDlg</name></member>
+      <member refid="class_test_runner_dlg_1a9e835da8039c2de9b53fa28e9de7e0db" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>TestRunnerDlg</name></member>
+      <member refid="class_test_runner_dlg_1a1ab72581036aa7794590ff546e2cb68f" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>Tests</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a87f6311004037445eb3be8352b461f18" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>TopLeft</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a0592db8f40d92a8da4e2da5c701db43f" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>TopRight</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a06ad3c21badc7826d205513e9404ee64" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>UpdateControlPosition</name></member>
+      <member refid="class_test_runner_dlg_1a1d28474f28291d2b0c08ecbb68d27271" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>updateCountsDisplay</name></member>
+      <member refid="class_test_runner_dlg_1a3150bbfc508ab4654ccba13cd57ae653" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>updateHistoryCombo</name></member>
+      <member refid="class_test_runner_dlg_1a432d37b8852bf526091b0c01bb9a8974" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>updateListColumnSize</name></member>
+      <member refid="class_test_runner_dlg_1a7d4d47123dddf4c6ed48f66aea982876" prot="protected" virt="non-virtual"><scope>TestRunnerDlg</scope><name>updateSelectedItem</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a65185ac2d1250c42f81a5fdc3d59aa6d" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>Window</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a45aa0a593bfba63bd38a08aed4968b2bad14be392a1a4daa80e29d58062d92bd9" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>X1</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a45aa0a593bfba63bd38a08aed4968b2bac892f5f7c34f6f9cf77b61d9dbf7363d" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>X2</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a45aa0a593bfba63bd38a08aed4968b2bacaa84713e18b9e66e1e0e3eeb86a5d7b" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>Y1</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a45aa0a593bfba63bd38a08aed4968b2ba945a86c19287f7545df7d23acd4a7146" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>Y2</name></member>
+      <member refid="classcdx_c_dynamic_dialog_1a2d58a3151296ed482e3caeb7b9d380b4" prot="public" virt="virtual"><scope>TestRunnerDlg</scope><name>‾cdxCDynamicDialog</name></member>
+      <member refid="classcdx_c_dynamic_wnd_1a79028fa09a3bab1875ff39b672a23ec9" prot="public" virt="virtual"><scope>TestRunnerDlg</scope><name>‾cdxCDynamicWnd</name></member>
+      <member refid="classcdx_c_dynamic_wnd_ex_1a5f66d93ab2e7f3198432c75453cf47b9" prot="public" virt="virtual"><scope>TestRunnerDlg</scope><name>‾cdxCDynamicWndEx</name></member>
+      <member refid="class_test_runner_dlg_1a13e1e9a4db9361c70b4e0ad866e3577a" prot="public" virt="virtual"><scope>TestRunnerDlg</scope><name>‾TestRunnerDlg</name></member>
+      <member refid="class_test_runner_dlg_1a13e1e9a4db9361c70b4e0ad866e3577a" prot="public" virt="non-virtual"><scope>TestRunnerDlg</scope><name>‾TestRunnerDlg</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

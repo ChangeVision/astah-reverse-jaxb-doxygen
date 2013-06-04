@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="interface_edit_text_pop_over_controller" kind="class" prot="public">
+    <compoundname>EditTextPopOverController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UIPopoverController</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">&lt;UIPopoverControllerDelegate&gt;</basecompoundref>
+    <includes refid="_edit_text_pop_over_controller_8h" local="no">EditTextPopOverController.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="interface_edit_text_pop_over_controller_1ad437a5dc02286d7be2aa55293cec52bd" prot="protected" static="no" mutable="no">
+        <type><ref refid="interface_edit_text_controller" kindref="compound">EditTextController</ref> *</type>
+        <definition>EditTextController* EditTextPopOverController::editText</definition>
+        <argsstring></argsstring>
+        <name>editText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/EditTextPopOverController.h" line="17" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/EditTextPopOverController.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_edit_text_pop_over_controller_1ac9bb959483757fa1a9e6f2f7b1cb0c58" prot="protected" static="no" mutable="no">
+        <type><ref refid="interface_set_name_command" kindref="compound">SetNameCommand</ref> *</type>
+        <definition>SetNameCommand* EditTextPopOverController::setNameCommand</definition>
+        <argsstring></argsstring>
+        <name>setNameCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/EditTextPopOverController.h" line="18" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/EditTextPopOverController.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="interface_edit_text_pop_over_controller_1a120fefe2ffe06093c332c19fa20d7ab9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EditTextPopOverController::show:viewElement:</definition>
+        <argsstring>(DiagramView *diagramView,[viewElement] ViewElement *ve)</argsstring>
+        <name>show:viewElement:</name>
+        <param>
+          <type><ref refid="interface_diagram_view" kindref="compound">DiagramView</ref> *</type>
+          <declname>diagramView</declname>
+        </param>
+        <param>
+          <attributes>[viewElement]</attributes>
+          <type><ref refid="interface_view_element" kindref="compound">ViewElement</ref> *</type>
+          <declname>ve</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/EditTextPopOverController.h" line="18" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/EditTextPopOverController.m" bodystart="33" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="440">
+        <label>&lt;UIPopoverControllerDelegate&gt;</label>
+      </node>
+      <node id="439">
+        <label>UIPopoverController</label>
+      </node>
+      <node id="438">
+        <label>EditTextPopOverController</label>
+        <link refid="interface_edit_text_pop_over_controller"/>
+        <childnode refid="439" relation="public-inheritance">
+        </childnode>
+        <childnode refid="440" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="450">
+        <label>Command</label>
+        <link refid="interface_command"/>
+        <childnode refid="451" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="448">
+        <label>SetNameCommand</label>
+        <link refid="interface_set_name_command"/>
+        <childnode refid="449" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="449">
+        <label>ModifyCommand</label>
+        <link refid="interface_modify_command"/>
+        <childnode refid="450" relation="public-inheritance">
+        </childnode>
+        <childnode refid="446" relation="usage">
+          <edgelabel>viewElement</edgelabel>
+        </childnode>
+      </node>
+      <node id="443">
+        <label>&lt;UIPopoverControllerDelegate&gt;</label>
+      </node>
+      <node id="442">
+        <label>UIPopoverController</label>
+      </node>
+      <node id="444">
+        <label>EditTextController</label>
+        <link refid="interface_edit_text_controller"/>
+        <childnode refid="445" relation="public-inheritance">
+        </childnode>
+        <childnode refid="446" relation="usage">
+          <edgelabel>viewElement</edgelabel>
+        </childnode>
+      </node>
+      <node id="445">
+        <label>UIViewController</label>
+      </node>
+      <node id="441">
+        <label>EditTextPopOverController</label>
+        <link refid="interface_edit_text_pop_over_controller"/>
+        <childnode refid="442" relation="public-inheritance">
+        </childnode>
+        <childnode refid="443" relation="public-inheritance">
+        </childnode>
+        <childnode refid="444" relation="usage">
+          <edgelabel>editText</edgelabel>
+        </childnode>
+        <childnode refid="448" relation="usage">
+          <edgelabel>setNameCommand</edgelabel>
+        </childnode>
+      </node>
+      <node id="447">
+        <label>UIView</label>
+      </node>
+      <node id="451">
+        <label>NSObject</label>
+      </node>
+      <node id="446">
+        <label>ViewElement</label>
+        <link refid="interface_view_element"/>
+        <childnode refid="447" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/EditTextPopOverController.h" line="16" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/EditTextPopOverController.h" bodystart="16" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_edit_text_pop_over_controller_1ad437a5dc02286d7be2aa55293cec52bd" prot="protected" virt="non-virtual"><scope>EditTextPopOverController</scope><name>editText</name></member>
+      <member refid="interface_edit_text_pop_over_controller_1ac9bb959483757fa1a9e6f2f7b1cb0c58" prot="protected" virt="non-virtual"><scope>EditTextPopOverController</scope><name>setNameCommand</name></member>
+      <member refid="interface_edit_text_pop_over_controller_1a120fefe2ffe06093c332c19fa20d7ab9" prot="public" virt="virtual"><scope>EditTextPopOverController</scope><name>show:viewElement:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="classtesseract_1_1_cube_classifier" kind="class" prot="public">
+    <compoundname>tesseract::CubeClassifier</compoundname>
+    <basecompoundref refid="classtesseract_1_1_shape_classifier" prot="public" virt="non-virtual">tesseract::ShapeClassifier</basecompoundref>
+    <includes refid="cubeclassifier_8h" local="no">cubeclassifier.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtesseract_1_1_cube_classifier_1af3078ce1bb385c3deccfe7c3501977de" prot="private" static="no" mutable="no">
+        <type><ref refid="classtesseract_1_1_cube_reco_context" kindref="compound">CubeRecoContext</ref> *</type>
+        <definition>CubeRecoContext* tesseract::CubeClassifier::cube_cntxt_</definition>
+        <argsstring></argsstring>
+        <name>cube_cntxt_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/cubeclassifier.h" line="52" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/cubeclassifier.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtesseract_1_1_cube_classifier_1a601c255f4103b04686542c8d1ad6b570" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classtesseract_1_1_shape_table" kindref="compound">ShapeTable</ref> &amp;</type>
+        <definition>const ShapeTable&amp; tesseract::CubeClassifier::shape_table_</definition>
+        <argsstring></argsstring>
+        <name>shape_table_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/cubeclassifier.h" line="53" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/cubeclassifier.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtesseract_1_1_cube_classifier_1a1d8cc64196d1eedafd9c5f45d544842e" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tesseract::CubeClassifier::CubeClassifier</definition>
+        <argsstring>(Tesseract *tesseract)</argsstring>
+        <name>CubeClassifier</name>
+        <param>
+          <type><ref refid="classtesseract_1_1_tesseract" kindref="compound">Tesseract</ref> *</type>
+          <declname>tesseract</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/cubeclassifier.h" line="39" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/cubeclassifier.cpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_classifier_1a5904ab2588593ad9a231a19d0478350d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>tesseract::CubeClassifier::~CubeClassifier</definition>
+        <argsstring>()</argsstring>
+        <name>~CubeClassifier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/cubeclassifier.h" line="40" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/cubeclassifier.cpp" bodystart="39" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_classifier_1aa75ef3bd86ccf52fbd66d3de285669b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int tesseract::CubeClassifier::ClassifySample</definition>
+        <argsstring>(const TrainingSample &amp;sample, Pix *page_pix, int debug, int keep_this, GenericVector&lt; ShapeRating &gt; *results)</argsstring>
+        <name>ClassifySample</name>
+        <reimplements refid="classtesseract_1_1_shape_classifier_1a96f89853d2ffe4bcf82c2ce818bf849f">ClassifySample</reimplements>
+        <param>
+          <type>const <ref refid="classtesseract_1_1_training_sample" kindref="compound">TrainingSample</ref> &amp;</type>
+          <declname>sample</declname>
+        </param>
+        <param>
+          <type>Pix *</type>
+          <declname>page_pix</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>debug</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>keep_this</declname>
+        </param>
+        <param>
+          <type><ref refid="class_generic_vector" kindref="compound">GenericVector</ref>&lt; <ref refid="structtesseract_1_1_shape_rating" kindref="compound">ShapeRating</ref> &gt; *</type>
+          <declname>results</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/cubeclassifier.h" line="44" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/cubeclassifier.cpp" bodystart="44" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classtesseract_1_1_cube_classifier_1a46a07498d81fd80807f337fae8cc0f93" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="classtesseract_1_1_shape_table" kindref="compound">ShapeTable</ref> *</type>
+        <definition>const ShapeTable * tesseract::CubeClassifier::GetShapeTable</definition>
+        <argsstring>() const </argsstring>
+        <name>GetShapeTable</name>
+        <reimplements refid="classtesseract_1_1_shape_classifier_1ab5e612b18003a7c0ceae685ea1fe8571">GetShapeTable</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Desktop/trunk/ccmain/cubeclassifier.h" line="48" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/cubeclassifier.cpp" bodystart="75" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="661">
+        <label>tesseract::CubeClassifier</label>
+        <link refid="classtesseract_1_1_cube_classifier"/>
+        <childnode refid="662" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="662">
+        <label>tesseract::ShapeClassifier</label>
+        <link refid="classtesseract_1_1_shape_classifier"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="663">
+        <label>tesseract::CubeClassifier</label>
+        <link refid="classtesseract_1_1_cube_classifier"/>
+        <childnode refid="664" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="664">
+        <label>tesseract::ShapeClassifier</label>
+        <link refid="classtesseract_1_1_shape_classifier"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Desktop/trunk/ccmain/cubeclassifier.h" line="37" column="1" bodyfile="/Users/makoto/Desktop/trunk/ccmain/cubeclassifier.h" bodystart="37" bodyend="54"/>
+    <listofallmembers>
+      <member refid="classtesseract_1_1_cube_classifier_1aa75ef3bd86ccf52fbd66d3de285669b9" prot="public" virt="virtual"><scope>tesseract::CubeClassifier</scope><name>ClassifySample</name></member>
+      <member refid="classtesseract_1_1_cube_classifier_1af3078ce1bb385c3deccfe7c3501977de" prot="private" virt="non-virtual"><scope>tesseract::CubeClassifier</scope><name>cube_cntxt_</name></member>
+      <member refid="classtesseract_1_1_cube_classifier_1a1d8cc64196d1eedafd9c5f45d544842e" prot="public" virt="non-virtual"><scope>tesseract::CubeClassifier</scope><name>CubeClassifier</name></member>
+      <member refid="classtesseract_1_1_cube_classifier_1a46a07498d81fd80807f337fae8cc0f93" prot="public" virt="virtual"><scope>tesseract::CubeClassifier</scope><name>GetShapeTable</name></member>
+      <member refid="classtesseract_1_1_cube_classifier_1a601c255f4103b04686542c8d1ad6b570" prot="private" virt="non-virtual"><scope>tesseract::CubeClassifier</scope><name>shape_table_</name></member>
+      <member refid="classtesseract_1_1_cube_classifier_1a5904ab2588593ad9a231a19d0478350d" prot="public" virt="virtual"><scope>tesseract::CubeClassifier</scope><name>~CubeClassifier</name></member>
+      <member refid="classtesseract_1_1_shape_classifier_1a8beb57719279f6b67f426dcccb6231b7" prot="public" virt="virtual"><scope>tesseract::CubeClassifier</scope><name>~ShapeClassifier</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

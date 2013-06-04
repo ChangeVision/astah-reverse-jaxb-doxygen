@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="interface_edit_color_pop_over_controller" kind="class" prot="public">
+    <compoundname>EditColorPopOverController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UIPopoverController</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">&lt;UIPopoverControllerDelegate&gt;</basecompoundref>
+    <includes refid="_edit_color_pop_over_controller_8h" local="no">EditColorPopOverController.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="interface_edit_color_pop_over_controller_1a787fea33cad930472976fd3fb20dddb8" prot="protected" static="no" mutable="no">
+        <type><ref refid="interface_edit_color_controller" kindref="compound">EditColorController</ref> *</type>
+        <definition>EditColorController* EditColorPopOverController::editColor</definition>
+        <argsstring></argsstring>
+        <name>editColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/EditColorPopOverController.h" line="16" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/EditColorPopOverController.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="interface_edit_color_pop_over_controller_1acaf160abdb8b147e941710ecbf952a5f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EditColorPopOverController::show:viewElement:</definition>
+        <argsstring>(DiagramView *diagramView,[viewElement] ViewElement *ve)</argsstring>
+        <name>show:viewElement:</name>
+        <param>
+          <type><ref refid="interface_diagram_view" kindref="compound">DiagramView</ref> *</type>
+          <declname>diagramView</declname>
+        </param>
+        <param>
+          <attributes>[viewElement]</attributes>
+          <type><ref refid="interface_view_element" kindref="compound">ViewElement</ref> *</type>
+          <declname>ve</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/EditColorPopOverController.h" line="16" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/EditColorPopOverController.m" bodystart="27" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_edit_color_pop_over_controller_1a7f46115310580535a201f8a0cfdab045" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EditColorPopOverController::dismiss</definition>
+        <argsstring>()</argsstring>
+        <name>dismiss</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/EditColorPopOverController.h" line="16" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/EditColorPopOverController.m" bodystart="23" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="420">
+        <label>&lt;UIPopoverControllerDelegate&gt;</label>
+      </node>
+      <node id="418">
+        <label>EditColorPopOverController</label>
+        <link refid="interface_edit_color_pop_over_controller"/>
+        <childnode refid="419" relation="public-inheritance">
+        </childnode>
+        <childnode refid="420" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="419">
+        <label>UIPopoverController</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="428">
+        <label>Command</label>
+        <link refid="interface_command"/>
+        <childnode refid="429" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="427">
+        <label>ModifyCommand</label>
+        <link refid="interface_modify_command"/>
+        <childnode refid="428" relation="public-inheritance">
+        </childnode>
+        <childnode refid="430" relation="usage">
+          <edgelabel>viewElement</edgelabel>
+        </childnode>
+      </node>
+      <node id="424">
+        <label>EditColorController</label>
+        <link refid="interface_edit_color_controller"/>
+        <childnode refid="425" relation="public-inheritance">
+        </childnode>
+        <childnode refid="421" relation="usage">
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="426" relation="usage">
+          <edgelabel>setColorCommand</edgelabel>
+        </childnode>
+        <childnode refid="430" relation="usage">
+          <edgelabel>viewElement</edgelabel>
+        </childnode>
+      </node>
+      <node id="423">
+        <label>&lt;UIPopoverControllerDelegate&gt;</label>
+      </node>
+      <node id="421">
+        <label>EditColorPopOverController</label>
+        <link refid="interface_edit_color_pop_over_controller"/>
+        <childnode refid="422" relation="public-inheritance">
+        </childnode>
+        <childnode refid="423" relation="public-inheritance">
+        </childnode>
+        <childnode refid="424" relation="usage">
+          <edgelabel>editColor</edgelabel>
+        </childnode>
+      </node>
+      <node id="426">
+        <label>SetColorCommand</label>
+        <link refid="interface_set_color_command"/>
+        <childnode refid="427" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="422">
+        <label>UIPopoverController</label>
+      </node>
+      <node id="425">
+        <label>UIViewController</label>
+      </node>
+      <node id="431">
+        <label>UIView</label>
+      </node>
+      <node id="429">
+        <label>NSObject</label>
+      </node>
+      <node id="430">
+        <label>ViewElement</label>
+        <link refid="interface_view_element"/>
+        <childnode refid="431" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/makoto/Documents/workspace/UmlPad/Classes/EditColorPopOverController.h" line="15" column="1" bodyfile="/Users/makoto/Documents/workspace/UmlPad/Classes/EditColorPopOverController.h" bodystart="15" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_edit_color_pop_over_controller_1a7f46115310580535a201f8a0cfdab045" prot="public" virt="virtual"><scope>EditColorPopOverController</scope><name>dismiss</name></member>
+      <member refid="interface_edit_color_pop_over_controller_1a787fea33cad930472976fd3fb20dddb8" prot="protected" virt="non-virtual"><scope>EditColorPopOverController</scope><name>editColor</name></member>
+      <member refid="interface_edit_color_pop_over_controller_1acaf160abdb8b147e941710ecbf952a5f" prot="public" virt="virtual"><scope>EditColorPopOverController</scope><name>show:viewElement:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

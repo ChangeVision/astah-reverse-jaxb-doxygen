@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.4">
+  <compounddef id="_active_test_8h" kind="file">
+    <compoundname>ActiveTest.h</compoundname>
+    <includes local="no">afxmt.h</includes>
+    <includes local="no">cppunit/extensions/TestDecorator.h</includes>
+    <includedby refid="_active_test_8cpp" local="yes">src/msvc6/testrunner/ActiveTest.cpp</includedby>
+    <includedby refid="_test_runner_dlg_8h" local="yes">src/msvc6/testrunner/TestRunnerDlg.h</includedby>
+    <includedby refid="_test_runner_dlg_8cpp" local="yes">src/msvc6/testrunner/TestRunnerDlg.cpp</includedby>
+    <incdepgraph>
+      <node id="743">
+        <label>afxmt.h</label>
+      </node>
+      <node id="744">
+        <label>cppunit/extensions/TestDecorator.h</label>
+      </node>
+      <node id="742">
+        <label>src/msvc6/testrunner/ActiveTest.h</label>
+        <link refid="ActiveTest.h"/>
+        <childnode refid="743" relation="include">
+        </childnode>
+        <childnode refid="744" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="749">
+        <label>src/msvc6/testpluginrunner/TestPlugInRunnerApp.cpp</label>
+        <link refid="_test_plug_in_runner_app_8cpp"/>
+      </node>
+      <node id="748">
+        <label>src/msvc6/testpluginrunner/TestPlugInRunnerDlg.h</label>
+        <link refid="_test_plug_in_runner_dlg_8h"/>
+        <childnode refid="749" relation="include">
+        </childnode>
+        <childnode refid="750" relation="include">
+        </childnode>
+      </node>
+      <node id="747">
+        <label>src/msvc6/testrunner/TestRunnerDlg.h</label>
+        <link refid="_test_runner_dlg_8h"/>
+        <childnode refid="748" relation="include">
+        </childnode>
+        <childnode refid="751" relation="include">
+        </childnode>
+        <childnode refid="752" relation="include">
+        </childnode>
+        <childnode refid="753" relation="include">
+        </childnode>
+      </node>
+      <node id="746">
+        <label>src/msvc6/testrunner/ActiveTest.cpp</label>
+        <link refid="_active_test_8cpp"/>
+      </node>
+      <node id="745">
+        <label>src/msvc6/testrunner/ActiveTest.h</label>
+        <link refid="ActiveTest.h"/>
+        <childnode refid="746" relation="include">
+        </childnode>
+        <childnode refid="747" relation="include">
+        </childnode>
+        <childnode refid="752" relation="include">
+        </childnode>
+      </node>
+      <node id="755">
+        <label>src/qttestrunner/TestRunnerDlgImpl.cpp</label>
+        <link refid="_test_runner_dlg_impl_8cpp"/>
+      </node>
+      <node id="753">
+        <label>src/qttestrunner/TestRunnerDlgImpl.h</label>
+        <link refid="_test_runner_dlg_impl_8h"/>
+        <childnode refid="754" relation="include">
+        </childnode>
+        <childnode refid="755" relation="include">
+        </childnode>
+      </node>
+      <node id="754">
+        <label>src/qttestrunner/QtTestRunner.cpp</label>
+        <link refid="_qt_test_runner_8cpp"/>
+      </node>
+      <node id="752">
+        <label>src/msvc6/testrunner/TestRunnerDlg.cpp</label>
+        <link refid="_test_runner_dlg_8cpp"/>
+      </node>
+      <node id="750">
+        <label>src/msvc6/testpluginrunner/TestPlugInRunnerDlg.cpp</label>
+        <link refid="_test_plug_in_runner_dlg_8cpp"/>
+      </node>
+      <node id="751">
+        <label>src/msvc6/testrunner/MfcTestRunner.cpp</label>
+        <link refid="_mfc_test_runner_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_active_test" prot="public">ActiveTest</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CPPUNIT_ACTIVETEST_H</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>CPPUNIT_ACTIVETEST_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;afxmt.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CPPUNIT_TESTDECORATOR_H</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;cppunit/extensions/TestDecorator.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>A<sp/>Microsoft-specific<sp/>active<sp/>test</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>An<sp/>active<sp/>test<sp/>manages<sp/>its<sp/>own</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>thread<sp/>of<sp/>execution.<sp/><sp/>This<sp/>one<sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>is<sp/>very<sp/>simple<sp/>and<sp/>only<sp/>sufficient</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>for<sp/>the<sp/>limited<sp/>use<sp/>we<sp/>put<sp/>it<sp/>through</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>in<sp/>the<sp/>TestRunner.<sp/><sp/>It<sp/>spawns<sp/>a<sp/>thread</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>on<sp/>run<sp/>(TestResult<sp/>*)<sp/>and<sp/>signals</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>completion<sp/>of<sp/>the<sp/>test.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>We<sp/>assume<sp/>that<sp/>only<sp/>one<sp/>thread<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>will<sp/>be<sp/>active<sp/>at<sp/>once<sp/>for<sp/>each</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>instance.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_active_test" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_active_test" kindref="compound">ActiveTest</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>CPPUNIT_NS::TestDecorator</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><ref refid="class_active_test_1a6d87588adef839b2d5dffa2a89508cb8" kindref="member">ActiveTest</ref>(<sp/>CPPUNIT_NS::Test<sp/>*test<sp/>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><ref refid="class_active_test_1af0b61776faa2e2f046ae4833bf9dc0f5" kindref="member">‾ActiveTest</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_active_test_1a5d78123d0ca49547996615c275902d45" kindref="member">run</ref>(<sp/>CPPUNIT_NS::TestResult<sp/>*result<sp/>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36" refid="class_active_test_1a0b651be116dd7531f1606f4708e7b6d2" refkind="member"><highlight class="normal"><sp/><sp/>HANDLE<sp/><ref refid="class_active_test_1a0b651be116dd7531f1606f4708e7b6d2" kindref="member">m_threadHandle</ref>;</highlight></codeline>
+<codeline lineno="37" refid="class_active_test_1ac4236fddc59f1e1df7b6e8abbdb94c1e" refkind="member"><highlight class="normal"><sp/><sp/>CEvent<sp/><ref refid="class_active_test_1ac4236fddc59f1e1df7b6e8abbdb94c1e" kindref="member">m_runCompleted</ref>;</highlight></codeline>
+<codeline lineno="38" refid="class_active_test_1ace5612fb6d51ba766e01fd7dca70fa3d" refkind="member"><highlight class="normal"><sp/><sp/>CPPUNIT_NS::TestResult<sp/>*<ref refid="class_active_test_1ace5612fb6d51ba766e01fd7dca70fa3d" kindref="member">m_currentTestResult</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_active_test_1a5d78123d0ca49547996615c275902d45" kindref="member">run</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_active_test_1aa0139409aae0f6d2a311edb593826efc" kindref="member">setTestResult</ref>(<sp/>CPPUNIT_NS::TestResult<sp/>*result<sp/>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>UINT<sp/><ref refid="class_active_test_1a9451723eb10c134ccff56d2eaea5221d" kindref="member">threadFunction</ref>(<sp/>LPVOID<sp/>thisInstance<sp/>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/makoto/Desktop/Cpp_Reverse/cppunit-1.12.0/src/msvc6/testrunner/ActiveTest.h"/>
+  </compounddef>
+</doxygen>
