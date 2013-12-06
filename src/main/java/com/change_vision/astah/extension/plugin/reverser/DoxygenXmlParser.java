@@ -4,6 +4,7 @@ import static java.lang.String.format;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.text.SimpleDateFormat;
@@ -28,6 +29,7 @@ import com.change_vision.astah.extension.plugin.doxygen._1_8_4.compound.Compound
 import com.change_vision.astah.extension.plugin.doxygen._1_8_4.compound.DoxygenType;
 import com.change_vision.astah.extension.plugin.doxygen._1_8_4.index.CompoundKind;
 import com.change_vision.astah.extension.plugin.doxygen._1_8_4.index.CompoundType;
+import com.change_vision.astah.extension.plugin.exception.XmlParsingException;
 import com.change_vision.astah.extension.plugin.exception.IndexXmlNotFoundException;
 import com.change_vision.jude.api.inf.editor.BasicModelEditor;
 import com.change_vision.jude.api.inf.exception.InvalidEditingException;
@@ -104,25 +106,14 @@ public class DoxygenXmlParser {
 	 * @return the Set
 	 * @throws IOException
 	 * @throws SAXException
+	 * @throws XmlParsingException 
 	 */
-	protected void parserIndexXml() throws IOException, SAXException, ProjectNotFoundException, ClassNotFoundException, InvalidEditingException {
-		XMLStreamReader indexReader = null;
+	protected void parserIndexXml() throws IOException, SAXException, ProjectNotFoundException, ClassNotFoundException, InvalidEditingException, XmlParsingException {
 		try {
 			// TODO 1.8.3.1 ではなく、adapter 的な何かへ変更したい
 			// index.xml の jaxb.
-			JAXBElement<com.change_vision.astah.extension.plugin.doxygen._1_8_4.index.DoxygenType> indexElement = null;
+			JAXBElement<com.change_vision.astah.extension.plugin.doxygen._1_8_4.index.DoxygenType> indexElement = unmarshialIndexXML();
 			{
-				long start = System.currentTimeMillis();
-				ClassLoader classLoader = com.change_vision.astah.extension.plugin.doxygen._1_8_4.index.ObjectFactory.class.getClassLoader();
-				JAXBContext context = JAXBContext.newInstance("com.change_vision.astah.extension.plugin.doxygen._1_8_4.index", classLoader);
-				Unmarshaller unmarshaller = context.createUnmarshaller();
-				XMLInputFactory factory = XMLInputFactory.newInstance();
-				indexReader = factory.createXMLStreamReader(new FileInputStream(format("%s/index.xml", xmlDir.getAbsolutePath())));
-				indexElement = unmarshaller.unmarshal(indexReader, com.change_vision.astah.extension.plugin.doxygen._1_8_4.index.DoxygenType.class);
-				LOG.trace(format("index loaded : %,d", System.currentTimeMillis() - start));
-			}
-			{
-				ClassLoader classLoader = com.change_vision.astah.extension.plugin.doxygen._1_8_4.compound.ObjectFactory.class.getClassLoader();
 				List<CompoundType> compoundTypes = indexElement.getValue().getCompound();
 				int size = compoundTypes.size();
 				LOG.debug(format("compoundTypes size : %d", size));
@@ -152,26 +143,13 @@ public class DoxygenXmlParser {
 							}
 							continue;
 						}
-						{
-							XMLStreamReader r = null;
-							try {
-								XMLInputFactory factory = XMLInputFactory.newInstance();
-								r = factory.createXMLStreamReader(new FileInputStream(format("%s/%s.xml", xmlDir.getAbsolutePath(),
-										compoundType.getRefid())));
-								JAXBContext context = JAXBContext.newInstance("com.change_vision.astah.extension.plugin.doxygen._1_8_4.compound",
-										classLoader);
-								Unmarshaller unmarshaller = context.createUnmarshaller();
-								JAXBElement<DoxygenType> element = unmarshaller.unmarshal(r, DoxygenType.class);
-								this.compounddefTypes.add(element.getValue().getCompounddef().get(0));
-							} finally {
-								if (r != null) {
-									r.close();
-								}
-							}
-							if (LOG.isDebugEnabled()) {
-								LOG.debug(format("%d / %d, compounddefType loaded : %,d ms, %s.xml", count, size, System.currentTimeMillis()
-										- oneStart, compoundType.getRefid()));
-							}
+						CompounddefType compoundDefType = unmershalCompoundType(compoundType);
+						if (compoundDefType != null) {
+							this.compounddefTypes.add(compoundDefType);
+						}
+						if (LOG.isDebugEnabled()) {
+							LOG.debug(format("%d / %d, compounddefType loaded : %,d ms, %s.xml", count, size, System.currentTimeMillis()
+									- oneStart, compoundType.getRefid()));
 						}
 						break;
 					case CATEGORY:
@@ -200,7 +178,73 @@ public class DoxygenXmlParser {
 		} catch (XMLStreamException e) {
 			// TODO throwするエラーを変更すること
 			throw new IOException(e);
+		}
+	}
+
+	private CompounddefType unmershalCompoundType(CompoundType compoundType)
+			throws FactoryConfigurationError, XMLStreamException,
+			FileNotFoundException, JAXBException, XmlParsingException {
+		XMLStreamReader r = null;
+		CompounddefType compoundDefType;
+		String compoundDefTypePath = null;
+		try {
+			XMLInputFactory factory = XMLInputFactory.newInstance();
+			compoundDefTypePath = format("%s/%s.xml", xmlDir.getAbsolutePath(),
+					compoundType.getRefid());
+			FileInputStream compoundTypePathFileInputStream = new FileInputStream(compoundDefTypePath);
+			r = factory.createXMLStreamReader(compoundTypePathFileInputStream);
+			JAXBContext context = JAXBContext.newInstance("com.change_vision.astah.extension.plugin.doxygen._1_8_4.compound",
+					getObjectFactoryClassLoader());
+			Unmarshaller unmarshaller = context.createUnmarshaller();
+			JAXBElement<DoxygenType> element = unmarshaller.unmarshal(r, DoxygenType.class);
+			compoundDefType= element.getValue().getCompounddef().get(0);
+		} catch (JAXBException e){
+			String exceptionMessage = e.getMessage();
+			Throwable cause = e.getCause();
+			if (cause != null) {
+				exceptionMessage = cause.getMessage();
+			}
+			String message = format("file: %s\n%s",compoundDefTypePath,exceptionMessage);
+			throw new XmlParsingException(message ,e);
 		} finally {
+			if (r != null) {
+				r.close();
+			}
+		}
+		return compoundDefType;
+	}
+
+	private ClassLoader getObjectFactoryClassLoader() {
+		ClassLoader classLoader = com.change_vision.astah.extension.plugin.doxygen._1_8_4.compound.ObjectFactory.class.getClassLoader();
+		return classLoader;
+	}
+
+	private JAXBElement<com.change_vision.astah.extension.plugin.doxygen._1_8_4.index.DoxygenType> unmarshialIndexXML()
+			throws FactoryConfigurationError,
+			IOException, XmlParsingException {
+		JAXBElement<com.change_vision.astah.extension.plugin.doxygen._1_8_4.index.DoxygenType> indexElement;
+		XMLStreamReader indexReader = null;
+		long start = System.currentTimeMillis();
+		XMLInputFactory factory = XMLInputFactory.newInstance();
+		String indexXmlPath = format("%s/index.xml", xmlDir.getAbsolutePath());
+		try {
+			Unmarshaller unmarshaller = createUnmarshallerFor1_8_4();
+			FileInputStream indexXmlFileInputStream = new FileInputStream(indexXmlPath);
+			indexReader = factory.createXMLStreamReader(indexXmlFileInputStream);
+			indexElement = unmarshaller.unmarshal(indexReader, com.change_vision.astah.extension.plugin.doxygen._1_8_4.index.DoxygenType.class);
+			LOG.trace(format("index loaded : %d", System.currentTimeMillis() - start));
+		} catch (XMLStreamException e) {
+			throw new IOException(e);
+		} catch (JAXBException e){
+			String exceptionMessage = e.getMessage();
+			Throwable cause = e.getCause();
+			if (cause != null) {
+				exceptionMessage = cause.getMessage();
+			}
+			String message = format("file: %s\n%s",indexXmlPath,exceptionMessage);
+			throw new XmlParsingException(message ,e);
+		}
+		finally {
 			if (indexReader != null) {
 				try {
 					indexReader.close();
@@ -210,6 +254,14 @@ public class DoxygenXmlParser {
 				}
 			}
 		}
+		return indexElement;
+	}
+
+	private Unmarshaller createUnmarshallerFor1_8_4() throws JAXBException {
+		ClassLoader classLoader = com.change_vision.astah.extension.plugin.doxygen._1_8_4.index.ObjectFactory.class.getClassLoader();
+		JAXBContext context = JAXBContext.newInstance("com.change_vision.astah.extension.plugin.doxygen._1_8_4.index", classLoader);
+		Unmarshaller unmarshaller = context.createUnmarshaller();
+		return unmarshaller;
 	}
 
 	protected void createAllTheCompound() throws Exception {
