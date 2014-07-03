@@ -373,7 +373,7 @@ public class Creator {
 		for (SectiondefType sectiondefType : sectiondefTypes) {
 			List<MemberdefType> memberdefTypes = sectiondefType.getMemberdef();
 			for (MemberdefType memberdefType : memberdefTypes) {
-				if (!(memberdefType.getKind() == DoxMemberKind.FUNCTION || memberdefType.getKind() == DoxMemberKind.VARIABLE)) {
+				if (!(memberdefType.getKind() == DoxMemberKind.FUNCTION || memberdefType.getKind() == DoxMemberKind.VARIABLE || memberdefType.getKind() == DoxMemberKind.PROPERTY)) {
 					continue;
 				}
 				Type type = this.typeUtil.createType(memberdefType);
@@ -381,7 +381,7 @@ public class Creator {
 					IClass findClass = this.findClass(type);
 					if (memberdefType.getKind() == DoxMemberKind.FUNCTION) {
 						this.createOperation(clazz, type, memberdefType, findClass);
-					} else if (memberdefType.getKind() == DoxMemberKind.VARIABLE) {
+					} else if (memberdefType.getKind() == DoxMemberKind.VARIABLE || memberdefType.getKind() == DoxMemberKind.PROPERTY) {
 						this.createAttribute(clazz, type, memberdefType, findClass);
 					} else {
 						LOG.trace(format("ここでは使用しないDoxMemberKind : %s", memberdefType.getKind().toString()));
