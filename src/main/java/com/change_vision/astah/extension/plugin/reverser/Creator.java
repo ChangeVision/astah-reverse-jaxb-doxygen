@@ -500,15 +500,21 @@ public class Creator {
 		} else {
 			if (findClass == null) {
 				if (type.getNamespaceClass() != null && !isEmpty(type.getNamespaceClass().clazz)) {
-					attribute = this.basicModelEditor.createAttribute(clazz, type.getName(), type.getNamespaceClass().clazz);
+					IPackage pkg = this.astahModelUtil.getModelWithPath(IPackage.class, project, type.getNamespaceClass().namespace);
+					if (pkg == null) {
+						pkg = project;
+					}
+					findClass = this.basicModelEditor.createClass(pkg, type.getNamespaceClass().clazz);
+					if (isAssociation) {
+						attribute = this.createAssosiation(clazz, type, findClass);
+						memberEnd = true;
+					} else {
+						attribute = this.basicModelEditor.createAttribute(clazz, type.getName(), findClass);
+					}
 				}
 			} else {
 				if (isAssociation) {
-					IAssociation association = this.basicModelEditor.createAssociation(clazz, findClass, "", "", type.getName());
-					IAttribute[] memberEnds = association.getMemberEnds();
-					attribute = memberEnds[0];
-					memberEnds[1].setNavigability("Navigable");
-					attribute.setNavigability("Non_Navigable");
+					attribute = this.createAssosiation(clazz, type, findClass);
 					memberEnd = true;
 				} else {
 					attribute = this.basicModelEditor.createAttribute(clazz, type.getName(), findClass);
@@ -535,6 +541,17 @@ public class Creator {
 		if (!memberEnd && type.isMutable()) {
 			this.createTaggedValue(attribute, "jude.c_plus.mutable", "true");
 		}
+	}
+
+	private IAttribute createAssosiation(IClass clazz, Type type,
+			IClass findClass) throws InvalidEditingException {
+		IAttribute attribute;
+		IAssociation association = this.basicModelEditor.createAssociation(clazz, findClass, "", "", type.getName());
+		IAttribute[] memberEnds = association.getMemberEnds();
+		attribute = memberEnds[0];
+		memberEnds[1].setNavigability("Navigable");
+		attribute.setNavigability("Non_Navigable");
+		return attribute;
 	}
 
 	public void createGlobalClass(CompounddefType compounddefType) throws InvalidEditingException, ProjectNotFoundException {
