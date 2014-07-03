@@ -270,7 +270,7 @@ public class Creator {
 		}
 	}
 
-	public void modifyClass(CompounddefType compounddefType) throws InvalidEditingException, ProjectNotFoundException {
+	public void modifyClass(CompounddefType compounddefType) throws ProjectNotFoundException, InvalidEditingException {
 		// class, struct, union だけ処理する
 		switch (compounddefType.getKind()) {
 		case CLASS:
@@ -297,55 +297,78 @@ public class Creator {
 			LOG.debug(format("class is null. Compoundname : %s, id : %s", compounddefType.getCompoundname(), compounddefType.getId()));
 			return;
 		}
-		switch (compounddefType.getKind()) {
-		case STRUCT:
-			clazz.addStereotype(DoxCompoundKind.STRUCT.value());
-			break;
-		case UNION:
-			clazz.addStereotype(DoxCompoundKind.UNION.value());
-			break;
-		default:
-			break;
-		}
+		addStereotypeFromCompounddefTypeKind(compounddefType, clazz);
 		// テンプレートパラメーター
+		createTemplateParamterFromTemprateparamlist(compounddefType, clazz);
+		// 継承
+		createInheritanceFromBaseCompoundDef(compounddefType, clazz);
+		// 属性、操作
+		createOperationOrAttributeFromSectionDefTypes(compounddefType, clazz);
+	}
+
+	private void createTemplateParamterFromTemprateparamlist(
+			CompounddefType compounddefType, IClass clazz)
+			throws ProjectNotFoundException, InvalidEditingException {
 		TemplateparamlistType templateparamlist = compounddefType.getTemplateparamlist();
 		if (templateparamlist != null) {
 			List<ParamType> params = templateparamlist.getParam();
 			for (ParamType param : params) {
 				Type type = this.typeUtil.createType(param);
-				IClass findClass = this.findClass(type);
-				if (findClass == null) {
-					this.basicModelEditor.createTemplateParameter(clazz, type.getName(), (IClass) null, null);
-				} else {
-					this.basicModelEditor.createTemplateParameter(clazz, type.getName(), (IClass) null, findClass);
+				try {
+					IClass findClass = this.findClass(type);
+					if (findClass == null) {
+						this.basicModelEditor.createTemplateParameter(clazz, type.getName(), (IClass) null, null);
+					} else {
+						this.basicModelEditor.createTemplateParameter(clazz, type.getName(), (IClass) null, findClass);
+					}
+				} catch (InvalidEditingException e) {
+					if (!e.getKey().equals(InvalidEditingException.NAME_DOUBLE_ERROR_KEY)) {
+						throw e;
+					}
+					LOG.info("invalid editing {},{}",clazz.getName(),type.getName());
 				}
 			}
 		}
-		// 継承
+	}
+
+	private void createInheritanceFromBaseCompoundDef(
+			CompounddefType compounddefType, IClass clazz)
+			throws ProjectNotFoundException, InvalidEditingException {
 		List<CompoundRefType> basecompoundrefs = compounddefType.getBasecompoundref();
 		// 2つ同名の親が設定されているxmlがあるので、同じものは親としないためのチェック用。
 		Set<String> generalizations = new HashSet<>();
 		for (CompoundRefType basecompoundref : basecompoundrefs) {
 			Type type = this.typeUtil.createType(basecompoundref);
 			IGeneralization generalization = null;
-			IClass baseClass = this.findClass(type);
-			if (baseClass == null) {
-				if (type.getNamespaceClass() != null || !isEmpty(type.getNamespaceClass().clazz)) {
-					IClass generalizationClass = this.basicModelEditor.createClass(createPackage(type), type.getNamespaceClass().clazz);
-					generalization = this.basicModelEditor.createGeneralization(clazz, generalizationClass, "");
-					generalizations.add(type.getNamespaceClass().getFullName());
+			try {
+				IClass baseClass = this.findClass(type);
+				if (baseClass == null) {
+					if (type.getNamespaceClass() != null || !isEmpty(type.getNamespaceClass().clazz)) {
+						IClass generalizationClass = this.basicModelEditor.createClass(createPackage(type), type.getNamespaceClass().clazz);
+						generalization = this.basicModelEditor.createGeneralization(clazz, generalizationClass, "");
+						generalizations.add(type.getNamespaceClass().getFullName());
+					}
+				} else {
+					if (!generalizations.contains(type.getNamespaceClass().getFullName())) {
+						generalization = this.basicModelEditor.createGeneralization(clazz, baseClass, "");
+						generalizations.add(type.getNamespaceClass().getFullName());
+					}
 				}
-			} else {
-				if (!generalizations.contains(type.getNamespaceClass().getFullName())) {
-					generalization = this.basicModelEditor.createGeneralization(clazz, baseClass, "");
-					generalizations.add(type.getNamespaceClass().getFullName());
+				if (!isEmpty(type.getVisiblity())) {
+					generalization.setVisibility(type.getVisiblity());
 				}
-			}
-			if (!isEmpty(type.getVisiblity())) {
-				generalization.setVisibility(type.getVisiblity());
+			} catch (InvalidEditingException e) {
+				if (!e.getKey().equals(InvalidEditingException.NAME_DOUBLE_ERROR_KEY)) {
+					throw e;
+				}
+				LOG.info("invalid editing {},{}",clazz.getName(),type.getName());
 			}
 		}
-		// 属性、操作
+	}
+
+	private void createOperationOrAttributeFromSectionDefTypes(
+			CompounddefType compounddefType, IClass clazz)
+			throws ProjectNotFoundException, InvalidEditingException {
 		List<SectiondefType> sectiondefTypes = compounddefType.getSectiondef();
 		for (SectiondefType sectiondefType : sectiondefTypes) {
 			List<MemberdefType> memberdefTypes = sectiondefType.getMemberdef();
@@ -354,23 +377,44 @@ public class Creator {
 					continue;
 				}
 				Type type = this.typeUtil.createType(memberdefType);
-				IClass findClass = this.findClass(type);
-				if (memberdefType.getKind() == DoxMemberKind.FUNCTION) {
-					this.createOperation(clazz, type, memberdefType, findClass);
-				} else if (memberdefType.getKind() == DoxMemberKind.VARIABLE || memberdefType.getKind() == DoxMemberKind.PROPERTY) {
-					try {
+				try {
+					IClass findClass = this.findClass(type);
+					if (memberdefType.getKind() == DoxMemberKind.FUNCTION) {
+						this.createOperation(clazz, type, memberdefType, findClass);
+					} else if (memberdefType.getKind() == DoxMemberKind.VARIABLE || memberdefType.getKind() == DoxMemberKind.PROPERTY) {
 						this.createAttribute(clazz, type, memberdefType, findClass);
-					} catch (InvalidEditingException e) {
-						// 同名が存在するので無視する
-						if (!e.getKey().equals(InvalidEditingException.NAME_DOUBLE_ERROR_KEY)) {
-							throw e;
-						}
+					} else {
+						LOG.trace(format("ここでは使用しないDoxMemberKind : %s", memberdefType.getKind().toString()));
 					}
-
-				} else {
-					LOG.trace(format("ここでは使用しないDoxMemberKind : %s", memberdefType.getKind().toString()));
+				} catch (InvalidEditingException e) {
+					if (!e.getKey().equals(InvalidEditingException.NAME_DOUBLE_ERROR_KEY)) {
+						throw e;
+					}
+					LOG.info("invalid editing {},{}",clazz.getName(),type.getName());
 				}
 			}
+		}
+	}
+
+	private void addStereotypeFromCompounddefTypeKind(
+			CompounddefType compounddefType, IClass clazz) throws InvalidEditingException
+			{
+		try {
+			switch (compounddefType.getKind()) {
+			case STRUCT:
+				clazz.addStereotype(DoxCompoundKind.STRUCT.value());
+				break;
+			case UNION:
+				clazz.addStereotype(DoxCompoundKind.UNION.value());
+				break;
+			default:
+				break;
+			}
+		} catch (InvalidEditingException e) {
+			if (!e.getKey().equals(InvalidEditingException.NAME_DOUBLE_ERROR_KEY)) {
+				throw e;
+			}
+			LOG.info("invalid editing {},{}",clazz.getName(),compounddefType.getKind());
 		}
 	}
 
