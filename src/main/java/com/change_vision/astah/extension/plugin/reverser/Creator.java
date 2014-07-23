@@ -260,11 +260,19 @@ public class Creator {
 				}
 				for (EnumvalueType enumvalue : enumvalues) {
 					Type enumtype = this.typeUtil.createEnumType(enumvalue);
-					IAttribute enumAttribute = this.basicModelEditor.createAttribute(enumClass, enumtype.getName(), enumClass);
-					enumAttribute.setVisibility(enumtype.getVisiblity());
-					enumAttribute.setInitialValue(enumtype.getInitialValue());
-					// enum なので static とする
-					enumAttribute.setStatic(true);
+                    try {
+                        IAttribute enumAttribute = this.basicModelEditor.createAttribute(enumClass,
+                                enumtype.getName(), enumClass);
+                        enumAttribute.setVisibility(enumtype.getVisiblity());
+                        enumAttribute.setInitialValue(enumtype.getInitialValue());
+                        // enum なので static とする
+                        enumAttribute.setStatic(true);
+                    } catch (InvalidEditingException e) {
+                        // 同じネームスペース名で同じ名前のEnumの中に同じ名前の定数を宣言しているときは例外を出したくない
+                        if (!e.getKey().equals(InvalidEditingException.NAME_DOUBLE_ERROR_KEY)) {
+                            throw e;
+                        }
+                    }
 				}
 			}
 		}
