@@ -472,18 +472,21 @@ public class Creator {
 			IParameter parameter = null;
 			Type type = this.typeUtil.createMemberParamType(param);
 			if (LanguageManager.PRIMITIVE_TYPE.contains(type.getNamespaceClass().clazz)) {
-				parameter = this.basicModelEditor.createParameter(operation, type.getName(), type.getNamespaceClass().clazz);
+                parameter = createParameter(this.basicModelEditor, operation, type.getName(),
+                        type.getNamespaceClass().clazz);
 			} else if (!isEmpty(type.getTemplates())) {
-				parameter = this.basicModelEditor.createParameter(operation, type.getName(),
+                parameter = createParameter(this.basicModelEditor, operation, type.getName(),
 						astahModelUtil.clearNamespace(type.getTemplateParameter()));
 			} else {
 				IClass findClass = this.findClass(type);
 				if (findClass == null) {
 					if (type.getNamespaceClass() != null && !isEmpty(type.getNamespaceClass().clazz)) {
-						parameter = this.basicModelEditor.createParameter(operation, type.getName(), type.getNamespaceClass().clazz);
+                        parameter = createParameter(this.basicModelEditor, operation,
+                                type.getName(), type.getNamespaceClass().clazz);
 					}
 				} else {
-					parameter = this.basicModelEditor.createParameter(operation, type.getName(), findClass);
+                    parameter = createParameter(this.basicModelEditor, operation, type.getName(),
+                            findClass);
 				}
 			}
 			if (parameter != null) {
@@ -492,6 +495,48 @@ public class Creator {
 			}
 		}
 	}
+
+    private IParameter createParameter(BasicModelEditor modelEditor, IOperation operation,
+            String name, IClass type) throws InvalidEditingException {
+        try {
+            return modelEditor.createParameter(operation, name, type);
+        } catch (InvalidEditingException e) {
+            String br = System.getProperty("line.separator");
+            StringBuffer message = new StringBuffer();
+            message.append(e.getMessage());
+            message.append(br);
+            message.append("Operation : ");
+            message.append(operation.getName());
+            message.append(br);
+            message.append("Name : ");
+            message.append(name);
+            message.append(br);
+            message.append("Type : ");
+            message.append(type.getName());
+            throw new InvalidEditingException(e.getKey(), message.toString());
+        }
+    }
+
+    private IParameter createParameter(BasicModelEditor modelEditor, IOperation operation,
+            String name, String typeExpression) throws InvalidEditingException {
+        try {
+            return modelEditor.createParameter(operation, name, typeExpression);
+        } catch (InvalidEditingException e) {
+            String br = System.getProperty("line.separator");
+            StringBuffer message = new StringBuffer();
+            message.append(e.getMessage());
+            message.append(br);
+            message.append("Operation : ");
+            message.append(operation.getName());
+            message.append(br);
+            message.append("Name : ");
+            message.append(name);
+            message.append(br);
+            message.append("TypeExpression : ");
+            message.append(typeExpression);
+            throw new InvalidEditingException(e.getKey(), message.toString());
+        }
+    }
 
 	protected void createAttribute(IClass clazz, Type type, MemberdefType memberdefType, IClass findClass) throws InvalidEditingException {
 		this.createAttribute(clazz, type, memberdefType, findClass, true);
