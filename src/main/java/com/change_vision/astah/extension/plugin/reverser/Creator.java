@@ -355,11 +355,20 @@ public class Creator {
 						IClass generalizationClass = this.basicModelEditor.createClass(createPackage(type), type.getNamespaceClass().clazz);
 						generalization = this.basicModelEditor.createGeneralization(clazz, generalizationClass, "");
 						generalizations.add(type.getNamespaceClass().getFullName());
+                    } else {
+                        LOG.info("not created generalization. clazz:{}, type:{}", clazz.getName(),
+                                type.getName());
+                        continue;
 					}
 				} else {
 					if (!generalizations.contains(type.getNamespaceClass().getFullName())) {
 						generalization = this.basicModelEditor.createGeneralization(clazz, baseClass, "");
 						generalizations.add(type.getNamespaceClass().getFullName());
+                    } else {
+                        LOG.info(
+                                "generalization already exists. generalization:{}, clazz:{}, baseClass:{}",
+                                type.getNamespaceClass().getFullName(), clazz, baseClass);
+                        continue;
 					}
 				}
 				if (!isEmpty(type.getVisiblity())) {
