@@ -8,10 +8,6 @@ import java.io.FileInputStream;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.inject.Inject;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.Unmarshaller;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
@@ -32,6 +28,11 @@ import com.change_vision.astah.extension.plugin.doxygen._1_8_4.compound.LinkedTe
 import com.change_vision.astah.extension.plugin.doxygen._1_8_4.compound.MemberdefType;
 import com.change_vision.astah.extension.plugin.doxygen._1_8_4.compound.ParamType;
 import com.change_vision.astah.extension.plugin.doxygen._1_8_4.compound.RefTextType;
+
+import jakarta.inject.Inject;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.Unmarshaller;
 
 public class TypeUtil {
 	class RawtypeAndRef {

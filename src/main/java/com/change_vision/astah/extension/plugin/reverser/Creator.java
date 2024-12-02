@@ -8,9 +8,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import javax.inject.Inject;
-import javax.xml.bind.JAXBElement;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -50,6 +47,9 @@ import com.change_vision.jude.api.inf.model.IPackage;
 import com.change_vision.jude.api.inf.model.IParameter;
 import com.change_vision.jude.api.inf.model.ITaggedValue;
 import com.change_vision.jude.api.inf.project.ProjectAccessor;
+
+import jakarta.inject.Inject;
+import jakarta.xml.bind.JAXBElement;
 
 public class Creator {
 	private static final Logger LOG = LoggerFactory.getLogger(Creator.class);
